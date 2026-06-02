@@ -587,7 +587,7 @@ github:swapedoc/hermes2anti,github,hermes2anti,85.67,76.92,high-value-candidate,
 github:swarmclawai/swarmclaw,github,swarmclawai/swarmclaw,75.16,57.69,high-value-candidate,1,0,1,0,1,1,0,1,1,1,0,0,1,1,1,-1,0,0,0,1,1,0,0,1,1,0
 github:swe-agent/swe-agent,github,swe-agent/swe-agent,70.06,50,high-value-candidate,1,0,1,0,1,0,1,0,1,0,0,0,1,1,1,-1,1,0,0,1,1,0,0,1,0,0
 github:swe-bench/swe-bench,github,swe-bench,73.57,65.38,needs-review,1,-1,1,0,1,0,0,1,1,1,1,1,1,1,1,-1,0,1,0,1,1,0,0,1,0,0
-github:synaptent/aragora,github,synaptent/aragora,78.03,65.38,high-value-candidate,1,0,1,0,1,1,1,1,1,1,0,0,1,1,1,-1,0,0,1,1,0,0,0,1,1,1
+github:synaptent/aragora,github,synaptent/aragora,81.85,73.08,high-value-candidate,1,0,1,0,1,1,1,1,1,1,1,1,1,1,1,-1,0,0,1,1,0,0,0,1,1,1
 github:syntax-syndicate/openharness-agent-harness,github,OpenHarness Agent Harness Fork,74.2,65.38,needs-review,1,-1,1,1,1,0,0,1,1,1,1,1,1,1,1,-1,0,0,0,1,0,0,0,1,1,0
 github:taishi-n324/awesome-rl-reasoning,github,taishi-n324/awesome-rl-reasoning,66.56,42.31,needs-review,1,0,0,0,0,0,0,1,1,0,0,0,1,1,1,-1,1,0,0,1,1,0,0,1,0,0
 github:team-commonly/commonly,github,Commonly Agent Swarm Operating System,74.52,65.38,needs-review,1,-1,1,0,1,1,0,1,1,1,1,1,1,1,1,-1,0,0,0,1,0,0,0,1,1,0

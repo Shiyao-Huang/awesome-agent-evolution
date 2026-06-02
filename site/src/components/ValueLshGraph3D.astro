@@ -7,13 +7,28 @@ interface GraphNode {
   id: string;
   type: string;
   title: string;
+  url?: string | null;
+  source_path?: string | null;
   value_score: number;
   confidence: number;
   value_class: ValueClass;
   embedding_cluster: string;
+  lsh_cluster_hint?: string | null;
+  top_lsh_neighbors?: LshNeighbor[];
   x: number;
   y: number;
   z: number;
+}
+
+interface LshNeighbor {
+  id: string;
+  title: string;
+  type: string;
+  value_score: number;
+  value_class: ValueClass;
+  shared_bucket_count: number;
+  shared_features: string[];
+  relation_weight: number;
 }
 
 interface GraphSnapshot {
@@ -48,10 +63,14 @@ const sceneNodes = allNodes
     id: node.id,
     type: node.type,
     title: node.title,
+    url: node.url,
+    sourcePath: node.source_path,
     score: node.value_score,
     confidence: node.confidence,
     valueClass: node.value_class,
     embeddingCluster: node.embedding_cluster,
+    lshCluster: node.lsh_cluster_hint,
+    neighbors: node.top_lsh_neighbors || [],
     x: Number(node.x.toFixed(6)),
     y: Number(node.y.toFixed(6)),
     z: Number(node.z.toFixed(6)),
@@ -86,6 +105,8 @@ const scenePayload = {
   nodes: sceneNodes,
   colors: classColors,
 };
+const defaultNode = sceneNodes.find((node) => node.neighbors.length > 0) ?? sceneNodes[0];
+const defaultNeighbors = defaultNode?.neighbors.slice(0, 6) ?? [];
 ---
 
 <div class={`value-lsh-three ${variant}`} data-value-lsh-three style={`--value-graph-height:${height}px;`}>
@@ -125,12 +146,70 @@ const scenePayload = {
     <span><i class="cluster-dot"></i>{graphSnapshot.summary.embedding_clusters} embedding clusters</span>
     <span><i class="node-dot"></i>{graphSnapshot.summary.nodes.toLocaleString()} nodes</span>
   </div>
+  <div class="value-lsh-inspector" data-value-lsh-inspector aria-live="polite">
+    {defaultNode ? (
+      <article class="value-lsh-selected">
+        <div class="value-lsh-selected-head">
+          <div>
+            <span>{defaultNode.type} · {defaultNode.valueClass}</span>
+            <h3>{defaultNode.title}</h3>
+          </div>
+          {defaultNode.url ? <a href={defaultNode.url} target="_blank" rel="noopener">source</a> : null}
+        </div>
+        <div class="value-lsh-selected-metrics">
+          <div><strong>{defaultNode.score.toFixed(2)}</strong><span>value</span></div>
+          <div><strong>{defaultNode.confidence.toFixed(2)}</strong><span>confidence</span></div>
+          <div><strong>{defaultNode.embeddingCluster}</strong><span>embedding</span></div>
+        </div>
+        <p>{defaultNode.sourcePath || defaultNode.id}{defaultNode.lshCluster ? ` · ${defaultNode.lshCluster}` : ''}</p>
+        <h4>LSH neighbors</h4>
+        <ul>
+          {defaultNeighbors.length ? defaultNeighbors.map((neighbor) => (
+            <li>
+              <strong>{neighbor.title}</strong>
+              <span>{neighbor.type} · value {neighbor.value_score.toFixed(2)} · shared buckets {neighbor.shared_bucket_count}</span>
+              <small>{neighbor.shared_features.slice(0, 4).join(' / ')}</small>
+            </li>
+          )) : (
+            <li><span>当前采样内没有可展示邻居。</span></li>
+          )}
+        </ul>
+      </article>
+    ) : (
+      <div class="value-lsh-inspector-empty">No nodes available.</div>
+    )}
+  </div>
 </div>
 
 <script>
   import * as THREE from 'three';
 
-  type SceneNode = { x: number; y: number; z: number; valueClass: string };
+  type SceneNeighbor = {
+    id: string;
+    title: string;
+    type: string;
+    value_score: number;
+    value_class: string;
+    shared_bucket_count: number;
+    shared_features: string[];
+    relation_weight: number;
+  };
+  type SceneNode = {
+    id: string;
+    type: string;
+    title: string;
+    url?: string | null;
+    sourcePath?: string | null;
+    score: number;
+    confidence: number;
+    valueClass: string;
+    embeddingCluster: string;
+    lshCluster?: string | null;
+    neighbors: SceneNeighbor[];
+    x: number;
+    y: number;
+    z: number;
+  };
   type ScenePayload = { variant?: string; nodes?: SceneNode[]; colors: Record<string, string> };
 
   const roots = document.querySelectorAll('[data-value-lsh-three]');
@@ -141,7 +220,8 @@ const scenePayload = {
     const payloadElement = root.querySelector('[data-value-lsh-points]');
     const stage = root.querySelector('[data-value-lsh-stage]');
     const canvas = root.querySelector('[data-value-lsh-canvas]');
-    if (!(payloadElement instanceof HTMLScriptElement) || !(stage instanceof HTMLElement) || !(canvas instanceof HTMLCanvasElement)) return;
+    const inspector = root.querySelector('[data-value-lsh-inspector]');
+    if (!(payloadElement instanceof HTMLScriptElement) || !(stage instanceof HTMLElement) || !(canvas instanceof HTMLCanvasElement) || !(inspector instanceof HTMLElement)) return;
 
     let payload: ScenePayload;
     try {
@@ -165,6 +245,10 @@ const scenePayload = {
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(44, 1, 0.1, 100);
     camera.position.set(0, 0, payload.variant === 'compact' ? 4.25 : 4.75);
+    const raycaster = new THREE.Raycaster();
+    raycaster.params.Points.threshold = payload.variant === 'compact' ? 0.1 : 0.08;
+    const pointer = new THREE.Vector2();
+    const nodeById = new Map(nodes.map((node) => [node.id, node]));
 
     const group = new THREE.Group();
     group.rotation.x = -0.26;
@@ -197,7 +281,81 @@ const scenePayload = {
       depthWrite: false,
       sizeAttenuation: true,
     });
-    group.add(new THREE.Points(geometry, material));
+    const pointsCloud = new THREE.Points(geometry, material);
+    group.add(pointsCloud);
+
+    const highlightGroup = new THREE.Group();
+    group.add(highlightGroup);
+
+    const escapeHtml = (value: unknown) => String(value ?? '')
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+
+    const nodePosition = (node: SceneNode) => new THREE.Vector3(node.x * 1.72, node.y * 1.72, node.z * 1.72);
+
+    const renderInspector = (node: SceneNode) => {
+      const url = node.url ? `<a href="${escapeHtml(node.url)}" target="_blank" rel="noopener">source</a>` : '';
+      const neighbors = node.neighbors.slice(0, 6).map((neighbor) => `
+        <li>
+          <strong>${escapeHtml(neighbor.title)}</strong>
+          <span>${escapeHtml(neighbor.type)} · value ${Number(neighbor.value_score).toFixed(2)} · shared buckets ${neighbor.shared_bucket_count}</span>
+          <small>${escapeHtml((neighbor.shared_features || []).slice(0, 4).join(' / '))}</small>
+        </li>
+      `).join('');
+      inspector.innerHTML = `
+        <article class="value-lsh-selected">
+          <div class="value-lsh-selected-head">
+            <div>
+              <span>${escapeHtml(node.type)} · ${escapeHtml(node.valueClass)}</span>
+              <h3>${escapeHtml(node.title)}</h3>
+            </div>
+            ${url}
+          </div>
+          <div class="value-lsh-selected-metrics">
+            <div><strong>${Number(node.score).toFixed(2)}</strong><span>value</span></div>
+            <div><strong>${Number(node.confidence).toFixed(2)}</strong><span>confidence</span></div>
+            <div><strong>${escapeHtml(node.embeddingCluster)}</strong><span>embedding</span></div>
+          </div>
+          <p>${escapeHtml(node.sourcePath || node.id)}${node.lshCluster ? ` · ${escapeHtml(node.lshCluster)}` : ''}</p>
+          <h4>LSH neighbors</h4>
+          <ul>${neighbors || '<li><span>当前采样内没有可展示邻居。</span></li>'}</ul>
+        </article>
+      `;
+    };
+
+    const selectNode = (node: SceneNode) => {
+      highlightGroup.clear();
+      const selectedMaterial = new THREE.MeshBasicMaterial({ color: payload.colors[node.valueClass] || '#007AFF', transparent: true, opacity: 0.95 });
+      const selected = new THREE.Mesh(new THREE.SphereGeometry(0.075, 18, 18), selectedMaterial);
+      const origin = nodePosition(node);
+      selected.position.copy(origin);
+      highlightGroup.add(selected);
+
+      const linePositions: number[] = [];
+      node.neighbors.slice(0, 8).forEach((neighbor) => {
+        const target = nodeById.get(neighbor.id);
+        if (!target) return;
+        const targetPosition = nodePosition(target);
+        linePositions.push(origin.x, origin.y, origin.z, targetPosition.x, targetPosition.y, targetPosition.z);
+        const targetMarker = new THREE.Mesh(
+          new THREE.SphereGeometry(0.044, 14, 14),
+          new THREE.MeshBasicMaterial({ color: payload.colors[target.valueClass] || '#007AFF', transparent: true, opacity: 0.78 })
+        );
+        targetMarker.position.copy(targetPosition);
+        highlightGroup.add(targetMarker);
+      });
+      if (linePositions.length) {
+        const lineGeometry = new THREE.BufferGeometry();
+        lineGeometry.setAttribute('position', new THREE.Float32BufferAttribute(linePositions, 3));
+        highlightGroup.add(new THREE.LineSegments(
+          lineGeometry,
+          new THREE.LineBasicMaterial({ color: 0x1a1a1a, transparent: true, opacity: 0.24 })
+        ));
+      }
+      renderInspector(node);
+    };
 
     const ringMaterial = new THREE.LineBasicMaterial({ color: 0x7a6b5e, transparent: true, opacity: 0.18 });
     const makeRing = (radius: number, rotation: [number, number, number]) => {
@@ -226,6 +384,7 @@ const scenePayload = {
     new ResizeObserver(resize).observe(stage);
 
     let pointerActive = false;
+    let pointerMoved = false;
     let lastX = 0;
     let lastY = 0;
     let targetX = group.rotation.x;
@@ -234,12 +393,14 @@ const scenePayload = {
 
     stage.addEventListener('pointerdown', (event) => {
       pointerActive = true;
+      pointerMoved = false;
       lastX = event.clientX;
       lastY = event.clientY;
       stage.setPointerCapture(event.pointerId);
     });
     stage.addEventListener('pointermove', (event) => {
       if (!pointerActive) return;
+      if (Math.abs(event.clientX - lastX) + Math.abs(event.clientY - lastY) > 2) pointerMoved = true;
       targetY += (event.clientX - lastX) * 0.006;
       targetX += (event.clientY - lastY) * 0.004;
       targetX = Math.max(-1.15, Math.min(1.15, targetX));
@@ -252,6 +413,21 @@ const scenePayload = {
     stage.addEventListener('pointercancel', () => {
       pointerActive = false;
     });
+
+    stage.addEventListener('click', (event) => {
+      if (pointerMoved) return;
+      const rect = canvas.getBoundingClientRect();
+      pointer.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
+      pointer.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
+      raycaster.setFromCamera(pointer, camera);
+      const hits = raycaster.intersectObject(pointsCloud);
+      const hit = hits[0];
+      if (!hit || typeof hit.index !== 'number') return;
+      const node = nodes[hit.index];
+      if (node) selectNode(node);
+    });
+
+    selectNode(nodes.find((node) => node.neighbors.length > 0) || nodes[0]);
 
     root.classList.add('is-canvas-ready');
     const tick = () => {
@@ -270,9 +446,32 @@ const scenePayload = {
 <style>
   .value-lsh-three {
     display: grid;
+    grid-template-columns: minmax(0, 1fr);
     gap: 12px;
     width: 100%;
     min-width: 0;
+  }
+
+  .value-lsh-three.full {
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
+    align-items: start;
+  }
+
+  .value-lsh-three.full .value-lsh-stage {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .value-lsh-three.full .value-lsh-inspector {
+    grid-column: 2;
+    grid-row: 1;
+    max-height: var(--value-graph-height);
+    overflow: auto;
+  }
+
+  .value-lsh-three.full .value-lsh-legend {
+    grid-column: 1 / -1;
+    grid-row: 2;
   }
 
   .value-lsh-stage {
@@ -342,6 +541,127 @@ const scenePayload = {
     font-weight: 850;
   }
 
+  .value-lsh-inspector {
+    min-width: 0;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--surface-card);
+    box-shadow: var(--shadow-mockup);
+  }
+
+  .value-lsh-inspector-empty,
+  .value-lsh-selected {
+    padding: 16px;
+  }
+
+  .value-lsh-inspector-empty {
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  .value-lsh-selected-head {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 12px;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 12px;
+  }
+
+  .value-lsh-selected-head span,
+  .value-lsh-selected p,
+  .value-lsh-selected li span,
+  .value-lsh-selected li small,
+  .value-lsh-selected-metrics span {
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 750;
+    line-height: 1.4;
+  }
+
+  .value-lsh-selected h3 {
+    margin-top: 5px;
+    font-size: 18px;
+    line-height: 1.25;
+    overflow-wrap: anywhere;
+  }
+
+  .value-lsh-selected-head a {
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 5px 9px;
+    color: var(--fg);
+    font-size: 12px;
+    font-weight: 850;
+  }
+
+  .value-lsh-selected-metrics {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+    margin: 12px 0;
+  }
+
+  .value-lsh-selected-metrics div {
+    border: 1px solid var(--line);
+    border-radius: 7px;
+    background: var(--surface-1);
+    padding: 9px;
+  }
+
+  .value-lsh-selected-metrics strong,
+  .value-lsh-selected-metrics span {
+    display: block;
+    overflow-wrap: anywhere;
+  }
+
+  .value-lsh-selected-metrics strong {
+    font-family: var(--font-display);
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1;
+  }
+
+  .value-lsh-selected p {
+    margin-top: 10px;
+    overflow-wrap: anywhere;
+  }
+
+  .value-lsh-selected h4 {
+    margin-top: 14px;
+    font-size: 13px;
+    text-transform: uppercase;
+  }
+
+  .value-lsh-selected ul {
+    display: grid;
+    gap: 8px;
+    margin-top: 10px;
+    padding: 0;
+    list-style: none;
+  }
+
+  .value-lsh-selected li {
+    border-top: 1px solid var(--line);
+    padding-top: 8px;
+  }
+
+  .value-lsh-selected li strong,
+  .value-lsh-selected li span,
+  .value-lsh-selected li small {
+    display: block;
+    overflow-wrap: anywhere;
+  }
+
+  .value-lsh-selected li span {
+    margin-top: 2px;
+  }
+
+  .value-lsh-selected li small {
+    margin-top: 4px;
+    font-weight: 650;
+  }
+
   .cluster-dot {
     background: var(--accent);
   }
@@ -355,6 +675,21 @@ const scenePayload = {
   }
 
   @media (max-width: 760px) {
+    .value-lsh-three.full {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .value-lsh-three.full .value-lsh-legend {
+      grid-column: auto;
+      grid-row: auto;
+    }
+
+    .value-lsh-three.full .value-lsh-stage,
+    .value-lsh-three.full .value-lsh-inspector {
+      grid-column: auto;
+      grid-row: auto;
+    }
+
     .value-lsh-stage {
       min-height: min(calc(var(--value-graph-height) * .76), 58vh);
     }

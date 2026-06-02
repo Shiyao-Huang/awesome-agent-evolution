@@ -436,6 +436,15 @@
 - Kept repair score as action priority, not project quality, so high-scoring but under-verified projects move toward clone/code/issue/resource evidence before public claims.
 **产出:** `analysis/value-evidence-repair-queue.md`, `analysis/value-evidence-repair-queue.json`, `work/wiki/synthesis/value-evidence-repair-queue.md`
 
+## [2026-06-01 22:45] project+deep-read | kargarisaac Reflexion Baseline Packet
+
+**操作:** Completed the first repair-queue project deep read.
+**详情:**
+- Investigated `kargarisaac/reflexion` with raw capture, GitHub API metadata, issue/PR scans, root contents, commits, tags, and source-file API inspection after direct clone failed on `github.com:443`.
+- Added `analysis/frontier-projects/kargarisaac-reflexion-dual-chain.md` and `work/wiki/synthesis/kargarisaac-reflexion-deep-dive.md`.
+- Updated value-LSH and repair-queue generators so `analysis/frontier-projects/*-dual-chain.md` counts as processed evidence without letting negative report prose pollute keyword tag detection.
+**产出:** `analysis/frontier-projects/kargarisaac-reflexion-dual-chain.md`, `work/wiki/synthesis/kargarisaac-reflexion-deep-dive.md`, `analysis/value-evidence-repair-queue.md`
+
 ## [2026-06-02 00:29] site+visualization | Value LSH 3D Public Graph
 
 **操作:** Published the generated value-LSH results as a public-facing 3D visualization surface.
@@ -444,3 +453,39 @@
 - Added `/value-lsh/` as the full visual interface for class split, corpus split, high-value candidates, repair queue, clusters, facets, and largest LSH buckets.
 - Added a compact 3D preview section to the homepage so the new value classification system is visible before readers enter deeper reports.
 **产出:** `site/src/components/ValueLshGraph3D.astro`, `site/src/pages/value-lsh/index.astro`, `site/src/pages/index.astro`
+
+## [2026-06-02 01:43] data+index | kargarisaac Repair Queue Resolution
+
+**操作:** Rebuilt value-LSH, projection, repair queue, wiki search index, and project indexes after the first deep-read packet.
+**详情:**
+- Verified `kargarisaac/reflexion` now has `evidence_refs.analysis_report = analysis/frontier-projects/kargarisaac-reflexion-dual-chain.md`.
+- Removed `kargarisaac/reflexion` from the repair queue by recognizing the deep-read packet as processed evidence; GitHub repair gaps now cover 673 projects.
+- Preserved the value class as `high-value-candidate` while the packet downgrades the interpretation to `baseline teaching anchor / low-continuity`, keeping score and qualitative judgment separate.
+**产出:** `analysis/value-lsh-index.md`, `analysis/value-evidence-repair-queue.md`, `analysis/value-lsh-graph-3d.json`, `work/wiki/search-index.json`, `docs/indexes/master-index.md`
+
+## [2026-06-02 01:49] project+deep-read | synaptent Aragora Governance Control Plane
+
+**操作:** Completed the second repair-queue project deep read.
+**详情:**
+- Investigated `synaptent/aragora` with live GitHub metadata, issues, PRs, releases, tags, commits, languages, root contents, and a successful local clone to `projects/repos/synaptent__aragora`.
+- Added `analysis/frontier-projects/synaptent-aragora-dual-chain.md` and `work/wiki/synthesis/synaptent-aragora-frontier-deep-dive.md`.
+- Classified Aragora as a high-continuity 2026 governance-control-plane frontier anchor, with queue-health and external adoption remaining as separate evidence gaps.
+**产出:** `analysis/frontier-projects/synaptent-aragora-dual-chain.md`, `work/wiki/synthesis/synaptent-aragora-frontier-deep-dive.md`, `projects/repos/synaptent__aragora`
+
+## [2026-06-02 01:52] data+index | synaptent Aragora Repair Queue Resolution
+
+**操作:** Rebuilt value-LSH, projection, repair queue, wiki search index, and project indexes after the second deep-read packet.
+**详情:**
+- Verified `synaptent/aragora` now has `evidence_refs.analysis_report = analysis/frontier-projects/synaptent-aragora-dual-chain.md`.
+- Removed `synaptent/aragora` from the generic repair queue; GitHub repair gaps now cover 672 projects.
+- The next top repair targets are `gepa-ai/gepa`, `gepa-ai/optimize-anything-artifact`, `langchain-ai/open-swe`, `sethkarten/continual-harness`, and `inclusionai/agenticlearning`.
+**产出:** `analysis/value-lsh-index.md`, `analysis/value-evidence-repair-queue.md`, `analysis/value-lsh-graph-3d.json`, `work/wiki/search-index.json`, `docs/indexes/master-index.md`
+
+## [2026-06-02 01:55] site+visualization | Value LSH Neighbor Explorer
+
+**操作:** Upgraded the public Value LSH graph from a passive 3D point cloud into a material inspector.
+**详情:**
+- Kept the public projection on stable `value + PCA` after the `value + TSNE` line-collapse check, because the discrete value matrix should not be treated as native continuous geometry.
+- Added per-node `top_lsh_neighbors` from shared LSH buckets so clicking a point can show related materials, shared value facets, and relation weights.
+- Added a right-side inspector and fallback default sample, keeping the graph usable even when WebGL falls back to the static SVG.
+**产出:** `site/src/components/ValueLshGraph3D.astro`, `analysis/value-lsh-graph-3d.json`, `scripts/build_value_embedding_projection.mjs`

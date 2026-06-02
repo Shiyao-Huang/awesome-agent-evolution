@@ -1,8 +1,8 @@
 {
-  "generated": "2026-06-01T16:29:52.393Z",
+  "generated": "2026-06-01T17:57:12.306Z",
   "stats": {
-    "pages": 67,
-    "keywords": 873
+    "pages": 69,
+    "keywords": 880
   },
   "catalog": [
     {
@@ -635,6 +635,18 @@
       ]
     },
     {
+      "path": "synthesis/kargarisaac-reflexion-deep-dive.md",
+      "title": "kargarisaac Reflexion Deep Dive",
+      "rank": "A",
+      "type": "synthesis",
+      "tags": [
+        "github",
+        "reflexion",
+        "baseline",
+        "evidence-repair"
+      ]
+    },
+    {
       "path": "synthesis/mechanism-framework.md",
       "title": "\"Agent进化机制分析框架\"",
       "rank": "A",
@@ -710,6 +722,19 @@
         "readme",
         "paper-core",
         "evidence-graph"
+      ]
+    },
+    {
+      "path": "synthesis/synaptent-aragora-frontier-deep-dive.md",
+      "title": "synaptent Aragora Frontier Deep Dive",
+      "rank": "A",
+      "type": "synthesis",
+      "tags": [
+        "github",
+        "aragora",
+        "governance",
+        "self-improvement",
+        "evidence-repair"
       ]
     },
     {
@@ -1219,7 +1244,8 @@
       "concepts/self-evaluation.md",
       "concepts/self-observation.md",
       "sources/anthropic-may-2026-agentops.md",
-      "synthesis/mechanism-framework.md"
+      "synthesis/mechanism-framework.md",
+      "synthesis/synaptent-aragora-frontier-deep-dive.md"
     ],
     "\"奖励驱动进化 (reward-based evolution)\"": [
       "concepts/reward-based-evolution.md"
@@ -1685,7 +1711,8 @@
       "entities/noah-shinn.md"
     ],
     "reflexion": [
-      "entities/noah-shinn.md"
+      "entities/noah-shinn.md",
+      "synthesis/kargarisaac-reflexion-deep-dive.md"
     ],
     "m2-feedback": [
       "entities/noah-shinn.md"
@@ -1825,7 +1852,9 @@
       "sources/talent-flow-analysis.md",
       "synthesis/code-evolution-benchmark-matrix.md",
       "synthesis/current-value-ranking-reanalysis.md",
+      "synthesis/kargarisaac-reflexion-deep-dive.md",
       "synthesis/survey-spark-evolve-agi-core.md",
+      "synthesis/synaptent-aragora-frontier-deep-dive.md",
       "synthesis/value-evidence-repair-queue.md",
       "synthesis/value-lsh-index.md"
     ],
@@ -2200,7 +2229,9 @@
       "sources/employee-social-intelligence.md",
       "sources/github-digest.md",
       "sources/raw-github-mechanism-analysis.md",
-      "synthesis/github-star-growth-database.md"
+      "synthesis/github-star-growth-database.md",
+      "synthesis/kargarisaac-reflexion-deep-dive.md",
+      "synthesis/synaptent-aragora-frontier-deep-dive.md"
     ],
     "talent": [
       "sources/employee-social-intelligence.md",
@@ -2589,11 +2620,13 @@
       "synthesis/five-evolution-loops-topic.md",
       "synthesis/frontier-value-queue.md",
       "synthesis/jarvis-xs-se-agent-frontier-deep-dive.md",
+      "synthesis/kargarisaac-reflexion-deep-dive.md",
       "synthesis/modelscope-agentevolver-frontier-deep-dive.md",
       "synthesis/resource-library-coverage-audit.md",
       "synthesis/self-evolution-definition-criteria.md",
       "synthesis/survey-seo-topic-map.md",
       "synthesis/survey-spark-evolve-agi-core.md",
+      "synthesis/synaptent-aragora-frontier-deep-dive.md",
       "synthesis/value-evidence-repair-queue.md",
       "synthesis/value-lsh-index.md",
       "synthesis/value-screening-dual-chain-knowledge-base.md"
@@ -3363,9 +3396,11 @@
       "synthesis/current-value-ranking-reanalysis.md",
       "synthesis/frontier-value-queue.md",
       "synthesis/jarvis-xs-se-agent-frontier-deep-dive.md",
+      "synthesis/kargarisaac-reflexion-deep-dive.md",
       "synthesis/modelscope-agentevolver-frontier-deep-dive.md",
       "synthesis/resource-library-coverage-audit.md",
       "synthesis/survey-spark-evolve-agi-core.md",
+      "synthesis/synaptent-aragora-frontier-deep-dive.md",
       "synthesis/value-evidence-repair-queue.md",
       "synthesis/value-lsh-index.md",
       "synthesis/value-screening-dual-chain-knowledge-base.md"
@@ -3564,6 +3599,20 @@
     "modelscope-agentevolver-frontier-deep-dive": [
       "synthesis/jarvis-xs-se-agent-frontier-deep-dive.md"
     ],
+    "kargarisaac reflexion deep dive": [
+      "synthesis/kargarisaac-reflexion-deep-dive.md"
+    ],
+    "baseline": [
+      "synthesis/kargarisaac-reflexion-deep-dive.md"
+    ],
+    "evidence-repair": [
+      "synthesis/kargarisaac-reflexion-deep-dive.md",
+      "synthesis/synaptent-aragora-frontier-deep-dive.md"
+    ],
+    "decision": [
+      "synthesis/kargarisaac-reflexion-deep-dive.md",
+      "synthesis/synaptent-aragora-frontier-deep-dive.md"
+    ],
     "m1-m5": [
       "synthesis/mechanism-framework.md"
     ],
@@ -3629,6 +3678,15 @@
     ],
     "evidence-graph": [
       "synthesis/survey-spark-evolve-agi-core.md"
+    ],
+    "synaptent aragora frontier deep dive": [
+      "synthesis/synaptent-aragora-frontier-deep-dive.md"
+    ],
+    "aragora": [
+      "synthesis/synaptent-aragora-frontier-deep-dive.md"
+    ],
+    "governance": [
+      "synthesis/synaptent-aragora-frontier-deep-dive.md"
     ],
     "sv self-evolution talent & paper landscape": [
       "synthesis/talent-landscape.md"

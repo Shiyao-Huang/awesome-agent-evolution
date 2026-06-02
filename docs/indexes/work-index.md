@@ -10,15 +10,15 @@
 
 | Path | Status | Files | Directories | Skipped | Size |
 |---|---|---:|---:|---:|---:|
-| `paper-drafts` | present | 31 | 2 | 0 | 2.3 MB |
+| `paper-drafts` | present | 37 | 3 | 0 | 3.2 MB |
 | `paper` | present | 15 | 2 | 0 | 1023 KB |
 | `latex` | present | 9 | 2 | 0 | 53 KB |
-| `site` | present | 1568 | 453 | 0 | 35 MB |
+| `site` | present | 1594 | 459 | 0 | 48 MB |
 | `survey` | present | 94 | 4 | 0 | 3.4 MB |
-| `scripts` | present | 50 | 1 | 0 | 1.4 MB |
-| `data-engine` | present | 495 | 20 | 0 | 14 MB |
-| `work/research` | present | 64 | 2 | 0 | 2.2 MB |
-| `work/wiki` | present | 71 | 6 | 0 | 490 KB |
+| `scripts` | present | 53 | 1 | 0 | 1.5 MB |
+| `data-engine` | present | 495 | 20 | 0 | 28 MB |
+| `work/research` | present | 66 | 2 | 0 | 2.2 MB |
+| `work/wiki` | present | 73 | 6 | 0 | 501 KB |
 | `wiki` | present | 8 | 2 | 0 | 4.2 MB |
 
 ## Representative Files
@@ -96,9 +96,9 @@
 - `scripts/build_value_evidence_repair_queue.mjs`
 - `scripts/build_value_lsh_index.mjs`
 - `scripts/enforce_raw_timestamps.py`
+- `scripts/export_survey_figures_for_paper.mjs`
 - `scripts/generate-site-knowledge-graph.mjs`
 - `scripts/generate-wiki-index.mjs`
-- `scripts/generate_blog_author_profiles.py`
 
 ### `data-engine`
 

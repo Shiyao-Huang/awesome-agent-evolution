@@ -557,10 +557,6 @@ const collectGithubMaterials = () => {
     if (sourcePath && fs.existsSync(path.join(root, sourcePath))) {
       rawPreview = readMaterialFile(path.join(root, sourcePath), 4000).preview;
     }
-    let analysisPreview = '';
-    if (frontierReport && fs.existsSync(path.join(root, frontierReport))) {
-      analysisPreview = readMaterialFile(path.join(root, frontierReport), 5000).preview;
-    }
     return {
       id: `github:${repo}`,
       type: 'github',
@@ -587,7 +583,6 @@ const collectGithubMaterials = () => {
         analyzed.description,
         analyzed.classification_evidence,
         frontierRow?.why,
-        analysisPreview,
         rawPreview
       ].filter(Boolean).join('\n')
     };

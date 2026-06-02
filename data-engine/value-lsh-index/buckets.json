@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-01T16:54:33.809Z",
+  "generated_at": "2026-06-01T17:52:06.783Z",
   "band_size": 6,
   "total": 168,
   "buckets": [
@@ -6978,7 +6978,6 @@
         "github:stonks-git/intuitive-ai",
         "github:studio-intrinsic/turbo-gepa",
         "github:sundial-org/awesome-openclaw-skills",
-        "github:synaptent/aragora",
         "github:tech-leads-club/agent-skills",
         "github:thclaws/thclaws",
         "github:tmgthb/autonomous-agents",
@@ -6992,7 +6991,7 @@
         "github:zbinxp/deer-flow",
         "github:zylos-ai/zylos-core"
       ],
-      "size": 117,
+      "size": 116,
       "sample_members": [
         "github:01-ai/langcrew",
         "github:aaronowh/ai-scientist-v2",
@@ -10418,13 +10417,14 @@
         "github:sd0xdev/sd0x-dev-flow",
         "github:significant-gravitas/autogpt",
         "github:swapedoc/hermes2anti",
+        "github:synaptent/aragora",
         "github:unicomai/hexagent",
         "github:vilmire/adhdev",
         "github:wazionapps/nexo",
         "github:yunjuetech/yunjue-agent",
         "github:zhangfengcdt/memoir"
       ],
-      "size": 41,
+      "size": 42,
       "sample_members": [
         "github:aiming-lab/autoharness",
         "github:aiming-lab/clawarena",

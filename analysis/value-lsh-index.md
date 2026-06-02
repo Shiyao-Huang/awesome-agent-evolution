@@ -1,6 +1,6 @@
 # Value LSH Index
 
-> Generated: 2026-06-01T16:54:33.809Z. Discrete value-tag LSH index for GitHub projects, papers, social/X captures, and blogs.
+> Generated: 2026-06-01T17:52:06.783Z. Discrete value-tag LSH index for GitHub projects, papers, social/X captures, and blogs.
 
 ## One Sentence
 
@@ -37,8 +37,8 @@ flowchart LR
 | value tags | 26 |
 | LSH buckets | 168 |
 | clusters | 3 |
-| candidate pairs scanned | 63849 |
-| accepted pairs | 54331 |
+| candidate pairs scanned | 63890 |
+| accepted pairs | 54371 |
 | broad buckets skipped | 27 |
 | tag version | 19810f296115 |
 
@@ -119,7 +119,7 @@ flowchart LR
 
 | cluster | size | score avg | types | top tags | representatives |
 | --- | ---: | ---: | --- | --- | --- |
-| vlsh-0001 | 1524 | 71.52 | github:647, paper:197, social:415, blog:265 | +local_code_or_artifact, +timestamp_freshness, +current_frontier_signal, +mutable_artifact_clear, +community_momentum, +product_usability, +open_source_reuse, +implementation_runnable | AgentEvolver; CUGA Agent; Yunjue Agent |
+| vlsh-0001 | 1524 | 71.53 | github:647, paper:197, social:415, blog:265 | +local_code_or_artifact, +timestamp_freshness, +current_frontier_signal, +mutable_artifact_clear, +community_momentum, +product_usability, +open_source_reuse, +implementation_runnable | AgentEvolver; CUGA Agent; Yunjue Agent |
 | vlsh-0002 | 3 | 63.27 | social:3 | +current_frontier_signal, +implementation_runnable, +local_code_or_artifact, +product_usability, -evidence_chain_complete, +timestamp_freshness, +open_source_reuse, +hype_without_evidence | 0194 Linux do agent LINUX DO; 0251 Hacker News DeepSeek and Tsinghua Developing Self Improving AI Models; 0334 Hacker News Crewai Raises 18M But Are AI Agents Ready for Prime Time |
 | vlsh-0003 | 2 | 64.33 | blog:2 | +current_frontier_signal, +self_evolution_loop_fit, +implementation_runnable, +local_code_or_artifact, +product_usability, -evidence_chain_complete, +timestamp_freshness, +community_momentum | 0190 36Kr 7 GPU 36; 0425 Tencent Cloud Dev |
 

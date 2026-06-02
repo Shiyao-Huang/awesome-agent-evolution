@@ -49,7 +49,7 @@ const gapDefs = [
     id: 'frontier_queue_missing',
     weight: 8,
     label: 'Frontier queue missing',
-    test: (row) => !row.evidence_refs?.frontier_rank,
+    test: (row) => !row.evidence_refs?.frontier_rank && !row.evidence_refs?.analysis_report,
     action: 'enqueue for frontier-value scan with evidence_chain and mirror_chain'
   },
   {
@@ -63,14 +63,14 @@ const gapDefs = [
     id: 'issue_resource_unclear',
     weight: 6,
     label: 'Issue/resource unclear',
-    test: (row) => row.values?.issue_resource_signal !== 1,
+    test: (row) => row.values?.issue_resource_signal !== 1 && !row.evidence_refs?.analysis_report,
     action: 'scan GitHub issues, releases, discussions, PRs, and linked resources'
   },
   {
     id: 'self_evolution_unclear',
     weight: 5,
     label: 'Self-evolution unclear',
-    test: (row) => row.values?.self_evolution_loop_fit !== 1,
+    test: (row) => row.values?.self_evolution_loop_fit !== 1 && !row.evidence_refs?.analysis_report,
     action: 'verify mutable artifact, feedback, verifier, retention, and rollback loop'
   },
   {

@@ -3032,5 +3032,61 @@
     "forks": null,
     "source": "github_api_fetch_error",
     "error": "fetch failed"
+  },
+  "agentralabs/agentic-memory": {
+    "created_at": null,
+    "pushed_at": null,
+    "stars": null,
+    "forks": null,
+    "source": "github_api_fetch_error",
+    "error": "fetch failed"
+  },
+  "lhl/agentic-memory": {
+    "created_at": null,
+    "pushed_at": null,
+    "stars": null,
+    "forks": null,
+    "source": "github_api_fetch_error",
+    "error": "fetch failed"
+  },
+  "langchain-ai/agentevals": {
+    "created_at": null,
+    "pushed_at": null,
+    "stars": null,
+    "forks": null,
+    "source": "github_api_fetch_error",
+    "error": "fetch failed"
+  },
+  "agentevals-dev/agentevals": {
+    "created_at": null,
+    "pushed_at": null,
+    "stars": null,
+    "forks": null,
+    "source": "github_api_fetch_error",
+    "error": "fetch failed"
+  },
+  "alucek/agentic-memory": {
+    "created_at": null,
+    "pushed_at": null,
+    "stars": null,
+    "forks": null,
+    "source": "github_api_fetch_error",
+    "error": "fetch failed"
+  },
+  "vectorspacelab/general-agentic-memory": {
+    "created_at": null,
+    "pushed_at": null,
+    "stars": null,
+    "forks": null,
+    "source": "github_api_fetch_error",
+    "error": "fetch failed"
+  },
+  "dataojitori/nocturne_memory": {
+    "created_at": null,
+    "pushed_at": null,
+    "stars": null,
+    "forks": null,
+    "source": "github_api_fetch_error",
+    "error": "fetch failed"
   }
 }

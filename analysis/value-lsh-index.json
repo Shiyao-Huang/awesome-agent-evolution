@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-01T16:54:33.809Z",
+  "generated_at": "2026-06-01T17:52:06.783Z",
   "method": {
     "name": "discrete_value_lsh_v0",
     "summary": "Ternary value tags (-1/0/+1) are split into local hash bands for approximate near-neighbor recall and cluster discovery.",
@@ -9,7 +9,7 @@
     "threshold": 0.52
   },
   "summary": {
-    "generated_at": "2026-06-01T16:54:33.809Z",
+    "generated_at": "2026-06-01T17:52:06.783Z",
     "source": "all",
     "total_materials": 2206,
     "value_tag_count": 26,
@@ -29,16 +29,16 @@
     },
     "total_buckets": 168,
     "total_clusters": 3,
-    "score_average": 68.3,
-    "confidence_average": 45.92,
+    "score_average": 68.31,
+    "confidence_average": 45.93,
     "lsh_stats": {
-      "candidate_pairs_scanned": 63849,
-      "accepted_pairs": 54331,
+      "candidate_pairs_scanned": 63890,
+      "accepted_pairs": 54371,
       "skipped_broad_buckets": [
         {
           "key": "v0:b1:226d012686e902e0",
           "band": 1,
-          "size": 117,
+          "size": 116,
           "features": [
             "rollback_or_safety",
             "implementation_runnable",
@@ -377,7 +377,7 @@
       ]
     },
     "incremental": {
-      "previous_generated_at": "2026-06-01T16:52:19.326Z",
+      "previous_generated_at": "2026-06-01T17:41:22.133Z",
       "added": 0,
       "changed": 0,
       "unchanged": 2206,
@@ -15702,7 +15702,7 @@
         "high-value-candidate": 802,
         "low-signal-or-risk": 111
       },
-      "score_avg": 71.52,
+      "score_avg": 71.53,
       "confidence_avg": 52.32,
       "top_tags": [
         {
@@ -22993,7 +22993,6 @@
         "github:stonks-git/intuitive-ai",
         "github:studio-intrinsic/turbo-gepa",
         "github:sundial-org/awesome-openclaw-skills",
-        "github:synaptent/aragora",
         "github:tech-leads-club/agent-skills",
         "github:thclaws/thclaws",
         "github:tmgthb/autonomous-agents",
@@ -23007,7 +23006,7 @@
         "github:zbinxp/deer-flow",
         "github:zylos-ai/zylos-core"
       ],
-      "size": 117,
+      "size": 116,
       "sample_members": [
         "github:01-ai/langcrew",
         "github:aaronowh/ai-scientist-v2",
@@ -26433,13 +26432,14 @@
         "github:sd0xdev/sd0x-dev-flow",
         "github:significant-gravitas/autogpt",
         "github:swapedoc/hermes2anti",
+        "github:synaptent/aragora",
         "github:unicomai/hexagent",
         "github:vilmire/adhdev",
         "github:wazionapps/nexo",
         "github:yunjuetech/yunjue-agent",
         "github:zhangfengcdt/memoir"
       ],
-      "size": 41,
+      "size": 42,
       "sample_members": [
         "github:aiming-lab/autoharness",
         "github:aiming-lab/clawarena",

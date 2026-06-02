@@ -1,82 +1,35 @@
 {
-  "generated_at": "2026-06-01T16:54:54.621Z",
+  "generated_at": "2026-06-01T17:52:23.794Z",
   "method": {
     "name": "value_evidence_repair_queue_v0",
     "source": "data-engine/value-lsh-index/value-matrix.jsonl",
     "note": "Prioritizes evidence repair work after value-LSH comparison; repair score is not a quality score."
   },
   "summary": {
-    "generated_at": "2026-06-01T16:54:54.621Z",
-    "source_lsh_generated_at": "2026-06-01T16:54:33.809Z",
+    "generated_at": "2026-06-01T17:52:23.794Z",
+    "source_lsh_generated_at": "2026-06-01T17:52:06.783Z",
     "github_projects": 704,
-    "projects_with_gaps": 675,
+    "projects_with_gaps": 672,
     "lane_counts": {
-      "deep-read-needed": 457,
-      "issue-resource-scan": 130,
+      "deep-read-needed": 456,
+      "issue-resource-scan": 128,
       "raw-meta-repair": 52,
       "loop-verification": 35,
       "star-growth-repair": 1
     },
     "gap_counts": {
-      "deep_report_missing": 457,
-      "frontier_queue_missing": 458,
-      "issue_resource_unclear": 326,
-      "self_evolution_unclear": 426,
-      "evidence_chain_incomplete": 509,
+      "deep_report_missing": 456,
+      "frontier_queue_missing": 456,
+      "issue_resource_unclear": 323,
+      "evidence_chain_incomplete": 508,
+      "self_evolution_unclear": 424,
       "implementation_unclear": 52,
       "star_growth_missing": 7,
       "raw_meta_missing": 52
     },
-    "top_repair_score": 137.03
+    "top_repair_score": 136.8
   },
   "queue": [
-    {
-      "id": "github:synaptent/aragora",
-      "repo": "synaptent/aragora",
-      "title": "synaptent/aragora",
-      "url": "https://github.com/synaptent/aragora",
-      "value_score": 78.03,
-      "value_class": "high-value-candidate",
-      "repair_score": 137.03,
-      "lane": "deep-read-needed",
-      "gaps": [
-        {
-          "id": "deep_report_missing",
-          "label": "Deep report missing",
-          "action": "clone/read code and create model-card style deep report"
-        },
-        {
-          "id": "frontier_queue_missing",
-          "label": "Frontier queue missing",
-          "action": "enqueue for frontier-value scan with evidence_chain and mirror_chain"
-        },
-        {
-          "id": "issue_resource_unclear",
-          "label": "Issue/resource unclear",
-          "action": "scan GitHub issues, releases, discussions, PRs, and linked resources"
-        },
-        {
-          "id": "self_evolution_unclear",
-          "label": "Self-evolution unclear",
-          "action": "verify mutable artifact, feedback, verifier, retention, and rollback loop"
-        },
-        {
-          "id": "evidence_chain_incomplete",
-          "label": "Evidence chain incomplete",
-          "action": "connect raw source, processed report, local code evidence, and generated index rows"
-        }
-      ],
-      "evidence_refs": {
-        "github_report": null,
-        "analysis_report": null,
-        "public_report": null,
-        "raw_file": "raw-github/synaptent_aragora.md",
-        "rank_seed": null,
-        "alternate_source_paths": [],
-        "frontier_rank": null,
-        "star_growth_rank": 563
-      }
-    },
     {
       "id": "github:gepa-ai/gepa",
       "repo": "gepa-ai/gepa",
@@ -14286,43 +14239,6 @@
       }
     },
     {
-      "id": "github:kargarisaac/reflexion",
-      "repo": "kargarisaac/reflexion",
-      "title": "kargarisaac/reflexion",
-      "url": "https://github.com/kargarisaac/reflexion",
-      "value_score": 81.85,
-      "value_class": "high-value-candidate",
-      "repair_score": 122.85,
-      "lane": "issue-resource-scan",
-      "gaps": [
-        {
-          "id": "frontier_queue_missing",
-          "label": "Frontier queue missing",
-          "action": "enqueue for frontier-value scan with evidence_chain and mirror_chain"
-        },
-        {
-          "id": "issue_resource_unclear",
-          "label": "Issue/resource unclear",
-          "action": "scan GitHub issues, releases, discussions, PRs, and linked resources"
-        },
-        {
-          "id": "self_evolution_unclear",
-          "label": "Self-evolution unclear",
-          "action": "verify mutable artifact, feedback, verifier, retention, and rollback loop"
-        }
-      ],
-      "evidence_refs": {
-        "github_report": null,
-        "analysis_report": "analysis/frontier-projects/kargarisaac-reflexion-dual-chain.md",
-        "public_report": null,
-        "raw_file": "raw-github/kargarisaac_reflexion.md",
-        "rank_seed": null,
-        "alternate_source_paths": [],
-        "frontier_rank": null,
-        "star_growth_rank": 560
-      }
-    },
-    {
       "id": "github:emartin59/text-game-llm-improver",
       "repo": "emartin59/text-game-llm-improver",
       "title": "emartin59/text-game-llm-improver",
@@ -18351,33 +18267,6 @@
         "alternate_source_paths": [],
         "frontier_rank": null,
         "star_growth_rank": 681
-      }
-    },
-    {
-      "id": "github:jarvis-xs/se-agent",
-      "repo": "jarvis-xs/se-agent",
-      "title": "SE-Agent",
-      "url": "https://github.com/JARVIS-Xs/SE-Agent",
-      "value_score": 83.76,
-      "value_class": "high-value-candidate",
-      "repair_score": 111.76,
-      "lane": "issue-resource-scan",
-      "gaps": [
-        {
-          "id": "issue_resource_unclear",
-          "label": "Issue/resource unclear",
-          "action": "scan GitHub issues, releases, discussions, PRs, and linked resources"
-        }
-      ],
-      "evidence_refs": {
-        "github_report": "projects/jarvis_xs__se_agent.md",
-        "analysis_report": "analysis/frontier-projects/jarvis-xs-se-agent-dual-chain.md",
-        "public_report": "site/public/reports/projects/jarvis_xs__se_agent.md",
-        "raw_file": "raw-github/jarvis-xs_se-agent.md",
-        "rank_seed": null,
-        "alternate_source_paths": [],
-        "frontier_rank": 5,
-        "star_growth_rank": 257
       }
     },
     {

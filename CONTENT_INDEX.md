@@ -35,13 +35,15 @@
 | Value LSH Index | [analysis/value-lsh-index.md](analysis/value-lsh-index.md) | processed aggregate：2206 条去重后 GitHub/paper/social/blog 素材离散成 26 条 `-1/0/+1` value lines，生成 168 个 LSH buckets、3 个 value clusters 和 855/1055/296 三段筛选 |
 | Value evidence repair queue | [analysis/value-evidence-repair-queue.md](analysis/value-evidence-repair-queue.md) | processed queue：把 value-LSH 的 GitHub rows 转为 raw/meta、deep report、issue/resource、star-growth、loop verification 五类证据修复动作 |
 | Value LSH work dataset | [data-engine/value-lsh-index/README.md](data-engine/value-lsh-index/README.md) | work dataset：保存 value tags、matrix、signatures、buckets、clusters、3D projection、embedding cache 和 incremental manifest |
-| 公开 Value LSH 图谱页 | [site/src/pages/value-lsh/index.astro](site/src/pages/value-lsh/index.astro) | site result：把 `analysis/value-lsh-index.json`、`analysis/value-lsh-graph-3d.json` 和 repair queue 渲染成价值分类图谱、三段 action class、候选队列、证据修复队列和 facet/bucket 展示 |
+| 公开 Value LSH 图谱页 | [site/src/pages/value-lsh/index.astro](site/src/pages/value-lsh/index.astro) | site result：把 `analysis/value-lsh-index.json`、`analysis/value-lsh-graph-3d.json` 和 repair queue 渲染成可交互价值分类图谱；点选素材可查看 value/embedding 信息与 LSH 邻居，页面同步展示三段 action class、候选队列、证据修复队列和 facet/bucket |
 | Frontier value queue | [analysis/frontier-value-queue.md](analysis/frontier-value-queue.md) | processed queue：把 246 个 analyzed projects 分到 code-ready、clone-needed、metadata-refresh、baseline、parked 等深挖 lane，并接入 2026 star-growth coverage/backlog 信号 |
 | AgentEvolver 双链深读 | [analysis/frontier-projects/modelscope-agentevolver-dual-chain.md](analysis/frontier-projects/modelscope-agentevolver-dual-chain.md) | processed project packet：第一个项目级双链样本，连接 raw/meta/本地代码/GitHub issue-resource 信号并判定其 frontier archetype 价值 |
 | SE-Agent 双链深读 | [analysis/frontier-projects/jarvis-xs-se-agent-dual-chain.md](analysis/frontier-projects/jarvis-xs-se-agent-dual-chain.md) | processed project packet：第二个项目级双链样本，判定 SE-Agent 是 trajectory-evolution baseline 而非最高 current frontier |
+| kargarisaac Reflexion 双链深读 | [analysis/frontier-projects/kargarisaac-reflexion-dual-chain.md](analysis/frontier-projects/kargarisaac-reflexion-dual-chain.md) | processed project packet：repair queue 第一项样本，基于 GitHub API source/issue/PR 证据判定为 low-continuity Reflexion baseline adapter |
+| synaptent Aragora 双链深读 | [analysis/frontier-projects/synaptent-aragora-dual-chain.md](analysis/frontier-projects/synaptent-aragora-dual-chain.md) | processed project packet：repair queue 第二项样本，基于 live GitHub、local clone、issue/PR、release/tag 和代码证据判定为 governance-control-plane frontier anchor |
 | Frontier queue generator | [scripts/generate_frontier_value_queue.mjs](scripts/generate_frontier_value_queue.mjs) | work script：从 GitHub analysis、timestamp index 和本地 clone evidence 生成下一批项目深挖队列 |
 | Value LSH generator | [scripts/build_value_lsh_index.mjs](scripts/build_value_lsh_index.mjs) | work script：从现有 raw/processed corpus 生成离散 value facet matrix、LSH signatures、buckets、clusters 和增量状态 |
-| Value embedding projection | [scripts/build_value_embedding_projection.mjs](scripts/build_value_embedding_projection.mjs) | work script：支持 value/hash/OpenAI embedding 和 PCA/TSNE 3D graph projection，输出 `analysis/value-lsh-graph-3d.json` |
+| Value embedding projection | [scripts/build_value_embedding_projection.mjs](scripts/build_value_embedding_projection.mjs) | work script：支持 value/value-regularized/hash/OpenAI embedding 和 PCA/exact TSNE/PCA-TSNE 3D graph projection，输出含 LSH neighbor map 的 `analysis/value-lsh-graph-3d.json` |
 | 自进化定义判据 | [analysis/self-evolution-definition-criteria.md](analysis/self-evolution-definition-criteria.md) | processed synthesis：用可变对象、反馈、候选生成、验证、保留和回滚六个 gate 定义什么才算 self-evolving agent |
 | 五类进化回路主题分析 | [analysis/five-evolution-loops-topic.md](analysis/five-evolution-loops-topic.md) | processed synthesis：把五类回路整理成可读的机制地图，说明可变对象、反馈、验证器、保留和失败模式 |
 | 代码自改进 Benchmark 矩阵 | [analysis/code-evolution-benchmark-matrix.md](analysis/code-evolution-benchmark-matrix.md) | processed synthesis：区分自修改 coding agent、算法发现、架构搜索、prompt/program 优化和反思修复回路的 benchmark 证据 |
@@ -50,7 +52,7 @@
 | 用户输入记忆 | local-only, ignored | 本地保留，不发布、不提交；公开仓库只保留抽象操作原则 |
 | 读者/Agent 边界规则 | [docs/ops/audience-boundary-workflow.md](docs/ops/audience-boundary-workflow.md) | ops guide：区分公开读者页面、证据索引和内部 workflow，防止 README/site 混入 agent 操作手册 |
 | 非标准材料清理 | [docs/project-management/noncanonical-cleanup-policy.md](docs/project-management/noncanonical-cleanup-policy.md) | 不乱删，先归类再迁移 |
-| GitHub 数据分析 | [analysis/github-project-data-analysis.md](analysis/github-project-data-analysis.md) | 覆盖 653 个 raw GitHub captures、分类、进化相关、时间序列 |
+| GitHub 数据分析 | [analysis/github-project-data-analysis.md](analysis/github-project-data-analysis.md) | 覆盖 666 个 raw GitHub captures、分类、进化相关、时间序列 |
 | GitHub 数据 JSON | [analysis/github-project-data-analysis.json](analysis/github-project-data-analysis.json) | 脚本生成，可复跑 |
 | GitHub Star 增长数据库计划 | [analysis/github-star-growth-database-plan.md](analysis/github-star-growth-database-plan.md) | processed plan：把累计 Star 降为历史 adoption prior，改用 2026 新增 Star、recent velocity 和覆盖完整性做当前阶段排名 |
 | GitHub Star 增长排名 | [analysis/github-star-growth-ranking.md](analysis/github-star-growth-ranking.md) | processed aggregate：由 `data-engine/github-star-history/` 生成的 year-specific new-star ranking，未抓取项目标为 `not_fetched` |
@@ -70,7 +72,7 @@
 | 公开定义主题页 | [site/src/pages/topics/self-evolving-ai-agents/index.astro](site/src/pages/topics/self-evolving-ai-agents/index.astro) | 面向消费者和 SEO 的 evergreen 定义页：判断一个 AI Agent 是否真的自进化 |
 | 公开五类回路主题页 | [site/src/pages/topics/five-evolution-loops/index.astro](site/src/pages/topics/five-evolution-loops/index.astro) | 面向消费者和 SEO 的 evergreen 机制页：用五类进化回路解释反馈如何变成可保留改进 |
 | 公开代码自改进 Benchmark 页 | [site/src/pages/topics/code-evolution-benchmark/index.astro](site/src/pages/topics/code-evolution-benchmark/index.astro) | 面向消费者和 SEO 的 evergreen benchmark 页：判断代码自改进和算法发现声明的证据强度 |
-| 公开项目报告 | [site/public/reports/projects/](site/public/reports/projects/) | 448 个公开项目报告供静态站点下载/引用 |
+| 公开项目报告 | [site/public/reports/projects/](site/public/reports/projects/) | 461 个公开项目报告供静态站点下载/引用 |
 
 ## 历史索引
 

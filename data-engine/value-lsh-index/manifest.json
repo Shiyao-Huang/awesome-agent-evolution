@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-01T16:54:33.809Z",
+  "generated_at": "2026-06-01T17:52:06.783Z",
   "source": "all",
   "tag_version": "19810f296115",
   "band_size": 6,
   "threshold": 0.52,
   "summary": {
-    "previous_generated_at": "2026-06-01T16:52:19.326Z",
+    "previous_generated_at": "2026-06-01T17:41:22.133Z",
     "added": 0,
     "changed": 0,
     "unchanged": 2206,
@@ -4720,8 +4720,8 @@
       "type": "github",
       "source_path": "raw-github/synaptent_aragora.md",
       "fingerprint": "c0b5035570bd174f37837cb9338fdc03ed98d97e",
-      "signature_hash": "f88b72ece2c1c3be9e9e",
-      "value_score": 78.03,
+      "signature_hash": "c69965d52adba6d8c220",
+      "value_score": 81.85,
       "value_class": "high-value-candidate"
     },
     "github:syntax-syndicate/openharness-agent-harness": {
