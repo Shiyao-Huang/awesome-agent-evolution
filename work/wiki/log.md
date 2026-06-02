@@ -507,3 +507,21 @@
 - Removed `gepa-ai/gepa` from the generic repair queue; the rebuilt value matrix now has 2219 materials and 717 GitHub rows, with 684 GitHub projects still carrying repair gaps.
 - The next top repair targets are `gepa-ai/optimize-anything-artifact`, `langchain-ai/open-swe`, `sethkarten/continual-harness`, `inclusionai/agenticlearning`, and `tylerdotai/meta-harness-evolver`.
 **产出:** `analysis/value-lsh-index.md`, `analysis/value-evidence-repair-queue.md`, `analysis/value-lsh-graph-3d.json`, `work/wiki/search-index.json`, `docs/indexes/master-index.md`
+
+## [2026-06-02 10:24] project+deep-read | gepa-ai optimize_anything Artifact Reproducibility Anchor
+
+**操作:** Completed the fourth repair-queue project deep read.
+**详情:**
+- Investigated `gepa-ai/optimize-anything-artifact` with live GitHub metadata, releases, issues/PRs, language stats, raw capture, artifact README, offline guide, re-execution requirements, GitHub tree API, verifier source, and saved verifier output.
+- Direct full clone timed out and shallow clone failed with HTTP2 framing; this pass records source review via GitHub API and leaves durable local mirror as a remaining gate.
+- Classified the repo as a paired GEPA reproducibility anchor: low community signal, high offline verifier/log/checkpoint evidence density, and clear live-rerun cost/hardware boundaries.
+**产出:** `analysis/frontier-projects/gepa-ai-optimize-anything-artifact-dual-chain.md`, `work/wiki/synthesis/gepa-ai-optimize-anything-artifact-frontier-deep-dive.md`
+
+## [2026-06-02 10:28] data+index | optimize_anything Artifact Repair Queue Resolution
+
+**操作:** Rebuilt value-LSH, projection, repair queue, wiki search index, and project indexes after the fourth deep-read packet.
+**详情:**
+- Verified `gepa-ai/optimize-anything-artifact` now has `evidence_refs.analysis_report = analysis/frontier-projects/gepa-ai-optimize-anything-artifact-dual-chain.md`.
+- Removed `gepa-ai/optimize-anything-artifact` from the generic repair queue; the rebuilt value matrix now has 2219 materials and 717 GitHub rows, with 683 GitHub projects still carrying repair gaps.
+- The target's value score/confidence became `86.62 / 80.77`, and the next top repair targets are `langchain-ai/open-swe`, `sethkarten/continual-harness`, `inclusionai/agenticlearning`, `tylerdotai/meta-harness-evolver`, and `krzysztofdudek/researcherskill`.
+**产出:** `analysis/value-lsh-index.md`, `analysis/value-evidence-repair-queue.md`, `analysis/value-lsh-graph-3d.json`, `work/wiki/search-index.json`, `docs/indexes/master-index.md`

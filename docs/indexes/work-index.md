@@ -13,12 +13,12 @@
 | `paper-drafts` | present | 37 | 3 | 0 | 3.2 MB |
 | `paper` | present | 15 | 2 | 0 | 1023 KB |
 | `latex` | present | 9 | 2 | 0 | 53 KB |
-| `site` | present | 1608 | 466 | 0 | 48 MB |
-| `survey` | present | 94 | 4 | 0 | 3.4 MB |
+| `site` | present | 1608 | 466 | 0 | 43 MB |
+| `survey` | present | 94 | 4 | 0 | 3.3 MB |
 | `scripts` | present | 53 | 1 | 0 | 1.5 MB |
 | `data-engine` | present | 495 | 20 | 0 | 28 MB |
 | `work/research` | present | 66 | 2 | 0 | 2.2 MB |
-| `work/wiki` | present | 74 | 6 | 0 | 505 KB |
+| `work/wiki` | present | 75 | 6 | 0 | 512 KB |
 | `wiki` | present | 8 | 2 | 0 | 4.2 MB |
 
 ## Representative Files

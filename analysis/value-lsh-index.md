@@ -1,6 +1,6 @@
 # Value LSH Index
 
-> Generated: 2026-06-02T01:45:11.370Z. Discrete value-tag LSH index for GitHub projects, papers, social/X captures, and blogs.
+> Generated: 2026-06-02T02:27:29.566Z. Discrete value-tag LSH index for GitHub projects, papers, social/X captures, and blogs.
 
 ## One Sentence
 
@@ -37,8 +37,8 @@ flowchart LR
 | value tags | 26 |
 | LSH buckets | 168 |
 | clusters | 3 |
-| candidate pairs scanned | 64512 |
-| accepted pairs | 54985 |
+| candidate pairs scanned | 64556 |
+| accepted pairs | 55029 |
 | broad buckets skipped | 27 |
 | tag version | 19810f296115 |
 
@@ -77,18 +77,18 @@ flowchart LR
 | 6 | [EvoAgentX](https://github.com/EvoAgentX/EvoAgentX) | github | 86.94 | 80.77 | high-value-candidate | raw-github/evoagentx_evoagentx.md |
 | 7 | [LLaMEA](https://github.com/XAI-liacs/LLaMEA) | github | 86.94 | 80.77 | high-value-candidate | raw-github/xai-liacs_llamea.md |
 | 8 | [gepa-ai/gepa](https://github.com/gepa-ai/gepa) | github | 86.62 | 80.77 | high-value-candidate | raw-github/gepa-ai_gepa.md |
-| 9 | 0176 36kr com Anthropic Meta 36 | social | 86.31 | 80.77 | high-value-candidate | raw-social/0176-36kr-com-Anthropic-Meta-36.md |
-| 10 | 0178 36kr com Skills Skill Agent 36 | social | 86.31 | 80.77 | high-value-candidate | raw-social/0178-36kr-com-Skills-Skill-Agent-36.md |
-| 11 | [Tiermem](https://github.com/FreedomIntelligence/Tiermem) | github | 86.31 | 76.92 | high-value-candidate | raw-github/freedomintelligence_tiermem.md |
-| 12 | [AI Agent Benchmark](https://github.com/murataslan1/ai-agent-benchmark) | github | 86.31 | 76.92 | high-value-candidate | raw-github/murataslan1_ai-agent-benchmark.md |
-| 13 | Reflexion: Language Agents with Verbal Reinforcement Learning | paper | 86.31 | 76.92 | high-value-candidate | raw-papers/2303-11366.md |
-| 14 | Raw Papers Classification Index | paper | 85.99 | 84.62 | high-value-candidate | raw-papers/classification-index.md |
-| 15 | 0113 CSDN 12 | social | 85.67 | 80.77 | high-value-candidate | raw-social/0113-CSDN-12.md |
-| 16 | [hermes2anti](https://github.com/swapedoc/hermes2anti) | github | 85.67 | 76.92 | high-value-candidate | raw-github/swapedoc_hermes2anti.md |
-| 17 | [AI Research SKILLs](https://github.com/Orchestra-Research/AI-research-SKILLs) | github | 85.35 | 76.92 | high-value-candidate | raw-github/orchestra-research_ai-research-skills.md |
-| 18 | Agentic Context Engineering: Evolving Contexts for Self-Improving Language Models | paper | 85.35 | 73.08 | high-value-candidate | raw-papers/2510-04618.md |
-| 19 | [openevolve](https://github.com/algorithmicsuperintelligence/openevolve) | github | 85.03 | 76.92 | high-value-candidate | raw-github/algorithmicsuperintelligence_openevolve.md |
-| 20 | 0086 Zhihu Agent Agent | social | 84.71 | 76.92 | high-value-candidate | raw-social/0086-Zhihu-Agent-Agent.md |
+| 9 | [gepa-ai/optimize-anything-artifact](https://github.com/gepa-ai/optimize-anything-artifact) | github | 86.62 | 80.77 | high-value-candidate | raw-github/gepa-ai_optimize-anything-artifact.md |
+| 10 | 0176 36kr com Anthropic Meta 36 | social | 86.31 | 80.77 | high-value-candidate | raw-social/0176-36kr-com-Anthropic-Meta-36.md |
+| 11 | 0178 36kr com Skills Skill Agent 36 | social | 86.31 | 80.77 | high-value-candidate | raw-social/0178-36kr-com-Skills-Skill-Agent-36.md |
+| 12 | [Tiermem](https://github.com/FreedomIntelligence/Tiermem) | github | 86.31 | 76.92 | high-value-candidate | raw-github/freedomintelligence_tiermem.md |
+| 13 | [AI Agent Benchmark](https://github.com/murataslan1/ai-agent-benchmark) | github | 86.31 | 76.92 | high-value-candidate | raw-github/murataslan1_ai-agent-benchmark.md |
+| 14 | Reflexion: Language Agents with Verbal Reinforcement Learning | paper | 86.31 | 76.92 | high-value-candidate | raw-papers/2303-11366.md |
+| 15 | Raw Papers Classification Index | paper | 85.99 | 84.62 | high-value-candidate | raw-papers/classification-index.md |
+| 16 | 0113 CSDN 12 | social | 85.67 | 80.77 | high-value-candidate | raw-social/0113-CSDN-12.md |
+| 17 | [hermes2anti](https://github.com/swapedoc/hermes2anti) | github | 85.67 | 76.92 | high-value-candidate | raw-github/swapedoc_hermes2anti.md |
+| 18 | [AI Research SKILLs](https://github.com/Orchestra-Research/AI-research-SKILLs) | github | 85.35 | 76.92 | high-value-candidate | raw-github/orchestra-research_ai-research-skills.md |
+| 19 | Agentic Context Engineering: Evolving Contexts for Self-Improving Language Models | paper | 85.35 | 73.08 | high-value-candidate | raw-papers/2510-04618.md |
+| 20 | [openevolve](https://github.com/algorithmicsuperintelligence/openevolve) | github | 85.03 | 76.92 | high-value-candidate | raw-github/algorithmicsuperintelligence_openevolve.md |
 
 ## Risk / Contradiction Queue
 

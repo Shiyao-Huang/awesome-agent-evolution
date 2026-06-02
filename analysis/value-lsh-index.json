@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-02T01:45:11.370Z",
+  "generated_at": "2026-06-02T02:27:29.566Z",
   "method": {
     "name": "discrete_value_lsh_v0",
     "summary": "Ternary value tags (-1/0/+1) are split into local hash bands for approximate near-neighbor recall and cluster discovery.",
@@ -9,7 +9,7 @@
     "threshold": 0.52
   },
   "summary": {
-    "generated_at": "2026-06-02T01:45:11.370Z",
+    "generated_at": "2026-06-02T02:27:29.566Z",
     "source": "all",
     "total_materials": 2219,
     "value_tag_count": 26,
@@ -32,13 +32,13 @@
     "score_average": 68.34,
     "confidence_average": 46.04,
     "lsh_stats": {
-      "candidate_pairs_scanned": 64512,
-      "accepted_pairs": 54985,
+      "candidate_pairs_scanned": 64556,
+      "accepted_pairs": 55029,
       "skipped_broad_buckets": [
         {
           "key": "v0:b1:226d012686e902e0",
           "band": 1,
-          "size": 115,
+          "size": 114,
           "features": [
             "rollback_or_safety",
             "implementation_runnable",
@@ -377,7 +377,7 @@
       ]
     },
     "incremental": {
-      "previous_generated_at": "2026-06-02T01:45:09.013Z",
+      "previous_generated_at": "2026-06-02T01:45:11.370Z",
       "added": 0,
       "changed": 0,
       "unchanged": 2219,
@@ -2243,6 +2243,216 @@
         "alternate_source_paths": [],
         "frontier_rank": null,
         "star_growth_rank": 581
+      }
+    },
+    {
+      "id": "github:gepa-ai/optimize-anything-artifact",
+      "type": "github",
+      "title": "gepa-ai/optimize-anything-artifact",
+      "url": "https://github.com/gepa-ai/optimize-anything-artifact",
+      "source_path": "raw-github/gepa-ai_optimize-anything-artifact.md",
+      "score": {
+        "values": {
+          "current_frontier_signal": 1,
+          "self_evolution_loop_fit": 1,
+          "mutable_artifact_clear": 1,
+          "feedback_signal_clear": 1,
+          "verifier_or_benchmark": 1,
+          "retention_or_memory": 1,
+          "rollback_or_safety": 1,
+          "implementation_runnable": 1,
+          "local_code_or_artifact": 1,
+          "product_usability": 1,
+          "teaching_model_card": 1,
+          "evidence_chain_complete": 1,
+          "timestamp_freshness": 1,
+          "continuity_active": 0,
+          "community_momentum": 1,
+          "star_growth_current": -1,
+          "paper_quality_signal": 1,
+          "benchmark_result": 1,
+          "method_novelty": 0,
+          "open_source_reuse": 1,
+          "issue_resource_signal": 0,
+          "hype_without_evidence": 0,
+          "stale_or_unknown_metadata": 0,
+          "useful_for_survey_seo": 1,
+          "user_need_fit": 1,
+          "compare_anchor_baseline": 1
+        },
+        "contributions": {
+          "current_frontier_signal": 8,
+          "self_evolution_loop_fit": 10,
+          "mutable_artifact_clear": 6,
+          "feedback_signal_clear": 6,
+          "verifier_or_benchmark": 8,
+          "retention_or_memory": 7,
+          "rollback_or_safety": 5,
+          "implementation_runnable": 8,
+          "local_code_or_artifact": 5,
+          "product_usability": 5,
+          "teaching_model_card": 4,
+          "evidence_chain_complete": 8,
+          "timestamp_freshness": 7,
+          "continuity_active": 0,
+          "community_momentum": 5,
+          "star_growth_current": -6,
+          "paper_quality_signal": 5,
+          "benchmark_result": 6,
+          "method_novelty": 0,
+          "open_source_reuse": 5,
+          "issue_resource_signal": 0,
+          "hype_without_evidence": 0,
+          "stale_or_unknown_metadata": 0,
+          "useful_for_survey_seo": 4,
+          "user_need_fit": 6,
+          "compare_anchor_baseline": 3
+        },
+        "tagEvidence": {
+          "current_frontier_signal": [
+            {
+              "source": "raw-github/gepa-ai_optimize-anything-artifact.md",
+              "note": "text contains current/frontier terms"
+            }
+          ],
+          "self_evolution_loop_fit": [
+            {
+              "source": "raw-github/gepa-ai_optimize-anything-artifact.md",
+              "note": "self-evolution terms"
+            }
+          ],
+          "mutable_artifact_clear": [
+            {
+              "source": "raw-github/gepa-ai_optimize-anything-artifact.md",
+              "note": "mutable artifact terms"
+            }
+          ],
+          "feedback_signal_clear": [
+            {
+              "source": "raw-github/gepa-ai_optimize-anything-artifact.md",
+              "note": "feedback terms"
+            }
+          ],
+          "verifier_or_benchmark": [
+            {
+              "source": "raw-github/gepa-ai_optimize-anything-artifact.md",
+              "note": "benchmark/verifier terms"
+            }
+          ],
+          "retention_or_memory": [
+            {
+              "source": "raw-github/gepa-ai_optimize-anything-artifact.md",
+              "note": "retention terms"
+            }
+          ],
+          "rollback_or_safety": [
+            {
+              "source": "raw-github/gepa-ai_optimize-anything-artifact.md",
+              "note": "safety/rollback terms"
+            }
+          ],
+          "implementation_runnable": [
+            {
+              "source": "raw-github/gepa-ai_optimize-anything-artifact.md",
+              "note": "runnable docs terms"
+            }
+          ],
+          "local_code_or_artifact": [
+            {
+              "source": "raw-github/gepa-ai_optimize-anything-artifact.md",
+              "note": "local mirror or report exists"
+            }
+          ],
+          "product_usability": [
+            {
+              "source": "raw-github/gepa-ai_optimize-anything-artifact.md",
+              "note": "product/workflow terms"
+            }
+          ],
+          "teaching_model_card": [
+            {
+              "source": "raw-github/gepa-ai_optimize-anything-artifact.md",
+              "note": "project/public report exists"
+            }
+          ],
+          "evidence_chain_complete": [
+            {
+              "source": "raw-github/gepa-ai_optimize-anything-artifact.md",
+              "note": "raw + processed + time present"
+            }
+          ],
+          "timestamp_freshness": [
+            {
+              "source": "raw-github/gepa-ai_optimize-anything-artifact.md",
+              "note": "fresh year in text"
+            }
+          ],
+          "community_momentum": [
+            {
+              "source": "raw-github/gepa-ai_optimize-anything-artifact.md",
+              "note": "community terms"
+            }
+          ],
+          "star_growth_current": [
+            {
+              "source": "raw-github/gepa-ai_optimize-anything-artifact.md",
+              "note": "star history not fetched"
+            }
+          ],
+          "paper_quality_signal": [
+            {
+              "source": "raw-github/gepa-ai_optimize-anything-artifact.md",
+              "note": "research-paper terms"
+            }
+          ],
+          "benchmark_result": [
+            {
+              "source": "raw-github/gepa-ai_optimize-anything-artifact.md",
+              "note": "benchmark result terms"
+            }
+          ],
+          "open_source_reuse": [
+            {
+              "source": "raw-github/gepa-ai_optimize-anything-artifact.md",
+              "note": "reuse terms"
+            }
+          ],
+          "useful_for_survey_seo": [
+            {
+              "source": "raw-github/gepa-ai_optimize-anything-artifact.md",
+              "note": "reader-facing topic terms"
+            }
+          ],
+          "user_need_fit": [
+            {
+              "source": "raw-github/gepa-ai_optimize-anything-artifact.md",
+              "note": "user-need terms"
+            }
+          ],
+          "compare_anchor_baseline": [
+            {
+              "source": "raw-github/gepa-ai_optimize-anything-artifact.md",
+              "note": "known baseline terms"
+            }
+          ]
+        },
+        "raw_score": 115,
+        "value_score": 86.62,
+        "confidence": 80.77,
+        "nonzero_tags": 21,
+        "positive_tags": 20,
+        "negative_tags": 1,
+        "value_class": "high-value-candidate"
+      },
+      "evidence_refs": {
+        "github_report": null,
+        "analysis_report": "analysis/frontier-projects/gepa-ai-optimize-anything-artifact-dual-chain.md",
+        "public_report": null,
+        "raw_file": "raw-github/gepa-ai_optimize-anything-artifact.md",
+        "rank_seed": null,
+        "alternate_source_paths": [],
+        "frontier_rank": null,
+        "star_growth_rank": 664
       }
     },
     {
@@ -8541,198 +8751,6 @@
         "alternate_source_paths": [],
         "frontier_rank": 38,
         "star_growth_rank": 517
-      }
-    },
-    {
-      "id": "paper:2507-21046",
-      "type": "paper",
-      "title": "A Survey of Self-Evolving Agents: What, When, How, and Where to Evolve on the Path to Artificial Super Intelligence",
-      "url": null,
-      "source_path": "raw-papers/2507-21046.md",
-      "score": {
-        "values": {
-          "current_frontier_signal": 1,
-          "self_evolution_loop_fit": 1,
-          "mutable_artifact_clear": 1,
-          "feedback_signal_clear": 1,
-          "verifier_or_benchmark": 1,
-          "retention_or_memory": 1,
-          "rollback_or_safety": 1,
-          "implementation_runnable": 0,
-          "local_code_or_artifact": 1,
-          "product_usability": 0,
-          "teaching_model_card": 1,
-          "evidence_chain_complete": 0,
-          "timestamp_freshness": 1,
-          "continuity_active": 1,
-          "community_momentum": 1,
-          "star_growth_current": 0,
-          "paper_quality_signal": 1,
-          "benchmark_result": 0,
-          "method_novelty": 1,
-          "open_source_reuse": 1,
-          "issue_resource_signal": 1,
-          "hype_without_evidence": 0,
-          "stale_or_unknown_metadata": 0,
-          "useful_for_survey_seo": 1,
-          "user_need_fit": 1,
-          "compare_anchor_baseline": 0
-        },
-        "contributions": {
-          "current_frontier_signal": 8,
-          "self_evolution_loop_fit": 10,
-          "mutable_artifact_clear": 6,
-          "feedback_signal_clear": 6,
-          "verifier_or_benchmark": 8,
-          "retention_or_memory": 7,
-          "rollback_or_safety": 5,
-          "implementation_runnable": 0,
-          "local_code_or_artifact": 5,
-          "product_usability": 0,
-          "teaching_model_card": 4,
-          "evidence_chain_complete": 0,
-          "timestamp_freshness": 7,
-          "continuity_active": 7,
-          "community_momentum": 5,
-          "star_growth_current": 0,
-          "paper_quality_signal": 5,
-          "benchmark_result": 0,
-          "method_novelty": 5,
-          "open_source_reuse": 5,
-          "issue_resource_signal": 4,
-          "hype_without_evidence": 0,
-          "stale_or_unknown_metadata": 0,
-          "useful_for_survey_seo": 4,
-          "user_need_fit": 6,
-          "compare_anchor_baseline": 0
-        },
-        "tagEvidence": {
-          "current_frontier_signal": [
-            {
-              "source": "raw-papers/2507-21046.md",
-              "note": "text contains current/frontier terms"
-            }
-          ],
-          "self_evolution_loop_fit": [
-            {
-              "source": "raw-papers/2507-21046.md",
-              "note": "self-evolution terms"
-            }
-          ],
-          "mutable_artifact_clear": [
-            {
-              "source": "raw-papers/2507-21046.md",
-              "note": "mutable artifact terms"
-            }
-          ],
-          "feedback_signal_clear": [
-            {
-              "source": "raw-papers/2507-21046.md",
-              "note": "feedback terms"
-            }
-          ],
-          "verifier_or_benchmark": [
-            {
-              "source": "raw-papers/2507-21046.md",
-              "note": "benchmark/verifier terms"
-            }
-          ],
-          "retention_or_memory": [
-            {
-              "source": "raw-papers/2507-21046.md",
-              "note": "retention terms"
-            }
-          ],
-          "rollback_or_safety": [
-            {
-              "source": "raw-papers/2507-21046.md",
-              "note": "safety/rollback terms"
-            }
-          ],
-          "local_code_or_artifact": [
-            {
-              "source": "raw-papers/2507-21046.md",
-              "note": "raw/work source exists locally"
-            }
-          ],
-          "teaching_model_card": [
-            {
-              "source": "raw-papers/2507-21046.md",
-              "note": "raw paper can teach method if reviewed"
-            }
-          ],
-          "timestamp_freshness": [
-            {
-              "source": "raw-papers/2507-21046.md",
-              "note": "2026 timestamp"
-            }
-          ],
-          "continuity_active": [
-            {
-              "source": "raw-papers/2507-21046.md",
-              "note": "continuity terms"
-            }
-          ],
-          "community_momentum": [
-            {
-              "source": "raw-papers/2507-21046.md",
-              "note": "community terms"
-            }
-          ],
-          "paper_quality_signal": [
-            {
-              "source": "raw-papers/2507-21046.md",
-              "note": "paper/arXiv source"
-            }
-          ],
-          "method_novelty": [
-            {
-              "source": "raw-papers/2507-21046.md",
-              "note": "novel method terms"
-            }
-          ],
-          "open_source_reuse": [
-            {
-              "source": "raw-papers/2507-21046.md",
-              "note": "reuse terms"
-            }
-          ],
-          "issue_resource_signal": [
-            {
-              "source": "raw-papers/2507-21046.md",
-              "note": "issue/resource terms"
-            }
-          ],
-          "useful_for_survey_seo": [
-            {
-              "source": "raw-papers/2507-21046.md",
-              "note": "report or paper source"
-            }
-          ],
-          "user_need_fit": [
-            {
-              "source": "raw-papers/2507-21046.md",
-              "note": "user-need terms"
-            }
-          ]
-        },
-        "raw_score": 107,
-        "value_score": 84.08,
-        "confidence": 69.23,
-        "nonzero_tags": 18,
-        "positive_tags": 18,
-        "negative_tags": 0,
-        "value_class": "high-value-candidate"
-      },
-      "evidence_refs": {
-        "github_report": null,
-        "analysis_report": null,
-        "public_report": null,
-        "raw_file": "raw-papers/2507-21046.md",
-        "rank_seed": null,
-        "alternate_source_paths": [],
-        "frontier_rank": null,
-        "star_growth_rank": null
       }
     }
   ],
@@ -15838,6 +15856,15 @@
           "source_path": "raw-github/gepa-ai_gepa.md"
         },
         {
+          "id": "github:gepa-ai/optimize-anything-artifact",
+          "type": "github",
+          "title": "gepa-ai/optimize-anything-artifact",
+          "url": "https://github.com/gepa-ai/optimize-anything-artifact",
+          "value_score": 86.62,
+          "value_class": "high-value-candidate",
+          "source_path": "raw-github/gepa-ai_optimize-anything-artifact.md"
+        },
+        {
           "id": "github:freedomintelligence/tiermem",
           "type": "github",
           "title": "Tiermem",
@@ -15863,15 +15890,6 @@
           "value_score": 86.31,
           "value_class": "high-value-candidate",
           "source_path": "raw-papers/2303-11366.md"
-        },
-        {
-          "id": "social:0176-36kr-com-Anthropic-Meta-36",
-          "type": "social",
-          "title": "0176 36kr com Anthropic Meta 36",
-          "url": null,
-          "value_score": 86.31,
-          "value_class": "high-value-candidate",
-          "source_path": "raw-social/0176-36kr-com-Anthropic-Meta-36.md"
         }
       ]
     },
@@ -22991,7 +23009,6 @@
         "github:facebookresearch/drzero",
         "github:freedomintelligence/openclaw-medical-skills",
         "github:garrus800-stack/genesis-agent",
-        "github:gepa-ai/optimize-anything-artifact",
         "github:gitmaxd/deepagents-cli-codex-skill",
         "github:guixiang123124/openclaw-harness",
         "github:gumbel-ai/agent-debate",
@@ -23072,7 +23089,7 @@
         "github:zbinxp/deer-flow",
         "github:zylos-ai/zylos-core"
       ],
-      "size": 115,
+      "size": 114,
       "sample_members": [
         "github:01-ai/langcrew",
         "github:aaronowh/ai-scientist-v2",
@@ -26209,6 +26226,89 @@
       ]
     },
     {
+      "key": "v0:b1:d3dc849156ec94ba",
+      "band": 1,
+      "features": [
+        "rollback_or_safety",
+        "implementation_runnable",
+        "local_code_or_artifact",
+        "product_usability",
+        "teaching_model_card",
+        "evidence_chain_complete"
+      ],
+      "chars": "++++++",
+      "members": [
+        "github:aiming-lab/autoharness",
+        "github:aiming-lab/clawarena",
+        "github:algorithmicsuperintelligence/openevolve",
+        "github:autojunjie/awesome-agent-harness",
+        "github:autox-ai-labs/autor",
+        "github:block/agent-skills",
+        "github:corbell-ai/evalmonkey",
+        "github:crewaiinc/crewai",
+        "github:cuga-project/cuga-agent",
+        "github:gepa-ai/gepa",
+        "github:gepa-ai/optimize-anything-artifact",
+        "github:gofenix/nex-agent",
+        "github:google-gemini/gemini-cli",
+        "github:harness/harness-evals",
+        "github:henrikrexed/openclaw-observability-plugin",
+        "github:huggingface/smolagents",
+        "github:langchain-ai/agentevals",
+        "github:manthanguptaa/water",
+        "github:matevip/mateclaw",
+        "github:mckruz/openclaw-langfuse",
+        "github:mgechev/skillgrade",
+        "github:mgechev/skills-best-practices",
+        "github:mlcommons/modelbench",
+        "github:modelscope/agentevolver",
+        "github:murataslan1/ai-agent-benchmark",
+        "github:mvanhorn/last30days-skill",
+        "github:n8n-io/n8n",
+        "github:nousresearch/hermes-agent-self-evolution",
+        "github:openclaw/crabpot",
+        "github:orchestra-research/ai-research-skills",
+        "github:owasp/www-project-agent-memory-guard",
+        "github:paradigmxyz/centaur",
+        "github:paradigmxyz/evmbench",
+        "github:pegasi-ai/reins",
+        "github:qf-bench/quantitativefinance-bench",
+        "github:rangeking/self-evolving-agent",
+        "github:sd0xdev/sd0x-dev-flow",
+        "github:significant-gravitas/autogpt",
+        "github:swapedoc/hermes2anti",
+        "github:synaptent/aragora",
+        "github:unicomai/hexagent",
+        "github:vilmire/adhdev",
+        "github:wazionapps/nexo",
+        "github:yunjuetech/yunjue-agent",
+        "github:zhangfengcdt/memoir"
+      ],
+      "size": 45,
+      "sample_members": [
+        "github:aiming-lab/autoharness",
+        "github:aiming-lab/clawarena",
+        "github:algorithmicsuperintelligence/openevolve",
+        "github:autojunjie/awesome-agent-harness",
+        "github:autox-ai-labs/autor",
+        "github:block/agent-skills",
+        "github:corbell-ai/evalmonkey",
+        "github:crewaiinc/crewai",
+        "github:cuga-project/cuga-agent",
+        "github:gepa-ai/gepa",
+        "github:gepa-ai/optimize-anything-artifact",
+        "github:gofenix/nex-agent",
+        "github:google-gemini/gemini-cli",
+        "github:harness/harness-evals",
+        "github:henrikrexed/openclaw-observability-plugin",
+        "github:huggingface/smolagents",
+        "github:langchain-ai/agentevals",
+        "github:manthanguptaa/water",
+        "github:matevip/mateclaw",
+        "github:mckruz/openclaw-langfuse"
+      ]
+    },
+    {
       "key": "v0:b0:fe1854901e1c2ac4",
       "band": 0,
       "features": [
@@ -26288,88 +26388,6 @@
         "social:0255-Hacker-News-We-aren-t-close-to-creating-a-rapidly-self-improving-AI-Hacker-News",
         "social:0538-dev-to-The-Agent-That-Writes-Its-Own-Manual-A-Deep-Dive-Into-Hermes-Agent-s-Self-Improving-Architect",
         "blog:0013-Product-Hunt-Graphiti-Build-personalized-AI-agents-that-learn-from-dynamic-data-Product-Hu"
-      ]
-    },
-    {
-      "key": "v0:b1:d3dc849156ec94ba",
-      "band": 1,
-      "features": [
-        "rollback_or_safety",
-        "implementation_runnable",
-        "local_code_or_artifact",
-        "product_usability",
-        "teaching_model_card",
-        "evidence_chain_complete"
-      ],
-      "chars": "++++++",
-      "members": [
-        "github:aiming-lab/autoharness",
-        "github:aiming-lab/clawarena",
-        "github:algorithmicsuperintelligence/openevolve",
-        "github:autojunjie/awesome-agent-harness",
-        "github:autox-ai-labs/autor",
-        "github:block/agent-skills",
-        "github:corbell-ai/evalmonkey",
-        "github:crewaiinc/crewai",
-        "github:cuga-project/cuga-agent",
-        "github:gepa-ai/gepa",
-        "github:gofenix/nex-agent",
-        "github:google-gemini/gemini-cli",
-        "github:harness/harness-evals",
-        "github:henrikrexed/openclaw-observability-plugin",
-        "github:huggingface/smolagents",
-        "github:langchain-ai/agentevals",
-        "github:manthanguptaa/water",
-        "github:matevip/mateclaw",
-        "github:mckruz/openclaw-langfuse",
-        "github:mgechev/skillgrade",
-        "github:mgechev/skills-best-practices",
-        "github:mlcommons/modelbench",
-        "github:modelscope/agentevolver",
-        "github:murataslan1/ai-agent-benchmark",
-        "github:mvanhorn/last30days-skill",
-        "github:n8n-io/n8n",
-        "github:nousresearch/hermes-agent-self-evolution",
-        "github:openclaw/crabpot",
-        "github:orchestra-research/ai-research-skills",
-        "github:owasp/www-project-agent-memory-guard",
-        "github:paradigmxyz/centaur",
-        "github:paradigmxyz/evmbench",
-        "github:pegasi-ai/reins",
-        "github:qf-bench/quantitativefinance-bench",
-        "github:rangeking/self-evolving-agent",
-        "github:sd0xdev/sd0x-dev-flow",
-        "github:significant-gravitas/autogpt",
-        "github:swapedoc/hermes2anti",
-        "github:synaptent/aragora",
-        "github:unicomai/hexagent",
-        "github:vilmire/adhdev",
-        "github:wazionapps/nexo",
-        "github:yunjuetech/yunjue-agent",
-        "github:zhangfengcdt/memoir"
-      ],
-      "size": 44,
-      "sample_members": [
-        "github:aiming-lab/autoharness",
-        "github:aiming-lab/clawarena",
-        "github:algorithmicsuperintelligence/openevolve",
-        "github:autojunjie/awesome-agent-harness",
-        "github:autox-ai-labs/autor",
-        "github:block/agent-skills",
-        "github:corbell-ai/evalmonkey",
-        "github:crewaiinc/crewai",
-        "github:cuga-project/cuga-agent",
-        "github:gepa-ai/gepa",
-        "github:gofenix/nex-agent",
-        "github:google-gemini/gemini-cli",
-        "github:harness/harness-evals",
-        "github:henrikrexed/openclaw-observability-plugin",
-        "github:huggingface/smolagents",
-        "github:langchain-ai/agentevals",
-        "github:manthanguptaa/water",
-        "github:matevip/mateclaw",
-        "github:mckruz/openclaw-langfuse",
-        "github:mgechev/skillgrade"
       ]
     },
     {

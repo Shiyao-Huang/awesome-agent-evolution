@@ -1,77 +1,35 @@
 {
-  "generated_at": "2026-06-02T01:46:13.233Z",
+  "generated_at": "2026-06-02T02:27:53.450Z",
   "method": {
     "name": "value_evidence_repair_queue_v0",
     "source": "data-engine/value-lsh-index/value-matrix.jsonl",
     "note": "Prioritizes evidence repair work after value-LSH comparison; repair score is not a quality score."
   },
   "summary": {
-    "generated_at": "2026-06-02T01:46:13.233Z",
-    "source_lsh_generated_at": "2026-06-02T01:45:11.370Z",
+    "generated_at": "2026-06-02T02:27:53.450Z",
+    "source_lsh_generated_at": "2026-06-02T02:27:29.566Z",
     "github_projects": 717,
-    "projects_with_gaps": 684,
+    "projects_with_gaps": 683,
     "lane_counts": {
-      "deep-read-needed": 455,
+      "deep-read-needed": 454,
       "issue-resource-scan": 138,
       "raw-meta-repair": 52,
       "loop-verification": 35,
       "star-growth-repair": 4
     },
     "gap_counts": {
-      "deep_report_missing": 455,
-      "frontier_queue_missing": 468,
-      "issue_resource_unclear": 332,
-      "evidence_chain_incomplete": 507,
+      "deep_report_missing": 454,
+      "frontier_queue_missing": 467,
+      "issue_resource_unclear": 331,
       "self_evolution_unclear": 436,
+      "evidence_chain_incomplete": 506,
       "implementation_unclear": 52,
       "star_growth_missing": 20,
       "raw_meta_missing": 52
     },
-    "top_repair_score": 136.8
+    "top_repair_score": 136.39
   },
   "queue": [
-    {
-      "id": "github:gepa-ai/optimize-anything-artifact",
-      "repo": "gepa-ai/optimize-anything-artifact",
-      "title": "gepa-ai/optimize-anything-artifact",
-      "url": "https://github.com/gepa-ai/optimize-anything-artifact",
-      "value_score": 82.8,
-      "value_class": "high-value-candidate",
-      "repair_score": 136.8,
-      "lane": "deep-read-needed",
-      "gaps": [
-        {
-          "id": "deep_report_missing",
-          "label": "Deep report missing",
-          "action": "clone/read code and create model-card style deep report"
-        },
-        {
-          "id": "frontier_queue_missing",
-          "label": "Frontier queue missing",
-          "action": "enqueue for frontier-value scan with evidence_chain and mirror_chain"
-        },
-        {
-          "id": "issue_resource_unclear",
-          "label": "Issue/resource unclear",
-          "action": "scan GitHub issues, releases, discussions, PRs, and linked resources"
-        },
-        {
-          "id": "evidence_chain_incomplete",
-          "label": "Evidence chain incomplete",
-          "action": "connect raw source, processed report, local code evidence, and generated index rows"
-        }
-      ],
-      "evidence_refs": {
-        "github_report": null,
-        "analysis_report": null,
-        "public_report": null,
-        "raw_file": "raw-github/gepa-ai_optimize-anything-artifact.md",
-        "rank_seed": null,
-        "alternate_source_paths": [],
-        "frontier_rank": null,
-        "star_growth_rank": 664
-      }
-    },
     {
       "id": "github:langchain-ai/open-swe",
       "repo": "langchain-ai/open-swe",

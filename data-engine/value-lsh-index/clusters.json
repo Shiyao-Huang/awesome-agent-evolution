@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-02T01:45:11.370Z",
+  "generated_at": "2026-06-02T02:27:29.566Z",
   "threshold": 0.52,
   "total": 3,
   "clusters": [
@@ -136,6 +136,15 @@
           "source_path": "raw-github/gepa-ai_gepa.md"
         },
         {
+          "id": "github:gepa-ai/optimize-anything-artifact",
+          "type": "github",
+          "title": "gepa-ai/optimize-anything-artifact",
+          "url": "https://github.com/gepa-ai/optimize-anything-artifact",
+          "value_score": 86.62,
+          "value_class": "high-value-candidate",
+          "source_path": "raw-github/gepa-ai_optimize-anything-artifact.md"
+        },
+        {
           "id": "github:freedomintelligence/tiermem",
           "type": "github",
           "title": "Tiermem",
@@ -161,15 +170,6 @@
           "value_score": 86.31,
           "value_class": "high-value-candidate",
           "source_path": "raw-papers/2303-11366.md"
-        },
-        {
-          "id": "social:0176-36kr-com-Anthropic-Meta-36",
-          "type": "social",
-          "title": "0176 36kr com Anthropic Meta 36",
-          "url": null,
-          "value_score": 86.31,
-          "value_class": "high-value-candidate",
-          "source_path": "raw-social/0176-36kr-com-Anthropic-Meta-36.md"
         }
       ]
     },

@@ -10,7 +10,7 @@
 
 | Path | Status | Files | Directories | Skipped | Size |
 |---|---|---:|---:|---:|---:|
-| `analysis` | present | 35 | 2 | 0 | 23 MB |
+| `analysis` | present | 37 | 2 | 0 | 23 MB |
 | `research` | present | 141 | 8 | 0 | 2.5 MB |
 | `projects` | present | 41660 | 4740 | 1 | 3.3 GB |
 | `paper-reviews` | present | 171 | 1 | 0 | 1.6 MB |
@@ -30,9 +30,9 @@
 - `analysis/five-evolution-loops-topic.md`
 - `analysis/framework-painpoint-crosswalk.csv`
 - `analysis/frontier-projects/gepa-ai-gepa-dual-chain.md`
+- `analysis/frontier-projects/gepa-ai-optimize-anything-artifact-dual-chain.md`
 - `analysis/frontier-projects/jarvis-xs-se-agent-dual-chain.md`
 - `analysis/frontier-projects/kargarisaac-reflexion-dual-chain.md`
-- `analysis/frontier-projects/modelscope-agentevolver-dual-chain.md`
 
 ### `research`
 
