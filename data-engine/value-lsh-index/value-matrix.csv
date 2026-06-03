@@ -245,7 +245,7 @@ github:hkuds/openharness,github,hkuds/openharness,74.84,57.69,high-value-candida
 github:hkuds/openspace,github,hkuds/openspace,75.8,57.69,high-value-candidate,1,1,1,0,1,1,0,0,1,1,0,0,1,1,1,-1,0,0,0,1,1,0,0,1,1,0
 github:hkust-knowcomp/awesome-llm-scientific-discovery,github,hkust-knowcomp/awesome-llm-scientific-discovery,73.57,53.85,high-value-candidate,1,1,0,0,1,0,0,1,1,1,0,0,1,0,0,-1,1,0,1,1,1,0,0,1,1,0
 github:holaboss-ai/holaos,github,holaOS,82.8,69.23,high-value-candidate,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,-1,0,0,0,1,0,0,0,1,1,0
-github:howdymary/hermes-agent-metaharness,github,Hermes Agent Meta-Harness,78.34,69.23,needs-review,1,1,1,0,1,1,0,1,1,1,1,1,1,1,1,-1,0,0,-1,1,0,0,0,1,0,1
+github:howdymary/hermes-agent-metaharness,github,Hermes Agent Meta-Harness,80.25,73.08,needs-review,1,1,1,0,1,1,0,1,1,1,1,1,1,1,1,-1,0,0,-1,1,0,0,0,1,1,1
 github:howells/arc,github,howells/arc,68.15,42.31,high-value-candidate,1,0,1,0,1,0,0,1,1,1,0,0,1,0,1,-1,0,0,0,1,0,0,0,0,1,0
 github:huggingface/agents-course,github,huggingface/agents-course,76.75,61.54,high-value-candidate,1,0,1,1,1,0,0,1,1,1,0,0,1,1,1,-1,0,1,0,1,1,0,0,1,1,0
 github:huggingface/skills,github,huggingface/skills,74.52,57.69,high-value-candidate,1,0,1,0,1,0,0,1,1,1,0,0,1,1,1,-1,1,0,0,1,1,0,0,1,1,0
@@ -339,7 +339,7 @@ github:llmsecurity/awesome-agent-skills-security,github,Awesome Agent Skills Sec
 github:lmd0311/awesome-world-model,github,lmd0311/awesome-world-model,79.3,65.38,high-value-candidate,1,1,0,0,1,0,1,1,1,1,0,0,1,1,1,-1,1,1,0,1,1,0,0,1,1,0
 github:logikon-ai/awesome-deliberative-prompting,github,logikon-ai/awesome-deliberative-prompting,80.57,69.23,high-value-candidate,1,0,1,1,1,1,0,1,1,1,0,0,1,1,1,-1,1,1,0,1,1,0,0,1,1,0
 github:longman-max/selfthinker,github,longman-max/selfthinker,79.3,65.38,high-value-candidate,1,0,1,1,1,1,1,1,1,1,0,0,1,1,1,-1,0,1,0,1,1,0,0,0,1,0
-github:longmans/self-evolve,github,Self Evolve OpenClaw Playground,80.89,65.38,high-value-candidate,1,1,1,0,1,1,0,1,1,1,1,1,1,1,1,-1,0,0,0,1,0,0,0,1,1,0
+github:longmans/self-evolve,github,Self Evolve OpenClaw Playground,81.21,73.08,needs-review,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,-1,0,0,-1,1,0,0,0,1,1,0
 github:longyunfeigu/learn-hermes-agent,github,longyunfeigu/learn-hermes-agent,81.85,69.23,high-value-candidate,1,1,1,1,1,1,1,1,1,1,0,0,1,1,1,-1,0,0,0,1,1,0,0,1,1,0
 github:lsdefine/genericagent,github,lsdefine/genericagent,73.25,57.69,needs-review,1,1,1,0,1,1,0,1,1,1,0,0,1,0,1,-1,0,0,-1,1,0,0,0,1,1,0
 github:ltzheng/curriculummarl,github,ltzheng/curriculummarl,69.11,46.15,high-value-candidate,1,0,1,1,0,0,0,1,1,0,0,0,1,1,1,-1,1,0,0,1,1,0,0,0,0,0
@@ -535,7 +535,7 @@ github:ronit26mehta/argus-ai-debate,github,ronit26mehta/argus-ai-debate,60.51,26
 github:rtk-ai/icm,github,rtk-ai/icm,71.66,50,high-value-candidate,1,0,1,0,1,1,0,1,1,1,0,0,1,0,1,-1,0,0,0,1,0,0,0,1,1,0
 github:rucbm/laser,github,rucbm/laser,81.53,73.08,high-value-candidate,1,0,1,1,1,1,0,1,1,1,0,0,1,1,1,-1,1,1,0,1,1,0,0,1,1,1
 github:ryanalberts/best-of-agent-harnesses,github,Best of Agent Harnesses,81.85,69.23,high-value-candidate,1,1,0,1,1,0,0,1,1,1,1,1,1,1,1,-1,0,1,0,1,1,0,0,1,1,0
-github:sachinsharma9780/memweave,github,MemWeave,82.8,69.23,high-value-candidate,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,-1,0,0,0,1,0,0,0,1,1,0
+github:sachinsharma9780/memweave,github,MemWeave,84.08,73.08,high-value-candidate,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,-1,0,0,0,1,1,0,0,1,1,0
 github:sakanaai/ai-scientist,github,sakanaai/ai-scientist,69.43,53.85,needs-review,1,0,1,1,1,0,0,1,1,1,0,0,1,0,1,-1,1,0,-1,1,0,0,0,1,0,0
 github:sakanaai/ai-scientist-v2,github,sakanaai/ai-scientist-v2,74.84,57.69,high-value-candidate,1,1,1,1,0,0,1,1,1,1,0,0,1,0,1,-1,1,0,1,1,0,0,0,1,0,0
 github:sakanaai/shinkaevolve,github,sakanaai/shinkaevolve,78.66,61.54,high-value-candidate,1,1,1,0,1,1,0,1,1,1,0,0,1,1,1,-1,0,0,1,1,0,0,0,1,1,0

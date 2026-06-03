@@ -53,7 +53,7 @@ interface Props {
 }
 
 const graphSnapshot = graphSnapshotJson as GraphSnapshot;
-const { variant = 'full', maxNodes = variant === 'compact' ? 760 : 2206, height = variant === 'compact' ? 360 : 560 } = Astro.props;
+const { variant = 'full', maxNodes = variant === 'compact' ? 760 : graphSnapshot.summary.nodes, height = variant === 'compact' ? 360 : 560 } = Astro.props;
 const allNodes = graphSnapshot.nodes ?? [];
 const sampleStep = Math.max(1, Math.ceil(allNodes.length / maxNodes));
 const sceneNodes = allNodes

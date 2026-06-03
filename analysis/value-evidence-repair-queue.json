@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-06-02T17:24:08.436Z",
+  "generated_at": "2026-06-03T03:39:57.585Z",
   "method": {
     "name": "value_evidence_repair_queue_v0",
     "source": "data-engine/value-lsh-index/value-matrix.jsonl",
     "note": "Prioritizes evidence repair work after value-LSH comparison; repair score is not a quality score."
   },
   "summary": {
-    "generated_at": "2026-06-02T17:24:08.436Z",
+    "generated_at": "2026-06-03T03:39:57.585Z",
     "source_lsh_generated_at": "2026-06-02T17:23:58.838Z",
     "github_projects": 728,
     "projects_with_gaps": 687,

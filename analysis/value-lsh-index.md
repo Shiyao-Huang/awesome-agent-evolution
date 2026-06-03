@@ -1,6 +1,6 @@
 # Value LSH Index
 
-> Generated: 2026-06-02T17:23:58.838Z. Discrete value-tag LSH index for GitHub projects, papers, social/X captures, and blogs.
+> Generated: 2026-06-03T03:39:58.772Z. Discrete value-tag LSH index for GitHub projects, papers, social/X captures, and blogs.
 
 ## One Sentence
 
@@ -8,7 +8,7 @@ Value LSH turns comparison into a fast discrete scan: each material gets a `-1/0
 
 ## Three Sentences
 
-This run scanned 2230 materials across GitHub, papers, social/X, and blogs, then generated 171 non-empty LSH buckets and 3 clusters. It does not pretend the hash is the final truth: the hash only finds near-neighbors, while the value score and evidence refs keep the ranking auditable. Incremental state is tracked in `data-engine/value-lsh-index/manifest.json`: 0 added, 33 changed, 0 removed, 2197 unchanged versus the previous run.
+This run scanned 2230 materials across GitHub, papers, social/X, and blogs, then generated 171 non-empty LSH buckets and 3 clusters. It does not pretend the hash is the final truth: the hash only finds near-neighbors, while the value score and evidence refs keep the ranking auditable. Incremental state is tracked in `data-engine/value-lsh-index/manifest.json`: 0 added, 23 changed, 0 removed, 2207 unchanged versus the previous run.
 
 ## Why Discrete LSH
 
@@ -37,8 +37,8 @@ flowchart LR
 | value tags | 26 |
 | LSH buckets | 171 |
 | clusters | 3 |
-| candidate pairs scanned | 64931 |
-| accepted pairs | 55334 |
+| candidate pairs scanned | 64878 |
+| accepted pairs | 55293 |
 | broad buckets skipped | 27 |
 | tag version | 19810f296115 |
 
@@ -55,8 +55,8 @@ flowchart LR
 
 | class | count |
 | --- | ---: |
-| needs-review | 1074 |
-| high-value-candidate | 859 |
+| needs-review | 1075 |
+| high-value-candidate | 858 |
 | low-signal-or-risk | 297 |
 
 ## Class Boundary
@@ -130,9 +130,9 @@ flowchart LR
 | v0:b4:421658a47e32aadc | 926 | 4 | user_need_fit, compare_anchor_baseline | +0 |
 | v0:b1:ffab79b53e3e2b24 | 724 | 1 | rollback_or_safety, implementation_runnable, local_code_or_artifact, product_usability, teaching_model_card, evidence_chain_complete | 0+++0- |
 | v0:b2:753aee4409944ae1 | 665 | 2 | timestamp_freshness, continuity_active, community_momentum, star_growth_current, paper_quality_signal, benchmark_result | +0+000 |
-| v0:b3:d4db65dcbacb56a1 | 369 | 3 | method_novelty, open_source_reuse, issue_resource_signal, hype_without_evidence, stale_or_unknown_metadata, useful_for_survey_seo | 0+000+ |
+| v0:b3:d4db65dcbacb56a1 | 367 | 3 | method_novelty, open_source_reuse, issue_resource_signal, hype_without_evidence, stale_or_unknown_metadata, useful_for_survey_seo | 0+000+ |
 | v0:b0:00f7c10f6056128a | 346 | 0 | current_frontier_signal, self_evolution_loop_fit, mutable_artifact_clear, feedback_signal_clear, verifier_or_benchmark, retention_or_memory | +00000 |
-| v0:b3:a4bfae29739268c9 | 344 | 3 | method_novelty, open_source_reuse, issue_resource_signal, hype_without_evidence, stale_or_unknown_metadata, useful_for_survey_seo | 0++00+ |
+| v0:b3:a4bfae29739268c9 | 345 | 3 | method_novelty, open_source_reuse, issue_resource_signal, hype_without_evidence, stale_or_unknown_metadata, useful_for_survey_seo | 0++00+ |
 | v0:b0:b5ac1c4242079445 | 311 | 0 | current_frontier_signal, self_evolution_loop_fit, mutable_artifact_clear, feedback_signal_clear, verifier_or_benchmark, retention_or_memory | ++0000 |
 | v0:b2:cd2d4041a8bcb5b8 | 295 | 2 | timestamp_freshness, continuity_active, community_momentum, star_growth_current, paper_quality_signal, benchmark_result | +00000 |
 | v0:b2:b0cfcf471baa9a30 | 286 | 2 | timestamp_freshness, continuity_active, community_momentum, star_growth_current, paper_quality_signal, benchmark_result | +++-00 |
@@ -141,7 +141,7 @@ flowchart LR
 | v0:b1:0af6e4c9f59f7de0 | 198 | 1 | rollback_or_safety, implementation_runnable, local_code_or_artifact, product_usability, teaching_model_card, evidence_chain_complete | 00+00- |
 | v0:b0:8088ac357b58efec | 194 | 0 | current_frontier_signal, self_evolution_loop_fit, mutable_artifact_clear, feedback_signal_clear, verifier_or_benchmark, retention_or_memory | +0+000 |
 | v0:b3:f0cf96aa4cdb6fc0 | 190 | 3 | method_novelty, open_source_reuse, issue_resource_signal, hype_without_evidence, stale_or_unknown_metadata, useful_for_survey_seo | 000+00 |
-| v0:b0:14cf7a29abb6e554 | 188 | 0 | current_frontier_signal, self_evolution_loop_fit, mutable_artifact_clear, feedback_signal_clear, verifier_or_benchmark, retention_or_memory | ++++++ |
+| v0:b0:14cf7a29abb6e554 | 189 | 0 | current_frontier_signal, self_evolution_loop_fit, mutable_artifact_clear, feedback_signal_clear, verifier_or_benchmark, retention_or_memory | ++++++ |
 
 ## Value Lines
 

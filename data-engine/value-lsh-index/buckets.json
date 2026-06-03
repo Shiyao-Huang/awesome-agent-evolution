@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-02T17:23:58.838Z",
+  "generated_at": "2026-06-03T03:39:58.772Z",
   "band_size": 6,
   "total": 171,
   "buckets": [
@@ -2534,7 +2534,6 @@
         "github:langchain-ai/open-swe",
         "github:learnprompt/cc-harness-skills",
         "github:lhl/agentic-memory",
-        "github:longmans/self-evolve",
         "github:luo-junyu/awesome-agent-papers",
         "github:manthanguptaa/water",
         "github:martian-engineering/lossless-claw",
@@ -2606,7 +2605,6 @@
         "github:rlhflow/self-rewarding-reasoning-llm",
         "github:rllm-org/rllm",
         "github:rtk-ai/icm",
-        "github:sachinsharma9780/memweave",
         "github:sasleee/tencentdb-agent-memory",
         "github:sd0xdev/sd0x-dev-flow",
         "github:seetrex-ai/laimark",
@@ -2811,7 +2809,7 @@
         "blog:0645-weave-docs-wandb-ai-OpenAI-Agents-SDK-Weights-Biases-Documentation",
         "blog:raw-blogs-index"
       ],
-      "size": 369,
+      "size": 367,
       "sample_members": [
         "github:0xnyk/lacp",
         "github:803/skills-supply",
@@ -3381,6 +3379,7 @@
         "github:rohitg00/awesome-openclaw",
         "github:rucbm/laser",
         "github:ryanalberts/best-of-agent-harnesses",
+        "github:sachinsharma9780/memweave",
         "github:scienceaix/agentskills",
         "github:seb1n/awesome-ai-agent-skills",
         "github:sebastianbrzustowicz/robot-sumo-rl",
@@ -3577,7 +3576,7 @@
         "blog:0104-YouTube-How-to-Build-AI-Agents-with-PydanticAI-Beginner-Tutorial-YouTube",
         "blog:0137-YouTube-OpenAI-s-BRAND-NEW-Agents-SDK-Crash-Course-YouTube"
       ],
-      "size": 344,
+      "size": 345,
       "sample_members": [
         "github:agent-ecosystem/skill-validator",
         "github:agent-on-the-fly/memento",
@@ -5865,6 +5864,7 @@
         "github:khykd/reflector",
         "github:knowledgexlab/muse",
         "github:lingxi-agent/lingxi",
+        "github:longmans/self-evolve",
         "github:longyunfeigu/learn-hermes-agent",
         "github:lyl1015/jarvisevo",
         "github:memento-teams/memento-skills",
@@ -6016,7 +6016,7 @@
         "social:x-trending",
         "social:x-twitter-posts"
       ],
-      "size": 188,
+      "size": 189,
       "sample_members": [
         "github:28naem-del/mnemosyne",
         "github:adiban17/ppo-ping-pong-agent-",
@@ -6471,6 +6471,7 @@
         "github:gepa-ai/gepa",
         "github:gepa-ai/optimize-anything-artifact",
         "github:haoxufd/openrlhf",
+        "github:howdymary/hermes-agent-metaharness",
         "github:hwfengcs/dm-code-agent",
         "github:ibm/awesome-agentic-workflow-optimization",
         "github:kargarisaac/reflexion",
@@ -6594,7 +6595,7 @@
         "blog:0026-Product-Hunt-Retool-Build-internal-tools-remarkably-fast-Product-Hunt",
         "blog:0536-digitalhabitats-global-Reflexion-an-autonomous-agent-with-dynamic-memory-and-self-reflection-Digital"
       ],
-      "size": 145,
+      "size": 146,
       "sample_members": [
         "github:a-evo-lab/a-evolve",
         "github:agent-on-the-fly/memento",
@@ -7551,7 +7552,6 @@
         "github:genentech/opentreesearch",
         "github:google-deepmind/funsearch",
         "github:google-deepmind/opro",
-        "github:howdymary/hermes-agent-metaharness",
         "github:imgeorgiev/pwm",
         "github:jennyzzt/dgm",
         "github:kadubon/audit-closed-ai-scientist",
@@ -7636,7 +7636,7 @@
         "blog:0610-silenceboy-com-Self-Improving-Agents-Reflexion-morty",
         "blog:0613-sparkco-ai-Deep-Dive-into-Reflexion-Self-Reflection-Agents"
       ],
-      "size": 101,
+      "size": 100,
       "sample_members": [
         "github:adiban17/ppo-ping-pong-agent-",
         "github:algorithmicsuperintelligence/openevolve",
@@ -7655,9 +7655,9 @@
         "github:genentech/opentreesearch",
         "github:google-deepmind/funsearch",
         "github:google-deepmind/opro",
-        "github:howdymary/hermes-agent-metaharness",
         "github:imgeorgiev/pwm",
-        "github:jennyzzt/dgm"
+        "github:jennyzzt/dgm",
+        "github:kadubon/audit-closed-ai-scientist"
       ]
     },
     {
@@ -8473,7 +8473,6 @@
         "github:internscience/internagent",
         "github:letta-ai/letta",
         "github:lhl/agentic-memory",
-        "github:longmans/self-evolve",
         "github:lsdefine/genericagent",
         "github:mettamazza/ernosagent",
         "github:mvanhorn/last30days-skill",
@@ -8525,7 +8524,7 @@
         "social:0319-Reddit-Thoughts-on-Kaggle-Competitions-datascience",
         "social:more_batch_11"
       ],
-      "size": 78,
+      "size": 77,
       "sample_members": [
         "github:0xsanei/darwinia",
         "github:a-evo-lab/a-evolve",
@@ -11665,6 +11664,69 @@
       ]
     },
     {
+      "key": "v0:b3:a1a38a674803f1aa",
+      "band": 3,
+      "features": [
+        "method_novelty",
+        "open_source_reuse",
+        "issue_resource_signal",
+        "hype_without_evidence",
+        "stale_or_unknown_metadata",
+        "useful_for_survey_seo"
+      ],
+      "chars": "-+000+",
+      "members": [
+        "github:28naem-del/mnemosyne",
+        "github:browser-use/browser-use",
+        "github:exoskeletonzj/mars",
+        "github:fusionbrainlab/gigaevo-core",
+        "github:greyhaven-ai/autocontext",
+        "github:howdymary/hermes-agent-metaharness",
+        "github:jordanmccann/agentmemory",
+        "github:langchain-ai/memory-agent",
+        "github:longmans/self-evolve",
+        "github:lsdefine/genericagent",
+        "github:neosigmaai/auto-harness",
+        "github:nvidia/skills",
+        "github:olshansk/agent-skills",
+        "github:sakanaai/ai-scientist",
+        "github:sakutepov/ai-scientist-v2",
+        "github:siddharth-1001/agent-eval-harness",
+        "github:skills-mcp/skills-mcp",
+        "github:tianyi-stack/madevolve",
+        "github:zbinxp/deer-flow",
+        "social:0221-Hacker-News-Show-HN-Build-production-ready-LangGraph-AI-agents-with-natural-language-Hacke",
+        "social:0296-Hacker-News-WASM-Agents-AI-agents-running-in-the-browser-Hacker-News",
+        "social:0302-Hacker-News-Multi-agent-Claude-Code-setup-3-roles-Markdown-coordination",
+        "social:more_batch_14",
+        "blog:0485-alphaxiv-org-LLM-alphaXiv",
+        "blog:0562-humanloop-com-Introducing-Templates-in-Humanloop"
+      ],
+      "size": 25,
+      "sample_members": [
+        "github:28naem-del/mnemosyne",
+        "github:browser-use/browser-use",
+        "github:exoskeletonzj/mars",
+        "github:fusionbrainlab/gigaevo-core",
+        "github:greyhaven-ai/autocontext",
+        "github:howdymary/hermes-agent-metaharness",
+        "github:jordanmccann/agentmemory",
+        "github:langchain-ai/memory-agent",
+        "github:longmans/self-evolve",
+        "github:lsdefine/genericagent",
+        "github:neosigmaai/auto-harness",
+        "github:nvidia/skills",
+        "github:olshansk/agent-skills",
+        "github:sakanaai/ai-scientist",
+        "github:sakutepov/ai-scientist-v2",
+        "github:siddharth-1001/agent-eval-harness",
+        "github:skills-mcp/skills-mcp",
+        "github:tianyi-stack/madevolve",
+        "github:zbinxp/deer-flow",
+        "social:0221-Hacker-News-Show-HN-Build-production-ready-LangGraph-AI-agents-with-natural-language-Hacke"
+      ]
+    },
+    {
       "key": "v0:b0:0a0f1f95722151bd",
       "band": 0,
       "features": [
@@ -11786,68 +11848,6 @@
         "github:sunzey/seagent",
         "github:teleai-uagi/awesome-agent-memory",
         "github:tsukushiai/self-organized-agent"
-      ]
-    },
-    {
-      "key": "v0:b3:a1a38a674803f1aa",
-      "band": 3,
-      "features": [
-        "method_novelty",
-        "open_source_reuse",
-        "issue_resource_signal",
-        "hype_without_evidence",
-        "stale_or_unknown_metadata",
-        "useful_for_survey_seo"
-      ],
-      "chars": "-+000+",
-      "members": [
-        "github:28naem-del/mnemosyne",
-        "github:browser-use/browser-use",
-        "github:exoskeletonzj/mars",
-        "github:fusionbrainlab/gigaevo-core",
-        "github:greyhaven-ai/autocontext",
-        "github:howdymary/hermes-agent-metaharness",
-        "github:jordanmccann/agentmemory",
-        "github:langchain-ai/memory-agent",
-        "github:lsdefine/genericagent",
-        "github:neosigmaai/auto-harness",
-        "github:nvidia/skills",
-        "github:olshansk/agent-skills",
-        "github:sakanaai/ai-scientist",
-        "github:sakutepov/ai-scientist-v2",
-        "github:siddharth-1001/agent-eval-harness",
-        "github:skills-mcp/skills-mcp",
-        "github:tianyi-stack/madevolve",
-        "github:zbinxp/deer-flow",
-        "social:0221-Hacker-News-Show-HN-Build-production-ready-LangGraph-AI-agents-with-natural-language-Hacke",
-        "social:0296-Hacker-News-WASM-Agents-AI-agents-running-in-the-browser-Hacker-News",
-        "social:0302-Hacker-News-Multi-agent-Claude-Code-setup-3-roles-Markdown-coordination",
-        "social:more_batch_14",
-        "blog:0485-alphaxiv-org-LLM-alphaXiv",
-        "blog:0562-humanloop-com-Introducing-Templates-in-Humanloop"
-      ],
-      "size": 24,
-      "sample_members": [
-        "github:28naem-del/mnemosyne",
-        "github:browser-use/browser-use",
-        "github:exoskeletonzj/mars",
-        "github:fusionbrainlab/gigaevo-core",
-        "github:greyhaven-ai/autocontext",
-        "github:howdymary/hermes-agent-metaharness",
-        "github:jordanmccann/agentmemory",
-        "github:langchain-ai/memory-agent",
-        "github:lsdefine/genericagent",
-        "github:neosigmaai/auto-harness",
-        "github:nvidia/skills",
-        "github:olshansk/agent-skills",
-        "github:sakanaai/ai-scientist",
-        "github:sakutepov/ai-scientist-v2",
-        "github:siddharth-1001/agent-eval-harness",
-        "github:skills-mcp/skills-mcp",
-        "github:tianyi-stack/madevolve",
-        "github:zbinxp/deer-flow",
-        "social:0221-Hacker-News-Show-HN-Build-production-ready-LangGraph-AI-agents-with-natural-language-Hacke",
-        "social:0296-Hacker-News-WASM-Agents-AI-agents-running-in-the-browser-Hacker-News"
       ]
     },
     {

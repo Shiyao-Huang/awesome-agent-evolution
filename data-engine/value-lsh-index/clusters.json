@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-02T17:23:58.838Z",
+  "generated_at": "2026-06-03T03:39:58.772Z",
   "threshold": 0.52,
   "total": 3,
   "clusters": [
@@ -14,12 +14,12 @@
         "blog": 265
       },
       "value_class_counts": {
-        "needs-review": 630,
-        "high-value-candidate": 804,
+        "needs-review": 631,
+        "high-value-candidate": 803,
         "low-signal-or-risk": 112
       },
       "score_avg": 71.61,
-      "confidence_avg": 52.58,
+      "confidence_avg": 52.59,
       "top_tags": [
         {
           "id": "local_code_or_artifact",

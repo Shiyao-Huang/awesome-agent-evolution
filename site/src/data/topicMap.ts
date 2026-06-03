@@ -161,7 +161,7 @@ export const topicClusters: TopicCluster[] = [
     readerQuestion: '这么多项目、论文和内容材料，哪些真的值得先深挖?',
     surveyRole: '把用户要求的“谁好谁坏、谁有价值谁没价值”转成 26 条 value lines、LSH 近邻、3D projection 和 evidence repair queue。',
     seoIntent: 'classification / evidence triage',
-    evidence: 'Value LSH 已扫描 2206 个去重素材，覆盖 GitHub、papers、social/X 和 blogs，并生成 855/1055/296 三段 action class。',
+    evidence: 'Value LSH 已形成 GitHub、papers、social/X 和 blogs 的全量价值比较层，并把结果公开为 LSH buckets、3D projection 和 evidence repair queue；具体计数以 /value-lsh/ 页面与 analysis/value-lsh-index.md 当前快照为准。',
     seedQueries: ['AI agent value classification', 'self evolving agents evidence repair', 'AI project LSH clustering'],
     evidenceLinks: [
       { label: 'Value LSH page', href: '/value-lsh/' },
