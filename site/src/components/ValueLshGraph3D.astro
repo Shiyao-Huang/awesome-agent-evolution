@@ -1,7 +1,15 @@
 ---
 import graphSnapshotJson from '../../../analysis/value-lsh-graph-3d.json';
+import analysisSnapshotJson from '../data/analysis.json';
 
 type ValueClass = 'high-value-candidate' | 'needs-review' | 'low-signal-or-risk';
+type AnalysisProject = {
+  normalized_repo?: string | null;
+  public_report?: string | null;
+  raw_file?: string | null;
+  localPath?: string | null;
+  url?: string | null;
+};
 
 interface GraphNode {
   id: string;
@@ -29,6 +37,9 @@ interface LshNeighbor {
   shared_bucket_count: number;
   shared_features: string[];
   relation_weight: number;
+  url?: string | null;
+  rawUrl?: string | null;
+  reportUrl?: string | null;
 }
 
 interface GraphSnapshot {
@@ -46,6 +57,10 @@ interface GraphSnapshot {
   nodes: GraphNode[];
 }
 
+interface AnalysisSnapshot {
+  analyzed_projects?: AnalysisProject[];
+}
+
 interface Props {
   variant?: 'compact' | 'full';
   maxNodes?: number;
@@ -53,28 +68,60 @@ interface Props {
 }
 
 const graphSnapshot = graphSnapshotJson as GraphSnapshot;
+const analysisSnapshot = analysisSnapshotJson as AnalysisSnapshot;
+const projectRepoBase = 'https://github.com/Shiyao-Huang/awesome-agent-evolution/blob/main/';
+const toPublicReportUrl = (value?: string | null) => value ? `/${value.replace(/^site\/public\//, '')}` : null;
+const toRawCaptureUrl = (value?: string | null) => value ? `${projectRepoBase}${value}` : null;
+const projectLinkMap = new Map<string, { reportUrl?: string | null; rawUrl?: string | null; sourceUrl?: string | null }>();
+
+for (const project of analysisSnapshot.analyzed_projects ?? []) {
+  const normalizedRepo = project.normalized_repo?.trim().toLowerCase();
+  if (!normalizedRepo) continue;
+  projectLinkMap.set(normalizedRepo, {
+    reportUrl: toPublicReportUrl(project.public_report),
+    rawUrl: toRawCaptureUrl(project.raw_file ?? project.localPath),
+    sourceUrl: project.url ?? null,
+  });
+}
+
 const { variant = 'full', maxNodes = variant === 'compact' ? 760 : graphSnapshot.summary.nodes, height = variant === 'compact' ? 360 : 560 } = Astro.props;
 const allNodes = graphSnapshot.nodes ?? [];
 const sampleStep = Math.max(1, Math.ceil(allNodes.length / maxNodes));
 const sceneNodes = allNodes
   .filter((_, index) => index % sampleStep === 0)
   .slice(0, maxNodes)
-  .map((node) => ({
+  .map((node) => {
+    const normalizedRepo = node.id.replace(/^github:/, '').trim().toLowerCase();
+    const projectLinks = projectLinkMap.get(normalizedRepo);
+    return {
     id: node.id,
     type: node.type,
     title: node.title,
     url: node.url,
     sourcePath: node.source_path,
+    rawUrl: projectLinks?.rawUrl ?? toRawCaptureUrl(node.source_path),
+    reportUrl: projectLinks?.reportUrl ?? null,
+    primaryUrl: projectLinks?.reportUrl ?? node.url ?? toRawCaptureUrl(node.source_path),
     score: node.value_score,
     confidence: node.confidence,
     valueClass: node.value_class,
     embeddingCluster: node.embedding_cluster,
     lshCluster: node.lsh_cluster_hint,
-    neighbors: node.top_lsh_neighbors || [],
+    neighbors: (node.top_lsh_neighbors || []).map((neighbor) => {
+      const neighborRepo = neighbor.id.replace(/^github:/, '').trim().toLowerCase();
+      const neighborLinks = projectLinkMap.get(neighborRepo);
+      return {
+        ...neighbor,
+        url: neighborLinks?.sourceUrl ?? null,
+        rawUrl: neighborLinks?.rawUrl ?? null,
+        reportUrl: neighborLinks?.reportUrl ?? null,
+      };
+    }),
     x: Number(node.x.toFixed(6)),
     y: Number(node.y.toFixed(6)),
     z: Number(node.z.toFixed(6)),
-  }));
+  };
+  });
 
 const classLabels: Record<ValueClass, string> = {
   'high-value-candidate': 'High value',
@@ -152,21 +199,25 @@ const defaultNeighbors = defaultNode?.neighbors.slice(0, 6) ?? [];
         <div class="value-lsh-selected-head">
           <div>
             <span>{defaultNode.type} · {defaultNode.valueClass}</span>
-            <h3>{defaultNode.title}</h3>
+            <h3>{defaultNode.primaryUrl ? <a href={defaultNode.primaryUrl} target="_blank" rel="noopener">{defaultNode.title}</a> : defaultNode.title}</h3>
           </div>
-          {defaultNode.url ? <a href={defaultNode.url} target="_blank" rel="noopener">source</a> : null}
+          <div class="value-lsh-selected-actions">
+            {defaultNode.reportUrl ? <a href={defaultNode.reportUrl} target="_blank" rel="noopener">report</a> : null}
+            {defaultNode.url ? <a href={defaultNode.url} target="_blank" rel="noopener">source</a> : null}
+            {defaultNode.rawUrl ? <a href={defaultNode.rawUrl} target="_blank" rel="noopener">raw</a> : null}
+          </div>
         </div>
         <div class="value-lsh-selected-metrics">
           <div><strong>{defaultNode.score.toFixed(2)}</strong><span>value</span></div>
           <div><strong>{defaultNode.confidence.toFixed(2)}</strong><span>confidence</span></div>
           <div><strong>{defaultNode.embeddingCluster}</strong><span>embedding</span></div>
         </div>
-        <p>{defaultNode.sourcePath || defaultNode.id}{defaultNode.lshCluster ? ` · ${defaultNode.lshCluster}` : ''}</p>
+        <p>{defaultNode.rawUrl ? <a href={defaultNode.rawUrl} target="_blank" rel="noopener">{defaultNode.sourcePath || defaultNode.id}</a> : (defaultNode.sourcePath || defaultNode.id)}{defaultNode.lshCluster ? ` · ${defaultNode.lshCluster}` : ''}</p>
         <h4>LSH neighbors</h4>
         <ul>
           {defaultNeighbors.length ? defaultNeighbors.map((neighbor) => (
             <li>
-              <strong>{neighbor.title}</strong>
+              <strong>{neighbor.reportUrl || neighbor.url || neighbor.rawUrl ? <a href={neighbor.reportUrl || neighbor.url || neighbor.rawUrl || undefined} target="_blank" rel="noopener">{neighbor.title}</a> : neighbor.title}</strong>
               <span>{neighbor.type} · value {neighbor.value_score.toFixed(2)} · shared buckets {neighbor.shared_bucket_count}</span>
               <small>{neighbor.shared_features.slice(0, 4).join(' / ')}</small>
             </li>
@@ -193,6 +244,9 @@ const defaultNeighbors = defaultNode?.neighbors.slice(0, 6) ?? [];
     shared_bucket_count: number;
     shared_features: string[];
     relation_weight: number;
+    url?: string | null;
+    rawUrl?: string | null;
+    reportUrl?: string | null;
   };
   type SceneNode = {
     id: string;
@@ -200,6 +254,9 @@ const defaultNeighbors = defaultNode?.neighbors.slice(0, 6) ?? [];
     title: string;
     url?: string | null;
     sourcePath?: string | null;
+    rawUrl?: string | null;
+    reportUrl?: string | null;
+    primaryUrl?: string | null;
     score: number;
     confidence: number;
     valueClass: string;
@@ -292,14 +349,25 @@ const defaultNeighbors = defaultNode?.neighbors.slice(0, 6) ?? [];
       .replace(/</g, '&lt;')
       .replace(/>/g, '&gt;')
       .replace(/"/g, '&quot;');
+    const renderLink = (href: string | null | undefined, label: string) => href
+      ? `<a href="${escapeHtml(href)}" target="_blank" rel="noopener">${escapeHtml(label)}</a>`
+      : escapeHtml(label);
 
     const nodePosition = (node: SceneNode) => new THREE.Vector3(node.x * 1.72, node.y * 1.72, node.z * 1.72);
 
     const renderInspector = (node: SceneNode) => {
-      const url = node.url ? `<a href="${escapeHtml(node.url)}" target="_blank" rel="noopener">source</a>` : '';
+      const title = renderLink(node.primaryUrl, node.title);
+      const actions = [
+        node.reportUrl ? `<a href="${escapeHtml(node.reportUrl)}" target="_blank" rel="noopener">report</a>` : '',
+        node.url ? `<a href="${escapeHtml(node.url)}" target="_blank" rel="noopener">source</a>` : '',
+        node.rawUrl ? `<a href="${escapeHtml(node.rawUrl)}" target="_blank" rel="noopener">raw</a>` : '',
+      ].filter(Boolean).join('');
+      const sourcePath = node.rawUrl
+        ? `<a href="${escapeHtml(node.rawUrl)}" target="_blank" rel="noopener">${escapeHtml(node.sourcePath || node.id)}</a>`
+        : escapeHtml(node.sourcePath || node.id);
       const neighbors = node.neighbors.slice(0, 6).map((neighbor) => `
         <li>
-          <strong>${escapeHtml(neighbor.title)}</strong>
+          <strong>${renderLink(neighbor.reportUrl || neighbor.url || neighbor.rawUrl, neighbor.title)}</strong>
           <span>${escapeHtml(neighbor.type)} · value ${Number(neighbor.value_score).toFixed(2)} · shared buckets ${neighbor.shared_bucket_count}</span>
           <small>${escapeHtml((neighbor.shared_features || []).slice(0, 4).join(' / '))}</small>
         </li>
@@ -309,16 +377,16 @@ const defaultNeighbors = defaultNode?.neighbors.slice(0, 6) ?? [];
           <div class="value-lsh-selected-head">
             <div>
               <span>${escapeHtml(node.type)} · ${escapeHtml(node.valueClass)}</span>
-              <h3>${escapeHtml(node.title)}</h3>
+              <h3>${title}</h3>
             </div>
-            ${url}
+            <div class="value-lsh-selected-actions">${actions}</div>
           </div>
           <div class="value-lsh-selected-metrics">
             <div><strong>${Number(node.score).toFixed(2)}</strong><span>value</span></div>
             <div><strong>${Number(node.confidence).toFixed(2)}</strong><span>confidence</span></div>
             <div><strong>${escapeHtml(node.embeddingCluster)}</strong><span>embedding</span></div>
           </div>
-          <p>${escapeHtml(node.sourcePath || node.id)}${node.lshCluster ? ` · ${escapeHtml(node.lshCluster)}` : ''}</p>
+          <p>${sourcePath}${node.lshCluster ? ` · ${escapeHtml(node.lshCluster)}` : ''}</p>
           <h4>LSH neighbors</h4>
           <ul>${neighbors || '<li><span>当前采样内没有可展示邻居。</span></li>'}</ul>
         </article>
@@ -593,6 +661,13 @@ const defaultNeighbors = defaultNode?.neighbors.slice(0, 6) ?? [];
     color: var(--fg);
     font-size: 12px;
     font-weight: 850;
+  }
+
+  .value-lsh-selected-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 6px;
   }
 
   .value-lsh-selected-metrics {
