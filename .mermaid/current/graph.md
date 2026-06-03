@@ -2,13 +2,13 @@
 
 Truth source: `.mermaid/current/graph.json`
 
-Generated: 2026-06-03T07:52:50+08:00
+Generated: 2026-06-03T13:55:19+08:00
 
 ## Nodes
 
 - **intent.direct-user-input** (ops, active): Use only direct user inputs as goal source for the hourly public metadata loop.
 - **raw.github.hourly-captures** (raw, updated): Keep public GitHub evidence raw and timestamped before analysis.
-- **processed.github-classification** (processed, updated): Refresh classification rows and model cards for harness, benchmark, skill, memory, and self-evolution repos.
+- **processed.github-classification** (processed, updated): Refresh classification rows and model cards for code-repair, optimization, self-rewarding, and graph-runtime repos.
 - **results.public-site** (results, updated): Push the metadata refresh into README/i18n, project reports, and site project data.
 - **work.learning-note** (work, updated): Record the data flow, blockers, and repo-level evidence for the next run.
 
@@ -22,8 +22,8 @@ Generated: 2026-06-03T07:52:50+08:00
 
 ## Current Run Evidence
 
-- Web-observed repos: howdymary/hermes-agent-metaharness, Arc-Computer/CL-Bench, microsoft/SkillOpt, sachinsharma9780/memweave, longmans/self-evolve.
-- Refreshed raw files: raw-github/howdymary_hermes-agent-metaharness.md, raw-github/arc-computer_cl-bench.md, raw-github/microsoft_skillopt.md, raw-github/sachinsharma9780_memweave.md, raw-github/longmans_self-evolve.md.
-- Refreshed public reports: site/public/reports/projects/250-hermes-agent-metaharness-outer-loop.md, site/public/reports/projects/392-arc-continual-learning-benchmark.md, site/public/reports/projects/272-skillopt-self-evolving-agent-skills.md, site/public/reports/projects/288-memweave-markdown-agent-memory.md, site/public/reports/projects/355-self-evolve-openclaw-playground.md.
+- Web-observed repos: sola-st/repairagent, zhang677/accelopt, hwfengcs/dm-code-agent, rucbm/laser, arthurmgraf/graphmind.
+- Refreshed raw files: raw-github/sola-st_repairagent.md, raw-github/zhang677_accelopt.md, raw-github/hwfengcs_dm-code-agent.md, raw-github/rucbm_laser.md, raw-github/arthurmgraf_graphmind.md.
+- Refreshed public reports: site/public/reports/projects/393-repairagent-java-autonomous-bug-repair.md, site/public/reports/projects/394-accelopt-self-improving-kernel-optimizer.md, site/public/reports/projects/395-dm-code-agent-auditable-code-baseline.md, site/public/reports/projects/396-laser-last-token-self-rewarding-rl.md, site/public/reports/projects/397-graphmind-knowledge-agent-rag-runtime.md.
 - Shell GitHub API access remained blocked in this workspace, so freshness is public-page observed rather than API-verified.
-- GitNexus CLI is available, but `npx gitnexus status` reported the local index is stale before this iteration commit.
+- GitNexus CLI is available, but impact resolution for generator helper symbols remained blocked in this run.

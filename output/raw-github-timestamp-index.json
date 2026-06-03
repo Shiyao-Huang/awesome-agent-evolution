@@ -2,7 +2,7 @@
   "generated_at": "2026-06-03T00:00:00+08:00",
   "total": 677,
   "updated_files": 677,
-  "unknown_content_timestamp": 108,
+  "unknown_content_timestamp": 106,
   "records": [
     {
       "repo": "01-ai/langcrew",
@@ -575,10 +575,10 @@
       "repo": "arthurmgraf/graphmind",
       "url": "https://github.com/arthurmgraf/graphmind",
       "file": "raw-github/arthurmgraf_graphmind.md",
-      "content_timestamp": "unknown",
-      "collected_at": "2026-05-20T17:44:59Z",
-      "time_slice": "unknown",
-      "timestamp_source": "unknown_not_present_in_raw_capture"
+      "content_timestamp": "2026-06-03",
+      "collected_at": "2026-06-03T13:55:19+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "web_observed_public_github_page_2026_06_03"
     },
     {
       "repo": "arunagirinathan-k/awesome-ai-agents-2026",
@@ -2085,12 +2085,12 @@
     },
     {
       "repo": "hwfengcs/dm-code-agent",
-      "url": "https://github.com/hwfengcs/dm-code-agent",
+      "url": "https://github.com/hwfengcs/DM-Code-Agent",
       "file": "raw-github/hwfengcs_dm-code-agent.md",
-      "content_timestamp": "2026-05-21",
-      "collected_at": "2026-05-20T17:45:19Z",
-      "time_slice": "2026-05",
-      "timestamp_source": "github_latest_commit_or_update_text"
+      "content_timestamp": "2026-06-03",
+      "collected_at": "2026-06-03T13:55:19+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "web_observed_public_github_page_2026_06_03"
     },
     {
       "repo": "hyperspell/hyperspell-openclaw",
@@ -4443,12 +4443,12 @@
     },
     {
       "repo": "rucbm/laser",
-      "url": "https://github.com/rucbm/laser",
+      "url": "https://github.com/RUCBM/LaSeR",
       "file": "raw-github/rucbm_laser.md",
-      "content_timestamp": "2026-05-21",
-      "collected_at": "2026-05-20T17:45:19Z",
-      "time_slice": "2026-05",
-      "timestamp_source": "github_latest_commit_or_update_text"
+      "content_timestamp": "2026-06-03",
+      "collected_at": "2026-06-03T13:55:19+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "web_observed_public_github_page_2026_06_03"
     },
     {
       "repo": "RyanAlberts/best-of-Agent-Harnesses",
@@ -4839,12 +4839,12 @@
     },
     {
       "repo": "sola-st/repairagent",
-      "url": "https://github.com/sola-st/repairagent",
+      "url": "https://github.com/sola-st/RepairAgent",
       "file": "raw-github/sola-st_repairagent.md",
-      "content_timestamp": "2026-05-21",
-      "collected_at": "2026-05-20T17:45:19Z",
-      "time_slice": "2026-05",
-      "timestamp_source": "github_latest_commit_or_update_text"
+      "content_timestamp": "2026-06-03",
+      "collected_at": "2026-06-03T13:55:19+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "web_observed_public_github_page_2026_06_03"
     },
     {
       "repo": "sourcegraph/CodeScaleBench",
@@ -5919,12 +5919,12 @@
     },
     {
       "repo": "zhang677/accelopt",
-      "url": "https://github.com/zhang677/accelopt",
+      "url": "https://github.com/zhang677/AccelOpt",
       "file": "raw-github/zhang677_accelopt.md",
-      "content_timestamp": "unknown",
-      "collected_at": "2026-05-20T17:44:59Z",
-      "time_slice": "unknown",
-      "timestamp_source": "unknown_not_present_in_raw_capture"
+      "content_timestamp": "2026-06-03",
+      "collected_at": "2026-06-03T13:55:19+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "web_observed_public_github_page_2026_06_03"
     },
     {
       "repo": "zhangfengcdt/memoir",

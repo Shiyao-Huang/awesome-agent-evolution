@@ -17,10 +17,6 @@ export type Project = {
   localPath?: string;
 };
 
-// ── EC + LLM 核心项目 (01-04) ──
-// ── Agent 框架项目 (05-09, built by Builder-1) ──
-// ── Agent 框架项目 (10-17, built by Builder-4) ──
-
 export const projects: Project[] = [
     {
         "name": "openevolve",
@@ -7559,40 +7555,587 @@ export const projects: Project[] = [
             "benchmark",
             "agent-swarm"
         ]
+    },
+    {
+        "name": "RepairAgent",
+        "repo": "sola-st/repairagent",
+        "url": "https://github.com/sola-st/RepairAgent",
+        "description": "RepairAgent is an autonomous agent that fixes bugs in Java projects using LLMs through a localize-analyze-fix-test iteration loop.",
+        "stack": [
+            "Python",
+            "Java",
+            "Defects4J Program Repair"
+        ],
+        "category": "Autonomous Java Bug Repair Agent",
+        "status": "candidate",
+        "stars": 99,
+        "forks": 32,
+        "lastPushed": "2026-06-03T00:00:00Z",
+        "language": "Python",
+        "license": "MIT",
+        "report": "projects/393-repairagent-java-autonomous-bug-repair.md",
+        "pattern": "read failing test -> localize bug -> analyze code -> generate patch -> run tests -> iterate until a correct fix survives validation",
+        "tags": [
+            "code repair",
+            "defects4j",
+            "bug fixing agent",
+            "java",
+            "autonomous debugging"
+        ],
+        "localPath": "raw-github/sola-st_repairagent.md"
+    },
+    {
+        "name": "AccelOpt",
+        "repo": "zhang677/accelopt",
+        "url": "https://github.com/zhang677/AccelOpt",
+        "description": "AccelOpt is a self-improving LLM agentic system that iteratively optimizes AI accelerator kernels using optimization memory and benchmarked kernel profiling.",
+        "stack": [
+            "Python",
+            "NKIBench",
+            "Accelerator Kernel Optimization"
+        ],
+        "category": "Self-Improving Accelerator Kernel Optimization Agent",
+        "status": "candidate",
+        "stars": 51,
+        "forks": 7,
+        "lastPushed": "2026-06-03T00:00:00Z",
+        "language": "Python",
+        "license": "Apache-2.0",
+        "report": "projects/394-accelopt-self-improving-kernel-optimizer.md",
+        "pattern": "generate candidate kernel -> consult optimization memory -> profile on NKIBench or FlashInfer-Bench -> compare slow-fast kernel pairs -> keep stronger optimization traces",
+        "tags": [
+            "self-improving agent",
+            "kernel optimization",
+            "nkibench",
+            "flashinfer-bench",
+            "accelerator tuning"
+        ],
+        "localPath": "raw-github/zhang677_accelopt.md"
+    },
+    {
+        "name": "DM-Code-Agent",
+        "repo": "hwfengcs/dm-code-agent",
+        "url": "https://github.com/hwfengcs/DM-Code-Agent",
+        "description": "DM-Code-Agent is a local-first and auditable Python code agent baseline with explicit planning, trace replay, optional reflexion modules, and benchmark-facing evaluation paths.",
+        "stack": [
+            "Python",
+            "SWE-bench Lite",
+            "Trace Replay"
+        ],
+        "category": "Auditable Local-First Code Agent Baseline",
+        "status": "candidate",
+        "stars": 138,
+        "forks": 12,
+        "lastPushed": "2026-06-03T00:00:00Z",
+        "language": "Python",
+        "license": "MIT",
+        "report": "projects/395-dm-code-agent-auditable-code-baseline.md",
+        "pattern": "plan and replan -> call tools with JSONL trace capture -> enable optional reflexion or critic modules -> run maintenance benchmark harness -> replay and diff the trajectory",
+        "tags": [
+            "code agent",
+            "trace replay",
+            "swe-bench lite",
+            "local first",
+            "auditable"
+        ],
+        "localPath": "raw-github/hwfengcs_dm-code-agent.md"
+    },
+    {
+        "name": "LaSeR",
+        "repo": "rucbm/laser",
+        "url": "https://github.com/RUCBM/LaSeR",
+        "description": "LaSeR is a reinforcement-learning recipe that jointly improves reasoning and self-rewarding behavior by adding an MSE self-reward term to the RLVR objective.",
+        "stack": [
+            "Python",
+            "RLVR",
+            "Self-Rewarding Training"
+        ],
+        "category": "Last-Token Self-Rewarding Reinforcement Learning Recipe",
+        "status": "candidate",
+        "stars": 36,
+        "forks": 2,
+        "lastPushed": "2026-06-03T00:00:00Z",
+        "language": "Python",
+        "license": "MIT",
+        "report": "projects/396-laser-last-token-self-rewarding-rl.md",
+        "pattern": "optimize RLVR objective -> learn last-token self-reward signal -> reuse auxiliary reward during training and testing -> improve reasoning and reward calibration together",
+        "tags": [
+            "self reward",
+            "rlvr",
+            "reasoning optimization",
+            "paper code",
+            "checkpoint release"
+        ],
+        "localPath": "raw-github/rucbm_laser.md"
+    },
+    {
+        "name": "GraphMind",
+        "repo": "arthurmgraf/graphmind",
+        "url": "https://github.com/arthurmgraf/graphmind",
+        "description": "GraphMind is an agentic RAG runtime that combines knowledge graphs, dual orchestration engines, and self-evaluating retrieval pipelines for autonomous knowledge work.",
+        "stack": [
+            "Python",
+            "LangGraph",
+            "CrewAI",
+            "Knowledge Graph RAG"
+        ],
+        "category": "Knowledge-Graph Agentic RAG Runtime",
+        "status": "candidate",
+        "stars": 1,
+        "forks": 0,
+        "lastPushed": "2026-06-03T00:00:00Z",
+        "language": "Python",
+        "license": "MIT",
+        "report": "projects/397-graphmind-knowledge-agent-rag-runtime.md",
+        "pattern": "receive query -> choose LangGraph or CrewAI engine -> retrieve over hybrid graph layer -> self-evaluate the answer -> retry when score stays below threshold",
+        "tags": [
+            "knowledge graph",
+            "agentic rag",
+            "langgraph",
+            "crewai",
+            "self evaluation"
+        ],
+        "localPath": "raw-github/arthurmgraf_graphmind.md"
     }
 ];
 
 export const projectGroups = [
-  { title: '进化式代码 / AlphaEvolve 类', repos: ['algorithmicsuperintelligence/openevolve', 'inter-co/science-codeevolve', 'JARVIS-Xs/SE-Agent'] },
-  { title: 'LLM 作为优化器', repos: ['google-deepmind/opro', 'carperai/openelm', 'google-deepmind/funsearch'] },
-  { title: 'Agent 架构自动搜索', repos: ['ShengranHu/ADAS'] },
-  { title: 'Agent 自进化系统', repos: ['modelscope/AgentEvolver', 'aiwaves-cn/agents', 'JarvisPei/SCOPE'] },
-  { title: '反思 / 精炼经典范式', repos: ['noahshinn/reflexion', 'madaan/self-refine'] },
-  { title: '安全、评判与数据/模型自进化', repos: ['ZJU-LLM-Safety/DARWIN', 'OPPO-Mente-Lab/LLM-Self-Judge'] },
-  { title: '声明式 Prompt 优化', repos: ['stanfordnlp/dspy'] },
-  { title: '多 Agent 协作框架', repos: ['FoundationAgents/MetaGPT', 'crewAIInc/crewAI', 'microsoft/autogen', 'camel-ai/camel', 'OpenBMB/AgentVerse'] },
-  { title: '图式 Agent 编排', repos: ['langchain-ai/langgraph'] },
-  { title: 'AI 软件工程', repos: ['Significant-Gravitas/AutoGPT', 'princeton-nlp/SWE-agent', 'All-Hands-AI/OpenHands', 'stitionai/devika', 'OpenDevin/OpenDevin'] },
-  { title: 'AutoML / ML 知识驱动', repos: ['DeepAuto-AI/automl-agent', 'microsoft/CoML'] },
-  { title: '反射式进化搜索', repos: ['ai4co/reevo', 'xai-liacs/LLaMEA'] },
-  { title: '进化式 Prompt/上下文优化', repos: ['beeevita/EvoPrompt'] },
-  { title: '进化式多 Agent 系统', repos: ['siyuyuan/evoagent', 'EvoAgentX/EvoAgentX', 'EverMind-AI/EverOS'] },
-  { title: 'LLM 驱动进化计算', repos: ['Genentech/OpenTreeSearch', 'wuxingyu-ai/LLM4EC', 'FeiLiu36/LLM4Opt', 'xiaofangxd/LLM_EA', 'alfa-group/tutorial_gp_llm'] },
-  { title: '质量多样性优化', repos: ['icaros-usc/pyribs'] },
-  { title: '经典进化算法框架', repos: ['DEAP/deap', 'CMA-ES/pycma', 'facebookresearch/nevergrad'] },
-  { title: 'AutoML 框架', repos: ['automl/auto-sklearn'] },
-  { title: '自进化 Agent 综述', repos: ['CharlesQ9/Self-Evolving-Agents', 'Zesearch/self-improvement-llm'] },
-  { title: 'LLM Agent 优化', repos: ['YoungDubbyDu/LLM-Agent-Optimization'] },
-  { title: '代码模型与评测', repos: ['CodeFuse-ML/awesome-code-llm', 'THUDM/AgentBench', 'ai4co/rl4co', 'ai4co/awesome-fm4co', 'paradigmxyz/evmbench'] },
-  { title: '遗传编程', repos: ['pureples/pureples'] }
-  ,{ title: '多 Agent 协作平台 (Round 4)', repos: ['ag2ai/ag2', 'OpenBMB/ChatDev', 'xlang-ai/OpenAgents', 'TransformerOptimus/SuperAGI', 'phidatahq/phidata', 'future-agi/future-agi'] }
-  ,{ title: 'LLM 应用开发平台', repos: ['langgenius/dify', 'langflow-ai/langflow', 'FlowiseAI/Flowise', 'dataelement/bisheng', 'n8n-io/n8n'] }
-  ,{ title: 'Agent 评测基准', repos: ['SWE-bench/SWE-bench', 'xlang-ai/OSWorld', 'web-arena-x/webarena', 'InternLM/WildClawBench', 'Agenta-AI/agenta', 'shareAI-lab/kbench', 'paradigmxyz/evmbench', 'plaited/agent-eval-harness', 'najeed/ai-agent-eval-harness', 'Arc-Computer/CL-Bench'] }
-  ,{ title: 'LLM 基础设施', repos: ['BerriAI/litellm', 'ollama/ollama', 'google-gemini/gemini-cli', 'open-webui/open-webui', 'e2b-dev/e2b'] }
-  ,{ title: 'Agent Skills / Memory / Harness', repos: ['microsoft/waza', 'mgechev/skillgrade', 'mgechev/skills-best-practices', 'webmaxru/Agent-Skills', 'Orchestra-Research/AI-research-SKILLs', 'iliaal/ai-skills', 'wazionapps/nexo', 'razroo/state-trace', 'google-gemini/gemini-cli', 'open-gitagent/gitagent', 'NirDiamant/Agent_Memory_Techniques', 'shareAI-lab/kbench', 'paradigmxyz/evmbench', 'paradigmxyz/centaur', 'cuga-project/cuga-agent', 'AutoX-AI-Labs/AutoR', 'Chorus-AIDLC/Chorus', 'kweaver-ai/kweaver-core', 'suyoumo/ClawProBench', 'sd0xdev/sd0x-dev-flow', 'inngest/utah', 'SuperagenticAI/metaharness', 'supermemoryai/supermemory', 'flagos-ai/skills', 'mem9-ai/mem9', 'CortexReach/memory-lancedb-pro', 'garrytan/gbrain', 'sunnja69/akephalos', 'InternScience/InternAgent', 'OpenBMB/ClawXMemory', 'UnicomAI/hexagent', 'evalops/agent-harness', 'harness/harness-evals', 'browser-use/browser-harness', 'junminhong/awesome-agent-skills', 'mindfold-ai/Trellis', 'Picrew/awesome-agent-harness', 'AutoJunjie/awesome-agent-harness', 'shareAI-lab/learn-claude-code', 'murataslan1/ai-agent-benchmark', 'holaboss-ai/holaOS', 'langchain-ai/deepagents', 'coleam00/Archon', 'RyanAlberts/best-of-Agent-Harnesses', 'microsoft/SkillOpt', 'Tencent/TencentDB-Agent-Memory', 'QuantaAlpha/GitTaskBench', 'openclaw/clawhub', 'VoltAgent/awesome-openclaw-skills', 'ZeroLu/awesome-openclaw', 'QuantClaw/QuantClaw', 'InternScience/Awesome-Scientific-Skills', 'TIGER-AI-Lab/ClawBench', 'redis/agent-memory-server', 'langchain-ai/memory-agent', 'iflytek/skillhub', 'memodb-io/Acontext', 'nemori-ai/nemori', 'Alienfader/continuity-benchmarks', 'sachinsharma9780/memweave', 'qpiai/Proced_mem_bench', 'Modelcode-ai/mcode-benchmark', 'sourcegraph/CodeScaleBench', 'mlcommons/modelbench', 'BerriAI/self-improving-agent', 'LLMSecurity/awesome-agent-skills-security', 'ComposioHQ/awesome-agent-clis', 'Olshansk/agent-skills', 'axiomhq/agent-memory', 'FreedomIntelligence/Tiermem', 'itgoyo/awesome-agent-skills', 'back1ply/agent-skill-loader', 'Da1yuqin/SEAD', 'ai-agents-2030/darwin-mobile-agent', 'YuanchenBei/Mem-Gallery', 'InfiAgent/InfiAgent', 'openclaw/clownfish', 'openclaw/crabpot', 'openclaw/gitcrawl', 'openclaw/crawlkit', 'openclaw/discrawl', 'MemTensor/MemOS-Cloud-OpenClaw-Plugin', 'openai/swarm', 'microsoft/agent-lightning', 'seb1n/awesome-ai-agent-skills', 'cxxz/awesome-agent-memory', 'openclaw/acpx', 'openclaw/crabbox', 'openclaw/openclaw-windows-node', 'first-fluke/oh-my-agent', 'agentscope-ai/ReMe', 'openmemoryspec/oms', 'memtomem/memtomem', 'skillmatic-ai/awesome-agent-skills', 'sevenschulte/agentic-harness', 'dotnet/skills', 'datalayer/agent-skills', 'block/agent-skills', 'Corbell-AI/evalmonkey', 'nomic-ai/aec-bench', 'google/ax', 'aiming-lab/AutoHarness', 'OWASP/www-project-agent-memory-guard', 'addyosmani/agent-skills', 'zocomputer/skills', 'QF-Bench/QuantitativeFinance-Bench', 'zikuicai/aegisllm', 'EvoMap/evolver', 'NousResearch/hermes-agent-self-evolution', 'knowall-ai/mcp-neo4j-agent-memory', 'LearnPrompt/cc-harness-skills', 'aiming-lab/ClawArena', 'kodustech/awesome-agent-skills', 'Martian-Engineering/lossless-claw', 'thinkwee/AgentsMeetRL', 'syntax-syndicate/OpenHarness-agent-harness', 'ArcadeAI/openclaw-arcade-plugin', 'humanitylabs-org/obsidianclaw', 'momo-personal-assistant/openclaw-plugin', 'NVIDIA/skills', 'supabase/agent-skills', 'MemTensor/skills-vote', 'aayoawoyemi/ori-mnemos', 'soimy/openclaw-channel-dingtalk', 'pwrdrvr/openclaw-codex-app-server', 'henrikrexed/openclaw-observability-plugin', 'longmans/self-evolve', 'MCKRUZ/openclaw-langfuse', 'hyperspell/hyperspell-openclaw', 'composio-community/awesome-openclaw-plugins', 'mvanhorn/last30days-skill', 'EESIZ/clawdreamer', 'ThisIsJeron/awesome-openclaw-plugins', 'BlockRunAI/awesome-OpenClaw-Money-Maker', 'SamurAIGPT/awesome-openclaw', 'LHL3341/awesome-claws', 'pegasi-ai/reins', 'cloudllm-ai/mentisdb', 'rohitg00/awesome-openclaw', 'yoloshii/ClawMem', 'clawsouls/soulclaw', 'Team-Commonly/commonly', 'matevip/mateclaw', 'christinminor459/OnionClaw', 'nowledge-co/community', '0xNyk/lacp', 'manthanguptaa/water', 'SponsioLabs/Sponsio', 'zorazrw/agent-workflow-memory', 'webzler/agentMemory', 'agiresearch/A-mem', 'elizaOS/agentmemory', 'apify/agent-skills', 'openswarm-ai/openswarm', 'agentralabs/agentic-memory', 'lhl/agentic-memory', 'langchain-ai/agentevals', 'agentevals-dev/agentevals', 'ALucek/agentic-memory', 'VectorSpaceLab/general-agentic-memory', 'Dataojitori/nocturne_memory', 'plaited/agent-eval-harness', 'najeed/ai-agent-eval-harness', 'Arc-Computer/CL-Bench', 'Versatly/clawvault', 'opensquilla/opensquilla', 'GCWing/BitFun', 'oceanbase/powermem', 'mnemon-dev/mnemon', 'alibaizhanov/mengram', 'im4codes/imcodes', 'weaviate/query-agent-benchmarking'] }
-  ,{ title: 'Production Agent Runtimes With Evolution Substrate', repos: ['agent0ai/agent-zero', 'elizaOS/eliza', 'TransformerOptimus/SuperAGI', 'paradigmxyz/centaur'] }
-  ,{ title: 'Self-Referential Coding Agents', repos: ['MaximeRobeyns/self_improving_coding_agent', 'JARVIS-Xs/SE-Agent', 'algorithmicsuperintelligence/openevolve', 'facebookresearch/HyperAgents'] }
-  ,{ title: 'In-Situ Tool Evolution And Agent Control', repos: ['YunjueTech/Yunjue-Agent', 'RangeKing/self-evolving-agent', 'gofenix/nex-agent', 'swapedoc/hermes2anti', 'vilmire/adhdev'] }
-  ,{ title: 'Agent 框架 (Round 4)', repos: ['reworkd/AgentGPT', 'yoheinakajima/babyagi', 'cheshire-cat-ai/core', 'huggingface/smolagents', 'Chainlit/chainlit', 'smol-ai/developer'] }
-  ,{ title: 'Agent 研究综述 (Round 4)', repos: ['XMUDeepLIT/Awesome-Self-Evolving-Agents', 'luo-junyu/Awesome-Agent-Papers', 'Zijian-Ni/awesome-ai-agents-2026'] }
+  {
+    "title": "进化式代码 / AlphaEvolve 类",
+    "repos": [
+      "algorithmicsuperintelligence/openevolve",
+      "inter-co/science-codeevolve",
+      "JARVIS-Xs/SE-Agent",
+      "zhang677/accelopt"
+    ]
+  },
+  {
+    "title": "LLM 作为优化器",
+    "repos": [
+      "google-deepmind/opro",
+      "carperai/openelm",
+      "google-deepmind/funsearch"
+    ]
+  },
+  {
+    "title": "Agent 架构自动搜索",
+    "repos": [
+      "ShengranHu/ADAS"
+    ]
+  },
+  {
+    "title": "Agent 自进化系统",
+    "repos": [
+      "modelscope/AgentEvolver",
+      "aiwaves-cn/agents",
+      "JarvisPei/SCOPE"
+    ]
+  },
+  {
+    "title": "反思 / 精炼经典范式",
+    "repos": [
+      "noahshinn/reflexion",
+      "madaan/self-refine"
+    ]
+  },
+  {
+    "title": "安全、评判与数据/模型自进化",
+    "repos": [
+      "ZJU-LLM-Safety/DARWIN",
+      "OPPO-Mente-Lab/LLM-Self-Judge",
+      "rucbm/laser"
+    ]
+  },
+  {
+    "title": "声明式 Prompt 优化",
+    "repos": [
+      "stanfordnlp/dspy"
+    ]
+  },
+  {
+    "title": "多 Agent 协作框架",
+    "repos": [
+      "FoundationAgents/MetaGPT",
+      "crewAIInc/crewAI",
+      "microsoft/autogen",
+      "camel-ai/camel",
+      "OpenBMB/AgentVerse"
+    ]
+  },
+  {
+    "title": "图式 Agent 编排",
+    "repos": [
+      "langchain-ai/langgraph",
+      "arthurmgraf/graphmind"
+    ]
+  },
+  {
+    "title": "AI 软件工程",
+    "repos": [
+      "Significant-Gravitas/AutoGPT",
+      "princeton-nlp/SWE-agent",
+      "All-Hands-AI/OpenHands",
+      "stitionai/devika",
+      "OpenDevin/OpenDevin",
+      "sola-st/repairagent",
+      "hwfengcs/dm-code-agent"
+    ]
+  },
+  {
+    "title": "AutoML / ML 知识驱动",
+    "repos": [
+      "DeepAuto-AI/automl-agent",
+      "microsoft/CoML"
+    ]
+  },
+  {
+    "title": "反射式进化搜索",
+    "repos": [
+      "ai4co/reevo",
+      "xai-liacs/LLaMEA"
+    ]
+  },
+  {
+    "title": "进化式 Prompt/上下文优化",
+    "repos": [
+      "beeevita/EvoPrompt"
+    ]
+  },
+  {
+    "title": "进化式多 Agent 系统",
+    "repos": [
+      "siyuyuan/evoagent",
+      "EvoAgentX/EvoAgentX",
+      "EverMind-AI/EverOS"
+    ]
+  },
+  {
+    "title": "LLM 驱动进化计算",
+    "repos": [
+      "Genentech/OpenTreeSearch",
+      "wuxingyu-ai/LLM4EC",
+      "FeiLiu36/LLM4Opt",
+      "xiaofangxd/LLM_EA",
+      "alfa-group/tutorial_gp_llm"
+    ]
+  },
+  {
+    "title": "质量多样性优化",
+    "repos": [
+      "icaros-usc/pyribs"
+    ]
+  },
+  {
+    "title": "经典进化算法框架",
+    "repos": [
+      "DEAP/deap",
+      "CMA-ES/pycma",
+      "facebookresearch/nevergrad"
+    ]
+  },
+  {
+    "title": "AutoML 框架",
+    "repos": [
+      "automl/auto-sklearn"
+    ]
+  },
+  {
+    "title": "自进化 Agent 综述",
+    "repos": [
+      "CharlesQ9/Self-Evolving-Agents",
+      "Zesearch/self-improvement-llm"
+    ]
+  },
+  {
+    "title": "LLM Agent 优化",
+    "repos": [
+      "YoungDubbyDu/LLM-Agent-Optimization"
+    ]
+  },
+  {
+    "title": "代码模型与评测",
+    "repos": [
+      "CodeFuse-ML/awesome-code-llm",
+      "THUDM/AgentBench",
+      "ai4co/rl4co",
+      "ai4co/awesome-fm4co",
+      "paradigmxyz/evmbench"
+    ]
+  },
+  {
+    "title": "遗传编程",
+    "repos": [
+      "pureples/pureples"
+    ]
+  },
+  {
+    "title": "多 Agent 协作平台 (Round 4)",
+    "repos": [
+      "ag2ai/ag2",
+      "OpenBMB/ChatDev",
+      "xlang-ai/OpenAgents",
+      "TransformerOptimus/SuperAGI",
+      "phidatahq/phidata",
+      "future-agi/future-agi"
+    ]
+  },
+  {
+    "title": "LLM 应用开发平台",
+    "repos": [
+      "langgenius/dify",
+      "langflow-ai/langflow",
+      "FlowiseAI/Flowise",
+      "dataelement/bisheng",
+      "n8n-io/n8n"
+    ]
+  },
+  {
+    "title": "Agent 评测基准",
+    "repos": [
+      "SWE-bench/SWE-bench",
+      "xlang-ai/OSWorld",
+      "web-arena-x/webarena",
+      "InternLM/WildClawBench",
+      "Agenta-AI/agenta",
+      "shareAI-lab/kbench",
+      "paradigmxyz/evmbench",
+      "plaited/agent-eval-harness",
+      "najeed/ai-agent-eval-harness",
+      "Arc-Computer/CL-Bench"
+    ]
+  },
+  {
+    "title": "LLM 基础设施",
+    "repos": [
+      "BerriAI/litellm",
+      "ollama/ollama",
+      "google-gemini/gemini-cli",
+      "open-webui/open-webui",
+      "e2b-dev/e2b"
+    ]
+  },
+  {
+    "title": "Agent Skills / Memory / Harness",
+    "repos": [
+      "microsoft/waza",
+      "mgechev/skillgrade",
+      "mgechev/skills-best-practices",
+      "webmaxru/Agent-Skills",
+      "Orchestra-Research/AI-research-SKILLs",
+      "iliaal/ai-skills",
+      "wazionapps/nexo",
+      "razroo/state-trace",
+      "google-gemini/gemini-cli",
+      "open-gitagent/gitagent",
+      "NirDiamant/Agent_Memory_Techniques",
+      "shareAI-lab/kbench",
+      "paradigmxyz/evmbench",
+      "paradigmxyz/centaur",
+      "cuga-project/cuga-agent",
+      "AutoX-AI-Labs/AutoR",
+      "Chorus-AIDLC/Chorus",
+      "kweaver-ai/kweaver-core",
+      "suyoumo/ClawProBench",
+      "sd0xdev/sd0x-dev-flow",
+      "inngest/utah",
+      "SuperagenticAI/metaharness",
+      "supermemoryai/supermemory",
+      "flagos-ai/skills",
+      "mem9-ai/mem9",
+      "CortexReach/memory-lancedb-pro",
+      "garrytan/gbrain",
+      "sunnja69/akephalos",
+      "InternScience/InternAgent",
+      "OpenBMB/ClawXMemory",
+      "UnicomAI/hexagent",
+      "evalops/agent-harness",
+      "harness/harness-evals",
+      "browser-use/browser-harness",
+      "junminhong/awesome-agent-skills",
+      "mindfold-ai/Trellis",
+      "Picrew/awesome-agent-harness",
+      "AutoJunjie/awesome-agent-harness",
+      "shareAI-lab/learn-claude-code",
+      "murataslan1/ai-agent-benchmark",
+      "holaboss-ai/holaOS",
+      "langchain-ai/deepagents",
+      "coleam00/Archon",
+      "RyanAlberts/best-of-Agent-Harnesses",
+      "microsoft/SkillOpt",
+      "Tencent/TencentDB-Agent-Memory",
+      "QuantaAlpha/GitTaskBench",
+      "openclaw/clawhub",
+      "VoltAgent/awesome-openclaw-skills",
+      "ZeroLu/awesome-openclaw",
+      "QuantClaw/QuantClaw",
+      "InternScience/Awesome-Scientific-Skills",
+      "TIGER-AI-Lab/ClawBench",
+      "redis/agent-memory-server",
+      "langchain-ai/memory-agent",
+      "iflytek/skillhub",
+      "memodb-io/Acontext",
+      "nemori-ai/nemori",
+      "Alienfader/continuity-benchmarks",
+      "sachinsharma9780/memweave",
+      "qpiai/Proced_mem_bench",
+      "Modelcode-ai/mcode-benchmark",
+      "sourcegraph/CodeScaleBench",
+      "mlcommons/modelbench",
+      "BerriAI/self-improving-agent",
+      "LLMSecurity/awesome-agent-skills-security",
+      "ComposioHQ/awesome-agent-clis",
+      "Olshansk/agent-skills",
+      "axiomhq/agent-memory",
+      "FreedomIntelligence/Tiermem",
+      "itgoyo/awesome-agent-skills",
+      "back1ply/agent-skill-loader",
+      "Da1yuqin/SEAD",
+      "ai-agents-2030/darwin-mobile-agent",
+      "YuanchenBei/Mem-Gallery",
+      "InfiAgent/InfiAgent",
+      "openclaw/clownfish",
+      "openclaw/crabpot",
+      "openclaw/gitcrawl",
+      "openclaw/crawlkit",
+      "openclaw/discrawl",
+      "MemTensor/MemOS-Cloud-OpenClaw-Plugin",
+      "openai/swarm",
+      "microsoft/agent-lightning",
+      "seb1n/awesome-ai-agent-skills",
+      "cxxz/awesome-agent-memory",
+      "openclaw/acpx",
+      "openclaw/crabbox",
+      "openclaw/openclaw-windows-node",
+      "first-fluke/oh-my-agent",
+      "agentscope-ai/ReMe",
+      "openmemoryspec/oms",
+      "memtomem/memtomem",
+      "skillmatic-ai/awesome-agent-skills",
+      "sevenschulte/agentic-harness",
+      "dotnet/skills",
+      "datalayer/agent-skills",
+      "block/agent-skills",
+      "Corbell-AI/evalmonkey",
+      "nomic-ai/aec-bench",
+      "google/ax",
+      "aiming-lab/AutoHarness",
+      "OWASP/www-project-agent-memory-guard",
+      "addyosmani/agent-skills",
+      "zocomputer/skills",
+      "QF-Bench/QuantitativeFinance-Bench",
+      "zikuicai/aegisllm",
+      "EvoMap/evolver",
+      "NousResearch/hermes-agent-self-evolution",
+      "knowall-ai/mcp-neo4j-agent-memory",
+      "LearnPrompt/cc-harness-skills",
+      "aiming-lab/ClawArena",
+      "kodustech/awesome-agent-skills",
+      "Martian-Engineering/lossless-claw",
+      "thinkwee/AgentsMeetRL",
+      "syntax-syndicate/OpenHarness-agent-harness",
+      "ArcadeAI/openclaw-arcade-plugin",
+      "humanitylabs-org/obsidianclaw",
+      "momo-personal-assistant/openclaw-plugin",
+      "NVIDIA/skills",
+      "supabase/agent-skills",
+      "MemTensor/skills-vote",
+      "aayoawoyemi/ori-mnemos",
+      "soimy/openclaw-channel-dingtalk",
+      "pwrdrvr/openclaw-codex-app-server",
+      "henrikrexed/openclaw-observability-plugin",
+      "longmans/self-evolve",
+      "MCKRUZ/openclaw-langfuse",
+      "hyperspell/hyperspell-openclaw",
+      "composio-community/awesome-openclaw-plugins",
+      "mvanhorn/last30days-skill",
+      "EESIZ/clawdreamer",
+      "ThisIsJeron/awesome-openclaw-plugins",
+      "BlockRunAI/awesome-OpenClaw-Money-Maker",
+      "SamurAIGPT/awesome-openclaw",
+      "LHL3341/awesome-claws",
+      "pegasi-ai/reins",
+      "cloudllm-ai/mentisdb",
+      "rohitg00/awesome-openclaw",
+      "yoloshii/ClawMem",
+      "clawsouls/soulclaw",
+      "Team-Commonly/commonly",
+      "matevip/mateclaw",
+      "christinminor459/OnionClaw",
+      "nowledge-co/community",
+      "0xNyk/lacp",
+      "manthanguptaa/water",
+      "SponsioLabs/Sponsio",
+      "zorazrw/agent-workflow-memory",
+      "webzler/agentMemory",
+      "agiresearch/A-mem",
+      "elizaOS/agentmemory",
+      "apify/agent-skills",
+      "openswarm-ai/openswarm",
+      "agentralabs/agentic-memory",
+      "lhl/agentic-memory",
+      "langchain-ai/agentevals",
+      "agentevals-dev/agentevals",
+      "ALucek/agentic-memory",
+      "VectorSpaceLab/general-agentic-memory",
+      "Dataojitori/nocturne_memory",
+      "plaited/agent-eval-harness",
+      "najeed/ai-agent-eval-harness",
+      "Arc-Computer/CL-Bench",
+      "Versatly/clawvault",
+      "opensquilla/opensquilla",
+      "GCWing/BitFun",
+      "oceanbase/powermem",
+      "mnemon-dev/mnemon",
+      "alibaizhanov/mengram",
+      "im4codes/imcodes",
+      "weaviate/query-agent-benchmarking"
+    ]
+  },
+  {
+    "title": "Production Agent Runtimes With Evolution Substrate",
+    "repos": [
+      "agent0ai/agent-zero",
+      "elizaOS/eliza",
+      "TransformerOptimus/SuperAGI",
+      "paradigmxyz/centaur"
+    ]
+  },
+  {
+    "title": "Self-Referential Coding Agents",
+    "repos": [
+      "MaximeRobeyns/self_improving_coding_agent",
+      "JARVIS-Xs/SE-Agent",
+      "algorithmicsuperintelligence/openevolve",
+      "facebookresearch/HyperAgents"
+    ]
+  },
+  {
+    "title": "In-Situ Tool Evolution And Agent Control",
+    "repos": [
+      "YunjueTech/Yunjue-Agent",
+      "RangeKing/self-evolving-agent",
+      "gofenix/nex-agent",
+      "swapedoc/hermes2anti",
+      "vilmire/adhdev"
+    ]
+  },
+  {
+    "title": "Agent 框架 (Round 4)",
+    "repos": [
+      "reworkd/AgentGPT",
+      "yoheinakajima/babyagi",
+      "cheshire-cat-ai/core",
+      "huggingface/smolagents",
+      "Chainlit/chainlit",
+      "smol-ai/developer"
+    ]
+  },
+  {
+    "title": "Agent 研究综述 (Round 4)",
+    "repos": [
+      "XMUDeepLIT/Awesome-Self-Evolving-Agents",
+      "luo-junyu/Awesome-Agent-Papers",
+      "Zijian-Ni/awesome-ai-agents-2026"
+    ]
+  }
 ];

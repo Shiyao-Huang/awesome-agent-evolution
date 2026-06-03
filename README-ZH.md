@@ -37,11 +37,11 @@
 
 | 仓库 | 这轮补了什么 | 为什么重要 |
 |---|---|---|
-| [howdymary/hermes-agent-metaharness](https://github.com/howdymary/hermes-agent-metaharness) | 刷新 raw snapshot、project card、site public report 与分类元数据，统一到 2026-06-03 的公开 GitHub 页面证据。 | 它把 harness evolution 明确限制在 benchmark 外环，而不是把“自进化”偷换成模型权重魔法。 |
-| [Arc-Computer/CL-Bench](https://github.com/Arc-Computer/CL-Bench) | 刷新 raw snapshot、project card、site public report 与分类元数据，统一到 2026-06-03 的公开 GitHub 页面证据。 | 它把 benchmark 从一次性问答拉到有状态连续任务，更接近用户真正关心的 agent 长程可靠性。 |
-| [microsoft/SkillOpt](https://github.com/microsoft/SkillOpt) | 刷新 raw snapshot、project card、site public report 与分类元数据，统一到 2026-06-03 的公开 GitHub 页面证据。 | 它把 skill 当作可训练、可验证、可部署的对象，是“冻结模型但持续进化 agent 行为”的关键样本。 |
-| [sachinsharma9780/memweave](https://github.com/sachinsharma9780/memweave) | 刷新 raw snapshot、project card、site public report 与分类元数据，统一到 2026-06-03 的公开 GitHub 页面证据。 | 它把 memory 从黑盒向量库改成可 diff 的文件层，直接贴合用户要的可追溯、可审计长期记忆。 |
-| [longmans/self-evolve](https://github.com/longmans/self-evolve) | 刷新 raw snapshot、project card、site public report 与分类元数据，统一到 2026-06-03 的公开 GitHub 页面证据。 | 它是 OpenClaw 生态里少数把反馈、记忆、Q 值更新和可安装插件打通到一条可运行闭环的样本。 |
+| [sola-st/repairagent](https://github.com/sola-st/RepairAgent) | 刷新 raw snapshot、project card、site public report 与分类元数据，统一到 2026-06-03 的公开 GitHub 页面证据。 | 它把“会修 bug”的说法压回到明确的补丁生成与测试闭环，而不是只给 coding demo 热度。 |
+| [zhang677/accelopt](https://github.com/zhang677/AccelOpt) | 刷新 raw snapshot、project card、site public report 与分类元数据，统一到 2026-06-03 的公开 GitHub 页面证据。 | 它把“自进化 agent”放到真实硬件优化压力下，比抽象 prompt 试错更接近高价值工程闭环。 |
+| [hwfengcs/dm-code-agent](https://github.com/hwfengcs/DM-Code-Agent) | 刷新 raw snapshot、project card、site public report 与分类元数据，统一到 2026-06-03 的公开 GitHub 页面证据。 | 它提供了用户真正关心的审计与 replay 边界，可用于判断 coding agent 的改进是否可信。 |
+| [rucbm/laser](https://github.com/RUCBM/LaSeR) | 刷新 raw snapshot、project card、site public report 与分类元数据，统一到 2026-06-03 的公开 GitHub 页面证据。 | 它补上了“self-rewarding 到底是不是可运行 recipe”这一块，而不只是 survey 里的概念标签。 |
+| [arthurmgraf/graphmind](https://github.com/arthurmgraf/graphmind) | 刷新 raw snapshot、project card、site public report 与分类元数据，统一到 2026-06-03 的公开 GitHub 页面证据。 | 它把 knowledge graph、agent runtime 和 retrieval self-eval 接到一起，是图式 agent 编排的重要相关样本。 |
 
 ```mermaid
 flowchart LR

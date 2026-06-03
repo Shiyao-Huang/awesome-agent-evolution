@@ -1,10 +1,10 @@
 # GitHub Project Data Analysis
 
-Generated: 2026-06-03T00:26:46.993Z
+Generated: 2026-06-03T06:12:29.922Z
 
 ## One-Sentence Compression
 
-The project corpus has 677 timestamp-indexed raw GitHub captures, 677 classified repositories, 273 site/paper model-card projects, 97 strict evolution-theme repositories, and 203 broad evolution-related repositories.
+The project corpus has 677 timestamp-indexed raw GitHub captures, 677 classified repositories, 278 site/paper model-card projects, 99 strict evolution-theme repositories, and 204 broad evolution-related repositories.
 
 ## Corpus Funnel
 
@@ -12,35 +12,35 @@ The project corpus has 677 timestamp-indexed raw GitHub captures, 677 classified
 |---|---:|---|
 | Raw GitHub captures | 677 | Records in `output/raw-github-timestamp-index.json`; each points to one `raw-github/*.md` capture. |
 | Classified repositories | 677 | Rows in `research/repo-classification.json` with category, theme, stack, and time slice. |
-| Analyzed model-card projects | 273 | Repositories in `site/src/data/projects.ts` that receive public project pages and reports. |
-| Strict evolution-theme repositories | 97 | Classified rows whose `base_theme` is `evolution`. |
-| Broad evolution-related repositories | 203 | Rows matching evolution/self-improvement/reflection/search keywords in repo, description, or evidence fields. |
+| Analyzed model-card projects | 278 | Repositories in `site/src/data/projects.ts` that receive public project pages and reports. |
+| Strict evolution-theme repositories | 99 | Classified rows whose `base_theme` is `evolution`. |
+| Broad evolution-related repositories | 204 | Rows matching evolution/self-improvement/reflection/search keywords in repo, description, or evidence fields. |
 
 ## Raw Collection Categories
 
 | Category | Count |
 |---|---:|
 | 框架/framework | 200 |
-| 评测/evaluation | 136 |
+| 评测/evaluation | 134 |
 | 教程/tutorial | 131 |
-| 工具/tool | 121 |
+| 工具/tool | 122 |
 | 应用/application | 54 |
-| 论文代码/paper-code | 34 |
+| 论文代码/paper-code | 35 |
 | 评测/benchmark | 1 |
 
 ## Raw Collection Themes
 
 | Theme | Count |
 |---|---:|
-| memory | 150 |
-| evaluation | 128 |
+| memory | 149 |
+| evaluation | 124 |
 | skill | 108 |
-| evolution | 97 |
-| framework | 69 |
+| evolution | 99 |
+| framework | 70 |
 | education-list | 35 |
 | research-agent | 32 |
 | prompt-optimization | 26 |
-| coding-agent | 17 |
+| coding-agent | 19 |
 | workflow-automation | 9 |
 | harness | 3 |
 | safety | 2 |
@@ -50,9 +50,9 @@ The project corpus has 677 timestamp-indexed raw GitHub captures, 677 classified
 
 | Time slice | Raw classified repos |
 |---|---:|
-| 2026-05 | 466 |
-| unknown | 106 |
-| 2026-06 | 52 |
+| 2026-05 | 463 |
+| unknown | 104 |
+| 2026-06 | 57 |
 | 2024-Q2 | 7 |
 | 2026-03 | 7 |
 | 2026-04 | 7 |
@@ -79,7 +79,7 @@ This section extends index coverage beyond recent raw-capture timestamps by comb
 |---|---:|
 | Window start month | 2024-07 |
 | Window end month | 2026-06 |
-| Projects with temporal signal inside window | 255 |
+| Projects with temporal signal inside window | 260 |
 | Projects older than window | 18 |
 | Projects with unknown temporal signal | 0 |
 | Local-mirror repositories with 24m git history | 76 / 76 |
@@ -88,7 +88,7 @@ This section extends index coverage beyond recent raw-capture timestamps by comb
 
 | Temporal signal source | Project count |
 |---|---:|
-| site_last_pushed | 194 |
+| site_last_pushed | 199 |
 | local_first_observed | 54 |
 | github_created_at | 25 |
 | github_pushed_at | 0 |
@@ -120,7 +120,7 @@ This section extends index coverage beyond recent raw-capture timestamps by comb
 | 2026-03 | 4 | 7 | 1 |
 | 2026-04 | 4 | 4 | 0 |
 | 2026-05 | 171 | 32 | 2 |
-| 2026-06 | 46 | 0 | 0 |
+| 2026-06 | 51 | 0 | 0 |
 
 | Repo | Latest observed tag | Month |
 |---|---|---|
@@ -185,6 +185,7 @@ Only GitHub API `created_at` is treated as repository creation time. Local mirro
 | unknown | [apify/agent-skills](https://github.com/apify/agent-skills) | Reusable Skills Library for Coding Agents and Automation Workflows | package reusable skill prompts and procedures for coding agents -> map repeated engineering tasks into skill modules -> compose skill units into longer autonomous workflows -> improve reliability and transferability of agent execution behavior | unknown |
 | unknown | [Arc-Computer/CL-Bench](https://github.com/Arc-Computer/CL-Bench) | Stateful Continual-Learning Benchmark for LLM Agents | place agents inside stateful multi-turn workflows -> mutate persistent entities under production-style constraints -> evaluate adaptation and reliability under cross-turn dependencies -> use continual-learning pressure instead of one-shot benchmark snapshots | unknown |
 | unknown | [ArcadeAI/openclaw-arcade-plugin](https://github.com/ArcadeAI/openclaw-arcade-plugin) | OpenClaw Skill Plugin for Arcade Tool Connectivity | bridge OpenClaw runtime calls to Arcade.dev tool endpoints -> register reusable tool skills through plugin contracts -> execute constrained external actions with typed interfaces -> feed tool outcomes back into agent planning loops for iterative skill reuse | unknown |
+| unknown | [arthurmgraf/graphmind](https://github.com/arthurmgraf/graphmind) | Knowledge-Graph Agentic RAG Runtime | receive query -> choose LangGraph or CrewAI engine -> retrieve over hybrid graph layer -> self-evaluate the answer -> retry when score stays below threshold | unknown |
 | unknown | [AutoJunjie/awesome-agent-harness](https://github.com/AutoJunjie/awesome-agent-harness) | Harness Curation and Reading Map | collect harness repositories and papers -> classify by benchmark and runtime concerns -> provide quick browse path for reproducibility and safety trends -> keep ecosystem update cadence visible by commit activity | unknown |
 | unknown | [automl/auto-sklearn](https://github.com/automl/auto-sklearn) | AutoML 框架 | 进化/搜索循环 → 评估器/打分器 | unknown |
 | unknown | [AutoX-AI-Labs/AutoR](https://github.com/AutoX-AI-Labs/AutoR) | Human-Centered Research Harness | human research intent -> staged agent execution -> approval checkpoints -> artifact-backed run directory -> resume/redo/rollback | unknown |
@@ -249,6 +250,7 @@ Only GitHub API `created_at` is treated as repository creation time. Local mirro
 | unknown | [howdymary/hermes-agent-metaharness](https://github.com/howdymary/hermes-agent-metaharness) | Hermes Benchmark Outer-Loop Harness | select candidate -> evaluate on TBLite/TB2 -> parse archives -> compare baseline vs candidate -> update frontier | unknown |
 | unknown | [huggingface/smolagents](https://github.com/huggingface/smolagents) | Agent 框架 | 轻量 Agent → 工具调用 → HuggingFace 集成 | unknown |
 | unknown | [humanitylabs-org/obsidianclaw](https://github.com/humanitylabs-org/obsidianclaw) | OpenClaw Knowledge and Notes Integration Plugin | connect OpenClaw sessions with Obsidian-backed knowledge notes -> store interaction artifacts as structured vault entries -> retrieve linked notes into future planning/context windows -> preserve durable memory across episodic agent runs | unknown |
+| unknown | [hwfengcs/dm-code-agent](https://github.com/hwfengcs/DM-Code-Agent) | Auditable Local-First Code Agent Baseline | plan and replan -> call tools with JSONL trace capture -> enable optional reflexion or critic modules -> run maintenance benchmark harness -> replay and diff the trajectory | unknown |
 | unknown | [hyperspell/hyperspell-openclaw](https://github.com/hyperspell/hyperspell-openclaw) | OpenClaw Memory and Context Enhancement Runtime | capture workspace memory artifacts from OpenClaw sessions -> sync and normalize context into an external memory substrate -> retrieve high-signal notes into follow-up prompts and tool calls -> reinforce long-horizon consistency across evolving agent tasks | unknown |
 | unknown | [icaros-usc/pyribs](https://github.com/icaros-usc/pyribs) | 质量多样性优化 | 进化/搜索循环 → 评估器/打分器 | unknown |
 | unknown | [iflytek/skillhub](https://github.com/iflytek/skillhub) | Agent Skill Registry and Open Runtime Platform | structured skill package definition -> runtime orchestration and multi-agent routing -> deployment and plugin integration -> reusable skill asset lifecycle management | unknown |
@@ -348,6 +350,7 @@ Only GitHub API `created_at` is treated as repository creation time. Local mirro
 | unknown | [redis/agent-memory-server](https://github.com/redis/agent-memory-server) | Agent Memory Runtime and Context Service | agent event and interaction signals -> Redis-backed memory storage and retrieval -> MCP server exposes memory operations to agents -> memory context reused in downstream task loops | unknown |
 | unknown | [reworkd/AgentGPT](https://github.com/reworkd/AgentGPT) | 自主 Agent 平台 | 自主循环 → 任务分解 → 执行 → 学习 | unknown |
 | unknown | [rohitg00/awesome-openclaw](https://github.com/rohitg00/awesome-openclaw) | OpenClaw Plugin and Agent Skills Resource Index | aggregate plugin, memory, observability, deployment, and benchmark resources around OpenClaw workflows -> structure links by operational problem class -> give installable and reusable pathways for skills and channels -> increase reproducibility of agent capability composition | unknown |
+| unknown | [rucbm/laser](https://github.com/RUCBM/LaSeR) | Last-Token Self-Rewarding Reinforcement Learning Recipe | optimize RLVR objective -> learn last-token self-reward signal -> reuse auxiliary reward during training and testing -> improve reasoning and reward calibration together | unknown |
 | unknown | [RyanAlberts/best-of-Agent-Harnesses](https://github.com/RyanAlberts/best-of-Agent-Harnesses) | Ranked Agent Harness Landscape Index | collect harness projects -> score and rank ecosystem coverage -> expose category tags and update cadence -> provide comparative entrypoint for reliability-oriented harness selection | unknown |
 | unknown | [sachinsharma9780/memweave](https://github.com/sachinsharma9780/memweave) | Persistent Agent Memory Substrate | agent writes memory markdown -> sqlite vector+fts index build -> hybrid retrieval and reranking -> persistent memory feedback for next agent turns | unknown |
 | unknown | [SamurAIGPT/awesome-openclaw](https://github.com/SamurAIGPT/awesome-openclaw) | OpenClaw Ecosystem Curation and Skill Resource Index | curate OpenClaw tools, skills, tutorials, and ecosystem modules into one navigable index -> group resources by workflow role and operating context -> shorten adoption path for newcomers and operators -> turn fragmented community assets into reusable skill discovery infrastructure | unknown |
@@ -360,6 +363,7 @@ Only GitHub API `created_at` is treated as repository creation time. Local mirro
 | unknown | [skillmatic-ai/awesome-agent-skills](https://github.com/skillmatic-ai/awesome-agent-skills) | Cross-Framework Agent Skills Registry | curate reusable skills in one index -> map installation paths for multiple agent runtimes -> standardize skill packaging and integration hints -> reduce onboarding and reproducibility cost for skill reuse | unknown |
 | unknown | [smol-ai/developer](https://github.com/smol-ai/developer) | AI 开发助手 | 最小 Agent → 代码生成 → 迭代 | unknown |
 | unknown | [soimy/openclaw-channel-dingtalk](https://github.com/soimy/openclaw-channel-dingtalk) | Agent Channel Plugin for Enterprise Messaging Runtime | wrap enterprise messaging APIs as OpenClaw channel adapters -> route conversations and action callbacks through typed plugin interfaces -> persist channel events as reusable context for follow-up workflows -> turn communication endpoints into reusable agent operation skills | unknown |
+| unknown | [sola-st/repairagent](https://github.com/sola-st/RepairAgent) | Autonomous Java Bug Repair Agent | read failing test -> localize bug -> analyze code -> generate patch -> run tests -> iterate until a correct fix survives validation | unknown |
 | unknown | [sourcegraph/CodeScaleBench](https://github.com/sourcegraph/CodeScaleBench) | Enterprise-Scale Coding Agent Benchmark Harness | enterprise codebase tasks -> Harbor/Claude harness with baseline vs MCP retrieval configs -> dual-verifier scoring and cost tracking -> auditable snapshots for benchmark governance | unknown |
 | unknown | [SponsioLabs/Sponsio](https://github.com/SponsioLabs/Sponsio) | Workflow Automation and Multi-Agent Control Infrastructure | coordinate multi-agent workflow execution with explicit orchestration contracts -> maintain shared task state and control checkpoints across agents -> expose repeatable automation patterns for teams and pipelines -> improve end-to-end delivery reliability under autonomous execution | unknown |
 | unknown | [stanford-iris-lab/meta-harness](https://github.com/stanford-iris-lab/meta-harness) | Meta-Harness Framework and Reference Experiments | define domain spec -> search harness candidates -> run reference experiments -> compare outcomes -> retain stronger harness | unknown |
@@ -403,6 +407,7 @@ Only GitHub API `created_at` is treated as repository creation time. Local mirro
 | unknown | [YunjueTech/Yunjue-Agent](https://github.com/YunjueTech/Yunjue-Agent) | In-Situ Self-Evolving Agent System | open-ended task stream -> tool evolution -> reusable capabilities -> trace/reproduction audit | unknown |
 | unknown | [ZeroLu/awesome-openclaw](https://github.com/ZeroLu/awesome-openclaw) | OpenClaw Community Landscape and Resources | aggregate OpenClaw links and toolkits -> map onboarding resources and examples -> curate ecosystem entry points for rapid adoption | unknown |
 | unknown | [Zesearch/self-improvement-llm](https://github.com/Zesearch/self-improvement-llm) | LLM 自改进综述 | 文献综述 | unknown |
+| unknown | [zhang677/accelopt](https://github.com/zhang677/AccelOpt) | Self-Improving Accelerator Kernel Optimization Agent | generate candidate kernel -> consult optimization memory -> profile on NKIBench or FlashInfer-Bench -> compare slow-fast kernel pairs -> keep stronger optimization traces | unknown |
 | unknown | [zhangfengcdt/memoir](https://github.com/zhangfengcdt/memoir) | Git-like Agent Auto-Memory | agent activity -> hierarchical memory paths -> Git-like commits/branches -> recoverable continuity | unknown |
 | unknown | [Zijian-Ni/awesome-ai-agents-2026](https://github.com/Zijian-Ni/awesome-ai-agents-2026) | Agent 研究综述 | 2026 Agent 追踪 → 实时更新 | unknown |
 | unknown | [zikuicai/aegisllm](https://github.com/zikuicai/aegisllm) | Self-Reflective Multi-Agent Defense System | coordinate orchestrator-deflector-responder-evaluator roles -> evaluate adversarial and unlearning threats -> optimize prompts with DSPy loops -> improve runtime defense quality without model retraining | unknown |
@@ -418,13 +423,13 @@ Formula: `current_value = 0.50*time + 0.20*mechanism + 0.15*evidence + 0.10*adop
 
 | Rank | Repo | Score | Time | Mechanism | Evidence | Adoption | Created | Activity | Caveat |
 |---:|---|---:|---:|---:|---:|---:|---|---|---|
-| 1 | [modelscope/AgentEvolver](https://github.com/modelscope/AgentEvolver) | 83.16 | 75.53 | 100 | 100 | 59.98 | 2025-11 | 2026-04 | - |
-| 2 | [ZJU-LLM-Safety/DARWIN](https://github.com/ZJU-LLM-Safety/DARWIN) | 76.74 | 93.41 | 75 | 62 | 30.83 | 2026-04 | 2026-05 | - |
-| 3 | [OPPO-Mente-Lab/LLM-Self-Judge](https://github.com/OPPO-Mente-Lab/LLM-Self-Judge) | 75.7 | 86.25 | 85 | 62 | 31.21 | 2026-03 | 2026-03 | - |
-| 4 | [algorithmicsuperintelligence/openevolve](https://github.com/algorithmicsuperintelligence/openevolve) | 70.91 | 56.97 | 79 | 100 | 72.25 | 2025-05 | 2026-03 | - |
-| 5 | [JarvisPei/SCOPE](https://github.com/JarvisPei/SCOPE) | 68.12 | 78.35 | 67 | 62 | 35.93 | 2025-12 | 2026-03 | - |
-| 6 | [inter-co/science-codeevolve](https://github.com/inter-co/science-codeevolve) | 65.58 | 73.28 | 59 | 68 | 37.9 | 2025-10 | 2026-04 | - |
-| 7 | [JARVIS-Xs/SE-Agent](https://github.com/JARVIS-Xs/SE-Agent) | 63.4 | 47.93 | 77 | 100 | 46.32 | 2025-07 | 2025-09 | - |
+| 1 | [modelscope/AgentEvolver](https://github.com/modelscope/AgentEvolver) | 83.14 | 75.49 | 100 | 100 | 59.98 | 2025-11 | 2026-04 | - |
+| 2 | [ZJU-LLM-Safety/DARWIN](https://github.com/ZJU-LLM-Safety/DARWIN) | 76.72 | 93.37 | 75 | 62 | 30.83 | 2026-04 | 2026-05 | - |
+| 3 | [OPPO-Mente-Lab/LLM-Self-Judge](https://github.com/OPPO-Mente-Lab/LLM-Self-Judge) | 75.67 | 86.21 | 85 | 62 | 31.21 | 2026-03 | 2026-03 | - |
+| 4 | [algorithmicsuperintelligence/openevolve](https://github.com/algorithmicsuperintelligence/openevolve) | 70.89 | 56.92 | 79 | 100 | 72.25 | 2025-05 | 2026-03 | - |
+| 5 | [JarvisPei/SCOPE](https://github.com/JarvisPei/SCOPE) | 68.1 | 78.3 | 67 | 62 | 35.93 | 2025-12 | 2026-03 | - |
+| 6 | [inter-co/science-codeevolve](https://github.com/inter-co/science-codeevolve) | 65.56 | 73.24 | 59 | 68 | 37.9 | 2025-10 | 2026-04 | - |
+| 7 | [JARVIS-Xs/SE-Agent](https://github.com/JARVIS-Xs/SE-Agent) | 63.38 | 47.89 | 77 | 100 | 46.32 | 2025-07 | 2025-09 | - |
 | 8 | [EvoMap/evolver](https://github.com/EvoMap/evolver) | 61.77 | 45 | 93 | 62 | 73.7 | unknown | 2026-05 | created_at unavailable; time score capped and based on activity/observation only |
 | 9 | [microsoft/agent-lightning](https://github.com/microsoft/agent-lightning) | 61.45 | 45 | 95 | 56 | 80.48 | unknown | 2026-05 | created_at unavailable; time score capped and based on activity/observation only |
 | 10 | [NousResearch/hermes-agent-self-evolution](https://github.com/NousResearch/hermes-agent-self-evolution) | 60.83 | 45 | 100 | 62 | 67.76 | unknown | 2026-05 | created_at unavailable; time score capped and based on activity/observation only |
@@ -434,30 +439,30 @@ Formula: `current_value = 0.50*time + 0.20*mechanism + 0.15*evidence + 0.10*adop
 | 14 | [longmans/self-evolve](https://github.com/longmans/self-evolve) | 58.67 | 45 | 100 | 56 | 37.73 | unknown | 2026-06 | created_at unavailable; time score capped and based on activity/observation only |
 | 15 | [stanford-iris-lab/meta-harness](https://github.com/stanford-iris-lab/meta-harness) | 57.96 | 45 | 87 | 56 | 56.63 | unknown | 2026-05 | created_at unavailable; time score capped and based on activity/observation only |
 | 16 | [microsoft/SkillOpt](https://github.com/microsoft/SkillOpt) | 57.68 | 45 | 85 | 56 | 57.76 | unknown | 2026-05 | created_at unavailable; time score capped and based on activity/observation only |
-| 17 | [zikuicai/aegisllm](https://github.com/zikuicai/aegisllm) | 57.23 | 45 | 97 | 56 | 29.32 | unknown | 2026-05 | created_at unavailable; time score capped and based on activity/observation only |
-| 18 | [pegasi-ai/reins](https://github.com/pegasi-ai/reins) | 57.06 | 45 | 95 | 56 | 36.64 | unknown | 2026-06 | created_at unavailable; time score capped and based on activity/observation only |
-| 19 | [EvoAgentX/EvoAgentX](https://github.com/EvoAgentX/EvoAgentX) | 56.92 | 29.05 | 97 | 86 | 56.98 | unknown | 2026-01 | created_at unavailable; time score capped and based on activity/observation only |
-| 20 | [ai-agents-2030/darwin-mobile-agent](https://github.com/ai-agents-2030/darwin-mobile-agent) | 56.88 | 45 | 100 | 56 | 19.78 | unknown | 2026-05 | created_at unavailable; time score capped and based on activity/observation only |
-| 21 | [gofenix/nex-agent](https://github.com/gofenix/nex-agent) | 56.84 | 45 | 95 | 56 | 34.43 | unknown | 2026-05 | created_at unavailable; time score capped and based on activity/observation only |
-| 22 | [Da1yuqin/SEAD](https://github.com/Da1yuqin/SEAD) | 56.81 | 45 | 97 | 56 | 25.11 | unknown | 2026-05 | created_at unavailable; time score capped and based on activity/observation only |
-| 23 | [InfiAgent/InfiAgent](https://github.com/InfiAgent/InfiAgent) | 56.78 | 45 | 87 | 56 | 62.27 | unknown | 2026-05 | created_at unavailable; time score capped and based on activity/observation only |
-| 24 | [MemTensor/skills-vote](https://github.com/MemTensor/skills-vote) | 56.51 | 45 | 85 | 56 | 46.11 | unknown | 2026-05 | created_at unavailable; time score capped and based on activity/observation only |
-| 25 | [aiming-lab/AutoHarness](https://github.com/aiming-lab/AutoHarness) | 56.49 | 45 | 87 | 56 | 46.93 | unknown | 2026-05 | created_at unavailable; time score capped and based on activity/observation only |
-| 26 | [GCWing/BitFun](https://github.com/GCWing/BitFun) | 56.21 | 45 | 77 | 62 | 55.13 | unknown | 2026-06 | created_at unavailable; time score capped and based on activity/observation only |
-| 27 | [BerriAI/self-improving-agent](https://github.com/BerriAI/self-improving-agent) | 55.78 | 45 | 97 | 56 | 14.78 | unknown | 2026-05 | created_at unavailable; time score capped and based on activity/observation only |
-| 28 | [MaximeRobeyns/self_improving_coding_agent](https://github.com/MaximeRobeyns/self_improving_coding_agent) | 55.32 | 45 | 87 | 56 | 47.7 | unknown | 2026-05 | created_at unavailable; time score capped and based on activity/observation only |
-| 29 | [EvoMap/awesome-agent-evolution](https://github.com/EvoMap/awesome-agent-evolution) | 55.32 | 45 | 87 | 56 | 40.21 | unknown | 2026-05 | created_at unavailable; time score capped and based on activity/observation only |
-| 30 | [YunjueTech/Yunjue-Agent](https://github.com/YunjueTech/Yunjue-Agent) | 54.13 | 34.67 | 97 | 56 | 49.95 | unknown | 2026-02 | created_at unavailable; time score capped and based on activity/observation only |
-| 31 | [RangeKing/self-evolving-agent](https://github.com/RangeKing/self-evolving-agent) | 53.8 | 45 | 85 | 56 | 18.99 | unknown | 2026-05 | created_at unavailable; time score capped and based on activity/observation only |
-| 32 | [stanfordnlp/dspy](https://github.com/stanfordnlp/dspy) | 53.15 | 29.17 | 59 | 100 | 86.2 | 2023-01 | 2026-05 | - |
-| 33 | [openai/swarm](https://github.com/openai/swarm) | 52.78 | 45 | 57 | 56 | 82.27 | unknown | 2026-05 | created_at unavailable; time score capped and based on activity/observation only |
-| 34 | [hyperspell/hyperspell-openclaw](https://github.com/hyperspell/hyperspell-openclaw) | 52.09 | 45 | 67 | 56 | 42.92 | unknown | 2026-06 | created_at unavailable; time score capped and based on activity/observation only |
-| 35 | [wazionapps/nexo](https://github.com/wazionapps/nexo) | 51.69 | 45 | 71 | 56 | 25.86 | unknown | 2026-05 | created_at unavailable; time score capped and based on activity/observation only |
-| 36 | [pinchbench/skill](https://github.com/pinchbench/skill) | 51.65 | 45 | 50 | 62 | 58.48 | unknown | 2026-05 | created_at unavailable; time score capped and based on activity/observation only |
-| 37 | [EverMind-AI/EverOS](https://github.com/EverMind-AI/EverOS) | 51.22 | 29.05 | 71 | 86 | 56.98 | unknown | 2026-01 | created_at unavailable; time score capped and based on activity/observation only |
-| 38 | [Orchestra-Research/AI-research-SKILLs](https://github.com/Orchestra-Research/AI-research-SKILLs) | 50.8 | 45 | 42 | 56 | 75 | unknown | 2026-05 | created_at unavailable; time score capped and based on activity/observation only |
-| 39 | [SuperagenticAI/metaharness](https://github.com/SuperagenticAI/metaharness) | 50.52 | 45 | 59 | 56 | 38.22 | unknown | 2026-05 | created_at unavailable; time score capped and based on activity/observation only |
-| 40 | [Team-Commonly/commonly](https://github.com/Team-Commonly/commonly) | 50.19 | 45 | 52 | 56 | 53.86 | unknown | 2026-06 | created_at unavailable; time score capped and based on activity/observation only |
+| 17 | [zhang677/accelopt](https://github.com/zhang677/AccelOpt) | 57.66 | 45 | 100 | 56 | 32.59 | unknown | 2026-06 | created_at unavailable; time score capped and based on activity/observation only |
+| 18 | [zikuicai/aegisllm](https://github.com/zikuicai/aegisllm) | 57.23 | 45 | 97 | 56 | 29.32 | unknown | 2026-05 | created_at unavailable; time score capped and based on activity/observation only |
+| 19 | [pegasi-ai/reins](https://github.com/pegasi-ai/reins) | 57.06 | 45 | 95 | 56 | 36.64 | unknown | 2026-06 | created_at unavailable; time score capped and based on activity/observation only |
+| 20 | [EvoAgentX/EvoAgentX](https://github.com/EvoAgentX/EvoAgentX) | 56.91 | 29.02 | 97 | 86 | 56.98 | unknown | 2026-01 | created_at unavailable; time score capped and based on activity/observation only |
+| 21 | [ai-agents-2030/darwin-mobile-agent](https://github.com/ai-agents-2030/darwin-mobile-agent) | 56.88 | 45 | 100 | 56 | 19.78 | unknown | 2026-05 | created_at unavailable; time score capped and based on activity/observation only |
+| 22 | [gofenix/nex-agent](https://github.com/gofenix/nex-agent) | 56.84 | 45 | 95 | 56 | 34.43 | unknown | 2026-05 | created_at unavailable; time score capped and based on activity/observation only |
+| 23 | [Da1yuqin/SEAD](https://github.com/Da1yuqin/SEAD) | 56.81 | 45 | 97 | 56 | 25.11 | unknown | 2026-05 | created_at unavailable; time score capped and based on activity/observation only |
+| 24 | [InfiAgent/InfiAgent](https://github.com/InfiAgent/InfiAgent) | 56.78 | 45 | 87 | 56 | 62.27 | unknown | 2026-05 | created_at unavailable; time score capped and based on activity/observation only |
+| 25 | [MemTensor/skills-vote](https://github.com/MemTensor/skills-vote) | 56.51 | 45 | 85 | 56 | 46.11 | unknown | 2026-05 | created_at unavailable; time score capped and based on activity/observation only |
+| 26 | [aiming-lab/AutoHarness](https://github.com/aiming-lab/AutoHarness) | 56.49 | 45 | 87 | 56 | 46.93 | unknown | 2026-05 | created_at unavailable; time score capped and based on activity/observation only |
+| 27 | [GCWing/BitFun](https://github.com/GCWing/BitFun) | 56.21 | 45 | 77 | 62 | 55.13 | unknown | 2026-06 | created_at unavailable; time score capped and based on activity/observation only |
+| 28 | [BerriAI/self-improving-agent](https://github.com/BerriAI/self-improving-agent) | 55.78 | 45 | 97 | 56 | 14.78 | unknown | 2026-05 | created_at unavailable; time score capped and based on activity/observation only |
+| 29 | [MaximeRobeyns/self_improving_coding_agent](https://github.com/MaximeRobeyns/self_improving_coding_agent) | 55.32 | 45 | 87 | 56 | 47.7 | unknown | 2026-05 | created_at unavailable; time score capped and based on activity/observation only |
+| 30 | [EvoMap/awesome-agent-evolution](https://github.com/EvoMap/awesome-agent-evolution) | 55.32 | 45 | 87 | 56 | 40.21 | unknown | 2026-05 | created_at unavailable; time score capped and based on activity/observation only |
+| 31 | [YunjueTech/Yunjue-Agent](https://github.com/YunjueTech/Yunjue-Agent) | 54.11 | 34.63 | 97 | 56 | 49.95 | unknown | 2026-02 | created_at unavailable; time score capped and based on activity/observation only |
+| 32 | [RangeKing/self-evolving-agent](https://github.com/RangeKing/self-evolving-agent) | 53.8 | 45 | 85 | 56 | 18.99 | unknown | 2026-05 | created_at unavailable; time score capped and based on activity/observation only |
+| 33 | [stanfordnlp/dspy](https://github.com/stanfordnlp/dspy) | 53.14 | 29.15 | 59 | 100 | 86.2 | 2023-01 | 2026-05 | - |
+| 34 | [openai/swarm](https://github.com/openai/swarm) | 52.78 | 45 | 57 | 56 | 82.27 | unknown | 2026-05 | created_at unavailable; time score capped and based on activity/observation only |
+| 35 | [hyperspell/hyperspell-openclaw](https://github.com/hyperspell/hyperspell-openclaw) | 52.09 | 45 | 67 | 56 | 42.92 | unknown | 2026-06 | created_at unavailable; time score capped and based on activity/observation only |
+| 36 | [wazionapps/nexo](https://github.com/wazionapps/nexo) | 51.69 | 45 | 71 | 56 | 25.86 | unknown | 2026-05 | created_at unavailable; time score capped and based on activity/observation only |
+| 37 | [pinchbench/skill](https://github.com/pinchbench/skill) | 51.65 | 45 | 50 | 62 | 58.48 | unknown | 2026-05 | created_at unavailable; time score capped and based on activity/observation only |
+| 38 | [EverMind-AI/EverOS](https://github.com/EverMind-AI/EverOS) | 51.21 | 29.02 | 71 | 86 | 56.98 | unknown | 2026-01 | created_at unavailable; time score capped and based on activity/observation only |
+| 39 | [Orchestra-Research/AI-research-SKILLs](https://github.com/Orchestra-Research/AI-research-SKILLs) | 50.8 | 45 | 42 | 56 | 75 | unknown | 2026-05 | created_at unavailable; time score capped and based on activity/observation only |
+| 40 | [SuperagenticAI/metaharness](https://github.com/SuperagenticAI/metaharness) | 50.52 | 45 | 59 | 56 | 38.22 | unknown | 2026-05 | created_at unavailable; time score capped and based on activity/observation only |
 
 ## Git Evidence Join
 
@@ -467,9 +472,9 @@ This table joins each public model-card project back to raw capture, classificat
 |---|---:|---|
 | GitHub API/cache metadata | 25 | Projects with verified `github_api` metadata in `analysis/github-created-at-cache.json`. |
 | Local git mirror evidence | 76 | Projects whose `localPath` points to a local git clone and can report first/last commit, count, branch, and HEAD. |
-| Raw timestamp capture | 221 | Public projects that also appear in `output/raw-github-timestamp-index.json`. |
-| Classification row | 221 | Public projects that also appear in `research/repo-classification.json`. |
-| Public model-card report | 273 | Public projects with a generated report under `site/public/reports/projects/`. |
+| Raw timestamp capture | 226 | Public projects that also appear in `output/raw-github-timestamp-index.json`. |
+| Classification row | 226 | Public projects that also appear in `research/repo-classification.json`. |
+| Public model-card report | 278 | Public projects with a generated report under `site/public/reports/projects/`. |
 
 | Repo | Raw | Classification | Report | Git source | Created | Pushed | Stars/Forks | Local git mirror |
 |---|---|---|---|---|---|---|---:|---|
@@ -647,6 +652,7 @@ This table joins each public model-card project back to raw capture, classificat
 | [yoloshii/ClawMem](https://github.com/yoloshii/ClawMem) | [raw](../raw-github/yoloshii_clawmem.md) | memory | [report](../projects/368-clawmem-on-device-memory-layer.md) | github_api_fetch_error | unknown | 2026-06 | 179/26 | - |
 | [alibaizhanov/mengram](https://github.com/alibaizhanov/mengram) | [raw](../raw-github/alibaizhanov_mengram.md) | memory | [report](../projects/381-mengram-human-like-agent-memory.md) | github_api_403 | unknown | 2026-06 | 172/27 | - |
 | [sd0xdev/sd0x-dev-flow](https://github.com/sd0xdev/sd0x-dev-flow) | [raw](../raw-github/sd0xdev_sd0x-dev-flow.md) | skill | [report](../projects/242-sd0x-dev-flow-claude-code-harness-safety-gates.md) | github_api_fetch_error | unknown | 2026-05 | 157/21 | - |
+| [hwfengcs/dm-code-agent](https://github.com/hwfengcs/DM-Code-Agent) | [raw](../raw-github/hwfengcs_dm-code-agent.md) | coding-agent | [report](../projects/395-dm-code-agent-auditable-code-baseline.md) | github_api_fetch_error | unknown | 2026-06 | 138/12 | - |
 | [DeepAuto-AI/automl-agent](https://github.com/DeepAuto-AI/automl-agent) | - | missing | [report](../projects/05-automl-agent-multi-agent.md) | github_api | 2025-05 | 2025-07 | 136/21 | 1 commits @ 9e0d842 (2025-07 -> 2025-07) |
 | [im4codes/imcodes](https://github.com/im4codes/imcodes) | [raw](../raw-github/im4codes_imcodes.md) | memory | [report](../projects/382-imcodes-shared-agent-context-layer.md) | github_api_403 | unknown | 2026-06 | 131/11 | - |
 | [EvoMap/awesome-agent-evolution](https://github.com/EvoMap/awesome-agent-evolution) | [raw](../raw-github/evomap_awesome-agent-evolution.md) | evolution | [report](../projects/394-evomap-awesome-agent-evolution.md) | github_api_fetch_error | unknown | 2026-05 | 130/17 | - |
@@ -659,6 +665,7 @@ This table joins each public model-card project back to raw capture, classificat
 | [SuperagenticAI/metaharness](https://github.com/SuperagenticAI/metaharness) | [raw](../raw-github/superagenticai_metaharness.md) | evaluation | [report](../projects/244-metaharness-benchmark-driven-harness-evolution.md) | github_api_fetch_error | unknown | 2026-05 | 102/11 | - |
 | [microsoft/CoML](https://github.com/microsoft/CoML) | - | missing | [report](../projects/06-coml-mlcopilot.md) | github_api | 2023-04 | 2024-10 | 100/16 | 1 commits @ 46f7452 (2024-10 -> 2024-10) |
 | [pureples/pureples](https://github.com/pureples/pureples) | - | missing | [report](../projects/42-gp-llm-code-evolution.md) | github_api_403 | unknown | 2025-01 | 100/20 | - |
+| [sola-st/repairagent](https://github.com/sola-st/RepairAgent) | [raw](../raw-github/sola-st_repairagent.md) | coding-agent | [report](../projects/393-repairagent-java-autonomous-bug-repair.md) | github_api_fetch_error | unknown | 2026-06 | 99/32 | - |
 | [agentevals-dev/agentevals](https://github.com/agentevals-dev/agentevals) | [raw](../raw-github/agentevals-dev_agentevals.md) | evaluation | [report](../projects/386-agentevals-dev-benchmark-framework.md) | github_api_fetch_error | unknown | 2026-06 | 98/6 | - |
 | [inter-co/science-codeevolve](https://github.com/inter-co/science-codeevolve) | - | missing | [report](../projects/inter_co__science_codeevolve.md) | github_api | 2025-10 | 2026-04 | 98/14 | 1 commits @ c077959 (2026-04 -> 2026-04) |
 | [block/agent-skills](https://github.com/block/agent-skills) | [raw](../raw-github/block_agent-skills.md) | skill | [report](../projects/326-block-agent-skills-enterprise-playbook.md) | github_api_fetch_error | unknown | 2026-05 | 96/25 | - |
@@ -678,6 +685,7 @@ This table joins each public model-card project back to raw capture, classificat
 | [knowall-ai/mcp-neo4j-agent-memory](https://github.com/knowall-ai/mcp-neo4j-agent-memory) | [raw](../raw-github/knowall-ai_mcp-neo4j-agent-memory.md) | memory | [report](../projects/338-mcp-neo4j-agent-memory-server.md) | github_api_fetch_error | unknown | 2026-05 | 68/15 | - |
 | [gofenix/nex-agent](https://github.com/gofenix/nex-agent) | [raw](../raw-github/gofenix_nex-agent.md) | evolution | [report](../projects/230-nex-agent-elixir-otp-self-evolving-agent.md) | github_api_fetch_error | unknown | 2026-05 | 64/5 | - |
 | [nomic-ai/aec-bench](https://github.com/nomic-ai/aec-bench) | [raw](../raw-github/nomic-ai_aec-bench.md) | evaluation | [report](../projects/328-aec-bench-agentic-context-benchmark.md) | github_api_fetch_error | unknown | 2026-05 | 54/3 | - |
+| [zhang677/accelopt](https://github.com/zhang677/AccelOpt) | [raw](../raw-github/zhang677_accelopt.md) | evolution | [report](../projects/394-accelopt-self-improving-kernel-optimizer.md) | github_api_fetch_error | unknown | 2026-06 | 51/7 | - |
 | [alfa-group/tutorial_gp_llm](https://github.com/alfa-group/tutorial_gp_llm) | - | missing | [report](../projects/35-tutorial-gp-llm.md) | github_api_403 | unknown | 2024-01 | 50/10 | 1 commits @ e3b3c52 (2024-08 -> 2024-08) |
 | [aiming-lab/ClawArena](https://github.com/aiming-lab/ClawArena) | [raw](../raw-github/aiming-lab_clawarena.md) | evaluation | [report](../projects/340-clawarena-computer-use-benchmark.md) | github_api_fetch_error | unknown | 2026-05 | 47/0 | - |
 | [vectorize-io/agent-memory-benchmark](https://github.com/vectorize-io/agent-memory-benchmark) | [raw](../raw-github/vectorize-io_agent-memory-benchmark.md) | memory | [report](../projects/77-agent-memory-benchmark.md) | github_api_fetch_error | unknown | 2026-05 | 46/17 | - |
@@ -689,6 +697,7 @@ This table joins each public model-card project back to raw capture, classificat
 | [sachinsharma9780/memweave](https://github.com/sachinsharma9780/memweave) | [raw](../raw-github/sachinsharma9780_memweave.md) | memory | [report](../projects/288-memweave-markdown-agent-memory.md) | github_api_fetch_error | unknown | 2026-05 | 39/2 | - |
 | [Corbell-AI/evalmonkey](https://github.com/Corbell-AI/evalmonkey) | [raw](../raw-github/corbell-ai_evalmonkey.md) | evaluation | [report](../projects/327-evalmonkey-agent-evaluation-harness.md) | github_api_fetch_error | unknown | 2026-05 | 36/4 | - |
 | [openclaw/clownfish](https://github.com/openclaw/clownfish) | [raw](../raw-github/openclaw_clownfish.md) | evolution | [report](../projects/305-openclaw-clownfish-maintainer-harness.md) | github_api_fetch_error | unknown | 2026-05 | 36/11 | - |
+| [rucbm/laser](https://github.com/RUCBM/LaSeR) | [raw](../raw-github/rucbm_laser.md) | evolution | [report](../projects/396-laser-last-token-self-rewarding-rl.md) | github_api_fetch_error | unknown | 2026-06 | 36/2 | - |
 | [YuanchenBei/Mem-Gallery](https://github.com/YuanchenBei/Mem-Gallery) | [raw](../raw-github/yuanchenbei_mem-gallery.md) | memory | [report](../projects/303-mem-gallery-memory-benchmark.md) | github_api_fetch_error | unknown | 2026-05 | 36/2 | - |
 | [zikuicai/aegisllm](https://github.com/zikuicai/aegisllm) | [raw](../raw-github/zikuicai_aegisllm.md) | evolution | [report](../projects/335-aegisllm-self-reflective-defense-agents.md) | github_api_fetch_error | unknown | 2026-05 | 34/4 | - |
 | [OpenBMB/ClawXMemory](https://github.com/OpenBMB/ClawXMemory) | [raw](../raw-github/openbmb_clawxmemory.md) | memory | [report](../projects/257-clawxmemory-openclaw-long-term-memory-module.md) | github_api_fetch_error | unknown | 2026-05 | 33/8 | - |
@@ -740,6 +749,7 @@ This table joins each public model-card project back to raw capture, classificat
 | [Kenotic-Labs/ATANT](https://github.com/Kenotic-Labs/ATANT) | [raw](../raw-github/kenotic-labs_atant.md) | evaluation | [report](../projects/212-atant-agent-continuity-eval.md) | github_api_fetch_error | unknown | 2026-05 | 3/0 | - |
 | [plaited/agent-eval-harness](https://github.com/plaited/agent-eval-harness) | [raw](../raw-github/plaited_agent-eval-harness.md) | evaluation | [report](../projects/390-plaited-agent-eval-harness.md) | github_api_fetch_error | unknown | 2026-06 | 3/1 | - |
 | [sevenschulte/agentic-harness](https://github.com/sevenschulte/agentic-harness) | [raw](../raw-github/sevenschulte_agentic-harness.md) | workflow-automation | [report](../projects/323-agentic-harness-python-workflow-test-harness.md) | github_api_fetch_error | unknown | 2026-05 | 2/0 | - |
+| [arthurmgraf/graphmind](https://github.com/arthurmgraf/graphmind) | [raw](../raw-github/arthurmgraf_graphmind.md) | framework | [report](../projects/397-graphmind-knowledge-agent-rag-runtime.md) | github_api_fetch_error | unknown | 2026-06 | 1/0 | - |
 | [MCKRUZ/openclaw-langfuse](https://github.com/MCKRUZ/openclaw-langfuse) | [raw](../raw-github/mckruz_openclaw-langfuse.md) | evaluation | [report](../projects/356-openclaw-langfuse-observability-plugin.md) | github_api_fetch_error | unknown | 2026-06 | 1/0 | - |
 | [Modelcode-ai/mcode-benchmark](https://github.com/Modelcode-ai/mcode-benchmark) | [raw](../raw-github/modelcode-ai_mcode-benchmark.md) | evaluation | [report](../projects/290-repomod-bench-repo-translation-eval.md) | github_api_fetch_error | unknown | 2026-05 | 1/0 | - |
 | [razroo/state-trace](https://github.com/razroo/state-trace) | [raw](../raw-github/razroo_state-trace.md) | memory | [report](../projects/219-state-trace-agent-memory-engine.md) | github_api_fetch_error | unknown | 2026-05 | 1/0 | - |
@@ -779,7 +789,7 @@ This table joins each public model-card project back to raw capture, classificat
 
 ## Writing Implications
 
-- The paper should describe a funnel, not a flat list: raw captures are the discovery layer, classified rows are the analysis layer, and the 273 model-card projects are the teaching/review layer.
+- The paper should describe a funnel, not a flat list: raw captures are the discovery layer, classified rows are the analysis layer, and the 278 model-card projects are the teaching/review layer.
 - The strict evolution subset should drive the conceptual argument; the broader subset explains adjacent attention from memory, evaluation, coding agents, prompt optimization, and framework infrastructure.
 - The timeline must distinguish repository creation time from latest activity time. Raw `time_slice` is an activity/content timestamp; analyzed project `created_at` comes from GitHub API where available.
 - The current-value ranking uses 50% time weight. A 2023 project can still be historically important, but it should not rank first for current release attention unless it also has exceptional recent evidence and mechanism value.

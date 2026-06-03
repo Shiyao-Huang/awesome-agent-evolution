@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-03T07:52:50+08:00",
+  "generated_at": "2026-06-03T13:55:19+08:00",
   "rows": [
     {
       "repo": "01-ai/langcrew",
@@ -953,13 +953,13 @@
       "prior_category": "-",
       "prior_unclassified": "true",
       "final_category": "框架/framework",
-      "function_tag": "framework-runtime",
-      "base_theme": "evaluation",
-      "stack": "Markdown",
-      "time_slice": "unknown",
-      "content_timestamp": "unknown",
-      "evidence": "framework/runtime/orchestration signal",
-      "description": "Autonomous Knowledge Agent Platform - Agentic RAG with Knowledge Graphs, hybrid retrieval, LangGraph agents, and MCP server"
+      "function_tag": "kg-agent-runtime",
+      "base_theme": "framework",
+      "stack": "Python/LangGraph/CrewAI/Knowledge Graph RAG",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-03",
+      "evidence": "web-observed GitHub page showed 1 star, 0 forks, 15 commits, MIT license, dual LangGraph and CrewAI orchestration, MCP and FastAPI entry points, and a self-evaluating retrieval loop over a shared knowledge-graph substrate.",
+      "description": "GraphMind is an agentic RAG runtime that combines knowledge graphs, dual orchestration engines, and self-evaluating retrieval pipelines for autonomous knowledge work."
     },
     {
       "repo": "arunagirinathan-k/awesome-ai-agents-2026",
@@ -3469,17 +3469,17 @@
     {
       "repo": "hwfengcs/dm-code-agent",
       "url": "https://github.com/hwfengcs/dm-code-agent",
-      "stars": "135",
+      "stars": "138",
       "prior_category": "评测",
       "prior_unclassified": "false",
-      "final_category": "评测/evaluation",
-      "function_tag": "benchmark-eval",
-      "base_theme": "evaluation",
-      "stack": "Markdown",
-      "time_slice": "2026-05",
-      "content_timestamp": "2026-05-21",
-      "evidence": "kept prior human/analysis category + README verified",
-      "description": "Lightweight, auditable Python code agent (~1500 LOC) — ReAct + Planner + Reflexion + Hybrid RAG, with SWE-bench Lite eval and trace replay."
+      "final_category": "工具/tool",
+      "function_tag": "coding-agent-runtime",
+      "base_theme": "coding-agent",
+      "stack": "Python/SWE-bench Lite/Trace Replay",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-03",
+      "evidence": "web-observed GitHub page showed 138 stars, 12 forks, 78 commits, MIT license badge, a local-first auditable code-agent framing, JSONL trace replay, and SWE-bench Lite evaluation hooks.",
+      "description": "DM-Code-Agent is a local-first and auditable Python code agent baseline with explicit planning, trace replay, optional reflexion modules, and benchmark-facing evaluation paths."
     },
     {
       "repo": "hyperspell/hyperspell-openclaw",
@@ -7402,14 +7402,14 @@
       "stars": "36",
       "prior_category": "-",
       "prior_unclassified": "true",
-      "final_category": "评测/evaluation",
-      "function_tag": "benchmark-eval",
-      "base_theme": "evaluation",
-      "stack": "Markdown",
-      "time_slice": "2026-05",
-      "content_timestamp": "2026-05-21",
-      "evidence": "benchmark/evaluation/harness signal",
-      "description": "[ICLR 2026] Official repository for the paper \"LaSeR: Reinforcement Learning with Last-Token Self-Rewarding\""
+      "final_category": "论文代码/paper-code",
+      "function_tag": "self-reward-rl",
+      "base_theme": "evolution",
+      "stack": "Python/RLVR/Self-Rewarding Training",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-03",
+      "evidence": "web-observed GitHub page showed 36 stars, 2 forks, 6 commits, MIT license, a last-token self-rewarding RLVR objective, released checkpoints, and auxiliary self-reward usage at both training and testing time.",
+      "description": "LaSeR is a reinforcement-learning recipe that jointly improves reasoning and self-rewarding behavior by adding an MSE self-reward term to the RLVR objective."
     },
     {
       "repo": "RyanAlberts/best-of-Agent-Harnesses",
@@ -8059,17 +8059,17 @@
     {
       "repo": "sola-st/repairagent",
       "url": "https://github.com/sola-st/repairagent",
-      "stars": "95",
+      "stars": "99",
       "prior_category": "-",
       "prior_unclassified": "true",
       "final_category": "工具/tool",
-      "function_tag": "tool-module",
-      "base_theme": "memory",
-      "stack": "Markdown",
-      "time_slice": "2026-05",
-      "content_timestamp": "2026-05-21",
-      "evidence": "tool/module/memory/prompt/coding signal",
-      "description": "RepairAgent is an autonomous LLM-based agent for software repair."
+      "function_tag": "code-repair-agent",
+      "base_theme": "coding-agent",
+      "stack": "Python/Java/Defects4J Program Repair",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-03",
+      "evidence": "web-observed GitHub page showed 99 stars, 32 forks, 82 commits, MIT license badge, an autonomous bug-repair loop over Defects4J, and a reported 164 correct fixes benchmark result.",
+      "description": "RepairAgent is an autonomous agent that fixes bugs in Java projects using LLMs through a localize-analyze-fix-test iteration loop."
     },
     {
       "repo": "sourcegraph/CodeScaleBench",
@@ -9859,17 +9859,17 @@
     {
       "repo": "zhang677/accelopt",
       "url": "https://github.com/zhang677/accelopt",
-      "stars": "43",
+      "stars": "51",
       "prior_category": "论文代码",
       "prior_unclassified": "false",
       "final_category": "论文代码/paper-code",
-      "function_tag": "benchmark-eval",
-      "base_theme": "evaluation",
-      "stack": "Python",
-      "time_slice": "unknown",
-      "content_timestamp": "unknown",
-      "evidence": "kept prior human/analysis category + README verified",
-      "description": "[MLSys 2026] AccelOpt: Self-improving Agents for AI Accelerator Kernel Optimization"
+      "function_tag": "kernel-optimizer",
+      "base_theme": "evolution",
+      "stack": "Python/NKIBench/Accelerator Kernel Optimization",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-03",
+      "evidence": "web-observed GitHub page showed 51 stars, 7 forks, 67 commits, Apache-2.0 license, NKIBench and FlashInfer-Bench evaluation paths, and an optimization memory over slow-fast kernel pairs.",
+      "description": "AccelOpt is a self-improving LLM agentic system that iteratively optimizes AI accelerator kernels using optimization memory and benchmarked kernel profiling."
     },
     {
       "repo": "zhangfengcdt/memoir",
