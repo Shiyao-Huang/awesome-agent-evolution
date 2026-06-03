@@ -4,11 +4,11 @@
 |---|---|
 | Repository | [benchflow-ai/skillsbench](https://github.com/benchflow-ai/skillsbench) |
 | Category | Agent Skills Benchmark Harness |
-| Stars / forks snapshot | 1200 / 302 |
+| Stars / forks snapshot | 1300 / 305 |
 | Language | PDDL |
 | License | Apache-2.0 |
 | Raw capture | raw-github/benchflow-ai_skillsbench.md |
-| Updated by | hourly public metadata update, 2026-05-26 21:54 +0800 |
+| Updated by | hourly public metadata update, 2026-06-04 01:56 +0800 |
 
 ## 1. Role in Self Evolve
 
@@ -20,7 +20,7 @@ task + skill set -> agent run -> deterministic verifier scoring -> artifact/lead
 
 ## 3. Evidence Path
 
-web-observed GitHub page showed 1.2k stars, 302 forks, 360 commits, Apache-2.0 license, and README statements for deterministic skill evaluation workflows, task composition difficulty targets, and lockfile-based reproducible runs. Shell GitHub API access remained blocked by DNS and local `gh` auth was invalid, so this card treats the snapshot as web-observed rather than API-verified.
+The current run rechecked a cached GitHub search result observed on 2026-06-04, with crawl recency surfaced as `5 days ago`. That cached public result showed 1.3k stars, 305 forks, 367 commits, Apache-2.0 licensing, runnable `tasks/` plus `tasks_excluded/`, and README language about multi-skill composition with reproducible lockfile-based evaluation. Shell GitHub API access remained blocked by DNS and local `gh` auth was invalid, so this card treats the snapshot as cached public-page evidence rather than live API verification.
 
 ## 4. Teaching Use
 

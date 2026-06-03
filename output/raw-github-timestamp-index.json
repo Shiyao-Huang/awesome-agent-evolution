@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-03T00:00:00+08:00",
+  "generated_at": "2026-06-04T00:00:00+08:00",
   "total": 677,
   "updated_files": 677,
   "unknown_content_timestamp": 105,
@@ -305,10 +305,10 @@
       "repo": "ai-boost/awesome-harness-engineering",
       "url": "https://github.com/ai-boost/awesome-harness-engineering",
       "file": "raw-github/ai-boost_awesome-harness-engineering.md",
-      "content_timestamp": "2026-05-24",
-      "collected_at": "2026-05-24T15:00:00+08:00",
-      "time_slice": "2026-05",
-      "timestamp_source": "web_github_page_open_2026-05-24"
+      "content_timestamp": "2026-06-04",
+      "collected_at": "2026-06-04T01:56:13+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "web_search_cached_github_result_observed_2026-06-04"
     },
     {
       "repo": "ai4co/awesome-fm4co",
@@ -521,10 +521,10 @@
       "repo": "anthropics/skills",
       "url": "https://github.com/anthropics/skills",
       "file": "raw-github/anthropics_skills.md",
-      "content_timestamp": "2026-05-24",
-      "collected_at": "2026-05-24T16:59:40+08:00",
-      "time_slice": "2026-05",
-      "timestamp_source": "web_github_page_open_2026-05-24"
+      "content_timestamp": "2026-06-04",
+      "collected_at": "2026-06-04T01:56:13+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "web_search_cached_github_result_observed_2026-06-04"
     },
     {
       "repo": "apify/agent-skills",
@@ -710,10 +710,10 @@
       "repo": "benchflow-ai/skillsbench",
       "url": "https://github.com/benchflow-ai/skillsbench",
       "file": "raw-github/benchflow-ai_skillsbench.md",
-      "content_timestamp": "2026-05-26",
-      "collected_at": "2026-05-26T21:54:04+08:00",
-      "time_slice": "2026-05",
-      "timestamp_source": "web_observed_public_github_page_2026_05_26"
+      "content_timestamp": "2026-06-04",
+      "collected_at": "2026-06-04T01:56:13+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "web_search_cached_github_result_observed_2026-06-04"
     },
     {
       "repo": "bennettschwartz/membrane",
@@ -782,10 +782,10 @@
       "repo": "browser-use/browser-harness",
       "url": "https://github.com/browser-use/browser-harness",
       "file": "raw-github/browser-use_browser-harness.md",
-      "content_timestamp": "2026-05-27",
-      "collected_at": "2026-05-27T16:00:06+08:00",
-      "time_slice": "2026-05",
-      "timestamp_source": "web_observed_public_github_page_2026_05_27"
+      "content_timestamp": "2026-06-04",
+      "collected_at": "2026-06-04T01:56:13+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "web_search_cached_github_result_observed_2026-06-04"
     },
     {
       "repo": "browser-use/browser-use",
@@ -1169,10 +1169,10 @@
       "repo": "cxxz/awesome-agent-memory",
       "url": "https://github.com/cxxz/awesome-agent-memory",
       "file": "raw-github/cxxz_awesome-agent-memory.md",
-      "content_timestamp": "2026-05-30",
-      "collected_at": "2026-05-30T01:15:12+08:00",
-      "time_slice": "2026-05",
-      "timestamp_source": "web_observed_public_github_page_2026_05_29"
+      "content_timestamp": "2026-06-04",
+      "collected_at": "2026-06-04T01:56:13+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "web_search_cached_github_result_observed_2026-06-04"
     },
     {
       "repo": "cyijun/agent-smith",

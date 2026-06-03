@@ -37,11 +37,11 @@
 
 | 仓库 | 这轮补了什么 | 为什么重要 |
 |---|---|---|
-| [algorithmicsuperintelligence/openevolve](https://github.com/algorithmicsuperintelligence/openevolve) | 把 raw capture 从 `unknown` 时间修到 2026-06-03 的公开 GitHub 页面观测，并同步更新分类、site card 与 public report 的 star/fork snapshot。 | 它是当前最强的进化式 coding-agent 基础设施样本之一，不能继续用失真的 `6 stars` 本地旧值污染排序和论证。 |
-| [EverMind-AI/EverOS](https://github.com/EverMind-AI/EverOS) | 刷新 raw snapshot、memory 主题分类、site data 与 model card，把公开页面可见的 6.8k / 669 star-fork 快照和 MCP/skills 信号带回仓库。 | 它把长期记忆、skills、MCP 和自进化评测套件连在一起，是 memory substrate 方向的公开核心样本。 |
-| [microsoft/SkillOpt](https://github.com/microsoft/SkillOpt) | 用 2026-06-03 的公开 GitHub 页面重写 skill optimizer metadata，把 star/fork 从 1.1k / 100 提升到 4.5k / 452，并保留 API 受阻声明。 | 它说明“skill 也是可训练状态”，是 skill-layer 自进化而不是 model finetune 的强证据。 |
-| [RyanAlberts/best-of-Agent-Harnesses](https://github.com/RyanAlberts/best-of-Agent-Harnesses) | 刷新 harness landscape index 的 raw/site/report，并把 README 内部 “stars captured on 2026-05-31” 的方法说明写回证据链。 | 它是 harness 方向的排序与入口面，适合作为读者理解 2026 agent harness 生态的对照索引。 |
-| [pinchbench/skill](https://github.com/pinchbench/skill) | 更新 benchmark raw/site/report 快照到 2026-06-03，修正 fork / issue 计数，并保留 transcript-retention 与 leaderboard upload 的公开方法信号。 | 它提供了真实任务、外部 judge 与 transcript 留存，是判断 agent 改进是否可信的 benchmark 面。 |
+| [anthropics/skills](https://github.com/anthropics/skills) | 用 2026-06-04 观察到的 cached GitHub 结果重写 raw 与 public report，把官方 skills 仓库修到 `142k / 16.8k`，同时明确这是 `last week` crawl 而不是 live API。 | 它是 skills 生态上游标准源；如果连它的公开体量和安装路径都失真，skill-layer 叙事会被旧快照拖偏。 |
+| [benchflow-ai/skillsbench](https://github.com/benchflow-ai/skillsbench) | 把 benchmark raw、classification、site card 与 public report 从 `1.2k / 302 / 360 commits` 刷到 `1.3k / 305 / 367 commits`，并补回 `tasks_excluded` 与 lockfile 复现信号。 | 它是“skill 是否真的有效”最直接的公开 benchmark 面，适合连接 skill registry 和真实任务评测。 |
+| [browser-use/browser-harness](https://github.com/browser-use/browser-harness) | 刷新 browser harness 的 raw 与 public report，把 cached GitHub 结果中的 `13.9k / 1.3k / 391 commits / 13 issues / 91 PRs` 写回证据链。 | 它把 browser automation、editable helpers、domain skills 和 run-time self-healing 连接起来，是 harness 演化的高价值样本。 |
+| [cxxz/awesome-agent-memory](https://github.com/cxxz/awesome-agent-memory) | 用 2026-06-04 观察到的 cached GitHub 结果刷新 raw、memory report 和 site card，补回 `MIT`、`11 / 3`、issues / PR 以及更完整的 memory taxonomy。 | 它不是 runtime，而是 memory 知识入口；更新它能把“memory substrate”从单项目叙事拉回到更完整的资源图。 |
+| [ai-boost/awesome-harness-engineering](https://github.com/ai-boost/awesome-harness-engineering) | 重新核对 raw 与 public report，明确本轮只能通过 cached GitHub 结果重确认 harness taxonomy，而 `1.1k / 100` 仍是当前最佳本地计数证据。 | 它是 harness engineering 主题入口；关键不是夸大 freshness，而是把“taxonomy 已复核、计数仍旧值”的边界写清楚。 |
 
 ```mermaid
 flowchart LR

@@ -1,26 +1,26 @@
 ---
 repo: ai-boost/awesome-harness-engineering
 url: https://github.com/ai-boost/awesome-harness-engineering
-content_timestamp: 2026-05-24
-time_slice: 2026-05
-timestamp_source: web_github_page_open_2026-05-24
-collected_at: 2026-05-24T15:00:00+08:00
-source: github_web
+content_timestamp: 2026-06-04
+time_slice: 2026-06
+timestamp_source: web_search_cached_github_result_observed_2026-06-04
+collected_at: 2026-06-04T01:56:13+08:00
+source: github_search_cache
 ---
 
 ## GitHub - ai-boost/awesome-harness-engineering
 
 **Source**: https://github.com/ai-boost/awesome-harness-engineering
 
-**Collection note**: Captured through browser-accessible GitHub page text because local shell DNS resolution for `api.github.com` failed during this automation run.
+**Collection note**: This refresh comes from a GitHub search result observed on 2026-06-04 because shell access to `api.github.com` still failed DNS resolution and local `gh` auth remained invalid. The search result reported it had crawled GitHub `last week`, so this is cached public-page evidence, not a live API fetch.
 
 ## Public metadata snapshot
 
 - Repository: `ai-boost/awesome-harness-engineering`
-- Stars observed: 1.1k
-- Forks observed: 100
-- Commits observed: 108
-- Visible paths: `assets`, `templates`, `AGENTS.md`, `CLAUDE.md`, `CONTRIBUTING.md`, `LICENSE`, `README.md`, `verify_urls.py`
+- Best retained star / fork snapshot: 1.1k / 100
+- Best retained commit snapshot: 108
+- Exact counts were not legible in the cached search snippet, so this run keeps the prior 2026-05-24 count snapshot as the best local evidence.
+- Visible paths / sections re-confirmed: multilingual `README`, `templates`, harness design primitives, reference implementations, security, evals
 
 ## Raw README signals
 
@@ -28,16 +28,22 @@ source: github_web
 
 Curated resources, patterns, and templates for building reliable AI agent harnesses.
 
-Harness engineering is described as the discipline of designing scaffolding around an AI agent: context delivery, tool interfaces, planning artifacts, verification loops, memory systems, and sandboxes.
+Harness engineering is described as the discipline of designing the scaffolding around an AI agent: context delivery, tool interfaces, planning artifacts, verification loops, memory systems, permissions, sandboxes, and observability.
 
-The list focuses on the harness, not the model.
+The cached public result re-confirmed that the list stays focused on the harness rather than the base model itself.
 
 Contents signals:
 
 - Foundations
-- Agent loop
-- Planning and task decomposition
-- Context delivery and compaction
+- Design primitives
+- Skills & MCP
+- Permissions & authorization
+- Memory & state
+- Task runners & orchestration
+- Verification & CI integration
+- Security, sandbox, permissions
+- Evals & verification
+- Templates
 - Tool design
 - Skills and MCP
 - Permissions and authorization

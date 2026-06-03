@@ -2,7 +2,7 @@
 
 Truth source: `.mermaid/current/graph.json`
 
-Generated: 2026-06-03T19:56:18+08:00
+Generated: 2026-06-04T01:56:13+08:00
 
 ## Nodes
 
@@ -22,8 +22,8 @@ Generated: 2026-06-03T19:56:18+08:00
 
 ## Current Run Evidence
 
-- Web-observed repos: algorithmicsuperintelligence/openevolve, EverMind-AI/EverOS, microsoft/SkillOpt, RyanAlberts/best-of-Agent-Harnesses, pinchbench/skill.
-- Refreshed raw files: raw-github/algorithmicsuperintelligence_openevolve.md, raw-github/evermind-ai_everos.md, raw-github/microsoft_skillopt.md, raw-github/ryanalberts_best-of-agent-harnesses.md, raw-github/pinchbench_skill.md.
-- Refreshed public reports: site/public/reports/projects/algorithmicsuperintelligence__openevolve.md, site/public/reports/projects/79-everos-self-evolving-memory-os.md, site/public/reports/projects/272-skillopt-self-evolving-agent-skills.md, site/public/reports/projects/271-best-of-agent-harnesses-ranked-index.md, site/public/reports/projects/51-pinchbench-skill.md.
-- Shell GitHub API access remained blocked in this workspace, so freshness is public-page observed rather than API-verified.
-- GitNexus CLI is available but stale against commit `e585ce2`, so this run used it only as degraded evidence and kept the current metadata proof chain web-backed.
+- Refreshed repos: anthropics/skills, ai-boost/awesome-harness-engineering, benchflow-ai/skillsbench, browser-use/browser-harness, cxxz/awesome-agent-memory.
+- Refreshed raw files: raw-github/anthropics_skills.md, raw-github/ai-boost_awesome-harness-engineering.md, raw-github/benchflow-ai_skillsbench.md, raw-github/browser-use_browser-harness.md, raw-github/cxxz_awesome-agent-memory.md.
+- Refreshed public reports: site/public/reports/projects/64-anthropic-skills.md, site/public/reports/projects/57-awesome-harness-engineering.md, site/public/reports/projects/248-skillsbench-agent-skills-benchmark.md, site/public/reports/projects/261-browser-harness-self-healing-web-agent-runtime.md, site/public/reports/projects/209-cxxz-awesome-agent-memory.md.
+- Shell GitHub API access remained blocked in this workspace, so freshness is based on cached public GitHub search results rather than live API responses.
+- GitNexus CLI is available but stale against commit `d46319e`, so this run used it only as degraded evidence and kept the current metadata proof chain web-backed.

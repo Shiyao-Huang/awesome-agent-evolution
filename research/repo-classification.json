@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-03T13:55:19+08:00",
+  "generated_at": "2026-06-04T01:56:13+08:00",
   "rows": [
     {
       "repo": "01-ai/langcrew",
@@ -505,11 +505,11 @@
       "function_tag": "resource-index",
       "base_theme": "education-list",
       "stack": "Markdown",
-      "evidence": "web GitHub page verified awesome/list/tutorial resource signal",
+      "evidence": "cached GitHub search result observed on 2026-06-04 re-confirmed the multilingual harness-engineering taxonomy and sections for memory, MCP, permissions, observability, security, evals, and templates; exact star/fork counts were not legible, so the prior 1.1k / 100 snapshot remains the best local evidence.",
       "description": "Curated resources, patterns, and templates for AI agent harness engineering across tools, memory, MCP, verification, and observability.",
       "prior_unclassified": "true",
-      "time_slice": "2026-05",
-      "content_timestamp": "2026-05-24"
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-04"
     },
     {
       "repo": "ai4co/awesome-fm4co",
@@ -859,16 +859,16 @@
     {
       "repo": "anthropics/skills",
       "url": "https://github.com/anthropics/skills",
-      "stars": "140000",
+      "stars": "142000",
       "prior_category": "-",
       "prior_unclassified": "true",
       "final_category": "教程/tutorial",
       "function_tag": "resource-index",
       "base_theme": "skill",
       "stack": "Python",
-      "time_slice": "2026-05",
-      "content_timestamp": "2026-05-24",
-      "evidence": "web GitHub page observed official Agent Skills repository, spec/template folders, Claude Code plugin marketplace instructions, and public star/fork snapshot",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-04",
+      "evidence": "cached GitHub search result observed on 2026-06-04 showed 142k stars, 16.8k forks, 248 issues, 637 pull requests, Python primary language, and explicit skills/spec/template plus Claude Code marketplace install flows.",
       "description": "Anthropic 官方 Agent Skills 公共仓库，提供技能规范、模板、示例技能与 Claude Code 插件市场安装入口，是技能生态的上游参考实现。"
     },
     {
@@ -1174,16 +1174,16 @@
     {
       "repo": "benchflow-ai/skillsbench",
       "url": "https://github.com/benchflow-ai/skillsbench",
-      "stars": "1200",
+      "stars": "1300",
       "prior_category": "-",
       "prior_unclassified": "true",
       "final_category": "评测/evaluation",
       "function_tag": "benchmark-eval",
       "base_theme": "evaluation",
       "stack": "PDDL/Python/Shell/TypeScript/JavaScript/Scala",
-      "time_slice": "2026-05",
-      "content_timestamp": "2026-05-26",
-      "evidence": "web-observed GitHub page showed 1.2k stars, 302 forks, 360 commits, Apache-2.0 license, and README statements for deterministic skill evaluation workflows, task composition difficulty targets, and lockfile-based reproducible runs.",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-04",
+      "evidence": "cached GitHub search result observed on 2026-06-04 showed 1.3k stars, 305 forks, 367 commits, Apache-2.0 license, runnable tasks plus tasks_excluded, and reproducible lockfile-based skill evaluation workflows.",
       "description": "SkillsBench is a gym-style benchmark framework for measuring how well agents use reusable skills across multi-step tasks."
     },
     {
@@ -1301,9 +1301,9 @@
       "function_tag": "benchmark-eval",
       "base_theme": "evaluation",
       "stack": "Python/CDP/Chrome Debugging/Playwright",
-      "time_slice": "2026-05",
-      "content_timestamp": "2026-05-27",
-      "evidence": "web-observed GitHub page showed 13.9k stars, 1.3k forks, 391 commits, MIT license, and README claims for direct browser websocket control, in-run helper authoring, and domain skill workflows.",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-04",
+      "evidence": "cached GitHub search result observed on 2026-06-04 showed 13.9k stars, 1.3k forks, 391 commits, 13 issues, 91 pull requests, MIT license, and README claims for direct browser websocket control, editable helpers, and domain skill workflows.",
       "description": "browser-use/browser-harness connects LLM agents to real browsers through a thin editable CDP harness and encourages run-time self-healing helper generation."
     },
     {
@@ -1946,9 +1946,9 @@
       "function_tag": "resource-index",
       "base_theme": "memory",
       "stack": "Markdown/Agent Memory Index/Research Tool Taxonomy",
-      "time_slice": "2026-05",
-      "content_timestamp": "2026-05-30",
-      "evidence": "web-observed GitHub page showed 11 stars, 3 forks, 16 commits, Markdown language dominance, and repository framing as an awesome list for agent memory.",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-04",
+      "evidence": "cached GitHub search result observed on 2026-06-04 showed 11 stars, 3 forks, 16 commits, 2 issues, 3 pull requests, MIT license, and a curated agent-memory index spanning libraries, RL memory training, and MCP memory servers.",
       "description": "awesome-agent-memory is a focused index of agent memory papers, systems, and implementation resources for long-term memory design decisions."
     },
     {

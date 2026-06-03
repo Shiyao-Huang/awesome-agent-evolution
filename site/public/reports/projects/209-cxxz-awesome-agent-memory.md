@@ -6,9 +6,9 @@
 | Category | Agent Memory Research and Tooling Index |
 | Stars / forks snapshot | 11 / 3 |
 | Language | Markdown |
-| License | Unspecified (public page metadata) |
+| License | MIT |
 | Raw capture | raw-github/cxxz_awesome-agent-memory.md |
-| Updated by | hourly public metadata update, 2026-05-30 01:15 +0800 |
+| Updated by | hourly public metadata update, 2026-06-04 01:56 +0800 |
 
 ## 1. Role in Self Evolve
 
@@ -20,7 +20,7 @@ aggregate memory papers and systems -> cluster long-term, retrieval, and memory-
 
 ## 3. Evidence Path
 
-web-observed GitHub page showed 11 stars, 3 forks, 16 commits, Markdown language dominance, and repository framing as an awesome list for agent memory. Shell GitHub API access remained blocked by DNS and local `gh` auth was invalid, so this card treats the snapshot as web-observed rather than API-verified.
+The current run rechecked a cached GitHub search result observed on 2026-06-04, with crawl recency surfaced as `5 days ago`. That cached public result showed 11 stars, 3 forks, 16 commits, 2 issues, 3 pull requests, MIT licensing, and a README organized around memory design comparisons, standalone libraries, framework memory modules, RL memory training, and MCP memory servers. Shell GitHub API access remained blocked by DNS and local `gh` auth was invalid, so this card treats the snapshot as cached public-page evidence rather than live API verification.
 
 ## 4. Teaching Use
 

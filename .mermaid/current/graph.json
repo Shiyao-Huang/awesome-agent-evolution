@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-03T19:56:18+08:00",
+  "generated_at": "2026-06-04T01:56:13+08:00",
   "truth_source": ".mermaid/current/graph.json",
   "nodes": [
     {
@@ -18,11 +18,11 @@
       "layer": "raw",
       "status": "updated",
       "paths": [
-        "raw-github/algorithmicsuperintelligence_openevolve.md",
-        "raw-github/evermind-ai_everos.md",
-        "raw-github/microsoft_skillopt.md",
-        "raw-github/ryanalberts_best-of-agent-harnesses.md",
-        "raw-github/pinchbench_skill.md"
+        "raw-github/anthropics_skills.md",
+        "raw-github/ai-boost_awesome-harness-engineering.md",
+        "raw-github/benchflow-ai_skillsbench.md",
+        "raw-github/browser-use_browser-harness.md",
+        "raw-github/cxxz_awesome-agent-memory.md"
       ]
     },
     {
@@ -43,11 +43,11 @@
       "status": "updated",
       "paths": [
         "site/src/data/projects.ts",
-        "site/public/reports/projects/algorithmicsuperintelligence__openevolve.md",
-        "site/public/reports/projects/79-everos-self-evolving-memory-os.md",
-        "site/public/reports/projects/272-skillopt-self-evolving-agent-skills.md",
-        "site/public/reports/projects/271-best-of-agent-harnesses-ranked-index.md",
-        "site/public/reports/projects/51-pinchbench-skill.md",
+        "site/public/reports/projects/64-anthropic-skills.md",
+        "site/public/reports/projects/57-awesome-harness-engineering.md",
+        "site/public/reports/projects/248-skillsbench-agent-skills-benchmark.md",
+        "site/public/reports/projects/261-browser-harness-self-healing-web-agent-runtime.md",
+        "site/public/reports/projects/209-cxxz-awesome-agent-memory.md",
         "README.md",
         "README-ZH.md",
         "README-EN.md"
@@ -59,7 +59,7 @@
       "layer": "work",
       "status": "updated",
       "paths": [
-        "work/research/hourly-public-metadata-update-2026-06-03-1956.md"
+        "work/research/hourly-public-metadata-update-2026-06-04-0156.md"
       ]
     }
   ],
@@ -93,55 +93,56 @@
   "current_run": {
     "repos": [
       {
-        "repo": "algorithmicsuperintelligence/openevolve",
-        "raw_capture": "raw-github/algorithmicsuperintelligence_openevolve.md",
-        "report": "projects/algorithmicsuperintelligence__openevolve.md",
-        "site_report": "site/public/reports/projects/algorithmicsuperintelligence__openevolve.md",
-        "stars": 6500,
-        "forks": 1000,
-        "theme": "evolution"
-      },
-      {
-        "repo": "EverMind-AI/EverOS",
-        "raw_capture": "raw-github/evermind-ai_everos.md",
-        "report": "projects/23-everos-self-evolving-agents.md",
-        "site_report": "site/public/reports/projects/79-everos-self-evolving-memory-os.md",
-        "stars": 6800,
-        "forks": 669,
-        "theme": "memory"
-      },
-      {
-        "repo": "microsoft/SkillOpt",
-        "raw_capture": "raw-github/microsoft_skillopt.md",
-        "report": "projects/272-skillopt-self-evolving-agent-skills.md",
-        "site_report": "site/public/reports/projects/272-skillopt-self-evolving-agent-skills.md",
-        "stars": 4500,
-        "forks": 452,
+        "repo": "anthropics/skills",
+        "raw_capture": "raw-github/anthropics_skills.md",
+        "report": "projects/64-anthropic-skills.md",
+        "site_report": "site/public/reports/projects/64-anthropic-skills.md",
+        "stars": 142000,
+        "forks": 16800,
         "theme": "skill"
       },
       {
-        "repo": "RyanAlberts/best-of-Agent-Harnesses",
-        "raw_capture": "raw-github/ryanalberts_best-of-agent-harnesses.md",
-        "report": "projects/271-best-of-agent-harnesses-ranked-index.md",
-        "site_report": "site/public/reports/projects/271-best-of-agent-harnesses-ranked-index.md",
-        "stars": 64,
-        "forks": 4,
+        "repo": "ai-boost/awesome-harness-engineering",
+        "raw_capture": "raw-github/ai-boost_awesome-harness-engineering.md",
+        "report": "projects/57-awesome-harness-engineering.md",
+        "site_report": "site/public/reports/projects/57-awesome-harness-engineering.md",
+        "stars": 1100,
+        "forks": 100,
         "theme": "harness"
       },
       {
-        "repo": "pinchbench/skill",
-        "raw_capture": "raw-github/pinchbench_skill.md",
-        "report": "projects/51-pinchbench-skill.md",
-        "site_report": "site/public/reports/projects/51-pinchbench-skill.md",
-        "stars": 1200,
-        "forks": 133,
-        "theme": "benchmark"
+        "repo": "benchflow-ai/skillsbench",
+        "raw_capture": "raw-github/benchflow-ai_skillsbench.md",
+        "report": "projects/248-skillsbench-agent-skills-benchmark.md",
+        "site_report": "site/public/reports/projects/248-skillsbench-agent-skills-benchmark.md",
+        "stars": 1300,
+        "forks": 305,
+        "theme": "skill"
+      },
+      {
+        "repo": "browser-use/browser-harness",
+        "raw_capture": "raw-github/browser-use_browser-harness.md",
+        "report": "projects/261-browser-harness-self-healing-web-agent-runtime.md",
+        "site_report": "site/public/reports/projects/261-browser-harness-self-healing-web-agent-runtime.md",
+        "stars": 13900,
+        "forks": 1300,
+        "theme": "harness"
+      },
+      {
+        "repo": "cxxz/awesome-agent-memory",
+        "raw_capture": "raw-github/cxxz_awesome-agent-memory.md",
+        "report": "projects/209-cxxz-awesome-agent-memory.md",
+        "site_report": "site/public/reports/projects/209-cxxz-awesome-agent-memory.md",
+        "stars": 11,
+        "forks": 3,
+        "theme": "memory"
       }
     ],
     "blockers": [
       "shell GitHub API access remained blocked in this workspace",
-      "GitNexus CLI is available but the local index is stale against commit e585ce2 and was not promoted to authoritative freshness evidence for this run"
+      "cached GitHub search results provided the freshest reachable public metadata, but several results only exposed crawl recency such as 'last week' rather than a live fetch timestamp",
+      "GitNexus CLI is available but the local index is stale against commit d46319e and was not promoted to authoritative freshness evidence for this run"
     ],
-    "working_principle": "public GitHub page evidence -> raw-github -> repo-classification/site project metadata -> README/i18n + public project reports -> indexes + analysis + site build"
+    "working_principle": "cached public GitHub result -> raw-github -> repo-classification/site project metadata -> README/i18n + public project reports -> indexes + analysis + site build"
   }
 }

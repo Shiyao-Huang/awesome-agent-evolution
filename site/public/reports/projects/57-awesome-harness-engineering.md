@@ -8,7 +8,7 @@
 | Language | Markdown |
 | License | CC0 |
 | Raw capture | raw-github/ai-boost_awesome-harness-engineering.md |
-| Updated by | hourly public metadata update, 2026-05-24 |
+| Updated by | hourly public metadata update, 2026-06-04 01:56 +0800 |
 
 ## 1. Role in Self Evolve
 
@@ -20,7 +20,7 @@ awesome list + templates + design primitive taxonomy + adjacent collections。
 
 ## 3. Evidence Path
 
-web GitHub page captured repository stars/forks and README taxonomy sections.
+The current run rechecked a cached GitHub search result observed on 2026-06-04, with crawl recency surfaced as `last week`. That cached result re-confirmed the multilingual README, the harness design-primitives taxonomy, and the emphasis on memory, MCP, permissions, observability, security, evals, and templates. Exact star/fork counts were not legible in the cached snippet, so this card retains the prior `1.1k / 100` snapshot from the 2026-05-24 raw capture as the best local evidence instead of fabricating newer counts.
 
 ## 4. Teaching Use
 

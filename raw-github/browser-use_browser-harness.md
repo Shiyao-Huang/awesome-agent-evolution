@@ -1,14 +1,14 @@
 ---
 repo: browser-use/browser-harness
 url: https://github.com/browser-use/browser-harness
-content_timestamp: 2026-05-27
-time_slice: 2026-05
-timestamp_source: web_observed_public_github_page_2026_05_27
-collected_at: 2026-05-27T16:00:06+08:00
-source: github
+content_timestamp: 2026-06-04
+time_slice: 2026-06
+timestamp_source: web_search_cached_github_result_observed_2026-06-04
+collected_at: 2026-06-04T01:56:13+08:00
+source: github_search_cache
 ---
 
-## GitHub - browser-use/browser-harness: browser-use/browser-harness connects LLM agents to real browsers through a thin editable CDP harness and encourages run-time self-healing helper generation.
+## GitHub - browser-use/browser-harness: Browser Harness | Self-healing harness that enables LLMs to complete any task.
 
 **Source**: https://github.com/browser-use/browser-harness
 
@@ -16,26 +16,30 @@ source: github
 
 # Raw public page capture notes
 
-This raw-style public GitHub page capture was recorded by the hourly public metadata update. Shell GitHub API access failed DNS resolution and local GitHub CLI auth was invalid, so freshness is web-observed rather than API-verified.
+This refresh comes from a GitHub search result observed on 2026-06-04 because shell access to `api.github.com` still failed DNS resolution and local `gh` auth remained invalid. The search result reported it had crawled GitHub `last week`, so this is cached public-page evidence, not a live API fetch.
 
 ## Visible repository metadata
 
 - Repository: browser-use/browser-harness
 - URL: https://github.com/browser-use/browser-harness
-- Stars: 13900
-- Forks: 1300
+- Stars: 13.9k
+- Forks: 1.3k
 - Commits: 391
+- Issues: 13
+- Pull requests: 91
 - License: MIT
 - Primary language / stack signal: Python/CDP/Chrome Debugging/Playwright
-- Collection timestamp: 2026-05-27T16:00:06+08:00
+- Crawl recency surfaced by search: `last week`
 
 ## Visible README / page excerpts
 
-- The README calls it a self-healing harness for browser task completion.
-- The runtime model is one websocket to Chrome with editable harness logic.
-- Domain skill playbooks can be enabled to inject per-site interaction patterns.
-- Setup guidance explicitly targets Codex and Claude Code installation flows.
+- The README calls it a self-healing browser harness where the agent edits missing helpers during execution.
+- The runtime model stays minimal: one websocket to Chrome, editable helper code, and domain-specific skill folders.
+- Setup guidance explicitly targets Claude Code and Codex installation flows.
+- The contribution path emphasizes agent-generated domain skills rather than hand-authored static playbooks.
 
 ## Raw capture boundary
+
+No benchmark was run, no source clone was modified, and no private or authenticated metadata was used. This file preserves cached public-page evidence for downstream classification, model-card analysis, public reports, and the site index.
 
 No benchmark was run, no source clone was modified, and no private or authenticated metadata was used. This file preserves public page evidence for downstream classification, model-card analysis, public reports, and the site index.

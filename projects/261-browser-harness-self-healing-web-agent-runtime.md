@@ -8,7 +8,7 @@
 | Language | Python |
 | License | MIT |
 | Raw capture | raw-github/browser-use_browser-harness.md |
-| Updated by | hourly public metadata update, 2026-05-27 16:00 +0800 |
+| Updated by | hourly public metadata update, 2026-06-04 01:56 +0800 |
 
 ## 1. Role in Self Evolve
 
@@ -20,7 +20,7 @@ connect llm directly to live browser cdp -> patch missing helpers in agent-works
 
 ## 3. Evidence Path
 
-web-observed GitHub page showed 13.9k stars, 1.3k forks, 391 commits, MIT license, and README claims for direct browser websocket control, in-run helper authoring, and domain skill workflows. Shell GitHub API access remained blocked by DNS and local `gh` auth was invalid, so this card treats the snapshot as web-observed rather than API-verified.
+The current run rechecked a cached GitHub search result observed on 2026-06-04, with crawl recency surfaced as `last week`. That cached public result showed 13.9k stars, 1.3k forks, 391 commits, 13 issues, 91 pull requests, MIT licensing, and README claims for direct browser websocket control, self-authored helper code, and domain-skill workflows. Shell GitHub API access remained blocked by DNS and local `gh` auth was invalid, so this card treats the snapshot as cached public-page evidence rather than live API verification.
 
 ## 4. Teaching Use
 

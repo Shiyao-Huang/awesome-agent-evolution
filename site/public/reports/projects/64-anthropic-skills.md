@@ -4,11 +4,11 @@
 |---|---|
 | Repository | [anthropics/skills](https://github.com/anthropics/skills) |
 | Category | 官方 Agent Skills 标准样例库 |
-| Stars / forks snapshot | 140,000 / 16500 |
+| Stars / forks snapshot | 142,000 / 16800 |
 | Language | Python |
 | License | Mixed: Apache-2.0/source-available |
 | Raw capture | raw-github/anthropics_skills.md |
-| Updated by | hourly public metadata update, 2026-05-24 |
+| Updated by | hourly public metadata update, 2026-06-04 01:56 +0800 |
 
 ## 1. Role in Self Evolve
 
@@ -20,7 +20,7 @@ Anthropic 官方 Agent Skills 公共仓库，提供技能规范、模板、示�
 
 ## 3. Evidence Path
 
-web GitHub page observed official Agent Skills repository, spec/template folders, Claude Code plugin marketplace instructions, and public star/fork snapshot; shell GitHub API was blocked by DNS and gh auth was invalid, so this run marks freshness as web-page observed rather than API verified.
+The current run rechecked a cached GitHub search result observed on 2026-06-04, with crawl recency surfaced as `last week`. That cached public result showed 142k stars, 16.8k forks, 248 issues, 637 pull requests, Python as the primary language, and explicit `skills` / `spec` / `template` structure plus Claude Code marketplace install flows. Shell GitHub API was still blocked by DNS and local `gh` auth remained invalid, so this card marks freshness as cached public-page evidence rather than live API verification.
 
 ## 4. Teaching Use
 
