@@ -37,9 +37,11 @@
 
 | 仓库 | 这轮补了什么 | 为什么重要 |
 |---|---|---|
-| [pinchbench/skill](https://github.com/pinchbench/skill) | 补了缺失的 `projects/51-pinchbench-skill.md`、public report、deep report 和当前 raw snapshot。 | 它把 skill/harness/runtime 争论拉回真实任务 benchmark 与 transcript evidence。 |
-| [vectorize-io/agent-memory-benchmark](https://github.com/vectorize-io/agent-memory-benchmark) | 刷新 stars/forks/issues/PRs、README 方法论，并补进 deep report 与 site coverage。 | 它说明 memory 评测不能只看准确率，还要看 speed、token cost 和 agentic retrieval。 |
-| [EvoMap/awesome-agent-evolution](https://github.com/EvoMap/awesome-agent-evolution) | 新增外部 awesome-list comparator 卡片、deep report、site/public report。 | 它是我们 README/网站分类叙事的外部镜子，尤其能校验 memory、benchmark、Agent-Swarm 的包装方式。 |
+| [howdymary/hermes-agent-metaharness](https://github.com/howdymary/hermes-agent-metaharness) | 刷新 raw snapshot、project card、site public report 与分类元数据，统一到 2026-06-03 的公开 GitHub 页面证据。 | 它把 harness evolution 明确限制在 benchmark 外环，而不是把“自进化”偷换成模型权重魔法。 |
+| [Arc-Computer/CL-Bench](https://github.com/Arc-Computer/CL-Bench) | 刷新 raw snapshot、project card、site public report 与分类元数据，统一到 2026-06-03 的公开 GitHub 页面证据。 | 它把 benchmark 从一次性问答拉到有状态连续任务，更接近用户真正关心的 agent 长程可靠性。 |
+| [microsoft/SkillOpt](https://github.com/microsoft/SkillOpt) | 刷新 raw snapshot、project card、site public report 与分类元数据，统一到 2026-06-03 的公开 GitHub 页面证据。 | 它把 skill 当作可训练、可验证、可部署的对象，是“冻结模型但持续进化 agent 行为”的关键样本。 |
+| [sachinsharma9780/memweave](https://github.com/sachinsharma9780/memweave) | 刷新 raw snapshot、project card、site public report 与分类元数据，统一到 2026-06-03 的公开 GitHub 页面证据。 | 它把 memory 从黑盒向量库改成可 diff 的文件层，直接贴合用户要的可追溯、可审计长期记忆。 |
+| [longmans/self-evolve](https://github.com/longmans/self-evolve) | 刷新 raw snapshot、project card、site public report 与分类元数据，统一到 2026-06-03 的公开 GitHub 页面证据。 | 它是 OpenClaw 生态里少数把反馈、记忆、Q 值更新和可安装插件打通到一条可运行闭环的样本。 |
 
 ```mermaid
 flowchart LR

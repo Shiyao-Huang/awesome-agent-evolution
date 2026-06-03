@@ -1,10 +1,10 @@
 ---
 repo: Arc-Computer/CL-Bench
 url: https://github.com/Arc-Computer/CL-Bench
-content_timestamp: 2026-06-02
+content_timestamp: 2026-06-03
 time_slice: 2026-06
-timestamp_source: web_observed_public_github_page_2026_06_02
-collected_at: 2026-06-02T13:53:05+08:00
+timestamp_source: web_observed_public_github_page_2026_06_03
+collected_at: 2026-06-03T07:52:50+08:00
 source: github
 ---
 
@@ -16,7 +16,7 @@ source: github
 
 # Raw public page capture notes
 
-This raw-style public GitHub page capture was recorded by the hourly public metadata update. Shell GitHub API access remains blocked by DNS resolution and local GitHub CLI auth is invalid, so freshness is web-observed rather than API-verified.
+This raw-style public GitHub page capture was recorded by the hourly public metadata update. Shell GitHub API access remains blocked in this workspace, so freshness is web-observed rather than API-verified.
 
 ## Visible repository metadata
 
@@ -27,14 +27,14 @@ This raw-style public GitHub page capture was recorded by the hourly public meta
 - Commits: 50
 - License: Apache-2.0
 - Primary language / stack signal: Python/SQL/CRM Workflow Benchmark
-- Collection timestamp: 2026-06-02T13:53:05+08:00
+- Collection timestamp: 2026-06-03T07:52:50+08:00
 
 ## Visible README / page excerpts
 
-- README presents CL-Bench as a benchmark for continual learning in stateful environments.
-- Public metadata snapshot showed 19 stars, 3 forks, and 50 commits.
-- README highlights CRM workflows, multi-turn conversations, state mutations, and cross-entity relationships.
-- Counts were taken from the public GitHub page without authenticated API claims.
+- The benchmark focuses on stateful CRM workflows instead of single-turn search tasks.
+- The README highlights 1,200+ conversations, cross-entity constraints, and deterministic reproducibility.
+- The evaluation harness measures tool execution, response quality, and token usage across multiple backends.
+- Public GitHub page evidence was observed without authenticated API access.
 
 ## Raw capture boundary
 

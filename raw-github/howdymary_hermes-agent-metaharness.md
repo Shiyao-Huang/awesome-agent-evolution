@@ -1,10 +1,10 @@
 ---
 repo: howdymary/hermes-agent-metaharness
 url: https://github.com/howdymary/hermes-agent-metaharness
-content_timestamp: 2026-05-26
-time_slice: 2026-05
-timestamp_source: web_observed_public_github_page_2026_05_26
-collected_at: 2026-05-26T21:54:04+08:00
+content_timestamp: 2026-06-03
+time_slice: 2026-06
+timestamp_source: web_observed_public_github_page_2026_06_03
+collected_at: 2026-06-03T07:52:50+08:00
 source: github
 ---
 
@@ -16,25 +16,25 @@ source: github
 
 # Raw public page capture notes
 
-This raw-style public GitHub page capture was recorded by the hourly public metadata update. Shell GitHub API access failed DNS resolution and local GitHub CLI auth was invalid, so freshness is web-observed rather than API-verified.
+This raw-style public GitHub page capture was recorded by the hourly public metadata update. Shell GitHub API access remains blocked in this workspace, so freshness is web-observed rather than API-verified.
 
 ## Visible repository metadata
 
 - Repository: howdymary/hermes-agent-metaharness
 - URL: https://github.com/howdymary/hermes-agent-metaharness
-- Stars: 86
+- Stars: 88
 - Forks: 9
 - Commits: 11
 - License: MIT
-- Primary language / stack signal: Python
-- Collection timestamp: 2026-05-26T21:54:04+08:00
+- Primary language / stack signal: Python/Hermes Benchmark Outer Loop
+- Collection timestamp: 2026-06-03T07:52:50+08:00
 
 ## Visible README / page excerpts
 
-- The repo separates inner runtime ownership (Hermes) from outer-loop evaluation and search ownership.
-- Current scope emphasizes verifiable coding benchmarks and conservative deterministic candidate mutation.
-- Baseline-vs-candidate comparison enforces task-set comparability metadata before reporting.
-- The README explicitly states that it optimizes harness procedure rather than model weights.
+- The README separates Hermes inner runtime ownership from the outer-loop search and comparison logic.
+- The current target is verifiable coding benchmarks such as TBLite and TB2, not production chat behavior.
+- The repo exposes deterministic wrapper-mutation search, archive parsing, and frontier tracking.
+- Public GitHub page evidence was observed without authenticated API access.
 
 ## Raw capture boundary
 

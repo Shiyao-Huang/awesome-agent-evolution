@@ -66,7 +66,7 @@
 | 57 | [anthropics/anthropic-sdk-python](https://github.com/anthropics/anthropic-sdk-python) | 2026-05-19 | 2026-05 | 2026-05-20T17:44:59Z | github_latest_commit_or_update_text | raw-github/anthropics_anthropic-sdk-python.md |
 | 58 | [anthropics/skills](https://github.com/anthropics/skills) | 2026-05-24 | 2026-05 | 2026-05-24T16:59:40+08:00 | web_github_page_open_2026-05-24 | raw-github/anthropics_skills.md |
 | 59 | [apify/agent-skills](https://github.com/apify/agent-skills) | 2026-06-02 | 2026-06 | 2026-06-02T01:55:44+08:00 | web_observed_public_github_page_2026_06_02 | raw-github/apify_agent-skills.md |
-| 60 | [Arc-Computer/CL-Bench](https://github.com/Arc-Computer/CL-Bench) | 2026-06-02 | 2026-06 | 2026-06-02T13:53:05+08:00 | web_observed_public_github_page_2026_06_02 | raw-github/arc-computer_cl-bench.md |
+| 60 | [Arc-Computer/CL-Bench](https://github.com/Arc-Computer/CL-Bench) | 2026-06-03 | 2026-06 | 2026-06-03T07:52:50+08:00 | web_observed_public_github_page_2026_06_03 | raw-github/arc-computer_cl-bench.md |
 | 61 | [ArcadeAI/openclaw-arcade-plugin](https://github.com/ArcadeAI/openclaw-arcade-plugin) | 2026-05-31 | 2026-05 | 2026-05-31T07:20:36+08:00 | web_observed_public_github_page_2026_05_31 | raw-github/arcadeai_openclaw-arcade-plugin.md |
 | 62 | [archishmansengupta/autovoiceevals](https://github.com/archishmansengupta/autovoiceevals) | 2026-05-21 | 2026-05 | 2026-05-20T17:45:19Z | github_latest_commit_or_update_text | raw-github/archishmansengupta_autovoiceevals.md |
 | 63 | [argus-framework/argus-ai-debate](https://github.com/argus-framework/argus-ai-debate) | unknown | unknown | 2026-05-20T17:44:59Z | unknown_not_present_in_raw_capture | raw-github/argus-framework_argus-ai-debate.md |
@@ -229,7 +229,7 @@
 | 220 | [hkuds/openspace](https://github.com/hkuds/openspace) | 2026-04-16 | 2026-04 | 2026-05-20T17:45:19Z | github_latest_commit_or_update_text | raw-github/hkuds_openspace.md |
 | 221 | [hkust-knowcomp/awesome-llm-scientific-discovery](https://github.com/hkust-knowcomp/awesome-llm-scientific-discovery) | unknown | unknown | 2026-05-20T17:44:59Z | unknown_not_present_in_raw_capture | raw-github/hkust-knowcomp_awesome-llm-scientific-discovery.md |
 | 222 | [holaboss-ai/holaOS](https://github.com/holaboss-ai/holaOS) | 2026-05-27 | 2026-05 | 2026-05-27T22:00:12+08:00 | web_observed_public_github_page_2026_05_27 | raw-github/holaboss-ai_holaos.md |
-| 223 | [howdymary/hermes-agent-metaharness](https://github.com/howdymary/hermes-agent-metaharness) | 2026-05-26 | 2026-05 | 2026-05-26T21:54:04+08:00 | web_observed_public_github_page_2026_05_26 | raw-github/howdymary_hermes-agent-metaharness.md |
+| 223 | [howdymary/hermes-agent-metaharness](https://github.com/howdymary/hermes-agent-metaharness) | 2026-06-03 | 2026-06 | 2026-06-03T07:52:50+08:00 | web_observed_public_github_page_2026_06_03 | raw-github/howdymary_hermes-agent-metaharness.md |
 | 224 | [howells/arc](https://github.com/howells/arc) | 2026-05-25 | 2026-05 | 2026-05-25T13:21:00+08:00 | browser-observed GitHub page/search snapshot during 2026-05-25T13:21:00+08:00; shell DNS for api.github.com failed and gh token was invalid | raw-github/howells_arc.md |
 | 225 | [huggingface/agents-course](https://github.com/huggingface/agents-course) | unknown | unknown | 2026-05-20T17:44:59Z | unknown_not_present_in_raw_capture | raw-github/huggingface_agents-course.md |
 | 226 | [huggingface/skills](https://github.com/huggingface/skills) | 2026-05-24 | 2026-05 | 2026-05-24T20:20:00+08:00 | web_github_page_open_2026-05-24 | raw-github/huggingface_skills.md |
@@ -318,7 +318,7 @@
 | 309 | [lmd0311/awesome-world-model](https://github.com/lmd0311/awesome-world-model) | 2026-05-21 | 2026-05 | 2026-05-20T17:45:19Z | github_latest_commit_or_update_text | raw-github/lmd0311_awesome-world-model.md |
 | 310 | [logikon-ai/awesome-deliberative-prompting](https://github.com/logikon-ai/awesome-deliberative-prompting) | 2021-03-24 | early | 2026-05-20T17:45:19Z | github_latest_commit_or_update_text | raw-github/logikon-ai_awesome-deliberative-prompting.md |
 | 311 | [longman-max/selfthinker](https://github.com/longman-max/selfthinker) | 2026-05-21 | 2026-05 | 2026-05-20T17:45:19Z | github_latest_commit_or_update_text | raw-github/longman-max_selfthinker.md |
-| 312 | [longmans/self-evolve](https://github.com/longmans/self-evolve) | 2026-06-01 | 2026-06 | 2026-06-01T01:50:26+08:00 | web_observed_public_github_page_2026_06_01 | raw-github/longmans_self-evolve.md |
+| 312 | [longmans/self-evolve](https://github.com/longmans/self-evolve) | 2026-06-03 | 2026-06 | 2026-06-03T07:52:50+08:00 | web_observed_public_github_page_2026_06_03 | raw-github/longmans_self-evolve.md |
 | 313 | [longyunfeigu/learn-hermes-agent](https://github.com/longyunfeigu/learn-hermes-agent) | 2026-05-21 | 2026-05 | 2026-05-20T17:45:19Z | github_latest_commit_or_update_text | raw-github/longyunfeigu_learn-hermes-agent.md |
 | 314 | [lsdefine/genericagent](https://github.com/lsdefine/genericagent) | 2026-05-21 | 2026-05 | 2026-05-20T17:45:19Z | github_latest_commit_or_update_text | raw-github/lsdefine_genericagent.md |
 | 315 | [ltzheng/curriculummarl](https://github.com/ltzheng/curriculummarl) | 2026-05-21 | 2026-05 | 2026-05-20T17:45:19Z | github_latest_commit_or_update_text | raw-github/ltzheng_curriculummarl.md |
@@ -364,7 +364,7 @@
 | 355 | [mgechev/skillgrade](https://github.com/mgechev/skillgrade) | 2026-05-26 | 2026-05 | 2026-05-26T00:36:53+08:00 | web_observed_public_github_page_2026_05_26 | raw-github/mgechev_skillgrade.md |
 | 356 | [mgechev/skills-best-practices](https://github.com/mgechev/skills-best-practices) | 2026-05-24 | 2026-05 | 2026-05-26T03:41:36+08:00 | web_observed_public_github_page_and_skills_hub_sync_2026_05_24 | raw-github/mgechev_skills-best-practices.md |
 | 357 | [microsoft/agent-lightning](https://github.com/microsoft/agent-lightning) | 2026-05-30 | 2026-05 | 2026-05-30T01:15:12+08:00 | web_observed_public_github_page_2026_05_29 | raw-github/microsoft_agent-lightning.md |
-| 358 | [microsoft/SkillOpt](https://github.com/microsoft/SkillOpt) | 2026-05-28 | 2026-05 | 2026-05-28T04:00:48+08:00 | web_observed_public_github_page_2026_05_28 | raw-github/microsoft_skillopt.md |
+| 358 | [microsoft/SkillOpt](https://github.com/microsoft/SkillOpt) | 2026-06-03 | 2026-06 | 2026-06-03T07:52:50+08:00 | web_observed_public_github_page_2026_06_03 | raw-github/microsoft_skillopt.md |
 | 359 | [microsoft/skills](https://github.com/microsoft/skills) | 2026-05-25 | 2026-05 | 2026-05-24T19:09:37Z | web_observed_github_page | raw-github/microsoft_skills.md |
 | 360 | [microsoft/STATE-Bench](https://github.com/microsoft/STATE-Bench) | 2026-05-25 | 2026-05 | 2026-05-24T17:06:44Z | web_observed_github_page | raw-github/microsoft_state-bench.md |
 | 361 | [microsoft/waza](https://github.com/microsoft/waza) | 2026-05-26 | 2026-05 | 2026-05-26T01:38:44+08:00 | web_observed_public_github_page | raw-github/microsoft_waza.md |
@@ -502,7 +502,7 @@
 | 493 | [rtk-ai/icm](https://github.com/rtk-ai/icm) | 2026-05-25 | 2026-05 | 2026-05-24T18:08:21Z | web_observed_github_page | raw-github/rtk-ai_icm.md |
 | 494 | [rucbm/laser](https://github.com/rucbm/laser) | 2026-05-21 | 2026-05 | 2026-05-20T17:45:19Z | github_latest_commit_or_update_text | raw-github/rucbm_laser.md |
 | 495 | [RyanAlberts/best-of-Agent-Harnesses](https://github.com/RyanAlberts/best-of-Agent-Harnesses) | 2026-05-28 | 2026-05 | 2026-05-28T04:00:48+08:00 | web_observed_public_github_page_2026_05_28 | raw-github/ryanalberts_best-of-agent-harnesses.md |
-| 496 | [sachinsharma9780/memweave](https://github.com/sachinsharma9780/memweave) | 2026-05-29 | 2026-05 | 2026-05-29T04:05:21+08:00 | web_observed_public_github_page_2026_05_29 | raw-github/sachinsharma9780_memweave.md |
+| 496 | [sachinsharma9780/memweave](https://github.com/sachinsharma9780/memweave) | 2026-06-03 | 2026-06 | 2026-06-03T07:52:50+08:00 | web_observed_public_github_page_2026_06_03 | raw-github/sachinsharma9780_memweave.md |
 | 497 | [sakanaai/ai-scientist-v2](https://github.com/sakanaai/ai-scientist-v2) | 2024-05-13 | 2024-Q2 | 2026-05-20T17:45:19Z | github_latest_commit_or_update_text | raw-github/sakanaai_ai-scientist-v2.md |
 | 498 | [sakanaai/ai-scientist](https://github.com/sakanaai/ai-scientist) | 2026-05-21 | 2026-05 | 2026-05-20T17:45:19Z | github_latest_commit_or_update_text | raw-github/sakanaai_ai-scientist.md |
 | 499 | [sakanaai/shinkaevolve](https://github.com/sakanaai/shinkaevolve) | 2026-05-21 | 2026-05 | 2026-05-20T17:45:19Z | github_latest_commit_or_update_text | raw-github/sakanaai_shinkaevolve.md |

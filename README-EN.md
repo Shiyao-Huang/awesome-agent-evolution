@@ -37,9 +37,11 @@ Want to know whether an AI agent is actually improving itself, or just looking i
 
 | Repository | What this run repaired | Why it matters |
 |---|---|---|
-| [pinchbench/skill](https://github.com/pinchbench/skill) | Added the missing `projects/51-pinchbench-skill.md`, refreshed the raw snapshot, and attached deep/public reports. | It brings the skill/harness/runtime debate back to real tasks, measurable scoring, and transcript evidence. |
-| [vectorize-io/agent-memory-benchmark](https://github.com/vectorize-io/agent-memory-benchmark) | Refreshed stars/forks/issues/PRs, README methodology, and site-facing deep-report coverage. | It shows why memory evaluation must compare accuracy with speed, token cost, and agentic retrieval design. |
-| [EvoMap/awesome-agent-evolution](https://github.com/EvoMap/awesome-agent-evolution) | Added an external awesome-list comparator card, deep report, and public/site coverage. | It acts as an external mirror for how we package memory, benchmark, and Agent-Swarm narratives in our own README/site. |
+| [howdymary/hermes-agent-metaharness](https://github.com/howdymary/hermes-agent-metaharness) | Refreshed the raw snapshot, project card, site-facing public report, and classification metadata from the public GitHub page observed on 2026-06-03. | It keeps harness evolution in an explicit benchmark outer loop instead of smuggling self-evolution into vague model-weight mystique. |
+| [Arc-Computer/CL-Bench](https://github.com/Arc-Computer/CL-Bench) | Refreshed the raw snapshot, project card, site-facing public report, and classification metadata from the public GitHub page observed on 2026-06-03. | It moves the benchmark target from one-shot QA into stateful multi-turn work, which is closer to the long-horizon reliability users actually care about. |
+| [microsoft/SkillOpt](https://github.com/microsoft/SkillOpt) | Refreshed the raw snapshot, project card, site-facing public report, and classification metadata from the public GitHub page observed on 2026-06-03. | It treats skills as trainable, verifiable, deployable artifacts, making it a key sample of evolving agent behavior without changing the base model. |
+| [sachinsharma9780/memweave](https://github.com/sachinsharma9780/memweave) | Refreshed the raw snapshot, project card, site-facing public report, and classification metadata from the public GitHub page observed on 2026-06-03. | It turns memory from a black-box vector store into a diffable file layer, matching the project requirement for traceable, auditable long-term memory. |
+| [longmans/self-evolve](https://github.com/longmans/self-evolve) | Refreshed the raw snapshot, project card, site-facing public report, and classification metadata from the public GitHub page observed on 2026-06-03. | It is one of the few OpenClaw examples that connects feedback, memory, Q-value updates, and an installable plugin into one runnable loop. |
 
 ```mermaid
 flowchart LR

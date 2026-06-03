@@ -2,31 +2,28 @@
 
 Truth source: `.mermaid/current/graph.json`
 
-Generated: 2026-06-01T20:27:31+08:00
+Generated: 2026-06-03T07:52:50+08:00
 
 ## Nodes
 
 - **intent.direct-user-input** (ops, active): Use only direct user inputs as goal source for the hourly public metadata loop.
 - **raw.github.hourly-captures** (raw, updated): Keep public GitHub evidence raw and timestamped before analysis.
-- **processed.github-classification** (processed, updated): Classify raw captures into benchmark, harness, memory, skill, resource-index, and evolution-runtime roles.
-- **work.learning-notes** (work, updated): Record blockers, evidence quality, and working principle for the next agent.
-- **results.public-site** (results, updated): Expose the metadata delta to the SEO/project site instead of leaving it internal.
-- **results.public-visualizations** (results, updated): Make the raw-to-public evidence flow visible on the website and paper status page.
+- **processed.github-classification** (processed, updated): Refresh classification rows and model cards for harness, benchmark, skill, memory, and self-evolution repos.
+- **results.public-site** (results, updated): Push the metadata refresh into README/i18n, project reports, and site project data.
+- **work.learning-note** (work, updated): Record the data flow, blockers, and repo-level evidence for the next run.
 
 ## Edges
 
 - intent.direct-user-input --governs--> raw.github.hourly-captures
 - raw.github.hourly-captures --feeds--> processed.github-classification
 - processed.github-classification --publishes--> results.public-site
-- processed.github-classification --explains--> work.learning-notes
-- work.learning-notes --handoff--> intent.direct-user-input
-- processed.github-classification --visualizes--> results.public-visualizations
+- processed.github-classification --explains--> work.learning-note
+- work.learning-note --handoff--> intent.direct-user-input
 
 ## Current Run Evidence
 
-- API-observed repos: opensquilla/opensquilla, GCWing/BitFun, oceanbase/powermem, mnemon-dev/mnemon, alibaizhanov/mengram, im4codes/imcodes, weaviate/query-agent-benchmarking.
-- New raw files: raw-github/opensquilla_opensquilla.md, raw-github/gcwing_bitfun.md, raw-github/oceanbase_powermem.md, raw-github/mnemon-dev_mnemon.md, raw-github/alibaizhanov_mengram.md, raw-github/im4codes_imcodes.md, raw-github/weaviate_query-agent-benchmarking.md.
-- New public model cards and site reports: project/report ids 377, 378, 379, 380, 381, 382, 383.
-- Public GitHub API metadata was reachable; local `gh` token remains invalid for authenticated paths.
-- GitNexus status is available but stale before this iteration commit; a post-commit refresh may be needed for symbol-level freshness.
-- graph.json remains the Mermaid object graph truth source; graph.mmd and graph.md are rendered views.
+- Web-observed repos: howdymary/hermes-agent-metaharness, Arc-Computer/CL-Bench, microsoft/SkillOpt, sachinsharma9780/memweave, longmans/self-evolve.
+- Refreshed raw files: raw-github/howdymary_hermes-agent-metaharness.md, raw-github/arc-computer_cl-bench.md, raw-github/microsoft_skillopt.md, raw-github/sachinsharma9780_memweave.md, raw-github/longmans_self-evolve.md.
+- Refreshed public reports: site/public/reports/projects/250-hermes-agent-metaharness-outer-loop.md, site/public/reports/projects/392-arc-continual-learning-benchmark.md, site/public/reports/projects/272-skillopt-self-evolving-agent-skills.md, site/public/reports/projects/288-memweave-markdown-agent-memory.md, site/public/reports/projects/355-self-evolve-openclaw-playground.md.
+- Shell GitHub API access remained blocked in this workspace, so freshness is public-page observed rather than API-verified.
+- GitNexus CLI is available, but `npx gitnexus status` reported the local index is stale before this iteration commit.

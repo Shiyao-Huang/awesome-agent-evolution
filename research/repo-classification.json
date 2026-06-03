@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-01T20:27:31+08:00",
+  "generated_at": "2026-06-03T07:52:50+08:00",
   "rows": [
     {
       "repo": "01-ai/langcrew",
@@ -894,11 +894,11 @@
       "prior_unclassified": "true",
       "final_category": "评测/evaluation",
       "function_tag": "benchmark-suite",
-      "base_theme": "evaluation",
+      "base_theme": "benchmark",
       "stack": "Python/SQL/CRM Workflow Benchmark",
       "time_slice": "2026-06",
-      "content_timestamp": "2026-06-02",
-      "evidence": "web-observed GitHub page showed 19 stars, 3 forks, 50 commits, Apache-2.0 license, and explicit continual-learning benchmark framing for stateful environments.",
+      "content_timestamp": "2026-06-03",
+      "evidence": "web-observed GitHub page showed 19 stars, 3 forks, 50 commits, Apache-2.0 license, CRM-style continual-learning workflows, 1,200+ conversations, and explicit evaluation harness support.",
       "description": "Arc-Computer/CL-Bench is a benchmark framework for evaluating LLM agent continual learning in stateful environments with CRM-style workflows."
     },
     {
@@ -3334,16 +3334,16 @@
     {
       "repo": "howdymary/hermes-agent-metaharness",
       "url": "https://github.com/howdymary/hermes-agent-metaharness",
-      "stars": "86",
+      "stars": "88",
       "prior_category": "-",
       "prior_unclassified": "true",
-      "final_category": "框架/framework",
-      "function_tag": "agent-evolution-infra",
-      "base_theme": "evaluation",
-      "stack": "Python",
-      "time_slice": "2026-05",
-      "content_timestamp": "2026-05-26",
-      "evidence": "web-observed GitHub page showed 86 stars, 9 forks, 11 commits, MIT license, and README sections describing TBLite/TB2 benchmark orchestration, baseline-candidate comparability checks, deterministic wrapper mutation, and frontier-backed search.",
+      "final_category": "评测/evaluation",
+      "function_tag": "benchmark-harness",
+      "base_theme": "harness",
+      "stack": "Python/Hermes Benchmark Outer Loop",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-03",
+      "evidence": "web-observed GitHub page showed 88 stars, 9 forks, 11 commits, MIT license, explicit TBLite/TB2 benchmark orchestration, baseline-vs-candidate comparison, and frontier-backed deterministic search.",
       "description": "Hermes Agent Meta-Harness is a standalone outer-loop evaluator that optimizes Hermes benchmark harness candidates without modifying model weights."
     },
     {
@@ -4672,14 +4672,14 @@
       "stars": "96",
       "prior_category": "-",
       "prior_unclassified": "true",
-      "final_category": "框架/framework",
-      "function_tag": "framework-runtime",
+      "final_category": "应用/application",
+      "function_tag": "openclaw-self-evolve",
       "base_theme": "evolution",
-      "stack": "TypeScript/OpenClaw Playground/Workflow Benchmark Harness",
+      "stack": "TypeScript/OpenClaw Plugin/Workflow Benchmark Harness",
       "time_slice": "2026-06",
-      "content_timestamp": "2026-06-01",
-      "evidence": "web-observed GitHub page showed 96 stars, 5 forks, 27 commits, MIT license, and TypeScript code with explicit OpenClaw self-evolve workflow positioning.",
-      "description": "longmans/self-evolve is a vibe-coding playground for building, running, and benchmarking OpenClaw plugins and workflows with local agents and MCP integrations."
+      "content_timestamp": "2026-06-03",
+      "evidence": "web-observed GitHub page showed 96 stars, 5 forks, 27 commits, MIT license, OpenClaw plugin install flow, before_prompt_build and agent_end hooks, Q-value updates, episodic memories, and optional shared remote memory service.",
+      "description": "longmans/self-evolve is a self-learning OpenClaw plugin that learns from feedback and turns runtime experience into reusable memory."
     },
     {
       "repo": "longyunfeigu/learn-hermes-agent",
@@ -5362,14 +5362,14 @@
       "stars": "1100",
       "prior_category": "-",
       "prior_unclassified": "true",
-      "final_category": "工具/tool",
-      "function_tag": "skill-orchestration",
+      "final_category": "论文代码/paper-code",
+      "function_tag": "skill-optimizer",
       "base_theme": "skill",
       "stack": "Python/HTML/Skill Training Loops",
-      "time_slice": "2026-05",
-      "content_timestamp": "2026-05-28",
-      "evidence": "web-observed GitHub page showed 1.1k stars, 100 forks, 50 commits, MIT license, and README emphasis on trajectory-driven skill optimization without changing base model weights.",
-      "description": "SkillOpt trains reusable natural-language skills for frozen LLM agents through validation-gated iterative optimization loops."
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-03",
+      "evidence": "web-observed GitHub page showed 1.1k stars, 100 forks, 91 commits, MIT license, best_skill.md deployment artifacts, per-step output directories, and cross-harness benchmark claims across direct chat, Codex CLI, and Claude Code.",
+      "description": "SkillOpt is a text-space optimizer that trains reusable natural-language skills for frozen LLM agents through trajectory-driven edits, validation-gated updates, and deployable best_skill.md artifacts."
     },
     {
       "repo": "microsoft/skills",
@@ -7433,12 +7433,12 @@
       "prior_category": "-",
       "prior_unclassified": "true",
       "final_category": "框架/framework",
-      "function_tag": "memory-substrate",
+      "function_tag": "memory-runtime",
       "base_theme": "memory",
       "stack": "Python/SQLite/Markdown Memory Store",
-      "time_slice": "2026-05",
-      "content_timestamp": "2026-05-29",
-      "evidence": "web-observed GitHub page showed 39 stars, 2 forks, 57 commits, MIT license, and README benchmark claims on LongMemEval-S memory retrieval.",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-03",
+      "evidence": "web-observed GitHub page showed 39 stars, 2 forks, 57 commits, MIT license, plain-Markdown source-of-truth memory, SQLite indexing, OpenClaw inspiration, and release notes referencing LongMemEval-S benchmark work.",
       "description": "memweave is a zero-infrastructure async Python memory library for AI agents using markdown files and SQLite-backed searchable persistence."
     },
     {

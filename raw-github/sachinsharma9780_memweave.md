@@ -1,10 +1,10 @@
 ---
 repo: sachinsharma9780/memweave
 url: https://github.com/sachinsharma9780/memweave
-content_timestamp: 2026-05-29
-time_slice: 2026-05
-timestamp_source: web_observed_public_github_page_2026_05_29
-collected_at: 2026-05-29T04:05:21+08:00
+content_timestamp: 2026-06-03
+time_slice: 2026-06
+timestamp_source: web_observed_public_github_page_2026_06_03
+collected_at: 2026-06-03T07:52:50+08:00
 source: github
 ---
 
@@ -16,7 +16,7 @@ source: github
 
 # Raw public page capture notes
 
-This raw-style public GitHub page capture was recorded by the hourly public metadata update. Shell GitHub API access failed DNS resolution and local GitHub CLI auth was invalid, so freshness is web-observed rather than API-verified.
+This raw-style public GitHub page capture was recorded by the hourly public metadata update. Shell GitHub API access remains blocked in this workspace, so freshness is web-observed rather than API-verified.
 
 ## Visible repository metadata
 
@@ -27,14 +27,14 @@ This raw-style public GitHub page capture was recorded by the hourly public meta
 - Commits: 57
 - License: MIT
 - Primary language / stack signal: Python/SQLite/Markdown Memory Store
-- Collection timestamp: 2026-05-29T04:05:21+08:00
+- Collection timestamp: 2026-06-03T07:52:50+08:00
 
 ## Visible README / page excerpts
 
-- README states memweave gives AI agents persistent searchable memory stored as markdown files indexed by SQLite.
-- Repository includes benchmarks, examples, and tests for memory retrieval workflows.
-- README documents LongMemEval-S evaluation and reproducibility settings.
-- Counts were taken from the public GitHub page without authenticated API claims.
+- The README says every memory is a plain Markdown file that can be opened, edited, grepped, and version-controlled.
+- SQLite is treated as a rebuildable derived index rather than the source of truth.
+- The repository includes benchmarks, examples, tests, and release notes tied to LongMemEval-S work.
+- Public GitHub page evidence was observed without authenticated API access.
 
 ## Raw capture boundary
 

@@ -1,14 +1,14 @@
 ---
 repo: microsoft/SkillOpt
 url: https://github.com/microsoft/SkillOpt
-content_timestamp: 2026-05-28
-time_slice: 2026-05
-timestamp_source: web_observed_public_github_page_2026_05_28
-collected_at: 2026-05-28T04:00:48+08:00
+content_timestamp: 2026-06-03
+time_slice: 2026-06
+timestamp_source: web_observed_public_github_page_2026_06_03
+collected_at: 2026-06-03T07:52:50+08:00
 source: github
 ---
 
-## GitHub - microsoft/SkillOpt: SkillOpt trains reusable natural-language skills for frozen LLM agents through validation-gated iterative optimization loops.
+## GitHub - microsoft/SkillOpt: SkillOpt is a text-space optimizer that trains reusable natural-language skills for frozen LLM agents through trajectory-driven edits, validation-gated updates, and deployable best_skill.md artifacts.
 
 **Source**: https://github.com/microsoft/SkillOpt
 
@@ -16,7 +16,7 @@ source: github
 
 # Raw public page capture notes
 
-This raw-style public GitHub page capture was recorded by the hourly public metadata update. Shell GitHub API access failed DNS resolution and local GitHub CLI auth was invalid, so freshness is web-observed rather than API-verified.
+This raw-style public GitHub page capture was recorded by the hourly public metadata update. Shell GitHub API access remains blocked in this workspace, so freshness is web-observed rather than API-verified.
 
 ## Visible repository metadata
 
@@ -24,17 +24,17 @@ This raw-style public GitHub page capture was recorded by the hourly public meta
 - URL: https://github.com/microsoft/SkillOpt
 - Stars: 1100
 - Forks: 100
-- Commits: 50
+- Commits: 91
 - License: MIT
 - Primary language / stack signal: Python/HTML/Skill Training Loops
-- Collection timestamp: 2026-05-28T04:00:48+08:00
+- Collection timestamp: 2026-06-03T07:52:50+08:00
 
 ## Visible README / page excerpts
 
-- README states SkillOpt trains self-evolving agent skills with epochs and validation gates.
-- Install and run instructions target reproducible skill optimization for agent pipelines.
-- Repository evidence includes MIT license and arXiv-linked methodology context.
-- Counts are captured from public page metadata, not authenticated API responses.
+- The README frames SkillOpt as a text-space optimizer that improves skill files without changing the base model.
+- The public page exposes structured outputs such as history.json, runtime_state.json, best_skill.md, and per-step artifacts.
+- The repository claims broad benchmark coverage across direct chat, Codex CLI, and Claude Code execution harnesses.
+- Public GitHub page evidence was observed without authenticated API access.
 
 ## Raw capture boundary
 

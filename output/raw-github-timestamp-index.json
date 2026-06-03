@@ -539,10 +539,10 @@
       "repo": "Arc-Computer/CL-Bench",
       "url": "https://github.com/Arc-Computer/CL-Bench",
       "file": "raw-github/arc-computer_cl-bench.md",
-      "content_timestamp": "2026-06-02",
-      "collected_at": "2026-06-02T13:53:05+08:00",
+      "content_timestamp": "2026-06-03",
+      "collected_at": "2026-06-03T07:52:50+08:00",
       "time_slice": "2026-06",
-      "timestamp_source": "web_observed_public_github_page_2026_06_02"
+      "timestamp_source": "web_observed_public_github_page_2026_06_03"
     },
     {
       "repo": "ArcadeAI/openclaw-arcade-plugin",
@@ -2006,10 +2006,10 @@
       "repo": "howdymary/hermes-agent-metaharness",
       "url": "https://github.com/howdymary/hermes-agent-metaharness",
       "file": "raw-github/howdymary_hermes-agent-metaharness.md",
-      "content_timestamp": "2026-05-26",
-      "collected_at": "2026-05-26T21:54:04+08:00",
-      "time_slice": "2026-05",
-      "timestamp_source": "web_observed_public_github_page_2026_05_26"
+      "content_timestamp": "2026-06-03",
+      "collected_at": "2026-06-03T07:52:50+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "web_observed_public_github_page_2026_06_03"
     },
     {
       "repo": "howells/arc",
@@ -2807,10 +2807,10 @@
       "repo": "longmans/self-evolve",
       "url": "https://github.com/longmans/self-evolve",
       "file": "raw-github/longmans_self-evolve.md",
-      "content_timestamp": "2026-06-01",
-      "collected_at": "2026-06-01T01:50:26+08:00",
+      "content_timestamp": "2026-06-03",
+      "collected_at": "2026-06-03T07:52:50+08:00",
       "time_slice": "2026-06",
-      "timestamp_source": "web_observed_public_github_page_2026_06_01"
+      "timestamp_source": "web_observed_public_github_page_2026_06_03"
     },
     {
       "repo": "longyunfeigu/learn-hermes-agent",
@@ -3221,10 +3221,10 @@
       "repo": "microsoft/SkillOpt",
       "url": "https://github.com/microsoft/SkillOpt",
       "file": "raw-github/microsoft_skillopt.md",
-      "content_timestamp": "2026-05-28",
-      "collected_at": "2026-05-28T04:00:48+08:00",
-      "time_slice": "2026-05",
-      "timestamp_source": "web_observed_public_github_page_2026_05_28"
+      "content_timestamp": "2026-06-03",
+      "collected_at": "2026-06-03T07:52:50+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "web_observed_public_github_page_2026_06_03"
     },
     {
       "repo": "microsoft/skills",
@@ -4463,10 +4463,10 @@
       "repo": "sachinsharma9780/memweave",
       "url": "https://github.com/sachinsharma9780/memweave",
       "file": "raw-github/sachinsharma9780_memweave.md",
-      "content_timestamp": "2026-05-29",
-      "collected_at": "2026-05-29T04:05:21+08:00",
-      "time_slice": "2026-05",
-      "timestamp_source": "web_observed_public_github_page_2026_05_29"
+      "content_timestamp": "2026-06-03",
+      "collected_at": "2026-06-03T07:52:50+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "web_observed_public_github_page_2026_06_03"
     },
     {
       "repo": "sakanaai/ai-scientist-v2",

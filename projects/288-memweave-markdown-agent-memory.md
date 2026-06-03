@@ -1,4 +1,4 @@
-# MemWeave Model Card
+# Persistent Agent Memory Substrate Model Card
 
 | Field | Value |
 |---|---|
@@ -8,7 +8,7 @@
 | Language | Python |
 | License | MIT |
 | Raw capture | raw-github/sachinsharma9780_memweave.md |
-| Updated by | hourly public metadata update, 2026-05-29 04:05 +0800 |
+| Updated by | hourly public metadata update, 2026-06-03 07:52 +0800 |
 
 ## 1. Role in Self Evolve
 
@@ -20,12 +20,12 @@ agent writes memory markdown -> sqlite vector+fts index build -> hybrid retrieva
 
 ## 3. Evidence Path
 
-web-observed GitHub page showed 39 stars, 2 forks, 57 commits, MIT license, and README benchmark claims on LongMemEval-S memory retrieval. Shell GitHub API access remained blocked by DNS and local `gh` auth was invalid, so this card treats the snapshot as web-observed rather than API-verified.
+web-observed GitHub page showed 39 stars, 2 forks, 57 commits, MIT license, plain-Markdown source-of-truth memory, SQLite indexing, OpenClaw inspiration, and release notes referencing LongMemEval-S benchmark work. This iteration keeps freshness honest: the snapshot comes from the current public GitHub page, while shell GitHub API access remained blocked in this workspace.
 
 ## 4. Teaching Use
 
-Use this card to explain Persistent Agent Memory Substrate: it shows how harness/runtime/benchmark layers convert agent behavior into reproducible and auditable engineering workflows.
+Use this card to explain Persistent Agent Memory Substrate: it shows how harness/runtime/benchmark or memory/skill layers convert agent behavior into reproducible and auditable engineering workflows.
 
 ## 5. Limits
 
-The repository was not cloned in this iteration; no benchmark run, plugin install, workflow execution, or agent loop experiment was executed. Counts and claims are visible public-page/search signals unless independently revalidated later.
+The repository was not cloned in this iteration; no benchmark run, plugin install, workflow execution, or agent loop experiment was executed. Counts and claims are visible public-page signals unless independently revalidated later.

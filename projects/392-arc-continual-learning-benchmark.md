@@ -1,4 +1,4 @@
-# Arc Continual Learning Benchmark Model Card
+# Stateful Continual-Learning Benchmark for LLM Agents Model Card
 
 | Field | Value |
 |---|---|
@@ -8,11 +8,11 @@
 | Language | Python |
 | License | Apache-2.0 |
 | Raw capture | raw-github/arc-computer_cl-bench.md |
-| Updated by | hourly public metadata update, 2026-06-02 13:53 +0800 |
+| Updated by | hourly public metadata update, 2026-06-03 07:52 +0800 |
 
 ## 1. Role in Self Evolve
 
-Arc-Computer/CL-Bench is a benchmark framework for evaluating LLM agent continual learning in stateful environments with CRM-style workflows. It matters because self-evolving agents need repeatable harness control, measurable feedback loops, independent benchmarks, and durable memory/runtime surfaces before claiming stable improvement.
+Arc-Computer/CL-Bench is a benchmark framework for evaluating LLM agent continual learning in stateful environments with CRM-style workflows. It matters because self-evolving agents need repeatable harness control, measurable feedback loops, and reusable skill procedures before claiming stable improvement.
 
 ## 2. Working Principle
 
@@ -20,12 +20,12 @@ place agents inside stateful multi-turn workflows -> mutate persistent entities 
 
 ## 3. Evidence Path
 
-web-observed GitHub page showed 19 stars, 3 forks, 50 commits, Apache-2.0 license, and explicit continual-learning benchmark framing for stateful environments. Shell GitHub API access remained blocked by DNS and local `gh` auth was invalid, so this card treats the snapshot as web-observed rather than API-verified.
+web-observed GitHub page showed 19 stars, 3 forks, 50 commits, Apache-2.0 license, CRM-style continual-learning workflows, 1,200+ conversations, and explicit evaluation harness support. This iteration keeps freshness honest: the snapshot comes from the current public GitHub page, while shell GitHub API access remained blocked in this workspace.
 
 ## 4. Teaching Use
 
-Use this card to explain Stateful Continual-Learning Benchmark for LLM Agents: it shows how benchmark/harness or memory/runtime layers convert agent behavior into reproducible and auditable engineering workflows.
+Use this card to explain Stateful Continual-Learning Benchmark for LLM Agents: it shows how harness/runtime/benchmark or memory/skill layers convert agent behavior into reproducible and auditable engineering workflows.
 
 ## 5. Limits
 
-The repository was not cloned in this iteration; no benchmark run, workflow execution, or agent loop experiment was executed. Counts and claims are visible public-page/search signals unless independently revalidated later.
+The repository was not cloned in this iteration; no benchmark run, plugin install, workflow execution, or agent loop experiment was executed. Counts and claims are visible public-page signals unless independently revalidated later.
