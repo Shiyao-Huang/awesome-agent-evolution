@@ -37,11 +37,11 @@
 
 | 仓库 | 这轮补了什么 | 为什么重要 |
 |---|---|---|
-| [sola-st/repairagent](https://github.com/sola-st/RepairAgent) | 刷新 raw snapshot、project card、site public report 与分类元数据，统一到 2026-06-03 的公开 GitHub 页面证据。 | 它把“会修 bug”的说法压回到明确的补丁生成与测试闭环，而不是只给 coding demo 热度。 |
-| [zhang677/accelopt](https://github.com/zhang677/AccelOpt) | 刷新 raw snapshot、project card、site public report 与分类元数据，统一到 2026-06-03 的公开 GitHub 页面证据。 | 它把“自进化 agent”放到真实硬件优化压力下，比抽象 prompt 试错更接近高价值工程闭环。 |
-| [hwfengcs/dm-code-agent](https://github.com/hwfengcs/DM-Code-Agent) | 刷新 raw snapshot、project card、site public report 与分类元数据，统一到 2026-06-03 的公开 GitHub 页面证据。 | 它提供了用户真正关心的审计与 replay 边界，可用于判断 coding agent 的改进是否可信。 |
-| [rucbm/laser](https://github.com/RUCBM/LaSeR) | 刷新 raw snapshot、project card、site public report 与分类元数据，统一到 2026-06-03 的公开 GitHub 页面证据。 | 它补上了“self-rewarding 到底是不是可运行 recipe”这一块，而不只是 survey 里的概念标签。 |
-| [arthurmgraf/graphmind](https://github.com/arthurmgraf/graphmind) | 刷新 raw snapshot、project card、site public report 与分类元数据，统一到 2026-06-03 的公开 GitHub 页面证据。 | 它把 knowledge graph、agent runtime 和 retrieval self-eval 接到一起，是图式 agent 编排的重要相关样本。 |
+| [algorithmicsuperintelligence/openevolve](https://github.com/algorithmicsuperintelligence/openevolve) | 把 raw capture 从 `unknown` 时间修到 2026-06-03 的公开 GitHub 页面观测，并同步更新分类、site card 与 public report 的 star/fork snapshot。 | 它是当前最强的进化式 coding-agent 基础设施样本之一，不能继续用失真的 `6 stars` 本地旧值污染排序和论证。 |
+| [EverMind-AI/EverOS](https://github.com/EverMind-AI/EverOS) | 刷新 raw snapshot、memory 主题分类、site data 与 model card，把公开页面可见的 6.8k / 669 star-fork 快照和 MCP/skills 信号带回仓库。 | 它把长期记忆、skills、MCP 和自进化评测套件连在一起，是 memory substrate 方向的公开核心样本。 |
+| [microsoft/SkillOpt](https://github.com/microsoft/SkillOpt) | 用 2026-06-03 的公开 GitHub 页面重写 skill optimizer metadata，把 star/fork 从 1.1k / 100 提升到 4.5k / 452，并保留 API 受阻声明。 | 它说明“skill 也是可训练状态”，是 skill-layer 自进化而不是 model finetune 的强证据。 |
+| [RyanAlberts/best-of-Agent-Harnesses](https://github.com/RyanAlberts/best-of-Agent-Harnesses) | 刷新 harness landscape index 的 raw/site/report，并把 README 内部 “stars captured on 2026-05-31” 的方法说明写回证据链。 | 它是 harness 方向的排序与入口面，适合作为读者理解 2026 agent harness 生态的对照索引。 |
+| [pinchbench/skill](https://github.com/pinchbench/skill) | 更新 benchmark raw/site/report 快照到 2026-06-03，修正 fork / issue 计数，并保留 transcript-retention 与 leaderboard upload 的公开方法信号。 | 它提供了真实任务、外部 judge 与 transcript 留存，是判断 agent 改进是否可信的 benchmark 面。 |
 
 ```mermaid
 flowchart LR

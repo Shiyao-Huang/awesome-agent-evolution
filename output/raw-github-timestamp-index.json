@@ -2,7 +2,7 @@
   "generated_at": "2026-06-03T00:00:00+08:00",
   "total": 677,
   "updated_files": 677,
-  "unknown_content_timestamp": 106,
+  "unknown_content_timestamp": 105,
   "records": [
     {
       "repo": "01-ai/langcrew",
@@ -431,10 +431,10 @@
       "repo": "algorithmicsuperintelligence/openevolve",
       "url": "https://github.com/algorithmicsuperintelligence/openevolve",
       "file": "raw-github/algorithmicsuperintelligence_openevolve.md",
-      "content_timestamp": "unknown",
-      "collected_at": "2026-05-20T17:44:59Z",
-      "time_slice": "unknown",
-      "timestamp_source": "unknown_not_present_in_raw_capture"
+      "content_timestamp": "2026-06-03",
+      "collected_at": "2026-06-03T19:56:18+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "web_observed_public_github_page_2026_06_03"
     },
     {
       "repo": "alibaizhanov/mengram",
@@ -1493,10 +1493,10 @@
       "repo": "EverMind-AI/EverOS",
       "url": "https://github.com/EverMind-AI/EverOS",
       "file": "raw-github/evermind-ai_everos.md",
-      "content_timestamp": "2026-05-24",
-      "collected_at": "2026-05-24T19:01:37+08:00",
-      "time_slice": "2026-05",
-      "timestamp_source": "web_github_page_open_2026-05-24"
+      "content_timestamp": "2026-06-03",
+      "collected_at": "2026-06-03T19:56:18+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "web_observed_public_github_page_2026_06_03"
     },
     {
       "repo": "evoagentx/awesome-self-evolving-agents",
@@ -4049,10 +4049,10 @@
       "repo": "pinchbench/skill",
       "url": "https://github.com/pinchbench/skill",
       "file": "raw-github/pinchbench_skill.md",
-      "content_timestamp": "2026-06-02",
-      "collected_at": "2026-06-02T19:52:08+08:00",
+      "content_timestamp": "2026-06-03",
+      "collected_at": "2026-06-03T19:56:18+08:00",
       "time_slice": "2026-06",
-      "timestamp_source": "web_github_page_open_2026-06-02"
+      "timestamp_source": "web_observed_public_github_page_2026_06_03"
     },
     {
       "repo": "pingcap/ossinsight",
@@ -4454,10 +4454,10 @@
       "repo": "RyanAlberts/best-of-Agent-Harnesses",
       "url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses",
       "file": "raw-github/ryanalberts_best-of-agent-harnesses.md",
-      "content_timestamp": "2026-05-28",
-      "collected_at": "2026-05-28T04:00:48+08:00",
-      "time_slice": "2026-05",
-      "timestamp_source": "web_observed_public_github_page_2026_05_28"
+      "content_timestamp": "2026-06-03",
+      "collected_at": "2026-06-03T19:56:18+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "web_observed_public_github_page_2026_06_03"
     },
     {
       "repo": "sachinsharma9780/memweave",

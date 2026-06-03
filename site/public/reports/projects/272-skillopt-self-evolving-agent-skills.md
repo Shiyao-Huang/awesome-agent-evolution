@@ -4,11 +4,11 @@
 |---|---|
 | Repository | [microsoft/SkillOpt](https://github.com/microsoft/SkillOpt) |
 | Category | Self-Evolving Agent Skill Optimizer |
-| Stars / forks snapshot | 1100 / 100 |
+| Stars / forks snapshot | 4500 / 452 |
 | Language | Python |
 | License | MIT |
 | Raw capture | raw-github/microsoft_skillopt.md |
-| Updated by | hourly public metadata update, 2026-06-03 07:52 +0800 |
+| Updated by | hourly public metadata update, 2026-06-03 19:56 +0800 |
 
 ## 1. Role in Self Evolve
 
@@ -20,7 +20,7 @@ trajectory-driven skill edits -> validation-gated updates -> epoch/batch-style s
 
 ## 3. Evidence Path
 
-web-observed GitHub page showed 1.1k stars, 100 forks, 91 commits, MIT license, best_skill.md deployment artifacts, per-step output directories, and cross-harness benchmark claims across direct chat, Codex CLI, and Claude Code. This iteration keeps freshness honest: the snapshot comes from the current public GitHub page, while shell GitHub API access remained blocked in this workspace.
+web-observed GitHub page showed 4.5k stars, 452 forks, 91 commits, MIT license, best_skill.md deployment artifacts, per-step output directories, a 52/52 best-or-tied-best result banner, and cross-harness benchmark claims across direct chat, Codex CLI, and Claude Code. This iteration keeps freshness honest: the snapshot comes from the current public GitHub page, while shell GitHub API access remained blocked in this workspace.
 
 ## 4. Teaching Use
 

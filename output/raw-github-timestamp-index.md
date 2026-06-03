@@ -3,7 +3,7 @@
 Generated: 2026-06-03T00:00:00+08:00
 
 - Total raw GitHub captures: 677
-- Unknown content_timestamp: 106
+- Unknown content_timestamp: 105
 
 | # | Repo | content_timestamp | time_slice | collected_at | source | File |
 |---:|---|---|---|---|---|---|
@@ -54,7 +54,7 @@ Generated: 2026-06-03T00:00:00+08:00
 | 45 | [aiwaves-cn/agents](https://github.com/aiwaves-cn/agents) | 2024-06-25 | 2024-Q2 | 2026-05-20T17:45:19Z | github_latest_commit_or_update_text | raw-github/aiwaves-cn_agents.md |
 | 46 | [akillness/oh-my-skills](https://github.com/akillness/oh-my-skills) | 2026-05-25 | 2026-05 | 2026-05-25T01:19:32Z | web_observed_github_page_2026_05_25 | raw-github/akillness_oh-my-skills.md |
 | 47 | [alberto-codes/gepa-adk](https://github.com/alberto-codes/gepa-adk) | 2026-03-11 | 2026-03 | 2026-05-20T17:44:59Z | github_latest_commit_or_update_text | raw-github/alberto-codes_gepa-adk.md |
-| 48 | [algorithmicsuperintelligence/openevolve](https://github.com/algorithmicsuperintelligence/openevolve) | unknown | unknown | 2026-05-20T17:44:59Z | unknown_not_present_in_raw_capture | raw-github/algorithmicsuperintelligence_openevolve.md |
+| 48 | [algorithmicsuperintelligence/openevolve](https://github.com/algorithmicsuperintelligence/openevolve) | 2026-06-03 | 2026-06 | 2026-06-03T19:56:18+08:00 | web_observed_public_github_page_2026_06_03 | raw-github/algorithmicsuperintelligence_openevolve.md |
 | 49 | [alibaizhanov/mengram](https://github.com/alibaizhanov/mengram) | 2026-06-01 | 2026-06 | 2026-06-01T20:27:31+08:00 | github_public_api_observed_2026_06_01 | raw-github/alibaizhanov_mengram.md |
 | 50 | [Alienfader/continuity-benchmarks](https://github.com/Alienfader/continuity-benchmarks) | 2026-05-29 | 2026-05 | 2026-05-29T04:05:21+08:00 | web_observed_public_github_page_2026_05_29 | raw-github/alienfader_continuity-benchmarks.md |
 | 51 | [alirezarezvani/claude-skills](https://github.com/alirezarezvani/claude-skills) | 2026-05-25 | 2026-05 | 2026-05-24T23:15:54Z | web_observed_github_page_or_search_result | raw-github/alirezarezvani_claude-skills.md |
@@ -172,7 +172,7 @@ Generated: 2026-06-03T00:00:00+08:00
 | 163 | [evalops/dspy-0to1-guide](https://github.com/evalops/dspy-0to1-guide) | unknown | unknown | 2026-05-20T17:44:59Z | unknown_not_present_in_raw_capture | raw-github/evalops_dspy-0to1-guide.md |
 | 164 | [evalstate/fast-agent](https://github.com/evalstate/fast-agent) | 2026-05-25 | 2026-05 | 2026-05-24T20:12:04Z | web_observed_github_page | raw-github/evalstate_fast-agent.md |
 | 165 | [evermind-ai/everos?tab=readme-ov-file](https://github.com/evermind-ai/everos?tab=readme-ov-file) | 2025-02-01 | 2025-02 | 2026-05-20T17:44:59Z | github_latest_commit_or_update_text | raw-github/evermind-ai_everos?tab=readme-ov-file.md |
-| 166 | [EverMind-AI/EverOS](https://github.com/EverMind-AI/EverOS) | 2026-05-24 | 2026-05 | 2026-05-24T19:01:37+08:00 | web_github_page_open_2026-05-24 | raw-github/evermind-ai_everos.md |
+| 166 | [EverMind-AI/EverOS](https://github.com/EverMind-AI/EverOS) | 2026-06-03 | 2026-06 | 2026-06-03T19:56:18+08:00 | web_observed_public_github_page_2026_06_03 | raw-github/evermind-ai_everos.md |
 | 167 | [evoagentx/awesome-self-evolving-agents](https://github.com/evoagentx/awesome-self-evolving-agents) | 2026-05-21 | 2026-05 | 2026-05-20T17:45:19Z | github_latest_commit_or_update_text | raw-github/evoagentx_awesome-self-evolving-agents.md |
 | 168 | [evoagentx/evoagentx](https://github.com/evoagentx/evoagentx) | 2026-05-21 | 2026-05 | 2026-05-20T17:45:19Z | github_latest_commit_or_update_text | raw-github/evoagentx_evoagentx.md |
 | 169 | [evomap/awesome-agent-evolution](https://github.com/evomap/awesome-agent-evolution) | 2026-06-02 | 2026-06 | 2026-06-02T19:52:08+08:00 | web_github_page_open_2026-06-02 | raw-github/evomap_awesome-agent-evolution.md |
@@ -456,7 +456,7 @@ Generated: 2026-06-03T00:00:00+08:00
 | 447 | [pgg3/evotoolkit](https://github.com/pgg3/evotoolkit) | 2026-03-23 | 2026-03 | 2026-05-20T17:45:19Z | github_latest_commit_or_update_text | raw-github/pgg3_evotoolkit.md |
 | 448 | [pgg3/l-autoda](https://github.com/pgg3/l-autoda) | 2026-05-21 | 2026-05 | 2026-05-20T17:45:19Z | github_latest_commit_or_update_text | raw-github/pgg3_l-autoda.md |
 | 449 | [Picrew/awesome-agent-harness](https://github.com/Picrew/awesome-agent-harness) | 2026-05-27 | 2026-05 | 2026-05-27T22:00:12+08:00 | web_observed_public_github_page_2026_05_27 | raw-github/picrew_awesome-agent-harness.md |
-| 450 | [pinchbench/skill](https://github.com/pinchbench/skill) | 2026-06-02 | 2026-06 | 2026-06-02T19:52:08+08:00 | web_github_page_open_2026-06-02 | raw-github/pinchbench_skill.md |
+| 450 | [pinchbench/skill](https://github.com/pinchbench/skill) | 2026-06-03 | 2026-06 | 2026-06-03T19:56:18+08:00 | web_observed_public_github_page_2026_06_03 | raw-github/pinchbench_skill.md |
 | 451 | [pingcap/ossinsight](https://github.com/pingcap/ossinsight) | 2026-05-21 | 2026-05 | 2026-05-20T17:45:19Z | github_latest_commit_or_update_text | raw-github/pingcap_ossinsight.md |
 | 452 | [pingcy/ace-langgraph](https://github.com/pingcy/ace-langgraph) | unknown | unknown | 2026-05-20T17:44:59Z | unknown_not_present_in_raw_capture | raw-github/pingcy_ace-langgraph.md |
 | 453 | [pjt222/agent-almanac](https://github.com/pjt222/agent-almanac) | 2026-05-25 | 2026-05 | 2026-05-24T16:06:00Z | web_observed_github_page | raw-github/pjt222_agent-almanac.md |
@@ -501,7 +501,7 @@ Generated: 2026-06-03T00:00:00+08:00
 | 492 | [ronit26mehta/argus-ai-debate](https://github.com/ronit26mehta/argus-ai-debate) | unknown | unknown | 2026-05-20T17:45:19Z | unknown_not_present_in_raw_capture | raw-github/ronit26mehta_argus-ai-debate.md |
 | 493 | [rtk-ai/icm](https://github.com/rtk-ai/icm) | 2026-05-25 | 2026-05 | 2026-05-24T18:08:21Z | web_observed_github_page | raw-github/rtk-ai_icm.md |
 | 494 | [rucbm/laser](https://github.com/RUCBM/LaSeR) | 2026-06-03 | 2026-06 | 2026-06-03T13:55:19+08:00 | web_observed_public_github_page_2026_06_03 | raw-github/rucbm_laser.md |
-| 495 | [RyanAlberts/best-of-Agent-Harnesses](https://github.com/RyanAlberts/best-of-Agent-Harnesses) | 2026-05-28 | 2026-05 | 2026-05-28T04:00:48+08:00 | web_observed_public_github_page_2026_05_28 | raw-github/ryanalberts_best-of-agent-harnesses.md |
+| 495 | [RyanAlberts/best-of-Agent-Harnesses](https://github.com/RyanAlberts/best-of-Agent-Harnesses) | 2026-06-03 | 2026-06 | 2026-06-03T19:56:18+08:00 | web_observed_public_github_page_2026_06_03 | raw-github/ryanalberts_best-of-agent-harnesses.md |
 | 496 | [sachinsharma9780/memweave](https://github.com/sachinsharma9780/memweave) | 2026-06-03 | 2026-06 | 2026-06-03T07:52:50+08:00 | web_observed_public_github_page_2026_06_03 | raw-github/sachinsharma9780_memweave.md |
 | 497 | [sakanaai/ai-scientist-v2](https://github.com/sakanaai/ai-scientist-v2) | 2024-05-13 | 2024-Q2 | 2026-05-20T17:45:19Z | github_latest_commit_or_update_text | raw-github/sakanaai_ai-scientist-v2.md |
 | 498 | [sakanaai/ai-scientist](https://github.com/sakanaai/ai-scientist) | 2026-05-21 | 2026-05 | 2026-05-20T17:45:19Z | github_latest_commit_or_update_text | raw-github/sakanaai_ai-scientist.md |

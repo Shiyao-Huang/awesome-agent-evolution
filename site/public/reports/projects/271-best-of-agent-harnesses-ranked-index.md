@@ -4,11 +4,11 @@
 |---|---|
 | Repository | [RyanAlberts/best-of-Agent-Harnesses](https://github.com/RyanAlberts/best-of-Agent-Harnesses) |
 | Category | Ranked Agent Harness Landscape Index |
-| Stars / forks snapshot | 45 / 4 |
+| Stars / forks snapshot | 64 / 4 |
 | Language | Python |
 | License | CC-BY-SA-4.0 |
 | Raw capture | raw-github/ryanalberts_best-of-agent-harnesses.md |
-| Updated by | hourly public metadata update, 2026-05-28 04:00 +0800 |
+| Updated by | hourly public metadata update, 2026-06-03 19:56 +0800 |
 
 ## 1. Role in Self Evolve
 
@@ -20,7 +20,7 @@ collect harness projects -> score and rank ecosystem coverage -> expose category
 
 ## 3. Evidence Path
 
-web-observed GitHub page showed 45 stars, 4 forks, 47 commits, CC-BY-SA-4.0 license, and README framing as a ranked list of agent harnesses updated weekly. Shell GitHub API access remained blocked by DNS and local `gh` auth was invalid, so this card treats the snapshot as web-observed rather than API-verified.
+web-observed GitHub page showed 64 stars, 4 forks, CC-BY-SA-4.0 license, and README framing as a ranked list of agent harnesses updated weekly. The same README also says its internal table star counts were captured on 2026-05-31, which is a useful trust boundary for its own comparisons. Shell GitHub API access remained blocked by DNS and local `gh` auth was invalid, so this card treats the snapshot as web-observed rather than API-verified.
 
 ## 4. Teaching Use
 

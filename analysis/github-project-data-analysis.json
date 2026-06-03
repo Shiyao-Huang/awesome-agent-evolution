@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-03T06:12:29.922Z",
+  "generated_at": "2026-06-03T12:10:18.036Z",
   "counts": {
     "raw_captures": 677,
     "raw_files_on_disk": 677,
@@ -39,11 +39,11 @@
     },
     {
       "key": "应用/application",
-      "count": 54
+      "count": 53
     },
     {
       "key": "论文代码/paper-code",
-      "count": 35
+      "count": 36
     },
     {
       "key": "评测/benchmark",
@@ -111,7 +111,7 @@
     },
     {
       "key": "Python",
-      "count": 181
+      "count": 180
     },
     {
       "key": "TypeScript",
@@ -591,6 +591,10 @@
     },
     {
       "key": "Python/Java/Defects4J Program Repair",
+      "count": 1
+    },
+    {
+      "key": "Python/JavaScript/CSS/Docker/PyPI",
       "count": 1
     },
     {
@@ -1077,15 +1081,15 @@
   "raw_time_slice_counts": [
     {
       "key": "2026-05",
-      "count": 463
+      "count": 461
     },
     {
       "key": "unknown",
-      "count": 104
+      "count": 103
     },
     {
       "key": "2026-06",
-      "count": 57
+      "count": 60
     },
     {
       "key": "2024-Q2",
@@ -1341,6 +1345,21 @@
       "content_timestamp": "2026-05-24",
       "evidence": "web GitHub page observed production multi-agent harness README, self-heal through failure capture and graph evolution claim, quickstart/runtime docs, Apache-2.0 license, and public star/fork snapshot",
       "description": "Aden Hive 是生产 AI 的 multi-agent harness，强调状态持久化、崩溃恢复、成本控制、审计轨迹、MCP 工具集成和失败驱动的 graph evolution。"
+    },
+    {
+      "repo": "algorithmicsuperintelligence/openevolve",
+      "url": "https://github.com/algorithmicsuperintelligence/openevolve",
+      "stars": "6500",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "论文代码/paper-code",
+      "function_tag": "agent-evolution-infra",
+      "base_theme": "evolution",
+      "stack": "Python/JavaScript/CSS/Docker/PyPI",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-03",
+      "evidence": "web-observed GitHub page showed 6.5k stars, 1k forks, 74 issues, 42 pull requests, Apache-2.0 license, 52 releases with latest v0.2.27 on 2026-03-18, and README language positioning OpenEvolve as an evolutionary coding agent with pip and Docker entrypoints.",
+      "description": "OpenEvolve is an open-source evolutionary coding agent that combines LLM proposal loops, external evaluators, and release-grade engineering surfaces for reproducible code optimization."
     },
     {
       "repo": "HKUDS/OpenSpace",
@@ -1656,21 +1675,6 @@
       "content_timestamp": "2026-05-25",
       "evidence": "web GitHub page observed 33 commits, Apache-2.0 license, 484 stars and 31 forks; README says MemSkill learns and evolves memory skills for long-horizon agents, replaces static memory operations with a data-driven loop, mines hard cases to refine or propose skills, and evaluates ALFWorld/LoCoMo/LongMemEval style workloads",
       "description": "MemSkill 是学习并进化 long-horizon agent 记忆技能的框架，把记忆操作从静态手写规则变成由任务反馈驱动的 meta-memory skill bank。"
-    },
-    {
-      "repo": "YunjueTech/Yunjue-Agent",
-      "url": "https://github.com/YunjueTech/Yunjue-Agent",
-      "stars": "426",
-      "prior_category": "论文代码",
-      "prior_unclassified": "false",
-      "final_category": "论文代码/paper-code",
-      "function_tag": "agent-evolution-infra",
-      "base_theme": "evolution",
-      "stack": "Python",
-      "time_slice": "2026-02",
-      "content_timestamp": "2026-02-11",
-      "evidence": "web GitHub page observed 34 commits, Apache-2.0 license, Python 84.9%, 426 stars and 49 forks; README says zero-start in-situ self-evolving agent system with tool evolution, public traces, reproduction branch, HLE/DeepSearchQA/FinSearchComp/xbench benchmark evidence",
-      "description": "Yunjue Agent 是可复现的 zero-start in-situ self-evolving agent system，把任务经验蒸馏成工具能力，并公开 traces、benchmark scripts 和 evolved tools。"
     }
   ],
   "raw_broad_evolution_top": [
@@ -1765,6 +1769,36 @@
       "description": "EvoMap/evolver presents a memory-map framework that keeps updating graph structures from user and task feedback to improve retrieval and reasoning quality over time."
     },
     {
+      "repo": "EverMind-AI/EverOS",
+      "url": "https://github.com/EverMind-AI/EverOS",
+      "stars": "6800",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "framework-runtime",
+      "base_theme": "memory",
+      "stack": "Python",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-03",
+      "evidence": "web-observed GitHub page showed 6.8k stars, 669 forks, 54 issues, 50 pull requests, Apache-2.0 license, Python primary language, benchmarks/methods/use-cases folders, and topics spanning memory, long-term-memory, agent-memory, skills, and mcp.",
+      "description": "EverOS 把长期记忆 substrate、HyperMem 架构、用例集成、EverMemBench 和 EvoAgentBench 放在同一仓库中，连接 agent memory、skills、MCP 和 self-evolution evaluation。"
+    },
+    {
+      "repo": "algorithmicsuperintelligence/openevolve",
+      "url": "https://github.com/algorithmicsuperintelligence/openevolve",
+      "stars": "6500",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "论文代码/paper-code",
+      "function_tag": "agent-evolution-infra",
+      "base_theme": "evolution",
+      "stack": "Python/JavaScript/CSS/Docker/PyPI",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-03",
+      "evidence": "web-observed GitHub page showed 6.5k stars, 1k forks, 74 issues, 42 pull requests, Apache-2.0 license, 52 releases with latest v0.2.27 on 2026-03-18, and README language positioning OpenEvolve as an evolutionary coding agent with pip and Docker entrypoints.",
+      "description": "OpenEvolve is an open-source evolutionary coding agent that combines LLM proposal loops, external evaluators, and release-grade engineering surfaces for reproducible code optimization."
+    },
+    {
       "repo": "HKUDS/OpenSpace",
       "url": "https://github.com/HKUDS/OpenSpace",
       "stars": "6300",
@@ -1778,21 +1812,6 @@
       "content_timestamp": "2026-05-25",
       "evidence": "web GitHub page observed 76 commits, MIT license, 6.3k stars, 780 forks, Python/TypeScript stack, no releases, GDPVal benchmark directory, 60+ evolved skills showcase, and README self-evolution engine language",
       "description": "OpenSpace 把 skills 当作会选择、执行、监控、分析并演化的运行时实体，提供 OpenClaw、nanobot、Claude Code、Codex、Cursor 等 agent 的自进化技能层。"
-    },
-    {
-      "repo": "EverMind-AI/EverOS",
-      "url": "https://github.com/EverMind-AI/EverOS",
-      "stars": "5600",
-      "prior_category": "-",
-      "prior_unclassified": "true",
-      "final_category": "框架/framework",
-      "function_tag": "framework-runtime",
-      "base_theme": "memory",
-      "stack": "Python",
-      "time_slice": "2026-05",
-      "content_timestamp": "2026-05-24",
-      "evidence": "web GitHub page observed 654 commits, Apache-2.0 license, Python primary language, benchmarks/methods/use-cases folders, EverMemBench/EvoAgentBench entries, 5.6k stars and 593 forks",
-      "description": "EverOS 把长期记忆方法、HyperMem 架构、用例集成、EverMemBench 和 EvoAgentBench 放在同一仓库中，直接连接 agent memory、MCP/skills 和 self-evolution evaluation。"
     },
     {
       "repo": "holaboss-ai/holaOS",
@@ -2408,21 +2427,6 @@
       "content_timestamp": "2026-05-24",
       "evidence": "web GitHub page observed 375 commits, MIT license, C#/.NET runtime folders, self-hosted OpenClaw gateway description, self-evolving/agent-harness topics, 345 stars and 66 forks",
       "description": "OpenClaw.NET 是 self-hosted OpenClaw gateway 和 .NET agent runtime，强调 NativeAOT-friendly、OpenAI-compatible API、MCP、memory、tool execution 和 Microsoft Agent Framework 互操作。"
-    },
-    {
-      "repo": "MaximeRobeyns/self_improving_coding_agent",
-      "url": "https://github.com/MaximeRobeyns/self_improving_coding_agent",
-      "stars": "324",
-      "prior_category": "-",
-      "prior_unclassified": "true",
-      "final_category": "论文代码/paper-code",
-      "function_tag": "research-artifact",
-      "base_theme": "evolution",
-      "stack": "Python",
-      "time_slice": "2026-05",
-      "content_timestamp": "2026-05-26",
-      "evidence": "web-observed GitHub page: SICA self-improving coding agent; own-codebase improvement target; MIT; Python-dominant implementation",
-      "description": "SICA is a self-improving coding agent framework whose improvement target is the coding agent codebase itself."
     }
   ],
   "raw_classified_repositories": [
@@ -3134,17 +3138,17 @@
     {
       "repo": "algorithmicsuperintelligence/openevolve",
       "url": "https://github.com/algorithmicsuperintelligence/openevolve",
-      "stars": "6",
+      "stars": "6500",
       "prior_category": "-",
       "prior_unclassified": "true",
-      "final_category": "应用/application",
-      "function_tag": "application-demo",
+      "final_category": "论文代码/paper-code",
+      "function_tag": "agent-evolution-infra",
       "base_theme": "evolution",
-      "stack": "Python",
-      "time_slice": "unknown",
-      "content_timestamp": "unknown",
-      "evidence": "application/self-evolving-agent signal",
-      "description": "Open-source implementation of AlphaEvolve"
+      "stack": "Python/JavaScript/CSS/Docker/PyPI",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-03",
+      "evidence": "web-observed GitHub page showed 6.5k stars, 1k forks, 74 issues, 42 pull requests, Apache-2.0 license, 52 releases with latest v0.2.27 on 2026-03-18, and README language positioning OpenEvolve as an evolutionary coding agent with pip and Docker entrypoints.",
+      "description": "OpenEvolve is an open-source evolutionary coding agent that combines LLM proposal loops, external evaluators, and release-grade engineering surfaces for reproducible code optimization."
     },
     {
       "repo": "alibaizhanov/mengram",
@@ -4889,17 +4893,17 @@
     {
       "repo": "EverMind-AI/EverOS",
       "url": "https://github.com/EverMind-AI/EverOS",
-      "stars": "5600",
+      "stars": "6800",
       "prior_category": "-",
       "prior_unclassified": "true",
       "final_category": "框架/framework",
       "function_tag": "framework-runtime",
       "base_theme": "memory",
       "stack": "Python",
-      "time_slice": "2026-05",
-      "content_timestamp": "2026-05-24",
-      "evidence": "web GitHub page observed 654 commits, Apache-2.0 license, Python primary language, benchmarks/methods/use-cases folders, EverMemBench/EvoAgentBench entries, 5.6k stars and 593 forks",
-      "description": "EverOS 把长期记忆方法、HyperMem 架构、用例集成、EverMemBench 和 EvoAgentBench 放在同一仓库中，直接连接 agent memory、MCP/skills 和 self-evolution evaluation。"
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-03",
+      "evidence": "web-observed GitHub page showed 6.8k stars, 669 forks, 54 issues, 50 pull requests, Apache-2.0 license, Python primary language, benchmarks/methods/use-cases folders, and topics spanning memory, long-term-memory, agent-memory, skills, and mcp.",
+      "description": "EverOS 把长期记忆 substrate、HyperMem 架构、用例集成、EverMemBench 和 EvoAgentBench 放在同一仓库中，连接 agent memory、skills、MCP 和 self-evolution evaluation。"
     },
     {
       "repo": "evermind-ai/everos?tab=readme-ov-file",
@@ -7784,7 +7788,7 @@
     {
       "repo": "microsoft/SkillOpt",
       "url": "https://github.com/microsoft/SkillOpt",
-      "stars": "1100",
+      "stars": "4500",
       "prior_category": "-",
       "prior_unclassified": "true",
       "final_category": "论文代码/paper-code",
@@ -7793,7 +7797,7 @@
       "stack": "Python/HTML/Skill Training Loops",
       "time_slice": "2026-06",
       "content_timestamp": "2026-06-03",
-      "evidence": "web-observed GitHub page showed 1.1k stars, 100 forks, 91 commits, MIT license, best_skill.md deployment artifacts, per-step output directories, and cross-harness benchmark claims across direct chat, Codex CLI, and Claude Code.",
+      "evidence": "web-observed GitHub page showed 4.5k stars, 452 forks, 91 commits, MIT license, best_skill.md deployment artifacts, per-step output directories, a 52/52 result banner, and cross-harness benchmark claims across direct chat, Codex CLI, and Claude Code.",
       "description": "SkillOpt is a text-space optimizer that trains reusable natural-language skills for frozen LLM agents through trajectory-driven edits, validation-gated updates, and deployable best_skill.md artifacts."
     },
     {
@@ -9170,11 +9174,11 @@
       "function_tag": "benchmark-eval",
       "base_theme": "evaluation",
       "stack": "Python/Shell/TypeScript/OpenClaw Benchmark Harness",
-      "evidence": "web-observed GitHub page showed about 1.2k stars, 136 forks, 17 issues, 383 commits, MIT license, 14 releases, 53 real-world tasks, and transcript-preserving benchmark workflows for OpenClaw agents.",
+      "evidence": "web-observed GitHub page showed about 1.2k stars, 133 forks, 16 issues, 383 commits, MIT license, 14 releases with latest v2.0.0 on 2026-05-06, 53 real-world tasks, and transcript-preserving benchmark workflows for OpenClaw agents.",
       "description": "PinchBench is an OpenClaw-oriented real task benchmark that measures coding agents across productivity, research, writing, coding, analysis, email, memory, and skill-discovery tasks.",
       "prior_unclassified": "true",
       "time_slice": "2026-06",
-      "content_timestamp": "2026-06-02"
+      "content_timestamp": "2026-06-03"
     },
     {
       "repo": "pingcap/ossinsight",
@@ -9839,17 +9843,17 @@
     {
       "repo": "RyanAlberts/best-of-Agent-Harnesses",
       "url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses",
-      "stars": "45",
+      "stars": "64",
       "prior_category": "-",
       "prior_unclassified": "true",
       "final_category": "教程/tutorial",
       "function_tag": "resource-index",
       "base_theme": "evaluation",
       "stack": "Python/Shell/Generated Best-of Lists",
-      "time_slice": "2026-05",
-      "content_timestamp": "2026-05-28",
-      "evidence": "web-observed GitHub page showed 45 stars, 4 forks, 47 commits, CC-BY-SA-4.0 license, and README framing as a ranked list of agent harnesses updated weekly.",
-      "description": "best-of-Agent-Harnesses curates and ranks 100+ agent harness projects to provide a comparative map of harness engineering options."
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-03",
+      "evidence": "web-observed GitHub page showed 64 stars, 4 forks, CC-BY-SA-4.0 license, README framing as a ranked list of agent harnesses updated weekly, and a methodology note saying internal table star counts were captured on 2026-05-31.",
+      "description": "best-of-Agent-Harnesses curates and ranks 100+ agent harness projects to provide a comparative map of harness engineering options and weekly-updated benchmark/harness browsing paths."
     },
     {
       "repo": "sachinsharma9780/memweave",
@@ -12766,17 +12770,17 @@
     {
       "repo": "algorithmicsuperintelligence/openevolve",
       "url": "https://github.com/algorithmicsuperintelligence/openevolve",
-      "stars": "6",
+      "stars": "6500",
       "prior_category": "-",
       "prior_unclassified": "true",
-      "final_category": "应用/application",
-      "function_tag": "application-demo",
+      "final_category": "论文代码/paper-code",
+      "function_tag": "agent-evolution-infra",
       "base_theme": "evolution",
-      "stack": "Python",
-      "time_slice": "unknown",
-      "content_timestamp": "unknown",
-      "evidence": "application/self-evolving-agent signal",
-      "description": "Open-source implementation of AlphaEvolve"
+      "stack": "Python/JavaScript/CSS/Docker/PyPI",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-03",
+      "evidence": "web-observed GitHub page showed 6.5k stars, 1k forks, 74 issues, 42 pull requests, Apache-2.0 license, 52 releases with latest v0.2.27 on 2026-03-18, and README language positioning OpenEvolve as an evolutionary coding agent with pip and Docker entrypoints.",
+      "description": "OpenEvolve is an open-source evolutionary coding agent that combines LLM proposal loops, external evaluators, and release-grade engineering surfaces for reproducible code optimization."
     },
     {
       "repo": "AMAP-ML/SkillClaw",
@@ -14373,17 +14377,17 @@
     {
       "repo": "algorithmicsuperintelligence/openevolve",
       "url": "https://github.com/algorithmicsuperintelligence/openevolve",
-      "stars": "6",
+      "stars": "6500",
       "prior_category": "-",
       "prior_unclassified": "true",
-      "final_category": "应用/application",
-      "function_tag": "application-demo",
+      "final_category": "论文代码/paper-code",
+      "function_tag": "agent-evolution-infra",
       "base_theme": "evolution",
-      "stack": "Python",
-      "time_slice": "unknown",
-      "content_timestamp": "unknown",
-      "evidence": "application/self-evolving-agent signal",
-      "description": "Open-source implementation of AlphaEvolve"
+      "stack": "Python/JavaScript/CSS/Docker/PyPI",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-03",
+      "evidence": "web-observed GitHub page showed 6.5k stars, 1k forks, 74 issues, 42 pull requests, Apache-2.0 license, 52 releases with latest v0.2.27 on 2026-03-18, and README language positioning OpenEvolve as an evolutionary coding agent with pip and Docker entrypoints.",
+      "description": "OpenEvolve is an open-source evolutionary coding agent that combines LLM proposal loops, external evaluators, and release-grade engineering surfaces for reproducible code optimization."
     },
     {
       "repo": "AMAP-ML/SkillClaw",
@@ -14943,17 +14947,17 @@
     {
       "repo": "EverMind-AI/EverOS",
       "url": "https://github.com/EverMind-AI/EverOS",
-      "stars": "5600",
+      "stars": "6800",
       "prior_category": "-",
       "prior_unclassified": "true",
       "final_category": "框架/framework",
       "function_tag": "framework-runtime",
       "base_theme": "memory",
       "stack": "Python",
-      "time_slice": "2026-05",
-      "content_timestamp": "2026-05-24",
-      "evidence": "web GitHub page observed 654 commits, Apache-2.0 license, Python primary language, benchmarks/methods/use-cases folders, EverMemBench/EvoAgentBench entries, 5.6k stars and 593 forks",
-      "description": "EverOS 把长期记忆方法、HyperMem 架构、用例集成、EverMemBench 和 EvoAgentBench 放在同一仓库中，直接连接 agent memory、MCP/skills 和 self-evolution evaluation。"
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-03",
+      "evidence": "web-observed GitHub page showed 6.8k stars, 669 forks, 54 issues, 50 pull requests, Apache-2.0 license, Python primary language, benchmarks/methods/use-cases folders, and topics spanning memory, long-term-memory, agent-memory, skills, and mcp.",
+      "description": "EverOS 把长期记忆 substrate、HyperMem 架构、用例集成、EverMemBench 和 EvoAgentBench 放在同一仓库中，连接 agent memory、skills、MCP 和 self-evolution evaluation。"
     },
     {
       "repo": "evermind-ai/everos?tab=readme-ov-file",
@@ -17143,8 +17147,8 @@
         "进化/搜索循环",
         "评估器/打分器"
       ],
-      "site_stars": 6358,
-      "site_forks": "1018",
+      "site_stars": 6500,
+      "site_forks": "1000",
       "license": "Apache-2.0",
       "lastPushed": "2026-03-18T12:25:39Z",
       "localPath": "repos/algorithmicsuperintelligence__openevolve",
@@ -17198,9 +17202,9 @@
       "raw_content_timestamp": "unknown",
       "raw_timestamp_source": "unknown_not_present_in_raw_capture",
       "in_classification": true,
-      "classification_category": "应用/application",
-      "classification_function_tag": "application-demo",
-      "classification_evidence": "application/self-evolving-agent signal",
+      "classification_category": "论文代码/paper-code",
+      "classification_function_tag": "agent-evolution-infra",
+      "classification_evidence": "web-observed GitHub page showed 6.5k stars, 1k forks, 74 issues, 42 pull requests, Apache-2.0 license, 52 releases with latest v0.2.27 on 2026-03-18, and README language positioning OpenEvolve as an evolutionary coding agent with pip and Docker entrypoints.",
       "raw_time_slice": "unknown",
       "classified_theme": "evolution",
       "evolution_focused": true
@@ -19083,8 +19087,8 @@
         "反馈-精炼",
         "自进化引擎"
       ],
-      "site_stars": 1000,
-      "site_forks": "100",
+      "site_stars": 6800,
+      "site_forks": "669",
       "license": "MIT",
       "lastPushed": "2026-01-01T00:00:00Z",
       "localPath": "repos/evoagentx__evoagentx",
@@ -19177,7 +19181,7 @@
       "public_report": "site/public/reports/projects/23-everos-self-evolving-agents.md",
       "public_report_exists": true,
       "status": "verified",
-      "description": "面向自进化 Agent 的统一平台，核心组件 EverCore 受生物印刻启发的自组织记忆系统，在 LoCoMo/LongMemEval 基准上达到最佳水平。",
+      "description": "面向自进化 Agent 的长期记忆平台，把 EverCore、HyperMem、EverMemBench、EvoAgentBench 和 skills/MCP 集成放进同一条记忆到评测的数据流。",
       "created_at": null,
       "created_at_source": "unknown",
       "first_observed_at": "2026-05-21T17:24:29+08:00",
@@ -25179,7 +25183,7 @@
         "resource-index",
         "evaluation"
       ],
-      "site_stars": 45,
+      "site_stars": 64,
       "site_forks": 4,
       "license": "CC-BY-SA-4.0",
       "lastPushed": "2026-05-28T00:00:00Z",
@@ -25190,7 +25194,7 @@
       "public_report": "site/public/reports/projects/271-best-of-agent-harnesses-ranked-index.md",
       "public_report_exists": true,
       "status": "candidate",
-      "description": "best-of-Agent-Harnesses curates and ranks 100+ agent harness projects to provide a comparative map of harness engineering options.",
+      "description": "best-of-Agent-Harnesses curates and ranks 100+ agent harness projects, exposing weekly-updated use-case, eval, memory, MCP, and orchestration comparisons for harness selection.",
       "created_at": null,
       "created_at_source": "unknown",
       "first_observed_at": null,
@@ -25208,7 +25212,7 @@
       "in_classification": true,
       "classification_category": "教程/tutorial",
       "classification_function_tag": "resource-index",
-      "classification_evidence": "web-observed GitHub page showed 45 stars, 4 forks, 47 commits, CC-BY-SA-4.0 license, and README framing as a ranked list of agent harnesses updated weekly.",
+      "classification_evidence": "web-observed GitHub page showed 64 stars, 4 forks, CC-BY-SA-4.0 license, README framing as a ranked list of agent harnesses updated weekly, and a methodology note saying internal table star counts were captured on 2026-05-31.",
       "raw_time_slice": "2026-05",
       "classified_theme": "evaluation",
       "evolution_focused": false
@@ -25227,8 +25231,8 @@
         "validation gates",
         "cross-harness eval"
       ],
-      "site_stars": 1100,
-      "site_forks": 100,
+      "site_stars": 4500,
+      "site_forks": 452,
       "license": "MIT",
       "lastPushed": "2026-05-28T00:00:00Z",
       "localPath": "raw-github/microsoft_skillopt.md",
@@ -25256,7 +25260,7 @@
       "in_classification": true,
       "classification_category": "论文代码/paper-code",
       "classification_function_tag": "skill-optimizer",
-      "classification_evidence": "web-observed GitHub page showed 1.1k stars, 100 forks, 91 commits, MIT license, best_skill.md deployment artifacts, per-step output directories, and cross-harness benchmark claims across direct chat, Codex CLI, and Claude Code.",
+      "classification_evidence": "web-observed GitHub page showed 4.5k stars, 452 forks, 91 commits, MIT license, best_skill.md deployment artifacts, per-step output directories, a 52/52 result banner, and cross-harness benchmark claims across direct chat, Codex CLI, and Claude Code.",
       "raw_time_slice": "2026-06",
       "classified_theme": "skill",
       "evolution_focused": true
@@ -31309,7 +31313,7 @@
         "transcripts"
       ],
       "site_stars": 1200,
-      "site_forks": 136,
+      "site_forks": 133,
       "license": "MIT",
       "lastPushed": "2026-05-06T00:00:00Z",
       "localPath": "raw-github/pinchbench_skill.md",
@@ -31333,7 +31337,7 @@
       "in_classification": true,
       "classification_category": "评测/evaluation",
       "classification_function_tag": "benchmark-eval",
-      "classification_evidence": "web-observed GitHub page showed about 1.2k stars, 136 forks, 17 issues, 383 commits, MIT license, 14 releases, 53 real-world tasks, and transcript-preserving benchmark workflows for OpenClaw agents.",
+      "classification_evidence": "web-observed GitHub page showed about 1.2k stars, 133 forks, 16 issues, 383 commits, MIT license, 14 releases with latest v2.0.0 on 2026-05-06, 53 real-world tasks, and transcript-preserving benchmark workflows for OpenClaw agents.",
       "raw_time_slice": "2026-06",
       "classified_theme": "evaluation",
       "evolution_focused": false
@@ -34461,6 +34465,70 @@
       "evolution_focused": false
     },
     {
+      "name": "EvoAgentX",
+      "repo": "EvoAgentX/EvoAgentX",
+      "normalized_repo": "evoagentx/evoagentx",
+      "url": "https://github.com/EvoAgentX/EvoAgentX",
+      "category": "自进化 Agent 生态系统",
+      "pattern": "进化/搜索循环 → 智能体编排 → 评估器/打分器 → 反馈-精炼",
+      "tags": [
+        "进化/搜索循环",
+        "智能体编排",
+        "评估器/打分器",
+        "反馈-精炼",
+        "自进化引擎"
+      ],
+      "site_stars": 6800,
+      "site_forks": "669",
+      "license": "MIT",
+      "lastPushed": "2026-01-01T00:00:00Z",
+      "localPath": "repos/evoagentx__evoagentx",
+      "local_git": {
+        "path": "repos/evoagentx__evoagentx",
+        "first_commit_at": "2026-05-15T09:39:03+01:00",
+        "last_commit_at": "2026-05-15T09:39:03+01:00",
+        "commit_count": 1,
+        "branch": "main",
+        "head": "f542ce4"
+      },
+      "local_git_history_24m": {
+        "since": "2024-07-01",
+        "commits_24m": 1,
+        "commit_month_counts": [
+          {
+            "month": "2026-05",
+            "count": 1
+          }
+        ],
+        "tags_total": 0,
+        "tags_24m": 0,
+        "tag_month_counts": [],
+        "latest_tag": null
+      },
+      "report": "projects/22-evoagentx-agent-evolution-framework.md",
+      "public_report": "site/public/reports/projects/22-evoagentx-agent-evolution-framework.md",
+      "public_report_exists": true,
+      "status": "verified",
+      "description": "面向 LLM Agent 的构建、评估与自动进化开源框架，集成 TextGrad/MIPRO/AFlow/EvoPrompt 等多种进化算法优化 workflow 结构与提示词。",
+      "created_at": null,
+      "created_at_source": "unknown",
+      "first_observed_at": "2026-05-15T09:39:03+01:00",
+      "first_observed_source": "local_git_first_commit",
+      "github_source": "github_api_403",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/evoagentx_evoagentx.md",
+      "raw_collected_at": "2026-05-20T17:45:19Z",
+      "raw_content_timestamp": "2026-05-21",
+      "raw_timestamp_source": "github_latest_commit_or_update_text",
+      "in_classification": true,
+      "classification_category": "框架/framework",
+      "classification_function_tag": "application-demo",
+      "classification_evidence": "kept prior human/analysis category + README verified",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "evolution",
+      "evolution_focused": true
+    },
+    {
       "name": "openevolve",
       "repo": "algorithmicsuperintelligence/openevolve",
       "normalized_repo": "algorithmicsuperintelligence/openevolve",
@@ -34471,8 +34539,8 @@
         "进化/搜索循环",
         "评估器/打分器"
       ],
-      "site_stars": 6358,
-      "site_forks": "1018",
+      "site_stars": 6500,
+      "site_forks": "1000",
       "license": "Apache-2.0",
       "lastPushed": "2026-03-18T12:25:39Z",
       "localPath": "repos/algorithmicsuperintelligence__openevolve",
@@ -34526,9 +34594,9 @@
       "raw_content_timestamp": "unknown",
       "raw_timestamp_source": "unknown_not_present_in_raw_capture",
       "in_classification": true,
-      "classification_category": "应用/application",
-      "classification_function_tag": "application-demo",
-      "classification_evidence": "application/self-evolving-agent signal",
+      "classification_category": "论文代码/paper-code",
+      "classification_function_tag": "agent-evolution-infra",
+      "classification_evidence": "web-observed GitHub page showed 6.5k stars, 1k forks, 74 issues, 42 pull requests, Apache-2.0 license, 52 releases with latest v0.2.27 on 2026-03-18, and README language positioning OpenEvolve as an evolutionary coding agent with pip and Docker entrypoints.",
       "raw_time_slice": "unknown",
       "classified_theme": "evolution",
       "evolution_focused": true
@@ -34948,6 +35016,54 @@
       "raw_time_slice": "2026-05",
       "classified_theme": "memory",
       "evolution_focused": false
+    },
+    {
+      "name": "SkillOpt",
+      "repo": "microsoft/SkillOpt",
+      "normalized_repo": "microsoft/skillopt",
+      "url": "https://github.com/microsoft/SkillOpt",
+      "category": "Self-Evolving Agent Skill Optimizer",
+      "pattern": "trajectory-driven skill edits -> validation-gated updates -> epoch/batch-style skill training loop -> deployable best_skill artifacts for frozen-agent workflows",
+      "tags": [
+        "agent skills",
+        "skill optimization",
+        "frozen model",
+        "validation gates",
+        "cross-harness eval"
+      ],
+      "site_stars": 4500,
+      "site_forks": 452,
+      "license": "MIT",
+      "lastPushed": "2026-05-28T00:00:00Z",
+      "localPath": "raw-github/microsoft_skillopt.md",
+      "local_git": null,
+      "local_git_history_24m": null,
+      "report": "projects/272-skillopt-self-evolving-agent-skills.md",
+      "public_report": "site/public/reports/projects/272-skillopt-self-evolving-agent-skills.md",
+      "public_report_exists": true,
+      "status": "candidate",
+      "description": "SkillOpt is a text-space optimizer that trains reusable natural-language skills for frozen LLM agents through trajectory-driven edits, validation-gated updates, and deployable best_skill.md artifacts.",
+      "created_at": null,
+      "created_at_source": "unknown",
+      "first_observed_at": null,
+      "first_observed_source": null,
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/microsoft_skillopt.md",
+      "raw_collected_at": "2026-06-03T07:52:50+08:00",
+      "raw_content_timestamp": "2026-06-03",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_06_03",
+      "in_classification": true,
+      "classification_category": "论文代码/paper-code",
+      "classification_function_tag": "skill-optimizer",
+      "classification_evidence": "web-observed GitHub page showed 4.5k stars, 452 forks, 91 commits, MIT license, best_skill.md deployment artifacts, per-step output directories, a 52/52 result banner, and cross-harness benchmark claims across direct chat, Codex CLI, and Claude Code.",
+      "raw_time_slice": "2026-06",
+      "classified_theme": "skill",
+      "evolution_focused": true
     },
     {
       "name": "memory-lancedb-pro",
@@ -36811,7 +36927,7 @@
         "transcripts"
       ],
       "site_stars": 1200,
-      "site_forks": 136,
+      "site_forks": 133,
       "license": "MIT",
       "lastPushed": "2026-05-06T00:00:00Z",
       "localPath": "raw-github/pinchbench_skill.md",
@@ -36835,7 +36951,7 @@
       "in_classification": true,
       "classification_category": "评测/evaluation",
       "classification_function_tag": "benchmark-eval",
-      "classification_evidence": "web-observed GitHub page showed about 1.2k stars, 136 forks, 17 issues, 383 commits, MIT license, 14 releases, 53 real-world tasks, and transcript-preserving benchmark workflows for OpenClaw agents.",
+      "classification_evidence": "web-observed GitHub page showed about 1.2k stars, 133 forks, 16 issues, 383 commits, MIT license, 14 releases with latest v2.0.0 on 2026-05-06, 53 real-world tasks, and transcript-preserving benchmark workflows for OpenClaw agents.",
       "raw_time_slice": "2026-06",
       "classified_theme": "evaluation",
       "evolution_focused": false
@@ -36950,54 +37066,6 @@
       "raw_time_slice": "2026-05",
       "classified_theme": "memory",
       "evolution_focused": false
-    },
-    {
-      "name": "SkillOpt",
-      "repo": "microsoft/SkillOpt",
-      "normalized_repo": "microsoft/skillopt",
-      "url": "https://github.com/microsoft/SkillOpt",
-      "category": "Self-Evolving Agent Skill Optimizer",
-      "pattern": "trajectory-driven skill edits -> validation-gated updates -> epoch/batch-style skill training loop -> deployable best_skill artifacts for frozen-agent workflows",
-      "tags": [
-        "agent skills",
-        "skill optimization",
-        "frozen model",
-        "validation gates",
-        "cross-harness eval"
-      ],
-      "site_stars": 1100,
-      "site_forks": 100,
-      "license": "MIT",
-      "lastPushed": "2026-05-28T00:00:00Z",
-      "localPath": "raw-github/microsoft_skillopt.md",
-      "local_git": null,
-      "local_git_history_24m": null,
-      "report": "projects/272-skillopt-self-evolving-agent-skills.md",
-      "public_report": "site/public/reports/projects/272-skillopt-self-evolving-agent-skills.md",
-      "public_report_exists": true,
-      "status": "candidate",
-      "description": "SkillOpt is a text-space optimizer that trains reusable natural-language skills for frozen LLM agents through trajectory-driven edits, validation-gated updates, and deployable best_skill.md artifacts.",
-      "created_at": null,
-      "created_at_source": "unknown",
-      "first_observed_at": null,
-      "first_observed_source": null,
-      "github_source": "github_api_fetch_error",
-      "github_api_stars": null,
-      "github_api_forks": null,
-      "github_pushed_at": null,
-      "github_error": "fetch failed",
-      "in_raw_timestamp_index": true,
-      "raw_file": "raw-github/microsoft_skillopt.md",
-      "raw_collected_at": "2026-06-03T07:52:50+08:00",
-      "raw_content_timestamp": "2026-06-03",
-      "raw_timestamp_source": "web_observed_public_github_page_2026_06_03",
-      "in_classification": true,
-      "classification_category": "论文代码/paper-code",
-      "classification_function_tag": "skill-optimizer",
-      "classification_evidence": "web-observed GitHub page showed 1.1k stars, 100 forks, 91 commits, MIT license, best_skill.md deployment artifacts, per-step output directories, and cross-harness benchmark claims across direct chat, Codex CLI, and Claude Code.",
-      "raw_time_slice": "2026-06",
-      "classified_theme": "skill",
-      "evolution_focused": true
     },
     {
       "name": "FunSearch",
@@ -37222,7 +37290,7 @@
       "public_report": "site/public/reports/projects/23-everos-self-evolving-agents.md",
       "public_report_exists": true,
       "status": "verified",
-      "description": "面向自进化 Agent 的统一平台，核心组件 EverCore 受生物印刻启发的自组织记忆系统，在 LoCoMo/LongMemEval 基准上达到最佳水平。",
+      "description": "面向自进化 Agent 的长期记忆平台，把 EverCore、HyperMem、EverMemBench、EvoAgentBench 和 skills/MCP 集成放进同一条记忆到评测的数据流。",
       "created_at": null,
       "created_at_source": "unknown",
       "first_observed_at": "2026-05-21T17:24:29+08:00",
@@ -37239,70 +37307,6 @@
       "classification_evidence": "kept prior human/analysis category + README verified",
       "raw_time_slice": "2026-05",
       "classified_theme": "evaluation",
-      "evolution_focused": true
-    },
-    {
-      "name": "EvoAgentX",
-      "repo": "EvoAgentX/EvoAgentX",
-      "normalized_repo": "evoagentx/evoagentx",
-      "url": "https://github.com/EvoAgentX/EvoAgentX",
-      "category": "自进化 Agent 生态系统",
-      "pattern": "进化/搜索循环 → 智能体编排 → 评估器/打分器 → 反馈-精炼",
-      "tags": [
-        "进化/搜索循环",
-        "智能体编排",
-        "评估器/打分器",
-        "反馈-精炼",
-        "自进化引擎"
-      ],
-      "site_stars": 1000,
-      "site_forks": "100",
-      "license": "MIT",
-      "lastPushed": "2026-01-01T00:00:00Z",
-      "localPath": "repos/evoagentx__evoagentx",
-      "local_git": {
-        "path": "repos/evoagentx__evoagentx",
-        "first_commit_at": "2026-05-15T09:39:03+01:00",
-        "last_commit_at": "2026-05-15T09:39:03+01:00",
-        "commit_count": 1,
-        "branch": "main",
-        "head": "f542ce4"
-      },
-      "local_git_history_24m": {
-        "since": "2024-07-01",
-        "commits_24m": 1,
-        "commit_month_counts": [
-          {
-            "month": "2026-05",
-            "count": 1
-          }
-        ],
-        "tags_total": 0,
-        "tags_24m": 0,
-        "tag_month_counts": [],
-        "latest_tag": null
-      },
-      "report": "projects/22-evoagentx-agent-evolution-framework.md",
-      "public_report": "site/public/reports/projects/22-evoagentx-agent-evolution-framework.md",
-      "public_report_exists": true,
-      "status": "verified",
-      "description": "面向 LLM Agent 的构建、评估与自动进化开源框架，集成 TextGrad/MIPRO/AFlow/EvoPrompt 等多种进化算法优化 workflow 结构与提示词。",
-      "created_at": null,
-      "created_at_source": "unknown",
-      "first_observed_at": "2026-05-15T09:39:03+01:00",
-      "first_observed_source": "local_git_first_commit",
-      "github_source": "github_api_403",
-      "in_raw_timestamp_index": true,
-      "raw_file": "raw-github/evoagentx_evoagentx.md",
-      "raw_collected_at": "2026-05-20T17:45:19Z",
-      "raw_content_timestamp": "2026-05-21",
-      "raw_timestamp_source": "github_latest_commit_or_update_text",
-      "in_classification": true,
-      "classification_category": "框架/framework",
-      "classification_function_tag": "application-demo",
-      "classification_evidence": "kept prior human/analysis category + README verified",
-      "raw_time_slice": "2026-05",
-      "classified_theme": "evolution",
       "evolution_focused": true
     },
     {
@@ -42763,6 +42767,54 @@
       "evolution_focused": true
     },
     {
+      "name": "Best of Agent Harnesses",
+      "repo": "RyanAlberts/best-of-Agent-Harnesses",
+      "normalized_repo": "ryanalberts/best-of-agent-harnesses",
+      "url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses",
+      "category": "Ranked Agent Harness Landscape Index",
+      "pattern": "collect harness projects -> score and rank ecosystem coverage -> expose category tags and update cadence -> provide comparative entrypoint for reliability-oriented harness selection",
+      "tags": [
+        "awesome-list",
+        "harness",
+        "ranking",
+        "resource-index",
+        "evaluation"
+      ],
+      "site_stars": 64,
+      "site_forks": 4,
+      "license": "CC-BY-SA-4.0",
+      "lastPushed": "2026-05-28T00:00:00Z",
+      "localPath": "raw-github/ryanalberts_best-of-agent-harnesses.md",
+      "local_git": null,
+      "local_git_history_24m": null,
+      "report": "projects/271-best-of-agent-harnesses-ranked-index.md",
+      "public_report": "site/public/reports/projects/271-best-of-agent-harnesses-ranked-index.md",
+      "public_report_exists": true,
+      "status": "candidate",
+      "description": "best-of-Agent-Harnesses curates and ranks 100+ agent harness projects, exposing weekly-updated use-case, eval, memory, MCP, and orchestration comparisons for harness selection.",
+      "created_at": null,
+      "created_at_source": "unknown",
+      "first_observed_at": null,
+      "first_observed_source": null,
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/ryanalberts_best-of-agent-harnesses.md",
+      "raw_collected_at": "2026-05-28T04:00:48+08:00",
+      "raw_content_timestamp": "2026-05-28",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_05_28",
+      "in_classification": true,
+      "classification_category": "教程/tutorial",
+      "classification_function_tag": "resource-index",
+      "classification_evidence": "web-observed GitHub page showed 64 stars, 4 forks, CC-BY-SA-4.0 license, README framing as a ranked list of agent harnesses updated weekly, and a methodology note saying internal table star counts were captured on 2026-05-31.",
+      "raw_time_slice": "2026-05",
+      "classified_theme": "evaluation",
+      "evolution_focused": false
+    },
+    {
       "name": "AEC Bench",
       "repo": "nomic-ai/aec-bench",
       "normalized_repo": "nomic-ai/aec-bench",
@@ -43015,54 +43067,6 @@
       "classification_evidence": "web-observed GitHub page showed 46 stars, 17 forks, 6 issues, 4 pull requests, 29 commits, Python/Vue implementation, and README claims for open datasets, prompts, scoring logic, and memory benchmark outputs.",
       "raw_time_slice": "2026-06",
       "classified_theme": "memory",
-      "evolution_focused": false
-    },
-    {
-      "name": "Best of Agent Harnesses",
-      "repo": "RyanAlberts/best-of-Agent-Harnesses",
-      "normalized_repo": "ryanalberts/best-of-agent-harnesses",
-      "url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses",
-      "category": "Ranked Agent Harness Landscape Index",
-      "pattern": "collect harness projects -> score and rank ecosystem coverage -> expose category tags and update cadence -> provide comparative entrypoint for reliability-oriented harness selection",
-      "tags": [
-        "awesome-list",
-        "harness",
-        "ranking",
-        "resource-index",
-        "evaluation"
-      ],
-      "site_stars": 45,
-      "site_forks": 4,
-      "license": "CC-BY-SA-4.0",
-      "lastPushed": "2026-05-28T00:00:00Z",
-      "localPath": "raw-github/ryanalberts_best-of-agent-harnesses.md",
-      "local_git": null,
-      "local_git_history_24m": null,
-      "report": "projects/271-best-of-agent-harnesses-ranked-index.md",
-      "public_report": "site/public/reports/projects/271-best-of-agent-harnesses-ranked-index.md",
-      "public_report_exists": true,
-      "status": "candidate",
-      "description": "best-of-Agent-Harnesses curates and ranks 100+ agent harness projects to provide a comparative map of harness engineering options.",
-      "created_at": null,
-      "created_at_source": "unknown",
-      "first_observed_at": null,
-      "first_observed_source": null,
-      "github_source": "github_api_fetch_error",
-      "github_api_stars": null,
-      "github_api_forks": null,
-      "github_pushed_at": null,
-      "github_error": "fetch failed",
-      "in_raw_timestamp_index": true,
-      "raw_file": "raw-github/ryanalberts_best-of-agent-harnesses.md",
-      "raw_collected_at": "2026-05-28T04:00:48+08:00",
-      "raw_content_timestamp": "2026-05-28",
-      "raw_timestamp_source": "web_observed_public_github_page_2026_05_28",
-      "in_classification": true,
-      "classification_category": "教程/tutorial",
-      "classification_function_tag": "resource-index",
-      "classification_evidence": "web-observed GitHub page showed 45 stars, 4 forks, 47 commits, CC-BY-SA-4.0 license, and README framing as a ranked list of agent harnesses updated weekly.",
-      "raw_time_slice": "2026-05",
-      "classified_theme": "evaluation",
       "evolution_focused": false
     },
     {
@@ -47393,8 +47397,8 @@
         "进化/搜索循环",
         "评估器/打分器"
       ],
-      "site_stars": 6358,
-      "site_forks": "1018",
+      "site_stars": 6500,
+      "site_forks": "1000",
       "license": "Apache-2.0",
       "lastPushed": "2026-03-18T12:25:39Z",
       "localPath": "repos/algorithmicsuperintelligence__openevolve",
@@ -47448,9 +47452,9 @@
       "raw_content_timestamp": "unknown",
       "raw_timestamp_source": "unknown_not_present_in_raw_capture",
       "in_classification": true,
-      "classification_category": "应用/application",
-      "classification_function_tag": "application-demo",
-      "classification_evidence": "application/self-evolving-agent signal",
+      "classification_category": "论文代码/paper-code",
+      "classification_function_tag": "agent-evolution-infra",
+      "classification_evidence": "web-observed GitHub page showed 6.5k stars, 1k forks, 74 issues, 42 pull requests, Apache-2.0 license, 52 releases with latest v0.2.27 on 2026-03-18, and README language positioning OpenEvolve as an evolutionary coding agent with pip and Docker entrypoints.",
       "raw_time_slice": "unknown",
       "classified_theme": "evolution",
       "evolution_focused": true
@@ -51245,7 +51249,7 @@
       "public_report": "site/public/reports/projects/23-everos-self-evolving-agents.md",
       "public_report_exists": true,
       "status": "verified",
-      "description": "面向自进化 Agent 的统一平台，核心组件 EverCore 受生物印刻启发的自组织记忆系统，在 LoCoMo/LongMemEval 基准上达到最佳水平。",
+      "description": "面向自进化 Agent 的长期记忆平台，把 EverCore、HyperMem、EverMemBench、EvoAgentBench 和 skills/MCP 集成放进同一条记忆到评测的数据流。",
       "created_at": null,
       "created_at_source": "unknown",
       "first_observed_at": "2026-05-21T17:24:29+08:00",
@@ -51278,8 +51282,8 @@
         "反馈-精炼",
         "自进化引擎"
       ],
-      "site_stars": 1000,
-      "site_forks": "100",
+      "site_stars": 6800,
+      "site_forks": "669",
       "license": "MIT",
       "lastPushed": "2026-01-01T00:00:00Z",
       "localPath": "repos/evoagentx__evoagentx",
@@ -54485,8 +54489,8 @@
         "validation gates",
         "cross-harness eval"
       ],
-      "site_stars": 1100,
-      "site_forks": 100,
+      "site_stars": 4500,
+      "site_forks": 452,
       "license": "MIT",
       "lastPushed": "2026-05-28T00:00:00Z",
       "localPath": "raw-github/microsoft_skillopt.md",
@@ -54514,7 +54518,7 @@
       "in_classification": true,
       "classification_category": "论文代码/paper-code",
       "classification_function_tag": "skill-optimizer",
-      "classification_evidence": "web-observed GitHub page showed 1.1k stars, 100 forks, 91 commits, MIT license, best_skill.md deployment artifacts, per-step output directories, and cross-harness benchmark claims across direct chat, Codex CLI, and Claude Code.",
+      "classification_evidence": "web-observed GitHub page showed 4.5k stars, 452 forks, 91 commits, MIT license, best_skill.md deployment artifacts, per-step output directories, a 52/52 result banner, and cross-harness benchmark claims across direct chat, Codex CLI, and Claude Code.",
       "raw_time_slice": "2026-06",
       "classified_theme": "skill",
       "evolution_focused": true
@@ -56818,7 +56822,7 @@
         "transcripts"
       ],
       "site_stars": 1200,
-      "site_forks": 136,
+      "site_forks": 133,
       "license": "MIT",
       "lastPushed": "2026-05-06T00:00:00Z",
       "localPath": "raw-github/pinchbench_skill.md",
@@ -56842,7 +56846,7 @@
       "in_classification": true,
       "classification_category": "评测/evaluation",
       "classification_function_tag": "benchmark-eval",
-      "classification_evidence": "web-observed GitHub page showed about 1.2k stars, 136 forks, 17 issues, 383 commits, MIT license, 14 releases, 53 real-world tasks, and transcript-preserving benchmark workflows for OpenClaw agents.",
+      "classification_evidence": "web-observed GitHub page showed about 1.2k stars, 133 forks, 16 issues, 383 commits, MIT license, 14 releases with latest v2.0.0 on 2026-05-06, 53 real-world tasks, and transcript-preserving benchmark workflows for OpenClaw agents.",
       "raw_time_slice": "2026-06",
       "classified_theme": "evaluation",
       "evolution_focused": false
@@ -57495,7 +57499,7 @@
         "resource-index",
         "evaluation"
       ],
-      "site_stars": 45,
+      "site_stars": 64,
       "site_forks": 4,
       "license": "CC-BY-SA-4.0",
       "lastPushed": "2026-05-28T00:00:00Z",
@@ -57506,7 +57510,7 @@
       "public_report": "site/public/reports/projects/271-best-of-agent-harnesses-ranked-index.md",
       "public_report_exists": true,
       "status": "candidate",
-      "description": "best-of-Agent-Harnesses curates and ranks 100+ agent harness projects to provide a comparative map of harness engineering options.",
+      "description": "best-of-Agent-Harnesses curates and ranks 100+ agent harness projects, exposing weekly-updated use-case, eval, memory, MCP, and orchestration comparisons for harness selection.",
       "created_at": null,
       "created_at_source": "unknown",
       "first_observed_at": null,
@@ -57524,7 +57528,7 @@
       "in_classification": true,
       "classification_category": "教程/tutorial",
       "classification_function_tag": "resource-index",
-      "classification_evidence": "web-observed GitHub page showed 45 stars, 4 forks, 47 commits, CC-BY-SA-4.0 license, and README framing as a ranked list of agent harnesses updated weekly.",
+      "classification_evidence": "web-observed GitHub page showed 64 stars, 4 forks, CC-BY-SA-4.0 license, README framing as a ranked list of agent harnesses updated weekly, and a methodology note saying internal table star counts were captured on 2026-05-31.",
       "raw_time_slice": "2026-05",
       "classified_theme": "evaluation",
       "evolution_focused": false
@@ -61341,7 +61345,7 @@
   },
   "ranking_method": {
     "name": "recency_weighted_current_value",
-    "reference_date": "2026-06-03T06:12:29.922Z",
+    "reference_date": "2026-06-03T12:10:18.036Z",
     "weights": {
       "time": 0.5,
       "mechanism": 0.2,
@@ -61380,8 +61384,8 @@
       "stars": 1440,
       "report": "projects/modelscope__agentevolver.md",
       "scores": {
-        "current_value": 83.14,
-        "time": 75.49,
+        "current_value": 83.12,
+        "time": 75.44,
         "mechanism": 100,
         "evidence": 100,
         "adoption": 59.98,
@@ -61408,8 +61412,8 @@
       "stars": 41,
       "report": "projects/zju_llm_safety__darwin.md",
       "scores": {
-        "current_value": 76.72,
-        "time": 93.37,
+        "current_value": 76.69,
+        "time": 93.32,
         "mechanism": 75,
         "evidence": 62,
         "adoption": 30.83,
@@ -61438,8 +61442,8 @@
       "stars": 43,
       "report": "projects/oppo_mente_lab__llm_self_judge.md",
       "scores": {
-        "current_value": 75.67,
-        "time": 86.21,
+        "current_value": 75.65,
+        "time": 86.16,
         "mechanism": 85,
         "evidence": 62,
         "adoption": 31.21,
@@ -61466,8 +61470,8 @@
       "stars": 6377,
       "report": "projects/algorithmicsuperintelligence__openevolve.md",
       "scores": {
-        "current_value": 70.89,
-        "time": 56.92,
+        "current_value": 70.86,
+        "time": 56.88,
         "mechanism": 79,
         "evidence": 100,
         "adoption": 72.25,
@@ -61493,8 +61497,8 @@
       "stars": 77,
       "report": "projects/jarvispei__scope.md",
       "scores": {
-        "current_value": 68.1,
-        "time": 78.3,
+        "current_value": 68.07,
+        "time": 78.26,
         "mechanism": 67,
         "evidence": 62,
         "adoption": 35.93,
@@ -61521,8 +61525,8 @@
       "stars": 98,
       "report": "projects/inter_co__science_codeevolve.md",
       "scores": {
-        "current_value": 65.56,
-        "time": 73.24,
+        "current_value": 65.54,
+        "time": 73.2,
         "mechanism": 59,
         "evidence": 68,
         "adoption": 37.9,
@@ -61550,8 +61554,8 @@
       "stars": 274,
       "report": "projects/jarvis_xs__se_agent.md",
       "scores": {
-        "current_value": 63.38,
-        "time": 47.89,
+        "current_value": 63.36,
+        "time": 47.85,
         "mechanism": 77,
         "evidence": 100,
         "adoption": 46.32,
@@ -61747,6 +61751,37 @@
     },
     {
       "rank": 14,
+      "repo": "microsoft/SkillOpt",
+      "name": "SkillOpt",
+      "url": "https://github.com/microsoft/SkillOpt",
+      "category": "Self-Evolving Agent Skill Optimizer",
+      "pattern": "trajectory-driven skill edits -> validation-gated updates -> epoch/batch-style skill training loop -> deployable best_skill artifacts for frozen-agent workflows",
+      "tags": [
+        "agent skills",
+        "skill optimization",
+        "frozen model",
+        "validation gates",
+        "cross-harness eval"
+      ],
+      "status": "candidate",
+      "created_at": null,
+      "created_at_source": "unknown",
+      "first_observed_at": null,
+      "activity_at": "2026-05-28T00:00:00Z",
+      "stars": 4500,
+      "report": "projects/272-skillopt-self-evolving-agent-skills.md",
+      "scores": {
+        "current_value": 58.84,
+        "time": 45,
+        "mechanism": 85,
+        "evidence": 56,
+        "adoption": 69.38,
+        "usefulness": 80
+      },
+      "caveat": "created_at unavailable; time score capped and based on activity/observation only"
+    },
+    {
+      "rank": 15,
       "repo": "longmans/self-evolve",
       "name": "Self Evolve OpenClaw Playground",
       "url": "https://github.com/longmans/self-evolve",
@@ -61777,7 +61812,38 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 15,
+      "rank": 16,
+      "repo": "EvoAgentX/EvoAgentX",
+      "name": "EvoAgentX",
+      "url": "https://github.com/EvoAgentX/EvoAgentX",
+      "category": "自进化 Agent 生态系统",
+      "pattern": "进化/搜索循环 → 智能体编排 → 评估器/打分器 → 反馈-精炼",
+      "tags": [
+        "进化/搜索循环",
+        "智能体编排",
+        "评估器/打分器",
+        "反馈-精炼",
+        "自进化引擎"
+      ],
+      "status": "verified",
+      "created_at": null,
+      "created_at_source": "unknown",
+      "first_observed_at": "2026-05-15T09:39:03+01:00",
+      "activity_at": "2026-01-01T00:00:00Z",
+      "stars": 6800,
+      "report": "projects/22-evoagentx-agent-evolution-framework.md",
+      "scores": {
+        "current_value": 58.47,
+        "time": 28.99,
+        "mechanism": 97,
+        "evidence": 86,
+        "adoption": 72.78,
+        "usefulness": 88
+      },
+      "caveat": "created_at unavailable; time score capped and based on activity/observation only"
+    },
+    {
+      "rank": 17,
       "repo": "stanford-iris-lab/meta-harness",
       "name": "Meta-Harness (Stanford IRIS)",
       "url": "https://github.com/stanford-iris-lab/meta-harness",
@@ -61808,38 +61874,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 16,
-      "repo": "microsoft/SkillOpt",
-      "name": "SkillOpt",
-      "url": "https://github.com/microsoft/SkillOpt",
-      "category": "Self-Evolving Agent Skill Optimizer",
-      "pattern": "trajectory-driven skill edits -> validation-gated updates -> epoch/batch-style skill training loop -> deployable best_skill artifacts for frozen-agent workflows",
-      "tags": [
-        "agent skills",
-        "skill optimization",
-        "frozen model",
-        "validation gates",
-        "cross-harness eval"
-      ],
-      "status": "candidate",
-      "created_at": null,
-      "created_at_source": "unknown",
-      "first_observed_at": null,
-      "activity_at": "2026-05-28T00:00:00Z",
-      "stars": 1100,
-      "report": "projects/272-skillopt-self-evolving-agent-skills.md",
-      "scores": {
-        "current_value": 57.68,
-        "time": 45,
-        "mechanism": 85,
-        "evidence": 56,
-        "adoption": 57.76,
-        "usefulness": 80
-      },
-      "caveat": "created_at unavailable; time score capped and based on activity/observation only"
-    },
-    {
-      "rank": 17,
+      "rank": 18,
       "repo": "zhang677/accelopt",
       "name": "AccelOpt",
       "url": "https://github.com/zhang677/AccelOpt",
@@ -61870,7 +61905,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 18,
+      "rank": 19,
       "repo": "zikuicai/aegisllm",
       "name": "AegisLLM",
       "url": "https://github.com/zikuicai/aegisllm",
@@ -61901,7 +61936,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 19,
+      "rank": 20,
       "repo": "pegasi-ai/reins",
       "name": "REINS Self-Improving Model Framework",
       "url": "https://github.com/pegasi-ai/reins",
@@ -61928,37 +61963,6 @@
         "evidence": 56,
         "adoption": 36.64,
         "usefulness": 70
-      },
-      "caveat": "created_at unavailable; time score capped and based on activity/observation only"
-    },
-    {
-      "rank": 20,
-      "repo": "EvoAgentX/EvoAgentX",
-      "name": "EvoAgentX",
-      "url": "https://github.com/EvoAgentX/EvoAgentX",
-      "category": "自进化 Agent 生态系统",
-      "pattern": "进化/搜索循环 → 智能体编排 → 评估器/打分器 → 反馈-精炼",
-      "tags": [
-        "进化/搜索循环",
-        "智能体编排",
-        "评估器/打分器",
-        "反馈-精炼",
-        "自进化引擎"
-      ],
-      "status": "verified",
-      "created_at": null,
-      "created_at_source": "unknown",
-      "first_observed_at": "2026-05-15T09:39:03+01:00",
-      "activity_at": "2026-01-01T00:00:00Z",
-      "stars": 1000,
-      "report": "projects/22-evoagentx-agent-evolution-framework.md",
-      "scores": {
-        "current_value": 56.91,
-        "time": 29.02,
-        "mechanism": 97,
-        "evidence": 86,
-        "adoption": 56.98,
-        "usefulness": 88
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
@@ -62293,8 +62297,8 @@
       "stars": 426,
       "report": "projects/228-yunjue-agent-in-situ-self-evolving-agent.md",
       "scores": {
-        "current_value": 54.11,
-        "time": 34.63,
+        "current_value": 54.09,
+        "time": 34.6,
         "mechanism": 97,
         "evidence": 56,
         "adoption": 49.95,
@@ -62354,8 +62358,8 @@
       "stars": 34604,
       "report": "projects/10-dspy-declarative-llm-programming.md",
       "scores": {
-        "current_value": 53.14,
-        "time": 29.15,
+        "current_value": 53.13,
+        "time": 29.13,
         "mechanism": 59,
         "evidence": 100,
         "adoption": 86.2,
@@ -62507,8 +62511,8 @@
       "stars": 1000,
       "report": "projects/23-everos-self-evolving-agents.md",
       "scores": {
-        "current_value": 51.21,
-        "time": 29.02,
+        "current_value": 51.19,
+        "time": 28.99,
         "mechanism": 71,
         "evidence": 86,
         "adoption": 56.98,
@@ -62784,8 +62788,8 @@
       "stars": 3800,
       "report": "research/projects/44-xmu-self-evolving-agents.md",
       "scores": {
-        "current_value": 48.77,
-        "time": 30.94,
+        "current_value": 48.75,
+        "time": 30.9,
         "mechanism": 69,
         "evidence": 68,
         "adoption": 67.98,
@@ -63182,8 +63186,8 @@
       "stars": 200,
       "report": "projects/33-self-improvement-llm.md",
       "scores": {
-        "current_value": 47.23,
-        "time": 29.02,
+        "current_value": 47.22,
+        "time": 28.99,
         "mechanism": 69,
         "evidence": 86,
         "adoption": 43.74,
@@ -63304,8 +63308,8 @@
       "stars": 136,
       "report": "projects/05-automl-agent-multi-agent.md",
       "scores": {
-        "current_value": 47.07,
-        "time": 35.73,
+        "current_value": 47.05,
+        "time": 35.69,
         "mechanism": 59,
         "evidence": 68,
         "adoption": 40.58,
@@ -64224,8 +64228,8 @@
       "stars": 2800,
       "report": "research/projects/60-swe-bench-evaluation.md",
       "scores": {
-        "current_value": 44.92,
-        "time": 41.34,
+        "current_value": 44.9,
+        "time": 41.31,
         "mechanism": 20,
         "evidence": 68,
         "adoption": 65.46,
@@ -64315,8 +64319,8 @@
       "stars": 19280,
       "report": "projects/14-swe-agent-software-engineering.md",
       "scores": {
-        "current_value": 44.86,
-        "time": 28.75,
+        "current_value": 44.85,
+        "time": 28.73,
         "mechanism": 45,
         "evidence": 68,
         "adoption": 81.37,
@@ -64560,8 +64564,8 @@
       "stars": 52041,
       "report": "projects/09-crewai-multi-agent-framework.md",
       "scores": {
-        "current_value": 44.43,
-        "time": 29.14,
+        "current_value": 44.42,
+        "time": 29.12,
         "mechanism": 10,
         "evidence": 100,
         "adoption": 89.56,
@@ -64804,8 +64808,8 @@
       "stars": 184482,
       "report": "projects/08-autogpt-autonomous-agent.md",
       "scores": {
-        "current_value": 44.23,
-        "time": 29.17,
+        "current_value": 44.22,
+        "time": 29.15,
         "mechanism": 10,
         "evidence": 100,
         "adoption": 100,
@@ -65205,8 +65209,8 @@
       "stars": 17025,
       "report": "projects/12-camel-ai-communicative-agents.md",
       "scores": {
-        "current_value": 43.53,
-        "time": 28.78,
+        "current_value": 43.52,
+        "time": 28.76,
         "mechanism": 35,
         "evidence": 68,
         "adoption": 80.35,
@@ -65725,8 +65729,8 @@
       "stars": 32784,
       "report": "projects/13-langgraph-agent-workflows.md",
       "scores": {
-        "current_value": 42.81,
-        "time": 29.16,
+        "current_value": 42.8,
+        "time": 29.14,
         "mechanism": 10,
         "evidence": 100,
         "adoption": 85.75,
@@ -66201,36 +66205,6 @@
     },
     {
       "rank": 159,
-      "repo": "Genentech/OpenTreeSearch",
-      "name": "OpenTreeSearch",
-      "url": "https://github.com/Genentech/opentreesearch",
-      "category": "LLM 引导代码进化",
-      "pattern": "进化/搜索循环 → 评估器/打分器",
-      "tags": [
-        "进化/搜索循环",
-        "评估器/打分器",
-        "树搜索",
-        "代码进化"
-      ],
-      "status": "verified",
-      "created_at": null,
-      "created_at_source": "unknown",
-      "first_observed_at": "2026-05-19T09:51:47-04:00",
-      "activity_at": "2026-01-01T00:00:00Z",
-      "stars": 200,
-      "report": "projects/24-opentreesearch-llm-code-evolution.md",
-      "scores": {
-        "current_value": 41.93,
-        "time": 29.02,
-        "mechanism": 59,
-        "evidence": 54,
-        "adoption": 43.74,
-        "usefulness": 63
-      },
-      "caveat": "created_at unavailable; time score capped and based on activity/observation only"
-    },
-    {
-      "rank": 160,
       "repo": "ollama/ollama",
       "name": "ollama",
       "url": "https://github.com/ollama/ollama",
@@ -66259,7 +66233,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 161,
+      "rank": 160,
       "repo": "kweaver-ai/kweaver-core",
       "name": "KWeaver Core",
       "url": "https://github.com/kweaver-ai/kweaver-core",
@@ -66286,6 +66260,36 @@
         "evidence": 56,
         "adoption": 55.17,
         "usefulness": 70
+      },
+      "caveat": "created_at unavailable; time score capped and based on activity/observation only"
+    },
+    {
+      "rank": 161,
+      "repo": "Genentech/OpenTreeSearch",
+      "name": "OpenTreeSearch",
+      "url": "https://github.com/Genentech/opentreesearch",
+      "category": "LLM 引导代码进化",
+      "pattern": "进化/搜索循环 → 评估器/打分器",
+      "tags": [
+        "进化/搜索循环",
+        "评估器/打分器",
+        "树搜索",
+        "代码进化"
+      ],
+      "status": "verified",
+      "created_at": null,
+      "created_at_source": "unknown",
+      "first_observed_at": "2026-05-19T09:51:47-04:00",
+      "activity_at": "2026-01-01T00:00:00Z",
+      "stars": 200,
+      "report": "projects/24-opentreesearch-llm-code-evolution.md",
+      "scores": {
+        "current_value": 41.92,
+        "time": 28.99,
+        "mechanism": 59,
+        "evidence": 54,
+        "adoption": 43.74,
+        "usefulness": 63
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
@@ -66892,8 +66896,8 @@
       "stars": 50000,
       "report": "projects/41-opendevin-ai-software.md",
       "scores": {
-        "current_value": 41.18,
-        "time": 29.02,
+        "current_value": 41.17,
+        "time": 28.99,
         "mechanism": 35,
         "evidence": 54,
         "adoption": 89.23,
@@ -67255,8 +67259,8 @@
       "stars": 26000,
       "report": "research/projects/46-chatdev-multi-agent-platform.md",
       "scores": {
-        "current_value": 40.8,
-        "time": 29.84,
+        "current_value": 40.79,
+        "time": 29.81,
         "mechanism": 43,
         "evidence": 36,
         "adoption": 83.84,
@@ -67446,36 +67450,6 @@
     },
     {
       "rank": 200,
-      "repo": "YoungDubbyDu/LLM-Agent-Optimization",
-      "name": "LLM-Agent-Optimization",
-      "url": "https://github.com/YoungDubbyDu/LLM-Agent-Optimization",
-      "category": "LLM Agent 优化综述",
-      "pattern": "文献综述",
-      "tags": [
-        "文献综述",
-        "Agent优化",
-        "参数优化",
-        "无参数优化"
-      ],
-      "status": "verified",
-      "created_at": null,
-      "created_at_source": "unknown",
-      "first_observed_at": "2026-02-26T07:07:46Z",
-      "activity_at": "2026-01-01T00:00:00Z",
-      "stars": 500,
-      "report": "projects/36-llm-agent-optimization.md",
-      "scores": {
-        "current_value": 40.39,
-        "time": 29.02,
-        "mechanism": 31,
-        "evidence": 86,
-        "adoption": 51.27,
-        "usefulness": 33
-      },
-      "caveat": "created_at unavailable; time score capped and based on activity/observation only"
-    },
-    {
-      "rank": 201,
       "repo": "OWASP/www-project-agent-memory-guard",
       "name": "OWASP Agent Memory Guard",
       "url": "https://github.com/OWASP/www-project-agent-memory-guard",
@@ -67502,6 +67476,36 @@
         "evidence": 56,
         "adoption": 23.84,
         "usefulness": 70
+      },
+      "caveat": "created_at unavailable; time score capped and based on activity/observation only"
+    },
+    {
+      "rank": 201,
+      "repo": "YoungDubbyDu/LLM-Agent-Optimization",
+      "name": "LLM-Agent-Optimization",
+      "url": "https://github.com/YoungDubbyDu/LLM-Agent-Optimization",
+      "category": "LLM Agent 优化综述",
+      "pattern": "文献综述",
+      "tags": [
+        "文献综述",
+        "Agent优化",
+        "参数优化",
+        "无参数优化"
+      ],
+      "status": "verified",
+      "created_at": null,
+      "created_at_source": "unknown",
+      "first_observed_at": "2026-02-26T07:07:46Z",
+      "activity_at": "2026-01-01T00:00:00Z",
+      "stars": 500,
+      "report": "projects/36-llm-agent-optimization.md",
+      "scores": {
+        "current_value": 40.37,
+        "time": 28.99,
+        "mechanism": 31,
+        "evidence": 86,
+        "adoption": 51.27,
+        "usefulness": 33
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
@@ -67741,8 +67745,8 @@
       "stars": 68239,
       "report": "projects/07-metagpt-multi-agent-framework.md",
       "scores": {
-        "current_value": 39.82,
-        "time": 19.09,
+        "current_value": 39.81,
+        "time": 19.07,
         "mechanism": 35,
         "evidence": 68,
         "adoption": 91.8,
@@ -68089,6 +68093,37 @@
     },
     {
       "rank": 221,
+      "repo": "RyanAlberts/best-of-Agent-Harnesses",
+      "name": "Best of Agent Harnesses",
+      "url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses",
+      "category": "Ranked Agent Harness Landscape Index",
+      "pattern": "collect harness projects -> score and rank ecosystem coverage -> expose category tags and update cadence -> provide comparative entrypoint for reliability-oriented harness selection",
+      "tags": [
+        "awesome-list",
+        "harness",
+        "ranking",
+        "resource-index",
+        "evaluation"
+      ],
+      "status": "candidate",
+      "created_at": null,
+      "created_at_source": "unknown",
+      "first_observed_at": null,
+      "activity_at": "2026-05-28T00:00:00Z",
+      "stars": 64,
+      "report": "projects/271-best-of-agent-harnesses-ranked-index.md",
+      "scores": {
+        "current_value": 39.34,
+        "time": 45,
+        "mechanism": 10,
+        "evidence": 56,
+        "adoption": 34.43,
+        "usefulness": 60
+      },
+      "caveat": "created_at unavailable; time score capped and based on activity/observation only"
+    },
+    {
+      "rank": 222,
       "repo": "ArcadeAI/openclaw-arcade-plugin",
       "name": "OpenClaw Arcade Plugin",
       "url": "https://github.com/ArcadeAI/openclaw-arcade-plugin",
@@ -68119,7 +68154,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 222,
+      "rank": 223,
       "repo": "MCKRUZ/openclaw-langfuse",
       "name": "OpenClaw Langfuse Observability Plugin",
       "url": "https://github.com/MCKRUZ/openclaw-langfuse",
@@ -68150,7 +68185,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 223,
+      "rank": 224,
       "repo": "AutoJunjie/awesome-agent-harness",
       "name": "Awesome Agent Harness (AutoJunjie)",
       "url": "https://github.com/AutoJunjie/awesome-agent-harness",
@@ -68181,7 +68216,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 224,
+      "rank": 225,
       "repo": "QuantClaw/QuantClaw",
       "name": "QuantClaw",
       "url": "https://github.com/QuantClaw/QuantClaw",
@@ -68212,7 +68247,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 225,
+      "rank": 226,
       "repo": "skillmatic-ai/awesome-agent-skills",
       "name": "Awesome Agent Skills (Skillmatic)",
       "url": "https://github.com/skillmatic-ai/awesome-agent-skills",
@@ -68243,7 +68278,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 226,
+      "rank": 227,
       "repo": "junminhong/awesome-agent-skills",
       "name": "Awesome Agent Skills",
       "url": "https://github.com/junminhong/awesome-agent-skills",
@@ -68274,7 +68309,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 227,
+      "rank": 228,
       "repo": "DEEP-PolyU/Awesome-GraphMemory",
       "name": "Awesome GraphMemory",
       "url": "https://github.com/DEEP-PolyU/Awesome-GraphMemory",
@@ -68303,7 +68338,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 228,
+      "rank": 229,
       "repo": "sola-st/repairagent",
       "name": "RepairAgent",
       "url": "https://github.com/sola-st/RepairAgent",
@@ -68334,7 +68369,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 229,
+      "rank": 230,
       "repo": "All-Hands-AI/OpenHands",
       "name": "OpenHands",
       "url": "https://github.com/All-Hands-AI/OpenHands",
@@ -68353,8 +68388,8 @@
       "stars": 74662,
       "report": "projects/15-openhands-ai-software-dev.md",
       "scores": {
-        "current_value": 38.68,
-        "time": 29.16,
+        "current_value": 38.67,
+        "time": 29.14,
         "mechanism": 10,
         "evidence": 68,
         "adoption": 92.54,
@@ -68363,7 +68398,7 @@
       "caveat": ""
     },
     {
-      "rank": 230,
+      "rank": 231,
       "repo": "henrikrexed/openclaw-observability-plugin",
       "name": "OpenClaw Observability Plugin",
       "url": "https://github.com/henrikrexed/openclaw-observability-plugin",
@@ -68394,7 +68429,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 231,
+      "rank": 232,
       "repo": "SamurAIGPT/awesome-openclaw",
       "name": "Awesome OpenClaw Ecosystem Index (SamurAIGPT)",
       "url": "https://github.com/SamurAIGPT/awesome-openclaw",
@@ -68425,7 +68460,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 232,
+      "rank": 233,
       "repo": "cxxz/awesome-agent-memory",
       "name": "Awesome Agent Memory by cxxz",
       "url": "https://github.com/cxxz/awesome-agent-memory",
@@ -68454,7 +68489,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 233,
+      "rank": 234,
       "repo": "microsoft/autogen",
       "name": "AutoGen",
       "url": "https://github.com/microsoft/autogen",
@@ -68473,8 +68508,8 @@
       "stars": 58330,
       "report": "projects/11-autogen-multi-agent-conversation.md",
       "scores": {
-        "current_value": 38.15,
-        "time": 26,
+        "current_value": 38.14,
+        "time": 25.97,
         "mechanism": 10,
         "evidence": 68,
         "adoption": 90.5,
@@ -68483,7 +68518,7 @@
       "caveat": ""
     },
     {
-      "rank": 234,
+      "rank": 235,
       "repo": "vilmire/adhdev",
       "name": "ADHDev",
       "url": "https://github.com/vilmire/adhdev",
@@ -68514,7 +68549,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 235,
+      "rank": 236,
       "repo": "sunnja69/akephalos",
       "name": "Akephalos",
       "url": "https://github.com/sunnja69/akephalos",
@@ -68545,7 +68580,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 236,
+      "rank": 237,
       "repo": "ComposioHQ/awesome-agent-clis",
       "name": "Awesome Agent CLIs",
       "url": "https://github.com/ComposioHQ/awesome-agent-clis",
@@ -68576,7 +68611,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 237,
+      "rank": 238,
       "repo": "LLMSecurity/awesome-agent-skills-security",
       "name": "Awesome Agent Skills Security",
       "url": "https://github.com/LLMSecurity/awesome-agent-skills-security",
@@ -68607,7 +68642,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 238,
+      "rank": 239,
       "repo": "ai4co/awesome-fm4co",
       "name": "Awesome-FM4CO",
       "url": "https://github.com/ai4co/awesome-fm4co",
@@ -68626,43 +68661,12 @@
       "stars": 500,
       "report": "projects/40-awesome-fm4co.md",
       "scores": {
-        "current_value": 37.59,
-        "time": 29.02,
+        "current_value": 37.57,
+        "time": 28.99,
         "mechanism": 17,
         "evidence": 86,
         "adoption": 51.27,
         "usefulness": 33
-      },
-      "caveat": "created_at unavailable; time score capped and based on activity/observation only"
-    },
-    {
-      "rank": 239,
-      "repo": "RyanAlberts/best-of-Agent-Harnesses",
-      "name": "Best of Agent Harnesses",
-      "url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses",
-      "category": "Ranked Agent Harness Landscape Index",
-      "pattern": "collect harness projects -> score and rank ecosystem coverage -> expose category tags and update cadence -> provide comparative entrypoint for reliability-oriented harness selection",
-      "tags": [
-        "awesome-list",
-        "harness",
-        "ranking",
-        "resource-index",
-        "evaluation"
-      ],
-      "status": "candidate",
-      "created_at": null,
-      "created_at_source": "unknown",
-      "first_observed_at": null,
-      "activity_at": "2026-05-28T00:00:00Z",
-      "stars": 45,
-      "report": "projects/271-best-of-agent-harnesses-ranked-index.md",
-      "scores": {
-        "current_value": 37.46,
-        "time": 45,
-        "mechanism": 2,
-        "evidence": 56,
-        "adoption": 31.58,
-        "usefulness": 60
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
@@ -68748,8 +68752,8 @@
       "stars": 2200,
       "report": "research/projects/61-osworld-agent-evaluation.md",
       "scores": {
-        "current_value": 37.14,
-        "time": 24.78,
+        "current_value": 37.12,
+        "time": 24.74,
         "mechanism": 28,
         "evidence": 62,
         "adoption": 63.48,
@@ -68867,8 +68871,8 @@
       "stars": 1200,
       "report": "research/projects/59-awesome-agent-papers.md",
       "scores": {
-        "current_value": 35.85,
-        "time": 37.1,
+        "current_value": 35.83,
+        "time": 37.06,
         "mechanism": 0,
         "evidence": 68,
         "adoption": 58.48,
@@ -68896,8 +68900,8 @@
       "stars": 2000,
       "report": "projects/37-awesome-code-llm.md",
       "scores": {
-        "current_value": 34.63,
-        "time": 29.02,
+        "current_value": 34.61,
+        "time": 28.99,
         "mechanism": 25,
         "evidence": 48,
         "adoption": 62.69,
@@ -68952,8 +68956,8 @@
       "stars": 1581,
       "report": "projects/03-adas-automated-design-agentic-systems.md",
       "scores": {
-        "current_value": 34.05,
-        "time": 5.65,
+        "current_value": 34.04,
+        "time": 5.62,
         "mechanism": 59,
         "evidence": 68,
         "adoption": 60.75,
@@ -69512,8 +69516,8 @@
       "stars": 2800,
       "report": "research/projects/62-webarena-web-evaluation.md",
       "scores": {
-        "current_value": 25.66,
-        "time": 16.43,
+        "current_value": 25.64,
+        "time": 16.39,
         "mechanism": 10,
         "evidence": 36,
         "adoption": 65.46,
@@ -69686,8 +69690,8 @@
       "stars": 33000,
       "report": "research/projects/52-agentgpt-autonomous.md",
       "scores": {
-        "current_value": 22.27,
-        "time": 8.08,
+        "current_value": 22.25,
+        "time": 8.04,
         "mechanism": 10,
         "evidence": 36,
         "adoption": 85.81,
@@ -69744,8 +69748,8 @@
       "stars": 4200,
       "report": "research/projects/47-openagents-platform.md",
       "scores": {
-        "current_value": 20.57,
-        "time": 8.08,
+        "current_value": 20.55,
+        "time": 8.04,
         "mechanism": 10,
         "evidence": 36,
         "adoption": 68.81,

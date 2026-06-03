@@ -709,17 +709,17 @@
     {
       "repo": "algorithmicsuperintelligence/openevolve",
       "url": "https://github.com/algorithmicsuperintelligence/openevolve",
-      "stars": "6",
+      "stars": "6500",
       "prior_category": "-",
       "prior_unclassified": "true",
-      "final_category": "应用/application",
-      "function_tag": "application-demo",
+      "final_category": "论文代码/paper-code",
+      "function_tag": "agent-evolution-infra",
       "base_theme": "evolution",
-      "stack": "Python",
-      "time_slice": "unknown",
-      "content_timestamp": "unknown",
-      "evidence": "application/self-evolving-agent signal",
-      "description": "Open-source implementation of AlphaEvolve"
+      "stack": "Python/JavaScript/CSS/Docker/PyPI",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-03",
+      "evidence": "web-observed GitHub page showed 6.5k stars, 1k forks, 74 issues, 42 pull requests, Apache-2.0 license, 52 releases with latest v0.2.27 on 2026-03-18, and README language positioning OpenEvolve as an evolutionary coding agent with pip and Docker entrypoints.",
+      "description": "OpenEvolve is an open-source evolutionary coding agent that combines LLM proposal loops, external evaluators, and release-grade engineering surfaces for reproducible code optimization."
     },
     {
       "repo": "alibaizhanov/mengram",
@@ -2464,17 +2464,17 @@
     {
       "repo": "EverMind-AI/EverOS",
       "url": "https://github.com/EverMind-AI/EverOS",
-      "stars": "5600",
+      "stars": "6800",
       "prior_category": "-",
       "prior_unclassified": "true",
       "final_category": "框架/framework",
       "function_tag": "framework-runtime",
       "base_theme": "memory",
       "stack": "Python",
-      "time_slice": "2026-05",
-      "content_timestamp": "2026-05-24",
-      "evidence": "web GitHub page observed 654 commits, Apache-2.0 license, Python primary language, benchmarks/methods/use-cases folders, EverMemBench/EvoAgentBench entries, 5.6k stars and 593 forks",
-      "description": "EverOS 把长期记忆方法、HyperMem 架构、用例集成、EverMemBench 和 EvoAgentBench 放在同一仓库中，直接连接 agent memory、MCP/skills 和 self-evolution evaluation。"
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-03",
+      "evidence": "web-observed GitHub page showed 6.8k stars, 669 forks, 54 issues, 50 pull requests, Apache-2.0 license, Python primary language, benchmarks/methods/use-cases folders, and topics spanning memory, long-term-memory, agent-memory, skills, and mcp.",
+      "description": "EverOS 把长期记忆 substrate、HyperMem 架构、用例集成、EverMemBench 和 EvoAgentBench 放在同一仓库中，连接 agent memory、skills、MCP 和 self-evolution evaluation。"
     },
     {
       "repo": "evermind-ai/everos?tab=readme-ov-file",
@@ -5359,7 +5359,7 @@
     {
       "repo": "microsoft/SkillOpt",
       "url": "https://github.com/microsoft/SkillOpt",
-      "stars": "1100",
+      "stars": "4500",
       "prior_category": "-",
       "prior_unclassified": "true",
       "final_category": "论文代码/paper-code",
@@ -5368,7 +5368,7 @@
       "stack": "Python/HTML/Skill Training Loops",
       "time_slice": "2026-06",
       "content_timestamp": "2026-06-03",
-      "evidence": "web-observed GitHub page showed 1.1k stars, 100 forks, 91 commits, MIT license, best_skill.md deployment artifacts, per-step output directories, and cross-harness benchmark claims across direct chat, Codex CLI, and Claude Code.",
+      "evidence": "web-observed GitHub page showed 4.5k stars, 452 forks, 91 commits, MIT license, best_skill.md deployment artifacts, per-step output directories, a 52/52 result banner, and cross-harness benchmark claims across direct chat, Codex CLI, and Claude Code.",
       "description": "SkillOpt is a text-space optimizer that trains reusable natural-language skills for frozen LLM agents through trajectory-driven edits, validation-gated updates, and deployable best_skill.md artifacts."
     },
     {
@@ -6745,11 +6745,11 @@
       "function_tag": "benchmark-eval",
       "base_theme": "evaluation",
       "stack": "Python/Shell/TypeScript/OpenClaw Benchmark Harness",
-      "evidence": "web-observed GitHub page showed about 1.2k stars, 136 forks, 17 issues, 383 commits, MIT license, 14 releases, 53 real-world tasks, and transcript-preserving benchmark workflows for OpenClaw agents.",
+      "evidence": "web-observed GitHub page showed about 1.2k stars, 133 forks, 16 issues, 383 commits, MIT license, 14 releases with latest v2.0.0 on 2026-05-06, 53 real-world tasks, and transcript-preserving benchmark workflows for OpenClaw agents.",
       "description": "PinchBench is an OpenClaw-oriented real task benchmark that measures coding agents across productivity, research, writing, coding, analysis, email, memory, and skill-discovery tasks.",
       "prior_unclassified": "true",
       "time_slice": "2026-06",
-      "content_timestamp": "2026-06-02"
+      "content_timestamp": "2026-06-03"
     },
     {
       "repo": "pingcap/ossinsight",
@@ -7414,17 +7414,17 @@
     {
       "repo": "RyanAlberts/best-of-Agent-Harnesses",
       "url": "https://github.com/RyanAlberts/best-of-Agent-Harnesses",
-      "stars": "45",
+      "stars": "64",
       "prior_category": "-",
       "prior_unclassified": "true",
       "final_category": "教程/tutorial",
       "function_tag": "resource-index",
       "base_theme": "evaluation",
       "stack": "Python/Shell/Generated Best-of Lists",
-      "time_slice": "2026-05",
-      "content_timestamp": "2026-05-28",
-      "evidence": "web-observed GitHub page showed 45 stars, 4 forks, 47 commits, CC-BY-SA-4.0 license, and README framing as a ranked list of agent harnesses updated weekly.",
-      "description": "best-of-Agent-Harnesses curates and ranks 100+ agent harness projects to provide a comparative map of harness engineering options."
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-03",
+      "evidence": "web-observed GitHub page showed 64 stars, 4 forks, CC-BY-SA-4.0 license, README framing as a ranked list of agent harnesses updated weekly, and a methodology note saying internal table star counts were captured on 2026-05-31.",
+      "description": "best-of-Agent-Harnesses curates and ranks 100+ agent harness projects to provide a comparative map of harness engineering options and weekly-updated benchmark/harness browsing paths."
     },
     {
       "repo": "sachinsharma9780/memweave",

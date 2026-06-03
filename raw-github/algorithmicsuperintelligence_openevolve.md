@@ -1,16 +1,38 @@
 ---
 repo: algorithmicsuperintelligence/openevolve
 url: https://github.com/algorithmicsuperintelligence/openevolve
-content_timestamp: unknown
-time_slice: unknown
-timestamp_source: unknown_not_present_in_raw_capture
-collected_at: 2026-05-20T17:44:59Z
-source: github
+content_timestamp: 2026-06-03
+time_slice: 2026-06
+timestamp_source: web_observed_public_github_page_2026_06_03
+collected_at: 2026-06-03T19:56:18+08:00
+source: github_web
 ---
 
 ## GitHub - algorithmicsuperintelligence/openevolve: Open-source implementation of AlphaEvolve · GitHub
 
 **Source**: https://github.com/algorithmicsuperintelligence/openevolve
+
+## Collection note
+
+Captured from the public GitHub repository page on 2026-06-03 because shell GitHub API access in this workspace remains blocked and local `gh` credentials are not reliable enough for freshness claims. This file records web-observed repository metadata, not authenticated GitHub API freshness.
+
+## Public metadata snapshot
+
+- Repository: `algorithmicsuperintelligence/openevolve`
+- Stars observed: 6.5k
+- Forks observed: 1k
+- Issues observed: 74
+- Pull requests observed: 42
+- Releases observed: 52 total; latest `v0.2.27` on 2026-03-18
+- License observed: Apache-2.0
+- Primary languages observed: Python 83.6%, JavaScript 12.3%, CSS 2.9%
+- Homepage / package signals: `pip install openevolve` and `ghcr.io/algorithmicsuperintelligence/openevolve:latest`
+
+## Raw README signals
+
+- The README frames OpenEvolve as an open-source evolutionary coding agent rather than a prompt-only optimizer.
+- The visible quick start exposes pip and Docker install paths, which matters for engineering reuse rather than paper-only reading.
+- The page highlights MAP-Elites, island-based evolution, artifact side-channels, and multi-model ensembles as the main mechanism stack.
 
 ---
 

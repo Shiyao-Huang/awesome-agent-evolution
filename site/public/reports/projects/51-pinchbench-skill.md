@@ -4,11 +4,11 @@
 |---|---|
 | Repository | [pinchbench/skill](https://github.com/pinchbench/skill) |
 | Category | Real-World Agent Task Benchmark |
-| Stars / forks snapshot | 1200 / 136 |
+| Stars / forks snapshot | 1200 / 133 |
 | Language | Python |
 | License | MIT |
 | Raw capture | raw-github/pinchbench_skill.md |
-| Updated by | hourly public metadata update, 2026-06-02 19:52 +0800 |
+| Updated by | hourly public metadata update, 2026-06-03 19:56 +0800 |
 
 ## 1. Role in Self Evolve
 
@@ -20,7 +20,7 @@ task suite -> OpenClaw agent execution -> automatic and/or LLM judging -> transc
 
 ## 3. Evidence Path
 
-The public GitHub page on 2026-06-02 showed about 1.2k stars, 136 forks, 17 open issues, 383 commits, MIT license, 14 releases with latest `v2.0.0`, and a README covering 53 tasks across coding, memory, email, research, analysis, and skill discovery. Shell GitHub API access remained blocked by DNS failure and `gh` could not connect, so this card treats freshness as web-observed rather than API-verified.
+The public GitHub page on 2026-06-03 showed about 1.2k stars, 133 forks, 16 open issues, 383 commits, MIT license, 14 releases with latest `v2.0.0`, and a README covering 53 tasks across coding, memory, email, research, analysis, and skill discovery. Shell GitHub API access remained blocked by DNS failure and `gh` could not connect, so this card treats freshness as web-observed rather than API-verified.
 
 ## 4. Teaching Use
 

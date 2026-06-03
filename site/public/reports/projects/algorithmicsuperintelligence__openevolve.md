@@ -2,8 +2,8 @@
 title: "openevolve"
 repo: "algorithmicsuperintelligence/openevolve"
 url: "https://github.com/algorithmicsuperintelligence/openevolve"
-stars: 6358
-forks: 1018
+stars: 6500
+forks: 1000
 last_pushed: "2026-03-18T12:25:39Z"
 license: "Apache-2.0"
 language: "Python"
@@ -14,7 +14,7 @@ local_path: "repos/algorithmicsuperintelligence__openevolve"
 
 ## 项目概览
 - **仓库**：[algorithmicsuperintelligence/openevolve](https://github.com/algorithmicsuperintelligence/openevolve)
-- **Star / Fork**：6358 / 1018
+- **Star / Fork**：6500 / 1000
 - **最近活跃**：2026-03-18T12:25:39Z
 - **主要语言**：Python
 - **许可证**：Apache-2.0
@@ -22,6 +22,11 @@ local_path: "repos/algorithmicsuperintelligence__openevolve"
 
 ## 技术栈
 Python, OpenAI 兼容 API, PyTorch, pytest
+
+## 本轮 metadata 刷新
+- 2026-06-03 公开 GitHub 页面可见 `6.5k` stars、`1k` forks、`74` issues、`42` pull requests，以及 `52` 个 releases。
+- 最新可见 release 仍是 `v0.2.27`（2026-03-18），因此本轮把 raw 时间缺口从 `unknown` 修到 web-observed `2026-06-03`，但不伪造新的 push 时间。
+- Shell GitHub API 仍不可用，所以本卡把这轮 freshness 明确标为 public-page observed，而不是 API-verified。
 
 依赖与配置证据：
 - `examples/lm_eval/requirements.txt`

@@ -22,18 +22,19 @@ This raw-style public GitHub page capture was recorded by the hourly public meta
 
 - Repository: microsoft/SkillOpt
 - URL: https://github.com/microsoft/SkillOpt
-- Stars: 1100
-- Forks: 100
+- Stars: 4500
+- Forks: 452
 - Commits: 91
 - License: MIT
 - Primary language / stack signal: Python/HTML/Skill Training Loops
-- Collection timestamp: 2026-06-03T07:52:50+08:00
+- Collection timestamp: 2026-06-03T19:56:18+08:00
 
 ## Visible README / page excerpts
 
 - The README frames SkillOpt as a text-space optimizer that improves skill files without changing the base model.
 - The public page exposes structured outputs such as history.json, runtime_state.json, best_skill.md, and per-step artifacts.
 - The repository claims broad benchmark coverage across direct chat, Codex CLI, and Claude Code execution harnesses.
+- The public project page also advertises a 52/52 best-or-tied-best result banner and links a companion SkillLens page, which makes it more than a bare code drop.
 - Public GitHub page evidence was observed without authenticated API access.
 
 ## Raw capture boundary

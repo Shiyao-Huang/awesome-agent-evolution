@@ -2,13 +2,13 @@
 
 Truth source: `.mermaid/current/graph.json`
 
-Generated: 2026-06-03T13:55:19+08:00
+Generated: 2026-06-03T19:56:18+08:00
 
 ## Nodes
 
 - **intent.direct-user-input** (ops, active): Use only direct user inputs as goal source for the hourly public metadata loop.
 - **raw.github.hourly-captures** (raw, updated): Keep public GitHub evidence raw and timestamped before analysis.
-- **processed.github-classification** (processed, updated): Refresh classification rows and model cards for code-repair, optimization, self-rewarding, and graph-runtime repos.
+- **processed.github-classification** (processed, updated): Refresh classification rows and public-facing metadata for evolution, memory, skill, harness, and benchmark anchors.
 - **results.public-site** (results, updated): Push the metadata refresh into README/i18n, project reports, and site project data.
 - **work.learning-note** (work, updated): Record the data flow, blockers, and repo-level evidence for the next run.
 
@@ -22,8 +22,8 @@ Generated: 2026-06-03T13:55:19+08:00
 
 ## Current Run Evidence
 
-- Web-observed repos: sola-st/repairagent, zhang677/accelopt, hwfengcs/dm-code-agent, rucbm/laser, arthurmgraf/graphmind.
-- Refreshed raw files: raw-github/sola-st_repairagent.md, raw-github/zhang677_accelopt.md, raw-github/hwfengcs_dm-code-agent.md, raw-github/rucbm_laser.md, raw-github/arthurmgraf_graphmind.md.
-- Refreshed public reports: site/public/reports/projects/393-repairagent-java-autonomous-bug-repair.md, site/public/reports/projects/394-accelopt-self-improving-kernel-optimizer.md, site/public/reports/projects/395-dm-code-agent-auditable-code-baseline.md, site/public/reports/projects/396-laser-last-token-self-rewarding-rl.md, site/public/reports/projects/397-graphmind-knowledge-agent-rag-runtime.md.
+- Web-observed repos: algorithmicsuperintelligence/openevolve, EverMind-AI/EverOS, microsoft/SkillOpt, RyanAlberts/best-of-Agent-Harnesses, pinchbench/skill.
+- Refreshed raw files: raw-github/algorithmicsuperintelligence_openevolve.md, raw-github/evermind-ai_everos.md, raw-github/microsoft_skillopt.md, raw-github/ryanalberts_best-of-agent-harnesses.md, raw-github/pinchbench_skill.md.
+- Refreshed public reports: site/public/reports/projects/algorithmicsuperintelligence__openevolve.md, site/public/reports/projects/79-everos-self-evolving-memory-os.md, site/public/reports/projects/272-skillopt-self-evolving-agent-skills.md, site/public/reports/projects/271-best-of-agent-harnesses-ranked-index.md, site/public/reports/projects/51-pinchbench-skill.md.
 - Shell GitHub API access remained blocked in this workspace, so freshness is public-page observed rather than API-verified.
-- GitNexus CLI is available, but impact resolution for generator helper symbols remained blocked in this run.
+- GitNexus CLI is available but stale against commit `e585ce2`, so this run used it only as degraded evidence and kept the current metadata proof chain web-backed.
