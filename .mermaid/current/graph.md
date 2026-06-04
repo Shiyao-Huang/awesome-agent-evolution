@@ -2,15 +2,15 @@
 
 Truth source: `.mermaid/current/graph.json`
 
-Generated: 2026-06-04T16:00:00+08:00
+Generated: 2026-06-04T15:36:30+08:00
 
 ## Nodes
 
-- **intent.direct-user-input** (ops, active): Use only direct user inputs as goal source for the hourly public metadata loop.
-- **raw.github.hourly-captures** (raw, updated): Keep public GitHub evidence raw and timestamped before analysis.
-- **processed.github-classification** (processed, updated): Refresh classification rows and model cards for memory, harness, evolution, and benchmark anchors.
-- **results.public-site** (results, updated): Push the metadata refresh into README/i18n, project reports, and site project data.
-- **work.learning-note** (work, updated): Record the data flow, blockers, and repo-level evidence for the next run.
+- **intent.direct-user-input** (ops, active): Use direct user inputs as the only goal source for the hourly public metadata loop.
+- **raw.github.hourly-captures** (raw, updated): Refresh raw GitHub captures before downstream analysis.
+- **processed.github-classification** (processed, updated): Update classification rows and project cards for skills, memory, harness, benchmark, and swarm runtime surfaces.
+- **results.public-site** (results, updated): Push the refresh into README/i18n, site data, and public project reports.
+- **work.learning-note** (work, updated): Record blockers, data flow, and current repo packet evidence.
 
 ## Edges
 
@@ -22,8 +22,9 @@ Generated: 2026-06-04T16:00:00+08:00
 
 ## Current Run Evidence
 
-- Web-observed repos: agentmemoryworld/awesome-agent-memory, letta-ai/learning-sdk, yennning/awesome-code-as-agent-harness-papers, clawland-ai/geneclaw, openclaw/clawbench.
-- Refreshed raw files: raw-github/agentmemoryworld_awesome-agent-memory.md, raw-github/letta-ai_agentic-learning-sdk.md, raw-github/yennning_awesome-code-as-agent-harness-papers.md, raw-github/clawland-ai_geneclaw.md, raw-github/openclaw_clawbench.md.
-- Refreshed public reports: site/public/reports/projects/398-agentmemoryworld-awesome-agent-memory-resource-index.md, site/public/reports/projects/399-letta-learning-sdk-continual-memory-sdk.md, site/public/reports/projects/400-yennning-code-as-agent-harness-papers.md, site/public/reports/projects/401-geneclaw-safe-self-evolving-agent-framework.md, site/public/reports/projects/402-openclaw-clawbench-full-stack-agent-benchmark.md.
+- Web-observed repos: voltagent/awesome-agent-skills, vectorize-io/agent-memory-benchmark, benchflow-ai/skillsbench, evalops/agent-harness, browser-use/browser-harness, swarmclawai/swarmclaw.
+- Refreshed raw files: raw-github/voltagent_awesome-agent-skills.md, raw-github/vectorize-io_agent-memory-benchmark.md, raw-github/benchflow-ai_skillsbench.md, raw-github/evalops_agent-harness.md, raw-github/browser-use_browser-harness.md, raw-github/swarmclawai_swarmclaw.md.
+- Refreshed public reports: site/public/reports/projects/403-voltagent-awesome-agent-skills-resource-index.md, site/public/reports/projects/77-agent-memory-benchmark.md, site/public/reports/projects/248-skillsbench-agent-skills-benchmark.md, site/public/reports/projects/259-evalops-agent-harness-provider-adapter.md, site/public/reports/projects/261-browser-harness-self-healing-web-agent-runtime.md, site/public/reports/projects/93-swarmclaw-agent-runtime.md.
 - Shell GitHub API access remained blocked in this workspace, so freshness is public-page observed rather than API-verified.
-- GitNexus CLI is available but stale against the current root commit, so it was not used as freshness evidence in this run.
+- `uid4oe/insight-swarm` could not be refreshed through the current web path and stays on prior local evidence for now.
+- GitNexus CLI is available but stale against the current root commit until a re-analysis pass is completed.

@@ -3,12 +3,12 @@ repo: benchflow-ai/skillsbench
 url: https://github.com/benchflow-ai/skillsbench
 content_timestamp: 2026-06-04
 time_slice: 2026-06
-timestamp_source: web_search_cached_github_result_observed_2026-06-04
-collected_at: 2026-06-04T01:56:13+08:00
-source: github_search_cache
+timestamp_source: web_observed_public_github_page_2026_06_04
+collected_at: 2026-06-04T15:36:30+08:00
+source: github
 ---
 
-## GitHub - benchflow-ai/skillsbench: SkillsBench evaluates how well skills work and how effective agents are at using them
+## GitHub - benchflow-ai/skillsbench: benchflow-ai/skillsbench is a benchmark harness for testing how well agents compose and use reusable skills across multi-step tasks under deterministic verification.
 
 **Source**: https://github.com/benchflow-ai/skillsbench
 
@@ -16,28 +16,28 @@ source: github_search_cache
 
 # Raw public page capture notes
 
-This refresh comes from a GitHub search result observed on 2026-06-04 because shell access to `api.github.com` still failed DNS resolution and local `gh` auth remained invalid. The search result reported it had crawled GitHub `5 days ago`, so this is cached public-page evidence, not a live API fetch.
+This raw-style public GitHub page capture was refreshed by the hourly public metadata update. Shell GitHub API access remained blocked in this workspace, so freshness is web-observed rather than API-verified.
 
 ## Visible repository metadata
 
 - Repository: benchflow-ai/skillsbench
 - URL: https://github.com/benchflow-ai/skillsbench
-- Stars: 1.3k
-- Forks: 305
-- Commits: 367
+- Stars: 1300
+- Forks: 312
+- Commits: 385
+- Issues: 12
+- Pull requests: 49
 - License: Apache-2.0
-- Primary language / stack signal: PDDL/Python/Shell/TypeScript/JavaScript/Scala
-- Crawl recency surfaced by search: `5 days ago`
+- Primary language / stack signal: PDDL/Python/Website/Tasks
+- Collection timestamp: 2026-06-04T15:36:30+08:00
 
 ## Visible README / page excerpts
 
-- The README describes SkillsBench as the first benchmark focused on how effectively agents use skills.
-- Current task goals highlighted in the cached result target multi-skill composition with state-of-the-art performance below 50%.
-- The repo keeps runnable `tasks/` plus intentionally excluded `tasks_excluded/` cases for reproducible benchmark behavior.
-- The benchmark uses `uv.lock` and a BenchFlow dependency source path to keep experiment updates reproducible.
+- The public GitHub page showed 1.3k stars, 312 forks, 385 commits, 12 issues, and 49 pull requests.
+- Visible repository structure exposed `.agents/skills`, `docs`, `experiments`, `tasks`, `tasks-extra`, and `website`.
+- The page exposed Apache-2.0 licensing and a benchmark orientation rather than a general-purpose runtime.
+- This snapshot came from the live public repository page rather than a cached search result.
 
 ## Raw capture boundary
 
-No benchmark was run, no source clone was modified, and no private or authenticated metadata was used. This file preserves cached public-page evidence for downstream classification, model-card analysis, public reports, and the site index.
-
-No benchmark was run, no source clone was modified, and no private or authenticated metadata was used. This file preserves public page evidence for downstream classification, model-card analysis, public reports, and the site index.
+No benchmark was rerun, no source clone was modified, and no private or authenticated metadata was used. This file preserves public page evidence for downstream classification, model-card analysis, timestamp indexes, and the public site.

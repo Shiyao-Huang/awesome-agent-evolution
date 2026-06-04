@@ -1,42 +1,43 @@
 ---
 repo: vectorize-io/agent-memory-benchmark
 url: https://github.com/vectorize-io/agent-memory-benchmark
-content_timestamp: 2026-06-02
+content_timestamp: 2026-06-04
 time_slice: 2026-06
-timestamp_source: web_github_page_open_2026-06-02
-collected_at: 2026-06-02T19:52:08+08:00
-source: github_web
-source_tool: web.open
+timestamp_source: web_observed_public_github_page_2026_06_04
+collected_at: 2026-06-04T15:36:30+08:00
+source: github
 ---
 
-## GitHub - vectorize-io/agent-memory-benchmark: Agent Memory Benchmark
+## GitHub - vectorize-io/agent-memory-benchmark: vectorize-io/agent-memory-benchmark is a benchmark harness for comparing agent memory strategies on multi-step tasks where retrieval quality, latency, and token cost all matter.
 
 **Source**: https://github.com/vectorize-io/agent-memory-benchmark
 
-## Collection note
+---
 
-Captured through the public GitHub page because local shell DNS resolution for `api.github.com` still failed and `gh` could not reach GitHub. This is web-observed freshness, not GitHub API-verified freshness.
+# Raw public page capture notes
 
-## Public metadata snapshot
+This raw-style public GitHub page capture was refreshed by the hourly public metadata update. Shell GitHub API access remained blocked in this workspace, so freshness is web-observed rather than API-verified.
 
-- Repository: `vectorize-io/agent-memory-benchmark`
-- Stars observed: 46
-- Forks observed: 17
-- Issues observed: 6
-- Pull requests observed: 4
-- Commit history observed: 29 commits
-- License observed: no license text exposed on the public page snapshot
-- Primary languages observed: Python 73.6%, Vue 22.5%, CSS 2.2%, JavaScript 1.2%, HTML 0.5%
-- Topics observed: `benchmark`, `ai-agents`, `ai-memory`
+## Visible repository metadata
 
-## Raw README signals
+- Repository: vectorize-io/agent-memory-benchmark
+- URL: https://github.com/vectorize-io/agent-memory-benchmark
+- Stars: 46
+- Forks: 17
+- Commits: 29
+- Issues: 6
+- Pull requests: 4
+- License: Unknown
+- Primary language / stack signal: Python/Vue/Agent Memory Benchmark
+- Collection timestamp: 2026-06-04T15:36:30+08:00
 
-- README says AMB exists because existing memory benchmarks no longer distinguish memory architectures well once million-token context windows make brute-force context dumping viable.
-- AMB adds agentic-task datasets that cover memory across tool calls, document research, and preferences in multi-step decisions.
-- The documented benchmark loop is ingest -> retrieve -> generate -> judge, while also tracking retrieval time, ingestion time, speed, and token cost.
-- The tool surface is explicit and reproducible: `uv run amb providers`, `uv run amb run`, `uv run amb dataset-stats`, and `uv run amb view`.
-- Results are written to `outputs/{dataset}/{memory}/{mode}/{domain}.json` and explored through the bundled viewer.
+## Visible README / page excerpts
 
-## Raw boundary
+- The public GitHub page showed 46 stars, 17 forks, 29 commits, 6 issues, and 4 pull requests.
+- Visible repository structure exposed `data`, `outputs`, `src/memory_bench`, `ui`, and result-manifest files rather than only a paper stub.
+- The raw README framing remains benchmark-first: memory architectures are compared through measurable retrieval and answer outcomes.
+- The public page did not expose a reliable license label in the observed snapshot, so license freshness stays conservative.
 
-No dataset run, Gemini call, or UI session was executed in this iteration. This file preserves the public benchmark surface and problem framing for downstream classification, deep reports, public model cards, and README/site evidence.
+## Raw capture boundary
+
+No benchmark was rerun, no source clone was modified, and no private or authenticated metadata was used. This file preserves public page evidence for downstream classification, model-card analysis, timestamp indexes, and the public site.

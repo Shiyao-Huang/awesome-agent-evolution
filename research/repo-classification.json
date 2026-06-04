@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-04T16:00:00+08:00",
+  "generated_at": "2026-06-04T15:36:30+08:00",
   "rows": [
     {
       "repo": "01-ai/langcrew",
@@ -1179,12 +1179,12 @@
       "prior_unclassified": "true",
       "final_category": "评测/evaluation",
       "function_tag": "benchmark-eval",
-      "base_theme": "evaluation",
-      "stack": "PDDL/Python/Shell/TypeScript/JavaScript/Scala",
+      "base_theme": "skill",
+      "stack": "PDDL/Python/Website/Tasks",
       "time_slice": "2026-06",
       "content_timestamp": "2026-06-04",
-      "evidence": "cached GitHub search result observed on 2026-06-04 showed 1.3k stars, 305 forks, 367 commits, Apache-2.0 license, runnable tasks plus tasks_excluded, and reproducible lockfile-based skill evaluation workflows.",
-      "description": "SkillsBench is a gym-style benchmark framework for measuring how well agents use reusable skills across multi-step tasks."
+      "evidence": "web-observed GitHub page showed 1.3k stars, 312 forks, 385 commits, 12 open issues, 49 pull requests, Apache-2.0 licensing, and runnable task plus website surfaces for skills-focused evaluation.",
+      "description": "benchflow-ai/skillsbench is a benchmark harness for testing how well agents compose and use reusable skills across multi-step tasks under deterministic verification."
     },
     {
       "repo": "bennettschwartz/membrane",
@@ -1294,17 +1294,17 @@
     {
       "repo": "browser-use/browser-harness",
       "url": "https://github.com/browser-use/browser-harness",
-      "stars": "13900",
+      "stars": "14300",
       "prior_category": "-",
       "prior_unclassified": "true",
-      "final_category": "框架/framework",
+      "final_category": "评测/evaluation",
       "function_tag": "benchmark-eval",
-      "base_theme": "evaluation",
+      "base_theme": "harness",
       "stack": "Python/CDP/Chrome Debugging/Playwright",
       "time_slice": "2026-06",
       "content_timestamp": "2026-06-04",
-      "evidence": "cached GitHub search result observed on 2026-06-04 showed 13.9k stars, 1.3k forks, 391 commits, 13 issues, 91 pull requests, MIT license, and README claims for direct browser websocket control, editable helpers, and domain skill workflows.",
-      "description": "browser-use/browser-harness connects LLM agents to real browsers through a thin editable CDP harness and encourages run-time self-healing helper generation."
+      "evidence": "web-observed GitHub page showed 14.3k stars, 1.3k forks, 391 commits, 13 open issues, 98 pull requests, visible MIT licensing, and a self-healing browser harness centered on editable helper code and domain skills.",
+      "description": "browser-use/browser-harness connects LLM agents to live browsers through a thin editable CDP harness and encourages runtime self-healing helper generation."
     },
     {
       "repo": "browser-use/browser-use",
@@ -2424,12 +2424,12 @@
       "prior_unclassified": "true",
       "final_category": "工具/tool",
       "function_tag": "framework-runtime",
-      "base_theme": "evaluation",
+      "base_theme": "harness",
       "stack": "Python/Bazel/OpenAI-Agents/Claude-Agent-SDK",
-      "time_slice": "2026-05",
-      "content_timestamp": "2026-05-27",
-      "evidence": "web-observed GitHub page showed 18 stars, 5 forks, 12 commits, MIT license, and README notes for thread-safe tool registry, lazy provider adapters, and provider comparison helper flows.",
-      "description": "evalops/agent-harness is a lightweight adapter that lets one tool registry run across OpenAI Agents SDK and Anthropic Claude Agent SDK backends."
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-04",
+      "evidence": "web-observed GitHub page showed 18 stars, 5 forks, 12 commits, 5 open issues, 0 pull requests, visible MIT licensing, and a unified harness surface for OpenAI Agents SDK and Anthropic Claude Agent SDK.",
+      "description": "evalops/agent-harness is a lightweight harness adapter that lets one tool registry and one prompt surface run across OpenAI and Claude agent SDK backends."
     },
     {
       "repo": "evalops/dspy-0to1-guide",
@@ -8389,17 +8389,17 @@
     {
       "repo": "swarmclawai/swarmclaw",
       "url": "https://github.com/swarmclawai/swarmclaw",
-      "stars": "518",
+      "stars": "544",
       "prior_category": "-",
       "prior_unclassified": "true",
       "final_category": "框架/framework",
       "function_tag": "framework-runtime",
-      "base_theme": "framework",
-      "stack": "TypeScript",
-      "time_slice": "2026-05",
-      "content_timestamp": "2026-05-24",
-      "evidence": "web GitHub page observed 488 commits, MIT license, TypeScript primary language, agent memory/MCP/schedules/delegation runtime, 197 releases with 1.9.35 latest on 2026-05-20, 518 stars and 103 forks",
-      "description": "swarmclaw 是 self-hosted agent runtime 与多代理框架，覆盖 agent memory、MCP tools、schedule、delegation、SwarmDock/SwarmFeed/SwarmVault 和 23+ LLM provider。"
+      "base_theme": "harness",
+      "stack": "TypeScript/Agent Runtime/Memory/MCP/Delegation",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-04",
+      "evidence": "web-observed GitHub page showed 544 stars, 106 forks, 490 commits, 3 open issues, 0 pull requests, and a self-hosted multi-agent runtime that exposes memory, MCP tools, schedules, delegation, skills, and 23+ model providers.",
+      "description": "swarmclawai/swarmclaw is a self-hosted multi-agent runtime that combines memory, MCP tooling, delegation, schedules, skills, and swarm-oriented execution surfaces."
     },
     {
       "repo": "swe-agent/swe-agent",
@@ -8995,11 +8995,11 @@
       "final_category": "评测/evaluation",
       "function_tag": "benchmark-eval",
       "base_theme": "memory",
-      "stack": "Python/Vue/Memory Benchmark Viewer",
+      "stack": "Python/Vue/Agent Memory Benchmark",
       "time_slice": "2026-06",
-      "content_timestamp": "2026-06-02",
-      "evidence": "web-observed GitHub page showed 46 stars, 17 forks, 6 issues, 4 pull requests, 29 commits, Python/Vue implementation, and README claims for open datasets, prompts, scoring logic, and memory benchmark outputs.",
-      "description": "AMB 是面向 agent memory 的公开 benchmark，强调 agentic memory task 评测、开放 prompts/评分逻辑，以及 accuracy、speed、token cost 的联合比较。"
+      "content_timestamp": "2026-06-04",
+      "evidence": "web-observed GitHub page showed 46 stars, 17 forks, 29 commits, 6 open issues, 4 pull requests, and a benchmark surface spanning ingest, retrieve, generate, judge, outputs, and a bundled viewer.",
+      "description": "vectorize-io/agent-memory-benchmark is a benchmark harness for comparing agent memory strategies on multi-step tasks where retrieval quality, latency, and token cost all matter."
     },
     {
       "repo": "vectorize-io/hindsight",
@@ -9213,18 +9213,18 @@
     },
     {
       "repo": "voltagent/awesome-agent-skills",
-      "url": "https://github.com/VoltAgent/awesome-agent-skills",
-      "stars": "22900",
+      "url": "https://github.com/voltagent/awesome-agent-skills",
+      "stars": "24200",
       "prior_category": "-",
       "prior_unclassified": "true",
       "final_category": "教程/tutorial",
       "function_tag": "resource-index",
       "base_theme": "skill",
-      "stack": "Markdown",
-      "time_slice": "2026-05",
-      "content_timestamp": "2026-05-24",
-      "evidence": "existing raw capture promoted; web GitHub page observed 350 commits, MIT license, official/community Agent Skills index, Claude Code/Codex/Gemini/Cursor/GitHub Copilot compatibility, 22.9k stars and 2.4k forks",
-      "description": "VoltAgent awesome-agent-skills 是跨 Claude Code、Codex、Gemini CLI、Cursor、GitHub Copilot、OpenCode 等 agent 的官方与社区技能索引，重点筛选真实团队使用的 Agent Skills。"
+      "stack": "Markdown/Official Skill Registry",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-04",
+      "evidence": "web-observed GitHub page showed 24.2k stars, 2.6k forks, 359 commits, 5 open issues, 31 pull requests, visible MIT licensing, and a maintained skill directory centered on official engineering-team skill packs.",
+      "description": "voltagent/awesome-agent-skills is a high-signal resource index for reusable agent skills across Claude Code, Codex, Gemini CLI, Cursor, GitHub Copilot, and adjacent coding-agent surfaces."
     },
     {
       "repo": "VoltAgent/awesome-openclaw-skills",

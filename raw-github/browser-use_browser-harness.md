@@ -3,12 +3,12 @@ repo: browser-use/browser-harness
 url: https://github.com/browser-use/browser-harness
 content_timestamp: 2026-06-04
 time_slice: 2026-06
-timestamp_source: web_search_cached_github_result_observed_2026-06-04
-collected_at: 2026-06-04T01:56:13+08:00
-source: github_search_cache
+timestamp_source: web_observed_public_github_page_2026_06_04
+collected_at: 2026-06-04T15:36:30+08:00
+source: github
 ---
 
-## GitHub - browser-use/browser-harness: Browser Harness | Self-healing harness that enables LLMs to complete any task.
+## GitHub - browser-use/browser-harness: browser-use/browser-harness connects LLM agents to live browsers through a thin editable CDP harness and encourages runtime self-healing helper generation.
 
 **Source**: https://github.com/browser-use/browser-harness
 
@@ -16,30 +16,28 @@ source: github_search_cache
 
 # Raw public page capture notes
 
-This refresh comes from a GitHub search result observed on 2026-06-04 because shell access to `api.github.com` still failed DNS resolution and local `gh` auth remained invalid. The search result reported it had crawled GitHub `last week`, so this is cached public-page evidence, not a live API fetch.
+This raw-style public GitHub page capture was refreshed by the hourly public metadata update. Shell GitHub API access remained blocked in this workspace, so freshness is web-observed rather than API-verified.
 
 ## Visible repository metadata
 
 - Repository: browser-use/browser-harness
 - URL: https://github.com/browser-use/browser-harness
-- Stars: 13.9k
-- Forks: 1.3k
+- Stars: 14300
+- Forks: 1300
 - Commits: 391
 - Issues: 13
-- Pull requests: 91
+- Pull requests: 98
 - License: MIT
 - Primary language / stack signal: Python/CDP/Chrome Debugging/Playwright
-- Crawl recency surfaced by search: `last week`
+- Collection timestamp: 2026-06-04T15:36:30+08:00
 
 ## Visible README / page excerpts
 
-- The README calls it a self-healing browser harness where the agent edits missing helpers during execution.
-- The runtime model stays minimal: one websocket to Chrome, editable helper code, and domain-specific skill folders.
-- Setup guidance explicitly targets Claude Code and Codex installation flows.
-- The contribution path emphasizes agent-generated domain skills rather than hand-authored static playbooks.
+- The public GitHub page showed 14.3k stars, 1.3k forks, 391 commits, 13 issues, and 98 pull requests.
+- Visible repository structure exposed `agent-workspace`, `interaction-skills`, `docs`, `src/browser_harness`, and tests.
+- The README framing stays explicit about self-healing helper code, browser websocket control, and install flows for coding agents.
+- The public page exposed visible MIT licensing in the repository header area.
 
 ## Raw capture boundary
 
-No benchmark was run, no source clone was modified, and no private or authenticated metadata was used. This file preserves cached public-page evidence for downstream classification, model-card analysis, public reports, and the site index.
-
-No benchmark was run, no source clone was modified, and no private or authenticated metadata was used. This file preserves public page evidence for downstream classification, model-card analysis, public reports, and the site index.
+No benchmark was rerun, no source clone was modified, and no private or authenticated metadata was used. This file preserves public page evidence for downstream classification, model-card analysis, timestamp indexes, and the public site.

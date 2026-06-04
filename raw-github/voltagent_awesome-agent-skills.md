@@ -1,48 +1,43 @@
 ---
 repo: voltagent/awesome-agent-skills
 url: https://github.com/voltagent/awesome-agent-skills
-content_timestamp: unknown
-time_slice: unknown
-timestamp_source: unknown_not_present_in_raw_capture
-collected_at: 2026-05-20T17:45:19Z
+content_timestamp: 2026-06-04
+time_slice: 2026-06
+timestamp_source: web_observed_public_github_page_2026_06_04
+collected_at: 2026-06-04T15:36:30+08:00
 source: github
 ---
 
-## GitHub - VoltAgent/awesome-agent-skills: A curated collection of 1000+ agent skills from official dev teams and the community, compatible with Claude Code, Codex, Gemini CLI, Cursor, and more. · GitHub
+## GitHub - voltagent/awesome-agent-skills: voltagent/awesome-agent-skills is a high-signal resource index for reusable agent skills across Claude Code, Codex, Gemini CLI, Cursor, GitHub Copilot, and adjacent coding-agent surfaces.
 
 **Source**: https://github.com/voltagent/awesome-agent-skills
 
 ---
 
-[Skip to content](https://github.com/voltagent/awesome-agent-skills#start-of-content)
+# Raw public page capture notes
 
-You signed in with another tab or window. Reload to refresh your session.
+This raw-style public GitHub page capture was refreshed by the hourly public metadata update. Shell GitHub API access remained blocked in this workspace, so freshness is web-observed rather than API-verified.
 
-You signed out in another tab or window. Reload to refresh your session.
+## Visible repository metadata
 
-You switched accounts on another tab or window. Reload to refresh your session.
-Dismiss alert
+- Repository: voltagent/awesome-agent-skills
+- URL: https://github.com/voltagent/awesome-agent-skills
+- Stars: 24200
+- Forks: 2600
+- Commits: 359
+- Issues: 5
+- Pull requests: 31
+- License: MIT
+- Primary language / stack signal: Markdown/Official Skill Registry
+- Collection timestamp: 2026-06-04T15:36:30+08:00
 
-{{ message }}
+## Visible README / page excerpts
 
-[VoltAgent](https://github.com/VoltAgent)
+- The public GitHub page showed 24.2k stars, 2.6k forks, 359 commits, 5 issues, and 31 pull requests.
+- The README frames the repo as a hand-picked collection of official and community agent skills rather than an auto-generated dump.
+- The top-level taxonomy is organized around providers and teams such as Anthropic, Google Gemini, VoltAgent, and other engineering organizations.
+- Visible page text exposed MIT licensing and compatibility with Claude Code, Codex, Gemini CLI, Cursor, GitHub Copilot, and related tools.
 
-/
-**[awesome-agent-skills](https://github.com/VoltAgent/awesome-agent-skills)**
+## Raw capture boundary
 
-Public
-
-- [Notifications](https://github.com/login?return_to=%2FVoltAgent%2Fawesome-agent-skills)You must be signed in to change notification settings
-- [Fork
-    2.4k](https://github.com/login?return_to=%2FVoltAgent%2Fawesome-agent-skills)
-- 
-[Star
-          22.5k](https://github.com/login?return_to=%2FVoltAgent%2Fawesome-agent-skills)
-## gBrain Temporal Metadata
-
-- content_timestamp: unknown
-- collected_at: 2026-05-21T00:00:00+08:00
-- time_slice: unknown
-- timestamp_confidence: unknown
-- timestamp_source: no reliable publication/creation timestamp found in raw artifact
-
+No benchmark was rerun, no source clone was modified, and no private or authenticated metadata was used. This file preserves public page evidence for downstream classification, model-card analysis, timestamp indexes, and the public site.

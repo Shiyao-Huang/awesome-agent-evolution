@@ -37,21 +37,12 @@
 
 | 仓库 | 这轮补了什么 | 为什么重要 |
 |---|---|---|
-| [agentmemoryworld/awesome-agent-memory](https://github.com/AgentMemoryWorld/Awesome-Agent-Memory) | 刷新 raw snapshot、project card、site public report 与分类元数据，统一到 2026-06-04 的公开 GitHub 页面证据。 | 它把 memory 从零散实现拉回到系统性资源地图，适合在 README 和站点前排回答“memory 领域到底有哪些东西”这个问题。 |
-| [letta-ai/learning-sdk](https://github.com/letta-ai/learning-sdk) | 刷新 raw snapshot、project card、site public report 与分类元数据，统一到 2026-06-04 的公开 GitHub 页面证据。 | 它把“memory + learning”压缩成一个可嵌入 SDK，而不是整套 runtime，适合补齐用户关心的 skill/memory 基础设施层。 |
-| [yennning/awesome-code-as-agent-harness-papers](https://github.com/YennNing/Awesome-Code-as-Agent-Harness-Papers) | 刷新 raw snapshot、project card、site public report 与分类元数据，统一到 2026-06-04 的公开 GitHub 页面证据。 | 它直接服务用户强调的 harness 方向，而且不是单个项目，而是把 code-as-harness 这条路线变成可教学的入口。 |
-| [clawland-ai/geneclaw](https://github.com/Clawland-AI/Geneclaw) | 刷新 raw snapshot、project card、site public report 与分类元数据，统一到 2026-06-04 的公开 GitHub 页面证据。 | 它是“受控自进化”最直观的工程样本之一，正好对应 README 核心判断里用户最关心的安全与审计边界。 |
-| [openclaw/clawbench](https://github.com/openclaw/clawbench) | 刷新 raw snapshot、project card、site public report 与分类元数据，统一到 2026-06-04 的公开 GitHub 页面证据。 | 它补上了 benchmark 面最关键的“评测整条 agent 栈，而不是只测模型输出”这一层。 |
-
-```mermaid
-flowchart LR
-  RAW["原始证据<br/>GitHub / 论文 / 博客 / 社交"] --> PROC["加工证据<br/>分析 / 研究 / 项目"]
-  PROC --> SURVEY["Survey 综合<br/>五类进化回路 + 痛点 + benchmark"]
-  SURVEY --> SPARK["核心洞察<br/>受控自进化"]
-  SPARK --> EAI["Evolve-AGI Index<br/>领域成熟度指数"]
-  EAI --> PAPER["论文核心<br/>论点 + 贡献 + 路线图"]
-  SURVEY --> SITE["网站 + 图谱 + 报告"]
-```
+| [voltagent/awesome-agent-skills](https://github.com/voltagent/awesome-agent-skills) | 刷新 raw capture、project card、site public report 与分类元数据，统一到 2026-06-04 的公开 GitHub 页面证据。 | 它把 skill 从零散 prompt 包提升成一个官方团队可追踪的技能生态入口，直接对应用户要求的 skill / methodology 证据层。 |
+| [vectorize-io/agent-memory-benchmark](https://github.com/vectorize-io/agent-memory-benchmark) | 刷新 raw capture、project card、site public report 与分类元数据，统一到 2026-06-04 的公开 GitHub 页面证据。 | 它把 memory 从“有没有记住”推进到可比的 benchmark 层，补齐用户要求的 memory + eval 公开证据。 |
+| [benchflow-ai/skillsbench](https://github.com/benchflow-ai/skillsbench) | 刷新 raw capture、project card、site public report 与分类元数据，统一到 2026-06-04 的公开 GitHub 页面证据。 | 它补的是“skills 到底有没有被 agent 用好”这一层，比 skill pack 本身更接近用户要求的 benchmark/eval 证据链。 |
+| [evalops/agent-harness](https://github.com/evalops/agent-harness) | 刷新 raw capture、project card、site public report 与分类元数据，统一到 2026-06-04 的公开 GitHub 页面证据。 | 它是 harness 方向里最直接的 provider 对照层，能把同一任务在不同 agent backend 上做可比实验。 |
+| [browser-use/browser-harness](https://github.com/browser-use/browser-harness) | 刷新 raw capture、project card、site public report 与分类元数据，统一到 2026-06-04 的公开 GitHub 页面证据。 | 它把 browser-use 从单纯 demo 提升到可编辑 harness 形态，正好补上 browser/skill/harness 的交叉层。 |
+| [swarmclawai/swarmclaw](https://github.com/swarmclawai/swarmclaw) | 刷新 raw capture、project card、site public report 与分类元数据，统一到 2026-06-04 的公开 GitHub 页面证据。 | 它把 agent-swarm 从概念讨论拉回到一个具体 runtime 面，覆盖用户反复要求补强的 swarm / multi-agent 方向。 |
 
 ## 核心洞察
 

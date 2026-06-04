@@ -1,14 +1,14 @@
 ---
 repo: swarmclawai/swarmclaw
 url: https://github.com/swarmclawai/swarmclaw
-content_timestamp: 2026-05-24
-time_slice: 2026-05
-timestamp_source: web_observed_github_page
-collected_at: 2026-05-24T13:05:00Z
+content_timestamp: 2026-06-04
+time_slice: 2026-06
+timestamp_source: web_observed_public_github_page_2026_06_04
+collected_at: 2026-06-04T15:36:30+08:00
 source: github
 ---
 
-## GitHub - swarmclawai/swarmclaw: self-hosted AI agent runtime and multi-agent framework.
+## GitHub - swarmclawai/swarmclaw: swarmclawai/swarmclaw is a self-hosted multi-agent runtime that combines memory, MCP tooling, delegation, schedules, skills, and swarm-oriented execution surfaces.
 
 **Source**: https://github.com/swarmclawai/swarmclaw
 
@@ -16,26 +16,28 @@ source: github
 
 # Raw public page capture notes
 
-This is a raw-style public GitHub page capture recorded by the hourly public metadata update. Shell GitHub API access was blocked during this run, so the freshness level is web-observed rather than API-verified.
+This raw-style public GitHub page capture was refreshed by the hourly public metadata update. Shell GitHub API access remained blocked in this workspace, so freshness is web-observed rather than API-verified.
 
 ## Visible repository metadata
 
 - Repository: swarmclawai/swarmclaw
 - URL: https://github.com/swarmclawai/swarmclaw
-- Stars: 518
-- Forks: 103
-- Commits: 488
+- Stars: 544
+- Forks: 106
+- Commits: 490
+- Issues: 3
+- Pull requests: 0
 - License: MIT
-- Primary language / stack signal: TypeScript
-- Collection timestamp: 2026-05-24T13:05:00Z
+- Primary language / stack signal: TypeScript/Agent Runtime/Memory/MCP/Delegation
+- Collection timestamp: 2026-06-04T15:36:30+08:00
 
 ## Visible README / page excerpts
 
-- Open-source self-hosted AI agent runtime and multi-agent framework for autonomous agent swarms.
-- The page lists agent memory, MCP tools, schedules, delegation, and 23+ LLM providers.
-- Topics include multi-agent, agent-memory, agent-runtime, claude-code-alternative, and openclaw.
-- Public page snapshot: 488 commits, MIT license, 197 releases, latest 1.9.35 on May 20, 2026, 518 stars, 103 forks.
+- The public GitHub page showed 544 stars, 106 forks, 490 commits, 3 issues, and 0 pull requests.
+- Visible repository structure exposed `skills`, `scripts`, `tests`, `electron`, `public`, and runtime source directories.
+- The repository description explicitly positions it as an open-source self-hosted AI agent runtime and multi-agent framework for autonomous swarms.
+- The public snapshot preserved the runtime plus memory and MCP framing rather than only feature marketing.
 
 ## Raw capture boundary
 
-No benchmark was run and no source clone was modified. This file preserves public page evidence for downstream classification, model-card analysis, public reports, and the site index.
+No benchmark was rerun, no source clone was modified, and no private or authenticated metadata was used. This file preserves public page evidence for downstream classification, model-card analysis, timestamp indexes, and the public site.

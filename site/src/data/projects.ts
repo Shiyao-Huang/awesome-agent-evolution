@@ -3230,22 +3230,20 @@ export const projects: Project[] = [
         "repo": "benchflow-ai/skillsbench",
         "url": "https://github.com/benchflow-ai/skillsbench",
         "stars": 1300,
-        "forks": 305,
+        "forks": 312,
         "language": "PDDL",
         "license": "Apache-2.0",
         "report": "projects/248-skillsbench-agent-skills-benchmark.md",
-        "pattern": "task + skill set -> agent run -> deterministic verifier scoring -> artifact/leaderboard export -> iteration and comparison",
-        "description": "SkillsBench is a gym-style benchmark framework for measuring how well agents use reusable skills across multi-step tasks.",
+        "pattern": "task plus skill set -> agent run -> deterministic verifier scoring -> artifact and leaderboard export -> compare skill usage quality over time",
+        "description": "benchflow-ai/skillsbench is a benchmark harness for testing how well agents compose and use reusable skills across multi-step tasks under deterministic verification.",
         "stack": [
             "PDDL",
             "Python",
-            "Shell",
-            "TypeScript",
-            "JavaScript",
-            "Scala"
+            "Website",
+            "Tasks"
         ],
         "category": "Agent Skills Benchmark Harness",
-        "lastPushed": "2026-05-26T00:00:00Z",
+        "lastPushed": "2026-06-04T00:00:00Z",
         "localPath": "raw-github/benchflow-ai_skillsbench.md",
         "status": "candidate",
         "tags": [
@@ -3253,7 +3251,9 @@ export const projects: Project[] = [
             "skills",
             "evaluation harness",
             "agent reliability",
-            "task composition"
+            "task composition",
+            "skill",
+            "benchmark-eval"
         ]
     },
     {
@@ -3549,8 +3549,8 @@ export const projects: Project[] = [
         "language": "Python",
         "license": "MIT",
         "report": "projects/259-evalops-agent-harness-provider-adapter.md",
-        "pattern": "register tools once -> normalize json schema and response shape -> lazy provider adapter import -> run identical prompts across OpenAI/Claude backends for comparison",
-        "description": "evalops/agent-harness is a lightweight adapter that lets one tool registry run across OpenAI Agents SDK and Anthropic Claude Agent SDK backends.",
+        "pattern": "register tools once -> normalize json schema and response shape -> lazy-load provider adapters -> run the same task across multiple agent backends for comparison",
+        "description": "evalops/agent-harness is a lightweight harness adapter that lets one tool registry and one prompt surface run across OpenAI and Claude agent SDK backends.",
         "stack": [
             "Python",
             "Bazel",
@@ -3558,7 +3558,7 @@ export const projects: Project[] = [
             "Claude-Agent-SDK"
         ],
         "category": "Cross-Provider Agent Harness Adapter",
-        "lastPushed": "2026-05-27T00:00:00Z",
+        "lastPushed": "2026-06-04T00:00:00Z",
         "localPath": "raw-github/evalops_agent-harness.md",
         "status": "candidate",
         "tags": [
@@ -3566,7 +3566,8 @@ export const projects: Project[] = [
             "provider swap",
             "evaluation",
             "mcp",
-            "python"
+            "python",
+            "framework-runtime"
         ]
     },
     {
@@ -3602,13 +3603,13 @@ export const projects: Project[] = [
         "name": "Browser Harness",
         "repo": "browser-use/browser-harness",
         "url": "https://github.com/browser-use/browser-harness",
-        "stars": 13900,
+        "stars": 14300,
         "forks": 1300,
         "language": "Python",
         "license": "MIT",
         "report": "projects/261-browser-harness-self-healing-web-agent-runtime.md",
-        "pattern": "connect llm directly to live browser cdp -> patch missing helpers in agent-workspace during runs -> domain skill playbooks by site -> iteratively improve execution reliability",
-        "description": "browser-use/browser-harness connects LLM agents to real browsers through a thin editable CDP harness and encourages run-time self-healing helper generation.",
+        "pattern": "connect llm directly to live browser cdp -> patch missing helpers in agent-workspace during runs -> use domain interaction skills -> iteratively improve execution reliability",
+        "description": "browser-use/browser-harness connects LLM agents to live browsers through a thin editable CDP harness and encourages runtime self-healing helper generation.",
         "stack": [
             "Python",
             "CDP",
@@ -3616,7 +3617,7 @@ export const projects: Project[] = [
             "Playwright"
         ],
         "category": "Self-Healing Browser Agent Harness",
-        "lastPushed": "2026-05-27T00:00:00Z",
+        "lastPushed": "2026-06-04T00:00:00Z",
         "localPath": "raw-github/browser-use_browser-harness.md",
         "status": "candidate",
         "tags": [
@@ -3624,7 +3625,9 @@ export const projects: Project[] = [
             "self-healing",
             "cdp",
             "automation",
-            "agent runtime"
+            "agent runtime",
+            "harness",
+            "benchmark-eval"
         ]
     },
     {
@@ -7508,16 +7511,15 @@ export const projects: Project[] = [
         "language": "Python",
         "license": "Unknown",
         "report": "projects/77-agent-memory-benchmark.md",
-        "pattern": "ingest documents -> retrieve context -> Gemini answer generation -> second Gemini judge -> compare accuracy, speed, and token cost",
-        "description": "AMB is a public benchmark for agent memory systems that emphasizes reproducible prompts, scoring logic, and cost-aware evaluation on agentic memory tasks.",
+        "pattern": "ingest documents and traces -> retrieve candidate context -> generate agent answer -> judge accuracy and cost -> compare memory strategies across datasets and modes",
+        "description": "vectorize-io/agent-memory-benchmark is a benchmark harness for comparing agent memory strategies on multi-step tasks where retrieval quality, latency, and token cost all matter.",
         "stack": [
             "Python",
             "Vue",
-            "Gemini",
-            "Benchmark Viewer"
+            "Agent Memory Benchmark"
         ],
         "category": "Agent Memory Benchmark",
-        "lastPushed": "2026-05-24T00:00:00Z",
+        "lastPushed": "2026-06-04T00:00:00Z",
         "localPath": "raw-github/vectorize-io_agent-memory-benchmark.md",
         "status": "candidate",
         "tags": [
@@ -7525,7 +7527,8 @@ export const projects: Project[] = [
             "benchmark",
             "evaluation",
             "cost",
-            "retrieval"
+            "retrieval",
+            "benchmark-eval"
         ]
     },
     {
@@ -7836,6 +7839,55 @@ export const projects: Project[] = [
             "diagnostics"
         ],
         "localPath": "raw-github/openclaw_clawbench.md"
+    },
+    {
+        "name": "Awesome Agent Skills",
+        "repo": "voltagent/awesome-agent-skills",
+        "url": "https://github.com/voltagent/awesome-agent-skills",
+        "description": "voltagent/awesome-agent-skills is a high-signal resource index for reusable agent skills across Claude Code, Codex, Gemini CLI, Cursor, GitHub Copilot, and adjacent coding-agent surfaces.",
+        "stack": [
+            "Markdown",
+            "Official Skill Registry"
+        ],
+        "category": "Agent Skills Resource Index",
+        "status": "candidate",
+        "stars": 24200,
+        "forks": 2600,
+        "lastPushed": "2026-06-04T00:00:00Z",
+        "language": "Markdown",
+        "license": "MIT",
+        "report": "projects/403-voltagent-awesome-agent-skills-resource-index.md",
+        "pattern": "collect official and community skill packs -> normalize reader entry by tool and provider -> expose reusable procedures as installable skills -> keep the engineering skill ecosystem searchable and comparable",
+        "tags": [
+            "skill",
+            "resource-index"
+        ]
+    },
+    {
+        "name": "swarmclaw",
+        "repo": "swarmclawai/swarmclaw",
+        "url": "https://github.com/swarmclawai/swarmclaw",
+        "description": "swarmclawai/swarmclaw is a self-hosted multi-agent runtime that combines memory, MCP tooling, delegation, schedules, skills, and swarm-oriented execution surfaces.",
+        "stack": [
+            "TypeScript",
+            "Agent Runtime",
+            "Memory",
+            "MCP",
+            "Delegation"
+        ],
+        "category": "Self-Hosted Agent Runtime",
+        "status": "candidate",
+        "stars": 544,
+        "forks": 106,
+        "lastPushed": "2026-06-04T00:00:00Z",
+        "language": "TypeScript",
+        "license": "MIT",
+        "report": "projects/93-swarmclaw-agent-runtime.md",
+        "pattern": "agent runtime -> memory and MCP connectors -> schedules and delegation -> swarm workflows -> self-hosted distribution and release cadence",
+        "tags": [
+            "harness",
+            "framework-runtime"
+        ]
     }
 ];
 
@@ -8043,7 +8095,8 @@ export const projectGroups = [
       "plaited/agent-eval-harness",
       "najeed/ai-agent-eval-harness",
       "Arc-Computer/CL-Bench",
-      "openclaw/clawbench"
+      "openclaw/clawbench",
+      "benchflow-ai/skillsbench"
     ]
   },
   {
@@ -8233,7 +8286,9 @@ export const projectGroups = [
       "weaviate/query-agent-benchmarking",
       "agentmemoryworld/awesome-agent-memory",
       "letta-ai/learning-sdk",
-      "yennning/awesome-code-as-agent-harness-papers"
+      "yennning/awesome-code-as-agent-harness-papers",
+      "voltagent/awesome-agent-skills",
+      "vectorize-io/agent-memory-benchmark"
     ]
   },
   {
@@ -8242,7 +8297,8 @@ export const projectGroups = [
       "agent0ai/agent-zero",
       "elizaOS/eliza",
       "TransformerOptimus/SuperAGI",
-      "paradigmxyz/centaur"
+      "paradigmxyz/centaur",
+      "swarmclawai/swarmclaw"
     ]
   },
   {

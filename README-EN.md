@@ -184,3 +184,14 @@ flowchart TB
   note         = {Open survey repository for self-evolving AI agents, benchmark evidence, project model cards, and field maturity indexing.}
 }
 ```
+
+## Recent Evidence Updates (2026-06-04)
+
+| Repository | What this run refreshed | Why it matters |
+|---|---|---|
+| [voltagent/awesome-agent-skills](https://github.com/voltagent/awesome-agent-skills) | Refreshed the raw capture, project card, site-facing public report, and classification metadata from the public GitHub page observed on 2026-06-04. | It upgrades skill evidence from scattered prompt packs into a trackable ecosystem entry point anchored in official engineering-team skill releases. |
+| [vectorize-io/agent-memory-benchmark](https://github.com/vectorize-io/agent-memory-benchmark) | Refreshed the raw capture, project card, site-facing public report, and classification metadata from the public GitHub page observed on 2026-06-04. | It turns memory from a vague capability claim into a benchmark layer with measurable retrieval and answer tradeoffs. |
+| [benchflow-ai/skillsbench](https://github.com/benchflow-ai/skillsbench) | Refreshed the raw capture, project card, site-facing public report, and classification metadata from the public GitHub page observed on 2026-06-04. | It answers whether agents can actually use skills well, which is closer to the benchmark/eval chain than a skill pack alone. |
+| [evalops/agent-harness](https://github.com/evalops/agent-harness) | Refreshed the raw capture, project card, site-facing public report, and classification metadata from the public GitHub page observed on 2026-06-04. | It is a direct provider-comparison harness, useful when the same task needs to be measured across multiple agent backends. |
+| [browser-use/browser-harness](https://github.com/browser-use/browser-harness) | Refreshed the raw capture, project card, site-facing public report, and classification metadata from the public GitHub page observed on 2026-06-04. | It upgrades browser control from a demo into an editable harness substrate, covering the browser-skill-harness intersection. |
+| [swarmclawai/swarmclaw](https://github.com/swarmclawai/swarmclaw) | Refreshed the raw capture, project card, site-facing public report, and classification metadata from the public GitHub page observed on 2026-06-04. | It turns the swarm discussion into a concrete runtime surface, matching the user’s repeated request to strengthen the multi-agent/swarm lane. |
