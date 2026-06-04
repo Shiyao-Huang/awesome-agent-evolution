@@ -58,8 +58,8 @@ const jsonLd = {
 ---
 
 <BaseLayout
-  title="2026 GitHub Star 增长试点账本 — Self Evolve"
-  description="Self Evolve 的 2026 GitHub 新增 Star 增长试点账本：把累计 Star 降为历史 adoption prior，用 stargazer history、覆盖状态和近期增长记录自进化项目当前动量。"
+  title="2026 GitHub Star 抓取试点 — Self Evolve"
+  description="Self Evolve 的 GitHub stargazer history 抓取试点：当前只用于验证覆盖流程和待抓取队列；coverage 达标前不构成 2026 增长排名。"
   pageKeywords={['GitHub star growth pilot ledger', '2026 new stars', 'AI agent momentum evidence', '自进化项目增长', 'coverage status']}
 >
   <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} is:inline />
@@ -241,18 +241,18 @@ const jsonLd = {
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <div class="eyebrow">GitHub Star Growth / Current Momentum</div>
-          <h1>不要再用累计 Star 判断当前价值。</h1>
-          <p class="lead">这个页面把 GitHub stars 从“历史热度榜”改成“2026 新增 Star + 近期速度 + 覆盖状态”的证据账本。它现在是覆盖试点，不是假装完成的最终排行榜。</p>
+          <div class="eyebrow">GitHub Star Growth / Coverage pilot</div>
+          <h1>先验证抓取覆盖，再谈 2026 增长。</h1>
+          <p class="lead">只有历史抓取足够完整的项目，才会被拿来判断 2026 增长；没抓完的项目只进入待补名单。当前页面是覆盖试点，不构成排名。</p>
           <div class="hero-actions">
-            <a class="button primary" href="#qualified">看可发布排名</a>
+            <a class="button primary" href="#qualified">看抓取样例</a>
             <a class="button" href="#backlog">看抓取队列</a>
             <a class="button" href="/evolve-agi-index/">回到 AGI Index</a>
             <a class="text-link" href="/star-analysis/">旧 Star 质量分析</a>
           </div>
           <div class="growth-rule">
             <strong>Public-use rule</strong>
-            <p>只有 <code>coverage_status = complete_or_near_complete</code> 的项目可以进入 2026 增长结论；<code>not_fetched</code> 只说明还没抓取，不能解释成“没有需求”。</p>
+            <p>只有历史 star events 覆盖足够完整的项目，才可以进入 2026 增长结论；未抓取项目只说明数据缺失，不能解释成“没有需求”。</p>
           </div>
         </div>
         <aside class="hero-evidence" aria-label="Star growth evidence boundary">
@@ -289,8 +289,8 @@ const jsonLd = {
       <div class="container">
         <div class="section-head">
           <div>
-            <div class="eyebrow">Coverage-qualified ranking</div>
-            <h2>可发布的 2026 增长证据</h2>
+            <div class="eyebrow">Single fetched example</div>
+            <h2>当前只是覆盖合格样例，不是排行榜。</h2>
           </div>
           <a class="text-link" href="https://github.com/Shiyao-Huang/awesome-agent-evolution/blob/main/analysis/github-star-growth-ranking.md" target="_blank" rel="noopener">分析来源</a>
         </div>
@@ -298,7 +298,7 @@ const jsonLd = {
           <table class="growth-table">
             <thead>
               <tr>
-                <th>Rank</th>
+                <th>Example</th>
                 <th>Repo</th>
                 <th>2026 new</th>
                 <th>Recent 90d</th>

@@ -90,6 +90,16 @@ const repairQueue = valueSnapshot.low_signal_or_risk_queue.slice(0, 12);
 const clusters = valueSnapshot.clusters.slice(0, 6);
 const buckets = valueSnapshot.largest_buckets.slice(0, 6);
 const repoPath = `${site.github}/tree/main`;
+const evidenceBand = (confidence: number) => {
+  if (confidence >= 70) return '较稳';
+  if (confidence >= 45) return '待复核';
+  return '弱证据';
+};
+const scoreBand = (score: number) => {
+  if (score >= 70) return '优先深读';
+  if (score >= 45) return '需要复核';
+  return '暂不引用';
+};
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -107,18 +117,18 @@ const jsonLd = {
 ---
 
 <BaseLayout
-  title="Value LSH 3D 价值图谱 — Self Evolve"
-  description="Self Evolve 的 Value LSH 3D 价值图谱：把 GitHub、论文、社交/X 和博客素材离散成 -1/0/+1 value facets，再用 LSH buckets 与 3D projection 形成高价值候选、待复核和修复队列。它是启发式 triage，不是最终价值裁判。"
+  title="Value LSH 证据分诊队列 — Self Evolve"
+  description="Self Evolve 的 Value LSH 是启发式证据分诊队列：当材料太多时，帮助决定先读哪些、先复核哪些、哪些暂时不要引用；它不是最终价值裁判。"
   pageKeywords={['Value LSH', '3D embedding graph', 'AI 自进化价值分类', '局部敏感哈希', 'value facet matrix']}
 >
   <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} is:inline />
 
   <section class="section value-lsh-hero">
     <div class="container">
-      <div class="eyebrow">Value LSH · 3D Graph</div>
-      <h1>把 {materialCountLabel} 条素材放进一个可复核的价值坐标系。</h1>
-      <p class="lead">每条素材先经过 26 条 value lines 的 `-1 / 0 / +1` 离散判别，再进入 LSH buckets、value clusters 和 3D projection；页面里的 `emb-xxx` 标签来自 value vector 上的 k-means 分组，不是 LSH bucket 编号，图上的点也不是热闹程度，而是当前证据链下的 triage 位置。</p>
-      <p class="value-lsh-caveat">Evidence boundary: Value LSH 是帮助读者决定“先深挖什么、先修复哪条证据链”的启发式队列；它不能替代论文精读、项目运行验证或人工学术审查。</p>
+      <div class="eyebrow">Evidence triage · not final ranking</div>
+      <h1>材料太多时，先决定读哪 20 个、复核哪 20 个、哪些暂时不要引用。</h1>
+      <p class="lead">Value LSH 是一个启发式分诊队列：用 26 个判断问题，把 {materialCountLabel} 条 GitHub、论文、社交/X 和博客材料分成“优先深读、需要复核、弱证据/风险”三类。</p>
+      <p class="value-lsh-caveat">方法边界：这里的 value score 和 confidence 没有完成校准，也没有人工一致性验证；页面只用于排研究顺序，不能替代论文精读、项目运行验证或学术审查。</p>
       <div class="value-lsh-actions">
         <a class="button primary" href={`${repoPath}/analysis/value-lsh-index.md`} target="_blank" rel="noopener">查看结果报告</a>
         <a class="button" href={`${repoPath}/data-engine/value-lsh-index`} target="_blank" rel="noopener">数据集目录</a>
@@ -204,8 +214,8 @@ const jsonLd = {
             <tr>
               <th>素材</th>
               <th>类型</th>
-              <th>Value</th>
-              <th>Confidence</th>
+              <th>分诊</th>
+              <th>证据等级</th>
               <th>正/负 Facets</th>
               <th>证据链</th>
             </tr>
@@ -218,8 +228,8 @@ const jsonLd = {
                   <span>{row.source_path || row.evidence_refs?.raw_file || row.id}</span>
                 </td>
                 <td><span class="value-type">{row.type}</span></td>
-                <td class="value-num">{row.score.value_score.toFixed(2)}</td>
-                <td class="value-num">{row.score.confidence.toFixed(2)}</td>
+                <td>{scoreBand(row.score.value_score)}</td>
+                <td>{evidenceBand(row.score.confidence)}</td>
                 <td>{row.score.positive_tags} / {row.score.negative_tags}</td>
                 <td>
                   <span>frontier {row.evidence_refs?.frontier_rank ?? 'n/a'}</span>
@@ -247,7 +257,7 @@ const jsonLd = {
             <article>
               <div>
                 <strong>{row.url ? <a href={row.url} target="_blank" rel="noopener">{row.title}</a> : row.title}</strong>
-                <span>{row.type} · score {row.score.value_score.toFixed(2)} · confidence {row.score.confidence.toFixed(2)}</span>
+                <span>{row.type} · {scoreBand(row.score.value_score)} · {evidenceBand(row.score.confidence)}</span>
               </div>
               <p>{row.source_path || row.evidence_refs?.raw_file || row.id}</p>
             </article>

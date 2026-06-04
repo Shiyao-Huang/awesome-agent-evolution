@@ -21,6 +21,8 @@ type BenchmarkEvidence = {
   indexScore: number;
   source: string;
   note: string;
+  family?: string;
+  includeInMainIndex?: boolean;
 };
 
 type TrendPoint = {
@@ -192,14 +194,17 @@ export const benchmarkEvidence: BenchmarkEvidence[] = [
     gain: 'AI-for-science model improvement',
     indexScore: 84,
     source: 'https://www.deepprinciple.com/papers/mpa.pdf; https://mp.weixin.qq.com/s/Do3sauQ8oSoRluaCptYe-g',
-    note: 'Materials Property Axiom evidence is treated as domain AI-for-science recursive-training evidence, not proof of general autonomous AGI.'
+    note: 'Adjacent AI-for-science recursive-training evidence. Kept for context, excluded from the main self-evolving-agent benchmark signal.',
+    family: 'ai-for-science-adjacent',
+    includeInMainIndex: false
   }
 ];
 
+const mainBenchmarkEvidence = benchmarkEvidence.filter((item) => item.includeInMainIndex !== false);
 const topSystemStrength = clamp(
   (average(topSystemProfiles.map((profile) => profile.metadata.composite_score)) / 8) * 100
 );
-const benchmarkEvidenceScore = clamp(average(benchmarkEvidence.map((item) => item.indexScore)));
+const benchmarkEvidenceScore = clamp(average(mainBenchmarkEvidence.map((item) => item.indexScore)));
 const benchmarkProfileStrength = clamp(
   average(topSystemProfiles.map((profile) => (profile.dimensions.D1 ?? 0) * 10))
 );
@@ -251,7 +256,7 @@ export const evolveAgiIndexSignals: ScoreSignal[] = [
     shortLabel: 'Bench',
     score: round(benchmarkPerformance),
     weight: 18,
-    description: 'HumanEval、SWE-bench、LiveCodeBench、WebArena、AppWorld、AI4S/materials 和算法/基础设施 benchmark 的实测表现参与总分。',
+    description: '主指数只纳入 agent/code/web/app/algorithm-discovery 等自进化相关 benchmark family；AI-for-science adjacent evidence 单独展示，不进入主分。',
     evidence: 'paper-drafts/appendix.tex + site/src/data/survey.ts + research/ranking-framework/radar-profiles.json'
   },
   {
@@ -328,9 +333,9 @@ export const evolveAgiIndex = {
   grade: gradeFor(weightedScore),
   formula: 'EAI = Σ(signal_score × signal_weight)',
   oneSentence:
-    '自进化系数不是 AGI 能力分，而是用 AGI Index 风格衡量 AI Agent 自进化领域的 benchmark 表现、闭环成熟度、证据质量和可落地程度。',
+    'Evolve-AGI Index 不是 AGI 能力分，而是一个 exploratory evidence-maturity worksheet，用来检查 AI Agent 自进化证据是否足够成熟。',
   thesis:
-    '当前领域已经有强闭环原型和明确 benchmark 增益，但治理、跨域迁移和可复用工程仍是短板；指数应优先奖励可验证、可回滚、可复跑的进化系统。',
+    '当前领域已经出现强闭环原型和若干 benchmark 增益，但治理、跨域迁移和可复用工程仍是短板；这个 worksheet 只应作为研究优先级和证据缺口提示。',
   counts: {
     classifiedRepos: counts.classified_repos ?? 0,
     analyzedProjects: counts.analyzed_projects ?? 0,
@@ -343,12 +348,12 @@ export const evolveAgiIndex = {
     score: round(benchmarkPerformance),
     evidenceScore: round(benchmarkEvidenceScore),
     profileScore: round(benchmarkProfileStrength),
-    evidenceCount: benchmarkEvidence.length
+    evidenceCount: mainBenchmarkEvidence.length
   },
   supportingMetrics: [
     {
       label: 'Benchmark evidence',
-      value: benchmarkEvidence.length,
+      value: mainBenchmarkEvidence.length,
       detail: `${round(benchmarkPerformance)} weighted benchmark signal`
     },
     {

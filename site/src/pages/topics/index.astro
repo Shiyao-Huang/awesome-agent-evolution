@@ -24,6 +24,14 @@ const jsonLd = {
     })),
   },
 };
+
+const audienceLabel = (rank: number) => {
+  if (rank <= 2) return '第一次理解';
+  if (rank <= 4) return '机制与项目比较';
+  if (rank <= 6) return '工程落地与评估';
+  if (rank <= 8) return '趋势与证据分诊';
+  return '风险、覆盖与复查';
+};
 ---
 
 <BaseLayout
@@ -106,12 +114,13 @@ const jsonLd = {
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <div class="eyebrow">Topic Guide / 双语主题指南</div>
+          <div class="eyebrow">读者路径 / Topic guide</div>
           <h1>别从关键词开始，从读者问题开始。</h1>
-          <p class="lead">A global reader does not need another directory. They need a path: what counts as self-evolution, how it happens, which evidence is strong, and where the open questions remain.</p>
+          <p class="lead">这个页面不是关键词目录，而是十个阅读问题：先知道什么算自进化，再看机制、证据、风险和下一步。</p>
+          <p class="english-note">English readers can use the core summary path under /en/; this Chinese page remains the fuller topic map.</p>
           <div class="hero-actions">
-            <a class="button primary" href="/topics/self-evolving-ai-agents/">Start with definition</a>
-            <a class="button" href="/topics/five-evolution-loops/">Five loops</a>
+            <a class="button primary" href="/topics/self-evolving-ai-agents/">先看定义</a>
+            <a class="button" href="/topics/five-evolution-loops/">五类回路</a>
             <a class="button" href="/topics/code-evolution-benchmark/">Benchmark matrix</a>
             <a class="text-link" href="/search/">站内搜索</a>
           </div>
@@ -137,25 +146,25 @@ const jsonLd = {
       <div class="container">
         <div class="section-head">
           <div>
-            <div class="eyebrow">Evidence-backed guide</div>
-            <h2>主题不是关键词，而是证据的组织方式</h2>
+            <div class="eyebrow">Three reader questions</div>
+            <h2>先回答三件事，再进入证据。</h2>
           </div>
         </div>
         <div class="grid">
           <article class="card">
-            <div class="eyebrow">Raw</div>
-            <h3>{topicMapStats.rawGithubCaptures} 个 GitHub raw captures</h3>
-            <p>支撑项目、工具、runtime、harness 和 benchmark 相关主题，不把项目名当成唯一入口。</p>
+            <div class="eyebrow">收了什么？</div>
+            <h3>项目、论文、benchmark、博客和社交信号</h3>
+            <p>原始材料服务一个目标：判断系统是否真的形成反馈驱动的保留改进，而不是给读者堆目录。</p>
           </article>
           <article class="card">
-            <div class="eyebrow">Survey</div>
-            <h3>{topicMapStats.surveyPapers} papers + {topicMapStats.evolutionLoops} loops</h3>
-            <p>支撑定义、机制、方法族、case studies 和论文主线，让主题服务读者理解，而不只是关键词覆盖。</p>
+            <div class="eyebrow">怎么分析？</div>
+            <h3>先按机制分层，再按证据强度复查</h3>
+            <p>自进化、邻近基础设施、评估工具和趋势信号不能混成一个结论；每个主题都要说明边界。</p>
           </article>
           <article class="card">
-            <div class="eyebrow">Index</div>
-            <h3>{topicMapStats.strictEvolutionRepos}/{topicMapStats.broadEvolutionRepos}</h3>
-            <p>strict/broad evolution 口径帮助读者理解哪些项目是核心自进化，哪些是邻近基础设施。</p>
+            <div class="eyebrow">哪些能相信？</div>
+            <h3>有验证、有保留、有失败记录的更可信</h3>
+            <p>数字只说明覆盖范围；可信判断必须回到论文、项目报告、benchmark、原始仓库或公开数据。</p>
           </article>
         </div>
       </div>
@@ -165,8 +174,8 @@ const jsonLd = {
       <div class="container">
         <div class="section-head">
           <div>
-            <div class="eyebrow">Ranked clusters</div>
-            <h2>十个优先主题簇</h2>
+            <div class="eyebrow">Reader questions</div>
+            <h2>十个应该带着读的问题</h2>
           </div>
           <a class="text-link" href="https://github.com/Shiyao-Huang/awesome-agent-evolution/blob/main/analysis/survey-seo-topic-map.md" target="_blank" rel="noopener">分析来源</a>
         </div>
@@ -175,7 +184,7 @@ const jsonLd = {
             <article class="card" id={topic.id}>
               <div class="topic-cluster-grid">
                 <div>
-                  <div class="eyebrow">Rank {topic.rank} · {topic.seoIntent}</div>
+                  <div class="eyebrow">{audienceLabel(topic.rank)} · 问题 {topic.rank}</div>
                   <h3>{topic.title}</h3>
                   <p><strong>{topic.titleEn}</strong></p>
                   <p>{topic.readerQuestion}</p>
@@ -189,10 +198,10 @@ const jsonLd = {
                   <p><strong>Survey 角色：</strong>{topic.surveyRole}</p>
                   <p><strong>证据基础：</strong>{topic.evidence}</p>
                   <p><strong>下一步阅读：</strong>{topic.nextAsset}</p>
-                  <ul class="topic-query-list" aria-label={`${topic.title} seed queries`}>
-                    {topic.seedQueries.map((query) => (
-                      <li>{query}</li>
-                    ))}
+                  <ul class="topic-query-list" aria-label={`${topic.title} reader questions`}>
+                    <li>这页回答的问题：{topic.readerQuestion}</li>
+                    <li>证据够强吗，还是只适合排队复核？</li>
+                    <li>读完下一步应该去哪里：{topic.nextAsset}</li>
                   </ul>
                 </div>
               </div>

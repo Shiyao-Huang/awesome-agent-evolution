@@ -32,6 +32,16 @@ const valueLshSnapshot = valueLshSnapshotJson as {
 };
 const valueLshSummary = valueLshSnapshot.summary;
 const valueLshTop = valueLshSnapshot.top_high_value_candidates.slice(0, 3);
+const homeEvidenceBand = (confidence: number) => {
+  if (confidence >= 70) return '较稳';
+  if (confidence >= 45) return '待复核';
+  return '弱证据';
+};
+const homeScoreBand = (score: number) => {
+  if (score >= 70) return '优先深读';
+  if (score >= 45) return '需要复核';
+  return '暂不引用';
+};
 
 const readerPromises = [
   {
@@ -214,9 +224,10 @@ const growthLabel: Record<string, string> = {
   <section class="hero">
     <div class="container hero-grid">
       <div class="hero-copy">
-        <div class="eyebrow">Self Evolve AI · Bilingual Survey / 双语证据地图</div>
+        <div class="eyebrow">Self Evolve AI · 中文默认入口</div>
         <h1>AI Agent 自进化：到底改了什么、谁验证、能否留下来？</h1>
-        <p class="lead">This is not a link farm. It is a bilingual map for deciding whether an agent really improves itself: what changes, what feedback selects it, what evidence verifies it, and where the risk boundary is.</p>
+        <p class="lead">这不是链接收藏，而是一张判断图：一个 agent 到底改了什么、由什么反馈选择、谁验证、能否保留，失败时能不能回滚。</p>
+        <p class="english-note">English core summaries are available under /en/. The full evidence corpus remains Chinese-first while parity is being built.</p>
         <div class="hero-actions">
           <a class="button primary" href="/topics/self-evolving-ai-agents/">先看定义 / Start</a>
           <a class="button" href="/topics/five-evolution-loops/">五类回路</a>
@@ -225,9 +236,9 @@ const growthLabel: Record<string, string> = {
           <a class="text-link" href="/paper/">Paper</a>
         </div>
         <div class="metrics" aria-label="研究站点指标">
-          <div class="metric"><strong>{starQualityScores.length}</strong><span>个分析项目</span></div>
-          <div class="metric"><strong>{rankedProfiles.length}</strong><span>个系统排名</span></div>
-          <div class="metric"><strong>{knowledgeGraphStats.nodes}</strong><span>个图谱节点</span></div>
+          <div class="metric"><strong>5问</strong><span>改了什么、谁验证、是否保留</span></div>
+          <div class="metric"><strong>3层</strong><span>强证据、待复核、弱证据</span></div>
+          <div class="metric"><strong>1路</strong><span>先判断，再查证据</span></div>
         </div>
       </div>
       <aside class="hero-evidence" aria-label="Self Evolve evidence pipeline">
@@ -285,8 +296,8 @@ const growthLabel: Record<string, string> = {
     <div class="container">
       <div class="section-head">
         <div>
-          <div class="eyebrow">Value LSH 3D</div>
-          <h2>用离散 value facets 给所有素材重新分层。</h2>
+          <div class="eyebrow">Evidence triage / 证据分诊</div>
+          <h2>材料太多时，先决定哪些值得读、哪些需要复核。</h2>
         </div>
         <a class="text-link" href="/value-lsh/">打开完整 3D 图谱 →</a>
       </div>
@@ -295,14 +306,14 @@ const growthLabel: Record<string, string> = {
           <ValueLshGraph3D variant="compact" maxNodes={760} height={380} />
         </div>
         <div class="value-lsh-home-panel">
-          <p>这不是累计 Star 榜，而是把 GitHub、论文、社交/X、博客放进同一套 `-1 / 0 / +1` value lines：先离散判别，再用 LSH bucket 找相似价值结构，最后用 3D projection 展示聚类。</p>
+          <p>这不是价值裁判，也不是累计 Star 榜。它用 26 个判断问题，把 GitHub、论文、社交/X 和博客材料先分成三类：值得深读、需要复核、证据不足或有风险。技术细节进入方法页，首页只保留读者用途。</p>
           <div class="value-lsh-home-stats">
             <div><strong>{valueLshSummary.total_materials.toLocaleString()}</strong><span>materials</span></div>
-            <div><strong>{valueLshSummary.value_tag_count}</strong><span>value lines</span></div>
-            <div><strong>{valueLshSummary.total_buckets}</strong><span>LSH buckets</span></div>
+            <div><strong>{valueLshSummary.value_tag_count}</strong><span>判断问题</span></div>
+            <div><strong>{valueLshSummary.total_buckets}</strong><span>相似证据组</span></div>
           </div>
           <div class="value-lsh-home-split">
-            <span>高价值 {valueLshSummary.value_class_counts['high-value-candidate'].toLocaleString()}</span>
+            <span>优先深读 {valueLshSummary.value_class_counts['high-value-candidate'].toLocaleString()}</span>
             <span>待复核 {valueLshSummary.value_class_counts['needs-review'].toLocaleString()}</span>
             <span>修复/风险 {valueLshSummary.value_class_counts['low-signal-or-risk'].toLocaleString()}</span>
           </div>
@@ -310,7 +321,7 @@ const growthLabel: Record<string, string> = {
             {valueLshTop.map((row) => (
               <article>
                 <strong>{row.title}</strong>
-                <span>{row.type} · value {row.score.value_score.toFixed(2)} · confidence {row.score.confidence.toFixed(2)}</span>
+                <span>{row.type} · {homeScoreBand(row.score.value_score)} · {homeEvidenceBand(row.score.confidence)}</span>
               </article>
             ))}
           </div>
@@ -324,8 +335,8 @@ const growthLabel: Record<string, string> = {
     <div class="container">
       <div class="section-head">
         <div>
-          <div class="eyebrow">Evolve-AGI Index</div>
-          <h2>自进化系数：把领域成熟度压成一个可解释指数</h2>
+          <div class="eyebrow">Evolve-AGI worksheet</div>
+          <h2>一个工作型证据表，不是 AGI 分数。</h2>
         </div>
         <a class="text-link" href="/evolve-agi-index/">完整指数 →</a>
       </div>
@@ -333,7 +344,7 @@ const growthLabel: Record<string, string> = {
         <a class="eai-home-score" href="/evolve-agi-index/" aria-label="Open Evolve-AGI Index page">
           <span>{evolveAgiIndex.zhName}</span>
           <strong>{evolveAgiIndex.score}</strong>
-          <em>Grade {evolveAgiIndex.grade}</em>
+          <em>Exploratory rubric</em>
           <p>{evolveAgiIndex.oneSentence}</p>
         </a>
         <div class="eai-home-signals" aria-label="Evolve-AGI Index signals">
@@ -358,14 +369,14 @@ const growthLabel: Record<string, string> = {
       <div class="section-head">
         <div>
           <div class="eyebrow">Historical adoption prior</div>
-          <h2>累计 Star 只能当历史采用信号</h2>
+          <h2>热度只提供候选线索，不能替代证据。</h2>
         </div>
         <div style="display:flex;gap:12px;flex-wrap:wrap;">
           <a class="text-link" href="/star-growth/">2026 增长试点账本 →</a>
           <a class="text-link" href="/star-analysis/">完整质量分析 →</a>
         </div>
       </div>
-      <p style="color: var(--muted); margin-bottom: 20px;">这个表保留累计 Star 作为 adoption prior，不作为当前价值排名。当前动量要看 2026 growth coverage，项目质量要回到 evaluator、benchmark、retention 和 evidence chain。</p>
+      <p style="color: var(--muted); margin-bottom: 20px;">这个表只保留历史热度作为阅读线索，不做当前价值排名。严肃判断必须回到 evaluator、benchmark、retention、失败记录和项目报告。</p>
       <div style="overflow-x: auto;">
         <table class="panorama-table">
           <thead>
@@ -383,7 +394,7 @@ const growthLabel: Record<string, string> = {
               <tr>
                 <td class="rank-col">
                   {s.rank <= 3 ? (
-                    <span class="medal" style={`background: ${s.rank === 1 ? '#FFD700' : s.rank === 2 ? '#C0C0C0' : '#CD7F32'}; color: #333;`}>{s.rank}</span>
+                    <span style="color: var(--muted);">{s.rank}</span>
                   ) : (
                     <span style="color: var(--muted);">{s.rank}</span>
                   )}
@@ -408,11 +419,11 @@ const growthLabel: Record<string, string> = {
     <div class="container">
       <div class="section-head">
         <div>
-          <div class="eyebrow">Trend 榜单</div>
-          <h2>活跃度与增长趋势</h2>
+          <div class="eyebrow">Momentum clues</div>
+          <h2>近期关注度只是下一步抓取线索</h2>
         </div>
       </div>
-      <p style="color: var(--muted); margin-bottom: 20px;">按 Star 活跃度排名（近 90 天 stargazer 活跃比例）。高活跃 ≠ 高质量，但反映社区关注度。</p>
+      <p style="color: var(--muted); margin-bottom: 20px;">这里展示的是旧 star-quality 数据里的关注度线索，不是实时 GitHub 证据，也不是质量结论。完整 2026 new-star 判断必须等 star-history 覆盖达标。</p>
 
       <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
         {trendBoard.map((t) => (
@@ -450,31 +461,31 @@ const growthLabel: Record<string, string> = {
     <div class="container">
       <div class="section-head">
         <div>
-          <div class="eyebrow">方向 Map</div>
-          <h2>每个方向的代表性证据锚点</h2>
+          <div class="eyebrow">Mechanism anchors</div>
+          <h2>六类代表案例：看为什么值得研究，不看谁是冠军。</h2>
         </div>
         <a class="text-link" href="/rank/">完整系统排名 →</a>
       </div>
-      <p style="color: var(--muted); margin-bottom: 20px;">六大方向展示当前启发式 rank 中的 representative anchors，不宣称最终最佳。做严肃判断时要回到 scoring source、项目报告和原始 benchmark。</p>
+      <p style="color: var(--muted); margin-bottom: 20px;">这些不是最终排名。每类只给一个代表性证据锚点，帮助读者识别机制差异；严肃判断要回到论文、项目报告和原始 benchmark。</p>
 
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 16px;">
         {directionMap.map((d) => (
           <article class="card" style={`border-top: 4px solid ${d.color};`}>
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
               <h3 style="margin: 0;">{d.icon} {d.direction}</h3>
-              <span class="pill" style={`background: ${d.color}15; color: ${d.color}; border: 1px solid ${d.color}40;`}>{d.tier}</span>
+              <span class="pill" style={`background: ${d.color}15; color: ${d.color}; border: 1px solid ${d.color}40;`}>代表案例</span>
             </div>
 
             <div class="champion-block" style="background: var(--surface-2); border-radius: var(--radius); padding: 12px; margin: 8px 0;">
               <div style="display: flex; justify-content: space-between; align-items: baseline;">
-                <strong style="font-size: 1.1rem;">🏆 {d.champion}</strong>
-                <span style="font-weight: 700; color: var(--accent);">{d.championScore}</span>
+                <strong style="font-size: 1.1rem;">{d.champion}</strong>
+                <span style="font-weight: 700; color: var(--accent);">证据锚点</span>
               </div>
               <p style="font-size: 0.85rem; color: var(--muted); margin-top: 4px;">{d.evidence}</p>
             </div>
 
             <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--muted);">
-              <span>亚军: {d.runnerUp}</span>
+              <span>对照: {d.runnerUp}</span>
               <span>{d.maturity}</span>
             </div>
             <div class="pill-row" style="margin-top: 6px;">

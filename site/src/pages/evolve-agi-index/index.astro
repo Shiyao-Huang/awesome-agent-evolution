@@ -37,15 +37,15 @@ const trendEnd = evolveAgiTrend[evolveAgiTrend.length - 1]?.date ?? '';
 ---
 
 <BaseLayout
-  title="Evolve-AGI Index 证据加权成熟度估计 — Self Evolve"
-  description="Evolve-AGI Index 是版本化、证据加权的 AI Agent 自进化领域成熟度估计，追踪 benchmark 表现、闭环强度、证据链、迁移验证、可运行性、动量和治理准备度。"
+  title="Evolve-AGI Evidence Worksheet — Self Evolve"
+  description="Evolve-AGI 是探索性的证据成熟度工作表，不是 AGI 能力分或领域标准；它用于检查 AI Agent 自进化证据的 benchmark、闭环、迁移、治理和覆盖缺口。"
   pageKeywords={['Evolve-AGI Index', '自进化系数', 'AI Agent 自进化', 'Self Evolve rank']}
 >
   <section class="section evolve-hero">
     <div class="container evolve-hero-grid">
       <div>
-        <div class="eyebrow">Evolve-AGI Index</div>
-        <h1>证据加权的自进化成熟度估计</h1>
+        <div class="eyebrow">Evolve-AGI worksheet</div>
+        <h1>先把它当证据成熟度工作表，而不是领域指数。</h1>
         <p class="lead">{evolveAgiIndex.oneSentence}</p>
         <div class="hero-actions">
           {evolveAgiIndex.evidenceLinks.map((link) => (
@@ -61,11 +61,11 @@ const trendEnd = evolveAgiTrend[evolveAgiTrend.length - 1]?.date ?? '';
         </div>
       </div>
       <aside class="eai-score-panel" aria-label="Evolve-AGI Index current score">
-        <div class="eai-score-label">2026-06-02 snapshot</div>
+        <div class="eai-score-label">2026-06-02 working snapshot</div>
         <div class="eai-score-value">{evolveAgiIndex.score}</div>
-        <div class="eai-score-grade">Grade {evolveAgiIndex.grade}</div>
+        <div class="eai-score-grade">Exploratory rubric</div>
         <p>{evolveAgiIndex.thesis}</p>
-        <p style="margin-top: 10px; color: var(--muted);">Weights are editorial/proposed survey weights, not externally validated field consensus. Recompute before treating this as latest repository coverage.</p>
+        <p style="margin-top: 10px; color: var(--muted);">Weights are editorial/proposed survey weights, not externally validated field consensus. No confidence interval, reviewer agreement, or sensitivity analysis is claimed yet.</p>
       </aside>
     </div>
   </section>
@@ -74,7 +74,7 @@ const trendEnd = evolveAgiTrend[evolveAgiTrend.length - 1]?.date ?? '';
     <div class="container">
       <div class="section-head">
         <div>
-          <div class="eyebrow">Formula</div>
+          <div class="eyebrow">Worksheet formula</div>
           <h2>{evolveAgiIndex.formula}</h2>
         </div>
         <a class="text-link" href="https://github.com/Shiyao-Huang/awesome-agent-evolution/blob/main/analysis/evolve-agi-index.md" target="_blank" rel="noopener">方法说明</a>
@@ -107,8 +107,8 @@ const trendEnd = evolveAgiTrend[evolveAgiTrend.length - 1]?.date ?? '';
     <div class="container">
       <div class="section-head">
         <div>
-          <div class="eyebrow">Trend + Benchmark</div>
-          <h2>趋势折线图：Benchmark 分数参与总指数</h2>
+          <div class="eyebrow">Reconstructed snapshots</div>
+          <h2>这些点是回填快照，不是领域真实增长曲线。</h2>
         </div>
       </div>
 
@@ -116,13 +116,13 @@ const trendEnd = evolveAgiTrend[evolveAgiTrend.length - 1]?.date ?? '';
         <div class="eai-chart-layout">
           <div>
             <div class="eai-chart-legend" aria-hidden="true">
-              <span><i class="legend-index"></i> Evolve-AGI Index</span>
+              <span><i class="legend-index"></i> Evidence worksheet score</span>
               <span><i class="legend-benchmark"></i> Benchmark Performance</span>
             </div>
             <div class="eai-chart-wrap">
               <svg class="eai-chart" viewBox={`0 0 ${chartWidth} ${chartHeight}`} role="img" aria-labelledby="eai-trend-title eai-trend-desc">
-                <title id="eai-trend-title">Evolve-AGI Index trend and benchmark performance trend</title>
-                <desc id="eai-trend-desc">{`A two-line chart tracking the total index and benchmark performance from ${trendStart} to ${trendEnd}.`}</desc>
+                <title id="eai-trend-title">Reconstructed evidence worksheet snapshots and benchmark signal snapshots</title>
+                <desc id="eai-trend-desc">{`A two-line chart showing reconstructed worksheet snapshots from ${trendStart} to ${trendEnd}; it is not an append-only field progress trend.`}</desc>
                 {gridTicks.map((tick) => (
                   <g>
                     <line class="eai-chart-grid" x1={chartPadding.left} x2={chartWidth - chartPadding.right} y1={yFor(tick)} y2={yFor(tick)} />
@@ -149,12 +149,12 @@ const trendEnd = evolveAgiTrend[evolveAgiTrend.length - 1]?.date ?? '';
 
           <aside class="eai-trend-summary">
             <div>
-              <span>Index delta</span>
-              <strong>+{evolveAgiTrendSummary.delta}</strong>
+              <span>Series status</span>
+              <strong>reconstructed</strong>
             </div>
             <div>
-              <span>Benchmark delta</span>
-              <strong>+{evolveAgiTrendSummary.benchmarkDelta}</strong>
+              <span>Append-only trend</span>
+              <strong>pending</strong>
             </div>
             <div>
               <span>Benchmark signal</span>

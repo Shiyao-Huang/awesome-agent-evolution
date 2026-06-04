@@ -1,5 +1,18 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
+
+const topics = [
+  ['Definition', 'What counts as self-evolution?', 'Do not start with the project name. Check the mutable object, feedback, verification, retention, and rollback.', '/en/topics/self-evolving-ai-agents/'],
+  ['Five loops', 'How does improvement happen?', 'Separate specification, search, evaluation, reflection, and archive pressure before comparing systems.', '/en/topics/five-evolution-loops/'],
+  ['Code benchmark', 'Which score gains are strong evidence?', 'Score gains are weak unless evaluator details, failed candidates, retained artifacts, and transfer checks are visible.', '/en/topics/code-evolution-benchmark/'],
+  ['Memory and skills', 'Can failure become reusable experience?', 'Memory and skill libraries matter only when they are retained, audited, and used in later runs.', '/search/?q=memory'],
+  ['Agent swarms', 'Can the team structure itself evolve?', 'Look for changing roles, handoffs, topology, shared state, lineage, and independent graders.', '/#agent-swarm-evolve'],
+  ['Evaluation', 'How do we avoid benchmark hype?', 'Benchmarks are useful selection pressure, but they can leak, overfit, or reward the wrong behavior.', '/evolve-agi-index/'],
+  ['GitHub momentum', 'What is actually growing in 2026?', 'Current growth needs complete stargazer-history coverage; total stars are only historical adoption priors.', '/star-growth/'],
+  ['Evidence triage', 'What should I read first?', 'Value LSH is a heuristic triage queue, not a final value judgment.', '/value-lsh/'],
+  ['Trust boundary', 'What do users really need?', 'Product value comes from reliability, transparency, control, and cost, not autonomy rhetoric.', '/survey/'],
+  ['Coverage', 'What has this repository actually analyzed?', 'Separate raw collection, processed reports, public pages, and trend snapshots before trusting counts.', '/resource-library/'],
+];
 ---
 
 <BaseLayout
@@ -12,9 +25,9 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
   <section class="hero">
     <div class="container hero-grid">
       <div class="hero-copy">
-        <div class="eyebrow">Topic guide</div>
+        <div class="eyebrow">For readers outside the Chinese site</div>
         <h1>Choose a question, then inspect the evidence.</h1>
-        <p class="lead">The topic map is not a keyword list. It is a reader path from definition to mechanisms, benchmarks, value triage, and evidence boundaries.</p>
+        <p class="lead">Do not start with a directory. Start with three questions: what counts, what evidence is strong, and what should I ignore for now?</p>
         <div class="hero-actions">
           <a class="button primary" href="/en/topics/self-evolving-ai-agents/">Definition</a>
           <a class="button" href="/en/topics/five-evolution-loops/">Five loops</a>
@@ -30,6 +43,27 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
           <li><span>E</span><strong>Link evidence and limitations.</strong></li>
         </ol>
       </aside>
+    </div>
+  </section>
+
+  <section class="section" style="background: var(--surface-1);">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Question map</div>
+          <h2>Ten questions before trusting a self-evolving agent claim.</h2>
+        </div>
+      </div>
+      <div class="grid">
+        {topics.map(([label, question, body, href]) => (
+          <a class="card" href={href} style="text-decoration: none; color: inherit;">
+            <div class="eyebrow">{label}</div>
+            <h3>{question}</h3>
+            <p>{body}</p>
+          </a>
+        ))}
+      </div>
+      <p class="english-note" style="margin-top: 18px;">Boundary: this page gives English summaries for the core reader path. Some linked dashboards and reports are still Chinese-first, but their evidence sources are preserved.</p>
     </div>
   </section>
 </BaseLayout>

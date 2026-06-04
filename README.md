@@ -1,6 +1,6 @@
 # Awesome Self-Evolving AI Agents
 
-**一份面向 AI Agent 自进化研究与实践的开放 Survey：连接论文、项目、benchmark、公开报告与 Evolve-AGI Index。**
+**一份面向 AI Agent 自进化研究与实践的开放 Survey：帮你判断一个系统是真能从反馈中改进，还是只是在 demo 里看起来聪明。**
 
 [中文主入口](README.md) | [英文版](README-EN.md) | [在线网站](https://agent-evolution.com/) | [论文 PDF](paper-drafts/main.pdf) | [Evolve-AGI Index](analysis/evolve-agi-index.md) | [项目报告](projects/INDEX.md)
 
@@ -8,21 +8,21 @@
 
 ## 一句话
 
-想判断一个 AI Agent 是真的在自我改进，还是只是在演示里显得聪明？这份 Survey 给你一套可追溯的答案：看它改了什么、用什么反馈、谁来验证、能否迁移、如何回滚。
+想判断一个 AI Agent 是不是“真自进化”，先问五件事：改了什么、为什么改、谁验证、是否保留、能否回滚。
 
 ## 三句话
 
-1. 我们把论文、开源项目、benchmark、博客/社交信号和真实用户痛点放进同一条证据链，让读者先看判断，再查证据。
-2. 判断标准很简单：不要只看名字、stars 或 demo，要看它是否形成 Observe -> Interpret -> Modify -> Verify -> Retain 的闭环。
-3. [Evolve-AGI Index](analysis/evolve-agi-index.md) 已进入论文核心：它不是 AGI 能力分，而是衡量自进化智能体领域成熟度的证据指数。
+1. 这份 Survey 不先堆链接，而是先给判断表：一个系统到底改变了 prompt、memory、workflow、code、weights，还是只换了说法。
+2. 读项目时不要先看名字、stars 或 demo；先看它有没有 Observe -> Interpret -> Modify -> Verify -> Retain 的闭环。
+3. [Evolve-AGI Index](analysis/evolve-agi-index.md) 目前只是工作型证据指数原型，用来提示 benchmark、闭环、迁移、治理这些证据是否足够，不是 AGI 分数，也不是单个项目判决。
 
 ## 五句话
 
 1. 这不是普通 Awesome List，而是一份围绕“AI Agent 如何可靠地改进自己”的开放 Survey。
 2. 在本 Survey 的严格口径下，自进化系统需要说明可变对象、反馈信号、更新算子、独立评估器、保留机制和回滚路径。
 3. 当前读者最容易复查的机制骨架是五类进化回路：规范到执行、搜索、评估器、反思/记忆、种群/归档。
-4. Evolve-AGI Index 把 benchmark 表现、闭环强度、证据可信度、迁移验证、可运行性、领域动量和治理成熟度放进同一个可审计指标，避免把热度误读成能力成熟。
-5. 读者可以从这里快速进入论文、项目 model card、公开报告、知识图谱和网站，而不是被几百个链接淹没。
+4. Evolve-AGI Index 把 benchmark、闭环、证据、迁移、可运行性、动量和治理放在一张可讨论的表里，但权重仍是 editorial/proposed，还需要外部验证和敏感性分析。
+5. 读者可以从这里快速进入定义、五类回路、代码自改进 benchmark、项目 model card、公开报告和论文，而不是被几百个链接淹没。
 
 ## 你可以直接用它做什么
 
@@ -40,9 +40,9 @@
 | 第一次来 | [什么才算自进化 AI Agent](https://agent-evolution.com/topics/self-evolving-ai-agents/) | 一张判断表：改了什么、谁验证、如何保留、能否回滚。 |
 | 想理解机制 | [五类进化回路](https://agent-evolution.com/topics/five-evolution-loops/) | 把规范到执行、搜索、评估器、反思/记忆、种群/归档分开看。 |
 | 想比较项目 | [代码自我改进 Benchmark Matrix](https://agent-evolution.com/topics/code-evolution-benchmark/) 和 [项目报告](projects/INDEX.md) | 不被 star 或 demo 带偏，先看 evaluator、archive、lineage 和限制。 |
-| 想查趋势 | [2026 Star 增长试点账本](https://agent-evolution.com/star-growth/) 和 [Value LSH](https://agent-evolution.com/value-lsh/) | 区分历史热度、当前动量、价值分类和证据修复队列。 |
+| 想查趋势 | [2026 Star 抓取试点](https://agent-evolution.com/star-growth/) 和 [Value LSH 证据分诊](https://agent-evolution.com/value-lsh/) | 区分历史热度、当前动量、启发式分诊和证据修复队列。 |
 
-For global readers: the core reader path now has English mirror pages and summaries that follow the same evidence chain; dashboards, project pages, and long-tail topics are still being bilingualized.
+英文读者现在可以从 `/en/`、英文定义页、英文五类回路和英文代码 benchmark matrix 进入；项目报告、增长试点、Value LSH 和长尾页面仍是中文优先页面，保留证据链接，但暂不宣称完整英文镜像。
 
 ## 证据管线
 
@@ -58,27 +58,29 @@ flowchart LR
 
 ## 近期证据更新（2026-06-04）
 
-| 仓库 | 这轮补了什么 | 为什么重要 |
+本轮不是简单“刷新元数据”，而是补了五类证据缺口：skills、memory benchmark、skills benchmark、agent harness、browser harness 和 swarm runtime。下面每个仓库都只回答一个问题：它补上了哪类判断证据。
+
+| 仓库 | 补上的证据缺口 | 对读者的意义 |
 |---|---|---|
-| [voltagent/awesome-agent-skills](https://github.com/voltagent/awesome-agent-skills) | 刷新 raw capture、project card、site public report 与分类元数据，统一到 2026-06-04 的公开 GitHub 页面证据。 | 它把 skill 从零散 prompt 包提升成一个官方团队可追踪的技能生态入口，直接对应用户要求的 skill / methodology 证据层。 |
-| [vectorize-io/agent-memory-benchmark](https://github.com/vectorize-io/agent-memory-benchmark) | 刷新 raw capture、project card、site public report 与分类元数据，统一到 2026-06-04 的公开 GitHub 页面证据。 | 它把 memory 从“有没有记住”推进到可比的 benchmark 层，补齐用户要求的 memory + eval 公开证据。 |
-| [benchflow-ai/skillsbench](https://github.com/benchflow-ai/skillsbench) | 刷新 raw capture、project card、site public report 与分类元数据，统一到 2026-06-04 的公开 GitHub 页面证据。 | 它补的是“skills 到底有没有被 agent 用好”这一层，比 skill pack 本身更接近用户要求的 benchmark/eval 证据链。 |
-| [evalops/agent-harness](https://github.com/evalops/agent-harness) | 刷新 raw capture、project card、site public report 与分类元数据，统一到 2026-06-04 的公开 GitHub 页面证据。 | 它是 harness 方向里最直接的 provider 对照层，能把同一任务在不同 agent backend 上做可比实验。 |
-| [browser-use/browser-harness](https://github.com/browser-use/browser-harness) | 刷新 raw capture、project card、site public report 与分类元数据，统一到 2026-06-04 的公开 GitHub 页面证据。 | 它把 browser-use 从单纯 demo 提升到可编辑 harness 形态，正好补上 browser/skill/harness 的交叉层。 |
-| [swarmclawai/swarmclaw](https://github.com/swarmclawai/swarmclaw) | 刷新 raw capture、project card、site public report 与分类元数据，统一到 2026-06-04 的公开 GitHub 页面证据。 | 它把 agent-swarm 从概念讨论拉回到一个具体 runtime 面，覆盖用户反复要求补强的 swarm / multi-agent 方向。 |
+| [voltagent/awesome-agent-skills](https://github.com/voltagent/awesome-agent-skills) | 官方团队维护的 skill 入口 | skill 不是零散 prompt 包，而是可以被追踪、复用和评估的工程对象。 |
+| [vectorize-io/agent-memory-benchmark](https://github.com/vectorize-io/agent-memory-benchmark) | memory benchmark | “记住了”不够，要看检索、回答质量和成本之间的可比结果。 |
+| [benchflow-ai/skillsbench](https://github.com/benchflow-ai/skillsbench) | skills benchmark | 判断 agent 是否真的会用技能，而不是只安装了 skill pack。 |
+| [evalops/agent-harness](https://github.com/evalops/agent-harness) | provider-comparison harness | 同一任务可以跨 agent backend 比较，减少只看单次 demo 的偏差。 |
+| [browser-use/browser-harness](https://github.com/browser-use/browser-harness) | browser harness | 浏览器 agent 需要可编辑、可复跑的任务框架，而不是录屏式演示。 |
+| [swarmclawai/swarmclaw](https://github.com/swarmclawai/swarmclaw) | swarm runtime | agent-swarm 需要运行时、权限、任务分配和观测证据，不能只停留在“多角色”概念。 |
 
 ## 核心洞察
 
 一句话：本项目的核心洞察，是把 Self-Evolving AI Agents 从“自我改进的故事”变成“可审计的改进系统”。
 
-三句话：一个系统只有在反馈中改变自己的 prompt、memory、tool policy、workflow、code、weights 或 population，并且保留可验证证据时，才进入自进化范围。Survey 背后的全部资源现在按同一个问题重排：哪个对象在变，什么信号驱动它变，谁阻止它变坏。Evolve-AGI Index 是这次重排后的测量主线，它把论文发现、GitHub 语料、benchmark 和治理要求接成一条可复跑的数据流。
+三句话：一个系统只有在反馈中改变自己的 prompt、memory、tool policy、workflow、code、weights 或 population，并且保留可验证证据时，才进入自进化范围。Survey 背后的全部资源现在按同一个问题重排：哪个对象在变，什么信号驱动它变，谁阻止它变坏。Evolve-AGI Index 是这次重排后的工作型证据表，用来暴露 benchmark、闭环、迁移和治理证据是否足够，而不是给领域下最终分数。
 
 五句话展开：
 
 1. 过去读者需要在链接、star 排名、论文列表和网站材料之间自行判断；现在先看到结论，再进入证据。
 2. Survey 不是“论文综述合集”，而是把论文、项目、benchmark、社交/博客信号和用户痛点互相校验。
 3. 关键判断不再是“项目名字里有没有 evolution”，而是“系统是否形成 Observe -> Interpret -> Modify -> Verify -> Retain 的闭环”。
-4. Evolve-AGI Index 不只是网站模块，而是论文的核心贡献之一：给这个领域一个可解释的成熟度坐标系。
+4. Evolve-AGI Index 不只是网站模块，而是一个方法原型：把不同证据摆到同一张可审查的表里，同时暴露权重、口径和验证缺口。
 5. 对外读者看到的每个核心判断都应该能回到论文、项目报告、数据索引或 benchmark 证据；没有证据链的结论标记为 `[UNVERIFIED]`。
 
 ## 核心结论
@@ -89,13 +91,13 @@ flowchart LR
 | 2 | Benchmark 是选择压力，也是风险源。 | 分数提高不等于能力积累；要看隐藏测试、迁移、成本、失败候选。 | [ch5 evaluation](paper-drafts/ch5-evaluation.tex), [survey ch5](survey/ch5-evaluation-cn.md) |
 | 3 | 记忆、技能、评估框架是核心基础设施。 | 不要只看模型层；可审计记忆、可安装技能和评估器才决定长期可用性。 | [ch7 painpoints](paper-drafts/ch7-painpoints.tex), [agent-swarm evolve](analysis/agent-swarm-evolve.md) |
 | 4 | 五类进化回路比项目名更稳定。 | 新项目可以按机制归类，而不是被营销词牵着走。 | [survey methods](survey/ch3-methods-cn.md), [method taxonomy](survey/figures/method-taxonomy-mermaid.md) |
-| 5 | Evolve-AGI Index 应成为论文核心指标。 | 它把成熟度拆成 benchmark、闭环、证据、迁移、可运行、动量、治理七个信号。 | [Evolve-AGI Index](analysis/evolve-agi-index.md), [trend snapshot](reports/evolve-agi-index-trend.json) |
+| 5 | Evolve-AGI Index 只能作为工作型证据表。 | 它把 benchmark、闭环、证据、迁移、可运行、动量、治理七个信号拆开看，不能当领域标准。 | [Evolve-AGI Index](analysis/evolve-agi-index.md), [trend snapshot](reports/evolve-agi-index-trend.json) |
 | 6 | 用户真正关心信任边界。 | 产品价值来自可靠、透明、可控、低成本，不来自“更自主”的口号。 | [survey ch7](survey/ch7-painpoints-cn.md), [site survey](site/src/pages/survey/index.astro) |
 | 7 | 失败候选和负结果是资产。 | 没有被拒补丁、回归记录和 lineage，无法判断系统是否真的会进化。 | [ch8 future](paper-drafts/ch8-future.tex), [survey spark analysis](analysis/survey-resource-spark.md) |
 
 ## Evolve-AGI Index 进入论文核心
 
-一句话：Evolve-AGI Index 是本 Survey 的版本化、证据加权成熟度估计，不是 AGI 终局能力评分。
+一句话：Evolve-AGI Index 是本 Survey 的工作型证据指数原型，用来检查这个领域的证据成熟度，不是 AGI 终局能力评分，也不是单个项目的最终排名。
 
 ```text
 EAI = Σ(signal_score × signal_weight)
@@ -111,7 +113,9 @@ EAI = Σ(signal_score × signal_weight)
 | 领域动量 | 10% | 新项目和社区动量是趋势信号，但不能覆盖证据质量。 |
 | 治理准备度 | 8% | 自修改系统必须有安全边界、日志、回滚和时间戳信心。 |
 
-权重是当前 Survey 的 editorial/proposed weights，用来把不同证据放在同一张可讨论的表里；它们还不是经同行验证的领域标准。当前快照来自 [reports/evolve-agi-index-trend.json](reports/evolve-agi-index-trend.json)：2026-06-01 的指数为 `72.9`，benchmark 子指数为 `80.1`，对应 `93` 个 strict evolution repos、`200` 个 broad evolution repos 和 `239` 个 trend 输入中的 analyzed public-report records。这个快照与 [docs/indexes/master-index.md](docs/indexes/master-index.md) 的全仓库计数共同使用；前者服务指数趋势，后者服务仓库治理和完整 public-report 文件口径。
+权重是当前 Survey 的 editorial/proposed weights，用来把不同证据放在同一张可讨论的表里；它们还不是经同行验证的领域标准，也没有完成敏感性分析或置信区间估计。
+
+**Data Snapshot / 数据快照：**Evolve-AGI trend 使用的是 `2026-06-01` 趋势输入快照：`93` 个 strict evolution repos、`200` 个 broad evolution repos、`239` 条 trend public-report records。仓库治理和网站覆盖使用 [docs/indexes/master-index.md](docs/indexes/master-index.md) 的最新生成口径：`677` 个 classified GitHub repositories、`285` 个 analyzed project/model-card reports、`99` 个 strict evolution repos、`204` 个 broad evolution repos、`484` 个 public project report files。两个口径不能混用：前者服务指数趋势，后者服务仓库覆盖审计。
 
 ## Survey 证据地图
 
@@ -139,14 +143,14 @@ flowchart TB
 
 | 章节 | Survey 成果 | 当前入口 |
 |---|---|---|
-| Ch1 Introduction | 定义 self-evolution，并把 Evolve-AGI Index 作为 evidence-to-index 贡献纳入核心。 | [paper-drafts/ch1-intro.tex](paper-drafts/ch1-intro.tex) |
+| Ch1 Introduction | 定义 self-evolution，并把 Evolve-AGI Index 作为 evidence-to-index 方法原型纳入讨论。 | [paper-drafts/ch1-intro.tex](paper-drafts/ch1-intro.tex) |
 | Ch2 Taxonomy | 区分 continual learning、online learning、self-supervision、AutoML、RL 和严格口径下的 self-evolution。 | [paper-drafts/ch2-taxonomy.tex](paper-drafts/ch2-taxonomy.tex) |
 | Ch3 Methods | 按五类 loops 分析 feedback 如何变成 retained change。 | [paper-drafts/ch3-methods.tex](paper-drafts/ch3-methods.tex) |
 | Ch4 Systems | 比较 Self-Refine、Reflexion、ADAS、DGM、AlphaEvolve、Absolute Zero 等代表系统。 | [paper-drafts/ch4-evolutionary.tex](paper-drafts/ch4-evolutionary.tex) |
 | Ch5 Evaluation | 把 benchmark、trajectory、transfer、cost、regression 和 Goodhart 风险放在同一评估面。 | [paper-drafts/ch5-evaluation.tex](paper-drafts/ch5-evaluation.tex) |
 | Ch6 Frameworks | 讨论 runtime、memory、harness、workflow、tool sandbox 和 reference architecture。 | [paper-drafts/ch6-frameworks.tex](paper-drafts/ch6-frameworks.tex) |
 | Ch7 Pain Points | 用真实用户痛点校验研究问题：可靠性、成本、可观测性、权限、记忆污染。 | [paper-drafts/ch7-painpoints.tex](paper-drafts/ch7-painpoints.tex) |
-| Ch8 Future | 把 Evolve-AGI Index 扩展成 field knowledge data model 和后续路线图。 | [paper-drafts/ch8-future.tex](paper-drafts/ch8-future.tex) |
+| Ch8 Future | 讨论如何把 Evolve-AGI Index 从工作型证据表升级为更严格的 field knowledge data model。 | [paper-drafts/ch8-future.tex](paper-drafts/ch8-future.tex) |
 
 ## 怎么读这个仓库
 
@@ -161,7 +165,7 @@ flowchart TB
 | 哪些素材最值得先深挖 | [Value LSH 价值分类图谱](https://agent-evolution.com/value-lsh/) | [value LSH index](analysis/value-lsh-index.md), [evidence repair queue](analysis/value-evidence-repair-queue.md) |
 | 论文现在怎么组织 | [论文主线](#论文主线) | [paper-drafts/main.tex](paper-drafts/main.tex), [survey/latex/main.tex](survey/latex/main.tex) |
 | 哪些图支撑 Survey/Paper | [论文图谱页](https://agent-evolution.com/paper/) 和 [可视化页](https://agent-evolution.com/visualizations/) | [survey figures](survey/figures/README.md), [paper figure exporter](scripts/export_survey_figures_for_paper.mjs), [paper figure assets](paper-drafts/figures/) |
-| Evolve-AGI Index 怎么进入核心 | [Evolve-AGI Index 进入论文核心](#evolve-agi-index-进入论文核心) | [analysis/evolve-agi-index.md](analysis/evolve-agi-index.md), [网站页面](site/src/pages/evolve-agi-index/index.astro) |
+| Evolve-AGI Index 的边界是什么 | [Evolve-AGI Index 进入论文核心](#evolve-agi-index-进入论文核心) | [analysis/evolve-agi-index.md](analysis/evolve-agi-index.md), [网站页面](site/src/pages/evolve-agi-index/index.astro) |
 | 全量文件在哪里 | [CONTENT_INDEX.md](CONTENT_INDEX.md) | [docs/indexes/master-index.md](docs/indexes/master-index.md) |
 | 网站和主题页面在哪里 | [site](site/) | [site survey page](site/src/pages/survey/index.astro), [graph page](site/src/pages/graph/index.astro) |
 

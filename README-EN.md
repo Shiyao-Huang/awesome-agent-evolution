@@ -1,6 +1,6 @@
 # Awesome Self-Evolving AI Agents
 
-**A survey-first map of self-evolving AI agents: papers, projects, benchmarks, public reports, and the Evolve-AGI Index in one evidence chain.**
+**A survey-first map for judging whether an AI agent really improves from feedback, or merely looks impressive in a demo.**
 
 [Chinese](README.md) | [English](README-EN.md) | [Website](https://agent-evolution.com/) | [Paper PDF](paper-drafts/main.pdf) | [Evolve-AGI Index](analysis/evolve-agi-index.md) | [Project Index](projects/INDEX.md)
 
@@ -8,20 +8,20 @@
 
 ## One Sentence
 
-Want to know whether an AI agent is actually improving itself, or just looking impressive in a demo? This survey gives you a traceable answer: what changes, what feedback drives the change, who verifies it, whether it transfers, and how it rolls back.
+To judge whether an AI agent is actually self-evolving, ask five questions first: what changed, why it changed, who verified it, whether it was retained, and whether it can roll back.
 
 ## Three Sentences
 
-1. We connect papers, open-source projects, benchmarks, blog/social signals, and real user pain points into one evidence chain, so readers can start with the judgment and then inspect the proof.
+1. This survey does not start with a link dump. It starts with a judgment checklist: did the system change its prompt, memory, workflow, code, weights, or only its wording?
 2. The standard is simple: do not stop at names, stars, or demos; ask whether the system forms an Observe -> Interpret -> Modify -> Verify -> Retain loop.
-3. The [Evolve-AGI Index](analysis/evolve-agi-index.md) is now part of the paper core: it is not an AGI capability score, but an evidence index for the maturity of self-evolving agents.
+3. The [Evolve-AGI Index](analysis/evolve-agi-index.md) is currently a provisional evidence scorecard: it helps compare benchmark, loop, transfer, and governance evidence, but it is not an AGI score and not a final project ranking.
 
 ## Five Sentences
 
 1. This is not a standard Awesome List; it is an open survey of how AI agents can reliably improve themselves.
 2. Under this survey's strict scope, a self-evolving system should identify its mutable object, feedback signal, update operator, independent evaluator, retention mechanism, and rollback path.
 3. The most reviewable mechanism skeleton is the Five Evolution Loops: specification-to-execution, search, evaluator, reflection/memory, and population/archive.
-4. The Evolve-AGI Index puts benchmark performance, loop strength, evidence credibility, transfer verification, implementation access, field momentum, and governance readiness into one auditable metric, so hype does not masquerade as maturity.
+4. The Evolve-AGI Index puts benchmark performance, loop strength, evidence credibility, transfer verification, implementation access, field momentum, and governance readiness into one discussable table; its weights are editorial/proposed, not a peer-reviewed field standard.
 5. Use this page to reach the paper, project model cards, public reports, knowledge graph, and website without drowning in hundreds of links.
 
 ## What You Can Use It For
@@ -40,9 +40,9 @@ Want to know whether an AI agent is actually improving itself, or just looking i
 | New reader | [Definition topic page](https://agent-evolution.com/topics/self-evolving-ai-agents/) | A checklist: what changed, who verified it, how it is retained, and whether it can roll back. |
 | Research reader | [Five evolution loops](https://agent-evolution.com/topics/five-evolution-loops/) | A mechanism map that separates specification, search, evaluation, reflection, and population archives. |
 | Builder | [Code self-improvement Benchmark Matrix](https://agent-evolution.com/topics/code-evolution-benchmark/) and [project reports](projects/INDEX.md) | A way to compare evaluator strength, archive evidence, lineage, and limitations instead of demos. |
-| Trend or product reader | [2026 star-growth pilot ledger](https://agent-evolution.com/star-growth/) and [Value LSH](https://agent-evolution.com/value-lsh/) | A separation between historical popularity, current momentum, value classification, and evidence repair. |
+| Trend or product reader | [2026 star-growth fetch pilot](https://agent-evolution.com/star-growth/) and [Value LSH evidence triage](https://agent-evolution.com/value-lsh/) | A separation between historical popularity, current momentum, heuristic triage, and evidence repair. |
 
-For global readers: the core reader path now has English mirror pages and summaries that follow the same evidence chain; dashboards, project pages, and long-tail topics are still being bilingualized.
+English readers can currently follow the core path through `/en/`, the English definition page, the English five-loop page, and the English code benchmark matrix. Project reports, growth pilots, Value LSH, and long-tail pages remain Chinese-first, with evidence links preserved, so this repository does not yet claim full English parity.
 
 ## Evidence Pipeline
 
@@ -58,27 +58,29 @@ flowchart LR
 
 ## Recent Evidence Updates (2026-06-04)
 
-| Repository | What this run refreshed | Why it matters |
+This update is not just a metadata refresh. It fills six judgment gaps: skill ecosystems, memory benchmarks, skill benchmarks, agent harnesses, browser harnesses, and swarm runtimes.
+
+| Repository | Evidence gap filled | Why it matters |
 |---|---|---|
-| [voltagent/awesome-agent-skills](https://github.com/voltagent/awesome-agent-skills) | Refreshed the raw capture, project card, site-facing public report, and classification metadata from the public GitHub page observed on 2026-06-04. | It upgrades skill evidence from scattered prompt packs into a trackable ecosystem entry point anchored in official engineering-team skill releases. |
-| [vectorize-io/agent-memory-benchmark](https://github.com/vectorize-io/agent-memory-benchmark) | Refreshed the raw capture, project card, site-facing public report, and classification metadata from the public GitHub page observed on 2026-06-04. | It turns memory from a vague capability claim into a benchmark layer with measurable retrieval and answer tradeoffs. |
-| [benchflow-ai/skillsbench](https://github.com/benchflow-ai/skillsbench) | Refreshed the raw capture, project card, site-facing public report, and classification metadata from the public GitHub page observed on 2026-06-04. | It answers whether agents can actually use skills well, which is closer to the benchmark/eval chain than a skill pack alone. |
-| [evalops/agent-harness](https://github.com/evalops/agent-harness) | Refreshed the raw capture, project card, site-facing public report, and classification metadata from the public GitHub page observed on 2026-06-04. | It is a direct provider-comparison harness, useful when the same task needs to be measured across multiple agent backends. |
-| [browser-use/browser-harness](https://github.com/browser-use/browser-harness) | Refreshed the raw capture, project card, site-facing public report, and classification metadata from the public GitHub page observed on 2026-06-04. | It upgrades browser control from a demo into an editable harness substrate, covering the browser-skill-harness intersection. |
-| [swarmclawai/swarmclaw](https://github.com/swarmclawai/swarmclaw) | Refreshed the raw capture, project card, site-facing public report, and classification metadata from the public GitHub page observed on 2026-06-04. | It turns the swarm discussion into a concrete runtime surface, matching the user’s repeated request to strengthen the multi-agent/swarm lane. |
+| [voltagent/awesome-agent-skills](https://github.com/voltagent/awesome-agent-skills) | Official-team skill ecosystem | Skills become trackable engineering objects, not scattered prompt snippets. |
+| [vectorize-io/agent-memory-benchmark](https://github.com/vectorize-io/agent-memory-benchmark) | Memory benchmark | "It remembers" is not enough; retrieval, answer quality, and cost need comparable tests. |
+| [benchflow-ai/skillsbench](https://github.com/benchflow-ai/skillsbench) | Skills benchmark | It tests whether agents can actually use skills, not merely install skill packs. |
+| [evalops/agent-harness](https://github.com/evalops/agent-harness) | Provider-comparison harness | The same task can be compared across agent backends, reducing demo bias. |
+| [browser-use/browser-harness](https://github.com/browser-use/browser-harness) | Browser harness | Browser agents need editable, repeatable tasks rather than screen-recorded demos. |
+| [swarmclawai/swarmclaw](https://github.com/swarmclawai/swarmclaw) | Swarm runtime | Agent-swarm claims need runtime, permission, delegation, and observability evidence, not just "many roles." |
 
 ## Core Insight
 
 One sentence: the core insight is to turn Self-Evolving AI Agents from a story about self-improvement into an auditable improvement system.
 
-Three sentences: A system enters this survey's self-evolution scope only when feedback changes its prompt, memory, tool policy, workflow, code, weights, or population and leaves verifiable evidence. All resources behind the survey are now reorganized around one question: what object changes, what signal drives it, and what prevents the change from becoming harmful. The Evolve-AGI Index is the measurement spine for that reorganization, connecting paper findings, the GitHub corpus, benchmarks, and governance requirements into a reproducible data flow.
+Three sentences: A system enters this survey's self-evolution scope only when feedback changes its prompt, memory, tool policy, workflow, code, weights, or population and leaves verifiable evidence. All resources behind the survey are now reorganized around one question: what object changes, what signal drives it, and what prevents the change from becoming harmful. The Evolve-AGI Index is a working evidence worksheet for that reorganization, exposing whether benchmark, loop, transfer, and governance evidence is strong enough rather than assigning a final field score.
 
 Five-sentence expansion:
 
 1. Readers used to move between links, stars, paper lists, and site pages on their own; now they see the conclusion first, then the evidence path.
 2. The survey is not just a literature roundup; it cross-checks papers, projects, benchmarks, social/blog signals, and user pain points.
 3. The key judgment is no longer whether a project name includes "evolution"; it is whether the system forms an Observe -> Interpret -> Modify -> Verify -> Retain loop.
-4. The Evolve-AGI Index is no longer just a site module; it becomes a paper contribution that gives the field an interpretable maturity coordinate system.
+4. The Evolve-AGI Index is no longer just a site module; it becomes a method prototype for placing different evidence types into one inspectable table while exposing weights, denominators, and validation gaps.
 5. Every core claim exposed to readers should trace back to the paper, project reports, data indexes, or benchmark evidence; unsupported claims are marked `[UNVERIFIED]`.
 
 ## Core Findings
@@ -89,13 +91,13 @@ Five-sentence expansion:
 | 2 | Benchmarks are both selection pressure and risk. | Score gains are not capability accumulation unless hidden tests, transfer, cost, and rejected candidates are reported. | [ch5 evaluation](paper-drafts/ch5-evaluation.tex), [survey ch5](survey/ch5-evaluation-cn.md) |
 | 3 | Memory, skills, and harnesses are core infrastructure. | Do not only inspect the model layer; auditable memory, installable skills, and evaluators determine long-term usefulness. | [ch7 painpoints](paper-drafts/ch7-painpoints.tex), [agent-swarm evolve](analysis/agent-swarm-evolve.md) |
 | 4 | Five evolution loops are more stable than project names. | New systems can be classified by mechanism instead of marketing labels. | [survey methods](survey/ch3-methods-cn.md), [method taxonomy](survey/figures/method-taxonomy-mermaid.md) |
-| 5 | The Evolve-AGI Index should be a core paper metric. | It decomposes maturity into benchmark, loop, evidence, transfer, access, momentum, and governance signals. | [Evolve-AGI Index](analysis/evolve-agi-index.md), [trend snapshot](reports/evolve-agi-index-trend.json) |
+| 5 | The Evolve-AGI Index is only a working evidence worksheet. | It separates benchmark, loop, evidence, transfer, access, momentum, and governance signals; it is not a field standard. | [Evolve-AGI Index](analysis/evolve-agi-index.md), [trend snapshot](reports/evolve-agi-index-trend.json) |
 | 6 | Users care most about the trust boundary. | Product value comes from reliability, transparency, control, and cost, not from autonomy rhetoric. | [survey ch7](survey/ch7-painpoints-cn.md), [site survey](site/src/pages/survey/index.astro) |
 | 7 | Failed candidates and negative results are assets. | Without rejected patches, regressions, and lineage, we cannot judge whether a system truly evolves. | [ch8 future](paper-drafts/ch8-future.tex), [survey spark analysis](analysis/survey-resource-spark.md) |
 
 ## Evolve-AGI Index In The Paper Core
 
-One sentence: the Evolve-AGI Index is a versioned, evidence-weighted maturity estimate for this survey, not a final AGI capability score.
+One sentence: the Evolve-AGI Index is a provisional evidence-maturity scorecard for this survey, not a final AGI capability score and not a final project ranking.
 
 ```text
 EAI = Σ(signal_score × signal_weight)
@@ -111,7 +113,9 @@ EAI = Σ(signal_score × signal_weight)
 | Field momentum | 10% | New projects and community motion are trend signals, but cannot override evidence quality. |
 | Governance readiness | 8% | Self-modifying systems need safety boundaries, logs, rollback, and timestamp confidence. |
 
-The weights are editorial/proposed weights for this survey: they make different evidence types discussable in one table, but they are not yet a peer-reviewed field standard. The current snapshot in [reports/evolve-agi-index-trend.json](reports/evolve-agi-index-trend.json) reports a 2026-06-01 index of `72.9`, a benchmark sub-index of `80.1`, `93` strict evolution repos, `200` broad evolution repos, and `239` analyzed public-report records in the trend input. Use it together with the repository-wide counts in [docs/indexes/master-index.md](docs/indexes/master-index.md): the former powers index trends, while the latter governs repository structure and the full public-report file count.
+The weights are editorial/proposed weights for this survey: they make different evidence types discussable in one table, but they are not yet a peer-reviewed field standard, and they still need sensitivity analysis and uncertainty estimates.
+
+**Data Snapshot:** the Evolve-AGI trend uses the `2026-06-01` trend-input snapshot: `93` strict evolution repos, `200` broad evolution repos, and `239` trend public-report records. Repository governance and site coverage use the latest generated [docs/indexes/master-index.md](docs/indexes/master-index.md) scope: `677` classified GitHub repositories, `285` analyzed project/model-card reports, `99` strict evolution repos, `204` broad evolution repos, and `484` public project report files. Do not mix those denominators: the former supports trend reconstruction; the latter supports repository coverage auditing.
 
 ## Survey Evidence Map
 
@@ -139,14 +143,14 @@ flowchart TB
 
 | Chapter | Survey result | Current entry |
 |---|---|---|
-| Ch1 Introduction | Defines self-evolution and adds the Evolve-AGI Index as an evidence-to-index contribution. | [paper-drafts/ch1-intro.tex](paper-drafts/ch1-intro.tex) |
+| Ch1 Introduction | Defines self-evolution and adds the Evolve-AGI Index as an evidence-to-index method prototype. | [paper-drafts/ch1-intro.tex](paper-drafts/ch1-intro.tex) |
 | Ch2 Taxonomy | Separates continual learning, online learning, self-supervision, AutoML, RL, and strict-scope self-evolution. | [paper-drafts/ch2-taxonomy.tex](paper-drafts/ch2-taxonomy.tex) |
 | Ch3 Methods | Explains how feedback becomes retained change through the Five Evolution Loops. | [paper-drafts/ch3-methods.tex](paper-drafts/ch3-methods.tex) |
 | Ch4 Systems | Compares Self-Refine, Reflexion, ADAS, DGM, AlphaEvolve, Absolute Zero, and related systems. | [paper-drafts/ch4-evolutionary.tex](paper-drafts/ch4-evolutionary.tex) |
 | Ch5 Evaluation | Puts benchmarks, trajectories, transfer, cost, regression, and Goodhart risk onto one evaluation surface. | [paper-drafts/ch5-evaluation.tex](paper-drafts/ch5-evaluation.tex) |
 | Ch6 Frameworks | Discusses runtime, memory, harness, workflow, tool sandbox, and reference architectures. | [paper-drafts/ch6-frameworks.tex](paper-drafts/ch6-frameworks.tex) |
 | Ch7 Pain Points | Uses real user pain points to test the research agenda: reliability, cost, observability, permissions, and memory pollution. | [paper-drafts/ch7-painpoints.tex](paper-drafts/ch7-painpoints.tex) |
-| Ch8 Future | Extends the Evolve-AGI Index into a field knowledge data model and roadmap. | [paper-drafts/ch8-future.tex](paper-drafts/ch8-future.tex) |
+| Ch8 Future | Discusses how the Evolve-AGI Index could evolve from a working evidence worksheet into a stricter field knowledge data model. | [paper-drafts/ch8-future.tex](paper-drafts/ch8-future.tex) |
 
 ## How To Read This Repository
 
@@ -161,7 +165,7 @@ flowchart TB
 | Which materials deserve deeper review first | [Value LSH map](https://agent-evolution.com/value-lsh/) | [value LSH index](analysis/value-lsh-index.md), [evidence repair queue](analysis/value-evidence-repair-queue.md) |
 | How the paper is organized | [Paper Spine](#paper-spine) | [paper-drafts/main.tex](paper-drafts/main.tex), [survey/latex/main.tex](survey/latex/main.tex) |
 | Which figures support the survey and paper | [Paper figure page](https://agent-evolution.com/paper/) and [visualization page](https://agent-evolution.com/visualizations/) | [survey figures](survey/figures/README.md), [paper figure exporter](scripts/export_survey_figures_for_paper.mjs), [paper figure assets](paper-drafts/figures/) |
-| How the AGI index enters the core | [Evolve-AGI Index In The Paper Core](#evolve-agi-index-in-the-paper-core) | [analysis/evolve-agi-index.md](analysis/evolve-agi-index.md), [site page](site/src/pages/evolve-agi-index/index.astro) |
+| What boundary the AGI index has | [Evolve-AGI Index In The Paper Core](#evolve-agi-index-in-the-paper-core) | [analysis/evolve-agi-index.md](analysis/evolve-agi-index.md), [site page](site/src/pages/evolve-agi-index/index.astro) |
 | Where the full lists live | [CONTENT_INDEX.md](CONTENT_INDEX.md) | [docs/indexes/master-index.md](docs/indexes/master-index.md) |
 | Where the site and topic pages live | [site](site/) | [site survey page](site/src/pages/survey/index.astro), [graph page](site/src/pages/graph/index.astro) |
 

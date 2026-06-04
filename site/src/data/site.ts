@@ -6,7 +6,7 @@ export const site = {
   url: configuredSiteUrl.replace(/\/$/, ''),
   title: 'Self Evolve AI — Self-Evolving Agents Survey / AI 自进化证据地图',
   description:
-    'Self Evolve is a bilingual evidence map for self-evolving AI agents: definitions, papers, projects, benchmarks, star growth, value classification, and audit boundaries. 中文默认入口保留同一证据链。',
+    'Self Evolve 是 AI Agent 自进化证据地图：先判断系统改了什么、谁验证、能否保留和回滚，再进入论文、项目、benchmark 与证据边界。English core summaries are available; full parity is still in progress.',
   keywords: [
     'Self Evolve AI',
     'AI Self Evolution',
@@ -32,14 +32,55 @@ export const site = {
 
 export const nav = [
   { href: '/#about', label: '关于' },
-  { href: '/topics/', label: 'Start' },
+  { href: '/topics/', label: '读者路径' },
   { href: '/projects/', label: '项目' },
-  { href: '/research/', label: 'Research' },
+  { href: '/research/', label: '研究' },
   { href: '/survey/', label: 'Survey' },
-  { href: '/paper/', label: 'Paper' },
-  { href: '/graph/', label: 'Graph' },
+  { href: '/paper/', label: '论文' },
+  { href: '/graph/', label: '图谱' },
   { href: '/blog/', label: '博客' },
   { href: '/search/', label: '搜索' },
-  { href: '/star-growth/', label: 'Growth' },
-  { href: '/value-lsh/', label: 'Value LSH' }
+  { href: '/star-growth/', label: '增长试点' },
+  { href: '/value-lsh/', label: '证据分诊' }
 ];
+
+export const navEn = [
+  { href: '/en/', label: 'Start' },
+  { href: '/en/topics/', label: 'Questions' },
+  { href: '/en/topics/self-evolving-ai-agents/', label: 'Definition' },
+  { href: '/en/topics/five-evolution-loops/', label: 'Five Loops' },
+  { href: '/en/topics/code-evolution-benchmark/', label: 'Benchmark' },
+  { href: '/paper/', label: 'Paper (ZH-first)' },
+  { href: '/value-lsh/', label: 'Triage (ZH-first)' }
+];
+
+export const navByLang = {
+  zh: nav,
+  en: navEn
+};
+
+export const ctaByLang = {
+  zh: { href: '/topics/', label: '开始阅读' },
+  en: { href: '/en/topics/', label: 'Start' }
+};
+
+export const footerLinks = {
+  zh: [
+    { href: '/resource-library/', label: '资料库覆盖' },
+    { href: '/topics/', label: '读者路径' },
+    { href: '/github/', label: 'GitHub 证据链' },
+    { href: site.github, label: '开源仓库' },
+    { href: `${site.github}/tree/main/site/src/content/blog`, label: '博客源码' },
+    { href: `${site.github}/tree/main/projects`, label: '项目分析' },
+    { href: '/rss.xml', label: 'RSS' }
+  ],
+  en: [
+    { href: '/en/topics/self-evolving-ai-agents/', label: 'Definition' },
+    { href: '/en/topics/five-evolution-loops/', label: 'Five loops' },
+    { href: '/en/topics/code-evolution-benchmark/', label: 'Benchmark matrix' },
+    { href: '/topics/', label: 'Chinese full topic map' },
+    { href: '/resource-library/', label: 'Resource coverage (ZH-first)' },
+    { href: site.github, label: 'GitHub repository' },
+    { href: '/rss.xml', label: 'RSS' }
+  ]
+};
