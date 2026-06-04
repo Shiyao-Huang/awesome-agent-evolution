@@ -1171,7 +1171,14 @@ a.pill:focus-visible {
 }
 
 .score-table-wrap {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
   overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  contain: paint;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: var(--surface-card);
@@ -1357,6 +1364,14 @@ a.pill:focus-visible {
 
   .metrics {
     grid-template-columns: 1fr;
+  }
+
+  .radar-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .radar-bar-row {
+    grid-template-columns: minmax(0, 84px) minmax(0, 1fr) minmax(42px, auto);
   }
 
   .hero-evidence li {

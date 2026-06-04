@@ -68,9 +68,9 @@ const coverage = [
       <h1 class="gradient-text">Self-Evolving AI 综述论文</h1>
       <p class="lead">论文追踪 AI Self-Evolution 的研究图谱：从推理时自改进到代码自进化，连接 {publicCorpusStats.surveyDisplayPapers} 篇 survey-display papers、{publicCorpusStats.rawGithubCaptures} 个 raw GitHub captures、{publicCorpusStats.analyzedProjectReports} 个 analyzed project/model-card reports 和 {publicCorpusStats.painPointSignals} 个 public pain-point signals。</p>
       <div class="metrics">
-        <div class="metric"><strong>196</strong><span>篇论文覆盖</span></div>
-        <div class="metric"><strong>677</strong><span>个 raw GitHub captures</span></div>
-        <div class="metric"><strong>97</strong><span>个用户痛点</span></div>
+        <div class="metric"><strong>{publicCorpusStats.surveyDisplayPapers}</strong><span>篇论文覆盖</span></div>
+        <div class="metric"><strong>{publicCorpusStats.rawGithubCaptures}</strong><span>个 raw GitHub captures</span></div>
+        <div class="metric"><strong>{publicCorpusStats.painPointSignals}</strong><span>个用户痛点</span></div>
         <div class="metric"><strong>8</strong><span>章 + 附录</span></div>
       </div>
     </div>
@@ -206,7 +206,7 @@ const coverage = [
       </div>
       <p style="margin-top: 12px; color: var(--muted);">这些 1-5 分仍是启发式草稿，基于 repo 信号和痛点分析；还缺少完整 rubric、打分人、反例和 reviewer disagreement，因此不能当学术排名引用。</p>
 
-      <div class="grid" style="grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 24px;">
+      <div class="grid radar-grid" style="margin-top: 24px;">
         {frameworkRadar.map((fw) => (
           <article class="card" style="padding: 16px;">
             <h4 style="margin-bottom: 10px;">{fw.name}</h4>

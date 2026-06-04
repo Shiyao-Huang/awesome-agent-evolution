@@ -115,7 +115,7 @@ EAI = Σ(signal_score × signal_weight)
 
 权重是当前 Survey 的 editorial/proposed weights，用来把不同证据放在同一张可讨论的表里；它们还不是经同行验证的领域标准，也没有完成敏感性分析或置信区间估计。
 
-**Data Snapshot / 数据快照：**Evolve-AGI trend 使用的是 `2026-06-01` 趋势输入快照：`93` 个 strict evolution repos、`200` 个 broad evolution repos、`239` 条 trend public-report records。仓库治理和网站覆盖使用 [docs/indexes/master-index.md](docs/indexes/master-index.md) 的最新生成口径：`677` 个 classified GitHub repositories、`285` 个 analyzed project/model-card reports、`99` 个 strict evolution repos、`204` 个 broad evolution repos、`484` 个 public project report files。两个口径不能混用：前者服务指数趋势，后者服务仓库覆盖审计。
+**Data Snapshot / 数据快照：**Evolve-AGI trend 使用的是 `2026-06-01` 趋势输入快照：`93` 个 strict evolution repos、`200` 个 broad evolution repos、`239` 条 trend public-report records。仓库治理和网站覆盖使用 [docs/indexes/master-index.md](docs/indexes/master-index.md) 的最新生成口径：`678` 个 classified GitHub repositories、`286` 个 analyzed project/model-card reports、`99` 个 strict evolution repos、`204` 个 broad evolution repos、`485` 个 public project report files。两个口径不能混用：前者服务指数趋势，后者服务仓库覆盖审计。
 
 ## Survey 证据地图
 

@@ -1,5 +1,5 @@
 import { surveyStats } from './survey';
-import { projectReports } from './reports';
+import { publicCorpusStats } from './publicCorpusStats';
 
 export interface TopicEvidenceLink {
   label: string;
@@ -22,10 +22,10 @@ export interface TopicCluster {
 
 export const topicMapStats = {
   clusters: 10,
-  rawGithubCaptures: 677,
-  strictEvolutionRepos: 99,
-  broadEvolutionRepos: 204,
-  publicReports: projectReports.length,
+  rawGithubCaptures: publicCorpusStats.rawGithubCaptures,
+  strictEvolutionRepos: publicCorpusStats.strictEvolutionRepos,
+  broadEvolutionRepos: publicCorpusStats.broadEvolutionRepos,
+  publicReports: publicCorpusStats.publicProjectReports,
   surveyPapers: surveyStats.papers,
   painPoints: surveyStats.painPoints,
   evolutionLoops: surveyStats.evolutionLoops,
@@ -195,7 +195,7 @@ export const topicClusters: TopicCluster[] = [
     readerQuestion: '这个资料库到底收了什么、分析了什么、哪些能公开阅读?',
     surveyRole: '把 raw、processed、work、results 的口径分开，防止公开叙事夸大覆盖。',
     readerIntent: 'resource library / trust page',
-    evidence: 'Coverage audit 和 public resource library page 已解释 677 raw GitHub captures、285 analyzed project/model-card reports、484 public project reports、196 survey-display papers 等当前计数边界。',
+    evidence: `Coverage audit 和 public resource library page 已解释 ${publicCorpusStats.rawGithubCaptures} raw GitHub captures、${publicCorpusStats.analyzedProjectReports} analyzed project/model-card reports、${publicCorpusStats.publicProjectReports} public project reports、${publicCorpusStats.surveyDisplayPapers} survey-display papers 等当前计数边界。`,
     discoveryQuestions: ['self-evolving AI agents resource library', 'AI self evolution GitHub projects', 'AI agent survey project reports'],
     evidenceLinks: [
       { label: 'Resource library', href: '/resource-library/' },
