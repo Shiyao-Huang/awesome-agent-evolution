@@ -13,9 +13,9 @@ export interface TopicCluster {
   titleEn: string;
   readerQuestion: string;
   surveyRole: string;
-  seoIntent: string;
+  readerIntent: string;
   evidence: string;
-  seedQueries: string[];
+  discoveryQuestions: string[];
   evidenceLinks: TopicEvidenceLink[];
   nextAsset: string;
 }
@@ -39,9 +39,9 @@ export const topicClusters: TopicCluster[] = [
     titleEn: 'What counts as a self-evolving AI agent',
     readerQuestion: '这个系统真的在改进自己，还是只是一个固定 workflow?',
     surveyRole: 'Survey 的定义入口：可变对象、反馈信号、评估器、保留机制和回滚路径。',
-    seoIntent: 'definition / explainer',
+    readerIntent: 'definition / explainer',
     evidence: 'README、paper introduction、resource coverage audit 已经把 self-evolution 从标签改写成可审计系统过程。',
-    seedQueries: ['self-evolving AI agents', 'AI 自进化智能体是什么', 'AI agent self improvement survey'],
+    discoveryQuestions: ['self-evolving AI agents', 'AI 自进化智能体是什么', 'AI agent self improvement survey'],
     evidenceLinks: [
       { label: 'Definition guide', href: '/topics/self-evolving-ai-agents/' },
       { label: 'Survey definition', href: '/survey/' },
@@ -56,9 +56,9 @@ export const topicClusters: TopicCluster[] = [
     titleEn: 'Five evolution loops',
     readerQuestion: '不同项目到底在用哪一种反馈闭环?',
     surveyRole: '把 196 篇论文和 348 个展示仓库压成机制分类，而不是按项目名分类。',
-    seoIntent: 'taxonomy / comparison',
+    readerIntent: 'taxonomy / comparison',
     evidence: 'Survey data 层有 5 loops、7 method families、6 case studies；mechanisms 页面已经可公开阅读。',
-    seedQueries: ['AI self evolution loops', 'agent reflection loop', 'LLM code self modification'],
+    discoveryQuestions: ['AI self evolution loops', 'agent reflection loop', 'LLM code self modification'],
     evidenceLinks: [
       { label: 'Five-loop guide', href: '/topics/five-evolution-loops/' },
       { label: 'Mechanisms', href: '/survey/mechanisms/' },
@@ -73,9 +73,9 @@ export const topicClusters: TopicCluster[] = [
     titleEn: 'Code self-improvement and algorithm discovery',
     readerQuestion: '哪些系统真的会改代码、发现算法，并用 benchmark 留下证据?',
     surveyRole: '连接 DGM、ADAS、AlphaEvolve、OpenEvolve、FunSearch 等核心系统，是论文最强证据簇之一。',
-    seoIntent: 'benchmark / project comparison',
+    readerIntent: 'benchmark / project comparison',
     evidence: '项目报告、case studies 和 evaluation 章节已经覆盖 code mutation、archive、SWE-bench、HumanEval、算法搜索。',
-    seedQueries: ['AI code self improvement', 'Darwin Godel Machine benchmark', 'AlphaEvolve algorithm discovery'],
+    discoveryQuestions: ['AI code self improvement', 'Darwin Godel Machine benchmark', 'AlphaEvolve algorithm discovery'],
     evidenceLinks: [
       { label: 'Benchmark matrix', href: '/topics/code-evolution-benchmark/' },
       { label: 'Benchmark', href: '/benchmark/' },
@@ -90,9 +90,9 @@ export const topicClusters: TopicCluster[] = [
     titleEn: 'Memory, skills, and knowledge evolution',
     readerQuestion: 'agent 怎样把一次失败变成未来可复用的经验?',
     surveyRole: '解释 self-evolution 不只发生在模型权重，也发生在 memory、skill library、tool policy 和 retrieval substrate。',
-    seoIntent: 'how-to / engineering guide',
+    readerIntent: 'how-to / engineering guide',
     evidence: 'Survey pain points、Voyager/Reflexion 类案例、memory substrate 项目和 Agent-Swarm Evolve 都指向可审计保留机制。',
-    seedQueries: ['agent memory evolution', 'AI agent skill library', 'Reflexion memory self improvement'],
+    discoveryQuestions: ['agent memory evolution', 'AI agent skill library', 'Reflexion memory self improvement'],
     evidenceLinks: [
       { label: 'Survey', href: '/survey/' },
       { label: 'Projects', href: '/projects/' },
@@ -107,9 +107,9 @@ export const topicClusters: TopicCluster[] = [
     titleEn: 'Agent-Swarm Evolve and harness evolution',
     readerQuestion: '多智能体系统的组织结构、角色、拓扑和 handoff 能不能一起进化?',
     surveyRole: '把用户指定的 agent-swarm evolve 纳入 multi-agent / harness 方向，并和生产运行时、验证器、共享状态连接。',
-    seoIntent: 'emerging topic / project map',
+    readerIntent: 'emerging topic / project map',
     evidence: 'analysis/agent-swarm-evolve.md 已把 CORAL、GPTSwarm、metaswarm、swarmclaw、OpenClaw 和 Insight Swarm 作为种子。',
-    seedQueries: ['agent swarm evolve', 'multi-agent self evolution', 'agent harness evolution'],
+    discoveryQuestions: ['agent swarm evolve', 'multi-agent self evolution', 'agent harness evolution'],
     evidenceLinks: [
       { label: 'Agent-Swarm analysis', href: 'https://github.com/Shiyao-Huang/awesome-agent-evolution/blob/main/analysis/agent-swarm-evolve.md' },
       { label: 'Homepage section', href: '/#agent-swarm-evolve' },
@@ -124,9 +124,9 @@ export const topicClusters: TopicCluster[] = [
     titleEn: 'Evaluation, governance, and Evolve-AGI Index',
     readerQuestion: '怎么避免把 benchmark 热度误读成真实成熟度?',
     surveyRole: '把 benchmark、闭环强度、证据链、迁移、实现可得性、领域动量和治理准备度压成指数。',
-    seoIntent: 'metric / decision support',
+    readerIntent: 'metric / decision support',
     evidence: 'Evolve-AGI Index 已有权重、趋势快照、公开页面和 README 核心叙事。',
-    seedQueries: ['Evolve-AGI Index', 'AI agent evaluation governance', 'self-evolving agents benchmark'],
+    discoveryQuestions: ['Evolve-AGI Index', 'AI agent evaluation governance', 'self-evolving agents benchmark'],
     evidenceLinks: [
       { label: 'Evolve-AGI Index', href: '/evolve-agi-index/' },
       { label: 'Benchmark', href: '/benchmark/' },
@@ -143,12 +143,12 @@ export const topicClusters: TopicCluster[] = [
     titleEn: '2026 GitHub growth and current momentum',
     readerQuestion: '哪些自进化项目正在当前阶段获得真实关注，而不是只靠历史累计 Star?',
     surveyRole: '把 GitHub 语料从累计热度榜升级成当前动量数据库，为 Evolve-AGI Index 的 field momentum 信号提供证据边界。',
-    seoIntent: 'data / momentum ranking',
-    evidence: 'Star-history database 已有 seed、snapshot、star-events、monthly growth 和 coverage-qualified ranking；当前公开页明确区分 final evidence 与 fetch backlog。',
-    seedQueries: ['AI agent GitHub star growth 2026', 'self evolving agents new stars', 'AI agent momentum ranking'],
+    readerIntent: 'data / momentum audit',
+    evidence: 'Star-history database 已有 seed、snapshot、star-events、monthly growth 和 coverage-gated ledger；当前公开页明确区分可判断证据与待抓取 backlog。',
+    discoveryQuestions: ['AI agent GitHub star growth 2026', 'self evolving agents new stars', 'AI agent momentum evidence'],
     evidenceLinks: [
       { label: 'Star growth page', href: '/star-growth/' },
-      { label: 'Growth ranking', href: 'https://github.com/Shiyao-Huang/awesome-agent-evolution/blob/main/analysis/github-star-growth-ranking.md' },
+      { label: 'Growth audit ledger', href: 'https://github.com/Shiyao-Huang/awesome-agent-evolution/blob/main/analysis/github-star-growth-ranking.md' },
       { label: 'Evolve-AGI Index', href: '/evolve-agi-index/' },
     ],
     nextAsset: '扩大 strict evolution repos 的完整 stargazer pagination，并把 complete rows 回灌到 Evolve-AGI Index 和 frontier queue。',
@@ -156,13 +156,13 @@ export const topicClusters: TopicCluster[] = [
   {
     id: 'value-lsh',
     rank: 8,
-    title: 'Value LSH 价值分类与证据修复',
+    title: 'Value LSH 证据分诊与证据修复',
     titleEn: 'Value LSH classification and evidence repair',
     readerQuestion: '这么多项目、论文和内容材料，哪些真的值得先深挖?',
     surveyRole: '把用户要求的“谁好谁坏、谁有价值谁没价值”转成 26 条 value lines、LSH 近邻、3D projection 和 evidence repair queue。',
-    seoIntent: 'classification / evidence triage',
+    readerIntent: 'classification / evidence triage',
     evidence: 'Value LSH 已形成 GitHub、papers、social/X 和 blogs 的全量价值比较层，并把结果公开为 LSH buckets、3D projection 和 evidence repair queue；具体计数以 /value-lsh/ 页面与 analysis/value-lsh-index.md 当前快照为准。',
-    seedQueries: ['AI agent value classification', 'self evolving agents evidence repair', 'AI project LSH clustering'],
+    discoveryQuestions: ['AI agent value classification', 'self evolving agents evidence repair', 'AI project LSH clustering'],
     evidenceLinks: [
       { label: 'Value LSH page', href: '/value-lsh/' },
       { label: 'Value LSH analysis', href: 'https://github.com/Shiyao-Huang/awesome-agent-evolution/blob/main/analysis/value-lsh-index.md' },
@@ -177,9 +177,9 @@ export const topicClusters: TopicCluster[] = [
     titleEn: 'Production pain points and trust boundaries',
     readerQuestion: '用户真的需要更自主的 agent，还是需要更可靠、可控、低成本的系统?',
     surveyRole: '用 97 个痛点校验研究方向，防止 survey 只围绕论文 novelty 转。',
-    seoIntent: 'buyer / product education',
+    readerIntent: 'buyer / product education',
     evidence: 'Survey 页面公开了 pain point 分类，paper ch7 把可靠性、成本、权限、记忆污染和可观测性纳入核心。',
-    seedQueries: ['AI agent production pain points', 'agent reliability observability cost', 'self evolving AI product risks'],
+    discoveryQuestions: ['AI agent production pain points', 'agent reliability observability cost', 'self evolving AI product risks'],
     evidenceLinks: [
       { label: 'Survey pain points', href: '/survey/' },
       { label: 'Blog', href: '/blog/' },
@@ -194,9 +194,9 @@ export const topicClusters: TopicCluster[] = [
     titleEn: 'Resource coverage and evidence traceability',
     readerQuestion: '这个资料库到底收了什么、分析了什么、哪些能公开阅读?',
     surveyRole: '把 raw、processed、work、results 的口径分开，防止公开叙事夸大覆盖。',
-    seoIntent: 'resource library / trust page',
+    readerIntent: 'resource library / trust page',
     evidence: 'Coverage audit 和 public resource library page 已解释 677 raw GitHub captures、283 analyzed project/model-card reports、483 public project reports、196 survey-display papers 等当前计数边界。',
-    seedQueries: ['self-evolving AI agents resource library', 'AI self evolution GitHub projects', 'AI agent survey project reports'],
+    discoveryQuestions: ['self-evolving AI agents resource library', 'AI self evolution GitHub projects', 'AI agent survey project reports'],
     evidenceLinks: [
       { label: 'Resource library', href: '/resource-library/' },
       { label: 'Value LSH', href: '/value-lsh/' },

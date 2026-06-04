@@ -10,15 +10,15 @@ import {
 ---
 
 <BaseLayout
-  title="GitHub 明星项目传播链分析 — Self Evolve"
-  description="AI Agent 领域 GitHub 项目的 Star 质量评分、传播链重构、竞品对比矩阵。判断热度是真实自发还是炒作/水军行为。"
+  title="GitHub Star 传播与异常信号分析 — Self Evolve"
+  description="AI Agent 领域 GitHub 项目的 Star 传播线索、异常增长信号和对比矩阵。它帮助复核热度来源，不等于项目质量排名。"
 >
   <section class="section">
     <div class="container">
       <div class="eyebrow">数据研究报告</div>
-      <h1 class="gradient-text">GitHub 明星项目传播链分析</h1>
-      <p class="lead">Star 质量评分 · 传播链重构 · 炒作 vs 自发检测 · 竞品对比矩阵</p>
-      <p style="color: var(--muted); margin-top: 12px">覆盖 {starQualityScores.length} 个核心项目，{comparisonGroups.length} 组对比分析</p>
+      <h1 class="gradient-text">GitHub Star 传播与异常信号分析</h1>
+      <p class="lead">这页只回答热度从哪里来、是否异常、哪些项目需要复核；它不是项目能力或学术价值排名。</p>
+      <p style="color: var(--muted); margin-top: 12px">覆盖 {starQualityScores.length} 个核心项目，{comparisonGroups.length} 组对比分析；严肃判断仍要回到 benchmark、报告、失败样本和原始仓库。</p>
     </div>
   </section>
 
@@ -57,23 +57,23 @@ import {
     </div>
   </section>
 
-  <!-- Star Quality Scores -->
+      <!-- Star Signal Queue -->
   <section class="section" id="quality-scores">
     <div class="container">
       <div class="section-head">
         <div>
-          <div class="eyebrow">Star 质量评分</div>
-          <h2>综合质量排名</h2>
+          <div class="eyebrow">Star signal queue</div>
+          <h2>传播信号复核队列</h2>
         </div>
       </div>
-      <p style="color: var(--muted); margin-bottom: 24px">基于 5 维度加权评分：Star 活跃度(20%) + 贡献者多样性(20%) + Fork 质量(20%) + Issue 质量(20%) + PR 合并率(20%)</p>
+      <p style="color: var(--muted); margin-bottom: 24px">基于 5 维度加权线索：Star 活跃度(20%) + 贡献者多样性(20%) + Fork 质量(20%) + Issue 质量(20%) + PR 合并率(20%)。分数只用于发现异常和选择复核顺序。</p>
       <div class="score-table-wrap">
         <table class="score-table">
           <thead>
             <tr>
               <th>项目</th>
               <th>Stars</th>
-              <th>综合评分</th>
+              <th>分诊分</th>
               <th>Star 活跃</th>
               <th>贡献多样性</th>
               <th>Fork 质量</th>

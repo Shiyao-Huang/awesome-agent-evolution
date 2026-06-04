@@ -11,7 +11,6 @@ const ranked = rankedRaw.map((project) => ({
   taxonomy: classifyProjectMechanism(project)
 }));
 const rankedTotal = ranked.length || 1;
-type RankedProject = (typeof ranked)[number];
 
 const average = (values: number[]) => values.length ? values.reduce((sum, value) => sum + value, 0) / values.length : 0;
 const percentOfTop30 = (count: number) => Math.round((count / rankedTotal) * 100);
@@ -74,14 +73,14 @@ const signalRules = methodFamilyOptions.map(family => {
 ---
 
 <BaseLayout
-  title="当前价值排名 — Self Evolve"
-  description="AI 自我进化项目当前价值排名：时间新近性占 50%，并结合自进化机制、证据链、社区动量和实用适配度。"
+  title="研究优先级队列 — Self Evolve"
+  description="AI 自我进化项目研究优先级队列：用于决定下一步深读、复核或补证据，不负责给出最终学术定论。"
 >
   <section class="section">
     <div class="container">
-      <div class="eyebrow">Rankings</div>
-      <h1 class="gradient-text">当前价值排名</h1>
-      <p class="lead">Top 30 自进化项目排行 · 时间权重 50% · 避免旧项目被历史 Stars 垄断。</p>
+      <div class="eyebrow">Research priority queue</div>
+      <h1 class="gradient-text">研究优先级队列</h1>
+      <p class="lead">这是一台研究排队器：哪些先深读，哪些先补证据，哪些只做背景观察；最终判断必须回到原始证据、报告和 benchmark。</p>
       <div class="metrics">
         <div class="metric"><strong>{ranked.length}</strong><span>展示项目</span></div>
         <div class="metric"><strong>50%</strong><span>时间权重</span></div>
@@ -90,34 +89,16 @@ const signalRules = methodFamilyOptions.map(family => {
     </div>
   </section>
 
-  <!-- Top 3 Podium -->
-  <section class="section">
-    <div class="container">
-      <div class="rank-podium">
-        {ranked.slice(0, 3).map((p, i) => (
-          <div class={`rank-podium-item rank-pos-${i + 1}`}>
-            <div class="rank-medal">{i + 1}</div>
-            <div class="rank-podium-name">
-              <a href={`/projects/${slugify(p.repo)}/`}>{p.name}</a>
-            </div>
-            <div class="rank-podium-stars">{p.scores.current_value.toFixed(2)} 分</div>
-            <div class="rank-podium-cat">{p.category}</div>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <!-- Full Ranking Table -->
+  <!-- Research Queue Table -->
   <section class="section">
     <div class="container">
       <div class="rank-table-wrap">
         <table class="rank-table">
           <thead>
             <tr>
-              <th>Rank</th>
+              <th>Queue</th>
               <th>Project</th>
-              <th>Score</th>
+              <th>Priority</th>
               <th>Time</th>
               <th>Mechanism</th>
               <th>Evidence</th>
@@ -135,10 +116,10 @@ const signalRules = methodFamilyOptions.map(family => {
                   <span class="rank-repo">{p.repo}</span>
                   {p.caveat && <span class="rank-caveat">{p.caveat}</span>}
                 </td>
-                <td class="rank-stars">{p.scores.current_value.toFixed(2)}</td>
-                <td>{p.scores.time.toFixed(1)}</td>
-                <td>{p.scores.mechanism.toFixed(1)}</td>
-                <td>{p.scores.evidence.toFixed(1)}</td>
+                <td class="rank-stars">{Math.round(p.scores.current_value)}</td>
+                <td>{Math.round(p.scores.time)}</td>
+                <td>{Math.round(p.scores.mechanism)}</td>
+                <td>{Math.round(p.scores.evidence)}</td>
                 <td>{p.category}</td>
                 <td class="rank-date">{p.created_at ? p.created_at.slice(0, 10) : 'unknown'}</td>
                 <td class="rank-date">{p.activity_at ? p.activity_at.slice(0, 10) : '\u2014'}</td>
@@ -156,12 +137,12 @@ const signalRules = methodFamilyOptions.map(family => {
       <div class="card">
         <div class="card-head">
           <div class="eyebrow">Method</div>
-          <h3>这个排名怎么用</h3>
+          <h3>这个队列怎么用</h3>
         </div>
-        <p>先用它决定下一步行动：80 分以上优先深读，70-79 分重点跟踪，60-69 分先补证据，60 分以下只作为生态背景。分数不是最终学术结论，而是把时间、机制、证据链和社区动量压成一个研究排队器。</p>
+        <p>先用它决定下一步行动：优先深读、重点跟踪、补证据或背景观察。数字只是研究排队器的粗粒度线索，不是最终学术结论。</p>
         <div class="rank-usage-grid">
           <div class="rank-usage-panel">
-            <div class="rank-usage-title">怎么用这个排名</div>
+            <div class="rank-usage-title">怎么用这个队列</div>
             <div class="rank-bands">
               {valueBands.map(band => (
                 <div class="rank-band-row">
@@ -183,7 +164,7 @@ const signalRules = methodFamilyOptions.map(family => {
           </div>
 
           <div class="rank-usage-panel">
-            <div class="rank-usage-title">Top 30 机制信号覆盖</div>
+            <div class="rank-usage-title">当前队列的机制信号覆盖</div>
             <div class="rank-cats">
               {signalRules.map(signal => (
                 <div class="rank-cat-row">
@@ -200,7 +181,7 @@ const signalRules = methodFamilyOptions.map(family => {
         </div>
         <details class="rank-method-details">
           <summary>查看评分权重和证据边界</summary>
-          <p>当前价值排名不是历史影响力排名。时间新近性占 50%，自进化机制强度占 20%，证据链完整度占 15%，社区动量占 10%，实用适配度占 5%。GitHub API 无法确认创建时间的项目会被标记 caveat，时间分最高封顶 45/100，避免本地 mirror 或采集时间制造“假新项目”。</p>
+          <p>研究优先级队列不是历史影响力榜。时间新近性占 50%，自进化机制强度占 20%，证据链完整度占 15%，社区动量占 10%，实用适配度占 5%。GitHub API 无法确认创建时间的项目会被标记 caveat，时间分最高封顶 45/100，避免本地 mirror 或采集时间制造“假新项目”。</p>
           <div class="score-table-wrap" style="margin:16px 0 0;">
             <table class="rank-table">
               <thead><tr><th>Dimension</th><th>Weight</th><th>Meaning</th></tr></thead>
@@ -208,7 +189,7 @@ const signalRules = methodFamilyOptions.map(family => {
                 <tr><td>Time</td><td>{Math.round(method.weights.time * 100)}%</td><td>创建时间新近性 + 最近活动；创建时间缺失时封顶。</td></tr>
                 <tr><td>Mechanism</td><td>{Math.round(method.weights.mechanism * 100)}%</td><td>是否真的包含进化、评估器、记忆/技能、训练/数据循环。</td></tr>
                 <tr><td>Evidence</td><td>{Math.round(method.weights.evidence * 100)}%</td><td>是否有 raw、classification、公开报告、GitHub API 或本地镜像证据。</td></tr>
-                <tr><td>Adoption</td><td>{Math.round(method.weights.adoption * 100)}%</td><td>log-scaled stars，只作为动量信号，不再主导排名。</td></tr>
+                <tr><td>Adoption</td><td>{Math.round(method.weights.adoption * 100)}%</td><td>log-scaled stars，只作为动量信号，不主导复核顺序。</td></tr>
                 <tr><td>Usefulness</td><td>{Math.round(method.weights.usefulness * 100)}%</td><td>是否适合工程使用、评测、harness、memory/skill 或自进化实践。</td></tr>
               </tbody>
             </table>
@@ -220,15 +201,6 @@ const signalRules = methodFamilyOptions.map(family => {
 </BaseLayout>
 
 <style>
-.rank-podium{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}
-.rank-podium-item{display:flex;flex-direction:column;align-items:center;gap:8px;padding:24px 16px;border-radius:12px;background:var(--surface-2);text-align:center}
-.rank-pos-1{border:2px solid #FFD700}.rank-pos-2{border:2px solid #C0C0C0}.rank-pos-3{border:2px solid #CD7F32}
-.rank-medal{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:18px;color:#fff}
-.rank-pos-1 .rank-medal{background:#FFD700;color:#333}.rank-pos-2 .rank-medal{background:#C0C0C0;color:#333}.rank-pos-3 .rank-medal{background:#CD7F32}
-.rank-podium-name a{font-weight:800;font-size:16px;color:var(--fg);text-decoration:none}.rank-podium-name a:hover{color:var(--accent)}
-.rank-podium-stars{font-weight:900;font-size:20px;color:var(--accent);font-variant-numeric:tabular-nums}
-.rank-podium-cat{font-size:12px;color:var(--muted);font-weight:700}
-
 .rank-table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
 .rank-table{width:100%;border-collapse:collapse;font-size:13px}
 .rank-table th{text-align:left;padding:8px 10px;border-bottom:2px solid var(--line);color:var(--muted);font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;white-space:nowrap}
@@ -265,7 +237,6 @@ const signalRules = methodFamilyOptions.map(family => {
 .rank-cat-note{grid-column:2 / 4;font-size:11px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 
 @media(max-width:760px){
-  .rank-podium{grid-template-columns:1fr}
   .rank-table{font-size:12px}
   .rank-usage-grid{grid-template-columns:1fr}
   .rank-cat-row{grid-template-columns:96px 1fr 30px}

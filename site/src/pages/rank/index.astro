@@ -1,6 +1,13 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
-import { rankedProfiles, tierColors, maturityLabels } from '@/data/rankings';
+import { rankedProfiles, tierColors } from '@/data/rankings';
+
+const priorityBand = (score: number) => {
+  if (score >= 7) return '优先复核';
+  if (score >= 6) return '重点阅读';
+  if (score >= 5) return '补证据';
+  return '暂缓引用';
+};
 
 const tierGroups = new Map<string, typeof rankedProfiles>();
 for (const p of rankedProfiles) {
@@ -9,16 +16,16 @@ for (const p of rankedProfiles) {
   tierGroups.get(tier)!.push(p);
 }
 ---
-<BaseLayout title="Self Evolve 项目排名 — Top 20 自进化系统综合评估" description="Self Evolve 项目排名：基于 9 维评估框架（D1-D5 技术 + U1-U4 用户面）的 Top 20 自进化 AI 系统综合排名。">
+<BaseLayout title="Self Evolve 系统证据队列 — Top 20 自进化系统复核清单" description="Self Evolve 系统证据队列：基于 9 维评分协议草稿，把 Top 20 自进化 AI 系统排成阅读和复核优先级；它不是最终能力排名。">
   <section class="section">
     <div class="container">
-      <div class="eyebrow">Rank / 排名</div>
-      <h1 class="gradient-text">Top 20 自进化系统排名</h1>
-      <p class="lead">基于 9 维 Rank/Judgment 评估框架，覆盖改进幅度、证据强度、可迁移性、安全性、成本效率、可用性、前瞻性、学术严谨性和实用价值。</p>
+      <div class="eyebrow">Evidence queue / 证据队列</div>
+      <h1 class="gradient-text">Top 20 自进化系统复核清单</h1>
+      <p class="lead">这页回答一个读者问题：如果只能先读 20 个系统，应该从哪里开始、为什么要复核、哪些结论还不能当成定论。9 维评分只是分诊协议草稿，覆盖改进幅度、证据强度、可迁移性、安全性、成本效率、可用性、前瞻性、学术严谨性和实用价值。</p>
       <div class="metrics">
-        <div class="metric"><strong>{rankedProfiles.length}</strong><span>个评估系统</span></div>
-        <div class="metric"><strong>{rankedProfiles[0]?.metadata.composite_score}</strong><span>最高综合分（AlphaEvolve）</span></div>
-        <div class="metric"><strong>9</strong><span>个评估维度</span></div>
+        <div class="metric"><strong>{rankedProfiles.length}</strong><span>个候选系统</span></div>
+        <div class="metric"><strong>{rankedProfiles[0]?.system_name}</strong><span>当前最先复核对象</span></div>
+        <div class="metric"><strong>9</strong><span>个待校准维度</span></div>
       </div>
     </div>
   </section>
@@ -29,13 +36,13 @@ for (const p of rankedProfiles) {
       <div class="section-head">
         <div>
           <div class="eyebrow">分级</div>
-          <h2>Tier 分布</h2>
+          <h2>复核层级分布</h2>
         </div>
       </div>
       <div class="grid" style="grid-template-columns: repeat(4, minmax(0, 1fr));">
         {[...tierGroups.entries()].map(([tier, items]) => (
-          <article class="card" style="border-top: 3px solid {tierColors[tier] || 'var(--line)'};">
-            <h3 style="color: {tierColors[tier] || 'var(--fg)'};">Tier {tier}</h3>
+          <article class="card" style={`border-top: 3px solid ${tierColors[tier] || 'var(--line)'};`}>
+            <h3 style={`color: ${tierColors[tier] || 'var(--fg)'};`}>证据层级 {tier}</h3>
             <p>{items.length} 个项目</p>
             <div class="pill-row" style="margin-top: 10px;">
               {items.slice(0, 3).map((p) => <span class="pill">{p.system_name}</span>)}
@@ -51,18 +58,19 @@ for (const p of rankedProfiles) {
     <div class="container">
       <div class="section-head">
         <div>
-          <div class="eyebrow">综合排名</div>
-          <h2>按综合分排序</h2>
+          <div class="eyebrow">复核顺序</div>
+          <h2>按当前证据分诊排序</h2>
+          <p>排序只表示“先读谁、先复核谁”。如果项目缺少可重复 benchmark、失败样本或保留机制证据，不能因为位置靠前就被写成成熟结论。</p>
         </div>
       </div>
       <div class="score-table-wrap">
         <table class="score-table">
           <thead>
             <tr>
-              <th>#</th>
+              <th>队列</th>
               <th>项目</th>
-              <th>Tier</th>
-              <th>综合分</th>
+              <th>证据层级</th>
+              <th>分诊</th>
               <th>成熟度</th>
               <th>D1</th>
               <th>D2</th>
@@ -79,11 +87,11 @@ for (const p of rankedProfiles) {
                 <td><strong>{i + 1}</strong></td>
                 <td><strong>{p.system_name}</strong></td>
                 <td>
-                  <span class="score-badge" style="background: {tierColors[p.metadata.tier] || 'var(--line)'}20; color: {tierColors[p.metadata.tier] || 'var(--muted)'};">
+                  <span class="score-badge" style={`background: ${tierColors[p.metadata.tier] || 'var(--line)'}20; color: ${tierColors[p.metadata.tier] || 'var(--muted)'};`}>
                     {p.metadata.tier}
                   </span>
                 </td>
-                <td><strong>{p.metadata.composite_score.toFixed(2)}</strong></td>
+                <td><strong>{priorityBand(p.metadata.composite_score)}</strong></td>
                 <td>
                   <span class="org-badge" style="background: var(--surface-3);">
                     L{p.metadata.maturity_level}
@@ -109,8 +117,9 @@ for (const p of rankedProfiles) {
     <div class="container">
       <div class="section-head">
         <div>
-          <div class="eyebrow">维度对比</div>
-          <h2>各项目 9 维雷达条形图</h2>
+          <div class="eyebrow">维度对照</div>
+          <h2>各项目 9 维证据轮廓</h2>
+          <p>这些条形图用于发现“强项在哪里、缺口在哪里”，不是用两位小数制造精确排名。</p>
         </div>
       </div>
       <div class="grid" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
@@ -121,8 +130,8 @@ for (const p of rankedProfiles) {
                 <h3>{p.system_name}</h3>
                 <p>{p.summary}</p>
               </div>
-              <span class="score-badge" style="background: {tierColors[p.metadata.tier] || 'var(--line)'}20; color: {tierColors[p.metadata.tier] || 'var(--muted)'};">
-                {p.metadata.tier} · {p.metadata.composite_score.toFixed(2)}
+              <span class="score-badge" style={`background: ${tierColors[p.metadata.tier] || 'var(--line)'}20; color: ${tierColors[p.metadata.tier] || 'var(--muted)'};`}>
+                {p.metadata.tier} · {priorityBand(p.metadata.composite_score)}
               </span>
             </div>
             <div style="margin-top: 14px;">
@@ -147,7 +156,8 @@ for (const p of rankedProfiles) {
     <div class="container">
       <div class="card">
         <div class="eyebrow">方法论</div>
-        <h3>评估维度说明</h3>
+        <h3>评分协议草稿</h3>
+        <p>本协议帮助读者把“像不像自进化”拆成可讨论问题：它改了什么、怎么得到反馈、谁验证、变化是否保留、失败能否回滚。权重仍需更多 reviewer 校准，因此只能作为阅读和复核顺序。</p>
         <div class="score-table-wrap" style="margin-top: 16px;">
           <table class="score-table">
             <thead>

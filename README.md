@@ -77,7 +77,7 @@ flowchart LR
 
 五句话展开：
 
-1. 过去读者需要在链接、star 排名、论文列表和网站材料之间自行判断；现在先看到结论，再进入证据。
+1. 过去读者需要在链接、star 热度、论文列表和网站材料之间自行判断；现在先看到结论，再进入证据。
 2. Survey 不是“论文综述合集”，而是把论文、项目、benchmark、社交/博客信号和用户痛点互相校验。
 3. 关键判断不再是“项目名字里有没有 evolution”，而是“系统是否形成 Observe -> Interpret -> Modify -> Verify -> Retain 的闭环”。
 4. Evolve-AGI Index 不只是网站模块，而是一个方法原型：把不同证据摆到同一张可审查的表里，同时暴露权重、口径和验证缺口。
@@ -85,7 +85,7 @@ flowchart LR
 
 ## 核心结论
 
-| 排名 | Survey 结论 | 对读者的意义 | 证据入口 |
+| 序号 | Survey 结论 | 对读者的意义 | 证据入口 |
 |---:|---|---|---|
 | 1 | 自进化是受控系统过程，不是 demo 标签。 | 读任何项目先问“改了什么、谁验证、怎么回滚”。 | [paper abstract](paper-drafts/main.tex), [ch1 intro](paper-drafts/ch1-intro.tex) |
 | 2 | Benchmark 是选择压力，也是风险源。 | 分数提高不等于能力积累；要看隐藏测试、迁移、成本、失败候选。 | [ch5 evaluation](paper-drafts/ch5-evaluation.tex), [survey ch5](survey/ch5-evaluation-cn.md) |
@@ -122,7 +122,7 @@ EAI = Σ(signal_score × signal_weight)
 | 层级 | 当前角色 | 关键证据 |
 |---|---|---|
 | 原始证据 | 保留 GitHub、论文、博客、社交素材，作为判断起点。 | [raw index](docs/indexes/raw-index.md), `raw-github/`, `raw-papers/`, `raw-social/`, `raw-blogs/` |
-| 加工分析 | 把素材转成分类、机制、model card、paper review、ranking 和 Evolve-AGI Index。 | [processed index](docs/indexes/processed-index.md), [GitHub analysis](analysis/github-project-data-analysis.md), [projects index](projects/INDEX.md) |
+| 加工分析 | 把素材转成分类、机制、model card、paper review、证据队列和 Evolve-AGI Index。 | [processed index](docs/indexes/processed-index.md), [GitHub analysis](analysis/github-project-data-analysis.md), [projects index](projects/INDEX.md) |
 | Survey 论文 | 把机制、系统、评估、工业实践、痛点和未来方向写成论文结构。 | [survey CN chapters](survey/ch1-intro-cn.md), [paper drafts](paper-drafts/main.tex), [survey latex](survey/latex/main.tex) |
 | 公开结果 | 发布 PDF、网站、报告、图谱、趋势快照和主题页面。 | [results index](docs/indexes/results-index.md), [site](site/src/pages/index.astro), [reports](reports/) |
 | 证据目录 | 给读者检查证据链、索引和公开结果的入口。 | [CONTENT_INDEX.md](CONTENT_INDEX.md), [master index](docs/indexes/master-index.md) |
@@ -161,8 +161,8 @@ flowchart TB
 | 自进化到底怎么发生 | [五类进化回路](https://agent-evolution.com/topics/five-evolution-loops/) | [five-loop analysis](analysis/five-evolution-loops-topic.md), [survey mechanisms](site/src/pages/survey/mechanisms.astro) |
 | 哪些系统真的会改代码 | [代码自我改进 Benchmark Matrix](https://agent-evolution.com/topics/code-evolution-benchmark/) | [code benchmark matrix](analysis/code-evolution-benchmark-matrix.md), [benchmark page](site/src/pages/benchmark/index.astro) |
 | 什么项目真的算自进化 | [核心结论](#核心结论) | [projects/INDEX.md](projects/INDEX.md), [analysis/github-project-data-analysis.md](analysis/github-project-data-analysis.md) |
-| 哪些项目在 2026 年正在增长 | [公开增长试点账本](https://agent-evolution.com/star-growth/) | [GitHub star growth ranking](analysis/github-star-growth-ranking.md), [data-engine schema](data-engine/github-star-history/README.md) |
-| 哪些素材最值得先深挖 | [Value LSH 价值分类图谱](https://agent-evolution.com/value-lsh/) | [value LSH index](analysis/value-lsh-index.md), [evidence repair queue](analysis/value-evidence-repair-queue.md) |
+| 哪些项目在 2026 年正在增长 | [公开增长试点账本](https://agent-evolution.com/star-growth/) | [GitHub star growth analysis](analysis/github-star-growth-ranking.md), [data-engine schema](data-engine/github-star-history/README.md) |
+| 哪些素材最值得先深挖 | [Value LSH 证据分诊队列](https://agent-evolution.com/value-lsh/) | [value LSH index](analysis/value-lsh-index.md), [evidence repair queue](analysis/value-evidence-repair-queue.md) |
 | 论文现在怎么组织 | [论文主线](#论文主线) | [paper-drafts/main.tex](paper-drafts/main.tex), [survey/latex/main.tex](survey/latex/main.tex) |
 | 哪些图支撑 Survey/Paper | [论文图谱页](https://agent-evolution.com/paper/) 和 [可视化页](https://agent-evolution.com/visualizations/) | [survey figures](survey/figures/README.md), [paper figure exporter](scripts/export_survey_figures_for_paper.mjs), [paper figure assets](paper-drafts/figures/) |
 | Evolve-AGI Index 的边界是什么 | [Evolve-AGI Index 进入论文核心](#evolve-agi-index-进入论文核心) | [analysis/evolve-agi-index.md](analysis/evolve-agi-index.md), [网站页面](site/src/pages/evolve-agi-index/index.astro) |
@@ -173,8 +173,8 @@ flowchart TB
 
 - [KNOWN] 全仓库治理计数来自 [docs/indexes/master-index.md](docs/indexes/master-index.md)，由 `node scripts/generate_project_indexes.mjs` 生成。
 - [KNOWN] GitHub 语料、strict/broad evolution 子集和时间切片来自 [analysis/github-project-data-analysis.md](analysis/github-project-data-analysis.md) 与对应 JSON。
-- [KNOWN] GitHub star-growth 试点账本来自 [data-engine/github-star-history/](data-engine/github-star-history/)、[analysis/github-star-growth-ranking.md](analysis/github-star-growth-ranking.md) 和公开页面 [star-growth](https://agent-evolution.com/star-growth/)；累计 Star 只作为 adoption prior，正式 2026 增长排名必须要求 `complete_or_near_complete` 覆盖。
-- [KNOWN] Value LSH 分类图谱来自 [analysis/value-lsh-index.md](analysis/value-lsh-index.md)、[data-engine/value-lsh-index/](data-engine/value-lsh-index/) 和公开页面 [value-lsh](https://agent-evolution.com/value-lsh/)；它是深挖优先级和证据修复队列，不是最终价值判决。
+- [KNOWN] GitHub star-growth 试点账本来自 [data-engine/github-star-history/](data-engine/github-star-history/)、[analysis/github-star-growth-ranking.md](analysis/github-star-growth-ranking.md) 和公开页面 [star-growth](https://agent-evolution.com/star-growth/)；累计 Star 只作为 adoption prior，正式 2026 增长判断必须要求 `complete_or_near_complete` 覆盖。
+- [KNOWN] Value LSH 证据分诊图谱来自 [analysis/value-lsh-index.md](analysis/value-lsh-index.md)、[data-engine/value-lsh-index/](data-engine/value-lsh-index/) 和公开页面 [value-lsh](https://agent-evolution.com/value-lsh/)；它是深挖优先级和证据修复队列，不是最终价值判决。
 - [KNOWN] 资料库覆盖、计数口径和当前缺口来自 [analysis/resource-library-coverage-audit.md](analysis/resource-library-coverage-audit.md)；最新 raw/classified/model-card/public-report 计数以 [docs/indexes/master-index.md](docs/indexes/master-index.md) 和 [analysis/github-project-data-analysis.md](analysis/github-project-data-analysis.md) 为准。
 - [KNOWN] Evolve-AGI Index 方法、权重和 benchmark 输入来自 [analysis/evolve-agi-index.md](analysis/evolve-agi-index.md)、[site/src/data/evolveAgiIndex.ts](site/src/data/evolveAgiIndex.ts) 和 [reports/evolve-agi-index-trend.json](reports/evolve-agi-index-trend.json)。
 - [KNOWN] Survey 章节和论文主稿来自 [paper-drafts/main.tex](paper-drafts/main.tex) 与 [survey/latex/main.tex](survey/latex/main.tex)。

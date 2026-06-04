@@ -72,7 +72,7 @@ const summary = valueSnapshot.summary;
 const generatedDate = valueSnapshot.generated_at.slice(0, 10);
 const materialCountLabel = summary.total_materials.toLocaleString();
 const classLabels: Record<ValueClass, string> = {
-  'high-value-candidate': '高价值候选',
+  'high-value-candidate': '优先深读',
   'needs-review': '待复核',
   'low-signal-or-risk': '修复 / 风险',
 };
@@ -104,9 +104,9 @@ const scoreBand = (score: number) => {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Dataset',
-  name: 'Value LSH 3D Classification Graph',
-  alternateName: 'AI 自进化素材价值 LSH 三维图谱',
-  description: 'A heuristic value-facet LSH matrix and 3D embedding projection over GitHub projects, papers, social/X captures, and blog materials for Self Evolve triage.',
+  name: 'Value LSH Evidence Triage Queue',
+  alternateName: 'AI 自进化素材证据分诊队列',
+  description: 'A heuristic value-facet triage queue over GitHub projects, papers, social/X captures, and blog materials for deciding what to read, review, or avoid citing for now.',
   url: `${site.url}/value-lsh/`,
   inLanguage: 'zh-CN',
   dateModified: valueSnapshot.generated_at,
@@ -119,13 +119,13 @@ const jsonLd = {
 <BaseLayout
   title="Value LSH 证据分诊队列 — Self Evolve"
   description="Self Evolve 的 Value LSH 是启发式证据分诊队列：当材料太多时，帮助决定先读哪些、先复核哪些、哪些暂时不要引用；它不是最终价值裁判。"
-  pageKeywords={['Value LSH', '3D embedding graph', 'AI 自进化价值分类', '局部敏感哈希', 'value facet matrix']}
+  pageKeywords={['Value LSH', '3D embedding graph', 'AI 自进化证据分诊', '局部敏感哈希', 'value facet matrix']}
 >
   <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} is:inline />
 
   <section class="section value-lsh-hero">
     <div class="container">
-      <div class="eyebrow">Evidence triage · not final ranking</div>
+      <div class="eyebrow">Evidence triage · heuristic queue</div>
       <h1>材料太多时，先决定读哪 20 个、复核哪 20 个、哪些暂时不要引用。</h1>
       <p class="lead">Value LSH 是一个启发式分诊队列：用 26 个判断问题，把 {materialCountLabel} 条 GitHub、论文、社交/X 和博客材料分成“优先深读、需要复核、弱证据/风险”三类。</p>
       <p class="value-lsh-caveat">方法边界：这里的 value score 和 confidence 没有完成校准，也没有人工一致性验证；页面只用于排研究顺序，不能替代论文精读、项目运行验证或学术审查。</p>
@@ -277,11 +277,11 @@ const jsonLd = {
             <article>
               <div>
                 <strong>{cluster.cluster_id}</strong>
-                <span>{cluster.size.toLocaleString()} items · avg {cluster.score_avg.toFixed(2)}</span>
+                <span>{cluster.size.toLocaleString()} items · avg band {Math.round(cluster.score_avg)}</span>
               </div>
               <p>{cluster.label}</p>
               <div class="value-chip-row">
-                {cluster.top_tags.slice(0, 4).map((tag) => <span>{tag.label} {tag.average.toFixed(2)}</span>)}
+                {cluster.top_tags.slice(0, 4).map((tag) => <span>{tag.label}</span>)}
               </div>
             </article>
           ))}

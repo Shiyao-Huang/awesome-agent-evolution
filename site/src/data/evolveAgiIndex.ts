@@ -301,7 +301,7 @@ export const evolveAgiIndexSignals: ScoreSignal[] = [
     shortLabel: 'Momentum',
     score: round(fieldMomentum),
     weight: 10,
-    description: '结合当前价值排名与 Star 活跃度，衡量近期研究和工程热度。',
+    description: '结合证据分诊队列与 Star 活跃度，提示近期研究和工程关注度，不能单独当作价值排名。',
     evidence: 'site/src/data/analysis.json + site/src/data/starAnalysis.ts'
   },
   {
@@ -389,9 +389,9 @@ export const evolveAgiIndex = {
     pattern: project.pattern
   })),
   evidenceLinks: [
-    { label: '系统 Rank', href: '/rank/' },
+    { label: '系统证据队列', href: '/rank/' },
     { label: 'Benchmark 追踪', href: '/evolve-agi-index/#benchmark-performance' },
-    { label: '当前价值排名', href: '/rankings/' },
+    { label: '研究优先级队列', href: '/rankings/' },
     { label: 'GitHub 证据链', href: '/github/' },
     {
       label: '方法说明',

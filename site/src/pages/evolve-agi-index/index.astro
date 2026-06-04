@@ -252,8 +252,8 @@ const trendEnd = evolveAgiTrend[evolveAgiTrend.length - 1]?.date ?? '';
       <div>
         <div class="section-head eai-local-head">
           <div>
-            <div class="eyebrow">System Leaders</div>
-            <h2>闭环强度最高的系统</h2>
+            <div class="eyebrow">Evidence examples</div>
+            <h2>闭环证据较强的代表系统</h2>
           </div>
         </div>
         <div class="eai-list">
@@ -266,7 +266,7 @@ const trendEnd = evolveAgiTrend[evolveAgiTrend.length - 1]?.date ?? '';
                 <div class="pill-row">
                   <span class="pill">Tier {leader.tier}</span>
                   <span class="pill">{leader.maturity}</span>
-                  <span class="pill">{leader.score.toFixed(2)}</span>
+                  <span class="pill">rough score {Math.round(leader.score)}</span>
                 </div>
               </div>
             </article>
@@ -277,8 +277,8 @@ const trendEnd = evolveAgiTrend[evolveAgiTrend.length - 1]?.date ?? '';
       <div>
         <div class="section-head eai-local-head">
           <div>
-            <div class="eyebrow">Current Signals</div>
-            <h2>近期价值信号</h2>
+            <div class="eyebrow">Research clues</div>
+            <h2>近期研究线索，不是价值结论</h2>
           </div>
         </div>
         <div class="eai-list">
@@ -290,7 +290,7 @@ const trendEnd = evolveAgiTrend[evolveAgiTrend.length - 1]?.date ?? '';
                 <p>{signal.pattern}</p>
                 <div class="pill-row">
                   <span class="pill">{signal.category}</span>
-                  <span class="pill">{signal.score} 当前价值分</span>
+                  <span class="pill">priority {Math.round(signal.score)}</span>
                 </div>
               </div>
             </article>

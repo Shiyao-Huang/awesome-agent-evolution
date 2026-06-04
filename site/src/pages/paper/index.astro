@@ -54,11 +54,6 @@ const coverage = [
   { dataset: 'Pain Points', current: 97, coverage: 100 },
 ];
 
-const starProjects = [
-  { name: 'AutoResearchClaw', stars: '12.6K', dimension: 'Skill + Memory + Workflow', method: 'PIVOT/REFINE loop, multi-agent debate' },
-  { name: 'GenericAgent', stars: '11.9K', dimension: 'Architecture', method: 'Architecture self-modification' },
-  { name: 'hive', stars: '10.4K', dimension: 'Workflow/Graph', method: 'Failure-driven graph evolution' },
-];
 ---
 
 <BaseLayout
@@ -178,8 +173,8 @@ const starProjects = [
     <div class="container">
       <div class="section-head">
         <div>
-          <div class="eyebrow">Framework Comparison</div>
-          <h2>框架对比雷达图</h2>
+          <div class="eyebrow">Framework comparison draft</div>
+          <h2>框架对比现在只作为评分协议草稿</h2>
         </div>
       </div>
       <div class="score-table-wrap">
@@ -208,7 +203,7 @@ const starProjects = [
           </tbody>
         </table>
       </div>
-      <p style="margin-top: 12px; color: var(--muted);">启发式评分（1-5），基于 repo 信号和痛点分析。EvoAgentX 和 DGM/OpenEvolve 在 Self-Evolution Fit 上领先。</p>
+      <p style="margin-top: 12px; color: var(--muted);">这些 1-5 分仍是启发式草稿，基于 repo 信号和痛点分析；还缺少完整 rubric、打分人、反例和 reviewer disagreement，因此不能当学术排名引用。</p>
 
       <div class="grid" style="grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 24px;">
         {frameworkRadar.map((fw) => (
@@ -231,32 +226,18 @@ const starProjects = [
     </div>
   </section>
 
-  <!-- Star Project Propagation -->
+  <!-- Evidence-led Case Studies -->
   <section class="section">
     <div class="container">
       <div class="section-head">
         <div>
-          <div class="eyebrow">Star Projects</div>
-          <h2>10K+ Stars 自进化核心项目</h2>
+          <div class="eyebrow">Evidence-led case studies</div>
+          <h2>案例选择回到论文证据和评估协议，不看累计 Star。</h2>
         </div>
       </div>
-      <div class="grid" style="grid-template-columns: repeat(3, minmax(0, 1fr));">
-        {starProjects.map((p) => (
-          <article class="card" style="border-top: 3px solid #f39c12;">
-            <div class="card-title-row">
-              <div>
-                <h3>{p.name}</h3>
-                <p>{p.stars} stars</p>
-              </div>
-            </div>
-            <p><strong>进化维度：</strong>{p.dimension}</p>
-            <p><strong>方法：</strong>{p.method}</p>
-          </article>
-        ))}
-      </div>
-      <div class="card" style="margin-top: 20px;">
+      <div class="card">
         <h3>Research Visibility vs Adoption Signal</h3>
-        <p>自进化研究前沿（ADAS、DGM、Absolute Zero）不一定会同步反映在 GitHub Star 数中。这里是读者提示：Star 可作为 adoption prior，不能替代论文证据、可运行实现和评估协议。</p>
+        <p>自进化研究前沿（ADAS、DGM、Absolute Zero、Reflexion 等）不一定会同步反映在 GitHub Star 数中。这里的读者提示很简单：Star 只能作为 adoption prior，不能替代论文证据、可运行实现、评估协议和失败记录。</p>
         <div class="score-table-wrap" style="margin-top: 12px;">
           <table class="score-table">
             <thead>

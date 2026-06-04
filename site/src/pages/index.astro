@@ -1,8 +1,6 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import { featuredResearch } from '@/data/research';
-import { knowledgeGraphStats } from '@/data/knowledgeGraph';
-import { rankedProfiles } from '@/data/rankings';
 import { starQualityScores } from '@/data/starAnalysis';
 import { evolveAgiIndex, evolveAgiIndexSignals } from '@/data/evolveAgiIndex';
 import ValueLshGraph3D from '@/components/ValueLshGraph3D.astro';
@@ -159,7 +157,7 @@ const directionMap = [
     champion: 'DSPy',
     championScore: 6.15,
     evidence: '最广泛采用，编译式 prompt 优化',
-    runnerUp: 'OPRO (in ranking)',
+    runnerUp: 'OPRO',
     maturity: 'L2 Prompt Evo',
     paperCount: 10,
   },
@@ -217,6 +215,7 @@ const growthLabel: Record<string, string> = {
   steady: '稳定',
   suspicious: '可疑',
 };
+const stripScore = (value: string) => value.replace(/\s*\([^)]*\)/g, '');
 ---
 
 <BaseLayout alternateZh="/" alternateEn="/en/">
@@ -226,7 +225,7 @@ const growthLabel: Record<string, string> = {
       <div class="hero-copy">
         <div class="eyebrow">Self Evolve AI · 中文默认入口</div>
         <h1>AI Agent 自进化：到底改了什么、谁验证、能否留下来？</h1>
-        <p class="lead">这不是链接收藏，而是一张判断图：一个 agent 到底改了什么、由什么反馈选择、谁验证、能否保留，失败时能不能回滚。</p>
+        <p class="lead">这不是链接收藏，而是面向可审计改进系统的判断图：一个 agent 到底改了什么、由什么反馈选择、谁验证、能否保留，失败时能不能回滚。</p>
         <p class="english-note">English core summaries are available under /en/. The full evidence corpus remains Chinese-first while parity is being built.</p>
         <div class="hero-actions">
           <a class="button primary" href="/topics/self-evolving-ai-agents/">先看定义 / Start</a>
@@ -246,7 +245,7 @@ const growthLabel: Record<string, string> = {
         <ol>
           <li><span>1</span><strong>先给判断，不先给资料堆。</strong></li>
           <li><span>2</span><strong>每个判断都回到 paper、project report、benchmark 或 raw index。</strong></li>
-          <li><span>3</span><strong>中文默认入口保留，English summaries mirror the same evidence chain.</strong></li>
+          <li><span>3</span><strong>英文核心摘要可读；完整英文同证据链仍在推进。</strong></li>
           <li><span>4</span><strong>没有验证、保留和回滚的 claim 标成弱证据。</strong></li>
         </ol>
       </aside>
@@ -376,7 +375,7 @@ const growthLabel: Record<string, string> = {
           <a class="text-link" href="/star-analysis/">完整质量分析 →</a>
         </div>
       </div>
-      <p style="color: var(--muted); margin-bottom: 20px;">这个表只保留历史热度作为阅读线索，不做当前价值排名。严肃判断必须回到 evaluator、benchmark、retention、失败记录和项目报告。</p>
+      <p style="color: var(--muted); margin-bottom: 20px;">这个表只保留历史热度作为阅读线索，不负责判断当前质量。严肃判断必须回到 evaluator、benchmark、retention、失败记录和项目报告。</p>
       <div style="overflow-x: auto;">
         <table class="panorama-table">
           <thead>
@@ -464,7 +463,7 @@ const growthLabel: Record<string, string> = {
           <div class="eyebrow">Mechanism anchors</div>
           <h2>六类代表案例：看为什么值得研究，不看谁是冠军。</h2>
         </div>
-        <a class="text-link" href="/rank/">完整系统排名 →</a>
+        <a class="text-link" href="/rank/">系统证据队列 →</a>
       </div>
       <p style="color: var(--muted); margin-bottom: 20px;">这些不是最终排名。每类只给一个代表性证据锚点，帮助读者识别机制差异；严肃判断要回到论文、项目报告和原始 benchmark。</p>
 
@@ -485,7 +484,7 @@ const growthLabel: Record<string, string> = {
             </div>
 
             <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--muted);">
-              <span>对照: {d.runnerUp}</span>
+              <span>对照: {stripScore(d.runnerUp)}</span>
               <span>{d.maturity}</span>
             </div>
             <div class="pill-row" style="margin-top: 6px;">
@@ -599,12 +598,12 @@ const growthLabel: Record<string, string> = {
           <h3>2026 Star 增长</h3>
         </a>
         <a href="/rank/" class="card" style="text-decoration: none; color: inherit; text-align: center;">
-          <div style="font-size: 1.5rem;">🏆</div>
-          <h3>系统排名</h3>
+          <div style="font-size: 1.5rem;">▤</div>
+          <h3>研究队列</h3>
         </a>
         <a href="/value-lsh/" class="card" style="text-decoration: none; color: inherit; text-align: center;">
           <div style="font-size: 1.5rem;">▦</div>
-          <h3>价值分类图谱</h3>
+          <h3>证据分诊图谱</h3>
         </a>
         <a href="/survey/" class="card" style="text-decoration: none; color: inherit; text-align: center;">
           <div style="font-size: 1.5rem;">📋</div>

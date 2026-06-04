@@ -1,6 +1,6 @@
 # Self Evolve Master Index
 
-> Generated: 2026-06-04. Regenerate with `node scripts/generate_project_indexes.mjs`.
+> Generated: 2026-06-05. Regenerate with `node scripts/generate_project_indexes.mjs`.
 
 ## One Sentence
 

@@ -44,17 +44,17 @@ const items = [
   },
   {
     type: '入口',
-    title: '2026 GitHub Star 增长试点账本',
-    description: '把累计 Star 降为历史 adoption prior，用 2026 新增 Star、近 90 天增长和 coverage status 记录自进化项目当前动量。',
+    title: '2026 GitHub Star 抓取试点',
+    description: '验证 stargazer history 抓取覆盖；coverage 达标前不构成 2026 增长排名。',
     href: '/star-growth/',
     tags: ['GitHub star growth', '2026 new stars', '增长试点账本', 'coverage status', 'Evolve-AGI Index']
   },
   {
     type: '入口',
-    title: 'Value LSH 价值分类图谱',
-    description: '用 26 条可审计 value lines、LSH 近邻、3D projection 和 evidence repair queue 判断哪些素材值得先深挖。',
+    title: 'Value LSH 证据分诊',
+    description: '用 26 个判断问题把素材分成优先深读、需要复核、弱证据/风险三类；它不是最终价值裁判。',
     href: '/value-lsh/',
-    tags: ['Value LSH', '价值分类', 'evidence repair', 'value facet matrix', 'AI Agent clustering']
+    tags: ['Value LSH', '证据分诊', 'evidence repair', 'value facet matrix', 'AI Agent clustering']
   },
   {
     type: '入口',
@@ -86,15 +86,29 @@ const items = [
   }))
 ];
 const payload = JSON.stringify(items);
+const readerTasks = [
+  ['理解定义', '先判断一个系统到底算不算自进化。', '/topics/self-evolving-ai-agents/'],
+  ['比较项目', '按机制、证据和限制比较项目，而不是按 star。', '/projects/'],
+  ['查 benchmark', '看分数背后的 evaluator、失败候选和保留证据。', '/topics/code-evolution-benchmark/'],
+  ['查风险/失败', '先找 weak evidence、回滚、权限、成本和记忆污染。', '/search/?q=risk']
+];
 ---
 <BaseLayout title="Self Evolve 搜索 — AI 自我进化项目、论文与博客" description="搜索 Self Evolve 的自进化 AI 博客、研究笔记和项目 model card。">
   <section class="section">
     <div class="container">
       <div class="eyebrow">Search / 站内搜索</div>
-      <h1>搜索自进化 AI 证据链</h1>
-      <p class="lead">输入方法、论文、项目、benchmark 或问题，例如 Reflexion、AlphaEvolve、memory、SWE-Bench、评估器。</p>
+      <h1>先选任务，再搜索证据。</h1>
+      <p class="lead">搜索不是为了翻目录，而是为了回答一个判断问题：它算不算自进化、证据强不强、benchmark 能不能信、风险在哪里。</p>
+      <div class="search-task-grid" aria-label="reader search tasks">
+        {readerTasks.map(([title, body, href]) => (
+          <a class="card" href={href} style="text-decoration: none; color: inherit;">
+            <h3>{title}</h3>
+            <p>{body}</p>
+          </a>
+        ))}
+      </div>
       <div class="search-panel">
-        <input id="search-input" class="search-input" type="search" placeholder="搜索博客、研究、项目..." autocomplete="off" />
+        <input id="search-input" class="search-input" type="search" placeholder="输入项目、论文、benchmark 或风险词..." autocomplete="off" />
         <div id="search-count" class="eyebrow">准备搜索</div>
       </div>
       <div id="search-results" class="post-stack" aria-live="polite"></div>
@@ -137,6 +151,24 @@ const payload = JSON.stringify(items);
     gap: 12px;
     margin: 28px 0;
   }
+  .search-task-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 24px;
+  }
+  .search-task-grid .card {
+    padding: 16px;
+  }
+  .search-task-grid h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  .search-task-grid p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.5;
+  }
   .search-input {
     width: 100%;
     border: 1px solid var(--border);
@@ -150,5 +182,10 @@ const payload = JSON.stringify(items);
   .search-input:focus {
     outline: 2px solid var(--caret);
     outline-offset: 2px;
+  }
+  @media (max-width: 820px) {
+    .search-task-grid {
+      grid-template-columns: 1fr;
+    }
   }
 </style>
