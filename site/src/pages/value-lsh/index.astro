@@ -96,7 +96,7 @@ const jsonLd = {
   '@type': 'Dataset',
   name: 'Value LSH 3D Classification Graph',
   alternateName: 'AI 自进化素材价值 LSH 三维图谱',
-  description: 'A discrete value-facet LSH matrix and 3D embedding projection over GitHub projects, papers, social/X captures, and blog materials for Self Evolve.',
+  description: 'A heuristic value-facet LSH matrix and 3D embedding projection over GitHub projects, papers, social/X captures, and blog materials for Self Evolve triage.',
   url: `${site.url}/value-lsh/`,
   inLanguage: 'zh-CN',
   dateModified: valueSnapshot.generated_at,
@@ -108,7 +108,7 @@ const jsonLd = {
 
 <BaseLayout
   title="Value LSH 3D 价值图谱 — Self Evolve"
-  description="Self Evolve 的 Value LSH 3D 价值图谱：把 GitHub、论文、社交/X 和博客素材离散成 -1/0/+1 value facets，再用 LSH buckets 与 3D projection 展示高价值候选、待复核和修复队列。"
+  description="Self Evolve 的 Value LSH 3D 价值图谱：把 GitHub、论文、社交/X 和博客素材离散成 -1/0/+1 value facets，再用 LSH buckets 与 3D projection 形成高价值候选、待复核和修复队列。它是启发式 triage，不是最终价值裁判。"
   pageKeywords={['Value LSH', '3D embedding graph', 'AI 自进化价值分类', '局部敏感哈希', 'value facet matrix']}
 >
   <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} is:inline />
@@ -116,8 +116,9 @@ const jsonLd = {
   <section class="section value-lsh-hero">
     <div class="container">
       <div class="eyebrow">Value LSH · 3D Graph</div>
-      <h1>把 {materialCountLabel} 条素材放进同一个价值坐标系。</h1>
-      <p class="lead">每条素材先经过 26 条 value lines 的 `-1 / 0 / +1` 离散判别，再进入 LSH buckets、value clusters 和 3D projection；页面里的 `emb-xxx` 标签来自 value vector 上的 k-means 分组，不是 LSH bucket 编号，图上的点也不是热闹程度，而是当前证据链下的价值位置。</p>
+      <h1>把 {materialCountLabel} 条素材放进一个可复核的价值坐标系。</h1>
+      <p class="lead">每条素材先经过 26 条 value lines 的 `-1 / 0 / +1` 离散判别，再进入 LSH buckets、value clusters 和 3D projection；页面里的 `emb-xxx` 标签来自 value vector 上的 k-means 分组，不是 LSH bucket 编号，图上的点也不是热闹程度，而是当前证据链下的 triage 位置。</p>
+      <p class="value-lsh-caveat">Evidence boundary: Value LSH 是帮助读者决定“先深挖什么、先修复哪条证据链”的启发式队列；它不能替代论文精读、项目运行验证或人工学术审查。</p>
       <div class="value-lsh-actions">
         <a class="button primary" href={`${repoPath}/analysis/value-lsh-index.md`} target="_blank" rel="noopener">查看结果报告</a>
         <a class="button" href={`${repoPath}/data-engine/value-lsh-index`} target="_blank" rel="noopener">数据集目录</a>
@@ -340,6 +341,16 @@ const jsonLd = {
     flex-wrap: wrap;
     gap: 12px;
     margin-top: 26px;
+  }
+
+  .value-lsh-caveat {
+    max-width: 860px;
+    margin: 18px 0 0;
+    padding: 12px 14px;
+    border-left: 3px solid var(--caret-blue);
+    background: var(--surface-1);
+    color: var(--muted);
+    line-height: 1.65;
   }
 
   .value-lsh-graph-section {

@@ -4,9 +4,10 @@ Claude/Claude Code 在本仓库工作时，以 [AGENTS.md](AGENTS.md) 为最高�
 
 ## Priority
 
-1. 先以当前对话里的用户直接输入为准；本地私有用户输入记忆只能辅助判断，禁止提交或发布。
-2. 再读 [README.md](README.md)、[CONTENT_INDEX.md](CONTENT_INDEX.md)、[docs/project-management/project-structure.md](docs/project-management/project-structure.md)。
-3. 改动后刷新 [docs/indexes/master-index.md](docs/indexes/master-index.md)。
+1. 公开文案质量是最高指导：网页、README、README-EN、论文页、topic/blog/SEO 入口和 metadata 必须有逻辑、可读、可吸收、双语同证据链，并通过读者/编辑 agents 与学术 agents 双通道审查。
+2. 再以当前对话里的用户直接输入为准；本地私有用户输入记忆只能辅助判断，禁止提交或发布。
+3. 再读 [README.md](README.md)、[CONTENT_INDEX.md](CONTENT_INDEX.md)、[docs/project-management/project-structure.md](docs/project-management/project-structure.md)。
+4. 改动后刷新 [docs/indexes/master-index.md](docs/indexes/master-index.md)。
 
 ## User Input Privacy
 
@@ -23,6 +24,7 @@ Claude/Claude Code 在本仓库工作时，以 [AGENTS.md](AGENTS.md) 为最高�
 - 对项目卡，使用 model-card 类结构：任务、方法、证据、局限、适用场景、教学价值。
 - **图表优先**：当图表比文字更容易表达时，必须使用 Mermaid DAG、SVG 或数据可视化，不要只写文字。
 - **Mom Test**：README 和面向用户的内容必须让非专业人士能理解项目做什么、为什么重要。
+- **Public copy review gate**：所有公开文案，尤其网站、README、README-EN、SEO/topic/blog 页面和 metadata，发布前必须经过 `3-5` 个读者/编辑 agents 与 `3` 个学术 agents 审查。读者/编辑看可读性、Mom Test、行动路径、中英入口；学术 agents 看术语、证据链、claim 强度、限制和 `[UNVERIFIED]`。无法调度时必须在交付中写明风险，不能标记为质量已完成。
 - **证据链**：每个分析结论标注数据来源。无法追溯的标注 `[UNVERIFIED]`。
 - **中文调查同步**：`survey/` 是中文版调查，与 `paper-drafts/` 平行。修改一方时检查另一方是否需要同步。
 - **读者/Agent 边界**：README、网站首页、论文页、SEO 页面是给外部读者/消费者看的；不要把 agent 启动检查、内部构建命令、wiki ingest 流程、handoff 或自我系统说明塞进 README 主体。Agent 操作规则写在 `AGENTS.md`、`CLAUDE.md`、`CLOUD.md` 或 `docs/ops/`。
@@ -37,6 +39,7 @@ Claude 处理网页、样式、graph 或 i18n 时，必须先按 [AGENTS.md](AGE
 - 视觉要求：浅色 paper 背景、EB Garamond 标题、蓝色 caret、橙色 CTA、克制边框和 8px 左右圆角；不要改成深色炫技、玻璃拟态、营销大卡片或另一个 design system。
 - Graph 要求：保留 `/graph/` 的圆形 Knowledge graph、搜索/类型过滤和 AI Research Prompt 面板；不要用 `EvolutionNetwork.tsx` 这类首页 mockup 替代真实 graph。
 - i18n 要求：当前网页主语言是中文 `zh-CN`，中文导航、metadata、SEO copy 必须保留。新增英文或多语言时，不能牺牲中文入口和 canonical/alternate。
+- 文案质量要求：网页与 README 改动必须按 Public copy review gate 完成读者/编辑审查和学术审查，审查结果需要覆盖中文主叙事、英文镜像、证据入口、限制说明和读者下一步。
 - 验证要求：网页改动后至少执行 `(cd site && npm run build)`，并用桌面和约 390px 移动视口检查 `/` 与 `/graph/`，确认没有横向溢出、graph 非空、Prompt 面板可见。
 
 ## Persistence Baseline
@@ -194,7 +197,7 @@ node scripts/generate-wiki-index.mjs
 <!-- gitnexus:start -->
 # GitNexus — Code Intelligence
 
-This project is indexed by GitNexus as **awesome-evolution-workspace-cleanup** (27533 symbols, 32242 relationships, 163 execution flows). Use the GitNexus MCP tools to understand code, assess impact, and navigate safely.
+This project is indexed by GitNexus as **awesome-evolution-workspace-cleanup** (28052 symbols, 32923 relationships, 169 execution flows). Use the GitNexus MCP tools to understand code, assess impact, and navigate safely.
 
 > If any GitNexus tool warns the index is stale, run `npx gitnexus analyze` in terminal first.
 

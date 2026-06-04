@@ -1,0 +1,61 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+
+const gates = [
+  ['Mutable object', 'Prompt, memory, tool policy, workflow, code, curriculum, weights, or population can change.', 'One-off reasoning inside a fixed workflow.'],
+  ['Feedback signal', 'The change is driven by benchmark, environment, user, test, verifier, or execution feedback.', 'The same model simply says it improved.'],
+  ['Candidate generation', 'The system participates in proposing candidate changes.', 'Humans rewrite the system offline while the agent only uses the result.'],
+  ['Independent verification', 'A test, hidden task, environment, or independent judge checks the candidate.', 'The proposer also approves the change with no outside check.'],
+  ['Retention', 'Approved changes affect later runs through memory, code, archive, weights, or configuration.', 'Nothing reusable survives the session.'],
+  ['Audit and rollback', 'Lineage, rejected candidates, costs, or rollback boundaries are visible.', 'Only a final score is reported.'],
+];
+---
+
+<BaseLayout
+  pageLang="en"
+  alternateZh="/topics/self-evolving-ai-agents/"
+  alternateEn="/en/topics/self-evolving-ai-agents/"
+  title="What Counts as a Self-Evolving AI Agent?"
+  description="English definition checklist for self-evolving AI agents: mutable object, feedback, candidate generation, verification, retention, audit, and rollback."
+>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <div class="eyebrow">Definition</div>
+        <h1>What counts as a self-evolving AI agent?</h1>
+        <p class="lead">Under this survey, strict self-evolution means feedback-driven retained change. A system must show what changed, why it changed, who verified it, and how the change survives or rolls back.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#checklist">Checklist</a>
+          <a class="button" href="/en/topics/five-evolution-loops/">Five loops</a>
+          <a class="text-link" href="/topics/self-evolving-ai-agents/">中文定义页</a>
+        </div>
+      </div>
+      <aside class="hero-evidence">
+        <div class="eyebrow">Boundary</div>
+        <p><strong>Self-evolution is not a synonym for “smart agent.”</strong></p>
+        <p>Offline retraining or ordinary RLHF is adjacent unless the agentic system participates in candidate generation, validation, retention, and audit.</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section" id="checklist" style="background: var(--surface-1);">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Strict survey gate</div>
+          <h2>Six checks before calling a system self-evolving.</h2>
+        </div>
+      </div>
+      <div class="score-table-wrap">
+        <table class="score-table">
+          <thead><tr><th>Gate</th><th>Passes when</th><th>Common failure</th></tr></thead>
+          <tbody>
+            {gates.map(([gate, pass, fail]) => (
+              <tr><td><strong>{gate}</strong></td><td>{pass}</td><td>{fail}</td></tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

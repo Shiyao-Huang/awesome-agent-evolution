@@ -1,0 +1,53 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+
+const modes = [
+  ['Self-modifying coding agent', 'Agent code, tool policy, patch loop, or review logic changes.', 'DGM, SICA, A-Evolve', 'Examples are not uniformly reported by every system; inspect per-system reports.'],
+  ['Algorithm discovery', 'Candidate programs, kernels, heuristics, or optimization code change.', 'AlphaEvolve, FunSearch, OpenEvolve', 'Strong only when executable evaluators reject invalid programs.'],
+  ['Agent architecture search', 'Agent topology, control flow, or Python-coded design changes.', 'ADAS, Agent Symbolic Learning', 'Transfer and safety gaps matter more than one public score.'],
+  ['Prompt/program optimizer', 'Prompt, symbolic module, or optimizer state changes.', 'OPRO, DSPy, GEPA', 'Can overfit validation sets or judges.'],
+  ['Reflection and repair loop', 'Failures become reusable critiques, tests, memories, or retry strategies.', 'Reflexion, ReVeal, EvoMAC', 'False tests and memory pollution are the first risks to inspect.'],
+];
+---
+
+<BaseLayout
+  pageLang="en"
+  alternateZh="/topics/code-evolution-benchmark/"
+  alternateEn="/en/topics/code-evolution-benchmark/"
+  title="Code Evolution Benchmark Matrix"
+  description="English evidence guide for code self-improvement and algorithm discovery claims across DGM, AlphaEvolve, ADAS, GEPA, DSPy, and related systems."
+>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <div class="eyebrow">Evidence</div>
+        <h1>Code evolution claims are not one ranking.</h1>
+        <p class="lead">Separate the mutable object before comparing scores: an agent modifying itself, an algorithm-discovery system, and a prompt optimizer provide different kinds of evidence.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#matrix">Matrix</a>
+          <a class="button" href="/en/topics/five-evolution-loops/">Five loops</a>
+          <a class="text-link" href="/topics/code-evolution-benchmark/">中文矩阵页</a>
+        </div>
+      </div>
+      <aside class="hero-evidence">
+        <div class="eyebrow">Rule</div>
+        <p>Benchmark gains count only with evaluator details, transfer or hidden-test checks, retained artifacts, and failure modes.</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section" id="matrix" style="background: var(--surface-1);">
+    <div class="container">
+      <div class="score-table-wrap">
+        <table class="score-table">
+          <thead><tr><th>Mode</th><th>Mutable object</th><th>Examples</th><th>Boundary</th></tr></thead>
+          <tbody>
+            {modes.map(([mode, object, examples, boundary]) => (
+              <tr><td><strong>{mode}</strong></td><td>{object}</td><td>{examples}</td><td>{boundary}</td></tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

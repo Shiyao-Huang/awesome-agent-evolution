@@ -37,15 +37,15 @@ const trendEnd = evolveAgiTrend[evolveAgiTrend.length - 1]?.date ?? '';
 ---
 
 <BaseLayout
-  title="Evolve-AGI Index 自进化系数 — Self Evolve"
-  description="Evolve-AGI Index 自进化系数：用 AGI Index 风格追踪 AI Agent 自进化领域的 benchmark 表现、闭环成熟度、证据链、迁移验证、可运行性、动量和治理成熟度。"
+  title="Evolve-AGI Index 证据加权成熟度估计 — Self Evolve"
+  description="Evolve-AGI Index 是版本化、证据加权的 AI Agent 自进化领域成熟度估计，追踪 benchmark 表现、闭环强度、证据链、迁移验证、可运行性、动量和治理准备度。"
   pageKeywords={['Evolve-AGI Index', '自进化系数', 'AI Agent 自进化', 'Self Evolve rank']}
 >
   <section class="section evolve-hero">
     <div class="container evolve-hero-grid">
       <div>
         <div class="eyebrow">Evolve-AGI Index</div>
-        <h1>自进化系数</h1>
+        <h1>证据加权的自进化成熟度估计</h1>
         <p class="lead">{evolveAgiIndex.oneSentence}</p>
         <div class="hero-actions">
           {evolveAgiIndex.evidenceLinks.map((link) => (
@@ -61,10 +61,11 @@ const trendEnd = evolveAgiTrend[evolveAgiTrend.length - 1]?.date ?? '';
         </div>
       </div>
       <aside class="eai-score-panel" aria-label="Evolve-AGI Index current score">
-        <div class="eai-score-label">Field coefficient</div>
+        <div class="eai-score-label">2026-06-02 snapshot</div>
         <div class="eai-score-value">{evolveAgiIndex.score}</div>
         <div class="eai-score-grade">Grade {evolveAgiIndex.grade}</div>
         <p>{evolveAgiIndex.thesis}</p>
+        <p style="margin-top: 10px; color: var(--muted);">Weights are editorial/proposed survey weights, not externally validated field consensus. Recompute before treating this as latest repository coverage.</p>
       </aside>
     </div>
   </section>

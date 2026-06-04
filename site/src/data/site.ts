@@ -4,9 +4,9 @@ const configuredSiteUrl = import.meta.env.PUBLIC_SITE_URL || defaultSiteUrl;
 export const site = {
   name: 'Self Evolve',
   url: configuredSiteUrl.replace(/\/$/, ''),
-  title: 'Self Evolve AI — AI 自我进化研究、项目与实践指南',
+  title: 'Self Evolve AI — Self-Evolving Agents Survey / AI 自进化证据地图',
   description:
-    'Self Evolve 是面向 AI 自我进化、自进化智能体、代码自我改进、迭代式优化与自主 AI 系统的中文研究与项目索引。',
+    'Self Evolve is a bilingual evidence map for self-evolving AI agents: definitions, papers, projects, benchmarks, star growth, value classification, and audit boundaries. 中文默认入口保留同一证据链。',
   keywords: [
     'Self Evolve AI',
     'AI Self Evolution',
@@ -32,15 +32,14 @@ export const site = {
 
 export const nav = [
   { href: '/#about', label: '关于' },
+  { href: '/topics/', label: 'Start' },
   { href: '/projects/', label: '项目' },
-  { href: '/research/', label: '研究' },
+  { href: '/research/', label: 'Research' },
   { href: '/survey/', label: 'Survey' },
-  { href: '/topics/', label: '主题' },
-  { href: '/paper/', label: '论文' },
-  { href: '/graph/', label: '图谱' },
+  { href: '/paper/', label: 'Paper' },
+  { href: '/graph/', label: 'Graph' },
   { href: '/blog/', label: '博客' },
   { href: '/search/', label: '搜索' },
-  { href: '/github/', label: 'GitHub' },
-  { href: '/star-growth/', label: '增长' },
-  { href: '/#community', label: '社区' }
+  { href: '/star-growth/', label: 'Growth' },
+  { href: '/value-lsh/', label: 'Value LSH' }
 ];

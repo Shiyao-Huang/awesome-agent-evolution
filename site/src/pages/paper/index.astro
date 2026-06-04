@@ -48,7 +48,7 @@ const frameworkRadar = [
 const coverage = [
   { dataset: 'Papers', current: 196, coverage: 196 },
   { dataset: 'Reviews', current: 137, coverage: 156 },
-  { dataset: 'Repos', current: 486, coverage: 103 },
+  { dataset: 'Repos', current: 677, coverage: 283 },
   { dataset: 'Blog Files', current: 1308, coverage: 100 },
   { dataset: 'Social JSON', current: 613, coverage: 204 },
   { dataset: 'Pain Points', current: 97, coverage: 100 },
@@ -70,12 +70,12 @@ const starProjects = [
     <div class="container">
       <div class="eyebrow">Paper / 论文</div>
       <h1 class="gradient-text">Self-Evolving AI 综述论文</h1>
-      <p class="lead">论文追踪 AI Self-Evolution 的完整研究图谱：从推理时自改进到代码自进化，覆盖 196 篇论文、486 个 GitHub 仓库和 97 个用户痛点。</p>
+      <p class="lead">论文追踪 AI Self-Evolution 的研究图谱：从推理时自改进到代码自进化，连接 196 篇 survey-display papers、677 个 raw GitHub captures、283 个 analyzed project/model-card reports 和 97 个 public pain-point signals。</p>
       <div class="metrics">
         <div class="metric"><strong>196</strong><span>篇论文覆盖</span></div>
-        <div class="metric"><strong>486</strong><span>个 GitHub 仓库</span></div>
+        <div class="metric"><strong>677</strong><span>个 raw GitHub captures</span></div>
         <div class="metric"><strong>97</strong><span>个用户痛点</span></div>
-        <div class="metric"><strong>9</strong><span>章 + 附录</span></div>
+        <div class="metric"><strong>8</strong><span>章 + 附录</span></div>
       </div>
     </div>
   </section>
@@ -255,18 +255,18 @@ const starProjects = [
         ))}
       </div>
       <div class="card" style="margin-top: 20px;">
-        <h3>Research-to-Star Gap</h3>
-        <p>自进化研究前沿（ADAS、DGM、Absolute Zero）尚未反映在社区 Star 数中。10K+ Star 项目代表的是应用层进化，而非核心进化机制。</p>
+        <h3>Research Visibility vs Adoption Signal</h3>
+        <p>自进化研究前沿（ADAS、DGM、Absolute Zero）不一定会同步反映在 GitHub Star 数中。这里是读者提示：Star 可作为 adoption prior，不能替代论文证据、可运行实现和评估协议。</p>
         <div class="score-table-wrap" style="margin-top: 12px;">
           <table class="score-table">
             <thead>
-              <tr><th>Research Method</th><th>Paper Impact</th><th>GitHub Stars</th><th>Star Gap Factor</th></tr>
+              <tr><th>Research Method</th><th>Paper Signal</th><th>GitHub Signal</th><th>Reader Interpretation</th></tr>
             </thead>
             <tbody>
-              <tr><td>Architecture Search (ADAS)</td><td>ICML 2024</td><td>1,400</td><td>80x vs avg skill repo</td></tr>
-              <tr><td>Godel Machine (DGM)</td><td>arXiv 2025</td><td>800</td><td>175x vs avg skill repo</td></tr>
-              <tr><td>Self-Play Reward (Absolute Zero)</td><td>arXiv 2025</td><td>&lt;1,000</td><td>140x vs avg skill repo</td></tr>
-              <tr><td>Reflection (Reflexion)</td><td>NeurIPS 2023</td><td>paper-code</td><td>Academic code only</td></tr>
+              <tr><td>Architecture Search (ADAS)</td><td>ICML 2024</td><td>repository dependent</td><td>Check method evidence before adoption signal.</td></tr>
+              <tr><td>Godel Machine (DGM)</td><td>arXiv 2025</td><td>repository dependent</td><td>Inspect retained changes, evaluator, and rollback evidence.</td></tr>
+              <tr><td>Self-Play Reward (Absolute Zero)</td><td>arXiv 2025</td><td>repository dependent</td><td>Do not infer maturity from stars alone.</td></tr>
+              <tr><td>Reflection (Reflexion)</td><td>NeurIPS 2023</td><td>paper/code ecosystem</td><td>Separate research influence from production readiness.</td></tr>
             </tbody>
           </table>
         </div>

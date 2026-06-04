@@ -22,9 +22,9 @@ export interface TopicCluster {
 
 export const topicMapStats = {
   clusters: 10,
-  rawGithubCaptures: 646,
-  strictEvolutionRepos: 93,
-  broadEvolutionRepos: 200,
+  rawGithubCaptures: 677,
+  strictEvolutionRepos: 99,
+  broadEvolutionRepos: 204,
   publicReports: projectReports.length,
   surveyPapers: surveyStats.papers,
   painPoints: surveyStats.painPoints,
@@ -35,7 +35,7 @@ export const topicClusters: TopicCluster[] = [
   {
     id: 'definition',
     rank: 1,
-    title: '什么才算真正的自进化智能体',
+    title: '什么才算严格意义上的自进化智能体',
     titleEn: 'What counts as a self-evolving AI agent',
     readerQuestion: '这个系统真的在改进自己，还是只是一个固定 workflow?',
     surveyRole: 'Survey 的定义入口：可变对象、反馈信号、评估器、保留机制和回滚路径。',
@@ -193,9 +193,9 @@ export const topicClusters: TopicCluster[] = [
     title: '资料库覆盖与证据链复查',
     titleEn: 'Resource coverage and evidence traceability',
     readerQuestion: '这个资料库到底收了什么、分析了什么、哪些能公开阅读?',
-    surveyRole: '把 raw、processed、work、results 的口径分开，防止 survey 和 SEO 夸大覆盖。',
+    surveyRole: '把 raw、processed、work、results 的口径分开，防止公开叙事夸大覆盖。',
     seoIntent: 'resource library / trust page',
-    evidence: 'Coverage audit 和 public resource library page 已解释 646 raw captures、239 analyzed records、441 public reports、239 site records、196 survey papers 等计数边界。',
+    evidence: 'Coverage audit 和 public resource library page 已解释 677 raw GitHub captures、283 analyzed project/model-card reports、483 public project reports、196 survey-display papers 等当前计数边界。',
     seedQueries: ['self-evolving AI agents resource library', 'AI self evolution GitHub projects', 'AI agent survey project reports'],
     evidenceLinks: [
       { label: 'Resource library', href: '/resource-library/' },

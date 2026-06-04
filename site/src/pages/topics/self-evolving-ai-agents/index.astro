@@ -31,7 +31,7 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Article',
   headline: 'What Counts as a Self-Evolving AI Agent?',
-  name: '什么才算真正的自进化智能体',
+  name: '什么才算严格意义上的自进化智能体 / What Counts as a Self-Evolving AI Agent',
   description: 'A consumer-facing definition and checklist for self-evolving AI agents: mutable objects, feedback, candidate generation, verification, retention, audit, and rollback.',
   url: `${site.url}/topics/self-evolving-ai-agents/`,
   inLanguage: 'zh-CN',
@@ -46,8 +46,10 @@ const jsonLd = {
 ---
 
 <BaseLayout
-  title="什么才算自进化 AI Agent — 定义、边界、判断表与 Evolve-AGI Index"
-  description="判断一个 AI Agent 是否真的自进化：看它改了什么、反馈来自哪里、谁验证、如何保留、能否审计和回滚。"
+  alternateZh="/topics/self-evolving-ai-agents/"
+  alternateEn="/en/topics/self-evolving-ai-agents/"
+  title="什么才算自进化 AI Agent — What counts as a self-evolving agent"
+  description="双语定义页：判断一个 AI Agent 是否真的自进化，看它改了什么、反馈来自哪里、谁验证、如何保留、能否审计和回滚。"
   pageKeywords={['什么是自进化 AI Agent', 'Self-Evolving AI Agents definition', 'AI 自进化定义', 'AI Agent 自我改进', 'Evolve-AGI Index']}
 >
   <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} is:inline />
@@ -124,10 +126,11 @@ const jsonLd = {
       <div class="container hero-grid">
         <div class="hero-copy">
           <div class="eyebrow">Definition / Survey Rank 1</div>
-          <h1>什么才算真正的自进化 AI Agent?</h1>
-          <p class="lead">不要先看项目名、star 或 demo。先问它是否在反馈中修改自己的运行机制，并且能验证、保留、审计或回滚这些修改。</p>
+          <h1>什么才算严格意义上的自进化 AI Agent?</h1>
+          <p class="lead">不要先看项目名、star 或 demo。Ask the operational question first: what part of the agent changes, what feedback selects the change, who verifies it, and does the change survive into the next run?</p>
           <div class="hero-actions">
             <a class="button primary" href="#checklist">判断表</a>
+            <a class="button" href="/en/topics/self-evolving-ai-agents/">English</a>
             <a class="button" href="/topics/">主题地图</a>
             <a class="button" href="/evolve-agi-index/">Evolve-AGI Index</a>
             <a class="text-link" href="/survey/">Survey</a>
@@ -142,7 +145,8 @@ const jsonLd = {
         </div>
         <aside class="hero-evidence" aria-label="Definition summary">
           <div class="eyebrow">One sentence</div>
-          <p><strong>自进化不是“更聪明”的形容词，而是一个受控改进过程。</strong></p>
+          <p><strong>在本 Survey 中，严格自进化不是“更聪明”的形容词，而是一个受控改进过程。</strong></p>
+          <p>Self-evolution is not a marketing adjective. It is a controlled improvement loop with evidence, retention, and rollback.</p>
           <ol>
             <li><span>Object</span><strong>改了什么?</strong></li>
             <li><span>Signal</span><strong>为什么改?</strong></li>
@@ -162,7 +166,7 @@ const jsonLd = {
           </div>
         </div>
         <article class="card">
-          <p style="font-size: 1.18rem; color: var(--fg); line-height: 1.75;">一个 self-evolving AI agent 是这样的系统：它把任务执行、失败、用户反馈、benchmark 或环境信号转成候选改动，并把通过验证的改动保留到 prompt、memory、tool policy、workflow、code、curriculum、weights 或 population 中，影响后续行为。</p>
+          <p style="font-size: 1.18rem; color: var(--fg); line-height: 1.75;">在本 Survey 的严格口径下，一个 self-evolving AI agent 是这样的系统：它把任务执行、失败、用户反馈、benchmark 或环境信号转成候选改动，并把通过验证的改动保留到 prompt、memory、tool policy、workflow、code、curriculum、weights 或 population 中，影响后续行为。</p>
           <p class="definition-note">这一定义来自论文主线和 README 的共同判断：self-evolution 要被评估为 controlled systems process，而不是 demo 标签或项目营销词。</p>
         </article>
       </div>
@@ -212,6 +216,11 @@ const jsonLd = {
               <p>{boundary}</p>
             </article>
           ))}
+          <article class="card">
+            <div class="eyebrow">相邻但不自动算入</div>
+            <h3>普通离线训练 / RLHF / RLAIF</h3>
+            <p>权重更新只有在 agentic system 参与候选生成、验证、保留和审计时才进入严格自进化口径；普通离线微调、固定 online-learning rule 或 RLHF/RLAIF 更适合标成相邻训练方法。</p>
+          </article>
         </div>
       </div>
     </section>
@@ -274,7 +283,7 @@ const jsonLd = {
           <a class="card" href="/benchmark/" style="text-decoration: none; color: inherit;">
             <div class="eyebrow">Evidence</div>
             <h3>继续看 benchmark 与评估</h3>
-            <p>真正的自进化必须接受测试、迁移、成本和回归检查。</p>
+            <p>严格自进化声明需要接受测试、迁移、成本和回归检查。</p>
           </a>
           <a class="card" href="/resource-library/" style="text-decoration: none; color: inherit;">
             <div class="eyebrow">Trace</div>

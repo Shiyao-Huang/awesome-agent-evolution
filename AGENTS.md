@@ -32,8 +32,10 @@
 
 ## Writing Rules
 
+- **L0 Highest guidance — public copy quality first**: 用户已明确指出，公开文案质量是最高指导。网站、README、README-EN、论文页、topic/blog/SEO 入口和 metadata 不能只是“造了一堆网页”；它们必须有清晰逻辑、可读、可吸收、接近高质量知识型/Hacker News 级别文案，并且中英双语面向全球读者表达同一条证据链。公开页面数量、SEO 覆盖、视觉效果、内部 workflow 都低于这个指导。
 - **Visualization first**: 当图表比文字更容易表达时，必须使用图表（Mermaid DAG、SVG、数据流图）。不要只写文字。
 - **Mom Test usability**: README 和面向用户的内容必须通过 "Mom Test"——一个非专业人士能否理解这个项目做什么、为什么重要？
+- **Public copy review gate**: 所有公开文案，尤其是网页、README、README-EN、SEO/topic/blog 页面和站点 metadata，发布前必须经过 `3-5` 个读者/编辑 agents 与 `3` 个学术 agents 的审查。读者/编辑审查关注 Mom Test、可读性、行动路径、中文默认入口和英文镜像；学术审查关注术语准确性、证据链、claim 强度、限制和 `[UNVERIFIED]` 标注。无法实际调度 agents 时，必须在交付说明中明确这是缺口，不能把该文案标记为质量已完成。
 - **Evidence chain**: 每个分析结论必须可追溯到 raw 数据源。如果无法追溯，标注 `[UNVERIFIED]`。
 - **Layered output**: 判断用 1 句话，证据用 3 句话，完整论证用 5+ 句话。
 - **Audience boundary**: README、网站首页、论文页和 SEO 内容是给外部读者/消费者看的，不是 agent 操作手册。不要把启动检查、内部构建命令、agent wiki 流程、handoff 规则或自我系统说明写进 README 主体；这些规则进入 `AGENTS.md`、`CLAUDE.md`、`CLOUD.md` 或 `docs/ops/`。
@@ -59,6 +61,7 @@
 - **默认语言**：公开网站默认入口、导航、首页叙事和 metadata 保持中文 `zh-CN`；英文内容必须作为镜像或辅助入口存在，不能把中文入口替换成英文。
 - **同证据链**：`README.md` / `README-EN.md`、网站首页、论文页、topic/SEO 页、blog/research/project 入口、`site/src/data/site.ts` metadata 必须表达同一组核心判断、证据入口和限制；英文可以本地化表达，但不能增加无来源承诺或删掉关键证据边界。
 - **新增页面规则**：任何新增或大改的 public-facing 页面，必须同时检查中文 copy、英文入口/摘要、SEO title/description、canonical URL、alternate/hreflang 和站内互链；暂不能完成英文镜像时，必须在 `docs/ops/CLOUD.md` 的发布风险或相关索引中记录缺口，不得静默发布为“已完成 i18n”。
+- **文案审查规则**：网站、README、论文页、topic/SEO/blog 入口或 metadata 的新增/大改，必须同时通过 Public copy review gate；审查结论要覆盖中文默认入口、英文镜像是否同证据链、是否有读者能理解的一句话/三句话/五句话表达。
 - **内部/外部分离**：双语页面仍然面向读者，不写 agent 启动检查、handoff、构建命令或内部 workflow；这些内容只进入 `AGENTS.md`、`CLAUDE.md`、`CLOUD.md`、`docs/ops/` 和 wiki。
 - **发布验证**：网页或 metadata 的 i18n 改动至少执行 `node scripts/generate_project_indexes.mjs` 和 `(cd site && npm run build)`；发布前用 `rg -n "TODO i18n|EN-PENDING|未翻译|待翻译|TODO: translate" README.md README-EN.md site/src docs/seo` 检查双语缺口，并汇报结果。
 
@@ -77,16 +80,17 @@
 
 | Rank | User Requirement | Operational Meaning |
 |---:|---|---|
-| 1 | `用户的输入非常精确，并不是team的输入。` | 目标来源只认用户直接输入；team/subagent/tool 输出只能作证据，不能改写目标。 |
-| 2 | `它需要有raw的素材...需要加工成论文...需要有网站...为博客及SEO准备。` | raw、论文、网站、SEO 是同一条交付链，缺一不可。 |
-| 3 | `所有的项目都有深度分析，都有model card类似这样子的教学使用的东西。` | 项目页和报告要能教学，不能只给链接和浅摘要。 |
-| 4 | `GitHub的项目原始收集的有哪些？进行分析的有哪些？进化相关的有哪些？按时间顺序发布的有哪些？` | 论文和分析必须回答 raw collection、analyzed subset、evolution-related subset、timeline 四件事。 |
-| 5 | `raw归raw 加工后的归加工的 、work 产物归work 、结果输出归结果、、全部都要索引化 覆盖` | 任何文件新增或移动都要归层，并刷新索引。 |
-| 6 | `用户的输入你得提取出来，然后作为Agent和Claude里边的参考。` | AGENTS/CLAUDE 必须链接并使用 [docs/project-management/user-direct-inputs.md](docs/project-management/user-direct-inputs.md)。 |
-| 7 | `找回昨天的那个版本，尤其是在graph的这个上修改的内容。注意 i18N 网页 15:00` | 网站风格和 graph 以 2026-05-25 15:05 附近版本为基准；任何 style/graph/i18n 改动必须先对照历史。 |
-| 8 | `持久建议放入 agent claude ，md` | 用户要求保留的恢复规则必须写入 AGENTS/CLAUDE，并在 reset 前先保存补丁或 checkpoint。 |
-| 9 | `Star没有意义，因为他只是一个历史累计的过程...2026年的这个项目是不是在当前阶段...形成一个数据库...data可以放到HF上` | GitHub 项目排名必须优先看 2026 新增 Star、recent velocity、覆盖完整性和证据质量；累计 Star 只能作为历史 adoption prior。 |
-| 10 | `核心完成 i18N !!! ... 写到Agents和Cloud的MD当中 ... 约束的双语支持。` | i18n 是 public site/README/SEO/metadata 的硬发布门禁；AGENTS 和 CLOUD 必须约束中文默认入口、英文镜像、canonical/alternate、SEO 和验证。 |
+| 1 | `所有的文案都经过3-5个 读者以及 编辑 agents 进行审查 + 3个学术agents 进行审查 保证质量` / `尤其网页` / `readme` / `现在里面有个非常严重的问题...这些网页有逻辑吗?可读吗?...并非高质量的...Hacker News这样子的高质量的文案...必须是双语的...` / `这条就是最高的一个指导` | 公开文案质量是最高指导：网站和 README 必须有逻辑、可读、可吸收、双语同证据链；未经过读者/编辑与学术双通道审查，不得宣称 public copy 已完成。 |
+| 2 | `用户的输入非常精确，并不是team的输入。` | 目标来源只认用户直接输入；team/subagent/tool 输出只能作证据，不能改写目标。 |
+| 3 | `它需要有raw的素材...需要加工成论文...需要有网站...为博客及SEO准备。` | raw、论文、网站、SEO 是同一条交付链，缺一不可，但公开页面必须服从最高文案质量指导。 |
+| 4 | `所有的项目都有深度分析，都有model card类似这样子的教学使用的东西。` | 项目页和报告要能教学，不能只给链接和浅摘要。 |
+| 5 | `GitHub的项目原始收集的有哪些？进行分析的有哪些？进化相关的有哪些？按时间顺序发布的有哪些？` | 论文和分析必须回答 raw collection、analyzed subset、evolution-related subset、timeline 四件事。 |
+| 6 | `raw归raw 加工后的归加工的 、work 产物归work 、结果输出归结果、、全部都要索引化 覆盖` | 任何文件新增或移动都要归层，并刷新索引。 |
+| 7 | `用户的输入你得提取出来，然后作为Agent和Claude里边的参考。` | AGENTS/CLAUDE 必须链接并使用 [docs/project-management/user-direct-inputs.md](docs/project-management/user-direct-inputs.md)。 |
+| 8 | `找回昨天的那个版本，尤其是在graph的这个上修改的内容。注意 i18N 网页 15:00` | 网站风格和 graph 以 2026-05-25 15:05 附近版本为基准；任何 style/graph/i18n 改动必须先对照历史。 |
+| 9 | `持久建议放入 agent claude ，md` | 用户要求保留的恢复规则必须写入 AGENTS/CLAUDE，并在 reset 前先保存补丁或 checkpoint。 |
+| 10 | `Star没有意义，因为他只是一个历史累计的过程...2026年的这个项目是不是在当前阶段...形成一个数据库...data可以放到HF上` | GitHub 项目排名必须优先看 2026 新增 Star、recent velocity、覆盖完整性和证据质量；累计 Star 只能作为历史 adoption prior。 |
+| 11 | `核心完成 i18N !!! ... 写到Agents和Cloud的MD当中 ... 约束的双语支持。` | i18n 是 public site/README/SEO/metadata 的硬发布门禁；AGENTS 和 CLOUD 必须约束中文默认入口、英文镜像、canonical/alternate、SEO 和验证。 |
 
 开始工作前自问三句：
 
@@ -95,6 +99,7 @@
 3. 完成后要更新哪个索引、论文、网站或结果文件？
 4. 如果涉及 GitHub 项目排名，是否已经区分累计 Star 与 2026/new-star growth，并标注 star-history 覆盖状态？
 5. 如果涉及公开网站、README、SEO、论文页或 metadata，是否同步检查了中文默认入口、英文镜像、canonical/alternate 和双语缺口？
+6. 如果涉及公开文案，它是否服从最高指导：有逻辑、可读、可吸收、双语同证据链，并完成 `3-5` 个读者/编辑 agents + `3` 个学术 agents 审查，或明确记录未完成审查的发布风险？
 
 研究任务开始前额外检查 wiki：
 
@@ -263,7 +268,7 @@ rg -n "old/path/or/file" -g '!*node_modules*' -g '!site/dist/**'
 <!-- gitnexus:start -->
 # GitNexus — Code Intelligence
 
-This project is indexed by GitNexus as **awesome-evolution-workspace-cleanup** (27533 symbols, 32242 relationships, 163 execution flows). Use the GitNexus MCP tools to understand code, assess impact, and navigate safely.
+This project is indexed by GitNexus as **awesome-evolution-workspace-cleanup** (28052 symbols, 32923 relationships, 169 execution flows). Use the GitNexus MCP tools to understand code, assess impact, and navigate safely.
 
 > If any GitNexus tool warns the index is stale, run `npx gitnexus analyze` in terminal first.
 

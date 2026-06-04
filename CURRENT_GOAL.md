@@ -1,6 +1,6 @@
 # Current Goal From Direct User Inputs
 
-Last updated: 2026-06-01
+Last updated: 2026-06-04
 
 ## Precision Rule
 
@@ -16,6 +16,10 @@ Excluded as target sources:
 - project-log echoes of prior messages
 
 Inference is allowed only after the exact direct user inputs are separated first.
+
+## Highest Guidance
+
+公开文案质量是当前最高指导：网站、README、README-EN、论文页、topic/blog/SEO 入口和 metadata 必须有逻辑、可读、可吸收、知识型高质量，并保持中英双语同证据链。所有公开文案，尤其网页和 README，必须经过 `3-5` 个读者/编辑 agents 与 `3` 个学术 agents 审查；页面数量、SEO 覆盖、视觉效果和内部 workflow 都不能压过这个要求。
 
 ## One-Sentence Compression
 
@@ -51,6 +55,7 @@ Inference is allowed only after the exact direct user inputs are separated first
 - 把 GitHub 项目价值排序从“累计 Star”升级到“2026 新增 Star / 当前增长 / 覆盖完整性”的历史数据挖掘数据库；累计 Star 只作为历史 adoption prior，star-history 数据要能沉淀为 Hugging Face dataset。
 - 核心完成 i18n：把网站、README、SEO 页面、论文页、项目入口和 metadata 的双语支持写成 AGENTS/CLOUD 级别的硬约束。
 - 建立新的 value-facet 分类体系：用离散 LSH 把所有 GitHub、paper、X/social、blog 素材按 `-1/0/+1` 价值维度遍历比较，并用 Mom Test 访谈、机制分类、语言/embedding/gbrain、PCA/TSNE/3D graph 作为可迭代的 facet 和聚类来源。
+- 公开文案质量门禁：所有文案，尤其网页和 README，必须经过 `3-5` 个读者/编辑 agents 与 `3` 个学术 agents 审查；未完成审查或未记录风险时不能宣称质量完成。
 
 ## High-Priority Threads
 
@@ -64,6 +69,7 @@ Inference is allowed only after the exact direct user inputs are separated first
 - GitHub star-history growth：为所有 GitHub project 建立 stargazer history / monthly growth 数据库，优先跑 strict evolution 和 frontier queue，输出 2026 new-star rank、recent velocity、coverage status，并准备 Hugging Face 发布。
 - Value LSH classification：把“谁好/谁坏/谁有价值/谁没有价值”从主观 ranking 变成可复跑 value matrix；facet 来源包括 Mom Test 访谈关注度、机制分类、证据链、语言信号、OpenAI embedding/gbrain 语义图和 TSNE/3D 聚类。
 - Bilingual i18n gates：中文 `zh-CN` 保持默认入口，英文作为同证据链镜像；public site/README/SEO metadata 变更必须同步检查 canonical/alternate 和双语缺口。
+- Public copy review gates：网页、README、README-EN、SEO/topic/blog、论文页和 metadata 变更必须经过 `3-5` 个读者/编辑 agents 与 `3` 个学术 agents 审查，分别检查 Mom Test/可读性/下一步和术语/证据/限制。
 
 ## Operating Style
 
@@ -73,6 +79,7 @@ Inference is allowed only after the exact direct user inputs are separated first
 - 用户明确要求可使用 subagent 并行推进，必要时用 browser/anysearch/gitnexus/mermaid/md。
 - 反思必须改变行为，否则反思无效。
 - 需要一面镜子：文档、mermaid、操作手册、skill、上下文/token 状态都可以成为自我观察工具。
+- 公开文案完成不是写完，而是经过读者/编辑和学术双通道审查，尤其网页和 README。
 - 每次迭代后主动检查 `git status`、保护无关用户改动、提交本轮相关改动；没有变化可提交时也要明确说明。
 
 ## Exact Direct User Inputs
@@ -124,6 +131,11 @@ Inference is allowed only after the exact direct user inputs are separated first
 - `增加一部分去做 agent-swarm evolve`
 - `Star没有意义，因为他只是一个历史累计的过程。 Star新的新增Star的增长，这样其实最重要的是需要看的是2026年的这个项目是不是在当前阶段的时候。 未来需要制作的是关于这些所有的GitHub project的历史数据挖掘。 这个非常重要，要形成一个数据库。 这个data可以放到HF上。`
 - `核心完成 i18N !!! 对于网页，对于所有东西都需要去严格的约束起来，写到Agents和Cloud的MD当中，这个作为我们需要去约束的双语支持。`
+- `所有的文案都经过3-5个 读者以及 编辑 agents 进行审查 + 3个学术agents 进行审查 保证质量`
+- `尤其网页`
+- `readme`
+- `现在里面有个非常严重的问题,就是造了一堆网页,但是这些网页有逻辑吗?可读吗?我能获取什么信息吗?我都吸收不了,它并不是爆款的文案,也不是知识型的文案,并非高质量的,比如说Hacker News这样子的高质量的文案。而且注意,这里边必须是双语的呀,又不是for Chinese,for Global World之类的。`
+- `这条就是最高的一个指导`
 
 ## Source Boundary And Redaction Note
 

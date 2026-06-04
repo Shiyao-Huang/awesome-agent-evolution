@@ -54,6 +54,21 @@ flowchart TD
 - Evidence links point to public pages or repository evidence, not to internal workflow instructions.
 - Internal labels such as `Workflow A`, `Workflow B`, "Iron Rules", "handoff", or "agent startup check" are rewritten as reader-facing concepts.
 - Build commands are omitted unless the page is explicitly a developer/maintenance page.
+- Website and README copy must pass `3-5` reader/editor agent reviews plus `3` academic agent reviews before being called quality-complete.
+
+## Public Copy Review Flow
+
+```mermaid
+flowchart LR
+  COPY["Public copy<br/>website / README / SEO / metadata"] --> RE["3-5 reader/editor agents<br/>Mom Test + clarity + next step"]
+  COPY --> AC["3 academic agents<br/>terms + evidence + limitations"]
+  RE --> VERDICT["Quality verdict"]
+  AC --> VERDICT
+  VERDICT -->|Pass| RELEASE["Release-ready copy"]
+  VERDICT -->|Risk / missing review| RISK["Record gap and block quality-complete claim"]
+```
+
+审查结果属于内部 workflow，只写入交付说明、ops 文档或相关 review artifact；公开页只保留面向读者的清晰文案和证据入口。
 
 ## Internal Workflow Checklist
 

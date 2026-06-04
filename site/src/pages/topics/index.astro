@@ -7,7 +7,7 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'CollectionPage',
   name: 'Self-Evolving AI Agents Topic Map',
-  alternateName: 'AI 自进化 Survey 与 SEO 主题地图',
+  alternateName: 'AI 自进化 Survey 与双语主题指南',
   description: 'Evidence-backed topic map for the Self Evolve survey: definitions, five evolution loops, code self-improvement, memory, agent swarm evolution, evaluation, production pain points, and resource coverage.',
   url: `${site.url}/topics/`,
   inLanguage: 'zh-CN',
@@ -27,9 +27,11 @@ const jsonLd = {
 ---
 
 <BaseLayout
-  title="AI 自进化主题地图 — Self-Evolving Agents Survey、SEO 与证据簇"
-  description="从 Self Evolve 资料库反推的 Survey/SEO 主题地图：定义、五类进化回路、代码自我改进、记忆技能、Agent-Swarm、评估治理、生产痛点和证据覆盖。"
-  pageKeywords={['AI 自进化主题地图', 'Self-Evolving AI Agents Topic Map', 'AI Agent SEO', '自进化智能体 Survey', 'AI agent evidence clusters']}
+  alternateZh="/topics/"
+  alternateEn="/en/topics/"
+  title="AI 自进化主题地图 — bilingual reader path for self-evolving agents"
+  description="双语主题地图：从读者问题进入定义、五类进化回路、代码自我改进、记忆技能、Agent-Swarm、评估治理、生产痛点和证据覆盖。"
+  pageKeywords={['AI 自进化主题地图', 'Self-Evolving AI Agents Topic Map', 'AI agent evidence guide', '自进化智能体 Survey', 'AI agent evidence clusters']}
 >
   <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} is:inline />
 
@@ -104,13 +106,13 @@ const jsonLd = {
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <div class="eyebrow">Topic Map / Survey SEO</div>
-          <h1>把资料库反推成读者真正会搜索的问题。</h1>
-          <p class="lead">Self Evolve 的 SEO 不应该从关键词表开始，而应该从证据簇开始：哪些问题有 raw 证据、项目报告、论文章节、benchmark 和公开页面支撑，哪些问题还只是空泛口号。</p>
+          <div class="eyebrow">Topic Guide / 双语主题指南</div>
+          <h1>别从关键词开始，从读者问题开始。</h1>
+          <p class="lead">A global reader does not need another directory. They need a path: what counts as self-evolution, how it happens, which evidence is strong, and where the open questions remain.</p>
           <div class="hero-actions">
-            <a class="button primary" href="#topic-clusters">看主题簇</a>
-            <a class="button" href="/resource-library/">资料库覆盖</a>
-            <a class="button" href="/survey/">Survey</a>
+            <a class="button primary" href="/topics/self-evolving-ai-agents/">Start with definition</a>
+            <a class="button" href="/topics/five-evolution-loops/">Five loops</a>
+            <a class="button" href="/topics/code-evolution-benchmark/">Benchmark matrix</a>
             <a class="text-link" href="/search/">站内搜索</a>
           </div>
           <div class="metrics" aria-label="主题地图指标">
@@ -122,10 +124,10 @@ const jsonLd = {
         <aside class="hero-evidence" aria-label="Topic map rule">
           <div class="eyebrow">Rule</div>
           <ol>
-            <li><span>Question</span><strong>先写读者真实问题，不先写营销词。</strong></li>
-            <li><span>Evidence</span><strong>每个主题必须能回到 raw、analysis、survey、reports 或 index。</strong></li>
-            <li><span>Asset</span><strong>每个主题都要说明下一步应该变成什么公开页面。</strong></li>
-            <li><span>Boundary</span><strong>没有证据链的主题不进入核心 SEO。</strong></li>
+            <li><span>Question</span><strong>先回答一个真实问题。</strong></li>
+            <li><span>Evidence</span><strong>再给可追溯证据。</strong></li>
+            <li><span>English</span><strong>English summary mirrors the same claim.</strong></li>
+            <li><span>Boundary</span><strong>最后说明限制和下一步。</strong></li>
           </ol>
         </aside>
       </div>
@@ -135,7 +137,7 @@ const jsonLd = {
       <div class="container">
         <div class="section-head">
           <div>
-            <div class="eyebrow">Evidence-backed SEO</div>
+            <div class="eyebrow">Evidence-backed guide</div>
             <h2>主题不是关键词，而是证据的组织方式</h2>
           </div>
         </div>
@@ -148,7 +150,7 @@ const jsonLd = {
           <article class="card">
             <div class="eyebrow">Survey</div>
             <h3>{topicMapStats.surveyPapers} papers + {topicMapStats.evolutionLoops} loops</h3>
-            <p>支撑定义、机制、方法族、case studies 和论文主线，让主题能服务 survey，而不只是 SEO。</p>
+            <p>支撑定义、机制、方法族、case studies 和论文主线，让主题服务读者理解，而不只是关键词覆盖。</p>
           </article>
           <article class="card">
             <div class="eyebrow">Index</div>
@@ -186,7 +188,7 @@ const jsonLd = {
                 <div>
                   <p><strong>Survey 角色：</strong>{topic.surveyRole}</p>
                   <p><strong>证据基础：</strong>{topic.evidence}</p>
-                  <p><strong>下一步资产：</strong>{topic.nextAsset}</p>
+                  <p><strong>下一步阅读：</strong>{topic.nextAsset}</p>
                   <ul class="topic-query-list" aria-label={`${topic.title} seed queries`}>
                     {topic.seedQueries.map((query) => (
                       <li>{query}</li>
@@ -204,8 +206,8 @@ const jsonLd = {
       <div class="container">
         <div class="section-head">
           <div>
-            <div class="eyebrow">Publication path</div>
-            <h2>下一批内容应该从这里长出来</h2>
+            <div class="eyebrow">Recommended next reading</div>
+            <h2>下一步应该把哪些问题讲清楚</h2>
           </div>
         </div>
         <div class="score-table-wrap">

@@ -2,7 +2,7 @@
 
 **A survey-first map of self-evolving AI agents: papers, projects, benchmarks, public reports, and the Evolve-AGI Index in one evidence chain.**
 
-[Chinese](README.md) | [English](README-EN.md) | [Website](https://shiyao-huang.github.io/awesome-agent-evolution/) | [Paper PDF](paper-drafts/main.pdf) | [Evolve-AGI Index](analysis/evolve-agi-index.md) | [Project Index](projects/INDEX.md)
+[Chinese](README.md) | [English](README-EN.md) | [Website](https://agent-evolution.com/) | [Paper PDF](paper-drafts/main.pdf) | [Evolve-AGI Index](analysis/evolve-agi-index.md) | [Project Index](projects/INDEX.md)
 
 ![Self Evolve public research pipeline](site/public/visuals/self-evolve-readme-banner.png)
 
@@ -19,8 +19,8 @@ Want to know whether an AI agent is actually improving itself, or just looking i
 ## Five Sentences
 
 1. This is not a standard Awesome List; it is an open survey of how AI agents can reliably improve themselves.
-2. A genuine self-evolving system must identify its mutable object, feedback signal, update operator, independent evaluator, retention mechanism, and rollback path.
-3. The clearest mechanism skeleton is the Five Evolution Loops: reflection/memory, symbolic components, verification-driven code, architecture search, and curriculum/weights/population.
+2. Under this survey's strict scope, a self-evolving system should identify its mutable object, feedback signal, update operator, independent evaluator, retention mechanism, and rollback path.
+3. The most reviewable mechanism skeleton is the Five Evolution Loops: specification-to-execution, search, evaluator, reflection/memory, and population/archive.
 4. The Evolve-AGI Index puts benchmark performance, loop strength, evidence credibility, transfer verification, implementation access, field momentum, and governance readiness into one auditable metric, so hype does not masquerade as maturity.
 5. Use this page to reach the paper, project model cards, public reports, knowledge graph, and website without drowning in hundreds of links.
 
@@ -31,27 +31,41 @@ Want to know whether an AI agent is actually improving itself, or just looking i
 | Researchers | A survey spine from taxonomy, methods, systems, and evaluation to the future roadmap. |
 | Builders | A way to judge whether an agent project has verifiable feedback, auditable memory, evaluator harnesses, and rollback paths. |
 | Product, investment, and industry readers | A way to separate real capability accumulation from benchmark gaming, demos, and governance gaps. |
-| Writers and educators | An evidence-backed topic map across projects, papers, trends, pain points, graphs, and long-tail SEO pages. |
+| Writers and educators | An evidence-backed topic map across projects, papers, trends, pain points, graphs, and long-tail topic pages. |
 
-## Current GitHub Metadata Repair Packet
+## Start Here
 
-| Repository | What this run repaired | Why it matters |
+| Who you are | Read first | What you take away |
 |---|---|---|
-| [agentmemoryworld/awesome-agent-memory](https://github.com/AgentMemoryWorld/Awesome-Agent-Memory) | Refreshed the raw snapshot, project card, site-facing public report, and classification metadata from the public GitHub page observed on 2026-06-04. | It turns the memory layer back into a system-level resource map, which is useful when readers first ask what the memory landscape actually contains. |
-| [letta-ai/learning-sdk](https://github.com/letta-ai/learning-sdk) | Refreshed the raw snapshot, project card, site-facing public report, and classification metadata from the public GitHub page observed on 2026-06-04. | It compresses memory plus learning into an embeddable SDK instead of an entire runtime, which helps cover the infrastructure layer users care about. |
-| [yennning/awesome-code-as-agent-harness-papers](https://github.com/YennNing/Awesome-Code-as-Agent-Harness-Papers) | Refreshed the raw snapshot, project card, site-facing public report, and classification metadata from the public GitHub page observed on 2026-06-04. | It directly serves the user-emphasized harness direction by turning the code-as-harness route into a teachable entry point rather than a single implementation. |
-| [clawland-ai/geneclaw](https://github.com/Clawland-AI/Geneclaw) | Refreshed the raw snapshot, project card, site-facing public report, and classification metadata from the public GitHub page observed on 2026-06-04. | It is one of the clearest engineering samples of controlled self-evolution, matching the README’s core judgment about safety and audit boundaries. |
-| [openclaw/clawbench](https://github.com/openclaw/clawbench) | Refreshed the raw snapshot, project card, site-facing public report, and classification metadata from the public GitHub page observed on 2026-06-04. | It covers the benchmark layer’s most important gap: scoring the whole agent stack rather than only model outputs. |
+| New reader | [Definition topic page](https://agent-evolution.com/topics/self-evolving-ai-agents/) | A checklist: what changed, who verified it, how it is retained, and whether it can roll back. |
+| Research reader | [Five evolution loops](https://agent-evolution.com/topics/five-evolution-loops/) | A mechanism map that separates specification, search, evaluation, reflection, and population archives. |
+| Builder | [Code self-improvement Benchmark Matrix](https://agent-evolution.com/topics/code-evolution-benchmark/) and [project reports](projects/INDEX.md) | A way to compare evaluator strength, archive evidence, lineage, and limitations instead of demos. |
+| Trend or product reader | [2026 star-growth pilot ledger](https://agent-evolution.com/star-growth/) and [Value LSH](https://agent-evolution.com/value-lsh/) | A separation between historical popularity, current momentum, value classification, and evidence repair. |
+
+For global readers: the core reader path now has English mirror pages and summaries that follow the same evidence chain; dashboards, project pages, and long-tail topics are still being bilingualized.
+
+## Evidence Pipeline
 
 ```mermaid
 flowchart LR
   RAW["raw sources<br/>GitHub / papers / blogs / social"] --> PROC["processed evidence<br/>analysis / research / projects"]
   PROC --> SURVEY["survey synthesis<br/>five loops + pain points + benchmarks"]
   SURVEY --> SPARK["core insight<br/>controlled self-evolution"]
-  SPARK --> EAI["Evolve-AGI Index<br/>field maturity score"]
+  SPARK --> EAI["Evolve-AGI Index<br/>evidence-weighted estimate"]
   EAI --> PAPER["paper core<br/>thesis + contribution + roadmap"]
   SURVEY --> SITE["site + graph + reports"]
 ```
+
+## Recent Evidence Updates (2026-06-04)
+
+| Repository | What this run refreshed | Why it matters |
+|---|---|---|
+| [voltagent/awesome-agent-skills](https://github.com/voltagent/awesome-agent-skills) | Refreshed the raw capture, project card, site-facing public report, and classification metadata from the public GitHub page observed on 2026-06-04. | It upgrades skill evidence from scattered prompt packs into a trackable ecosystem entry point anchored in official engineering-team skill releases. |
+| [vectorize-io/agent-memory-benchmark](https://github.com/vectorize-io/agent-memory-benchmark) | Refreshed the raw capture, project card, site-facing public report, and classification metadata from the public GitHub page observed on 2026-06-04. | It turns memory from a vague capability claim into a benchmark layer with measurable retrieval and answer tradeoffs. |
+| [benchflow-ai/skillsbench](https://github.com/benchflow-ai/skillsbench) | Refreshed the raw capture, project card, site-facing public report, and classification metadata from the public GitHub page observed on 2026-06-04. | It answers whether agents can actually use skills well, which is closer to the benchmark/eval chain than a skill pack alone. |
+| [evalops/agent-harness](https://github.com/evalops/agent-harness) | Refreshed the raw capture, project card, site-facing public report, and classification metadata from the public GitHub page observed on 2026-06-04. | It is a direct provider-comparison harness, useful when the same task needs to be measured across multiple agent backends. |
+| [browser-use/browser-harness](https://github.com/browser-use/browser-harness) | Refreshed the raw capture, project card, site-facing public report, and classification metadata from the public GitHub page observed on 2026-06-04. | It upgrades browser control from a demo into an editable harness substrate, covering the browser-skill-harness intersection. |
+| [swarmclawai/swarmclaw](https://github.com/swarmclawai/swarmclaw) | Refreshed the raw capture, project card, site-facing public report, and classification metadata from the public GitHub page observed on 2026-06-04. | It turns the swarm discussion into a concrete runtime surface, matching the user’s repeated request to strengthen the multi-agent/swarm lane. |
 
 ## Core Insight
 
@@ -81,7 +95,7 @@ Five-sentence expansion:
 
 ## Evolve-AGI Index In The Paper Core
 
-One sentence: the Evolve-AGI Index is the survey's field-maturity dashboard, not a final AGI capability score.
+One sentence: the Evolve-AGI Index is a versioned, evidence-weighted maturity estimate for this survey, not a final AGI capability score.
 
 ```text
 EAI = Σ(signal_score × signal_weight)
@@ -97,7 +111,7 @@ EAI = Σ(signal_score × signal_weight)
 | Field momentum | 10% | New projects and community motion are trend signals, but cannot override evidence quality. |
 | Governance readiness | 8% | Self-modifying systems need safety boundaries, logs, rollback, and timestamp confidence. |
 
-The current snapshot in [reports/evolve-agi-index-trend.json](reports/evolve-agi-index-trend.json) reports a 2026-06-01 index of `72.9`, a benchmark sub-index of `80.1`, `93` strict evolution repos, `200` broad evolution repos, and `239` analyzed public-report records in the trend input. Use it together with the repository-wide counts in [docs/indexes/master-index.md](docs/indexes/master-index.md): the former powers index trends, while the latter governs repository structure and the full public-report file count.
+The weights are editorial/proposed weights for this survey: they make different evidence types discussable in one table, but they are not yet a peer-reviewed field standard. The current snapshot in [reports/evolve-agi-index-trend.json](reports/evolve-agi-index-trend.json) reports a 2026-06-01 index of `72.9`, a benchmark sub-index of `80.1`, `93` strict evolution repos, `200` broad evolution repos, and `239` analyzed public-report records in the trend input. Use it together with the repository-wide counts in [docs/indexes/master-index.md](docs/indexes/master-index.md): the former powers index trends, while the latter governs repository structure and the full public-report file count.
 
 ## Survey Evidence Map
 
@@ -106,19 +120,19 @@ The current snapshot in [reports/evolve-agi-index-trend.json](reports/evolve-agi
 | Source evidence | Keeps GitHub, paper, blog, and social material as the starting point for claims. | [raw index](docs/indexes/raw-index.md), `raw-github/`, `raw-papers/`, `raw-social/`, `raw-blogs/` |
 | Processed analysis | Turns sources into classifications, mechanisms, model cards, paper reviews, rankings, and the Evolve-AGI Index. | [processed index](docs/indexes/processed-index.md), [GitHub analysis](analysis/github-project-data-analysis.md), [projects index](projects/INDEX.md) |
 | Survey paper | Turns mechanisms, systems, evaluation, industry practice, pain points, and futures into paper structure. | [survey CN chapters](survey/ch1-intro-cn.md), [paper drafts](paper-drafts/main.tex), [survey latex](survey/latex/main.tex) |
-| Public results | Publishes PDFs, site pages, reports, graphs, trend snapshots, and SEO material. | [results index](docs/indexes/results-index.md), [site](site/src/pages/index.astro), [reports](reports/) |
+| Public results | Publishes PDFs, site pages, reports, graphs, trend snapshots, and topic pages. | [results index](docs/indexes/results-index.md), [site](site/src/pages/index.astro), [reports](reports/) |
 | Evidence catalog | Lets readers inspect evidence chains, indexes, and public results. | [CONTENT_INDEX.md](CONTENT_INDEX.md), [master index](docs/indexes/master-index.md) |
 
 ```mermaid
 flowchart TB
-  Q["Core question<br/>what counts as real self-evolution?"] --> A["resource reorganization<br/>raw -> processed -> survey -> results"]
+  Q["Core question<br/>what counts under the strict self-evolution scope?"] --> A["resource reorganization<br/>raw -> processed -> survey -> results"]
   A --> B["mechanism framework<br/>Five Evolution Loops"]
   A --> C["evidence framework<br/>trust chain + model card"]
   A --> D["measurement framework<br/>Evolve-AGI Index"]
   B --> P["paper core"]
   C --> P
   D --> P
-  P --> R["README / site / PDF / SEO"]
+  P --> R["README / site / PDF / topic pages"]
 ```
 
 ## Paper Spine
@@ -126,7 +140,7 @@ flowchart TB
 | Chapter | Survey result | Current entry |
 |---|---|---|
 | Ch1 Introduction | Defines self-evolution and adds the Evolve-AGI Index as an evidence-to-index contribution. | [paper-drafts/ch1-intro.tex](paper-drafts/ch1-intro.tex) |
-| Ch2 Taxonomy | Separates continual learning, online learning, self-supervision, AutoML, RL, and genuine self-evolution. | [paper-drafts/ch2-taxonomy.tex](paper-drafts/ch2-taxonomy.tex) |
+| Ch2 Taxonomy | Separates continual learning, online learning, self-supervision, AutoML, RL, and strict-scope self-evolution. | [paper-drafts/ch2-taxonomy.tex](paper-drafts/ch2-taxonomy.tex) |
 | Ch3 Methods | Explains how feedback becomes retained change through the Five Evolution Loops. | [paper-drafts/ch3-methods.tex](paper-drafts/ch3-methods.tex) |
 | Ch4 Systems | Compares Self-Refine, Reflexion, ADAS, DGM, AlphaEvolve, Absolute Zero, and related systems. | [paper-drafts/ch4-evolutionary.tex](paper-drafts/ch4-evolutionary.tex) |
 | Ch5 Evaluation | Puts benchmarks, trajectories, transfer, cost, regression, and Goodhart risk onto one evaluation surface. | [paper-drafts/ch5-evaluation.tex](paper-drafts/ch5-evaluation.tex) |
@@ -139,24 +153,24 @@ flowchart TB
 | You want to know | Read first | Then read |
 |---|---|---|
 | The one-line field thesis | [Core Insight](#core-insight) | [paper abstract](paper-drafts/main.tex) |
-| What truly counts as self-evolving | [Definition topic page](https://shiyao-huang.github.io/awesome-agent-evolution/topics/self-evolving-ai-agents/) | [definition criteria](analysis/self-evolution-definition-criteria.md), [ch1 intro](paper-drafts/ch1-intro.tex) |
-| How self-evolution actually happens | [Five evolution loops](https://shiyao-huang.github.io/awesome-agent-evolution/topics/five-evolution-loops/) | [five-loop analysis](analysis/five-evolution-loops-topic.md), [survey mechanisms](site/src/pages/survey/mechanisms.astro) |
-| Which systems really improve code | [Code self-improvement Benchmark Matrix](https://shiyao-huang.github.io/awesome-agent-evolution/topics/code-evolution-benchmark/) | [code benchmark matrix](analysis/code-evolution-benchmark-matrix.md), [benchmark page](site/src/pages/benchmark/index.astro) |
-| Which projects truly count as self-evolving | [Core Findings](#core-findings) | [projects/INDEX.md](projects/INDEX.md), [analysis/github-project-data-analysis.md](analysis/github-project-data-analysis.md) |
-| Which projects are growing in 2026 | [Public star-growth database](https://shiyao-huang.github.io/awesome-agent-evolution/star-growth/) | [GitHub star growth ranking](analysis/github-star-growth-ranking.md), [data-engine schema](data-engine/github-star-history/README.md) |
-| Which materials deserve deeper review first | [Value LSH map](https://shiyao-huang.github.io/awesome-agent-evolution/value-lsh/) | [value LSH index](analysis/value-lsh-index.md), [evidence repair queue](analysis/value-evidence-repair-queue.md) |
+| What counts under the strict self-evolution scope | [Definition topic page](https://agent-evolution.com/topics/self-evolving-ai-agents/) | [definition criteria](analysis/self-evolution-definition-criteria.md), [ch1 intro](paper-drafts/ch1-intro.tex) |
+| How self-evolution actually happens | [Five evolution loops](https://agent-evolution.com/topics/five-evolution-loops/) | [five-loop analysis](analysis/five-evolution-loops-topic.md), [survey mechanisms](site/src/pages/survey/mechanisms.astro) |
+| Which systems really improve code | [Code self-improvement Benchmark Matrix](https://agent-evolution.com/topics/code-evolution-benchmark/) | [code benchmark matrix](analysis/code-evolution-benchmark-matrix.md), [benchmark page](site/src/pages/benchmark/index.astro) |
+| Which projects count as self-evolving under this survey | [Core Findings](#core-findings) | [projects/INDEX.md](projects/INDEX.md), [analysis/github-project-data-analysis.md](analysis/github-project-data-analysis.md) |
+| Which projects are growing in 2026 | [Public star-growth pilot ledger](https://agent-evolution.com/star-growth/) | [GitHub star growth ranking](analysis/github-star-growth-ranking.md), [data-engine schema](data-engine/github-star-history/README.md) |
+| Which materials deserve deeper review first | [Value LSH map](https://agent-evolution.com/value-lsh/) | [value LSH index](analysis/value-lsh-index.md), [evidence repair queue](analysis/value-evidence-repair-queue.md) |
 | How the paper is organized | [Paper Spine](#paper-spine) | [paper-drafts/main.tex](paper-drafts/main.tex), [survey/latex/main.tex](survey/latex/main.tex) |
-| Which figures support the survey and paper | [Paper figure page](https://shiyao-huang.github.io/awesome-agent-evolution/paper/) and [visualization page](https://shiyao-huang.github.io/awesome-agent-evolution/visualizations/) | [survey figures](survey/figures/README.md), [paper figure exporter](scripts/export_survey_figures_for_paper.mjs), [paper figure assets](paper-drafts/figures/) |
+| Which figures support the survey and paper | [Paper figure page](https://agent-evolution.com/paper/) and [visualization page](https://agent-evolution.com/visualizations/) | [survey figures](survey/figures/README.md), [paper figure exporter](scripts/export_survey_figures_for_paper.mjs), [paper figure assets](paper-drafts/figures/) |
 | How the AGI index enters the core | [Evolve-AGI Index In The Paper Core](#evolve-agi-index-in-the-paper-core) | [analysis/evolve-agi-index.md](analysis/evolve-agi-index.md), [site page](site/src/pages/evolve-agi-index/index.astro) |
 | Where the full lists live | [CONTENT_INDEX.md](CONTENT_INDEX.md) | [docs/indexes/master-index.md](docs/indexes/master-index.md) |
-| Where the site and SEO material live | [site](site/) | [site survey page](site/src/pages/survey/index.astro), [graph page](site/src/pages/graph/index.astro) |
+| Where the site and topic pages live | [site](site/) | [site survey page](site/src/pages/survey/index.astro), [graph page](site/src/pages/graph/index.astro) |
 
 ## Evidence Boundary
 
 - [KNOWN] Repository-wide governance counts come from [docs/indexes/master-index.md](docs/indexes/master-index.md), generated by `node scripts/generate_project_indexes.mjs`.
 - [KNOWN] GitHub corpus counts, strict/broad evolution subsets, and time slices come from [analysis/github-project-data-analysis.md](analysis/github-project-data-analysis.md) and the paired JSON.
-- [KNOWN] GitHub star-growth evidence comes from [data-engine/github-star-history/](data-engine/github-star-history/), [analysis/github-star-growth-ranking.md](analysis/github-star-growth-ranking.md), and the public [star-growth page](https://shiyao-huang.github.io/awesome-agent-evolution/star-growth/); total stars are only an adoption prior, and definitive 2026 growth claims require `complete_or_near_complete` coverage.
-- [KNOWN] Value LSH evidence comes from [analysis/value-lsh-index.md](analysis/value-lsh-index.md), [data-engine/value-lsh-index/](data-engine/value-lsh-index/), and the public [value-lsh page](https://shiyao-huang.github.io/awesome-agent-evolution/value-lsh/); it is a deep-review and evidence-repair triage map, not a final value judgement.
+- [KNOWN] GitHub star-growth pilot evidence comes from [data-engine/github-star-history/](data-engine/github-star-history/), [analysis/github-star-growth-ranking.md](analysis/github-star-growth-ranking.md), and the public [star-growth page](https://agent-evolution.com/star-growth/); total stars are only an adoption prior, and definitive 2026 growth claims require `complete_or_near_complete` coverage.
+- [KNOWN] Value LSH evidence comes from [analysis/value-lsh-index.md](analysis/value-lsh-index.md), [data-engine/value-lsh-index/](data-engine/value-lsh-index/), and the public [value-lsh page](https://agent-evolution.com/value-lsh/); it is a deep-review and evidence-repair triage map, not a final value judgement.
 - [KNOWN] Coverage boundaries, count meanings, and current gaps come from [analysis/resource-library-coverage-audit.md](analysis/resource-library-coverage-audit.md); for the latest raw/classified/model-card/public-report counts, use [docs/indexes/master-index.md](docs/indexes/master-index.md) and [analysis/github-project-data-analysis.md](analysis/github-project-data-analysis.md).
 - [KNOWN] Evolve-AGI Index methodology, weights, and benchmark inputs come from [analysis/evolve-agi-index.md](analysis/evolve-agi-index.md), [site/src/data/evolveAgiIndex.ts](site/src/data/evolveAgiIndex.ts), and [reports/evolve-agi-index-trend.json](reports/evolve-agi-index-trend.json).
 - [KNOWN] Survey chapters and the paper draft come from [paper-drafts/main.tex](paper-drafts/main.tex) and [survey/latex/main.tex](survey/latex/main.tex).
@@ -169,9 +183,9 @@ flowchart TB
 | Understand the field quickly | Start with the core findings and the Evolve-AGI Index in this README. |
 | Read the paper deeply | Open [paper-drafts/main.pdf](paper-drafts/main.pdf) or the [paper page](site/src/pages/paper/index.astro). |
 | Inspect project evidence | Use [projects/INDEX.md](projects/INDEX.md) and [public project reports](site/public/reports/projects/INDEX.md). |
-| Check data coverage | Start with the [resource library page](https://shiyao-huang.github.io/awesome-agent-evolution/resource-library/), then inspect [analysis/resource-library-coverage-audit.md](analysis/resource-library-coverage-audit.md), [docs/indexes/master-index.md](docs/indexes/master-index.md), and [analysis/github-project-data-analysis.md](analysis/github-project-data-analysis.md). |
-| Find topics by question | Open the [Survey/SEO topic map](https://shiyao-huang.github.io/awesome-agent-evolution/topics/) for definitions, five loops, [code self-improvement](https://shiyao-huang.github.io/awesome-agent-evolution/topics/code-evolution-benchmark/), Agent-Swarm, evaluation governance, and production pain points. |
-| Browse the website | Open the [Self Evolve site](https://shiyao-huang.github.io/awesome-agent-evolution/) or the [site source](site/). |
+| Check data coverage | Start with the [resource library page](https://agent-evolution.com/resource-library/), then inspect [analysis/resource-library-coverage-audit.md](analysis/resource-library-coverage-audit.md), [docs/indexes/master-index.md](docs/indexes/master-index.md), and [analysis/github-project-data-analysis.md](analysis/github-project-data-analysis.md). |
+| Find topics by question | Open the [topic guide](https://agent-evolution.com/topics/) for definitions, five loops, [code self-improvement](https://agent-evolution.com/topics/code-evolution-benchmark/), Agent-Swarm, evaluation governance, and production pain points. |
+| Browse the website | Open the [Self Evolve site](https://agent-evolution.com/) or the [site source](site/). |
 
 ## Citation
 
@@ -184,14 +198,3 @@ flowchart TB
   note         = {Open survey repository for self-evolving AI agents, benchmark evidence, project model cards, and field maturity indexing.}
 }
 ```
-
-## Recent Evidence Updates (2026-06-04)
-
-| Repository | What this run refreshed | Why it matters |
-|---|---|---|
-| [voltagent/awesome-agent-skills](https://github.com/voltagent/awesome-agent-skills) | Refreshed the raw capture, project card, site-facing public report, and classification metadata from the public GitHub page observed on 2026-06-04. | It upgrades skill evidence from scattered prompt packs into a trackable ecosystem entry point anchored in official engineering-team skill releases. |
-| [vectorize-io/agent-memory-benchmark](https://github.com/vectorize-io/agent-memory-benchmark) | Refreshed the raw capture, project card, site-facing public report, and classification metadata from the public GitHub page observed on 2026-06-04. | It turns memory from a vague capability claim into a benchmark layer with measurable retrieval and answer tradeoffs. |
-| [benchflow-ai/skillsbench](https://github.com/benchflow-ai/skillsbench) | Refreshed the raw capture, project card, site-facing public report, and classification metadata from the public GitHub page observed on 2026-06-04. | It answers whether agents can actually use skills well, which is closer to the benchmark/eval chain than a skill pack alone. |
-| [evalops/agent-harness](https://github.com/evalops/agent-harness) | Refreshed the raw capture, project card, site-facing public report, and classification metadata from the public GitHub page observed on 2026-06-04. | It is a direct provider-comparison harness, useful when the same task needs to be measured across multiple agent backends. |
-| [browser-use/browser-harness](https://github.com/browser-use/browser-harness) | Refreshed the raw capture, project card, site-facing public report, and classification metadata from the public GitHub page observed on 2026-06-04. | It upgrades browser control from a demo into an editable harness substrate, covering the browser-skill-harness intersection. |
-| [swarmclawai/swarmclaw](https://github.com/swarmclawai/swarmclaw) | Refreshed the raw capture, project card, site-facing public report, and classification metadata from the public GitHub page observed on 2026-06-04. | It turns the swarm discussion into a concrete runtime surface, matching the user’s repeated request to strengthen the multi-agent/swarm lane. |

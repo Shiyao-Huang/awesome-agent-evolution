@@ -1,0 +1,52 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+
+const loops = [
+  ['Specification-to-execution', 'A fuzzy goal becomes a repeatable workflow or tool plan.', 'Risk: optimizing the wrong specification.'],
+  ['Search', 'The system proposes multiple candidates and selects among prompts, code, architectures, routing, or parameters.', 'Risk: random walk or benchmark overfitting.'],
+  ['Evaluator', 'Tests, benchmarks, hidden tasks, or judges decide whether a candidate improves the system.', 'Risk: Goodhart, leakage, or weak tests.'],
+  ['Reflection', 'Failed trajectories become typed memories, lessons, or skill notes that affect future runs.', 'Risk: memory pollution and false lessons.'],
+  ['Population/archive', 'Multiple variants survive across generations with lineage and diversity pressure.', 'Risk: premature collapse or diversity without useful selection.'],
+];
+---
+
+<BaseLayout
+  pageLang="en"
+  alternateZh="/topics/five-evolution-loops/"
+  alternateEn="/en/topics/five-evolution-loops/"
+  title="Five Evolution Loops for Self-Evolving AI Agents"
+  description="English guide to five review lenses for self-evolving agents: specification, search, evaluator, reflection, and population or archive pressure."
+>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <div class="eyebrow">Mechanism</div>
+        <h1>Five loops turn “self-improvement” into inspectable mechanisms.</h1>
+        <p class="lead">These are review lenses, not mutually exclusive categories. Use them to ask what changed, what selected it, what verified it, and how the result survived.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#loops">Read the loops</a>
+          <a class="button" href="/en/topics/code-evolution-benchmark/">Benchmark matrix</a>
+          <a class="text-link" href="/topics/five-evolution-loops/">中文机制页</a>
+        </div>
+      </div>
+      <aside class="hero-evidence">
+        <div class="eyebrow">Taxonomy note</div>
+        <p>The paper’s method families are broader literature categories. These five loops are reader-facing review lenses for inspecting systems.</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section" id="loops" style="background: var(--surface-1);">
+    <div class="container">
+      <div class="grid">
+        {loops.map(([name, body, risk]) => (
+          <article class="card">
+            <h3>{name}</h3>
+            <p>{body}</p>
+            <p style="color: var(--muted);">{risk}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

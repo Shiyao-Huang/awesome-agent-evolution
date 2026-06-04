@@ -45,9 +45,9 @@ const coverageRate = counts.seed_repositories
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Dataset',
-  name: 'GitHub Star Growth Database for Self-Evolving AI Agents',
-  alternateName: 'AI 自进化项目 2026 新增 Star 增长数据库',
-  description: 'Coverage-aware GitHub stargazer history database for ranking self-evolving AI agent projects by 2026 new-star momentum instead of historical total stars.',
+  name: 'GitHub Star Growth Pilot Ledger for Self-Evolving AI Agents',
+  alternateName: 'AI 自进化项目 2026 新增 Star 增长试点账本',
+  description: 'Coverage-aware GitHub stargazer history pilot ledger for inspecting self-evolving AI agent projects by 2026 new-star momentum instead of historical total stars.',
   url: `${site.url}/star-growth/`,
   inLanguage: 'zh-CN',
   dateModified: snapshot.generated_at,
@@ -58,9 +58,9 @@ const jsonLd = {
 ---
 
 <BaseLayout
-  title="2026 GitHub Star 增长数据库 — Self Evolve"
-  description="Self Evolve 的 2026 GitHub 新增 Star 增长数据库：把累计 Star 降为历史 adoption prior，用 stargazer history、覆盖状态和近期增长判断自进化项目当前动量。"
-  pageKeywords={['GitHub star growth database', '2026 new stars', 'AI agent momentum ranking', '自进化项目增长', 'Hugging Face dataset']}
+  title="2026 GitHub Star 增长试点账本 — Self Evolve"
+  description="Self Evolve 的 2026 GitHub 新增 Star 增长试点账本：把累计 Star 降为历史 adoption prior，用 stargazer history、覆盖状态和近期增长记录自进化项目当前动量。"
+  pageKeywords={['GitHub star growth pilot ledger', '2026 new stars', 'AI agent momentum evidence', '自进化项目增长', 'coverage status']}
 >
   <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} is:inline />
 
@@ -243,7 +243,7 @@ const jsonLd = {
         <div class="hero-copy">
           <div class="eyebrow">GitHub Star Growth / Current Momentum</div>
           <h1>不要再用累计 Star 判断当前价值。</h1>
-          <p class="lead">这个页面把 GitHub stars 从“历史热度榜”改成“2026 新增 Star + 近期速度 + 覆盖状态”的证据账本。它现在是数据库仪表盘，不是假装完成的最终排行榜。</p>
+          <p class="lead">这个页面把 GitHub stars 从“历史热度榜”改成“2026 新增 Star + 近期速度 + 覆盖状态”的证据账本。它现在是覆盖试点，不是假装完成的最终排行榜。</p>
           <div class="hero-actions">
             <a class="button primary" href="#qualified">看可发布排名</a>
             <a class="button" href="#backlog">看抓取队列</a>
@@ -272,7 +272,7 @@ const jsonLd = {
         <div class="section-head">
           <div>
             <div class="eyebrow">Coverage audit</div>
-            <h2>这是增长数据库的覆盖状态，不是最终名次</h2>
+            <h2>这是增长试点账本的覆盖状态，不是最终名次</h2>
           </div>
         </div>
         <div class="growth-grid">

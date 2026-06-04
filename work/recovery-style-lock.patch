@@ -1,3091 +1,520 @@
 diff --git a/AGENTS.md b/AGENTS.md
-index 424450a..a83b99f 100644
+index 123f686..677f934 100644
 --- a/AGENTS.md
 +++ b/AGENTS.md
-@@ -37,6 +37,26 @@
+@@ -32,8 +32,10 @@
+
+ ## Writing Rules
+
++- **L0 Highest guidance — public copy quality first**: 用户已明确指出，公开文案质量是最高指导。网站、README、README-EN、论文页、topic/blog/SEO 入口和 metadata 不能只是“造了一堆网页”；它们必须有清晰逻辑、可读、可吸收、接近高质量知识型/Hacker News 级别文案，并且中英双语面向全球读者表达同一条证据链。公开页面数量、SEO 覆盖、视觉效果、内部 workflow 都低于这个指导。
+ - **Visualization first**: 当图表比文字更容易表达时，必须使用图表（Mermaid DAG、SVG、数据流图）。不要只写文字。
+ - **Mom Test usability**: README 和面向用户的内容必须通过 "Mom Test"——一个非专业人士能否理解这个项目做什么、为什么重要？
++- **Public copy review gate**: 所有公开文案，尤其是网页、README、README-EN、SEO/topic/blog 页面和站点 metadata，发布前必须经过 `3-5` 个读者/编辑 agents 与 `3` 个学术 agents 的审查。读者/编辑审查关注 Mom Test、可读性、行动路径、中文默认入口和英文镜像；学术审查关注术语准确性、证据链、claim 强度、限制和 `[UNVERIFIED]` 标注。无法实际调度 agents 时，必须在交付说明中明确这是缺口，不能把该文案标记为质量已完成。
  - **Evidence chain**: 每个分析结论必须可追溯到 raw 数据源。如果无法追溯，标注 `[UNVERIFIED]`。
  - **Layered output**: 判断用 1 句话，证据用 3 句话，完整论证用 5+ 句话。
- 
-+## Website Style Lock
-+
-+网站当前视觉基准是 `3fd1785`（2026-05-25 15:05 +0800，`docs: sync README i18n and paper pipeline`）附近恢复出的 Caret/editorial 风格；严格 15:00 前快照是 `e2f4518`（2026-05-25 14:53 +0800）。不要随意把站点改成另一套深色、玻璃、营销页、过度卡片化或组件展示风格。
-+
-+- 样式基准文件：`site/src/styles/global.css`。保留浅色 `#FAF7F2` 背景、EB Garamond display 字体、蓝色 caret 线、橙色主 CTA、8px 左右卡片圆角、克制的 editorial 版式。
-+- 首页基准：`site/src/pages/index.astro` 使用中文主叙事、证据链 `hero-evidence`、Raw/Processed/Model cards/Results 结构；不要用新 React mockup 替代它。
-+- Graph 基准：`site/src/pages/graph/index.astro` 是可搜索的圆形 Knowledge graph + 右侧/下方 AI Research Prompt 面板；不要恢复或新建 `site/src/components/EvolutionNetwork.tsx` 来替换该 graph。
-+- i18n 基准：当前网页主语言是 `zh-CN`，`site/src/data/site.ts` 的中文导航和 metadata 不能被英文化或删减。若新增 i18n 路由，必须保留中文入口、canonical/alternate 和 SEO 描述。
-+- 改网页风格前，必须先跑 `git diff 3fd1785 -- site/src/styles/global.css site/src/pages/index.astro site/src/pages/graph/index.astro site/src/layouts/BaseLayout.astro site/src/data/site.ts`，说明为什么要偏离基准。
-+- 改完网页必须验证桌面和移动端；至少跑 `(cd site && npm run build)`，并检查首页与 `/graph/` 在约 390px 移动视口没有横向溢出。
-+
-+## Persistence Rule
-+
-+恢复历史版本、修复样式回退、写入 AGENTS/CLAUDE/CLOUD 或做任何用户明确要求“保留”的改动后，不要让成果只停留在未提交工作区。
-+
-+- 在执行 `git reset`、`git restore`、`git checkout`、`git clean`、生成索引或大范围脚本前，先跑 `git status --short` 和相关 `git diff --name-status`，确认不会覆盖刚恢复的网页、graph、i18n 或手册改动。
-+- 如果改动还不能提交，先生成可恢复补丁：`git diff -- AGENTS.md CLAUDE.md site/src/styles/global.css site/src/pages/index.astro site/src/pages/graph/index.astro site/src/layouts/BaseLayout.astro site/src/data/site.ts > work/recovery-style-lock.patch`。
-+- 当用户要求“写入”“持久”“别丢”时，优先建议或创建一个 checkpoint commit；没有提交前，最终汇报必须明确说明这些改动仍可能被 reset 清掉。
-+- 任何 reset 后发现丢失，先查 `git reflog --date=iso -20`、`git diff 3fd1785 -- ...` 和本地 `work/*.patch`，再恢复，不要重新设计。
-+
- ## User Direct Input Reference
- 
- 执行任务时优先对齐这些用户原话，而不是 team 输入或历史摘要：
-@@ -49,6 +69,8 @@
- | 4 | `GitHub的项目原始收集的有哪些？进行分析的有哪些？进化相关的有哪些？按时间顺序发布的有哪些？` | 论文和分析必须回答 raw collection、analyzed subset、evolution-related subset、timeline 四件事。 |
- | 5 | `raw归raw 加工后的归加工的 、work 产物归work 、结果输出归结果、、全部都要索引化 覆盖` | 任何文件新增或移动都要归层，并刷新索引。 |
- | 6 | `用户的输入你得提取出来，然后作为Agent和Claude里边的参考。` | AGENTS/CLAUDE 必须链接并使用 [docs/project-management/user-direct-inputs.md](docs/project-management/user-direct-inputs.md)。 |
-+| 7 | `找回昨天的那个版本，尤其是在graph的这个上修改的内容。注意 i18N 网页 15:00` | 网站风格和 graph 以 2026-05-25 15:05 附近版本为基准；任何 style/graph/i18n 改动必须先对照历史。 |
-+| 8 | `持久建议放入 agent claude ，md` | 用户要求保留的恢复规则必须写入 AGENTS/CLAUDE，并在 reset 前先保存补丁或 checkpoint。 |
- 
+ - **Audience boundary**: README、网站首页、论文页和 SEO 内容是给外部读者/消费者看的，不是 agent 操作手册。不要把启动检查、内部构建命令、agent wiki 流程、handoff 规则或自我系统说明写进 README 主体；这些规则进入 `AGENTS.md`、`CLAUDE.md`、`CLOUD.md` 或 `docs/ops/`。
+@@ -59,6 +61,7 @@
+ - **默认语言**：公开网站默认入口、导航、首页叙事和 metadata 保持中文 `zh-CN`；英文内容必须作为镜像或辅助入口存在，不能把中文入口替换成英文。
+ - **同证据链**：`README.md` / `README-EN.md`、网站首页、论文页、topic/SEO 页、blog/research/project 入口、`site/src/data/site.ts` metadata 必须表达同一组核心判断、证据入口和限制；英文可以本地化表达，但不能增加无来源承诺或删掉关键证据边界。
+ - **新增页面规则**：任何新增或大改的 public-facing 页面，必须同时检查中文 copy、英文入口/摘要、SEO title/description、canonical URL、alternate/hreflang 和站内互链；暂不能完成英文镜像时，必须在 `docs/ops/CLOUD.md` 的发布风险或相关索引中记录缺口，不得静默发布为“已完成 i18n”。
++- **文案审查规则**：网站、README、论文页、topic/SEO/blog 入口或 metadata 的新增/大改，必须同时通过 Public copy review gate；审查结论要覆盖中文默认入口、英文镜像是否同证据链、是否有读者能理解的一句话/三句话/五句话表达。
+ - **内部/外部分离**：双语页面仍然面向读者，不写 agent 启动检查、handoff、构建命令或内部 workflow；这些内容只进入 `AGENTS.md`、`CLAUDE.md`、`CLOUD.md`、`docs/ops/` 和 wiki。
+ - **发布验证**：网页或 metadata 的 i18n 改动至少执行 `node scripts/generate_project_indexes.mjs` 和 `(cd site && npm run build)`；发布前用 `rg -n "TODO i18n|EN-PENDING|未翻译|待翻译|TODO: translate" README.md README-EN.md site/src docs/seo` 检查双语缺口，并汇报结果。
+
+@@ -77,16 +80,17 @@
+
+ | Rank | User Requirement | Operational Meaning |
+ |---:|---|---|
+-| 1 | `用户的输入非常精确，并不是team的输入。` | 目标来源只认用户直接输入；team/subagent/tool 输出只能作证据，不能改写目标。 |
+-| 2 | `它需要有raw的素材...需要加工成论文...需要有网站...为博客及SEO准备。` | raw、论文、网站、SEO 是同一条交付链，缺一不可。 |
+-| 3 | `所有的项目都有深度分析，都有model card类似这样子的教学使用的东西。` | 项目页和报告要能教学，不能只给链接和浅摘要。 |
+-| 4 | `GitHub的项目原始收集的有哪些？进行分析的有哪些？进化相关的有哪些？按时间顺序发布的有哪些？` | 论文和分析必须回答 raw collection、analyzed subset、evolution-related subset、timeline 四件事。 |
+-| 5 | `raw归raw 加工后的归加工的 、work 产物归work 、结果输出归结果、、全部都要索引化 覆盖` | 任何文件新增或移动都要归层，并刷新索引。 |
+-| 6 | `用户的输入你得提取出来，然后作为Agent和Claude里边的参考。` | AGENTS/CLAUDE 必须链接并使用 [docs/project-management/user-direct-inputs.md](docs/project-management/user-direct-inputs.md)。 |
+-| 7 | `找回昨天的那个版本，尤其是在graph的这个上修改的内容。注意 i18N 网页 15:00` | 网站风格和 graph 以 2026-05-25 15:05 附近版本为基准；任何 style/graph/i18n 改动必须先对照历史。 |
+-| 8 | `持久建议放入 agent claude ，md` | 用户要求保留的恢复规则必须写入 AGENTS/CLAUDE，并在 reset 前先保存补丁或 checkpoint。 |
+-| 9 | `Star没有意义，因为他只是一个历史累计的过程...2026年的这个项目是不是在当前阶段...形成一个数据库...data可以放到HF上` | GitHub 项目排名必须优先看 2026 新增 Star、recent velocity、覆盖完整性和证据质量；累计 Star 只能作为历史 adoption prior。 |
+-| 10 | `核心完成 i18N !!! ... 写到Agents和Cloud的MD当中 ... 约束的双语支持。` | i18n 是 public site/README/SEO/metadata 的硬发布门禁；AGENTS 和 CLOUD 必须约束中文默认入口、英文镜像、canonical/alternate、SEO 和验证。 |
++| 1 | `所有的文案都经过3-5个 读者以及 编辑 agents 进行审查 + 3个学术agents 进行审查 保证质量` / `尤其网页` / `readme` / `现在里面有个非常严重的问题...这些网页有逻辑吗?可读吗?...并非高质量的...Hacker News这样子的高质量的文案...必须是双语的...` / `这条就是最高的一个指导` | 公开文案质量是最高指导：网站和 README 必须有逻辑、可读、可吸收、双语同证据链；未经过读者/编辑与学术双通道审查，不得宣称 public copy 已完成。 |
++| 2 | `用户的输入非常精确，并不是team的输入。` | 目标来源只认用户直接输入；team/subagent/tool 输出只能作证据，不能改写目标。 |
++| 3 | `它需要有raw的素材...需要加工成论文...需要有网站...为博客及SEO准备。` | raw、论文、网站、SEO 是同一条交付链，缺一不可，但公开页面必须服从最高文案质量指导。 |
++| 4 | `所有的项目都有深度分析，都有model card类似这样子的教学使用的东西。` | 项目页和报告要能教学，不能只给链接和浅摘要。 |
++| 5 | `GitHub的项目原始收集的有哪些？进行分析的有哪些？进化相关的有哪些？按时间顺序发布的有哪些？` | 论文和分析必须回答 raw collection、analyzed subset、evolution-related subset、timeline 四件事。 |
++| 6 | `raw归raw 加工后的归加工的 、work 产物归work 、结果输出归结果、、全部都要索引化 覆盖` | 任何文件新增或移动都要归层，并刷新索引。 |
++| 7 | `用户的输入你得提取出来，然后作为Agent和Claude里边的参考。` | AGENTS/CLAUDE 必须链接并使用 [docs/project-management/user-direct-inputs.md](docs/project-management/user-direct-inputs.md)。 |
++| 8 | `找回昨天的那个版本，尤其是在graph的这个上修改的内容。注意 i18N 网页 15:00` | 网站风格和 graph 以 2026-05-25 15:05 附近版本为基准；任何 style/graph/i18n 改动必须先对照历史。 |
++| 9 | `持久建议放入 agent claude ，md` | 用户要求保留的恢复规则必须写入 AGENTS/CLAUDE，并在 reset 前先保存补丁或 checkpoint。 |
++| 10 | `Star没有意义，因为他只是一个历史累计的过程...2026年的这个项目是不是在当前阶段...形成一个数据库...data可以放到HF上` | GitHub 项目排名必须优先看 2026 新增 Star、recent velocity、覆盖完整性和证据质量；累计 Star 只能作为历史 adoption prior。 |
++| 11 | `核心完成 i18N !!! ... 写到Agents和Cloud的MD当中 ... 约束的双语支持。` | i18n 是 public site/README/SEO/metadata 的硬发布门禁；AGENTS 和 CLOUD 必须约束中文默认入口、英文镜像、canonical/alternate、SEO 和验证。 |
+
  开始工作前自问三句：
- 
+
+@@ -95,6 +99,7 @@
+ 3. 完成后要更新哪个索引、论文、网站或结果文件？
+ 4. 如果涉及 GitHub 项目排名，是否已经区分累计 Star 与 2026/new-star growth，并标注 star-history 覆盖状态？
+ 5. 如果涉及公开网站、README、SEO、论文页或 metadata，是否同步检查了中文默认入口、英文镜像、canonical/alternate 和双语缺口？
++6. 如果涉及公开文案，它是否服从最高指导：有逻辑、可读、可吸收、双语同证据链，并完成 `3-5` 个读者/编辑 agents + `3` 个学术 agents 审查，或明确记录未完成审查的发布风险？
+
+ 研究任务开始前额外检查 wiki：
+
+@@ -263,7 +268,7 @@ rg -n "old/path/or/file" -g '!*node_modules*' -g '!site/dist/**'
+ <!-- gitnexus:start -->
+ # GitNexus — Code Intelligence
+
+-This project is indexed by GitNexus as **awesome-evolution-workspace-cleanup** (27533 symbols, 32242 relationships, 163 execution flows). Use the GitNexus MCP tools to understand code, assess impact, and navigate safely.
++This project is indexed by GitNexus as **awesome-evolution-workspace-cleanup** (27993 symbols, 32835 relationships, 168 execution flows). Use the GitNexus MCP tools to understand code, assess impact, and navigate safely.
+
+ > If any GitNexus tool warns the index is stale, run `npx gitnexus analyze` in terminal first.
+
 diff --git a/CLAUDE.md b/CLAUDE.md
-index 55d4674..567cb4f 100644
+index 0ffdbae..1c63de4 100644
 --- a/CLAUDE.md
 +++ b/CLAUDE.md
-@@ -25,6 +25,26 @@ Claude/Claude Code 在本仓库工作时，以 [AGENTS.md](AGENTS.md) 为最高
+@@ -4,9 +4,10 @@ Claude/Claude Code 在本仓库工作时，以 [AGENTS.md](AGENTS.md) 为最高
+
+ ## Priority
+
+-1. 先以当前对话里的用户直接输入为准；本地私有用户输入记忆只能辅助判断，禁止提交或发布。
+-2. 再读 [README.md](README.md)、[CONTENT_INDEX.md](CONTENT_INDEX.md)、[docs/project-management/project-structure.md](docs/project-management/project-structure.md)。
+-3. 改动后刷新 [docs/indexes/master-index.md](docs/indexes/master-index.md)。
++1. 公开文案质量是最高指导：网页、README、README-EN、论文页、topic/blog/SEO 入口和 metadata 必须有逻辑、可读、可吸收、双语同证据链，并通过读者/编辑 agents 与学术 agents 双通道审查。
++2. 再以当前对话里的用户直接输入为准；本地私有用户输入记忆只能辅助判断，禁止提交或发布。
++3. 再读 [README.md](README.md)、[CONTENT_INDEX.md](CONTENT_INDEX.md)、[docs/project-management/project-structure.md](docs/project-management/project-structure.md)。
++4. 改动后刷新 [docs/indexes/master-index.md](docs/indexes/master-index.md)。
+
+ ## User Input Privacy
+
+@@ -23,6 +24,7 @@ Claude/Claude Code 在本仓库工作时，以 [AGENTS.md](AGENTS.md) 为最高
+ - 对项目卡，使用 model-card 类结构：任务、方法、证据、局限、适用场景、教学价值。
+ - **图表优先**：当图表比文字更容易表达时，必须使用 Mermaid DAG、SVG 或数据可视化，不要只写文字。
+ - **Mom Test**：README 和面向用户的内容必须让非专业人士能理解项目做什么、为什么重要。
++- **Public copy review gate**：所有公开文案，尤其网站、README、README-EN、SEO/topic/blog 页面和 metadata，发布前必须经过 `3-5` 个读者/编辑 agents 与 `3` 个学术 agents 审查。读者/编辑看可读性、Mom Test、行动路径、中英入口；学术 agents 看术语、证据链、claim 强度、限制和 `[UNVERIFIED]`。无法调度时必须在交付中写明风险，不能标记为质量已完成。
  - **证据链**：每个分析结论标注数据来源。无法追溯的标注 `[UNVERIFIED]`。
  - **中文调查同步**：`survey/` 是中文版调查，与 `paper-drafts/` 平行。修改一方时检查另一方是否需要同步。
- 
-+## Website Style Baseline
+ - **读者/Agent 边界**：README、网站首页、论文页、SEO 页面是给外部读者/消费者看的；不要把 agent 启动检查、内部构建命令、wiki ingest 流程、handoff 或自我系统说明塞进 README 主体。Agent 操作规则写在 `AGENTS.md`、`CLAUDE.md`、`CLOUD.md` 或 `docs/ops/`。
+@@ -37,6 +39,7 @@ Claude 处理网页、样式、graph 或 i18n 时，必须先按 [AGENTS.md](AGE
+ - 视觉要求：浅色 paper 背景、EB Garamond 标题、蓝色 caret、橙色 CTA、克制边框和 8px 左右圆角；不要改成深色炫技、玻璃拟态、营销大卡片或另一个 design system。
+ - Graph 要求：保留 `/graph/` 的圆形 Knowledge graph、搜索/类型过滤和 AI Research Prompt 面板；不要用 `EvolutionNetwork.tsx` 这类首页 mockup 替代真实 graph。
+ - i18n 要求：当前网页主语言是中文 `zh-CN`，中文导航、metadata、SEO copy 必须保留。新增英文或多语言时，不能牺牲中文入口和 canonical/alternate。
++- 文案质量要求：网页与 README 改动必须按 Public copy review gate 完成读者/编辑审查和学术审查，审查结果需要覆盖中文主叙事、英文镜像、证据入口、限制说明和读者下一步。
+ - 验证要求：网页改动后至少执行 `(cd site && npm run build)`，并用桌面和约 390px 移动视口检查 `/` 与 `/graph/`，确认没有横向溢出、graph 非空、Prompt 面板可见。
+
+ ## Persistence Baseline
+@@ -194,7 +197,7 @@ node scripts/generate-wiki-index.mjs
+ <!-- gitnexus:start -->
+ # GitNexus — Code Intelligence
+
+-This project is indexed by GitNexus as **awesome-evolution-workspace-cleanup** (27533 symbols, 32242 relationships, 163 execution flows). Use the GitNexus MCP tools to understand code, assess impact, and navigate safely.
++This project is indexed by GitNexus as **awesome-evolution-workspace-cleanup** (27993 symbols, 32835 relationships, 168 execution flows). Use the GitNexus MCP tools to understand code, assess impact, and navigate safely.
+
+ > If any GitNexus tool warns the index is stale, run `npx gitnexus analyze` in terminal first.
+
+diff --git a/CLOUD.md b/CLOUD.md
+index acad03a..4bd0a90 100644
+--- a/CLOUD.md
++++ b/CLOUD.md
+@@ -2,4 +2,6 @@
+
+ This root file is kept as a compatibility entrypoint. The maintained cloud and operations notes live at [docs/ops/CLOUD.md](docs/ops/CLOUD.md).
+
+-Bilingual/i18n release gates for the public website, README pair, SEO pages, metadata, canonical URLs, and alternate language links are governed by [docs/ops/CLOUD.md](docs/ops/CLOUD.md) and [AGENTS.md](AGENTS.md).
++Highest guidance: public webpages, README, README-EN, paper pages, topic/blog/SEO entries, and metadata must prioritize logic, readability, reader absorption, bilingual same-evidence-chain copy, and reader/editor + academic review over page count, SEO volume, visuals, or internal workflow.
 +
-+Claude 处理网页、样式、graph 或 i18n 时，必须先按 [AGENTS.md](AGENTS.md) 的 Website Style Lock 执行。当前站点不是空白重设计任务，而是需要保持 2026-05-25 15:05 +0800 附近版本的 Caret/editorial 风格。
++Bilingual/i18n and public-copy review gates for the website, README pair, SEO pages, metadata, canonical URLs, alternate language links, reader/editor review agents, and academic review agents are governed by [docs/ops/CLOUD.md](docs/ops/CLOUD.md) and [AGENTS.md](AGENTS.md).
+diff --git a/docs/ops/CLOUD.md b/docs/ops/CLOUD.md
+index ba3a414..384274d 100644
+--- a/docs/ops/CLOUD.md
++++ b/docs/ops/CLOUD.md
+@@ -2,6 +2,8 @@
+
+ ## L1
+
++- **Highest public-copy guidance**: 用户已明确“这条就是最高的一个指导”。公开网页、README、README-EN、论文页、topic/blog/SEO 入口和 metadata 必须先保证逻辑、可读性、吸收度、双语同证据链和审查质量；页面数量、SEO 覆盖、内部 workflow、视觉效果都不能压过这个要求。
 +
-+- 参考提交：`3fd1785`（15:05，graph/i18n/home 相关），严格 15:00 前快照为 `e2f4518`（14:53）。
-+- 关键文件：`site/src/styles/global.css`、`site/src/pages/index.astro`、`site/src/pages/graph/index.astro`、`site/src/layouts/BaseLayout.astro`、`site/src/data/site.ts`。
-+- 视觉要求：浅色 paper 背景、EB Garamond 标题、蓝色 caret、橙色 CTA、克制边框和 8px 左右圆角；不要改成深色炫技、玻璃拟态、营销大卡片或另一个 design system。
-+- Graph 要求：保留 `/graph/` 的圆形 Knowledge graph、搜索/类型过滤和 AI Research Prompt 面板；不要用 `EvolutionNetwork.tsx` 这类首页 mockup 替代真实 graph。
-+- i18n 要求：当前网页主语言是中文 `zh-CN`，中文导航、metadata、SEO copy 必须保留。新增英文或多语言时，不能牺牲中文入口和 canonical/alternate。
-+- 验证要求：网页改动后至少执行 `(cd site && npm run build)`，并用桌面和约 390px 移动视口检查 `/` 与 `/graph/`，确认没有横向溢出、graph 非空、Prompt 面板可见。
+ 云端发布以 `site/` 的 Astro 静态站点为主，公开下载资源来自 `site/public/reports/` 和论文 PDF。
+
+ ## Deployment Source
+@@ -34,6 +36,7 @@
+ - 论文页面必须展示数据范围、PDF、关键发现和限制。
+ - README 和公开站点页面默认面向读者/消费者：解释项目价值、核心结论、证据入口和下一步阅读。Agent 操作、自动化验证、发布门禁和内部 handoff 规则只放在 `AGENTS.md`、`CLAUDE.md`、`CLOUD.md`、`docs/ops/`，不要写进 README 主体。
+ - 双语发布是 SEO 要求的一部分：中文 `zh-CN` 是默认入口，英文是同证据链镜像；不得发布只剩英文导航、英文 metadata 或失去中文读者路径的站点。
++- 文案质量是 SEO 和发布质量的一部分：所有公开 copy，尤其 `site/src/` 页面、`README.md`、`README-EN.md`、topic/SEO/blog 页面和 metadata，发布前必须经过读者/编辑 agents 与学术 agents 双通道审查。
+
+ ## Bilingual i18n Release Gates
+
+@@ -46,6 +49,17 @@
+ 5. **内部说明不进 public copy**：构建命令、agent 启动检查、handoff、wiki ingest、发布门禁说明只放在 `AGENTS.md`、`CLAUDE.md`、`CLOUD.md`、`docs/ops/`；公开页面只写读者价值、证据链和下一步阅读。
+ 6. **缺口可见**：发布前运行 `rg -n "TODO i18n|EN-PENDING|未翻译|待翻译|TODO: translate" README.md README-EN.md site/src docs/seo`；若有命中，必须修复或在交付说明中列出剩余风险。
+
++## Public Copy Review Gates
 +
-+## Persistence Baseline
++这些门禁来自用户直接要求“所有的文案都经过 3-5 个读者以及编辑 agents 进行审查 + 3 个学术 agents 进行审查保证质量”，并被用户特别强调适用于“网页”和“readme”。
 +
-+Claude 遇到用户要求“写入”“持久”“别丢”“恢复昨天版本”时，必须把结果从临时工作区变成可恢复状态。
++1. **适用范围**：`README.md`、`README-EN.md`、`site/src/pages/**`、`site/src/content/**`、`site/src/data/site.ts`、SEO/topic/blog 页面、论文页、项目入口、导航 copy、Open Graph/Twitter metadata。
++2. **读者/编辑审查 `3-5` 个 agents**：覆盖非专业读者、工程读者、研究读者、SEO/编辑读者和产品/行业读者；检查一句话是否清楚、三句话是否有证据、五句话是否能导向下一步。
++3. **学术审查 `3` 个 agents**：覆盖术语/定义、方法/证据、限制/可复现三个视角；检查 claim 强度、引用路径、benchmark 口径、`[UNVERIFIED]` 标注和是否夸大结论。
++4. **中英一致性**：审查必须同时看中文默认入口与英文镜像，确认英文没有新增无来源承诺，中文没有被稀释或删除。
++5. **发布阻断**：没有完成审查、审查发现高风险、或无法调度 agents 但未记录缺口时，不能宣称 public copy、网页或 README 已完成质量门禁。
++6. **汇报格式**：最终交付至少写明 reader/editor verdict、academic verdict、剩余风险、执行的构建或索引验证。
 +
-+- 任何 `git reset`、`git restore`、`git checkout`、`git clean` 或大范围生成脚本前，先看 `git status --short`，再看关键文件 diff。
-+- 若不能立即提交，先保存补丁到 `work/`，尤其是 `AGENTS.md`、`CLAUDE.md`、`site/src/styles/global.css`、`site/src/pages/index.astro`、`site/src/pages/graph/index.astro`、`site/src/layouts/BaseLayout.astro`、`site/src/data/site.ts`。
-+- 恢复风格/graph/i18n 时，不重新设计；先对照 `3fd1785`、`e2f4518`、`git reflog --date=iso -20` 和已有补丁。
-+- 最终交接必须说明改动是否已经提交；未提交时明确提示 reset 会再次丢失。
-+
- ## Validation
- 
+ ## Release Gates
+
  ```bash
-diff --git a/site/src/components/EvolutionNetwork.tsx b/site/src/components/EvolutionNetwork.tsx
-deleted file mode 100644
-index 9c84975..0000000
---- a/site/src/components/EvolutionNetwork.tsx
-+++ /dev/null
-@@ -1,111 +0,0 @@
--import { useEffect, useRef } from 'react';
--import { gsap } from 'gsap';
--
--type NodeItem = {
--  label: string;
--  meta: string;
--  x: number;
--  y: number;
--};
--
--const nodes: NodeItem[] = [
--  { label: 'Raw', meta: '519 captures', x: 18, y: 24 },
--  { label: 'Processed', meta: 'analysis', x: 42, y: 18 },
--  { label: 'Work', meta: 'paper/site', x: 66, y: 28 },
--  { label: 'Results', meta: 'reports', x: 82, y: 52 },
--  { label: 'Benchmarks', meta: 'eval', x: 34, y: 58 },
--  { label: 'Model cards', meta: 'teaching', x: 58, y: 62 }
--];
--
--const edges = [
--  [0, 1],
--  [1, 2],
--  [2, 3],
--  [1, 4],
--  [4, 5],
--  [5, 3]
--];
--
--export default function EvolutionNetwork() {
--  const rootRef = useRef<HTMLDivElement>(null);
--
--  useEffect(() => {
--    const root = rootRef.current;
--    if (!root) return;
--
--    const ctx = gsap.context(() => {
--      gsap.fromTo(
--        '.network-node',
--        { opacity: 0, y: 5 },
--        { opacity: 1, y: 0, duration: 0.65, stagger: 0.08, ease: 'power2.out' }
--      );
--      gsap.fromTo(
--        '.network-edge',
--        { strokeDashoffset: 80, opacity: 0.18 },
--        { strokeDashoffset: 0, opacity: 1, duration: 1.2, stagger: 0.05, ease: 'power2.out' }
--      );
--      gsap.to('.network-caret.active', {
--        opacity: 0.25,
--        duration: 0.72,
--        repeat: -1,
--        yoyo: true,
--        ease: 'steps(1)'
--      });
--    }, root);
--
--    return () => ctx.revert();
--  }, []);
--
--  return (
--    <div className="evolution-network" ref={rootRef} aria-label="Self Evolve research pipeline mockup">
--      <svg viewBox="0 0 100 78" role="img">
--        <title>Self Evolve evidence pipeline</title>
--        {edges.map(([sourceIndex, targetIndex]) => {
--          const source = nodes[sourceIndex];
--          const target = nodes[targetIndex];
--          return (
--            <line
--              className="network-edge"
--              key={`${source.label}-${target.label}`}
--              x1={source.x}
--              y1={source.y}
--              x2={target.x}
--              y2={target.y}
--              pathLength="80"
--            />
--          );
--        })}
--        <rect className="network-core" x="33" y="32" width="34" height="14" rx="2.7" />
--        <line className="network-caret active" x1="37" y1="35" x2="37" y2="43" />
--        <text className="network-core-text" x="51" y="38.2">
--          self evolve index
--        </text>
--        <text className="network-core-text small" x="51" y="42.6">
--          raw to evidence to public site
--        </text>
--        {nodes.map((node, index) => (
--          <g className="network-node" key={node.label} transform={`translate(${node.x} ${node.y})`}>
--            <rect className="network-card" x="-9.5" y="-6.6" width="19" height="13.2" rx="2.2" />
--            <line
--              className={`network-caret ${index === 2 ? 'active' : 'ghost'}`}
--              x1="-6.4"
--              y1="-3.9"
--              x2="-6.4"
--              y2="3.9"
--            />
--            <text x="1.5" y="-0.8">
--              {node.label}
--            </text>
--            <text className="network-meta" x="1.5" y="3.8">
--              {node.meta}
--            </text>
--          </g>
--        ))}
--      </svg>
--      <div className="network-caption">
--        <strong>Evidence chain first</strong>
--        <span>raw, processed analysis, work artifacts, public results</span>
--      </div>
--    </div>
--  );
--}
 diff --git a/site/src/data/site.ts b/site/src/data/site.ts
-index 9bc16e3..8a760a9 100644
+index f5ccf93..141ab68 100644
 --- a/site/src/data/site.ts
 +++ b/site/src/data/site.ts
-@@ -23,9 +23,6 @@ export const nav = [
-   { href: '/research/', label: '研究' },
-   { href: '/paper/', label: '论文' },
-   { href: '/graph/', label: '图谱' },
--  { href: '/visualizations/', label: '可视化' },
--  { href: '/propagation/', label: '传播链' },
--  { href: '/reviews/', label: '评审' },
+@@ -4,9 +4,9 @@ const configuredSiteUrl = import.meta.env.PUBLIC_SITE_URL || defaultSiteUrl;
+ export const site = {
+   name: 'Self Evolve',
+   url: configuredSiteUrl.replace(/\/$/, ''),
+-  title: 'Self Evolve AI — AI 自我进化研究、项目与实践指南',
++  title: 'Self Evolve AI — Self-Evolving Agents Survey / AI 自进化证据地图',
+   description:
+-    'Self Evolve 是面向 AI 自我进化、自进化智能体、代码自我改进、迭代式优化与自主 AI 系统的中文研究与项目索引。',
++    'Self Evolve is a bilingual evidence map for self-evolving AI agents: definitions, papers, projects, benchmarks, star growth, value classification, and audit boundaries. 中文默认入口保留同一证据链。',
+   keywords: [
+     'Self Evolve AI',
+     'AI Self Evolution',
+@@ -32,15 +32,14 @@ export const site = {
+
+ export const nav = [
+   { href: '/#about', label: '关于' },
++  { href: '/topics/', label: 'Start' },
+   { href: '/projects/', label: '项目' },
+-  { href: '/research/', label: '研究' },
++  { href: '/research/', label: 'Research' },
+   { href: '/survey/', label: 'Survey' },
+-  { href: '/topics/', label: '主题' },
+-  { href: '/paper/', label: '论文' },
+-  { href: '/graph/', label: '图谱' },
++  { href: '/paper/', label: 'Paper' },
++  { href: '/graph/', label: 'Graph' },
    { href: '/blog/', label: '博客' },
-   { href: '/star-analysis/', label: 'Star 分析' },
-   { href: '/#community', label: '社区' }
+   { href: '/search/', label: '搜索' },
+-  { href: '/github/', label: 'GitHub' },
+-  { href: '/star-growth/', label: '增长' },
+-  { href: '/#community', label: '社区' }
++  { href: '/star-growth/', label: 'Growth' },
++  { href: '/value-lsh/', label: 'Value LSH' }
+ ];
 diff --git a/site/src/layouts/BaseLayout.astro b/site/src/layouts/BaseLayout.astro
-index 13aa8cd..87bcf66 100644
+index 92cdeed..56d5022 100644
 --- a/site/src/layouts/BaseLayout.astro
 +++ b/site/src/layouts/BaseLayout.astro
-@@ -17,7 +17,12 @@ const jsonLd = {
-   name: site.name,
+@@ -9,7 +9,11 @@ const {
+   type = 'website',
+   publishedTime,
+   modifiedTime,
+-  pageKeywords = []
++  pageKeywords = [],
++  pageLang = 'zh-CN',
++  alternateZh,
++  alternateEn,
++  xDefault
+ } = Astro.props;
+ const siteRoot = site.url.endsWith('/') ? site.url : `${site.url}/`;
+ const basePath = new URL(siteRoot).pathname.replace(/\/$/, '');
+@@ -19,6 +23,11 @@ const routePath = basePath && Astro.url.pathname.startsWith(basePath)
+ const absoluteUrl = (path = '/') => new URL(String(path).replace(/^\//, ''), siteRoot).toString();
+ const withBase = (path = '/') => `${basePath}${String(path).startsWith('/') ? path : `/${path}`}` || '/';
+ const canonical = absoluteUrl(routePath);
++const zhAlternate = alternateZh ? absoluteUrl(alternateZh) : pageLang === 'zh-CN' ? canonical : undefined;
++const enAlternate = alternateEn ? absoluteUrl(alternateEn) : pageLang === 'en' ? canonical : undefined;
++const defaultAlternate = xDefault ? absoluteUrl(xDefault) : zhAlternate || canonical;
++const langSwitchHref = pageLang === 'en' ? alternateZh : alternateEn;
++const langSwitchLabel = pageLang === 'en' ? '中文' : 'EN';
+ const mergedKeywords = Array.from(new Set([...site.keywords, ...pageKeywords]));
+ const keywords = mergedKeywords.join(', ');
+ const jsonLd = {
+@@ -29,7 +38,7 @@ const jsonLd = {
    url: site.url,
    description: site.description,
--  keywords: site.keywords
-+  keywords: site.keywords,
-+  potentialAction: {
-+    '@type': 'SearchAction',
-+    target: `${siteRoot}search?q={search_term_string}`,
-+    'query-input': 'required name=search_term_string'
-+  }
+   keywords: site.keywords,
+-  inLanguage: 'zh-CN',
++  inLanguage: pageLang === 'en' ? 'en' : ['zh-CN', 'en'],
+   potentialAction: {
+     '@type': 'SearchAction',
+     target: `${siteRoot}search/?q={search_term_string}`,
+@@ -48,7 +57,7 @@ const orgLd = {
  };
- const orgLd = {
-   '@context': 'https://schema.org',
+ ---
+ <!doctype html>
+-<html lang="zh-CN">
++<html lang={pageLang}>
+   <head>
+     <meta charset="utf-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1" />
+@@ -58,6 +67,9 @@ const orgLd = {
+     <meta name="description" content={description} />
+     <meta name="keywords" content={keywords} />
+     <link rel="canonical" href={canonical} />
++    {zhAlternate && <link rel="alternate" hreflang="zh-CN" href={zhAlternate} />}
++    {enAlternate && <link rel="alternate" hreflang="en" href={enAlternate} />}
++    <link rel="alternate" hreflang="x-default" href={defaultAlternate} />
+     <link rel="me" href={site.github} />
+     <link rel="icon" type="image/svg+xml" href={withBase('/og.svg')} />
+     <link rel="alternate" type="application/rss+xml" title="Self Evolve RSS 订阅" href={withBase('/rss.xml')} />
+@@ -67,7 +79,8 @@ const orgLd = {
+     <meta property="og:url" content={canonical} />
+     <meta property="og:image" content={absoluteUrl(image)} />
+     <meta property="og:image:alt" content={imageAlt} />
+-    <meta property="og:locale" content="zh_CN" />
++    <meta property="og:locale" content={pageLang === 'en' ? 'en_US' : 'zh_CN'} />
++    <meta property="og:locale:alternate" content={pageLang === 'en' ? 'zh_CN' : 'en_US'} />
+     <meta property="og:site_name" content={site.name} />
+     {publishedTime && <meta property="article:published_time" content={publishedTime} />}
+     {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
+@@ -90,7 +103,8 @@ const orgLd = {
+       <div class="container nav-inner">
+         <a class="brand" href="/" aria-label="Self Evolve home"><span class="brand-mark"></span><span>Self Evolve</span></a>
+         <nav class="nav-links" aria-label="主导航">{nav.map((item) => <a href={item.href}>{item.label}</a>)}</nav>
+-        <a class="button primary nav-cta" href="/blog/">阅读博客</a>
++        {langSwitchHref && <a class="text-link nav-lang" href={langSwitchHref}>{langSwitchLabel}</a>}
++        <a class="button primary nav-cta" href="/topics/">Start</a>
+         <button class="menu-btn" id="menu-btn" aria-label="打开菜单">☰</button>
+       </div>
+     </header>
+@@ -102,7 +116,7 @@ const orgLd = {
+       <div class="container footer-inner">
+         <div>
+           <strong>Self Evolve</strong>
+-          <p>AI 自我进化中文研究、项目 model card、论文证据链与博客索引。</p>
++          <p>中文默认入口 + English summaries. A bilingual evidence map for self-evolving AI agents, project model cards, papers, benchmarks, and audit boundaries.</p>
+         </div>
+         <nav class="footer-links" aria-label="站点与开源链接">
+           <a href="/resource-library/">资料库覆盖</a>
 diff --git a/site/src/pages/graph/index.astro b/site/src/pages/graph/index.astro
-index 0ecc7cb..aeb9b17 100644
+index aeb9b17..ab4d0cd 100644
 --- a/site/src/pages/graph/index.astro
 +++ b/site/src/pages/graph/index.astro
-@@ -1,36 +1,69 @@
- ---
- import BaseLayout from '@/layouts/BaseLayout.astro';
--import { coreKnowledgeGraph, knowledgeGraph, knowledgeGraphStats } from '@/data/knowledgeGraph';
--import { researchCoverage } from '@/data/researchCoverage';
-+import { knowledgeGraph, knowledgeGraphStats } from '@/data/knowledgeGraph';
-+import { projects } from '@/data/projects';
-+import { featuredResearch } from '@/data/research';
-+import { site } from '@/data/site';
- 
--const coreGraphPayload = JSON.stringify(coreKnowledgeGraph);
--const fullGraphPayload = JSON.stringify(knowledgeGraph);
-+const graphPayload = JSON.stringify(knowledgeGraph);
-+const slugify = (value: string) => value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
-+const encodeId = (prefix: string, value: string) =>
-+  `${prefix}:${encodeURIComponent(value.toLowerCase().trim().replace(/\s+/g, '-'))}`;
-+const pdfHref = (url?: string) => {
-+  if (!url) return '';
-+  const arxiv = url.match(/arxiv\.org\/abs\/([^?#]+)/);
-+  return arxiv ? `https://arxiv.org/pdf/${arxiv[1]}` : url;
-+};
-+const rankedProjects = [...projects].sort((a, b) => Number(b.stars || 0) - Number(a.stars || 0));
-+const rankByRepo = new Map(rankedProjects.map((project, index) => [project.repo.toLowerCase(), index + 1]));
-+const graphMetaPayload = JSON.stringify({
-+  projects: Object.fromEntries(projects.map((project) => [
-+    encodeId('project', project.repo),
-+    {
-+      kind: 'project',
-+      name: project.name,
-+      repo: project.repo,
-+      url: project.url,
-+      href: `/projects/${slugify(project.repo)}/`,
-+      reportHref: `/reports/${project.report}`,
-+      localPath: project.localPath,
-+      stars: project.stars,
-+      forks: project.forks,
-+      rank: rankByRepo.get(project.repo.toLowerCase()),
-+      category: project.category,
-+      pattern: project.pattern,
-+      tags: project.tags,
-+      summary: project.description,
-+      updated: project.lastPushed?.slice(0, 10)
-+    }
-+  ])),
-+  papers: Object.fromEntries(featuredResearch.map((paper) => [
-+    encodeId('paper', paper.slug || paper.title),
-+    {
-+      kind: 'paper',
-+      title: paper.title,
-+      url: paper.url,
-+      pdfHref: pdfHref(paper.url),
-+      href: paper.slug ? `/research/${paper.slug}/` : '',
-+      year: paper.year,
-+      cluster: paper.cluster,
-+      relation: paper.relation,
-+      tags: paper.tags,
-+      summary: paper.insight
-+    }
-+  ]))
-+});
-+const siteBasePath = new URL(site.url).pathname.replace(/\/$/, '');
- ---
- <BaseLayout title="Self Evolve 知识图谱 — 项目、论文与机制关系" description="Self Evolve 知识图谱，把自进化 AI 项目、论文、机制标签和研究簇连接成可检索的关系网络。">
--  <section class="section">
--    <div class="container">
--      <div class="eyebrow">Knowledge Graph / 知识图谱</div>
--      <h1 class="gradient-text">项目、论文、机制和证据关系。</h1>
--      <p class="lead">当前图谱不再只取少数代表论文：默认展示 Core 150，可切换到 Full corpus 查看项目、{researchCoverage.reviewFiles} 篇论文 review、raw paper 索引和待补主流论文缺口。</p>
--      <div class="metrics">
--        <div class="metric"><strong>{knowledgeGraphStats.nodes}</strong><span>nodes</span></div>
--        <div class="metric"><strong>{knowledgeGraphStats.edges}</strong><span>edges</span></div>
--        <div class="metric"><strong>{researchCoverage.identifiedCoverageGaps}</strong><span>paper gaps to review</span></div>
--      </div>
--    </div>
--  </section>
--
-   <section class="section graph-section">
--    <div class="container graph-shell">
-+    <div class="graph-shell">
-       <div class="graph-panel">
-         <div class="graph-toolbar">
--          <label>
--            <span>Scope</span>
--            <select id="graph-scope">
--              <option value="core">Core 150</option>
--              <option value="full">Full corpus</option>
--            </select>
--          </label>
-+          <div class="graph-title">
-+            <h1>Knowledge graph</h1>
-+            <p>{knowledgeGraphStats.nodes} nodes · {knowledgeGraphStats.edges} edges · {knowledgeGraphStats.projects + knowledgeGraphStats.papers} projects + papers</p>
-+          </div>
-           <label>
-             <span>Search</span>
-             <input id="graph-search" type="search" placeholder="openevolve, Reflexion, 评估器..." />
-@@ -45,129 +78,337 @@ const fullGraphPayload = JSON.stringify(knowledgeGraph);
-               <option value="cluster">Clusters</option>
-             </select>
-           </label>
-+          <p id="graph-count" class="graph-count" aria-live="polite"></p>
-         </div>
--        <svg id="knowledge-graph" viewBox="0 0 1100 680" role="img" aria-label="Self Evolve knowledge graph"></svg>
-+        <svg id="knowledge-graph" viewBox="0 0 1400 720" role="img" aria-label="Self Evolve knowledge graph"></svg>
-       </div>
--      <aside class="graph-detail" id="graph-detail">
--        <div class="eyebrow">Selected Node</div>
--        <h2>点击节点查看关系</h2>
--        <p>搜索或选择类型后，图谱会高亮匹配节点及其直接关系。Full corpus 可审计全量材料；Core 150 保留可读性。</p>
--        <h3>Paper coverage warning</h3>
--        <p>{researchCoverage.coverageWarning}</p>
--      </aside>
--    </div>
--  </section>
--
--  <section class="section" id="coverage-debt">
--    <div class="container">
--      <div class="section-head">
--        <div>
--          <div class="eyebrow">Coverage Debt / 论文缺口</div>
--          <h2>论文这块还不够，必须公开追踪。</h2>
-+      <aside class="graph-prompt-panel" id="graph-detail">
-+        <div class="eyebrow">AI Research Prompt</div>
-+        <h2 id="graph-prompt-title">点击节点生成调研 Prompt</h2>
-+        <p id="graph-prompt-summary">选择 graph 中的项目、论文、概念或 cluster 后，这里会自动组装可复制给 AI 的继续调研提示词。</p>
-+        <div class="graph-prompt-links" id="graph-prompt-links"></div>
-+        <textarea id="graph-prompt" readonly rows="14" aria-label="AI research prompt"></textarea>
-+        <div class="graph-prompt-actions">
-+          <button class="button primary" id="copy-graph-prompt" type="button">Copy prompt</button>
-+          <span id="copy-graph-prompt-status" aria-live="polite"></span>
-         </div>
--      </div>
--      <div class="grid">
--        {researchCoverage.coverageGaps.map((paper) => (
--          <article class="card">
--            <div class="eyebrow">{paper.year} · {paper.status}</div>
--            <h3><a href={paper.url} target="_blank" rel="noopener">{paper.title}</a></h3>
--            <p>{paper.reason}</p>
--          </article>
--        ))}
--      </div>
-+      </aside>
-     </div>
-   </section>
- 
--  <script is:inline define:vars={{ coreGraphPayload, fullGraphPayload }}>
--    const graphs = {
--      core: JSON.parse(coreGraphPayload),
--      full: JSON.parse(fullGraphPayload)
--    };
--    let graph = graphs.core;
-+  <script is:inline define:vars={{ graphPayload, graphMetaPayload, siteBasePath }}>
-+    /* @sm:node knowledge-graph-readable-radial-layout
-+     * Purpose: render the static Self Evolve knowledge graph as a readable, inspectable SVG.
-+     * Inputs: site/src/data/knowledgeGraph.ts payload.
-+     * Verification: /graph/ desktop and mobile screenshots plus `npm run build`.
-+     */
-+    const graph = JSON.parse(graphPayload);
-+    const graphMeta = JSON.parse(graphMetaPayload);
-     const svg = document.querySelector('#knowledge-graph');
--    const detail = document.querySelector('#graph-detail');
--    const scopeSelect = document.querySelector('#graph-scope');
-     const search = document.querySelector('#graph-search');
-     const typeSelect = document.querySelector('#graph-type');
--    const width = 1100;
--    const height = 680;
--    const center = { x: width / 2, y: height / 2 };
-+    const graphCount = document.querySelector('#graph-count');
-+    const promptTitle = document.querySelector('#graph-prompt-title');
-+    const promptSummary = document.querySelector('#graph-prompt-summary');
-+    const promptLinks = document.querySelector('#graph-prompt-links');
-+    const promptTextarea = document.querySelector('#graph-prompt');
-+    const copyPromptButton = document.querySelector('#copy-graph-prompt');
-+    const copyPromptStatus = document.querySelector('#copy-graph-prompt-status');
-+    let selectedNodeId = null;
-+    let width = 1400;
-+    let height = 720;
-+    let center = { x: width / 2, y: height / 2 };
-     const typeOrder = ['cluster', 'concept', 'paper', 'project'];
-     const typeColor = {
--      project: '#7cf7d4',
--      paper: '#ffcf7c',
--      concept: '#9f7cff',
--      cluster: '#f6f8ff'
-+      project: '#1A1A1A',
-+      paper: '#FFB347',
-+      concept: '#007AFF',
-+      cluster: '#FF5B00'
-     };
- 
--    let byId = new Map();
--    let adjacency = new Map();
-+    const byId = new Map(graph.nodes.map((node) => [node.id, node]));
-+    const metaById = new Map([
-+      ...Object.entries(graphMeta.projects),
-+      ...Object.entries(graphMeta.papers)
-+    ]);
-+    const adjacency = new Map(graph.nodes.map((node) => [node.id, new Set()]));
-+    const degree = new Map(graph.nodes.map((node) => [node.id, 0]));
-+    for (const edge of graph.edges) {
-+      adjacency.get(edge.source)?.add(edge.target);
-+      adjacency.get(edge.target)?.add(edge.source);
-+      degree.set(edge.source, (degree.get(edge.source) || 0) + 1);
-+      degree.set(edge.target, (degree.get(edge.target) || 0) + 1);
-+    }
- 
--    function indexGraph() {
--      byId = new Map(graph.nodes.map((node) => [node.id, node]));
--      adjacency = new Map(graph.nodes.map((node) => [node.id, new Set()]));
--      for (const edge of graph.edges) {
--        adjacency.get(edge.source)?.add(edge.target);
--        adjacency.get(edge.target)?.add(edge.source);
-+    function stableHash(value) {
-+      let hash = 0;
-+      for (let index = 0; index < value.length; index += 1) {
-+        hash = (hash * 31 + value.charCodeAt(index)) >>> 0;
-       }
-+      return hash;
-+    }
-+
-+    function nodeRank(node) {
-+      return (node.weight || 1) * 8 + (degree.get(node.id) || 0);
+@@ -327,7 +327,7 @@ ${linkLines}
+ 1. 这个节点在 Self Evolve 中的机制位置：它改进 prompt、代码、记忆、工具、策略、数据、模型权重，还是 agent 组织？
+ 2. 证据质量 rank：按 GitHub stars/最近活跃、论文可信度、可复现实验、benchmark/评估器是否明确排序。
+ 3. 对应 GitHub 仓库和论文/PDF 的证据表：每条证据说明它支持了什么判断。
+-4. 与相邻项目/论文的差异：哪些只是同名概念，哪些真正有新机制。
++4. 与相邻项目/论文的差异：哪些只是同名概念，哪些有可证据支持的新机制。
+ 5. 下一步研究计划：raw 要抓什么、processed 要抽取什么、work 中要画什么图、results 可以产出什么文章/报告。
+ 6. 风险与限制：数据缺口、过时仓库、不可复现实验、概念误连。`;
      }
- 
--    function placeNodes() {
--      const grouped = graph.nodes.reduce((acc, node) => {
-+    function ranked(nodes) {
-+      return [...nodes].sort((a, b) => nodeRank(b) - nodeRank(a));
-+    }
-+
-+    function syncCanvas() {
-+      const box = svg.getBoundingClientRect();
-+      width = Math.max(320, Math.round(box.width || width));
-+      height = Math.max(420, Math.round(box.height || height));
-+      center = { x: width / 2, y: height / 2 };
-+      svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
-+    }
-+
-+    const prominentLabelIds = new Set([
-+      ...ranked(graph.nodes.filter((node) => node.type === 'cluster')).slice(0, 8).map((node) => node.id),
-+      ...ranked(graph.nodes.filter((node) => node.type === 'concept')).slice(0, 6).map((node) => node.id)
-+    ]);
-+
-+    function defaultVisibleIds() {
-+      const groups = graph.nodes.reduce((acc, node) => {
-         acc[node.type] ||= [];
-         acc[node.type].push(node);
-         return acc;
-       }, {});
-+      const limit = width < 700
-+        ? { concept: 34, paper: 18, project: 48 }
-+        : width < 1100
-+          ? { concept: 62, paper: 28, project: 84 }
-+          : { concept: 88, paper: 36, project: 126 };
-+      return new Set([
-+        ...ranked(groups.cluster || []).map((node) => node.id),
-+        ...ranked(groups.concept || []).slice(0, limit.concept).map((node) => node.id),
-+        ...ranked(groups.paper || []).slice(0, limit.paper).map((node) => node.id),
-+        ...ranked(groups.project || []).slice(0, limit.project).map((node) => node.id)
-+      ]);
-+    }
-+
-+    function matchIds() {
-+      const q = search.value.trim().toLowerCase();
-+      const type = typeSelect.value;
-+      const direct = graph.nodes.filter((node) => {
-+        const typeOk = type === 'all' || node.type === type;
-+        const textOk = !q || `${node.label} ${node.summary || ''}`.toLowerCase().includes(q);
-+        return typeOk && textOk;
-+      });
-+
-+      if (!q && type === 'all') return defaultVisibleIds();
-+
-+      const visible = new Set(ranked(direct).slice(0, q ? 120 : 220).map((node) => node.id));
-+      for (const node of direct.slice(0, q ? 48 : 120)) {
-+        for (const neighbor of adjacency.get(node.id) || []) visible.add(neighbor);
-+      }
-+      return visible;
-+    }
-+
-+    function placeNodes(displayNodes) {
-+      const grouped = Object.groupBy
-+        ? Object.groupBy(displayNodes, (node) => node.type)
-+        : displayNodes.reduce((acc, node) => {
-+            acc[node.type] ||= [];
-+            acc[node.type].push(node);
-+            return acc;
-+          }, {});
- 
-       typeOrder.forEach((type, ring) => {
--        const list = grouped[type] || [];
--        const radius = scopeSelect.value === 'full' ? [64, 170, 300, 435][ring] : [70, 190, 310, 420][ring];
-+        const list = ranked(grouped[type] || []);
-+        const maxRadius = Math.min(width * .38, height * .43);
-+        const radius = maxRadius * [.18, .44, .68, .92][ring];
-+        const xStretch = Math.min(1.85, Math.max(1.05, (width / height) * .74));
-         list.forEach((node, index) => {
-           const angle = (Math.PI * 2 * index) / Math.max(list.length, 1) - Math.PI / 2 + ring * 0.34;
--          node.x = center.x + Math.cos(angle) * radius;
--          node.y = center.y + Math.sin(angle) * radius;
-+          const jitter = ((stableHash(node.id) % 100) / 100 - .5) * 24;
-+          node.x = center.x + Math.cos(angle) * (radius * xStretch + jitter);
-+          node.y = center.y + Math.sin(angle) * (radius + jitter * .6);
-         });
-       });
-     }
- 
--    function matches(node) {
--      const q = search.value.trim().toLowerCase();
--      const type = typeSelect.value;
--      const typeOk = type === 'all' || node.type === type;
--      const textOk = !q || `${node.label} ${node.summary || ''}`.toLowerCase().includes(q);
--      return typeOk && textOk;
-+    function shouldLabel(node, active, related) {
-+      const q = search.value.trim();
-+      if (width < 700 && !q) return active || related;
-+      return active || related || prominentLabelIds.has(node.id) || (q && node.type !== 'project');
-+    }
-+
-+    function nodeRadius(node, active, related) {
-+      const base = 4.5 + Math.min(10, Math.sqrt(Math.max(1, nodeRank(node))) * 1.1);
-+      if (active) return base + 5;
-+      if (related) return base + 2;
-+      return base;
-+    }
-+
-+    function absoluteHref(value) {
-+      if (!value) return '';
-+      if (/^https?:\/\//.test(value)) return value;
-+      const clean = value.startsWith('/') ? value : `/${value}`;
-+      return `${location.origin}${siteBasePath}${clean}`;
-+    }
-+
-+    function directRelations(id, limit = 18) {
-+      return [...(adjacency.get(id) || [])]
-+        .map((nodeId) => byId.get(nodeId))
-+        .filter(Boolean)
-+        .sort((a, b) => nodeRank(b) - nodeRank(a))
-+        .slice(0, limit);
-+    }
-+
-+    function materialLinksForNode(node) {
-+      const meta = metaById.get(node.id);
-+      const links = [];
-+      if (meta?.kind === 'project') {
-+        links.push({ label: `${meta.name} model card`, href: absoluteHref(meta.href), note: `rank #${String(meta.rank).padStart(3, '0')} · ${Number(meta.stars || 0).toLocaleString()} stars` });
-+        links.push({ label: `${meta.repo} GitHub`, href: meta.url, note: `${meta.category} · ${meta.updated}` });
-+        links.push({ label: `${meta.name} published report`, href: absoluteHref(meta.reportHref), note: meta.localPath ? `local: ${meta.localPath}` : 'site report' });
-+      } else if (meta?.kind === 'paper') {
-+        if (meta.href) links.push({ label: `${meta.title} research note`, href: absoluteHref(meta.href), note: `${meta.year}${meta.cluster ? ` · ${meta.cluster}` : ''}` });
-+        if (meta.url) links.push({ label: `${meta.title} source`, href: meta.url, note: meta.relation || 'paper source' });
-+        if (meta.pdfHref) links.push({ label: `${meta.title} PDF`, href: meta.pdfHref, note: 'paper PDF / publisher page' });
-+      } else if (node.url) {
-+        links.push({ label: `${node.label} source`, href: node.url, note: node.type });
-+      }
-+      return links;
-+    }
-+
-+    function uniqueLinks(nodes) {
-+      const seen = new Set();
-+      const links = [];
-+      for (const node of nodes) {
-+        for (const link of materialLinksForNode(node)) {
-+          if (!link.href || seen.has(link.href)) continue;
-+          seen.add(link.href);
-+          links.push(link);
-+        }
-+      }
-+      return links.slice(0, 18);
-+    }
-+
-+    function nodeLine(node) {
-+      const meta = metaById.get(node.id);
-+      if (meta?.kind === 'project') {
-+        return `- project: ${meta.name} (${meta.repo}) | rank #${String(meta.rank).padStart(3, '0')} | stars ${Number(meta.stars || 0).toLocaleString()} | pattern: ${meta.pattern}`;
-+      }
-+      if (meta?.kind === 'paper') {
-+        return `- paper: ${meta.title} (${meta.year}) | cluster: ${meta.cluster || 'unknown'} | relation: ${meta.relation || 'unknown'}`;
-+      }
-+      return `- ${node.type}: ${node.label}${node.summary ? ` | ${node.summary}` : ''}`;
-+    }
-+
-+    function buildPrompt(selectedId, displayNodes) {
-+      const selected = selectedId ? byId.get(selectedId) : null;
-+      const focusNodes = selected ? [selected, ...directRelations(selected.id, 14)] : ranked(displayNodes).slice(0, 16);
-+      const relationNodes = selected ? focusNodes.slice(1) : focusNodes;
-+      const links = uniqueLinks(focusNodes);
-+      const focusTitle = selected ? `${selected.label} (${selected.type})` : '当前 Self Evolve graph 视图';
-+      const focusSummary = selected?.summary || '基于当前搜索/类型筛选结果，从项目、论文、概念和 cluster 中继续深挖。';
-+      const linkLines = links.length
-+        ? links.map((link) => `- ${link.label}: ${link.href}${link.note ? ` (${link.note})` : ''}`).join('\n')
-+        : '- 当前节点没有直接 URL；请先使用下方关系节点作为检索入口。';
-+      const relationLines = relationNodes.length
-+        ? relationNodes.map(nodeLine).join('\n')
-+        : '- 暂无直接关系。';
-+      return `你是 Self Evolve / AI 自我进化研究助理。请基于下面的 graph 节点继续做深度调研，不要只总结网页，要沿着 GitHub、论文/PDF、站内报告交叉验证。
-+
-+焦点节点:
-+- ${focusTitle}
-+- 摘要: ${focusSummary}
-+
-+直接关系 / 当前候选:
-+${relationLines}
-+
-+可继续打开的材料链接:
-+${linkLines}
-+
-+请输出:
-+1. 这个节点在 Self Evolve 中的机制位置：它改进 prompt、代码、记忆、工具、策略、数据、模型权重，还是 agent 组织？
-+2. 证据质量 rank：按 GitHub stars/最近活跃、论文可信度、可复现实验、benchmark/评估器是否明确排序。
-+3. 对应 GitHub 仓库和论文/PDF 的证据表：每条证据说明它支持了什么判断。
-+4. 与相邻项目/论文的差异：哪些只是同名概念，哪些真正有新机制。
-+5. 下一步研究计划：raw 要抓什么、processed 要抽取什么、work 中要画什么图、results 可以产出什么文章/报告。
-+6. 风险与限制：数据缺口、过时仓库、不可复现实验、概念误连。`;
-+    }
-+
-+    function updatePrompt(selectedId, displayNodes) {
-+      const selected = selectedId ? byId.get(selectedId) : null;
-+      const focusNodes = selected ? [selected, ...directRelations(selected.id, 14)] : ranked(displayNodes).slice(0, 16);
-+      const links = uniqueLinks(focusNodes);
-+      promptTitle.textContent = selected ? `${selected.label}` : '当前 graph 视图调研 Prompt';
-+      promptSummary.textContent = selected?.summary || `${displayNodes.length} 个可见节点，可先点击具体项目/论文/cluster 生成更聚焦的 Prompt。`;
-+      promptLinks.innerHTML = '';
-+      for (const link of links.slice(0, 8)) {
-+        const anchor = document.createElement('a');
-+        anchor.href = link.href;
-+        anchor.target = '_blank';
-+        anchor.rel = 'noopener';
-+        anchor.textContent = link.label;
-+        promptLinks.append(anchor);
-+      }
-+      promptTextarea.value = buildPrompt(selectedId, displayNodes);
-+      copyPromptStatus.textContent = '';
-     }
- 
-     function render(selectedId) {
--      const matched = new Set(graph.nodes.filter(matches).map((node) => node.id));
-+      syncCanvas();
-+      const matched = matchIds();
-       const selectedNeighbors = selectedId ? adjacency.get(selectedId) || new Set() : new Set();
-+      if (selectedId) {
-+        matched.add(selectedId);
-+        for (const neighbor of selectedNeighbors) matched.add(neighbor);
-+      }
-+      const displayNodes = graph.nodes.filter((node) => matched.has(node.id));
-+      const displayIds = new Set(displayNodes.map((node) => node.id));
-+      placeNodes(displayNodes);
-+      const selectedNode = selectedId ? byId.get(selectedId) : null;
-+      graphCount.textContent = selectedNode
-+        ? `${selectedNode.label} · ${selectedNeighbors.size} relations`
-+        : `${displayNodes.length} of ${graph.nodes.length} nodes`;
-       svg.innerHTML = '';
- 
-       const defs = document.createElementNS('http://www.w3.org/2000/svg', 'defs');
--      defs.innerHTML = '<filter id="glow"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>';
-+      defs.innerHTML = `
-+        <filter id="glow"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-+        <radialGradient id="paper-wash" cx="50%" cy="45%" r="58%">
-+          <stop offset="0%" stop-color="#FFF8F0"/>
-+          <stop offset="100%" stop-color="#FFF0E0"/>
-+        </radialGradient>
-+      `;
-       svg.append(defs);
- 
-+      const maxRadius = Math.min(width * .38, height * .43);
-+      const xStretch = Math.min(1.85, Math.max(1.05, (width / height) * .74));
-+      const wash = document.createElementNS('http://www.w3.org/2000/svg', 'ellipse');
-+      wash.setAttribute('cx', center.x);
-+      wash.setAttribute('cy', center.y);
-+      wash.setAttribute('rx', String(maxRadius * xStretch * 1.05));
-+      wash.setAttribute('ry', String(maxRadius * 1.08));
-+      wash.setAttribute('fill', 'url(#paper-wash)');
-+      wash.setAttribute('opacity', '.82');
-+      svg.append(wash);
-+
-       for (const edge of graph.edges) {
-+        if (!displayIds.has(edge.source) || !displayIds.has(edge.target)) continue;
-         const source = byId.get(edge.source);
-         const target = byId.get(edge.target);
-         if (!source || !target) continue;
-         const active = selectedId && (edge.source === selectedId || edge.target === selectedId);
--        const visible = matched.has(edge.source) || matched.has(edge.target) || active;
-         const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-         line.setAttribute('x1', source.x);
-         line.setAttribute('y1', source.y);
-         line.setAttribute('x2', target.x);
-         line.setAttribute('y2', target.y);
--        line.setAttribute('stroke', active ? '#7cf7d4' : 'rgba(255,255,255,.18)');
-+        line.setAttribute('stroke', active ? '#FF5B00' : 'rgba(26,26,26,.20)');
-         line.setAttribute('stroke-width', active ? '2.5' : '1');
--        line.setAttribute('opacity', visible ? '1' : '.14');
-+        line.setAttribute('opacity', active ? '1' : '.38');
-         svg.append(line);
-       }
- 
--      for (const node of graph.nodes) {
-+      for (const node of displayNodes) {
-         const active = node.id === selectedId;
-         const related = selectedNeighbors.has(node.id);
--        const visible = matched.has(node.id) || active || related;
-         const group = document.createElementNS('http://www.w3.org/2000/svg', 'g');
-         group.setAttribute('transform', `translate(${node.x}, ${node.y})`);
-         group.setAttribute('tabindex', '0');
-@@ -180,85 +421,108 @@ const fullGraphPayload = JSON.stringify(knowledgeGraph);
-         });
- 
-         const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
--        circle.setAttribute('r', String(7 + node.weight * 1.5));
-+        circle.setAttribute('r', String(nodeRadius(node, active, related)));
-         circle.setAttribute('fill', typeColor[node.type]);
--        circle.setAttribute('opacity', visible ? '1' : '.18');
--        circle.setAttribute('stroke', active ? '#ffffff' : 'rgba(255,255,255,.55)');
-+        circle.setAttribute('opacity', active || related ? '1' : '.86');
-+        circle.setAttribute('stroke', active ? '#1A1A1A' : 'rgba(26,26,26,.28)');
-         circle.setAttribute('stroke-width', active ? '3' : '1');
-         if (active || related) circle.setAttribute('filter', 'url(#glow)');
-         group.append(circle);
- 
--        const label = document.createElementNS('http://www.w3.org/2000/svg', 'text');
--        const maxLabel = scopeSelect.value === 'full' ? 18 : 28;
--        label.textContent = node.label.length > maxLabel ? `${node.label.slice(0, maxLabel - 1)}...` : node.label;
--        label.setAttribute('y', String(25 + node.weight));
--        label.setAttribute('text-anchor', 'middle');
--        label.setAttribute('fill', visible ? '#f6f8ff' : 'rgba(246,248,255,.28)');
--        label.setAttribute('font-size', active || related || node.type === 'cluster' ? '13' : scopeSelect.value === 'full' ? '9' : '11');
--        label.setAttribute('font-weight', active || node.type === 'cluster' ? '800' : '500');
--        group.append(label);
-+        if (shouldLabel(node, active, related)) {
-+          const label = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-+          label.textContent = node.label.length > 32 ? `${node.label.slice(0, 31)}...` : node.label;
-+          label.setAttribute('y', String(nodeRadius(node, active, related) + 16));
-+          label.setAttribute('text-anchor', 'middle');
-+          label.setAttribute('fill', '#1A1A1A');
-+          label.setAttribute('font-size', active || related || node.type === 'cluster' ? '14' : '11');
-+          label.setAttribute('font-weight', active || node.type === 'cluster' ? '800' : '650');
-+          label.setAttribute('paint-order', 'stroke');
-+          label.setAttribute('stroke', '#FFF8F0');
-+          label.setAttribute('stroke-width', '5');
-+          label.setAttribute('stroke-linejoin', 'round');
-+          group.append(label);
-+        }
-         svg.append(group);
-       }
-+      updatePrompt(selectedId, displayNodes);
-     }
- 
-     function selectNode(id) {
--      const node = byId.get(id);
--      if (!node) return;
--      const neighbors = [...(adjacency.get(id) || [])].map((neighborId) => byId.get(neighborId)).filter(Boolean);
--      detail.innerHTML = `
--        <div class="eyebrow">${node.type}</div>
--        <h2>${node.label}</h2>
--        <p>${node.summary || 'No summary yet.'}</p>
--        ${node.url ? `<p><a class="button" href="${node.url}" target="_blank" rel="noopener">Open source</a></p>` : ''}
--        <h3>Direct relations</h3>
--        <ul>${neighbors.slice(0, 12).map((item) => `<li>${item.type}: ${item.label}</li>`).join('')}</ul>
--      `;
--      render(id);
-+      selectedNodeId = id;
-+      render(selectedNodeId);
-     }
- 
--    function setScope(scope) {
--      graph = graphs[scope] || graphs.core;
--      indexGraph();
--      placeNodes();
--      detail.innerHTML = `
--        <div class="eyebrow">Graph Scope</div>
--        <h2>${scope === 'full' ? 'Full corpus' : 'Core 150'}</h2>
--        <p>${graph.nodes.length} nodes and ${graph.edges.length} edges. Use search to inspect papers, projects, mechanisms, and coverage gaps.</p>
--      `;
--      render();
--    }
--
--    indexGraph();
--    placeNodes();
-     render();
--    scopeSelect.addEventListener('change', () => setScope(scopeSelect.value));
--    search.addEventListener('input', () => render());
--    typeSelect.addEventListener('change', () => render());
-+    search.addEventListener('input', () => {
-+      selectedNodeId = null;
-+      render();
-+    });
-+    typeSelect.addEventListener('change', () => {
-+      selectedNodeId = null;
-+      render();
-+    });
-+    copyPromptButton.addEventListener('click', async () => {
-+      try {
-+        await navigator.clipboard.writeText(promptTextarea.value);
-+        copyPromptStatus.textContent = 'Copied';
-+      } catch (_error) {
-+        promptTextarea.focus();
-+        promptTextarea.select();
-+        document.execCommand('copy');
-+        copyPromptStatus.textContent = 'Copied';
-+      }
-+    });
-+    window.addEventListener('resize', () => render(selectedNodeId));
-   </script>
- </BaseLayout>
- 
- <style>
--  .graph-section { padding-top: 12px }
-+  .graph-section {
-+    padding: 18px 0 42px;
-+  }
-   .graph-shell {
-+    width: min(calc(100% - 56px), 2140px);
-+    max-width: none;
-+    margin-inline: auto;
-     display: grid;
--    grid-template-columns: minmax(0, 1fr) 330px;
--    gap: 18px;
-+    grid-template-columns: minmax(0, 1fr) minmax(320px, 420px);
-+    gap: 14px;
-     align-items: stretch;
-   }
--  .graph-panel,
--  .graph-detail {
-+  .graph-panel {
-     border: 1px solid var(--line);
--    background: var(--card-bg);
--    border-radius: var(--radius);
-+    background: var(--surface-1);
-+    border-radius: var(--radius-media);
-   }
-   .graph-panel { overflow: hidden }
-   .graph-toolbar {
-     display: grid;
--    grid-template-columns: 150px minmax(180px, 1fr) 180px;
--    gap: 12px;
--    padding: 16px;
-+    grid-template-columns: minmax(190px, .72fr) minmax(260px, 1fr) 180px auto;
-+    align-items: center;
-+    gap: 14px;
-+    padding: 14px 16px;
-     border-bottom: 1px solid var(--line);
-   }
-+  .graph-title {
-+    min-width: 0;
-+  }
-+  .graph-title h1 {
-+    color: var(--fg);
-+    font-family: var(--font-display);
-+    font-size: 30px;
-+    font-weight: 400;
-+    letter-spacing: -0.02em;
-+    line-height: 1;
-+    white-space: nowrap;
-+  }
-+  .graph-title p {
-+    margin-top: 7px;
-+    color: var(--muted);
-+    font-size: 13px;
-+    font-weight: 700;
-+    line-height: 1.3;
-+  }
-   .graph-toolbar label {
-     display: grid;
-     gap: 7px;
-@@ -272,34 +536,116 @@ const fullGraphPayload = JSON.stringify(knowledgeGraph);
-   .graph-toolbar select {
-     width: 100%;
-     border: 1px solid var(--line);
--    border-radius: 14px;
--    background: rgba(5, 6, 21, .8);
-+    border-radius: var(--radius-cta);
-+    background: var(--surface-card);
-     color: var(--text);
-     padding: 12px 14px;
--    font: inherit;
-+    font: 650 14px/1.1 var(--font-body);
-     letter-spacing: 0;
-   }
-+  .graph-toolbar input:focus,
-+  .graph-toolbar select:focus {
-+    outline: none;
-+    box-shadow: 0 0 0 2px var(--bg), 0 0 0 4px var(--accent);
-+  }
-+  .graph-count {
-+    min-height: 42px;
-+    display: inline-flex;
-+    align-items: center;
-+    justify-content: flex-end;
-+    color: var(--meta);
-+    font-size: 13px;
-+    font-weight: 750;
-+    white-space: nowrap;
-+  }
-   #knowledge-graph {
-     display: block;
-     width: 100%;
--    min-height: 620px;
-+    height: clamp(560px, calc(100vh - 206px), 820px);
-+    min-height: 560px;
-     background:
--      linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
--      linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
-+      linear-gradient(rgba(26,26,26,.035) 1px, transparent 1px),
-+      linear-gradient(90deg, rgba(26,26,26,.035) 1px, transparent 1px),
-+      var(--surface-card);
-     background-size: 44px 44px;
-   }
--  .graph-detail {
--    padding: 22px;
--    min-height: 620px;
-+  .graph-prompt-panel {
-+    border: 1px solid var(--line);
-+    border-radius: var(--radius-media);
-+    background: var(--surface-card);
-+    padding: 18px;
-+    box-shadow: var(--shadow-mockup);
-+  }
-+  .graph-prompt-panel h2 {
-+    margin-top: 12px;
-+    color: var(--fg);
-+    font-family: var(--font-display);
-+    font-size: 32px;
-+    font-weight: 400;
-+    line-height: 1.02;
-+  }
-+  .graph-prompt-panel p {
-+    margin-top: 10px;
-+    color: var(--muted);
-+    font-size: 14px;
-+    line-height: 1.55;
-+  }
-+  .graph-prompt-links {
-+    display: flex;
-+    flex-wrap: wrap;
-+    gap: 8px;
-+    margin-top: 14px;
-+  }
-+  .graph-prompt-links a {
-+    border: 1px solid var(--line);
-+    border-radius: 7px;
-+    background: var(--surface-1);
-+    color: var(--fg);
-+    padding: 5px 8px;
-+    font-size: 12px;
-+    font-weight: 800;
-+    line-height: 1.25;
-+  }
-+  .graph-prompt-links a:hover,
-+  .graph-prompt-links a:focus-visible {
-+    border-color: var(--accent);
-+    color: var(--accent);
-+  }
-+  #graph-prompt {
-+    width: 100%;
-+    min-height: 330px;
-+    margin-top: 14px;
-+    border: 1px solid var(--line);
-+    border-radius: var(--radius);
-+    background: var(--surface-1);
-+    color: var(--fg);
-+    padding: 12px;
-+    resize: vertical;
-+    font: 12px/1.55 var(--font-mono);
-+  }
-+  .graph-prompt-actions {
-+    display: flex;
-+    align-items: center;
-+    gap: 12px;
-+    margin-top: 12px;
-+  }
-+  #copy-graph-prompt-status {
-+    color: var(--muted);
-+    font-size: 13px;
-+    font-weight: 800;
-   }
--  .graph-detail h2 { font-size: 28px; line-height: 1.1; margin: 12px 0 }
--  .graph-detail h3 { margin-top: 22px; font-size: 16px }
--  .graph-detail ul { margin: 12px 0 0 18px; color: var(--muted); line-height: 1.7 }
--
-   @media (max-width: 920px) {
--    .graph-shell { grid-template-columns: 1fr }
-+    .graph-section { padding-top: 14px }
-+    .graph-shell {
-+      width: min(100% - 32px, 1160px);
-+      grid-template-columns: 1fr;
-+    }
-     .graph-toolbar { grid-template-columns: 1fr }
--    #knowledge-graph { min-height: 430px }
--    .graph-detail { min-height: auto }
-+    .graph-title h1 { font-size: 30px }
-+    .graph-count { justify-content: flex-start }
-+    #knowledge-graph {
-+      height: 430px;
-+      min-height: 430px;
-+    }
-   }
- </style>
 diff --git a/site/src/pages/index.astro b/site/src/pages/index.astro
-index d38528f..40a1f3d 100644
+index 6de592f..72ef1b0 100644
 --- a/site/src/pages/index.astro
 +++ b/site/src/pages/index.astro
-@@ -4,56 +4,40 @@ import { projects, projectGroups } from '@/data/projects';
- import { featuredResearch } from '@/data/research';
- import { communityLinks } from '@/data/community';
- import { knowledgeGraphStats } from '@/data/knowledgeGraph';
--import { researchCoverage } from '@/data/researchCoverage';
--import { curatedFrontierProjects } from '@/data/curatedFrontier';
--import EvolutionNetwork from '@/components/EvolutionNetwork';
- import { getCollection } from 'astro:content';
-+const slugify = (value: string) => value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
- const posts = (await getCollection('blog')).filter((p) => !p.data.draft).sort((a,b)=>b.data.pubDate.valueOf()-a.data.pubDate.valueOf()).slice(0,3);
+@@ -33,7 +33,38 @@ const valueLshSnapshot = valueLshSnapshotJson as {
+ const valueLshSummary = valueLshSnapshot.summary;
+ const valueLshTop = valueLshSnapshot.top_high_value_candidates.slice(0, 3);
+
+-// ── Star Rankings (Top 15 by star count) ──
++const readerPromises = [
++  {
++    label: 'Definition',
++    title: '先判断它算不算自进化',
++    body: '不是看名字里有没有 evolve，而是看可变对象、反馈、验证、保留和回滚。',
++    bodyEn: 'Do not start with the name. Start with the mutable object, feedback signal, verifier, retention, and rollback path.',
++    href: '/topics/self-evolving-ai-agents/',
++  },
++  {
++    label: 'Mechanism',
++    title: '再判断它通过哪条回路变强',
++    body: '反思、搜索、评估、代码自改进、种群/归档不是同一件事，证据强度也不同。',
++    bodyEn: 'Reflection, search, evaluator loops, code evolution, and population archives are different evidence modes.',
++    href: '/topics/five-evolution-loops/',
++  },
++  {
++    label: 'Evidence',
++    title: '最后查证据和限制',
++    body: 'Star、benchmark、项目报告、Value LSH 和 Evolve-AGI Index 都只是证据面，不是单点答案。',
++    bodyEn: 'Stars, benchmarks, project reports, Value LSH, and the Evolve-AGI Index are evidence surfaces, not one-number truth.',
++    href: '/resource-library/',
++  },
++];
++
++const corePaths = [
++  ['New reader', '从定义页开始', 'Start with the definition page', '/topics/self-evolving-ai-agents/'],
++  ['Researcher', '看五类回路和论文主线', 'Read the five loops and paper spine', '/topics/five-evolution-loops/'],
++  ['Builder', '看 benchmark 与项目报告', 'Compare benchmarks and project reports', '/topics/code-evolution-benchmark/'],
++  ['Investor / product', '看增长、价值分类和信任边界', 'Use growth, value classification, and trust boundaries', '/value-lsh/'],
++];
++
++// ── Legacy adoption priors (Top 15 by historical star count) ──
+ const starRanking = [...starQualityScores]
+   .sort((a, b) => b.totalStars - a.totalStars)
+   .slice(0, 15)
+@@ -178,23 +209,20 @@ const growthLabel: Record<string, string> = {
+ };
  ---
- <BaseLayout>
+
+-<BaseLayout>
++<BaseLayout alternateZh="/" alternateEn="/en/">
    <!-- Hero -->
    <section class="hero">
      <div class="container hero-grid">
--      <div>
-+      <div class="hero-copy">
-         <div class="eyebrow">Self Evolve AI · AI 自我进化</div>
--        <h1>索引那些让 <span class="gradient-text">AI 学会自我改进</span> 的系统。</h1>
-+        <h1>AI Agent 自进化索引与证据库。</h1>
-         <p class="lead">Self Evolve 是自进化智能体的中文入口：汇集论文、GitHub 实现、Benchmark、代码自我改进循环，以及 LLM 迭代优化的工程实践。</p>
+       <div class="hero-copy">
+-        <div class="eyebrow">Self Evolve AI · AI 自我进化</div>
+-        <h1>AI Agent 自进化的全景图。</h1>
+-        <p class="lead">Star 榜单、趋势追踪、方向 Map——用 Rank 过滤信息，一页看到整个自进化领域最有价值的项目和论文。</p>
++        <div class="eyebrow">Self Evolve AI · Bilingual Survey / 双语证据地图</div>
++        <h1>AI Agent 自进化：到底改了什么、谁验证、能否留下来？</h1>
++        <p class="lead">This is not a link farm. It is a bilingual map for deciding whether an agent really improves itself: what changes, what feedback selects it, what evidence verifies it, and where the risk boundary is.</p>
          <div class="hero-actions">
--          <a class="button primary" href="/reports/self-evolve-survey-en.pdf" target="_blank" rel="noopener">下载 Survey PDF</a>
--          <a class="button" href="/reports/self-evolve-survey-zh.pdf" target="_blank" rel="noopener">中文伴读版 PDF</a>
--          <a class="button" href="/paper/">论文主页</a>
--          <a class="button" href="/benchmark/">Benchmark</a>
--          <a class="button" href="#projects">浏览项目</a>
--          <a class="button" href="/postcards/">浏览卡片墙</a>
-+          <a class="button primary" href="/blog/">阅读博客</a>
-+          <a class="text-link" href="#projects">浏览项目</a>
-+          <a class="text-link" href="/research/">研究图谱</a>
-+          <a class="text-link" href="/graph/">知识图谱</a>
+-          <a class="button primary" href="#star-ranking">Star 榜单</a>
+-          <a class="button" href="/resource-library/">资料库</a>
+-          <a class="button" href="/value-lsh/">价值分类</a>
+-          <a class="button" href="#evolve-agi-index">自进化系数</a>
+-          <a class="button" href="#trend-board">Trend 榜单</a>
+-          <a class="button" href="#direction-map">方向 Map</a>
+-          <a class="button" href="#agent-swarm-evolve">Agent-Swarm</a>
+-          <a class="text-link" href="/graph/">知识图谱</a>
++          <a class="button primary" href="/topics/self-evolving-ai-agents/">先看定义 / Start</a>
++          <a class="button" href="/topics/five-evolution-loops/">五类回路</a>
++          <a class="button" href="/topics/code-evolution-benchmark/">Benchmark Matrix</a>
++          <a class="button" href="/value-lsh/">Value LSH</a>
++          <a class="text-link" href="/paper/">Paper</a>
          </div>
          <div class="metrics" aria-label="研究站点指标">
--          <div class="metric"><strong>{researchCoverage.reviewFiles}</strong><span>篇论文 review 已入库</span></div>
-+          <div class="metric"><strong>{featuredResearch.length}</strong><span>篇代表论文进入前台</span></div>
-           <div class="metric"><strong>{projects.length}</strong><span>个精选 GitHub 开源项目</span></div>
-           <div class="metric"><strong>{knowledgeGraphStats.nodes}</strong><span>个图谱节点</span></div>
+           <div class="metric"><strong>{starQualityScores.length}</strong><span>个分析项目</span></div>
+@@ -203,18 +231,55 @@ const growthLabel: Record<string, string> = {
          </div>
        </div>
--      <EvolutionNetwork client:load />
--    </div>
--  </section>
--
--  <section class="survey-spotlight" id="survey">
--    <div class="container survey-spotlight-inner">
--      <div class="survey-copy">
--        <div class="eyebrow">Core Survey PDF</div>
--        <h2>先看综述：Self-Evolving AI Agents 完整论文。</h2>
--        <p>主页第一入口直接放论文产物。英文版已同步到最新编译 PDF；中文当前是 44 页伴读版，不是完整 205 页翻译，完整中文版正在单独生成和验证。</p>
--        <div class="hero-actions">
--          <a class="button primary" href="/reports/self-evolve-survey-en.pdf" target="_blank" rel="noopener">打开英文完整 PDF</a>
--          <a class="button" href="/reports/self-evolve-survey-zh.pdf" target="_blank" rel="noopener">打开中文伴读版</a>
--          <a class="button" href="/paper/">查看论文数据页</a>
--        </div>
--      </div>
--      <div class="survey-panel" aria-label="Survey corpus status">
--        <div class="survey-badge">Latest build · 205 pages</div>
--        <div class="survey-stat"><strong>{researchCoverage.rawUniqueIds}</strong><span>raw unique paper IDs</span></div>
--        <div class="survey-stat"><strong>{researchCoverage.reviewFiles}</strong><span>paper reviews indexed</span></div>
--        <div class="survey-stat"><strong>{projects.length}</strong><span>GitHub projects analyzed</span></div>
--      </div>
-+      <aside class="hero-evidence" aria-label="Self Evolve evidence pipeline">
-+        <div class="eyebrow">证据链</div>
-+        <ol>
-+          <li><span>Raw</span><strong>GitHub / 论文 / 博客 / 社交信号</strong></li>
-+          <li><span>Processed</span><strong>分类、时间线、Benchmark 与交叉分析</strong></li>
-+          <li><span>Model cards</span><strong>项目机制、可用性、限制和教学用法</strong></li>
-+          <li><span>Results</span><strong>SEO 文章、知识图谱、论文和公开报告</strong></li>
-+        </ol>
-+        <p>不是装饰图，而是从原始材料到可公开阅读成果的研究管线。</p>
-+      </aside>
+       <aside class="hero-evidence" aria-label="Self Evolve evidence pipeline">
+-        <div class="eyebrow">Rank 体系</div>
++        <div class="eyebrow">Reader contract</div>
+         <ol>
+-          <li><span>Tier A</span><strong>自进化核心系统，有突破性证据</strong></li>
+-          <li><span>Tier B+</span><strong>高质量实现，可复用的工程价值</strong></li>
+-          <li><span>Tier B</span><strong>有效方法，有独立验证</strong></li>
+-          <li><span>Tier B-</span><strong>有价值概念，证据有限</strong></li>
++          <li><span>1</span><strong>先给判断，不先给资料堆。</strong></li>
++          <li><span>2</span><strong>每个判断都回到 paper、project report、benchmark 或 raw index。</strong></li>
++          <li><span>3</span><strong>中文默认入口保留，English summaries mirror the same evidence chain.</strong></li>
++          <li><span>4</span><strong>没有验证、保留和回滚的 claim 标成弱证据。</strong></li>
+         </ol>
+-        <p>Rank 不只看 Star 数，还看 Star 质量、增长模式、证据强度和可复现性。</p>
+       </aside>
      </div>
    </section>
- 
-@@ -67,6 +51,7 @@ const posts = (await getCollection('blog')).filter((p) => !p.data.draft).sort((a
-       <div class="card">
-         <p>Self Evolve 把 AI 自我进化视为一门工程学：智能体观察结果、诊断差距、修改提示词/工具/记忆/代码/策略，再用评测确认改动确实提升目标能力且没有回归。</p>
-         <p>本站面向研究者、开发者与产品团队，提供可搜索的机制图谱、证据链和实现索引。</p>
-+        <p>维护闭环同样公开：每次人工或定时迭代都要同步 README、索引、网站源码、公开报告和发布入口，并提交本轮相关改动。</p>
-       </div>
-     </div>
-   </section>
-@@ -85,14 +70,15 @@ const posts = (await getCollection('blog')).filter((p) => !p.data.draft).sort((a
-         <div style="margin-bottom: 36px">
-           <h3 style="color: var(--hot); font-size: 18px; margin-bottom: 14px; letter-spacing: -0.02em">{group.title}</h3>
-           <div class="grid">
--            {projects.filter((p) => group.repos.includes(p.repo)).map((project) => (
-+            {projects.filter((p) => group.repos.map((repo) => String(repo).toLowerCase()).includes(p.repo.toLowerCase())).map((project) => (
-               <article class="card">
-                 <div class="eyebrow">{project.category}</div>
--                <h3><a href={project.url}>{project.name}</a></h3>
-+                <h3><a href={`/projects/${slugify(project.repo)}/`}>{project.name}</a></h3>
-                 <p>{project.description}</p>
-                 <div class="pill-row">
-                   <span class="pill">&#9733; {project.stars.toLocaleString()}</span>
-                   {project.stack.slice(0, 3).map((s) => <span class="pill">{s}</span>)}
-+                  <a class="pill" href={`/projects/${slugify(project.repo)}/`}>Model Card</a>
-                 </div>
-               </article>
-             ))}
-@@ -112,11 +98,6 @@ const posts = (await getCollection('blog')).filter((p) => !p.data.draft).sort((a
-         </div>
-         <a class="button" href="/research/">全部研究</a>
-       </div>
--      <div class="notice-band">
--        <strong>论文收集仍不够。</strong>
--        <span>已有 {researchCoverage.rawUniqueIds} 个 raw unique paper ID 与 {researchCoverage.reviewFiles} 篇 review，但前台代表卡片只有 {featuredResearch.length} 篇；下一步优先补 survey、benchmark/eval、安全治理、经验学习与长期记忆。</span>
--        <a href="/graph/#coverage-debt">查看缺口</a>
--      </div>
-       <div class="timeline">
-         {featuredResearch.map((paper) => (
-           <article class="timeline-item">
-@@ -136,28 +117,6 @@ const posts = (await getCollection('blog')).filter((p) => !p.data.draft).sort((a
-     </div>
-   </section>
- 
--  <section class="section" id="frontier">
--    <div class="container">
--      <div class="section-head">
--        <div>
--          <div class="eyebrow">Quality Ranked Frontier</div>
--          <h2>质量优先的前沿项目锚点</h2>
--        </div>
--        <a class="button" href="/star-analysis/">查看 hype audit</a>
--      </div>
--      <div class="grid">
--        {curatedFrontierProjects.map((item) => (
--          <article class="card">
--            <div class="eyebrow">Rank {item.rank} · {item.role}</div>
--            <h3><a href={item.url} target="_blank" rel="noopener">{item.name}</a></h3>
--            <p>{item.quality}</p>
--            {item.caution && <p style="color: var(--hot)">{item.caution}</p>}
--          </article>
--        ))}
--      </div>
--    </div>
--  </section>
--
-   <!-- Blog -->
-   <section class="section" id="blog">
+
++  <section class="section" style="background: var(--surface-1);">
++    <div class="container">
++      <div class="section-head">
++        <div>
++          <div class="eyebrow">Start here / 读者路径</div>
++          <h2>如果你只读三件事，按这个顺序读。</h2>
++        </div>
++      </div>
++      <div class="grid reader-promise-grid">
++        {readerPromises.map((item) => (
++          <a class="card" href={item.href} style="text-decoration: none; color: inherit;">
++            <div class="eyebrow">{item.label}</div>
++            <h3>{item.title}</h3>
++            <p>{item.body}</p>
++            <p class="english-note">{item.bodyEn}</p>
++          </a>
++        ))}
++      </div>
++      <div class="score-table-wrap reader-path-table">
++        <table class="score-table">
++          <thead>
++            <tr><th>Reader</th><th>中文路径</th><th>English path</th><th>Entry</th></tr>
++          </thead>
++          <tbody>
++            {corePaths.map(([reader, zh, en, href]) => (
++              <tr>
++                <td><strong>{reader}</strong></td>
++                <td>{zh}</td>
++                <td>{en}</td>
++                <td><a class="text-link" href={href}>Open</a></td>
++              </tr>
++            ))}
++          </tbody>
++        </table>
++      </div>
++    </div>
++  </section>
++
+   <!-- ═══ Value LSH 3D Graph ═══ -->
+   <section class="section value-lsh-home-section" id="value-lsh" style="background: var(--surface-1);">
      <div class="container">
-diff --git a/site/src/styles/global.css b/site/src/styles/global.css
-index 8bd1ff7..06ba426 100644
---- a/site/src/styles/global.css
-+++ b/site/src/styles/global.css
-@@ -1,4 +1,9 @@
--/* ========== Caret-inspired theme tokens ========== */
-+/* @sm:node site-caret-editorial-theme
-+ * Scope: public Astro site visual system.
-+ * Source style: /Users/copizzah/Desktop/work/UIdesign/design-systems/caret.
-+ * Verification: (cd site && npm run build), responsive browser screenshots.
-+ */
-+
- :root {
-   color-scheme: light;
-   --bg: #FAF7F2;
-@@ -8,138 +13,87 @@
-   --surface-4: #FFECD2;
-   --surface-5: #FCE4C8;
-   --surface-card: #FFFFFF;
--  --border-cream: #F3EDE4;
-   --fg: #1A1A1A;
--  --muted: rgba(26, 26, 26, 0.60);
--  --meta: rgba(26, 26, 26, 0.40);
--  --border: rgba(0, 0, 0, 0.06);
--  --border-soft: #EBEBEB;
--  --border-mid: #E5E5E5;
--  --border-firm: #D4D4D4;
-+  --text: var(--fg);
-+  --muted: rgba(26, 26, 26, .62);
-+  --meta: rgba(26, 26, 26, .42);
-+  --line: rgba(0, 0, 0, .08);
-+  --border-cream: #F3EDE4;
-+  --card-bg: var(--surface-1);
-+  --card-bg-hover: var(--surface-2);
-+  --brand: #FF5B00;
-+  --brand2: #FF8C42;
-+  --hot: #1A1A1A;
-   --accent: #FF5B00;
--  --accent-on: #FFFFFF;
--  --accent-hover: #FF5B00;
-   --accent-active: #E65200;
--  --orange-apricot-bright: #FF8C42;
--  --orange-apricot-soft: #FFB347;
--  --orange-glow: #FF5B00;
-+  --accent-on: #FFFFFF;
-   --caret-blue: #007AFF;
--  --caret-active: var(--caret-blue);
--  --caret-ghost: rgba(0, 122, 255, 0.40);
--  --success: #16A34A;
-+  --success: #2E6F4E;
-   --warn: #A56117;
-   --danger: #B83224;
-+  --radius: 8px;
-+  --radius-media: 16px;
-+  --radius-cta: 10px;
-+  --shadow-mockup: 0 1px 2px rgba(0, 0, 0, .05);
-+  --shadow-cta: 0 8px 24px rgba(0, 0, 0, .35);
-   --font-display: "EB Garamond", Garamond, "Times New Roman", Georgia, serif;
--  --font-body: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
-+  --font-body: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
-   --font-mono: "SF Mono", ui-monospace, "JetBrains Mono", Menlo, Monaco, Consolas, monospace;
--  --leading-display: 1.10;
--  --leading-body: 1.50;
--  --leading-tight: 1.20;
--  --tracking-display: -0.02em;
--  --tracking-body: -0.005em;
--  --tracking-button: -0.01em;
--  --space-1: 4px;
--  --space-2: 8px;
--  --space-3: 12px;
--  --space-4: 16px;
--  --space-5: 20px;
--  --space-6: 24px;
--  --space-8: 32px;
--  --space-12: 48px;
--  --space-16: 64px;
--  --space-20: 80px;
--  --space-24: 96px;
--  --page-pad-mobile: var(--space-5);
--  --page-pad-tablet: var(--space-16);
--  --page-pad-desk: var(--space-24);
--  --radius-inline-sm: 6px;
--  --radius-inline: 8px;
--  --radius-cta: 10px;
--  --radius-media: 14px;
--  --radius-media-lg: 16px;
--  --radius-media-xl: 18px;
--  --radius-glass-button: 9999px;
--  --shadow-flat: none;
--  --shadow-mockup: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
--  --shadow-cta: 0 8px 24px rgba(0, 0, 0, 0.35);
--  --height-cta: 42px;
--  --transition: 300ms cubic-bezier(0.23, 1, 0.32, 1);
--
--  /* Compatibility aliases used by existing pages. */
--  --text: var(--fg);
--  --line: var(--border);
--  --card-bg: var(--surface-1);
--  --card-bg-hover: var(--surface-2);
--  --brand: var(--accent);
--  --brand2: var(--orange-apricot-bright);
--  --hot: var(--accent);
--  --radius: var(--radius-media);
--  --accent-secondary: var(--muted);
--  --accent-tertiary: var(--caret-blue);
--  --text-secondary: var(--muted);
--  --text-tertiary: var(--meta);
-+  --transition: .24s cubic-bezier(.4, 0, .2, 1);
-+}
- 
--  font-family: var(--font-body);
-+* {
-+  box-sizing: border-box;
-+  margin: 0;
-+  padding: 0;
-+  letter-spacing: 0;
- }
- 
--/* ========== Reset ========== */
--* { box-sizing: border-box; margin: 0; padding: 0 }
--html { scroll-behavior: smooth; background: var(--bg) }
--a { color: inherit; text-decoration: none }
--img { max-width: 100%; display: block }
-+html {
-+  scroll-behavior: smooth;
-+  background: var(--bg);
-+}
- 
--/* ========== Body & base typography ========== */
- body {
-   min-height: 100vh;
-   margin: 0;
-   background:
--    linear-gradient(rgba(26, 26, 26, 0.018) 1px, transparent 1px),
--    var(--bg);
--  background-size: 100% 42px;
-+    linear-gradient(180deg, var(--bg) 0%, var(--surface-2) 48%, var(--bg) 100%);
-   color: var(--fg);
-   font-family: var(--font-body);
--  letter-spacing: var(--tracking-body);
-+  font-size: 16px;
-+  line-height: 1.5;
-   text-rendering: optimizeLegibility;
-+  -webkit-font-smoothing: antialiased;
- }
- 
--body::before { content: none }
--
--h1,
--h2,
--.blog-article h1 {
--  font-family: var(--font-display);
--  font-weight: 400;
--  line-height: var(--leading-display);
--  letter-spacing: var(--tracking-display);
--  color: var(--fg);
-+a {
-+  color: inherit;
-+  text-decoration: none;
- }
- 
--h3,
--h4,
--button,
--input,
--select,
--textarea {
--  font-family: var(--font-body);
-+img,
-+svg {
-+  display: block;
-+  max-width: 100%;
- }
- 
--p,
--li {
--  line-height: var(--leading-body);
-+strong {
-+  color: var(--fg);
-+  font-weight: 650;
- }
- 
--::selection {
--  background: var(--surface-5);
--  color: var(--fg);
-+code,
-+pre {
-+  font-family: var(--font-mono);
- }
- 
--/* ========== Container ========== */
- .container {
--  width: min(1180px, calc(100% - (var(--page-pad-mobile) * 2)));
-+  width: calc(100% - 40px);
-+  max-width: 1160px;
-   margin-inline: auto;
- }
- 
--/* ========== Skip Link ========== */
- .skip-link {
-   position: absolute;
-   left: -999px;
-@@ -151,777 +105,1208 @@ li {
-   padding: 10px 14px;
-   font-weight: 700;
- }
--.skip-link:focus { left: 12px }
- 
--/* ========== Nav ========== */
-+.skip-link:focus {
-+  left: 12px;
-+}
-+
- .nav {
-   position: relative;
-   z-index: 10;
--  border-bottom: 1px solid var(--border);
--  background: var(--bg);
-+  border-bottom: 1px solid var(--line);
-+  background: rgba(250, 247, 242, .92);
- }
-+
- .nav-inner {
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
--  gap: 16px;
-+  gap: 18px;
-   padding: 18px 0;
- }
-+
- .brand {
--  display: flex;
-+  display: inline-flex;
-   align-items: center;
-   gap: 10px;
-   color: var(--fg);
--  font-size: 15px;
--  font-weight: 700;
--  letter-spacing: 0;
-+  font-family: var(--font-display);
-+  font-size: 24px;
-+  line-height: 1;
-   white-space: nowrap;
- }
-+
- .brand-mark {
--  width: 18px;
--  height: 30px;
--  position: relative;
--  display: inline-flex;
--  align-items: center;
--  justify-content: center;
--}
--.brand-mark::before {
--  content: "";
-+  display: inline-block;
-   width: 1.5px;
--  height: 22px;
-+  height: 26px;
-   border-radius: 999px;
--  background: var(--caret-active);
--  box-shadow: 7px 0 0 var(--caret-ghost), -7px 0 0 var(--caret-ghost);
-+  background: var(--caret-blue);
-+  box-shadow: 0 0 0 4px rgba(0, 122, 255, .08);
- }
-+
- .nav-links {
-   display: flex;
-   align-items: center;
--  gap: 18px;
-+  justify-content: center;
-+  gap: 20px;
-   color: var(--muted);
--  font-size: 13px;
-+  font-size: 14px;
-   font-weight: 600;
- }
--.nav-links a { transition: color var(--transition) }
--.nav-links a:hover { color: var(--fg) }
- 
--.theme-toggle { display: none }
-+.nav-links a {
-+  padding: 8px 0;
-+  transition: color var(--transition);
-+}
-+
-+.nav-links a:hover,
-+.nav-links a:focus-visible {
-+  color: var(--fg);
-+}
-+
-+.nav-cta {
-+  flex: 0 0 auto;
-+}
- 
- .menu-btn {
-   display: none;
--  border: 1px solid var(--border);
--  border-radius: var(--radius-inline);
-+  width: 40px;
-+  height: 40px;
-+  border: 1px solid var(--line);
-+  border-radius: var(--radius-cta);
-   background: var(--surface-1);
-   color: var(--fg);
-   cursor: pointer;
--  font-size: 22px;
--  line-height: 1;
--  padding: 7px 10px;
-+  font: 700 20px/1 var(--font-body);
- }
-+
- .mobile-nav {
-   display: none;
-   position: fixed;
--  inset: 66px 0 auto 0;
-+  inset: 64px 0 0 0;
-   z-index: 9;
--  flex-direction: column;
--  gap: 0;
--  border-bottom: 1px solid var(--border);
--  background: rgba(250, 247, 242, 0.98);
--  padding: 18px var(--page-pad-mobile) 26px;
-+  overflow: auto;
-+  border-bottom: 1px solid var(--line);
-+  background: var(--bg);
-+  padding: 20px;
-+  box-shadow: 0 18px 40px rgba(26, 26, 26, .08);
-+}
-+
-+.mobile-nav.open {
-+  display: grid;
-+  gap: 8px;
- }
--.mobile-nav.open { display: flex }
-+
- .mobile-nav a {
--  border-bottom: 1px solid var(--border);
--  color: var(--muted);
--  font-size: 20px;
--  font-weight: 600;
--  padding: 13px 0;
-+  border-bottom: 1px solid var(--line);
-+  padding: 14px 0;
-+  color: var(--fg);
-+  font: 500 22px/1.15 var(--font-display);
- }
--.mobile-nav a:hover { color: var(--fg) }
- 
--/* ========== Buttons ========== */
- .button {
-   position: relative;
--  isolation: isolate;
-   display: inline-flex;
-   align-items: center;
-   justify-content: center;
-+  min-height: 42px;
-   gap: 8px;
--  min-height: var(--height-cta);
--  border: 1px solid var(--border);
-+  border: 1px solid var(--line);
-   border-radius: var(--radius-cta);
-   background: var(--surface-1);
-   color: var(--fg);
--  cursor: pointer;
--  font-family: var(--font-body);
-+  padding: 0 18px;
-   font-size: 15px;
--  font-weight: 650;
--  letter-spacing: var(--tracking-button);
-+  font-weight: 700;
-   line-height: 1;
--  padding: 0 18px;
--  transition:
--    background-color var(--transition),
--    border-color var(--transition),
--    color var(--transition),
--    transform var(--transition);
--}
--.button:hover {
--  border-color: var(--border-firm);
--  background: var(--surface-2);
-+  transition: transform var(--transition), background var(--transition), border-color var(--transition), color var(--transition), box-shadow var(--transition);
-+}
-+
-+.button:hover,
-+.button:focus-visible {
-   transform: translateY(-1px);
-+  background: var(--surface-2);
-+  border-color: rgba(0, 0, 0, .18);
- }
-+
- .button.primary {
-   border-color: transparent;
-   background: var(--accent);
-   color: var(--accent-on);
-   box-shadow: var(--shadow-cta);
--  overflow: visible;
- }
--.button.primary::before,
-+
- .button.primary::after {
-   content: "";
-   position: absolute;
-   inset: -1px;
-   z-index: -1;
--  border-radius: inherit;
--  background: var(--orange-glow);
-+  border-radius: var(--radius-cta);
-+  background: var(--accent);
-   opacity: 0;
--  transition: opacity 500ms cubic-bezier(0.23, 1, 0.32, 1);
--}
--.button.primary::before {
-   filter: blur(12px);
--  transition-duration: 700ms;
-+  transition: opacity .7s ease;
- }
--.button.primary:hover {
--  border-color: transparent;
-+
-+.button.primary:hover,
-+.button.primary:focus-visible {
-   background: var(--accent-active);
--  color: var(--accent-on);
-+  border-color: transparent;
-+  box-shadow: var(--shadow-cta);
-+}
-+
-+.button.primary:hover::after,
-+.button.primary:focus-visible::after {
-+  opacity: .72;
- }
--.button.primary:hover::before,
--.button.primary:hover::after { opacity: 0.24 }
--.nav-cta { flex: 0 0 auto }
- 
--/* ========== Hero ========== */
- .hero {
-   position: relative;
-   overflow: hidden;
--  padding: 72px 0 84px;
-+  padding: 48px 0 44px;
- }
-+
- .hero-grid {
-   display: grid;
-   grid-template-columns: 1fr;
--  gap: 44px;
-+  gap: 28px;
-   align-items: center;
- }
-+
-+.hero-copy,
- .hero-grid > div:first-child {
--  max-width: 980px;
--  margin-inline: auto;
--  text-align: center;
-+  min-width: 0;
-+  max-width: 700px;
-+  text-align: left;
- }
-+
- .eyebrow {
-+  display: inline-flex;
-+  align-items: center;
-+  gap: 8px;
-   color: var(--muted);
--  font-size: 12px;
-+  font-size: 13px;
-   font-weight: 700;
--  letter-spacing: 0.08em;
--  text-transform: none;
-+  line-height: 1.3;
- }
-+
-+.eyebrow::before {
-+  content: "";
-+  display: inline-block;
-+  width: 1.5px;
-+  height: 15px;
-+  border-radius: 999px;
-+  background: var(--caret-blue);
-+}
-+
-+.hero h1,
-+.section h1,
-+.blog-article h1,
-+.project-hero h1 {
-+  color: var(--fg);
-+  font-family: var(--font-display);
-+  font-size: 44px;
-+  font-weight: 400;
-+  line-height: 1.08;
-+}
-+
- .hero h1 {
--  max-width: 980px;
--  margin: 14px auto 0;
--  font-size: clamp(40px, 7vw, 80px);
-+  max-width: 760px;
-+  margin: 16px 0 0;
-+  font-size: 40px;
-+  overflow-wrap: anywhere;
- }
-+
- .gradient-text {
--  background: none;
-   color: var(--fg);
-+  background: none;
-   -webkit-background-clip: initial;
-   background-clip: initial;
- }
-+
- .lead {
-   max-width: 760px;
--  margin: 22px auto 0;
--  color: var(--muted);
--  font-size: clamp(16px, 2vw, 18px);
--  line-height: var(--leading-body);
-+  margin: 18px 0 0;
-+  color: var(--fg);
-+  font-size: 18px;
-+  line-height: 1.58;
-+  overflow-wrap: anywhere;
- }
--.hero-actions {
-+
-+.hero-actions,
-+.cta-row {
-   display: flex;
-   flex-wrap: wrap;
--  justify-content: center;
-+  align-items: center;
-+  justify-content: flex-start;
-   gap: 12px;
--  margin-top: 30px;
-+  margin-top: 28px;
-+}
-+
-+.text-link {
-+  display: inline-flex;
-+  align-items: center;
-+  min-height: 42px;
-+  color: var(--fg);
-+  font-size: 15px;
-+  font-weight: 700;
-+  text-decoration: underline;
-+  text-decoration-color: rgba(26, 26, 26, .22);
-+  text-underline-offset: 5px;
-+}
-+
-+.text-link:hover,
-+.text-link:focus-visible {
-+  text-decoration-color: var(--accent);
- }
-+
- .metrics {
-   display: grid;
-   grid-template-columns: repeat(3, minmax(0, 1fr));
--  gap: 12px;
--  max-width: 760px;
--  margin: 34px auto 0;
-+  gap: 10px;
-+  max-width: 860px;
-+  margin: 30px 0 0;
- }
-+
- .metric {
--  border: 1px solid var(--border-cream);
--  border-radius: var(--radius-inline);
-+  border: 1px solid var(--line);
-+  border-radius: var(--radius);
-   background: var(--surface-1);
--  box-shadow: var(--shadow-mockup);
--  padding: 16px;
-+  padding: 18px 16px;
-   text-align: left;
-+  box-shadow: var(--shadow-mockup);
- }
-+
- .metric strong {
-   display: block;
-   color: var(--fg);
--  font-size: 28px;
--  font-variant-numeric: tabular-nums;
-+  font-family: var(--font-display);
-+  font-size: 34px;
-+  font-weight: 400;
-   line-height: 1;
- }
-+
- .metric span {
-   display: block;
--  margin-top: 7px;
-+  margin-top: 8px;
-   color: var(--muted);
-   font-size: 13px;
-   line-height: 1.35;
- }
- 
--.survey-spotlight {
--  border-block: 1px solid var(--border);
--  background: var(--surface-2);
--  padding: 42px 0;
-+.hero-evidence {
-+  min-width: 0;
-+  border: 1px solid var(--line);
-+  border-radius: var(--radius);
-+  background: var(--surface-card);
-+  padding: 22px;
-+  box-shadow: var(--shadow-mockup);
- }
--.survey-spotlight-inner {
-+
-+.hero-evidence ol {
-   display: grid;
--  grid-template-columns: minmax(0, 1.35fr) minmax(260px, .65fr);
--  gap: 26px;
--  align-items: center;
--}
--.survey-copy h2 {
--  margin: 10px 0 14px;
--  font-size: clamp(36px, 5vw, 64px);
--}
--.survey-copy p {
--  max-width: 780px;
--  color: var(--muted);
-+  gap: 0;
-+  margin: 18px 0 0;
-+  list-style: none;
-+  counter-reset: evidence;
- }
--.survey-panel {
-+
-+.hero-evidence li {
-+  counter-increment: evidence;
-   display: grid;
--  gap: 12px;
--  border: 1px solid var(--border-cream);
--  border-radius: var(--radius-media);
--  background: var(--surface-1);
--  box-shadow: var(--shadow-mockup);
--  padding: 20px;
--}
--.survey-badge {
--  width: max-content;
--  border-radius: var(--radius-inline-sm);
--  background: var(--surface-4);
--  color: var(--fg);
--  font-size: 13px;
--  font-weight: 800;
--  padding: 8px 10px;
--}
--.survey-stat {
--  display: flex;
--  justify-content: space-between;
-+  grid-template-columns: 92px 1fr;
-   gap: 14px;
--  border-top: 1px solid var(--border);
--  padding-top: 12px;
--}
--.survey-stat strong {
--  color: var(--fg);
--  font-size: 24px;
--  font-variant-numeric: tabular-nums;
--}
--.survey-stat span {
--  color: var(--muted);
--  font-size: 13px;
--  line-height: 1.35;
--  text-align: right;
-+  border-top: 1px solid var(--line);
-+  padding: 14px 0;
- }
- 
--/* ========== Homepage evidence mockup ========== */
--.evolution-network {
--  position: relative;
--  min-height: 420px;
--  overflow: hidden;
--  border: 1px solid var(--border-cream);
--  border-radius: var(--radius-media-xl);
--  background:
--    linear-gradient(180deg, var(--surface-1), var(--surface-2));
--  box-shadow: var(--shadow-mockup);
--}
--.evolution-network::before {
--  content: "";
--  position: absolute;
--  inset: 20px;
--  border: 1px solid rgba(0, 0, 0, 0.035);
--  border-radius: var(--radius-media);
--  pointer-events: none;
--}
--.evolution-network svg {
--  width: 100%;
--  height: 372px;
--  display: block;
--}
--.network-edge {
--  stroke: rgba(26, 26, 26, 0.16);
--  stroke-width: 0.42;
--  stroke-dasharray: 4 5;
--}
--.network-card {
--  fill: var(--surface-card);
--  stroke: var(--border-mid);
--  stroke-width: 0.34;
--  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.04));
--}
--.network-node text {
--  fill: var(--fg);
--  font-size: 3.1px;
--  font-weight: 700;
--  text-anchor: middle;
--  letter-spacing: 0;
--}
--.network-node .network-meta {
--  fill: var(--muted);
--  font-size: 2.2px;
--  font-weight: 500;
--}
--.network-caret {
--  stroke: var(--caret-active);
--  stroke-width: 0.45;
--  stroke-linecap: round;
--}
--.network-caret.ghost {
--  stroke: var(--caret-ghost);
--}
--.network-core {
--  fill: var(--surface-4);
--  stroke: var(--border-cream);
--  stroke-width: 0.34;
--}
--.network-core-text {
--  fill: var(--fg);
--  font-size: 3.6px;
--  font-weight: 800;
--  text-anchor: middle;
--}
--.network-core-text.small {
--  fill: var(--muted);
--  font-size: 2.35px;
--  font-weight: 600;
-+.hero-evidence li::before {
-+  content: "0" counter(evidence);
-+  color: var(--meta);
-+  font-family: var(--font-display);
-+  font-size: 28px;
-+  line-height: 1;
-+  grid-row: span 2;
- }
--.network-caption {
--  position: absolute;
--  left: 22px;
--  right: 22px;
--  bottom: 18px;
--  display: flex;
--  justify-content: space-between;
--  gap: 16px;
--  border-top: 1px solid var(--border);
-+
-+.hero-evidence span {
-   color: var(--muted);
--  font-size: 13px;
--  padding-top: 14px;
-+  font-size: 12px;
-+  font-weight: 800;
-+  line-height: 1.2;
- }
--.network-caption strong { color: var(--fg) }
- 
--.notice-band {
--  display: flex;
--  align-items: center;
--  gap: 14px;
--  border: 1px solid var(--border-cream);
--  border-radius: var(--radius-media);
--  background: var(--surface-2);
--  padding: 16px 18px;
--  margin-bottom: 18px;
--}
--.notice-band strong {
-+.hero-evidence strong {
-+  display: block;
-   color: var(--fg);
--  white-space: nowrap;
-+  font-size: 15px;
-+  line-height: 1.35;
-+  overflow-wrap: anywhere;
- }
--.notice-band span {
-+
-+.hero-evidence p {
-+  margin-top: 12px;
-   color: var(--muted);
--  line-height: 1.55;
-+  line-height: 1.6;
- }
--.notice-band a {
--  color: var(--accent);
--  font-weight: 800;
--  white-space: nowrap;
-+
-+.section {
-+  padding: 64px 0;
- }
- 
--/* ========== Sections ========== */
--.section { padding: 86px 0 }
- .section-head {
-   display: flex;
-   align-items: end;
-   justify-content: space-between;
--  gap: 24px;
--  margin-bottom: 32px;
-+  gap: 28px;
-+  margin-bottom: 28px;
- }
--.section h2 {
--  margin: 0;
--  font-size: clamp(36px, 5vw, 64px);
-+
-+.section-head > div,
-+.section-head > p {
-+  max-width: 760px;
-+}
-+
-+.section h2,
-+.card h2,
-+.timeline-item h2,
-+.model-card-block h2 {
-+  color: var(--fg);
-+  font-family: var(--font-display);
-+  font-size: 36px;
-+  font-weight: 400;
-+  line-height: 1.1;
- }
--.section p {
-+
-+.section-head h2 {
-+  margin-top: 10px;
-+}
-+
-+.section p,
-+.card p,
-+.timeline-item p,
-+.model-card-block :is(p, li),
-+.project-detail p {
-   color: var(--muted);
--  line-height: var(--leading-body);
-+  line-height: 1.65;
-+}
-+
-+.split {
-+  display: grid;
-+  grid-template-columns: .9fr 1.1fr;
-+  gap: 22px;
- }
- 
--/* ========== Grid & Cards ========== */
- .grid {
-   display: grid;
-   grid-template-columns: repeat(3, minmax(0, 1fr));
--  gap: 18px;
-+  gap: 16px;
- }
--.card {
--  border: 1px solid var(--border-cream);
--  border-radius: var(--radius-media);
-+
-+.card,
-+.model-card-summary,
-+.model-card-block,
-+.timeline-item,
-+.visual-panel,
-+.graph-panel {
-+  border: 1px solid var(--line);
-+  border-radius: var(--radius);
-   background: var(--surface-1);
--  box-shadow: var(--shadow-flat);
-+  box-shadow: var(--shadow-mockup);
-+}
-+
-+.card {
-   padding: 24px;
--  transition:
--    background-color var(--transition),
--    border-color var(--transition),
--    transform var(--transition);
-+  transition: transform var(--transition), background var(--transition), border-color var(--transition);
- }
-+
- .card:hover {
--  border-color: var(--border-firm);
--  background: var(--surface-2);
-   transform: translateY(-2px);
-+  background: var(--surface-2);
-+  border-color: rgba(0, 0, 0, .13);
- }
-+
-+.card h3,
-+.timeline-item h3,
-+.model-card-summary h3 {
-+  color: var(--fg);
-+  font-size: 20px;
-+  line-height: 1.25;
-+}
-+
-+.card h2,
- .card h3 {
--  margin: 0 0 10px;
-+  margin: 10px 0 10px;
-+}
-+
-+.card h2 a:hover,
-+.card h3 a:hover,
-+.timeline-item h2 a:hover,
-+.timeline-item h3 a:hover {
-+  text-decoration: underline;
-+  text-decoration-color: var(--accent);
-+  text-underline-offset: 5px;
-+}
-+
-+.project-group-grid,
-+.project-card-grid {
-+  grid-template-columns: repeat(2, minmax(0, 1fr));
-+}
-+
-+.project-group-card,
-+.project-card {
-+  display: flex;
-+  min-height: 100%;
-+  flex-direction: column;
-+}
-+
-+.card-title-row {
-+  display: flex;
-+  align-items: start;
-+  justify-content: space-between;
-+  gap: 18px;
-+}
-+
-+.card-title-row > div {
-+  min-width: 0;
-+}
-+
-+.card-title-row p {
-+  margin-top: 6px;
-+  color: var(--muted);
-+  font-size: 13px;
-+}
-+
-+.rank-badge {
-+  flex: 0 0 auto;
-+  border: 1px solid rgba(0, 122, 255, .28);
-+  border-radius: 7px;
-+  background: rgba(0, 122, 255, .08);
-+  color: var(--caret-blue);
-+  padding: 6px 8px;
-+  font-size: 12px;
-+  font-weight: 800;
-+  line-height: 1;
-+}
-+
-+.repo-link {
-+  display: inline-flex;
-+  margin-bottom: 8px;
-+  color: var(--muted);
-+  font-size: 14px;
-+  font-weight: 700;
-+  overflow-wrap: anywhere;
-+  text-decoration: underline;
-+  text-decoration-color: rgba(26, 26, 26, .18);
-+  text-underline-offset: 4px;
-+}
-+
-+.repo-link:hover,
-+.repo-link:focus-visible {
-   color: var(--fg);
--  font-size: 22px;
--  line-height: 1.2;
-+  text-decoration-color: var(--accent);
-+}
-+
-+.project-link-list {
-+  display: grid;
-+  gap: 0;
-+  margin-top: 16px;
-+}
-+
-+.project-link-row {
-+  display: grid;
-+  grid-template-columns: minmax(0, 1fr) auto;
-+  gap: 10px 14px;
-+  border-top: 1px solid var(--line);
-+  padding: 14px 0;
-+}
-+
-+.project-link-row:last-child {
-+  padding-bottom: 0;
-+}
-+
-+.project-link-row.muted {
-+  opacity: .72;
-+}
-+
-+.project-link-main {
-+  display: grid;
-+  grid-template-columns: 52px minmax(0, 1fr);
-+  gap: 3px 10px;
-+  min-width: 0;
-+}
-+
-+.project-link-main span {
-+  grid-row: span 2;
-+  color: var(--meta);
-+  font-family: var(--font-mono);
-+  font-size: 12px;
-+  font-weight: 800;
-+  line-height: 1.5;
-+}
-+
-+.project-link-main strong {
-+  min-width: 0;
-+  color: var(--fg);
-+  line-height: 1.25;
-+  overflow-wrap: anywhere;
-+}
-+
-+.project-link-main em {
-+  color: var(--muted);
-+  font-size: 12px;
-+  font-style: normal;
-+  line-height: 1.35;
-+  overflow-wrap: anywhere;
-+}
-+
-+.project-link-main:hover strong,
-+.project-link-main:focus-visible strong {
-+  text-decoration: underline;
-+  text-decoration-color: var(--accent);
-+  text-underline-offset: 4px;
-+}
-+
-+.project-row-meta {
-+  display: flex;
-+  flex-wrap: wrap;
-+  grid-column: 1 / -1;
-+  gap: 8px;
-+  color: var(--muted);
-+  font-size: 12px;
-+  font-weight: 700;
-+}
-+
-+.project-row-actions {
-+  display: flex;
-+  flex-wrap: wrap;
-+  align-content: start;
-+  justify-content: flex-end;
-+  gap: 8px;
-+}
-+
-+.project-row-actions a {
-+  border: 1px solid var(--line);
-+  border-radius: 7px;
-+  background: rgba(255, 255, 255, .46);
-+  color: var(--fg);
-+  padding: 5px 8px;
-+  font-size: 12px;
-+  font-weight: 800;
-+  line-height: 1;
-+}
-+
-+.project-row-actions a:hover,
-+.project-row-actions a:focus-visible {
-+  border-color: var(--accent);
-+  color: var(--accent);
-+}
-+
-+.project-stat-grid {
-+  display: grid;
-+  grid-template-columns: repeat(4, minmax(0, 1fr));
-+  gap: 8px;
-+  margin-top: 18px;
-+}
-+
-+.project-stat-grid div {
-+  border: 1px solid var(--line);
-+  border-radius: 7px;
-+  background: rgba(255, 255, 255, .44);
-+  padding: 10px;
-+}
-+
-+.project-stat-grid span {
-+  display: block;
-+  color: var(--meta);
-+  font-size: 11px;
-+  font-weight: 800;
-+}
-+
-+.project-stat-grid strong {
-+  display: block;
-+  margin-top: 5px;
-+  font-size: 13px;
-+  line-height: 1.25;
-+  overflow-wrap: anywhere;
-+}
-+
-+.related-paper-row {
-+  display: flex;
-+  flex-wrap: wrap;
-+  gap: 8px;
-+  margin-top: 14px;
-+}
-+
-+.card-actions {
-+  display: flex;
-+  flex-wrap: wrap;
-+  gap: 10px;
-+  margin-top: auto;
-+  padding-top: 20px;
- }
--.card h3 a:hover { color: var(--accent) }
- 
--/* ========== Pills ========== */
- .pill-row {
-   display: flex;
-   flex-wrap: wrap;
-   gap: 8px;
-   margin-top: 18px;
- }
-+
- .pill {
--  border: 1px solid var(--border);
--  border-radius: var(--radius-inline-sm);
--  background: var(--surface-2);
-+  display: inline-flex;
-+  align-items: center;
-+  min-height: 28px;
-+  border: 1px solid var(--line);
-+  border-radius: 7px;
-+  background: rgba(255, 255, 255, .44);
-   color: var(--muted);
-+  padding: 5px 9px;
-   font-size: 12px;
--  font-weight: 600;
--  padding: 6px 9px;
--  transition:
--    color var(--transition),
--    border-color var(--transition),
--    background-color var(--transition);
--}
--a.pill:hover {
--  border-color: var(--border-firm);
-+  font-weight: 650;
-+  line-height: 1.25;
-+  transition: color var(--transition), border-color var(--transition), background var(--transition);
-+}
-+
-+a.pill:hover,
-+a.pill:focus-visible {
-+  border-color: var(--accent);
-   color: var(--fg);
-+  background: var(--surface-card);
- }
- 
--/* ========== Split ========== */
--.split {
-+.visual-grid {
-   display: grid;
--  grid-template-columns: .9fr 1.1fr;
--  gap: 20px;
-+  grid-template-columns: repeat(2, minmax(0, 1fr));
-+  gap: 16px;
-+}
-+
-+.visual-panel {
-+  overflow: hidden;
-+  background: var(--surface-card);
-+}
-+
-+.visual-panel.wide {
-+  grid-column: 1 / -1;
-+}
-+
-+.visual-panel img {
-+  width: 100%;
-+  background: var(--surface-card);
-+}
-+
-+.visual-panel figcaption {
-+  border-top: 1px solid var(--line);
-+  padding: 14px 18px 18px;
-+  color: var(--muted);
-+  font-size: 14px;
-+  line-height: 1.55;
- }
- 
--/* ========== Timeline ========== */
- .timeline {
-   display: grid;
--  gap: 14px;
-+  gap: 12px;
- }
-+
- .timeline-item {
-   display: grid;
--  grid-template-columns: 94px 1fr;
--  gap: 16px;
--  border: 1px solid var(--border-cream);
--  border-radius: var(--radius-media);
--  background: var(--surface-1);
-+  grid-template-columns: 110px 1fr;
-+  gap: 18px;
-   padding: 18px;
--  transition:
--    background-color var(--transition),
--    border-color var(--transition),
--    transform var(--transition);
-+  transition: transform var(--transition), background var(--transition), border-color var(--transition);
- }
-+
- .timeline-item:hover {
--  border-color: var(--border-firm);
--  background: var(--surface-2);
-   transform: translateX(3px);
-+  background: var(--surface-2);
-+  border-color: rgba(0, 0, 0, .13);
- }
-+
- .year {
--  color: var(--accent);
--  font-weight: 900;
--  font-variant-numeric: tabular-nums;
-+  color: var(--fg);
-+  font-family: var(--font-display);
-+  font-size: 28px;
-+  line-height: 1;
-+}
-+
-+.blog-index-hero {
-+  padding-bottom: 44px;
-+}
-+
-+.blog-index-hero .lead {
-+  max-width: 680px;
-+  margin-inline: 0;
-+}
-+
-+.blog-index-hero .container {
-+  display: grid;
-+  grid-template-columns: minmax(0, .95fr) minmax(280px, .55fr);
-+  gap: 36px;
-+  align-items: end;
-+}
-+
-+.blog-index-hero h1 {
-+  margin-top: 14px;
-+  font-size: 44px;
-+}
-+
-+.blog-note {
-+  border: 1px solid var(--line);
-+  border-radius: var(--radius);
-+  background: var(--surface-card);
-+  padding: 20px;
-+  box-shadow: var(--shadow-mockup);
-+}
-+
-+.blog-note p {
-+  color: var(--muted);
-+  line-height: 1.65;
-+}
-+
-+.post-stack {
-+  display: grid;
-+  gap: 12px;
-+}
-+
-+.post-card {
-+  display: grid;
-+  grid-template-columns: 78px minmax(0, 1fr) 180px;
-+  gap: 20px;
-+  align-items: start;
-+  border-top: 1px solid var(--line);
-+  padding: 26px 0;
-+}
-+
-+.post-number {
-+  color: var(--meta);
-+  font-family: var(--font-display);
-+  font-size: 34px;
-+  line-height: 1;
-+}
-+
-+.post-card h2 {
-+  color: var(--fg);
-+  font-family: var(--font-display);
-+  font-size: 32px;
-+  font-weight: 400;
-+  line-height: 1.12;
-+}
-+
-+.post-card h2 a:hover {
-+  text-decoration: underline;
-+  text-decoration-color: var(--accent);
-+  text-underline-offset: 6px;
-+}
-+
-+.post-card p {
-+  margin-top: 10px;
-+  color: var(--muted);
-+  line-height: 1.65;
-+}
-+
-+.post-meta {
-+  color: var(--meta);
-+  font-size: 13px;
-+  font-weight: 700;
-+  line-height: 1.45;
- }
- 
--/* ========== Blog Article ========== */
- .blog-article {
--  max-width: 820px;
-+  width: min(820px, calc(100% - 40px));
-   margin: 0 auto;
--  padding: 72px 0;
-+  padding: 72px 0 96px;
-+}
-+
-+.blog-article > .eyebrow {
-+  margin-bottom: 16px;
-+}
-+
-+.blog-article .lead {
-+  margin-inline: 0;
-+}
-+
-+.blog-article :is(h2, h3, h4) {
-+  color: var(--fg);
-+  font-family: var(--font-display);
-+  font-weight: 400;
-+  line-height: 1.12;
-+}
-+
-+.blog-article h2 {
-+  margin-top: 48px;
-+  font-size: 36px;
- }
--.blog-article h1 {
--  font-size: clamp(40px, 6vw, 72px);
-+
-+.blog-article h3 {
-+  margin-top: 34px;
-+  font-size: 28px;
- }
-+
-+.blog-article :is(p, ul, ol, blockquote, pre, table) {
-+  margin-top: 18px;
-+}
-+
- .blog-article :is(p, li) {
--  color: var(--muted);
-+  color: var(--fg);
-   line-height: 1.75;
- }
-+
-+.blog-article ul,
-+.blog-article ol {
-+  display: grid;
-+  gap: 8px;
-+  padding-left: 24px;
-+}
-+
-+.blog-article a {
-+  text-decoration: underline;
-+  text-decoration-color: rgba(255, 91, 0, .35);
-+  text-underline-offset: 4px;
-+}
-+
-+.blog-article a:hover {
-+  text-decoration-color: var(--accent);
-+}
-+
-+.blog-article blockquote {
-+  border-left: 1.5px solid var(--caret-blue);
-+  background: var(--surface-1);
-+  padding: 16px 18px;
-+  color: var(--muted);
-+}
-+
- .blog-article pre {
-   overflow: auto;
--  border: 1px solid var(--border);
--  border-radius: var(--radius-media);
--  background: var(--surface-1);
-+  border-radius: var(--radius);
-+  background: #1A1A1A;
-+  color: #FAF7F2;
-   padding: 18px;
- }
- 
--/* ========== Tables used by data-heavy pages ========== */
-+.blog-article :not(pre) > code {
-+  border: 1px solid var(--line);
-+  border-radius: 6px;
-+  background: var(--surface-2);
-+  padding: 2px 5px;
-+  color: var(--fg);
-+  font-size: .92em;
-+}
-+
-+.blog-article table {
-+  width: 100%;
-+  border-collapse: collapse;
-+  overflow-wrap: anywhere;
-+  font-size: 14px;
-+}
-+
-+.blog-article th,
-+.blog-article td {
-+  border-bottom: 1px solid var(--line);
-+  padding: 10px;
-+  text-align: left;
-+  vertical-align: top;
-+}
-+
-+.project-detail {
-+  padding: 58px 0 88px;
-+}
-+
-+.project-hero {
-+  display: grid;
-+  grid-template-columns: minmax(0, 1fr) minmax(280px, 380px);
-+  gap: 24px;
-+  align-items: stretch;
-+  margin-top: 34px;
-+}
-+
-+.project-hero h1 {
-+  margin-top: 14px;
-+}
-+
-+.model-card-summary,
-+.model-card-block {
-+  padding: 24px;
-+}
-+
-+.model-card-summary dl {
-+  display: grid;
-+  gap: 16px;
-+  margin-top: 22px;
-+}
-+
-+.model-card-summary div {
-+  display: grid;
-+  grid-template-columns: 96px 1fr;
-+  gap: 12px;
-+  align-items: baseline;
-+  border-top: 1px solid var(--line);
-+  padding-top: 14px;
-+}
-+
-+.model-card-summary dt {
-+  color: var(--muted);
-+  font-size: 13px;
-+}
-+
-+.model-card-summary dd {
-+  color: var(--fg);
-+  font-weight: 800;
-+}
-+
-+.model-card-grid {
-+  display: grid;
-+  grid-template-columns: repeat(2, minmax(0, 1fr));
-+  gap: 16px;
-+  margin-top: 28px;
-+}
-+
-+.model-card-block ul {
-+  display: grid;
-+  gap: 8px;
-+  padding-left: 18px;
-+}
-+
-+.model-card-block code,
-+.model-card-block a {
-+  overflow-wrap: anywhere;
-+}
-+
-+.footer {
-+  border-top: 1px solid var(--line);
-+  padding: 36px 0 52px;
-+  color: var(--muted);
-+  font-size: 14px;
-+}
-+
- .score-table-wrap {
-   overflow-x: auto;
--  border: 1px solid var(--border-cream);
--  border-radius: var(--radius-media);
--  background: var(--surface-1);
-+  border: 1px solid var(--line);
-+  border-radius: var(--radius);
-+  background: var(--surface-card);
- }
-+
- .score-table {
-   width: 100%;
-   border-collapse: collapse;
--  font-size: 13px;
-+  min-width: 780px;
- }
-+
- .score-table th,
- .score-table td {
--  border-bottom: 1px solid var(--border);
--  padding: 10px 12px;
-+  border-bottom: 1px solid var(--line);
-+  padding: 12px 14px;
-   text-align: left;
-   vertical-align: top;
-+  font-size: 14px;
- }
-+
- .score-table th {
--  color: var(--muted);
--  font-size: 11px;
-+  color: var(--fg);
-+  background: var(--surface-2);
-   font-weight: 800;
--  letter-spacing: 0.06em;
--  text-transform: uppercase;
- }
--.score-table tbody tr:hover { background: var(--surface-2) }
--.score-badge {
-+
-+.score-badge,
-+.growth-badge,
-+.platform-badge,
-+.org-badge {
-   display: inline-flex;
-   align-items: center;
--  border-radius: var(--radius-inline-sm);
-+  border-radius: 7px;
-+  padding: 4px 8px;
-   font-size: 12px;
-   font-weight: 800;
--  padding: 3px 8px;
- }
- 
--/* ========== Scroll Animations ========== */
-+.radar-grid {
-+  display: grid;
-+  grid-template-columns: repeat(3, minmax(0, 1fr));
-+  gap: 16px;
-+}
-+
-+.radar-bar-row {
-+  display: grid;
-+  grid-template-columns: 54px 1fr 36px;
-+  gap: 8px;
-+  align-items: center;
-+  margin-top: 10px;
-+}
-+
-+.radar-label,
-+.radar-value {
-+  color: var(--muted);
-+  font-size: 12px;
-+  font-weight: 700;
-+}
-+
-+.radar-bar-track {
-+  height: 8px;
-+  overflow: hidden;
-+  border-radius: 999px;
-+  background: var(--surface-4);
-+}
-+
-+.radar-bar-fill {
-+  height: 100%;
-+  border-radius: inherit;
-+}
-+
-+.finding-list,
-+.signal-list {
-+  display: grid;
-+  gap: 10px;
-+  padding-left: 18px;
-+  color: var(--muted);
-+  line-height: 1.65;
-+}
-+
-+.mermaid-wrap {
-+  overflow: auto;
-+  border: 1px solid var(--line);
-+  border-radius: var(--radius);
-+  background: var(--surface-card);
-+  padding: 18px;
-+}
-+
- .reveal {
-   opacity: 0;
-   transform: translateY(18px);
--  transition: opacity 600ms ease-out, transform 600ms ease-out;
-+  transition: opacity .55s ease-out, transform .55s ease-out;
- }
-+
- .reveal.visible {
-   opacity: 1;
-   transform: translateY(0);
- }
--.reveal-delay-1 { transition-delay: 100ms }
--.reveal-delay-2 { transition-delay: 200ms }
--.reveal-delay-3 { transition-delay: 300ms }
- 
--@media (prefers-reduced-motion: reduce) {
--  html { scroll-behavior: auto }
--  *,
--  *::before,
--  *::after {
--    animation-duration: 1ms !important;
--    animation-iteration-count: 1 !important;
--    scroll-behavior: auto !important;
--    transition-duration: 1ms !important;
-+@media (min-width: 760px) {
-+  .section h1,
-+  .blog-article h1,
-+  .project-hero h1 {
-+    font-size: 64px;
+@@ -287,20 +352,20 @@ const growthLabel: Record<string, string> = {
+     </div>
+   </section>
+
+-  <!-- ═══ Star Rankings ═══ -->
++  <!-- ═══ Historical Adoption Priors ═══ -->
+   <section class="section" id="star-ranking">
+     <div class="container">
+       <div class="section-head">
+         <div>
+-          <div class="eyebrow">Star 榜单</div>
+-          <h2>GitHub 项目 Star 排名与当前增长</h2>
++          <div class="eyebrow">Historical adoption prior</div>
++          <h2>累计 Star 只能当历史采用信号</h2>
+         </div>
+         <div style="display:flex;gap:12px;flex-wrap:wrap;">
+-          <a class="text-link" href="/star-growth/">2026 增长数据库 →</a>
++          <a class="text-link" href="/star-growth/">2026 增长试点账本 →</a>
+           <a class="text-link" href="/star-analysis/">完整质量分析 →</a>
+         </div>
+       </div>
+-      <p style="color: var(--muted); margin-bottom: 20px;">累计 Star 只说明历史 adoption，不能直接说明当前价值；2026 新增 Star、近 90 天增长和 coverage status 已单独进入增长数据库。</p>
++      <p style="color: var(--muted); margin-bottom: 20px;">这个表保留累计 Star 作为 adoption prior，不作为当前价值排名。当前动量要看 2026 growth coverage，项目质量要回到 evaluator、benchmark、retention 和 evidence chain。</p>
+       <div style="overflow-x: auto;">
+         <table class="panorama-table">
+           <thead>
+@@ -386,11 +451,11 @@ const growthLabel: Record<string, string> = {
+       <div class="section-head">
+         <div>
+           <div class="eyebrow">方向 Map</div>
+-          <h2>每个方向的最高质量代表作</h2>
++          <h2>每个方向的代表性证据锚点</h2>
+         </div>
+         <a class="text-link" href="/rank/">完整系统排名 →</a>
+       </div>
+-      <p style="color: var(--muted); margin-bottom: 20px;">六大方向，每个方向标注 Champion（最高分系统）、Evidence（核心证据）、Runner-up。用 Rank 快速找到每个领域的最佳实现。</p>
++      <p style="color: var(--muted); margin-bottom: 20px;">六大方向展示当前启发式 rank 中的 representative anchors，不宣称最终最佳。做严肃判断时要回到 scoring source、项目报告和原始 benchmark。</p>
+
+       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 16px;">
+         {directionMap.map((d) => (
+@@ -453,12 +518,12 @@ const growthLabel: Record<string, string> = {
+     <div class="container split">
+       <div>
+         <div class="eyebrow">关于</div>
+-        <h2>Rank 是这个项目的核心价值。</h2>
++        <h2>核心价值不是页面数量，而是可复查判断。</h2>
+       </div>
+       <div class="card">
+-        <p>Self Evolve 不只是索引——它是<strong>过滤后的全景图</strong>。125 篇论文、530 个项目、97 个用户痛点，全部经过 Rank、Trust Chain 和交叉验证。</p>
+-        <p>具体的方法分析有价值，但展示全景图更有效。先看到整个领域的结构和排名，再深入细节。</p>
+-        <p style="color: var(--muted); font-size: 0.85rem; margin-top: 8px;">Star 榜单看热度，Trend 榜单看活力，方向 Map 看质量。三个视角互补。</p>
++        <p>Self Evolve 不只是索引。当前生成索引记录了 <strong>677</strong> 个 raw GitHub captures、<strong>283</strong> 个 analyzed model-card projects、<strong>99</strong> 个 strict evolution repos、<strong>204</strong> 个 broad evolution-related repos 和 <strong>483</strong> 个 public project reports。</p>
++        <p>这些数字只说明证据覆盖，不自动等于结论可信。高置信结论必须能回到论文、项目报告、benchmark 或 raw index；缺口继续标为待复核。</p>
++        <p style="color: var(--muted); font-size: 0.85rem; margin-top: 8px;">Total stars = historical adoption prior. Star growth = current momentum pilot. Value LSH = heuristic triage, not final quality truth.</p>
+       </div>
+     </div>
+   </section>
+@@ -497,7 +562,7 @@ const growthLabel: Record<string, string> = {
+       <div class="section-head">
+         <div>
+           <div class="eyebrow">博客</div>
+-          <h2>面向 SEO 与开发者的实践笔记</h2>
++          <h2>面向研究者与开发者的实践笔记</h2>
+         </div>
+         <a class="button" href="/blog/">全部文章</a>
+       </div>
+@@ -678,6 +743,15 @@ const growthLabel: Record<string, string> = {
+   .value-lsh-home-list span {
+     margin-top: 3px;
    }
--}
- 
--/* ========== Footer ========== */
--.footer {
--  border-top: 1px solid var(--border);
--  color: var(--muted);
--  font-size: 13px;
--  padding: 34px 0 46px;
--}
-+  .hero h1 {
-+    font-size: 48px;
++  .english-note {
++    margin-top: 10px;
++    color: var(--muted);
++    font-size: .92rem;
++    line-height: 1.55;
 +  }
- 
--/* ========== Keyframes ========== */
--@keyframes caret-blink {
--  0%, 48% { opacity: 1 }
--  49%, 100% { opacity: 0.25 }
--}
-+  .blog-index-hero h1 {
-+    font-size: 64px;
++  .reader-path-table {
++    margin-top: 18px;
 +  }
- 
--/* ========== Responsive ========== */
--@media (min-width: 768px) {
--  .container {
--    width: min(1180px, calc(100% - (var(--page-pad-tablet) * 2)));
-+  .section h2,
-+  .card h2,
-+  .timeline-item h2,
-+  .model-card-block h2 {
-+    font-size: 48px;
-   }
- }
- 
--@media (min-width: 1024px) {
--  .container {
--    width: min(1180px, calc(100% - (var(--page-pad-desk) * 2)));
-+@media (min-width: 1080px) {
-+  .hero-grid {
-+    grid-template-columns: minmax(0, .95fr) minmax(320px, .72fr);
-+    gap: 48px;
-+  }
-+
-+  .hero h1 {
-+    font-size: 52px;
-   }
- }
- 
--@media (max-width: 1040px) {
-+@media (max-width: 980px) {
-   .nav-links {
--    max-width: 620px;
--    overflow-x: auto;
--    scrollbar-width: none;
-+    display: none;
-+  }
-+
-+  .menu-btn {
-+    display: inline-grid;
-+    place-items: center;
-   }
--  .nav-links::-webkit-scrollbar { display: none }
--}
- 
--@media (max-width: 880px) {
--  .hero-grid,
-+  .blog-index-hero .container,
-   .split,
-   .grid,
--  .survey-spotlight-inner {
-+  .project-group-grid,
-+  .project-card-grid,
-+  .project-hero,
-+  .model-card-grid,
-+  .visual-grid,
-+  .radar-grid {
-     grid-template-columns: 1fr;
-   }
--  .nav-links,
-+
-+  .visual-panel.wide {
-+    grid-column: auto;
-+  }
-+
-+  .section-head {
-+    display: grid;
-+  }
-+}
-+
-+@media (max-width: 700px) {
-+  .container,
-+  .blog-article {
-+    width: calc(100% - 32px);
-+    max-width: 1160px;
-+  }
-+
-   .nav-cta {
-     display: none;
-   }
--  .menu-btn { display: block }
--  .hero { padding-top: 54px }
--  .metrics { grid-template-columns: 1fr }
--  .section-head { display: block }
--  .section-head .button { margin-top: 18px }
--  .timeline-item { grid-template-columns: 1fr }
--  .evolution-network { min-height: 350px }
--  .evolution-network svg { height: 304px }
--  .network-caption,
--  .notice-band {
--    display: block;
-+
-+  .hero {
-+    padding: 44px 0 48px;
-   }
--  .network-caption span,
--  .notice-band span {
--    display: block;
--    margin-top: 6px;
-+
-+  .section {
-+    padding: 56px 0;
-   }
--}
- 
--/* ========== Postcard Wall ========== */
--.postcard-hero .split { align-items: stretch }
--.postcard-stats {
--  display: grid;
--  gap: 14px;
--  align-content: center;
--}
--.postcard-grid {
--  display: grid;
--  grid-template-columns: repeat(3, minmax(0, 1fr));
--  gap: 18px;
--}
--.postcard {
--  position: relative;
--  display: flex;
--  min-height: 330px;
--  flex-direction: column;
--  gap: 14px;
--  overflow: hidden;
--  border: 1px solid var(--border-cream);
--  border-radius: var(--radius-media);
--  background: var(--surface-1);
--  padding: 24px;
--  transition:
--    background-color var(--transition),
--    border-color var(--transition),
--    transform var(--transition);
--}
--.postcard::before {
--  content: "";
--  position: absolute;
--  top: 20px;
--  bottom: 20px;
--  left: 18px;
--  width: 1.5px;
--  border-radius: 999px;
--  background: var(--caret-ghost);
--  pointer-events: none;
--}
--.postcard > * {
--  position: relative;
--  z-index: 1;
--}
--.postcard:hover {
--  border-color: var(--border-firm);
--  background: var(--surface-2);
--  transform: translateY(-3px);
--}
--.postcard h3 {
--  margin: 0;
--  color: var(--fg);
--  font-size: 24px;
--  letter-spacing: 0;
--  line-height: 1.18;
--}
--.postcard h3 a:hover,
--.postcard-link:hover { color: var(--accent) }
--.postcard p {
--  margin: 0;
--  color: var(--muted);
--  line-height: 1.58;
--}
--.postcard-topline {
--  display: flex;
--  justify-content: space-between;
--  gap: 12px;
--  color: var(--muted);
--  font-size: 12px;
--  font-weight: 800;
--  letter-spacing: 0.06em;
--  text-transform: uppercase;
--}
--.postcard-meta,
--.postcard-repo {
--  color: var(--accent);
--  font-size: 13px;
--  font-weight: 700;
--}
--.postcard-metrics {
--  display: flex;
--  flex-wrap: wrap;
--  gap: 8px;
--}
--.postcard-metrics span {
--  border: 1px solid var(--border);
--  border-radius: var(--radius-inline-sm);
--  background: var(--surface-2);
--  color: var(--fg);
--  font-size: 12px;
--  font-weight: 800;
--  padding: 7px 10px;
--}
--.postcard-actions {
--  display: flex;
--  flex-wrap: wrap;
--  gap: 12px;
--  margin-top: auto;
--}
--.postcard-link {
--  margin-top: auto;
--  color: var(--fg);
--  font-size: 14px;
--  font-weight: 900;
--}
--.postcard-article,
--.postcard-research-note,
--.postcard-paper,
--.postcard-project {
--  background: var(--surface-1);
--}
-+  .metrics {
-+    grid-template-columns: 1fr;
-+  }
- 
--@media (max-width: 980px) {
--  .postcard-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) }
-+  .hero-evidence li {
-+    grid-template-columns: 64px 1fr;
-+  }
-+
-+  .timeline-item,
-+  .post-card {
-+    grid-template-columns: 1fr;
-+  }
-+
-+  .project-link-row,
-+  .project-link-main,
-+  .project-stat-grid {
-+    grid-template-columns: 1fr;
-+  }
-+
-+  .project-link-main span {
-+    grid-row: auto;
-+  }
-+
-+  .project-row-actions {
-+    justify-content: flex-start;
-+  }
-+
-+  .post-card {
-+    gap: 10px;
-+  }
-+
-+  .post-card h2 {
-+    font-size: 28px;
-+  }
- }
- 
--@media (max-width: 640px) {
--  .postcard-grid { grid-template-columns: 1fr }
--  .postcard { min-height: auto }
--  .hero h1 { font-size: 40px }
--  .hero-actions { justify-content: stretch }
--  .hero-actions .button { width: 100% }
-+@media (prefers-reduced-motion: reduce) {
-+  *,
-+  *::before,
-+  *::after {
-+    scroll-behavior: auto !important;
-+    transition-duration: .01ms !important;
-+    animation-duration: .01ms !important;
-+    animation-iteration-count: 1 !important;
-+  }
- }
+   .eai-home-grid {
+     display: grid;
+     grid-template-columns: minmax(0, .78fr) minmax(360px, 1.22fr);

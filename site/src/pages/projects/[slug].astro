@@ -123,7 +123,7 @@ const jsonLd = {
         <section class="model-card-block">
           <div class="eyebrow">5. 证据链</div>
           <h2>从原始材料到分析</h2>
-          <p>站内数据保留了 GitHub 源、局部镜像路径和报告路径。若公开报告尚未同步到站点，仍以本页 model card 作为 SEO 与教学入口，并把原始仓库作为第一证据源。</p>
+          <p>站内数据保留了 GitHub 源、局部镜像路径和报告路径。若公开报告尚未同步到站点，仍以本页 model card 作为读者与教学入口，并把原始仓库作为第一证据源。</p>
           <ul>
             <li>GitHub: <a href={project.url} target="_blank" rel="noopener">{project.url}</a></li>
             <li>Local mirror: <code>{project.localPath ?? 'not recorded'}</code></li>
@@ -139,7 +139,7 @@ const jsonLd = {
             <li>这个项目的评估信号能否稳定复现，还是只在 demo 中成立？</li>
             <li>它改进的是 prompt、工具、记忆、代码、策略、数据，还是完整 agent 组织？</li>
             <li>失败样本会不会被保存，并在下一轮产生行为改变？</li>
-            <li>它和同类项目相比，真正多出来的机制是什么？</li>
+            <li>它和同类项目相比，多出来且可复查的机制是什么？</li>
           </ul>
         </section>
       </section>
@@ -148,7 +148,7 @@ const jsonLd = {
         <div>
           <div class="eyebrow">Open Source Trail</div>
           <h2>回到 GitHub 检查这个项目</h2>
-          <p>这个 model card 的目的不是替代原仓库，而是帮读者先建立判断框架：项目解决什么问题、用什么进化机制、证据链在哪里。真正做技术选型时，仍应回到 GitHub 查看代码、issue、release 和最近提交。</p>
+          <p>这个 model card 的目的不是替代原仓库，而是帮读者先建立判断框架：项目解决什么问题、用什么进化机制、证据链在哪里。做技术选型时，仍应回到 GitHub 查看代码、issue、release 和最近提交。</p>
         </div>
         <div class="source-links">
           <a href={project.url} target="_blank" rel="noopener">打开原始 GitHub 仓库</a>

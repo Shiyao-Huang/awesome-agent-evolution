@@ -81,7 +81,7 @@ const faqs = [
   ['Are the five loops mutually exclusive?', 'No. Real systems usually combine them. The loops are lenses for asking what changed, what selected it, and how the change survived.'],
   ['Why is evaluator loop treated as central?', 'Because every other loop depends on a trustworthy signal. Without an evaluator, self-improvement is indistinguishable from drift.'],
   ['Can a system be self-evolving without changing weights?', 'Yes. Prompt, memory, workflow, tool policy, code, and archive changes can be self-evolution if they are feedback-driven, verified, and retained.'],
-  ['Why make this a topic page when a mechanisms page already exists?', 'The mechanisms page serves survey navigation; this page is an evergreen reader guide that connects definitions, SEO, paper framing, and evidence boundaries.'],
+  ['Why make this a topic page when a mechanisms page already exists?', 'The mechanisms page serves survey navigation; this page is an evergreen reader guide that connects definitions, paper framing, and evidence boundaries.'],
 ];
 
 const jsonLd = {
@@ -103,8 +103,10 @@ const jsonLd = {
 ---
 
 <BaseLayout
-  title="五类进化回路 — Self-Evolving AI Agents 的机制地图"
-  description="用五类进化回路理解 self-evolving AI agents：规范到执行、搜索、评估、反思和种群。看每个系统改了什么、用什么反馈、谁验证、如何保留、常见失败是什么。"
+  alternateZh="/topics/five-evolution-loops/"
+  alternateEn="/en/topics/five-evolution-loops/"
+  title="五类进化回路 — Five evolution loops for self-evolving agents"
+  description="双语机制页：用五类进化回路理解 self-evolving AI agents，区分可变对象、反馈、验证器、保留机制和失败模式。"
   pageKeywords={['五类进化回路', 'Five Evolution Loops', 'Self-Evolving AI Agents taxonomy', 'AI 自进化机制', 'AI agent feedback loop']}
 >
   <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} is:inline />
@@ -193,9 +195,10 @@ const jsonLd = {
         <div class="hero-copy">
           <div class="eyebrow">Taxonomy / Survey Rank 2</div>
           <h1>五类进化回路：把自进化从口号变成机制地图。</h1>
-          <p class="lead">定义页回答“这个系统算不算自进化”。五类进化回路回答下一层问题：它到底通过哪一种反馈闭环变强，哪里最容易失控，证据应该去哪查。</p>
+          <p class="lead">The definition page tells you whether a system belongs in scope. The five loops tell you how it improves: specification, search, evaluation, reflection, and archive or population pressure.</p>
           <div class="hero-actions">
             <a class="button primary" href="#loop-matrix">看判断表</a>
+            <a class="button" href="/en/topics/five-evolution-loops/">English</a>
             <a class="button" href="/topics/self-evolving-ai-agents/">先看定义</a>
             <a class="button" href="/survey/mechanisms/">Survey 机制页</a>
             <a class="text-link" href="/topics/">主题地图</a>
@@ -228,6 +231,10 @@ const jsonLd = {
             <h2>五类回路不是五个标签，而是五种“反馈变成改进”的路径</h2>
           </div>
         </div>
+        <article class="card" style="margin-bottom: 16px;">
+          <h3>Taxonomy note</h3>
+          <p>本页的五类回路是 reader-facing review lenses：Specification-to-Execution、Search、Evaluator、Reflection、Population/Archive。论文中的 method families 是文献分类，两者不是冲突 taxonomy；读项目时先用这五个 lens 提问，再回到论文方法族定位。</p>
+        </article>
         <div class="grid">
           <article class="card">
             <h3>一句话</h3>
@@ -286,7 +293,7 @@ const jsonLd = {
         <div class="section-head">
           <div>
             <div class="eyebrow">Five loops</div>
-            <h2>逐个看：每个 loop 真正回答什么</h2>
+            <h2>逐个看：每个 loop 到底回答什么</h2>
           </div>
         </div>
         <div class="loop-card-grid">

@@ -7,14 +7,14 @@ import { surveyStats } from '@/data/survey';
 import { evolveAgiIndex } from '@/data/evolveAgiIndex';
 
 const headlineStats = [
-  { value: '631', label: 'raw GitHub captures', detail: '进入分类表的开源项目证据' },
+  { value: '677', label: 'raw GitHub captures', detail: '进入分类表的开源项目证据' },
   { value: '201', label: 'raw paper files', detail: '论文原始材料磁盘口径' },
   { value: String(projectReports.length), label: 'public project reports', detail: '可在站点阅读的项目报告' }
 ];
 
 const countBoundaries = [
-  ['631', 'raw / classified', 'GitHub 原始采集和分类表口径，说明收了多少、分到了哪里。'],
-  ['224', 'analyzed model-card reports', '治理索引中的项目分析漏斗口径，不等于站点精选列表。'],
+  ['677', 'raw / classified', 'GitHub 原始采集和分类表口径，说明收了多少、分到了哪里。'],
+  ['283', 'analyzed model-card reports', '治理索引中的项目分析漏斗口径，不等于站点精选列表。'],
   [String(projectReports.length), 'public project reports', '静态站点可引用的项目报告文件数，是读者可直接进入的结果层。'],
   [String(projects.length), 'curated project records', '当前 `/projects/` 页面使用的精选展示数组。'],
   [String(surveyStats.papers), 'survey-display papers', 'Survey 页面展示用论文口径；raw paper files 当前是 201。'],
@@ -53,7 +53,7 @@ const readerPaths = [
   ['工程师', '从项目页进入 model card，优先看可变对象、反馈信号、评估器、回滚和可运行性。', '/projects/'],
   ['产品/投资读者', '用 Evolve-AGI Index 区分领域成熟度、热度、治理准备度和真实可用性。', '/evolve-agi-index/'],
   ['研究维护者', '用 Value LSH 找出最值得先深挖的候选和证据修复队列。', '/value-lsh/'],
-  ['内容与 SEO', '从主题地图进入长尾问题：方法、benchmark、痛点、项目和趋势。', '/topics/']
+  ['内容与研究读者', '从主题指南进入长尾问题：方法、benchmark、痛点、项目和趋势。', '/topics/']
 ];
 
 const jsonLd = {
@@ -70,7 +70,7 @@ const jsonLd = {
     '@type': 'DataCatalog',
     name: 'Self Evolve Evidence Catalog',
     dataset: [
-      { '@type': 'Dataset', name: 'Raw GitHub captures', description: '631 raw GitHub captures and classified repository rows.' },
+      { '@type': 'Dataset', name: 'Raw GitHub captures', description: '677 raw GitHub captures and classified repository rows.' },
       { '@type': 'Dataset', name: 'Raw papers', description: '201 raw paper files used by the survey and paper pipeline.' },
       { '@type': 'Dataset', name: 'Public project reports', description: `${projectReports.length} public project report files for model-card style evidence review.` }
     ]
@@ -80,7 +80,7 @@ const jsonLd = {
 
 <BaseLayout
   title="Self-Evolving AI Agents 资料库 — Survey 证据源、项目报告与 Evolve-AGI Index"
-  description="Self Evolve 公开资料库覆盖页：解释 AI 自进化领域的 raw corpus、项目 model card、论文 Survey、公开报告、SEO 主题和 Evolve-AGI Index 之间的证据链。"
+  description="Self Evolve 公开资料库覆盖页：解释 AI 自进化领域的 raw corpus、项目 model card、论文 Survey、公开报告、主题指南和 Evolve-AGI Index 之间的证据链。"
   pageKeywords={['Self-Evolving AI Agents Resource Library', 'AI 自进化资料库', '自进化智能体 Survey', 'AI Agent 项目报告', 'Evolve-AGI Index']}
 >
   <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} is:inline />

@@ -7,7 +7,7 @@ const whatWorked = [
     verdict: '有效',
     color: '#27ae60',
     stats: '52 页面, 737 关键词',
-    detail: '三层架构（Raw→Wiki→Schema）解决了 RAG 重复推导的痛点。Ingest→Query→Lint 循环让知识编译一次、持续更新、交叉引用不需要每次重建。125 篇论文的分析结果持久存储在 52 个 wiki 页面中。'
+    detail: '三层架构（Raw→Wiki→Schema）解决了 RAG 重复推导的痛点。Ingest→Query→Lint 循环让知识编译一次、持续更新、交叉引用不需要每次重建。这个 2026-05-26 复盘快照中，125 篇论文的分析结果持久存储在 52 个 wiki 页面中。'
   },
   {
     title: '多 Agent 并行素材收集',
@@ -42,7 +42,7 @@ const whatWorked = [
     verdict: '有效',
     color: '#27ae60',
     stats: '125 papers classified',
-    detail: 'M1 观测(12) → M2 评估(11) → M3 改进(52) → M4 协同(19) → M5 涌现(7)。125 篇论文验证了覆盖度。每个维度都有独立研究且通过 DAG 互连。'
+    detail: 'M1 观测(12) → M2 评估(11) → M3 改进(52) → M4 协同(19) → M5 涌现(7)。这是 2026-05-26 论文分类快照，不等同于当前全仓库计数。每个维度都有独立研究且通过 DAG 互连。'
   }
 ];
 
@@ -87,7 +87,7 @@ const whatFailed = [
     verdict: 'Research Gap',
     color: '#e74c3c',
     stats: '7/125 papers, safety-critical',
-    detail: '安全风险的时间涌现、能力边界漂移——这些最关键的问题研究最少。125 篇论文中仅 7 篇主要研究涌现行为。Goodhart\'s Law 只有 1 个量化案例（Self-Rewarding LM 长度膨胀 1092→2552 tokens）。'
+    detail: '安全风险的时间涌现、能力边界漂移——这些最关键的问题研究最少。在 2026-05-26 论文分类快照中，仅 7 篇主要研究涌现行为。Goodhart\'s Law 只有 1 个量化案例（Self-Rewarding LM 长度膨胀 1092→2552 tokens）。'
   },
   {
     title: '框架缺乏预测力',
@@ -159,7 +159,7 @@ const dataPoints = [
 
 <BaseLayout
   title="项目复盘 — 实验、教训与未来方向"
-  description="AI Self-Evolution 调查项目全面复盘：18-agent 团队实验、125 篇论文分类、530 个项目分析——什么有效、什么失败、未来怎么做。"
+  description="AI Self-Evolution 调查项目的 2026-05-26 历史复盘快照：18-agent 团队实验、论文分类、项目分析——什么有效、什么失败、未来怎么做。"
   publishedTime="2026-05-26T21:30:00+08:00"
   modifiedTime="2026-05-26T21:30:00+08:00"
 >
@@ -167,10 +167,10 @@ const dataPoints = [
     <div class="container">
       <div class="eyebrow">Retrospective · 项目复盘</div>
       <h1 class="gradient-text">复盘：实验、教训与未来方向</h1>
-      <p class="lead">复盘之前的实验、知道什么有效什么没有、未来方向在哪里、应该怎么做</p>
+      <p class="lead">这是 2026-05-26 的历史复盘快照，用来解释当时的实验规模、有效实践、失败教训和未来方向；当前全仓库计数以资料库覆盖页和 master index 为准。</p>
       <div class="metrics">
-        <div class="metric"><strong>125</strong><span>篇论文分类</span></div>
-        <div class="metric"><strong>530</strong><span>个项目捕获</span></div>
+        <div class="metric"><strong>125</strong><span>篇论文分类快照</span></div>
+        <div class="metric"><strong>530</strong><span>个项目捕获快照</span></div>
         <div class="metric"><strong>122</strong><span>次提交</span></div>
         <div class="metric"><strong>3,272</strong><span>条原始素材</span></div>
       </div>
@@ -247,7 +247,7 @@ const dataPoints = [
 
       <div class="card" style="padding: 24px; border-left: 4px solid var(--accent); margin-bottom: 16px;">
         <h3>3. 自进化领域的关键缺口是安全和评估</h3>
-        <p style="margin-top: 8px;">125 篇论文中只有 7 篇研究涌现行为，Goodhart's Law 只有 1 个量化案例。这是未来研究最有价值的方向。能力研究远超安全研究。</p>
+        <p style="margin-top: 8px;">在 2026-05-26 分类快照中，只有 7 篇研究涌现行为，Goodhart's Law 只有 1 个量化案例。这说明未来研究仍需要更强的安全和评估证据。能力研究远超安全研究。</p>
       </div>
 
       <div class="card" style="padding: 24px; border-left: 4px solid #B83224;">

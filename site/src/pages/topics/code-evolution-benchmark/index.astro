@@ -62,7 +62,7 @@ const ladder = [
 const readerRules = [
   ['先看可变对象', '代码补丁、候选程序、agent 架构、prompt、memory 不是同一种自进化。先问系统到底改了什么。'],
   ['再看评估器', '最强信号来自可执行测试、隐藏任务、程序化 scorer 和独立评估。只有 LLM 自评时要降低可信度。'],
-  ['最后看保留机制', '真正的自进化会留下 archive、lineage、best-so-far 曲线、失败候选或可回滚资产。'],
+  ['最后看保留机制', '严格自进化证据会留下 archive、lineage、best-so-far 曲线、失败候选或可回滚资产。'],
   ['不要只看分数', '分数提升必须同时报告成本、迁移、回归和失败模式，否则容易把 benchmark 热度当成熟度。'],
 ];
 
@@ -99,8 +99,10 @@ const jsonLd = {
 ---
 
 <BaseLayout
-  title="代码自我改进 Benchmark Matrix — Self Evolve"
-  description="用 benchmark matrix 判断 DGM、ADAS、AlphaEvolve、OpenEvolve、FunSearch、SICA 等系统的代码自我改进和算法发现证据。"
+  alternateZh="/topics/code-evolution-benchmark/"
+  alternateEn="/en/topics/code-evolution-benchmark/"
+  title="代码自我改进 Benchmark Matrix — Code evolution evidence guide"
+  description="双语 benchmark matrix：判断 DGM、ADAS、AlphaEvolve、OpenEvolve、FunSearch、SICA 等系统的代码自我改进和算法发现证据强度。"
   pageKeywords={['代码自我改进', 'AI code self improvement', 'AlphaEvolve benchmark', 'Darwin Godel Machine benchmark', 'SWE-Bench self-evolving agents']}
 >
   <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} is:inline />
@@ -189,9 +191,10 @@ const jsonLd = {
         <div class="hero-copy">
           <div class="eyebrow">Benchmark / Survey Rank 3</div>
           <h1>代码自我改进，不是一张榜单能说明白。</h1>
-          <p class="lead">同样叫 code evolution，DGM 在改 agent 自身，AlphaEvolve 在发现可执行算法，ADAS 在搜索 agent 架构，OPRO/DSPy/GEPA 在优化 prompt 或程序。判断证据时先分清可变对象，再看 evaluator 和保留机制。</p>
+          <p class="lead">Code evolution claims are easy to blur. DGM modifies an agent, AlphaEvolve discovers executable algorithms, ADAS searches agent architectures, and GEPA/DSPy optimize prompts or programs. Separate the mutable object before comparing scores.</p>
           <div class="hero-actions">
             <a class="button primary" href="#benchmark-matrix">看矩阵</a>
+            <a class="button" href="/en/topics/code-evolution-benchmark/">English</a>
             <a class="button" href="/benchmark/">Benchmark 总览</a>
             <a class="button" href="/projects/">项目报告</a>
             <a class="text-link" href="/topics/">主题地图</a>
@@ -250,6 +253,10 @@ const jsonLd = {
           </div>
           <a class="text-link" href="https://github.com/Shiyao-Huang/awesome-agent-evolution/blob/main/analysis/code-evolution-benchmark-matrix.md" target="_blank" rel="noopener">分析来源</a>
         </div>
+        <article class="card" style="margin-bottom: 16px;">
+          <h3>Evidence boundary</h3>
+          <p>表格中的系统和 benchmark 是该 mode 的代表证据，不表示每个系统都报告了同一组 benchmark、隐藏测试或回归检查。做技术判断时必须回到单项目报告和原论文。</p>
+        </article>
         <div class="score-table-wrap">
           <table class="score-table">
             <thead>
