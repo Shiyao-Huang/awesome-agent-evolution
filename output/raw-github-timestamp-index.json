@@ -638,10 +638,10 @@
       "repo": "AutoJunjie/awesome-agent-harness",
       "url": "https://github.com/AutoJunjie/awesome-agent-harness",
       "file": "raw-github/autojunjie_awesome-agent-harness.md",
-      "content_timestamp": "2026-05-27",
-      "collected_at": "2026-05-27T22:00:12+08:00",
-      "time_slice": "2026-05",
-      "timestamp_source": "web_observed_public_github_page_2026_05_27"
+      "content_timestamp": "2026-06-04",
+      "collected_at": "2026-06-04T21:38:16+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "web_observed_public_github_page_2026_06_04"
     },
     {
       "repo": "AutoX-AI-Labs/AutoR",
@@ -2006,10 +2006,10 @@
       "repo": "howdymary/hermes-agent-metaharness",
       "url": "https://github.com/howdymary/hermes-agent-metaharness",
       "file": "raw-github/howdymary_hermes-agent-metaharness.md",
-      "content_timestamp": "2026-06-03",
-      "collected_at": "2026-06-03T07:52:50+08:00",
+      "content_timestamp": "2026-06-04",
+      "collected_at": "2026-06-04T21:38:16+08:00",
       "time_slice": "2026-06",
-      "timestamp_source": "web_observed_public_github_page_2026_06_03"
+      "timestamp_source": "web_observed_public_github_page_2026_06_04"
     },
     {
       "repo": "howells/arc",
@@ -3032,10 +3032,10 @@
       "repo": "mem0ai/memory-benchmarks",
       "url": "https://github.com/mem0ai/memory-benchmarks",
       "file": "raw-github/mem0ai_memory-benchmarks.md",
-      "content_timestamp": "2026-05-24",
-      "collected_at": "2026-05-24T20:20:00+08:00",
-      "time_slice": "2026-05",
-      "timestamp_source": "web_github_page_open_2026-05-24"
+      "content_timestamp": "2026-06-04",
+      "collected_at": "2026-06-04T21:38:16+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "web_observed_public_github_page_2026_06_04"
     },
     {
       "repo": "mem9-ai/mem9",
@@ -3446,10 +3446,10 @@
       "repo": "neo4j-labs/agent-memory",
       "url": "https://github.com/neo4j-labs/agent-memory",
       "file": "raw-github/neo4j-labs_agent-memory.md",
-      "content_timestamp": "2026-05-25",
-      "collected_at": "2026-05-24T19:09:37Z",
-      "time_slice": "2026-05",
-      "timestamp_source": "web_observed_github_page"
+      "content_timestamp": "2026-06-04",
+      "collected_at": "2026-06-04T21:38:16+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "web_observed_public_github_page_2026_06_04"
     },
     {
       "repo": "neosigmaai/auto-harness",
@@ -4049,10 +4049,10 @@
       "repo": "pinchbench/skill",
       "url": "https://github.com/pinchbench/skill",
       "file": "raw-github/pinchbench_skill.md",
-      "content_timestamp": "2026-06-03",
-      "collected_at": "2026-06-03T19:56:18+08:00",
+      "content_timestamp": "2026-06-04",
+      "collected_at": "2026-06-04T21:38:16+08:00",
       "time_slice": "2026-06",
-      "timestamp_source": "web_observed_public_github_page_2026_06_03"
+      "timestamp_source": "web_observed_public_github_page_2026_06_04"
     },
     {
       "repo": "pingcap/ossinsight",

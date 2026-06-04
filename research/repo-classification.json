@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-04T15:36:30+08:00",
+  "generated_at": "2026-06-04T21:38:16+08:00",
   "rows": [
     {
       "repo": "01-ai/langcrew",
@@ -1054,16 +1054,16 @@
     {
       "repo": "AutoJunjie/awesome-agent-harness",
       "url": "https://github.com/AutoJunjie/awesome-agent-harness",
-      "stars": "423",
+      "stars": "437",
       "prior_category": "-",
       "prior_unclassified": "true",
       "final_category": "教程/tutorial",
       "function_tag": "resource-index",
-      "base_theme": "evaluation",
+      "base_theme": "harness",
       "stack": "Markdown/Resource Curation/Benchmark Notes",
-      "time_slice": "2026-05",
-      "content_timestamp": "2026-05-27",
-      "evidence": "web-observed GitHub page showed 423 stars, 29 forks, 59 commits, and README positioning around comprehensive harness curation for AI agent reliability and benchmarking.",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-04",
+      "evidence": "web-observed GitHub page showed 437 stars, 32 forks, 1 issue, 7 pull requests, 59 commits, no visible license badge, and a README organized around harness engineering layers from task runners to memory and protocols.",
       "description": "AutoJunjie/awesome-agent-harness curates the emerging agent harness ecosystem, combining benchmark references and implementation pointers."
     },
     {
@@ -3334,7 +3334,7 @@
     {
       "repo": "howdymary/hermes-agent-metaharness",
       "url": "https://github.com/howdymary/hermes-agent-metaharness",
-      "stars": "88",
+      "stars": "89",
       "prior_category": "-",
       "prior_unclassified": "true",
       "final_category": "评测/evaluation",
@@ -3342,8 +3342,8 @@
       "base_theme": "harness",
       "stack": "Python/Hermes Benchmark Outer Loop",
       "time_slice": "2026-06",
-      "content_timestamp": "2026-06-03",
-      "evidence": "web-observed GitHub page showed 88 stars, 9 forks, 11 commits, MIT license, explicit TBLite/TB2 benchmark orchestration, baseline-vs-candidate comparison, and frontier-backed deterministic search.",
+      "content_timestamp": "2026-06-04",
+      "evidence": "web-observed GitHub page showed 89 stars, 9 forks, 0 issues, 0 pull requests, 11 commits, MIT license, explicit TBLite/TB2 benchmark orchestration, baseline-vs-candidate comparison, and frontier-backed deterministic search.",
       "description": "Hermes Agent Meta-Harness is a standalone outer-loop evaluator that optimizes Hermes benchmark harness candidates without modifying model weights."
     },
     {
@@ -5044,16 +5044,16 @@
     {
       "repo": "mem0ai/memory-benchmarks",
       "url": "https://github.com/mem0ai/memory-benchmarks",
-      "stars": "33",
+      "stars": "38",
       "prior_category": "-",
       "prior_unclassified": "true",
       "final_category": "评测/evaluation",
       "function_tag": "benchmark-eval",
       "base_theme": "memory",
-      "stack": "Python/TypeScript",
-      "time_slice": "2026-05",
-      "content_timestamp": "2026-05-24",
-      "evidence": "web GitHub page observed 15 commits, Apache-2.0 license, Python/TypeScript stack, LOCOMO/LongMemEval/BEAM benchmarks, Mem0 cloud and OSS paths, 33 stars and 9 forks",
+      "stack": "Python/TypeScript/Next.js Memory Benchmark Suite",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-04",
+      "evidence": "web-observed GitHub page showed 38 stars, 12 forks, 2 issues, 2 pull requests, 15 commits, Apache-2.0 license, LOCOMO/LongMemEval/BEAM coverage, OSS+cloud paths, and published benchmark result tables.",
       "description": "mem0ai/memory-benchmarks 是 memory-augmented LLM systems 的公开评测套件，覆盖 LOCOMO、LongMemEval 和 BEAM，并同时支持 Mem0 cloud 与 OSS self-hosted pipeline。"
     },
     {
@@ -5734,16 +5734,16 @@
     {
       "repo": "neo4j-labs/agent-memory",
       "url": "https://github.com/neo4j-labs/agent-memory",
-      "stars": "262",
+      "stars": "302",
       "prior_category": "-",
       "prior_unclassified": "true",
       "final_category": "框架/framework",
       "function_tag": "framework-runtime",
       "base_theme": "memory",
-      "stack": "Python/TypeScript",
-      "time_slice": "2026-05",
-      "content_timestamp": "2026-05-25",
-      "evidence": "web GitHub page observed 418 commits, Apache-2.0 license, 262 stars and 63 forks, v0.4.0 latest on 2026-05-21, Python 88.6% and TypeScript 10.6%; README says it stores conversations, builds knowledge graphs, supports MCP with 16 tools, LangChain/PydanticAI/ADK/CrewAI integrations, eval harness, and TOUCHED audit edges",
+      "stack": "Python/TypeScript/Neo4j Graph Memory",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-04",
+      "evidence": "web-observed GitHub page showed 302 stars, 67 forks, 30 issues, 26 pull requests, 431 commits, Apache-2.0 license, one release v0.4.0 on 2026-05-21, Python 87.7%, TypeScript 11.5%, eval harness support, and explicit :TOUCHED audit edges.",
       "description": "Neo4j Agent Memory 是图原生 agent memory 系统，提供 Python/TypeScript SDK、MCP server、短期/长期/推理记忆、实体抽取、context graph、eval harness 和 reasoning trace audit edges。"
     },
     {
@@ -6745,11 +6745,11 @@
       "function_tag": "benchmark-eval",
       "base_theme": "evaluation",
       "stack": "Python/Shell/TypeScript/OpenClaw Benchmark Harness",
-      "evidence": "web-observed GitHub page showed about 1.2k stars, 133 forks, 16 issues, 383 commits, MIT license, 14 releases with latest v2.0.0 on 2026-05-06, 53 real-world tasks, and transcript-preserving benchmark workflows for OpenClaw agents.",
+      "evidence": "web-observed GitHub page showed about 1.2k stars, 136 forks, 18 issues, 383 commits, MIT license, 14 releases with latest v2.0.0 on 2026-05-06, 53 real-world tasks, and transcript-preserving benchmark workflows for OpenClaw agents.",
       "description": "PinchBench is an OpenClaw-oriented real task benchmark that measures coding agents across productivity, research, writing, coding, analysis, email, memory, and skill-discovery tasks.",
       "prior_unclassified": "true",
       "time_slice": "2026-06",
-      "content_timestamp": "2026-06-03"
+      "content_timestamp": "2026-06-04"
     },
     {
       "repo": "pingcap/ossinsight",

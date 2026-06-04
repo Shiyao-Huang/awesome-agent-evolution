@@ -77,7 +77,7 @@ Generated: 2026-06-04T00:00:00+08:00
 | 68 | [asirwad/dspy-prompt-auto-optimizer](https://github.com/asirwad/dspy-prompt-auto-optimizer) | unknown | unknown | 2026-05-20T17:44:59Z | unknown_not_present_in_raw_capture | raw-github/asirwad_dspy-prompt-auto-optimizer.md |
 | 69 | [autodrive-ecosystem/mrdt-marl](https://github.com/autodrive-ecosystem/mrdt-marl) | unknown | unknown | 2026-05-20T17:44:59Z | unknown_not_present_in_raw_capture | raw-github/autodrive-ecosystem_mrdt-marl.md |
 | 70 | [autohandai/code-cli](https://github.com/autohandai/code-cli) | 2026-05-21 | 2026-05 | 2026-05-20T17:45:19Z | github_latest_commit_or_update_text | raw-github/autohandai_code-cli.md |
-| 71 | [AutoJunjie/awesome-agent-harness](https://github.com/AutoJunjie/awesome-agent-harness) | 2026-05-27 | 2026-05 | 2026-05-27T22:00:12+08:00 | web_observed_public_github_page_2026_05_27 | raw-github/autojunjie_awesome-agent-harness.md |
+| 71 | [AutoJunjie/awesome-agent-harness](https://github.com/AutoJunjie/awesome-agent-harness) | 2026-06-04 | 2026-06 | 2026-06-04T21:38:16+08:00 | web_observed_public_github_page_2026_06_04 | raw-github/autojunjie_awesome-agent-harness.md |
 | 72 | [AutoX-AI-Labs/AutoR](https://github.com/AutoX-AI-Labs/AutoR) | 2026-05-26 | 2026-05 | 2026-05-26T09:12:00+08:00 | web_observed_public_github_page_2026_05_26 | raw-github/autox-ai-labs_autor.md |
 | 73 | [axiomhq/agent-memory](https://github.com/axiomhq/agent-memory) | 2026-05-29 | 2026-05 | 2026-05-29T10:08:08+08:00 | web_observed_public_github_page_2026_05_29 | raw-github/axiomhq_agent-memory.md |
 | 74 | [back1ply/agent-skill-loader](https://github.com/back1ply/agent-skill-loader) | 2026-05-29 | 2026-05 | 2026-05-29T16:12:30+08:00 | web_observed_public_github_page_2026_05_29 | raw-github/back1ply_agent-skill-loader.md |
@@ -229,7 +229,7 @@ Generated: 2026-06-04T00:00:00+08:00
 | 220 | [hkuds/openspace](https://github.com/hkuds/openspace) | 2026-04-16 | 2026-04 | 2026-05-20T17:45:19Z | github_latest_commit_or_update_text | raw-github/hkuds_openspace.md |
 | 221 | [hkust-knowcomp/awesome-llm-scientific-discovery](https://github.com/hkust-knowcomp/awesome-llm-scientific-discovery) | unknown | unknown | 2026-05-20T17:44:59Z | unknown_not_present_in_raw_capture | raw-github/hkust-knowcomp_awesome-llm-scientific-discovery.md |
 | 222 | [holaboss-ai/holaOS](https://github.com/holaboss-ai/holaOS) | 2026-05-27 | 2026-05 | 2026-05-27T22:00:12+08:00 | web_observed_public_github_page_2026_05_27 | raw-github/holaboss-ai_holaos.md |
-| 223 | [howdymary/hermes-agent-metaharness](https://github.com/howdymary/hermes-agent-metaharness) | 2026-06-03 | 2026-06 | 2026-06-03T07:52:50+08:00 | web_observed_public_github_page_2026_06_03 | raw-github/howdymary_hermes-agent-metaharness.md |
+| 223 | [howdymary/hermes-agent-metaharness](https://github.com/howdymary/hermes-agent-metaharness) | 2026-06-04 | 2026-06 | 2026-06-04T21:38:16+08:00 | web_observed_public_github_page_2026_06_04 | raw-github/howdymary_hermes-agent-metaharness.md |
 | 224 | [howells/arc](https://github.com/howells/arc) | 2026-05-25 | 2026-05 | 2026-05-25T13:21:00+08:00 | browser-observed GitHub page/search snapshot during 2026-05-25T13:21:00+08:00; shell DNS for api.github.com failed and gh token was invalid | raw-github/howells_arc.md |
 | 225 | [huggingface/agents-course](https://github.com/huggingface/agents-course) | unknown | unknown | 2026-05-20T17:44:59Z | unknown_not_present_in_raw_capture | raw-github/huggingface_agents-course.md |
 | 226 | [huggingface/skills](https://github.com/huggingface/skills) | 2026-05-24 | 2026-05 | 2026-05-24T20:20:00+08:00 | web_github_page_open_2026-05-24 | raw-github/huggingface_skills.md |
@@ -343,7 +343,7 @@ Generated: 2026-06-04T00:00:00+08:00
 | 334 | [mdalamin5/end-to-end-agentic-ai-automation-lab](https://github.com/mdalamin5/end-to-end-agentic-ai-automation-lab) | 2026-05-21 | 2026-05 | 2026-05-20T17:45:19Z | github_latest_commit_or_update_text | raw-github/mdalamin5_end-to-end-agentic-ai-automation-lab.md |
 | 335 | [meituan/EvoCUA](https://github.com/meituan/EvoCUA) | 2026-05-24 | 2026-05 | 2026-05-24T15:58:26+08:00 | web_github_page_open_2026-05-24 | raw-github/meituan_evocua.md |
 | 336 | [mem0ai/mem0](https://github.com/mem0ai/mem0) | 2026-05-24 | 2026-05 | 2026-05-24T15:58:26+08:00 | web_github_page_open_2026-05-24 | raw-github/mem0ai_mem0.md |
-| 337 | [mem0ai/memory-benchmarks](https://github.com/mem0ai/memory-benchmarks) | 2026-05-24 | 2026-05 | 2026-05-24T20:20:00+08:00 | web_github_page_open_2026-05-24 | raw-github/mem0ai_memory-benchmarks.md |
+| 337 | [mem0ai/memory-benchmarks](https://github.com/mem0ai/memory-benchmarks) | 2026-06-04 | 2026-06 | 2026-06-04T21:38:16+08:00 | web_observed_public_github_page_2026_06_04 | raw-github/mem0ai_memory-benchmarks.md |
 | 338 | [mem9-ai/mem9](https://github.com/mem9-ai/mem9) | 2026-05-27 | 2026-05 | 2026-05-27T09:59:08+08:00 | web_observed_public_github_page_2026_05_27 | raw-github/mem9-ai_mem9.md |
 | 339 | [Memento-Teams/Memento-Skills](https://github.com/Memento-Teams/Memento-Skills) | 2026-05-25 | 2026-05 | 2026-05-24T21:11:06Z | web_observed_github_page | raw-github/memento-teams_memento-skills.md |
 | 340 | [memodb-io/Acontext](https://github.com/memodb-io/Acontext) | 2026-05-28 | 2026-05 | 2026-05-28T22:03:48+08:00 | web_observed_public_github_page_2026_05_28 | raw-github/memodb-io_acontext.md |
@@ -389,7 +389,7 @@ Generated: 2026-06-04T00:00:00+08:00
 | 380 | [naivoder/mctsr](https://github.com/naivoder/mctsr) | unknown | unknown | 2026-05-20T17:44:59Z | unknown_not_present_in_raw_capture | raw-github/naivoder_mctsr.md |
 | 381 | [najeed/ai-agent-eval-harness](https://github.com/najeed/ai-agent-eval-harness) | 2026-06-02 | 2026-06 | 2026-06-02T13:53:05+08:00 | web_observed_public_github_page_2026_06_02 | raw-github/najeed_ai-agent-eval-harness.md |
 | 382 | [nemori-ai/nemori](https://github.com/nemori-ai/nemori) | 2026-05-28 | 2026-05 | 2026-05-28T22:03:48+08:00 | web_observed_public_github_page_2026_05_28 | raw-github/nemori-ai_nemori.md |
-| 383 | [neo4j-labs/agent-memory](https://github.com/neo4j-labs/agent-memory) | 2026-05-25 | 2026-05 | 2026-05-24T19:09:37Z | web_observed_github_page | raw-github/neo4j-labs_agent-memory.md |
+| 383 | [neo4j-labs/agent-memory](https://github.com/neo4j-labs/agent-memory) | 2026-06-04 | 2026-06 | 2026-06-04T21:38:16+08:00 | web_observed_public_github_page_2026_06_04 | raw-github/neo4j-labs_agent-memory.md |
 | 384 | [neosigmaai/auto-harness](https://github.com/neosigmaai/auto-harness) | 2026-05-21 | 2026-05 | 2026-05-20T17:45:19Z | github_latest_commit_or_update_text | raw-github/neosigmaai_auto-harness.md |
 | 385 | [NevaMind-AI/memU](https://github.com/NevaMind-AI/memU) | 2026-05-24 | 2026-05 | 2026-05-24T19:01:37+08:00 | web_github_page_open_2026-05-24 | raw-github/nevamind-ai_memu.md |
 | 386 | [ngoodman/metaprompt](https://github.com/ngoodman/metaprompt) | 2026-05-21 | 2026-05 | 2026-05-20T17:45:19Z | github_latest_commit_or_update_text | raw-github/ngoodman_metaprompt.md |
@@ -456,7 +456,7 @@ Generated: 2026-06-04T00:00:00+08:00
 | 447 | [pgg3/evotoolkit](https://github.com/pgg3/evotoolkit) | 2026-03-23 | 2026-03 | 2026-05-20T17:45:19Z | github_latest_commit_or_update_text | raw-github/pgg3_evotoolkit.md |
 | 448 | [pgg3/l-autoda](https://github.com/pgg3/l-autoda) | 2026-05-21 | 2026-05 | 2026-05-20T17:45:19Z | github_latest_commit_or_update_text | raw-github/pgg3_l-autoda.md |
 | 449 | [Picrew/awesome-agent-harness](https://github.com/Picrew/awesome-agent-harness) | 2026-05-27 | 2026-05 | 2026-05-27T22:00:12+08:00 | web_observed_public_github_page_2026_05_27 | raw-github/picrew_awesome-agent-harness.md |
-| 450 | [pinchbench/skill](https://github.com/pinchbench/skill) | 2026-06-03 | 2026-06 | 2026-06-03T19:56:18+08:00 | web_observed_public_github_page_2026_06_03 | raw-github/pinchbench_skill.md |
+| 450 | [pinchbench/skill](https://github.com/pinchbench/skill) | 2026-06-04 | 2026-06 | 2026-06-04T21:38:16+08:00 | web_observed_public_github_page_2026_06_04 | raw-github/pinchbench_skill.md |
 | 451 | [pingcap/ossinsight](https://github.com/pingcap/ossinsight) | 2026-05-21 | 2026-05 | 2026-05-20T17:45:19Z | github_latest_commit_or_update_text | raw-github/pingcap_ossinsight.md |
 | 452 | [pingcy/ace-langgraph](https://github.com/pingcy/ace-langgraph) | unknown | unknown | 2026-05-20T17:44:59Z | unknown_not_present_in_raw_capture | raw-github/pingcy_ace-langgraph.md |
 | 453 | [pjt222/agent-almanac](https://github.com/pjt222/agent-almanac) | 2026-05-25 | 2026-05 | 2026-05-24T16:06:00Z | web_observed_github_page | raw-github/pjt222_agent-almanac.md |

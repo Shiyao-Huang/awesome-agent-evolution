@@ -1,10 +1,10 @@
 ---
 repo: AutoJunjie/awesome-agent-harness
 url: https://github.com/AutoJunjie/awesome-agent-harness
-content_timestamp: 2026-05-27
-time_slice: 2026-05
-timestamp_source: web_observed_public_github_page_2026_05_27
-collected_at: 2026-05-27T22:00:12+08:00
+content_timestamp: 2026-06-04
+time_slice: 2026-06
+timestamp_source: web_observed_public_github_page_2026_06_04
+collected_at: 2026-06-04T21:38:16+08:00
 source: github
 ---
 
@@ -16,25 +16,27 @@ source: github
 
 # Raw public page capture notes
 
-This raw-style public GitHub page capture was recorded by the hourly public metadata update. Shell GitHub API access failed DNS resolution and local GitHub CLI auth was invalid, so freshness is web-observed rather than API-verified.
+This raw-style public GitHub page capture was refreshed by the hourly public metadata update. Shell GitHub API access remained blocked in this workspace, so freshness is web-observed rather than API-verified.
 
 ## Visible repository metadata
 
 - Repository: AutoJunjie/awesome-agent-harness
 - URL: https://github.com/AutoJunjie/awesome-agent-harness
-- Stars: 423
-- Forks: 29
+- Stars: 437
+- Forks: 32
 - Commits: 59
+- Issues: 1
+- Pull requests: 7
 - License: Unknown
 - Primary language / stack signal: Markdown/Resource Curation/Benchmark Notes
-- Collection timestamp: 2026-05-27T22:00:12+08:00
+- Collection timestamp: 2026-06-04T21:38:16+08:00
 
 ## Visible README / page excerpts
 
-- The repository declares itself as a comprehensive awesome list for agent harnesses.
-- README positioning emphasizes both engineering practice and benchmark-oriented evaluation.
-- The curation focuses on the harness layer rather than only model-level prompt techniques.
-- Signals were captured from the public repository page and README content visible at run time.
+- The public GitHub page showed 437 stars, 32 forks, 1 issue, 7 pull requests, and 59 commits.
+- The README defines agent harness engineering as environments, constraints, and feedback loops that make coding agents reliable at scale.
+- Its contents are organized by full lifecycle platforms, task runners, frameworks, runtimes, agent knowledge and memory, coding agents, protocols, and workflows.
+- The repository acts as a reader-facing map rather than a runnable benchmark harness.
 
 ## Raw capture boundary
 

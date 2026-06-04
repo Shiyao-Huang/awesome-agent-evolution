@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-04T15:36:30+08:00",
+  "generated_at": "2026-06-04T21:38:16+08:00",
   "truth_source": ".mermaid/current/graph.json",
   "nodes": [
     {
@@ -18,12 +18,11 @@
       "layer": "raw",
       "status": "updated",
       "paths": [
-        "raw-github/voltagent_awesome-agent-skills.md",
-        "raw-github/vectorize-io_agent-memory-benchmark.md",
-        "raw-github/benchflow-ai_skillsbench.md",
-        "raw-github/evalops_agent-harness.md",
-        "raw-github/browser-use_browser-harness.md",
-        "raw-github/swarmclawai_swarmclaw.md"
+        "raw-github/pinchbench_skill.md",
+        "raw-github/howdymary_hermes-agent-metaharness.md",
+        "raw-github/autojunjie_awesome-agent-harness.md",
+        "raw-github/mem0ai_memory-benchmarks.md",
+        "raw-github/neo4j-labs_agent-memory.md"
       ]
     },
     {
@@ -34,12 +33,11 @@
       "paths": [
         "research/repo-classification.json",
         "analysis/github-project-data-analysis.md",
-        "projects/403-voltagent-awesome-agent-skills-resource-index.md",
-        "projects/77-agent-memory-benchmark.md",
-        "projects/248-skillsbench-agent-skills-benchmark.md",
-        "projects/259-evalops-agent-harness-provider-adapter.md",
-        "projects/261-browser-harness-self-healing-web-agent-runtime.md",
-        "projects/93-swarmclaw-agent-runtime.md"
+        "projects/51-pinchbench-skill.md",
+        "projects/250-hermes-agent-metaharness-outer-loop.md",
+        "projects/265-awesome-agent-harness-autojunjie-curation.md",
+        "projects/87-mem0-memory-benchmarks.md",
+        "projects/130-neo4j-agent-memory.md"
       ]
     },
     {
@@ -49,15 +47,11 @@
       "status": "updated",
       "paths": [
         "site/src/data/projects.ts",
-        "site/public/reports/projects/403-voltagent-awesome-agent-skills-resource-index.md",
-        "site/public/reports/projects/77-agent-memory-benchmark.md",
-        "site/public/reports/projects/248-skillsbench-agent-skills-benchmark.md",
-        "site/public/reports/projects/259-evalops-agent-harness-provider-adapter.md",
-        "site/public/reports/projects/261-browser-harness-self-healing-web-agent-runtime.md",
-        "site/public/reports/projects/93-swarmclaw-agent-runtime.md",
-        "README.md",
-        "README-ZH.md",
-        "README-EN.md"
+        "site/public/reports/projects/51-pinchbench-skill.md",
+        "site/public/reports/projects/250-hermes-agent-metaharness-outer-loop.md",
+        "site/public/reports/projects/265-awesome-agent-harness-autojunjie-curation.md",
+        "site/public/reports/projects/87-mem0-memory-benchmarks.md",
+        "site/public/reports/projects/130-neo4j-agent-memory.md"
       ]
     },
     {
@@ -66,7 +60,7 @@
       "layer": "work",
       "status": "updated",
       "paths": [
-        "work/research/hourly-public-metadata-update-2026-06-04-1536.md"
+        "work/research/hourly-public-metadata-update-2026-06-04-2138.md"
       ]
     }
   ],
@@ -100,71 +94,61 @@
   "current_run": {
     "repos": [
       {
-        "repo": "voltagent/awesome-agent-skills",
-        "raw_capture": "raw-github/voltagent_awesome-agent-skills.md",
-        "report": "projects/403-voltagent-awesome-agent-skills-resource-index.md",
-        "site_report": "site/public/reports/projects/403-voltagent-awesome-agent-skills-resource-index.md",
-        "stars": 24200,
-        "forks": 2600,
-        "commits": 359,
-        "theme": "skill"
+        "repo": "pinchbench/skill",
+        "raw_capture": "raw-github/pinchbench_skill.md",
+        "report": "projects/51-pinchbench-skill.md",
+        "site_report": "site/public/reports/projects/51-pinchbench-skill.md",
+        "stars": 1200,
+        "forks": 136,
+        "commits": 383,
+        "theme": "evaluation"
       },
       {
-        "repo": "vectorize-io/agent-memory-benchmark",
-        "raw_capture": "raw-github/vectorize-io_agent-memory-benchmark.md",
-        "report": "projects/77-agent-memory-benchmark.md",
-        "site_report": "site/public/reports/projects/77-agent-memory-benchmark.md",
-        "stars": 46,
-        "forks": 17,
-        "commits": 29,
+        "repo": "howdymary/hermes-agent-metaharness",
+        "raw_capture": "raw-github/howdymary_hermes-agent-metaharness.md",
+        "report": "projects/250-hermes-agent-metaharness-outer-loop.md",
+        "site_report": "site/public/reports/projects/250-hermes-agent-metaharness-outer-loop.md",
+        "stars": 89,
+        "forks": 9,
+        "commits": 11,
+        "theme": "harness"
+      },
+      {
+        "repo": "AutoJunjie/awesome-agent-harness",
+        "raw_capture": "raw-github/autojunjie_awesome-agent-harness.md",
+        "report": "projects/265-awesome-agent-harness-autojunjie-curation.md",
+        "site_report": "site/public/reports/projects/265-awesome-agent-harness-autojunjie-curation.md",
+        "stars": 437,
+        "forks": 32,
+        "commits": 59,
+        "theme": "harness"
+      },
+      {
+        "repo": "mem0ai/memory-benchmarks",
+        "raw_capture": "raw-github/mem0ai_memory-benchmarks.md",
+        "report": "projects/87-mem0-memory-benchmarks.md",
+        "site_report": "site/public/reports/projects/87-mem0-memory-benchmarks.md",
+        "stars": 38,
+        "forks": 12,
+        "commits": 15,
         "theme": "memory"
       },
       {
-        "repo": "benchflow-ai/skillsbench",
-        "raw_capture": "raw-github/benchflow-ai_skillsbench.md",
-        "report": "projects/248-skillsbench-agent-skills-benchmark.md",
-        "site_report": "site/public/reports/projects/248-skillsbench-agent-skills-benchmark.md",
-        "stars": 1300,
-        "forks": 312,
-        "commits": 385,
-        "theme": "skill"
-      },
-      {
-        "repo": "evalops/agent-harness",
-        "raw_capture": "raw-github/evalops_agent-harness.md",
-        "report": "projects/259-evalops-agent-harness-provider-adapter.md",
-        "site_report": "site/public/reports/projects/259-evalops-agent-harness-provider-adapter.md",
-        "stars": 18,
-        "forks": 5,
-        "commits": 12,
-        "theme": "harness"
-      },
-      {
-        "repo": "browser-use/browser-harness",
-        "raw_capture": "raw-github/browser-use_browser-harness.md",
-        "report": "projects/261-browser-harness-self-healing-web-agent-runtime.md",
-        "site_report": "site/public/reports/projects/261-browser-harness-self-healing-web-agent-runtime.md",
-        "stars": 14300,
-        "forks": 1300,
-        "commits": 391,
-        "theme": "harness"
-      },
-      {
-        "repo": "swarmclawai/swarmclaw",
-        "raw_capture": "raw-github/swarmclawai_swarmclaw.md",
-        "report": "projects/93-swarmclaw-agent-runtime.md",
-        "site_report": "site/public/reports/projects/93-swarmclaw-agent-runtime.md",
-        "stars": 544,
-        "forks": 106,
-        "commits": 490,
-        "theme": "harness"
+        "repo": "neo4j-labs/agent-memory",
+        "raw_capture": "raw-github/neo4j-labs_agent-memory.md",
+        "report": "projects/130-neo4j-agent-memory.md",
+        "site_report": "site/public/reports/projects/130-neo4j-agent-memory.md",
+        "stars": 302,
+        "forks": 67,
+        "commits": 431,
+        "theme": "memory"
       }
     ],
     "blockers": [
       "shell GitHub API access remained blocked in this workspace",
-      "uid4oe/insight-swarm could not be refreshed via current web fetch and was left on prior evidence instead of fabricating freshness",
-      "GitNexus CLI is available but stale against current HEAD until re-analysis"
+      "gh auth status reported an invalid default GitHub token",
+      "GitNexus CLI required explicit --repo selection and the awesome-evolution index is stale against current HEAD"
     ],
-    "working_principle": "public GitHub page evidence -> raw-github refresh -> repo-classification/project/site registry -> README/i18n + public reports -> indexes + analysis + site build"
+    "working_principle": "public GitHub page evidence -> raw-github refresh -> repo-classification/project/site registry -> public reports -> indexes + analysis + site build"
   }
 }

@@ -4,15 +4,16 @@
 |---|---|
 | Repository | [mem0ai/memory-benchmarks](https://github.com/mem0ai/memory-benchmarks) |
 | Category | Memory Benchmark Suite |
-| Stars / forks snapshot | 33 / 9 |
+| Stars / forks snapshot | 38 / 12 |
+| Commits / issues / PRs snapshot | 15 / 2 / 2 |
 | Language | Python/TypeScript |
 | License | Apache-2.0 |
 | Raw capture | raw-github/mem0ai_memory-benchmarks.md |
-| Updated by | hourly public metadata update, 2026-05-24 |
+| Updated by | hourly public metadata update, 2026-06-04 21:38 +0800 |
 
 ## 1. Role in Self Evolve
 
-mem0ai/memory-benchmarks 是 memory-augmented LLM systems 的公开评测套件，覆盖 LOCOMO、LongMemEval 和 BEAM，并同时支持 Mem0 cloud 与 OSS self-hosted pipeline。
+mem0ai/memory-benchmarks 是 memory-augmented LLM systems 的公开评测套件，覆盖 LOCOMO、LongMemEval 和 BEAM，并同时支持 Mem0 cloud 与 OSS self-hosted pipeline。 It matters because self-evolving agents need explicit memory, harness, benchmark, and safety substrates before their improvement claims become trustworthy.
 
 ## 2. Working Principle
 
@@ -20,12 +21,12 @@ memory benchmark dataset -> ingest/search/evaluate pipeline -> answerer/judge sc
 
 ## 3. Evidence Path
 
-web GitHub page observed 15 commits, Apache-2.0 license, Python/TypeScript stack, LOCOMO/LongMemEval/BEAM benchmarks, Mem0 cloud and OSS paths, 33 stars and 9 forks. Shell GitHub API access remained blocked by DNS and local `gh` auth was invalid, so this card treats the current snapshot as web-observed rather than API-verified.
+web-observed GitHub page showed 38 stars, 12 forks, 2 issues, 2 pull requests, 15 commits, Apache-2.0 license, LOCOMO/LongMemEval/BEAM coverage, OSS+cloud paths, and published benchmark result tables. This iteration keeps freshness honest: the snapshot comes from the public GitHub page observed on 2026-06-04, while shell GitHub API access remained blocked in this workspace.
 
 ## 4. Teaching Use
 
-Use this card to explain Memory Benchmark Suite in the raw -> classification -> project card -> site/report pipeline. The reading path is: raw capture -> classification row -> public site card -> project report -> aggregate GitHub analysis.
+Use this card to explain Memory Benchmark Suite: it shows how memory systems, harness maps, benchmark suites, and outer-loop evaluators connect to the broader self-evolving-agent pipeline.
 
 ## 5. Limits
 
-当前未克隆源码，未运行 benchmark、SDK examples、skill install flows 或 memory experiments；star/fork/commit 快照来自公开 GitHub 页面文本或可见页面片段。
+The repository was not cloned in this iteration; no benchmark run, workflow execution, or agent loop experiment was executed. Counts and claims are visible public-page signals unless independently revalidated later.

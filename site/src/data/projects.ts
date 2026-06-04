@@ -3284,10 +3284,10 @@ export const projects: Project[] = [
         ]
     },
     {
-        "name": "Hermes Agent Meta-Harness",
+        "name": "Hermes Benchmark Outer-Loop Harness",
         "repo": "howdymary/hermes-agent-metaharness",
         "url": "https://github.com/howdymary/hermes-agent-metaharness",
-        "stars": 88,
+        "stars": 89,
         "forks": 9,
         "language": "Python",
         "license": "MIT",
@@ -3721,12 +3721,12 @@ export const projects: Project[] = [
         "name": "Awesome Agent Harness (AutoJunjie)",
         "repo": "AutoJunjie/awesome-agent-harness",
         "url": "https://github.com/AutoJunjie/awesome-agent-harness",
-        "stars": 423,
-        "forks": 29,
+        "stars": 437,
+        "forks": 32,
         "language": "Markdown",
         "license": "Unknown",
         "report": "projects/265-awesome-agent-harness-autojunjie-curation.md",
-        "pattern": "collect harness repositories and papers -> classify by benchmark and runtime concerns -> provide quick browse path for reproducibility and safety trends -> keep ecosystem update cadence visible by commit activity",
+        "pattern": "collect harness repositories and papers -> classify them by lifecycle, runtime, memory, protocols, and workflows -> provide a quick browse path for reproducibility and safety trends",
         "description": "AutoJunjie/awesome-agent-harness curates the emerging agent harness ecosystem, combining benchmark references and implementation pointers.",
         "stack": [
             "Markdown",
@@ -3739,10 +3739,10 @@ export const projects: Project[] = [
         "status": "candidate",
         "tags": [
             "harness",
-            "awesome-list",
+            "resource-index",
             "benchmark",
-            "agent-eval",
-            "curation"
+            "memory",
+            "protocols"
         ]
     },
     {
@@ -7478,17 +7478,17 @@ export const projects: Project[] = [
         "repo": "pinchbench/skill",
         "url": "https://github.com/pinchbench/skill",
         "stars": 1200,
-        "forks": 133,
+        "forks": 136,
         "language": "Python",
         "license": "MIT",
         "report": "projects/51-pinchbench-skill.md",
-        "pattern": "real-world task suite -> OpenClaw agent run -> automatic and/or LLM grading -> transcript retention -> leaderboard upload or local comparison",
-        "description": "PinchBench is a real-world benchmark harness for OpenClaw-style coding agents across coding, memory, email, research, analysis, and skill-discovery tasks.",
+        "pattern": "task suite -> OpenClaw agent execution -> automatic and/or LLM judging -> transcript retention -> optional leaderboard upload",
+        "description": "PinchBench is an OpenClaw-oriented real task benchmark that measures coding agents across productivity, research, writing, coding, analysis, email, memory, and skill-discovery tasks.",
         "stack": [
             "Python",
             "Shell",
             "TypeScript",
-            "OpenClaw"
+            "OpenClaw Benchmark Harness"
         ],
         "category": "Real-World Agent Task Benchmark",
         "lastPushed": "2026-05-06T00:00:00Z",

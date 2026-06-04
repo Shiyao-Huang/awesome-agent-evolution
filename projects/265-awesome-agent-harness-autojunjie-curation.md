@@ -4,28 +4,29 @@
 |---|---|
 | Repository | [AutoJunjie/awesome-agent-harness](https://github.com/AutoJunjie/awesome-agent-harness) |
 | Category | Harness Curation and Reading Map |
-| Stars / forks snapshot | 423 / 29 |
+| Stars / forks snapshot | 437 / 32 |
+| Commits / issues / PRs snapshot | 59 / 1 / 7 |
 | Language | Markdown |
 | License | Unknown |
 | Raw capture | raw-github/autojunjie_awesome-agent-harness.md |
-| Updated by | hourly public metadata update, 2026-05-27 22:00 +0800 |
+| Updated by | hourly public metadata update, 2026-06-04 21:38 +0800 |
 
 ## 1. Role in Self Evolve
 
-AutoJunjie/awesome-agent-harness curates the emerging agent harness ecosystem, combining benchmark references and implementation pointers. It matters because self-evolving agents need repeatable harness control, measurable feedback loops, and reusable skill procedures before claiming stable improvement.
+AutoJunjie/awesome-agent-harness curates the emerging agent harness ecosystem, combining benchmark references and implementation pointers. It matters because self-evolving agents need explicit memory, harness, benchmark, and safety substrates before their improvement claims become trustworthy.
 
 ## 2. Working Principle
 
-collect harness repositories and papers -> classify by benchmark and runtime concerns -> provide quick browse path for reproducibility and safety trends -> keep ecosystem update cadence visible by commit activity
+collect harness repositories and papers -> classify them by lifecycle, runtime, memory, protocols, and workflows -> provide a quick browse path for reproducibility and safety trends
 
 ## 3. Evidence Path
 
-web-observed GitHub page showed 423 stars, 29 forks, 59 commits, and README positioning around comprehensive harness curation for AI agent reliability and benchmarking. Shell GitHub API access remained blocked by DNS and local `gh` auth was invalid, so this card treats the snapshot as web-observed rather than API-verified.
+web-observed GitHub page showed 437 stars, 32 forks, 1 issue, 7 pull requests, 59 commits, no visible license badge, and a README organized around harness engineering layers from task runners to memory and protocols. This iteration keeps freshness honest: the snapshot comes from the public GitHub page observed on 2026-06-04, while shell GitHub API access remained blocked in this workspace.
 
 ## 4. Teaching Use
 
-Use this card to explain Harness Curation and Reading Map: it shows how harness/runtime/benchmark layers convert agent behavior into reproducible and auditable engineering workflows.
+Use this card to explain Harness Curation and Reading Map: it shows how memory systems, harness maps, benchmark suites, and outer-loop evaluators connect to the broader self-evolving-agent pipeline.
 
 ## 5. Limits
 
-The repository was not cloned in this iteration; no benchmark run, plugin install, workflow execution, or agent loop experiment was executed. Counts and claims are visible public-page/search signals unless independently revalidated later.
+The repository was not cloned in this iteration; no benchmark run, workflow execution, or agent loop experiment was executed. Counts and claims are visible public-page signals unless independently revalidated later.

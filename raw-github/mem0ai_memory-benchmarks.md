@@ -1,31 +1,43 @@
 ---
 repo: mem0ai/memory-benchmarks
 url: https://github.com/mem0ai/memory-benchmarks
-content_timestamp: 2026-05-24
-time_slice: 2026-05
-timestamp_source: web_github_page_open_2026-05-24
-collected_at: 2026-05-24T20:20:00+08:00
-source: github_web
+content_timestamp: 2026-06-04
+time_slice: 2026-06
+timestamp_source: web_observed_public_github_page_2026_06_04
+collected_at: 2026-06-04T21:38:16+08:00
+source: github
 ---
 
-## GitHub - mem0ai/memory-benchmarks: Open-source evaluation suite for memory-augmented LLM systems
+## GitHub - mem0ai/memory-benchmarks: mem0ai/memory-benchmarks 是 memory-augmented LLM systems 的公开评测套件，覆盖 LOCOMO、LongMemEval 和 BEAM，并同时支持 Mem0 cloud 与 OSS self-hosted pipeline。
 
 **Source**: https://github.com/mem0ai/memory-benchmarks
 
-**Collection note**: Captured through browser-accessible GitHub page text because local shell DNS resolution for `api.github.com` failed and `gh` token was invalid during this automation run. This is web-observed freshness, not GitHub API-verified freshness.
+---
 
-## Public metadata snapshot
+# Raw public page capture notes
 
-- Repository: `mem0ai/memory-benchmarks`
-- Stars observed: 33
-- Forks observed: 9
-- Commits observed: 15
-- License observed: Apache-2.0
-- Primary language observed: Python/TypeScript
-- Browser evidence: web GitHub page observed 15 commits, Apache-2.0 license, Python/TypeScript stack, LOCOMO/LongMemEval/BEAM benchmarks, Mem0 cloud and OSS paths, 33 stars and 9 forks
+This raw-style public GitHub page capture was refreshed by the hourly public metadata update. Shell GitHub API access remained blocked in this workspace, so freshness is web-observed rather than API-verified.
 
-## Raw README signals
+## Visible repository metadata
 
-- README positions the repo as an open-source evaluation suite for memory-augmented LLM systems.
-- Benchmarks include LOCOMO, LongMemEval, and BEAM, with ingest -> search -> evaluate stages and a Next.js UI for inspecting runs.
-- The suite reports Mem0 cloud and self-hosted OSS results and documents how benchmark scores depend on embedding model, LLM capability, and retrieval depth.
+- Repository: mem0ai/memory-benchmarks
+- URL: https://github.com/mem0ai/memory-benchmarks
+- Stars: 38
+- Forks: 12
+- Commits: 15
+- Issues: 2
+- Pull requests: 2
+- License: Apache-2.0
+- Primary language / stack signal: Python/TypeScript/Next.js Memory Benchmark Suite
+- Collection timestamp: 2026-06-04T21:38:16+08:00
+
+## Visible README / page excerpts
+
+- The public GitHub page showed 38 stars, 12 forks, 2 issues, 2 pull requests, and 15 commits.
+- The suite covers LOCOMO, LongMemEval, and BEAM, with both Mem0 cloud and self-hosted OSS execution paths.
+- The README exposes a three-stage ingest -> search -> evaluate pipeline plus a local web UI for browsing and comparing runs.
+- Published result tables include LongMemEval, LoCoMo, BEAM, and extraction-model comparisons for OSS runs.
+
+## Raw capture boundary
+
+No benchmark was run, no source clone was modified, and no private or authenticated metadata was used. This file preserves public page evidence for downstream classification, model-card analysis, public reports, and the site index.
