@@ -1,125 +1,43 @@
 ---
 repo: agentmemoryworld/awesome-agent-memory
-url: https://github.com/agentmemoryworld/awesome-agent-memory
-content_timestamp: unknown
-time_slice: unknown
-timestamp_source: unknown_not_present_in_raw_capture
-collected_at: 2026-05-20T17:44:59Z
+url: https://github.com/AgentMemoryWorld/Awesome-Agent-Memory
+content_timestamp: 2026-06-04
+time_slice: 2026-06
+timestamp_source: web_observed_public_github_page_2026_06_04
+collected_at: 2026-06-04T16:00:00+08:00
 source: github
 ---
 
-## GitHub - AgentMemoryWorld/Awesome-Agent-Memory: [Up-To-Date] Awesome Agent Memory Paper Resource · GitHub
+## GitHub - agentmemoryworld/awesome-agent-memory: Awesome Agent Memory is an up-to-date survey index for agent-memory papers, systems, and benchmarks rather than a runnable memory runtime.
 
-**Source**: https://github.com/agentmemoryworld/awesome-agent-memory
+**Source**: https://github.com/AgentMemoryWorld/Awesome-Agent-Memory
 
 ---
 
-[Skip to content](https://github.com/agentmemoryworld/awesome-agent-memory#start-of-content)
+# Raw public page capture notes
 
-You signed in with another tab or window. Reload to refresh your session.
+This raw-style public GitHub page capture was refreshed by the hourly public metadata update. Shell GitHub API access remained blocked in this workspace, so freshness is web-observed rather than API-verified.
 
-You signed out in another tab or window. Reload to refresh your session.
+## Visible repository metadata
 
-You switched accounts on another tab or window. Reload to refresh your session.
-Dismiss alert
+- Repository: agentmemoryworld/awesome-agent-memory
+- URL: https://github.com/AgentMemoryWorld/Awesome-Agent-Memory
+- Stars: 155
+- Forks: 8
+- Commits: 22
+- Issues: 1
+- Pull requests: 1
+- License: Unknown
+- Primary language / stack signal: Markdown/Survey/Resource Index
+- Collection timestamp: 2026-06-04T16:00:00+08:00
 
-{{ message }}
+## Visible README / page excerpts
 
-[AgentMemoryWorld](https://github.com/AgentMemoryWorld)
+- The public GitHub page showed 155 stars, 8 forks, 22 commits, plus 1 open issue and 1 pull request.
+- The about section frames it as an up-to-date Awesome Agent Memory paper resource linked to an arXiv survey.
+- This repository is a taxonomy and evidence router for the memory layer, not a direct implementation runtime.
+- No authenticated GitHub API freshness was used in this workspace.
 
-/
-**[Awesome-Agent-Memory](https://github.com/AgentMemoryWorld/Awesome-Agent-Memory)**
+## Raw capture boundary
 
-Public
-
-- [Notifications](https://github.com/login?return_to=%2FAgentMemoryWorld%2FAwesome-Agent-Memory)You must be signed in to change notification settings
-- [Fork
-    7](https://github.com/login?return_to=%2FAgentMemoryWorld%2FAwesome-Agent-Memory)
-- 
-[Star
-          148](https://github.com/login?return_to=%2FAgentMemoryWorld%2FAwesome-Agent-Memory)
-
-[https://github.com/AgentMemoryWorld/Awesome-Agent-Memory](https://github.com/AgentMemoryWorld/Awesome-Agent-Memory)
-
-[Branches](https://github.com/AgentMemoryWorld/Awesome-Agent-Memory/branches)[Tags](https://github.com/AgentMemoryWorld/Awesome-Agent-Memory/tags)
-
-[https://github.com/AgentMemoryWorld/Awesome-Agent-Memory/branches](https://github.com/AgentMemoryWorld/Awesome-Agent-Memory/branches)[https://github.com/AgentMemoryWorld/Awesome-Agent-Memory/tags](https://github.com/AgentMemoryWorld/Awesome-Agent-Memory/tags)
-
-Open more actions menu
-
-## Folders and files
-
-| Name | Name | Last commit message | Last commit date |
-|---|---|---|---|
-| Latest commit History22 Commits22 Commits |  |  |  |
-| img | img |  |  |
-| README.md | README.md |  |  |
-| View all files |  |  |  |
-
-## Repository files navigation
-
-Loading
-
-## About
-
-         [Up-To-Date] Awesome Agent Memory Paper Resource       
-
-[arxiv.org/abs/2602.06052](https://arxiv.org/abs/2602.06052)
-
-### Resources
-
-[Readme](https://github.com/agentmemoryworld/awesome-agent-memory#readme-ov-file)
-
-###         Uh oh! 
-
-There was an error while loading. Please reload this page.
-
-[Activity](https://github.com/AgentMemoryWorld/Awesome-Agent-Memory/activity)
-
-[Custom properties](https://github.com/AgentMemoryWorld/Awesome-Agent-Memory/custom-properties)
-
-### Stars
-
-[148
-        stars](https://github.com/AgentMemoryWorld/Awesome-Agent-Memory/stargazers)
-
-### Watchers
-
-[1
-        watching](https://github.com/AgentMemoryWorld/Awesome-Agent-Memory/watchers)
-
-### Forks
-
-[7
-        forks](https://github.com/AgentMemoryWorld/Awesome-Agent-Memory/forks)
-
-[Report repository](https://github.com/contact/report-content?content_url=https%3A%2F%2Fgithub.com%2FAgentMemoryWorld%2FAwesome-Agent-Memory&report=AgentMemoryWorld+%28user%29)
-
-## [Releases](https://github.com/AgentMemoryWorld/Awesome-Agent-Memory/releases)
-
-No releases published
-
-## [Packages
-      0](https://github.com/orgs/AgentMemoryWorld/packages?repo_name=Awesome-Agent-Memory)
-
-###         Uh oh! 
-
-There was an error while loading. Please reload this page.
-
-###         Uh oh! 
-
-There was an error while loading. Please reload this page.
-
-## [Contributors](https://github.com/AgentMemoryWorld/Awesome-Agent-Memory/graphs/contributors)
-
-- 
-
-- 
-
-- 
-
-###         Uh oh! 
-
-There was an error while loading. Please reload this page.
-
-     You can’t perform that action at this time.
+No benchmark was run, no source clone was modified, and no private or authenticated metadata was used. This file preserves public page evidence for downstream classification, model-card analysis, public reports, and the site index.

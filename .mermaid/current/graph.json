@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-04T01:56:13+08:00",
+  "generated_at": "2026-06-04T16:00:00+08:00",
   "truth_source": ".mermaid/current/graph.json",
   "nodes": [
     {
@@ -18,11 +18,11 @@
       "layer": "raw",
       "status": "updated",
       "paths": [
-        "raw-github/anthropics_skills.md",
-        "raw-github/ai-boost_awesome-harness-engineering.md",
-        "raw-github/benchflow-ai_skillsbench.md",
-        "raw-github/browser-use_browser-harness.md",
-        "raw-github/cxxz_awesome-agent-memory.md"
+        "raw-github/agentmemoryworld_awesome-agent-memory.md",
+        "raw-github/letta-ai_agentic-learning-sdk.md",
+        "raw-github/yennning_awesome-code-as-agent-harness-papers.md",
+        "raw-github/clawland-ai_geneclaw.md",
+        "raw-github/openclaw_clawbench.md"
       ]
     },
     {
@@ -32,8 +32,12 @@
       "status": "updated",
       "paths": [
         "research/repo-classification.json",
-        "output/raw-github-timestamp-index.md",
-        "analysis/github-project-data-analysis.md"
+        "analysis/github-project-data-analysis.md",
+        "projects/398-agentmemoryworld-awesome-agent-memory-resource-index.md",
+        "projects/399-letta-learning-sdk-continual-memory-sdk.md",
+        "projects/400-yennning-code-as-agent-harness-papers.md",
+        "projects/401-geneclaw-safe-self-evolving-agent-framework.md",
+        "projects/402-openclaw-clawbench-full-stack-agent-benchmark.md"
       ]
     },
     {
@@ -43,11 +47,11 @@
       "status": "updated",
       "paths": [
         "site/src/data/projects.ts",
-        "site/public/reports/projects/64-anthropic-skills.md",
-        "site/public/reports/projects/57-awesome-harness-engineering.md",
-        "site/public/reports/projects/248-skillsbench-agent-skills-benchmark.md",
-        "site/public/reports/projects/261-browser-harness-self-healing-web-agent-runtime.md",
-        "site/public/reports/projects/209-cxxz-awesome-agent-memory.md",
+        "site/public/reports/projects/398-agentmemoryworld-awesome-agent-memory-resource-index.md",
+        "site/public/reports/projects/399-letta-learning-sdk-continual-memory-sdk.md",
+        "site/public/reports/projects/400-yennning-code-as-agent-harness-papers.md",
+        "site/public/reports/projects/401-geneclaw-safe-self-evolving-agent-framework.md",
+        "site/public/reports/projects/402-openclaw-clawbench-full-stack-agent-benchmark.md",
         "README.md",
         "README-ZH.md",
         "README-EN.md"
@@ -59,7 +63,7 @@
       "layer": "work",
       "status": "updated",
       "paths": [
-        "work/research/hourly-public-metadata-update-2026-06-04-0156.md"
+        "work/research/hourly-public-metadata-update-2026-06-04-1600.md"
       ]
     }
   ],
@@ -93,56 +97,60 @@
   "current_run": {
     "repos": [
       {
-        "repo": "anthropics/skills",
-        "raw_capture": "raw-github/anthropics_skills.md",
-        "report": "projects/64-anthropic-skills.md",
-        "site_report": "site/public/reports/projects/64-anthropic-skills.md",
-        "stars": 142000,
-        "forks": 16800,
-        "theme": "skill"
-      },
-      {
-        "repo": "ai-boost/awesome-harness-engineering",
-        "raw_capture": "raw-github/ai-boost_awesome-harness-engineering.md",
-        "report": "projects/57-awesome-harness-engineering.md",
-        "site_report": "site/public/reports/projects/57-awesome-harness-engineering.md",
-        "stars": 1100,
-        "forks": 100,
-        "theme": "harness"
-      },
-      {
-        "repo": "benchflow-ai/skillsbench",
-        "raw_capture": "raw-github/benchflow-ai_skillsbench.md",
-        "report": "projects/248-skillsbench-agent-skills-benchmark.md",
-        "site_report": "site/public/reports/projects/248-skillsbench-agent-skills-benchmark.md",
-        "stars": 1300,
-        "forks": 305,
-        "theme": "skill"
-      },
-      {
-        "repo": "browser-use/browser-harness",
-        "raw_capture": "raw-github/browser-use_browser-harness.md",
-        "report": "projects/261-browser-harness-self-healing-web-agent-runtime.md",
-        "site_report": "site/public/reports/projects/261-browser-harness-self-healing-web-agent-runtime.md",
-        "stars": 13900,
-        "forks": 1300,
-        "theme": "harness"
-      },
-      {
-        "repo": "cxxz/awesome-agent-memory",
-        "raw_capture": "raw-github/cxxz_awesome-agent-memory.md",
-        "report": "projects/209-cxxz-awesome-agent-memory.md",
-        "site_report": "site/public/reports/projects/209-cxxz-awesome-agent-memory.md",
-        "stars": 11,
-        "forks": 3,
+        "repo": "agentmemoryworld/awesome-agent-memory",
+        "raw_capture": "raw-github/agentmemoryworld_awesome-agent-memory.md",
+        "report": "projects/398-agentmemoryworld-awesome-agent-memory-resource-index.md",
+        "site_report": "site/public/reports/projects/398-agentmemoryworld-awesome-agent-memory-resource-index.md",
+        "stars": 155,
+        "forks": 8,
+        "commits": 22,
         "theme": "memory"
+      },
+      {
+        "repo": "letta-ai/learning-sdk",
+        "raw_capture": "raw-github/letta-ai_agentic-learning-sdk.md",
+        "report": "projects/399-letta-learning-sdk-continual-memory-sdk.md",
+        "site_report": "site/public/reports/projects/399-letta-learning-sdk-continual-memory-sdk.md",
+        "stars": 45,
+        "forks": 3,
+        "commits": 72,
+        "theme": "memory"
+      },
+      {
+        "repo": "yennning/awesome-code-as-agent-harness-papers",
+        "raw_capture": "raw-github/yennning_awesome-code-as-agent-harness-papers.md",
+        "report": "projects/400-yennning-code-as-agent-harness-papers.md",
+        "site_report": "site/public/reports/projects/400-yennning-code-as-agent-harness-papers.md",
+        "stars": 331,
+        "forks": 24,
+        "commits": 32,
+        "theme": "harness"
+      },
+      {
+        "repo": "clawland-ai/geneclaw",
+        "raw_capture": "raw-github/clawland-ai_geneclaw.md",
+        "report": "projects/401-geneclaw-safe-self-evolving-agent-framework.md",
+        "site_report": "site/public/reports/projects/401-geneclaw-safe-self-evolving-agent-framework.md",
+        "stars": 36,
+        "forks": 8,
+        "commits": 8,
+        "theme": "evolution"
+      },
+      {
+        "repo": "openclaw/clawbench",
+        "raw_capture": "raw-github/openclaw_clawbench.md",
+        "report": "projects/402-openclaw-clawbench-full-stack-agent-benchmark.md",
+        "site_report": "site/public/reports/projects/402-openclaw-clawbench-full-stack-agent-benchmark.md",
+        "stars": 106,
+        "forks": 19,
+        "commits": 121,
+        "theme": "benchmark"
       }
     ],
     "blockers": [
       "shell GitHub API access remained blocked in this workspace",
-      "cached GitHub search results provided the freshest reachable public metadata, but several results only exposed crawl recency such as 'last week' rather than a live fetch timestamp",
-      "GitNexus CLI is available but the local index is stale against commit d46319e and was not promoted to authoritative freshness evidence for this run"
+      "GitNexus CLI is available but stale against current HEAD, so it was treated as topology tooling rather than freshness evidence"
     ],
-    "working_principle": "cached public GitHub result -> raw-github -> repo-classification/site project metadata -> README/i18n + public project reports -> indexes + analysis + site build"
+    "working_principle": "public GitHub page evidence -> raw-github refresh -> repo-classification/project/site registry -> README/i18n + public reports -> indexes + analysis + site build"
   }
 }

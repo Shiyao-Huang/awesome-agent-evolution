@@ -37,11 +37,11 @@
 
 | 仓库 | 这轮补了什么 | 为什么重要 |
 |---|---|---|
-| [anthropics/skills](https://github.com/anthropics/skills) | 用 2026-06-04 观察到的 cached GitHub 结果重写 raw 与 public report，把官方 skills 仓库修到 `142k / 16.8k`，同时明确这是 `last week` crawl 而不是 live API。 | 它是 skills 生态上游标准源；如果连它的公开体量和安装路径都失真，skill-layer 叙事会被旧快照拖偏。 |
-| [benchflow-ai/skillsbench](https://github.com/benchflow-ai/skillsbench) | 把 benchmark raw、classification、site card 与 public report 从 `1.2k / 302 / 360 commits` 刷到 `1.3k / 305 / 367 commits`，并补回 `tasks_excluded` 与 lockfile 复现信号。 | 它是“skill 是否真的有效”最直接的公开 benchmark 面，适合连接 skill registry 和真实任务评测。 |
-| [browser-use/browser-harness](https://github.com/browser-use/browser-harness) | 刷新 browser harness 的 raw 与 public report，把 cached GitHub 结果中的 `13.9k / 1.3k / 391 commits / 13 issues / 91 PRs` 写回证据链。 | 它把 browser automation、editable helpers、domain skills 和 run-time self-healing 连接起来，是 harness 演化的高价值样本。 |
-| [cxxz/awesome-agent-memory](https://github.com/cxxz/awesome-agent-memory) | 用 2026-06-04 观察到的 cached GitHub 结果刷新 raw、memory report 和 site card，补回 `MIT`、`11 / 3`、issues / PR 以及更完整的 memory taxonomy。 | 它不是 runtime，而是 memory 知识入口；更新它能把“memory substrate”从单项目叙事拉回到更完整的资源图。 |
-| [ai-boost/awesome-harness-engineering](https://github.com/ai-boost/awesome-harness-engineering) | 重新核对 raw 与 public report，明确本轮只能通过 cached GitHub 结果重确认 harness taxonomy，而 `1.1k / 100` 仍是当前最佳本地计数证据。 | 它是 harness engineering 主题入口；关键不是夸大 freshness，而是把“taxonomy 已复核、计数仍旧值”的边界写清楚。 |
+| [agentmemoryworld/awesome-agent-memory](https://github.com/AgentMemoryWorld/Awesome-Agent-Memory) | 刷新 raw snapshot、project card、site public report 与分类元数据，统一到 2026-06-04 的公开 GitHub 页面证据。 | 它把 memory 从零散实现拉回到系统性资源地图，适合在 README 和站点前排回答“memory 领域到底有哪些东西”这个问题。 |
+| [letta-ai/learning-sdk](https://github.com/letta-ai/learning-sdk) | 刷新 raw snapshot、project card、site public report 与分类元数据，统一到 2026-06-04 的公开 GitHub 页面证据。 | 它把“memory + learning”压缩成一个可嵌入 SDK，而不是整套 runtime，适合补齐用户关心的 skill/memory 基础设施层。 |
+| [yennning/awesome-code-as-agent-harness-papers](https://github.com/YennNing/Awesome-Code-as-Agent-Harness-Papers) | 刷新 raw snapshot、project card、site public report 与分类元数据，统一到 2026-06-04 的公开 GitHub 页面证据。 | 它直接服务用户强调的 harness 方向，而且不是单个项目，而是把 code-as-harness 这条路线变成可教学的入口。 |
+| [clawland-ai/geneclaw](https://github.com/Clawland-AI/Geneclaw) | 刷新 raw snapshot、project card、site public report 与分类元数据，统一到 2026-06-04 的公开 GitHub 页面证据。 | 它是“受控自进化”最直观的工程样本之一，正好对应 README 核心判断里用户最关心的安全与审计边界。 |
+| [openclaw/clawbench](https://github.com/openclaw/clawbench) | 刷新 raw snapshot、project card、site public report 与分类元数据，统一到 2026-06-04 的公开 GitHub 页面证据。 | 它补上了 benchmark 面最关键的“评测整条 agent 栈，而不是只测模型输出”这一层。 |
 
 ```mermaid
 flowchart LR

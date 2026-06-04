@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-04T01:56:13+08:00",
+  "generated_at": "2026-06-04T16:00:00+08:00",
   "rows": [
     {
       "repo": "01-ai/langcrew",
@@ -333,18 +333,18 @@
     },
     {
       "repo": "agentmemoryworld/awesome-agent-memory",
-      "url": "https://github.com/agentmemoryworld/awesome-agent-memory",
-      "stars": "148",
+      "url": "https://github.com/AgentMemoryWorld/Awesome-Agent-Memory",
+      "stars": "155",
       "prior_category": "-",
       "prior_unclassified": "true",
       "final_category": "教程/tutorial",
       "function_tag": "resource-index",
       "base_theme": "memory",
-      "stack": "Markdown",
-      "time_slice": "unknown",
-      "content_timestamp": "unknown",
-      "evidence": "awesome/list/tutorial/survey resource signal",
-      "description": "[Up-To-Date] Awesome Agent Memory Paper Resource"
+      "stack": "Markdown/Survey/Resource Index",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-04",
+      "evidence": "web-observed GitHub page showed 155 stars, 8 forks, 22 commits, 1 issue, 1 pull request, arXiv-backed survey positioning, and no visible license marker on the public repository page.",
+      "description": "Awesome Agent Memory is an up-to-date survey index for agent-memory papers, systems, and benchmarks rather than a runnable memory runtime."
     },
     {
       "repo": "agentralabs/agentic-memory",
@@ -1668,18 +1668,18 @@
     },
     {
       "repo": "clawland-ai/geneclaw",
-      "url": "https://github.com/clawland-ai/geneclaw",
+      "url": "https://github.com/Clawland-AI/Geneclaw",
       "stars": "36",
       "prior_category": "框架",
       "prior_unclassified": "false",
       "final_category": "框架/framework",
-      "function_tag": "framework-runtime",
+      "function_tag": "agent-evolution-infra",
       "base_theme": "evolution",
-      "stack": "Markdown",
-      "time_slice": "unknown",
-      "content_timestamp": "unknown",
-      "evidence": "kept prior human/analysis category + README verified",
-      "description": "Self-evolving AI agent framework with 5-layer safety gatekeeper. Agents observe failures, propose fixes, and safely apply them. Built on HKUDS/nanobot."
+      "stack": "Python/Nanobot/Geneclaw Evolution Protocol",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-04",
+      "evidence": "web-observed GitHub page showed 36 stars, 8 forks, 8 commits, MIT license, 0 issues, 0 pull requests, and a dry-run-first self-evolution loop with a five-layer gatekeeper plus benchmark and rollback surfaces.",
+      "description": "Geneclaw is a safe-by-default self-evolving agent framework that observes failures, proposes fixes, and only applies changes behind an explicit safety gate."
     },
     {
       "repo": "clawsouls/soulclaw",
@@ -6184,17 +6184,17 @@
     {
       "repo": "openclaw/clawbench",
       "url": "https://github.com/openclaw/clawbench",
-      "stars": "97",
+      "stars": "106",
       "prior_category": "-",
       "final_category": "评测/evaluation",
       "function_tag": "benchmark-eval",
-      "base_theme": "evaluation",
-      "stack": "Python",
-      "evidence": "web GitHub page verified trace-based benchmark signal",
-      "description": "Agent benchmark scoring the full stack with trace-based scoring, reliability metrics, and dynamical-systems diagnostics.",
+      "base_theme": "benchmark",
+      "stack": "Python/Trace-Scored Benchmark/Docker",
+      "evidence": "web-observed GitHub page showed 106 stars, 19 forks, 121 commits, MIT license, 0 issues, 2 pull requests, and a trace-scored benchmark that measures harness, config, and model instead of only final LLM output.",
+      "description": "ClawBench is a benchmark for agent systems that scores the full stack through execution traces, reliability metrics, and diagnostics rather than only final-task success.",
       "prior_unclassified": "true",
-      "time_slice": "2026-04",
-      "content_timestamp": "2026-04-20"
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-04"
     },
     {
       "repo": "openclaw/clawhub",
@@ -9558,18 +9558,18 @@
     },
     {
       "repo": "yennning/awesome-code-as-agent-harness-papers",
-      "url": "https://github.com/yennning/awesome-code-as-agent-harness-papers",
-      "stars": "123",
+      "url": "https://github.com/YennNing/Awesome-Code-as-Agent-Harness-Papers",
+      "stars": "331",
       "prior_category": "-",
       "prior_unclassified": "true",
       "final_category": "教程/tutorial",
       "function_tag": "resource-index",
-      "base_theme": "education-list",
-      "stack": "Unknown",
-      "time_slice": "unknown",
-      "content_timestamp": "unknown",
-      "evidence": "awesome/list/tutorial/survey resource signal",
-      "description": ""
+      "base_theme": "harness",
+      "stack": "Markdown/Survey/Harness Taxonomy",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-04",
+      "evidence": "web-observed GitHub page showed 331 stars, 24 forks, 32 commits, MIT license, 4 issues, and a survey taxonomy spanning harness interface, harness mechanisms, and scaling the harness for agentic code systems.",
+      "description": "Awesome Code as Agent Harness Papers is a harness-first survey index that turns code-centric agent systems into an organized reading and comparison map."
     },
     {
       "repo": "yf-he/EvoTest",

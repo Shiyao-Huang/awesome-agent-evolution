@@ -2,13 +2,13 @@
 
 Truth source: `.mermaid/current/graph.json`
 
-Generated: 2026-06-04T01:56:13+08:00
+Generated: 2026-06-04T16:00:00+08:00
 
 ## Nodes
 
 - **intent.direct-user-input** (ops, active): Use only direct user inputs as goal source for the hourly public metadata loop.
 - **raw.github.hourly-captures** (raw, updated): Keep public GitHub evidence raw and timestamped before analysis.
-- **processed.github-classification** (processed, updated): Refresh classification rows and public-facing metadata for evolution, memory, skill, harness, and benchmark anchors.
+- **processed.github-classification** (processed, updated): Refresh classification rows and model cards for memory, harness, evolution, and benchmark anchors.
 - **results.public-site** (results, updated): Push the metadata refresh into README/i18n, project reports, and site project data.
 - **work.learning-note** (work, updated): Record the data flow, blockers, and repo-level evidence for the next run.
 
@@ -22,8 +22,8 @@ Generated: 2026-06-04T01:56:13+08:00
 
 ## Current Run Evidence
 
-- Refreshed repos: anthropics/skills, ai-boost/awesome-harness-engineering, benchflow-ai/skillsbench, browser-use/browser-harness, cxxz/awesome-agent-memory.
-- Refreshed raw files: raw-github/anthropics_skills.md, raw-github/ai-boost_awesome-harness-engineering.md, raw-github/benchflow-ai_skillsbench.md, raw-github/browser-use_browser-harness.md, raw-github/cxxz_awesome-agent-memory.md.
-- Refreshed public reports: site/public/reports/projects/64-anthropic-skills.md, site/public/reports/projects/57-awesome-harness-engineering.md, site/public/reports/projects/248-skillsbench-agent-skills-benchmark.md, site/public/reports/projects/261-browser-harness-self-healing-web-agent-runtime.md, site/public/reports/projects/209-cxxz-awesome-agent-memory.md.
-- Shell GitHub API access remained blocked in this workspace, so freshness is based on cached public GitHub search results rather than live API responses.
-- GitNexus CLI is available but stale against commit `d46319e`, so this run used it only as degraded evidence and kept the current metadata proof chain web-backed.
+- Web-observed repos: agentmemoryworld/awesome-agent-memory, letta-ai/learning-sdk, yennning/awesome-code-as-agent-harness-papers, clawland-ai/geneclaw, openclaw/clawbench.
+- Refreshed raw files: raw-github/agentmemoryworld_awesome-agent-memory.md, raw-github/letta-ai_agentic-learning-sdk.md, raw-github/yennning_awesome-code-as-agent-harness-papers.md, raw-github/clawland-ai_geneclaw.md, raw-github/openclaw_clawbench.md.
+- Refreshed public reports: site/public/reports/projects/398-agentmemoryworld-awesome-agent-memory-resource-index.md, site/public/reports/projects/399-letta-learning-sdk-continual-memory-sdk.md, site/public/reports/projects/400-yennning-code-as-agent-harness-papers.md, site/public/reports/projects/401-geneclaw-safe-self-evolving-agent-framework.md, site/public/reports/projects/402-openclaw-clawbench-full-stack-agent-benchmark.md.
+- Shell GitHub API access remained blocked in this workspace, so freshness is public-page observed rather than API-verified.
+- GitNexus CLI is available but stale against the current root commit, so it was not used as freshness evidence in this run.

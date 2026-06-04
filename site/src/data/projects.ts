@@ -7696,6 +7696,146 @@ export const projects: Project[] = [
             "self evaluation"
         ],
         "localPath": "raw-github/arthurmgraf_graphmind.md"
+    },
+    {
+        "name": "Awesome Agent Memory",
+        "repo": "agentmemoryworld/awesome-agent-memory",
+        "url": "https://github.com/AgentMemoryWorld/Awesome-Agent-Memory",
+        "description": "Awesome Agent Memory is an up-to-date survey index for agent-memory papers, systems, and benchmarks rather than a runnable memory runtime.",
+        "stack": [
+            "Markdown",
+            "Survey",
+            "Resource Index"
+        ],
+        "category": "Agent Memory Resource Survey Index",
+        "status": "candidate",
+        "stars": 155,
+        "forks": 8,
+        "lastPushed": "2026-06-04T00:00:00Z",
+        "language": "Markdown",
+        "license": "Unknown",
+        "report": "projects/398-agentmemoryworld-awesome-agent-memory-resource-index.md",
+        "pattern": "collect memory papers and systems -> organize them by mechanism and scope -> point readers to benchmark and implementation anchors -> keep the memory landscape navigable as a survey resource",
+        "tags": [
+            "memory",
+            "survey index",
+            "resource map",
+            "benchmark entrypoint",
+            "agent memory"
+        ],
+        "localPath": "raw-github/agentmemoryworld_awesome-agent-memory.md"
+    },
+    {
+        "name": "Learning SDK",
+        "repo": "letta-ai/learning-sdk",
+        "url": "https://github.com/letta-ai/learning-sdk",
+        "description": "Learning SDK is a drop-in memory and continual-learning substrate for existing LLM agents, exposing a thin wrapper instead of a full custom runtime.",
+        "stack": [
+            "Python",
+            "TypeScript",
+            "Letta SDK"
+        ],
+        "category": "Continual Learning And Long-Term Memory SDK",
+        "status": "candidate",
+        "stars": 45,
+        "forks": 3,
+        "lastPushed": "2026-06-04T00:00:00Z",
+        "language": "Python",
+        "license": "Apache-2.0",
+        "report": "projects/399-letta-learning-sdk-continual-memory-sdk.md",
+        "pattern": "wrap an existing LLM client -> capture conversation traces -> persist and inject relevant memory -> make the original agent stateful without retraining the base model",
+        "tags": [
+            "memory runtime",
+            "continual learning",
+            "stateful agents",
+            "sdk",
+            "provider-agnostic"
+        ],
+        "localPath": "raw-github/letta-ai_agentic-learning-sdk.md"
+    },
+    {
+        "name": "Awesome Code as Agent Harness Papers",
+        "repo": "yennning/awesome-code-as-agent-harness-papers",
+        "url": "https://github.com/YennNing/Awesome-Code-as-Agent-Harness-Papers",
+        "description": "Awesome Code as Agent Harness Papers is a harness-first survey index that turns code-centric agent systems into an organized reading and comparison map.",
+        "stack": [
+            "Markdown",
+            "Survey",
+            "Harness Taxonomy"
+        ],
+        "category": "Code-As-Agent-Harness Survey Index",
+        "status": "candidate",
+        "stars": 331,
+        "forks": 24,
+        "lastPushed": "2026-06-04T00:00:00Z",
+        "language": "Markdown",
+        "license": "MIT",
+        "report": "projects/400-yennning-code-as-agent-harness-papers.md",
+        "pattern": "collect code-centric agent papers -> regroup them by harness interface, mechanism, and scaling pattern -> expose memory, tool, debugging, and multi-agent topology lanes -> provide a navigable harness taxonomy",
+        "tags": [
+            "harness",
+            "survey index",
+            "code agents",
+            "taxonomy",
+            "multi-agent topology"
+        ],
+        "localPath": "raw-github/yennning_awesome-code-as-agent-harness-papers.md"
+    },
+    {
+        "name": "Geneclaw",
+        "repo": "clawland-ai/geneclaw",
+        "url": "https://github.com/Clawland-AI/Geneclaw",
+        "description": "Geneclaw is a safe-by-default self-evolving agent framework that observes failures, proposes fixes, and only applies changes behind an explicit safety gate.",
+        "stack": [
+            "Python",
+            "Nanobot",
+            "Geneclaw Evolution Protocol"
+        ],
+        "category": "Safe Self-Evolving Agent Framework",
+        "status": "candidate",
+        "stars": 36,
+        "forks": 8,
+        "lastPushed": "2026-06-04T00:00:00Z",
+        "language": "Python",
+        "license": "MIT",
+        "report": "projects/401-geneclaw-safe-self-evolving-agent-framework.md",
+        "pattern": "observe failures -> diagnose root causes -> propose constrained diffs -> validate through five safety gates -> branch, test, and apply only after approval or configured autopilot",
+        "tags": [
+            "self-evolving agents",
+            "safety gatekeeper",
+            "agent evolution",
+            "rollback",
+            "benchmark hooks"
+        ],
+        "localPath": "raw-github/clawland-ai_geneclaw.md"
+    },
+    {
+        "name": "ClawBench",
+        "repo": "openclaw/clawbench",
+        "url": "https://github.com/openclaw/clawbench",
+        "description": "ClawBench is a benchmark for agent systems that scores the full stack through execution traces, reliability metrics, and diagnostics rather than only final-task success.",
+        "stack": [
+            "Python",
+            "Trace-Scored Benchmark",
+            "Docker"
+        ],
+        "category": "Trace-Scored Full-Stack Agent Benchmark",
+        "status": "candidate",
+        "stars": 106,
+        "forks": 19,
+        "lastPushed": "2026-06-04T00:00:00Z",
+        "language": "Python",
+        "license": "MIT",
+        "report": "projects/402-openclaw-clawbench-full-stack-agent-benchmark.md",
+        "pattern": "run container-isolated tasks -> capture full execution traces -> score deterministic completion, trajectory quality, and behavior -> quantify noise and failure regimes -> compare harness/model/config combinations",
+        "tags": [
+            "benchmark",
+            "trace scoring",
+            "harness evaluation",
+            "reliability",
+            "diagnostics"
+        ],
+        "localPath": "raw-github/openclaw_clawbench.md"
     }
 ];
 
@@ -7728,7 +7868,8 @@ export const projectGroups = [
     "repos": [
       "modelscope/AgentEvolver",
       "aiwaves-cn/agents",
-      "JarvisPei/SCOPE"
+      "JarvisPei/SCOPE",
+      "clawland-ai/geneclaw"
     ]
   },
   {
@@ -7901,7 +8042,8 @@ export const projectGroups = [
       "paradigmxyz/evmbench",
       "plaited/agent-eval-harness",
       "najeed/ai-agent-eval-harness",
-      "Arc-Computer/CL-Bench"
+      "Arc-Computer/CL-Bench",
+      "openclaw/clawbench"
     ]
   },
   {
@@ -8088,7 +8230,10 @@ export const projectGroups = [
       "mnemon-dev/mnemon",
       "alibaizhanov/mengram",
       "im4codes/imcodes",
-      "weaviate/query-agent-benchmarking"
+      "weaviate/query-agent-benchmarking",
+      "agentmemoryworld/awesome-agent-memory",
+      "letta-ai/learning-sdk",
+      "yennning/awesome-code-as-agent-harness-papers"
     ]
   },
   {

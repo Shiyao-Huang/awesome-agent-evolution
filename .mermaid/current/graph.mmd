@@ -1,6 +1,6 @@
 flowchart LR
-  INTENT["Direct user intent"] --> RAW["raw-github captures"]
-  RAW --> PROC["repo classification + timestamp analysis"]
+  INTENT["Direct user intent"] --> RAW["raw-github refresh"]
+  RAW --> PROC["classification + project cards"]
   PROC --> SITE["README / site data / public reports"]
   PROC --> NOTE["work learning note"]
   NOTE --> INTENT

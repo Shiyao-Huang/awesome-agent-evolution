@@ -1,52 +1,43 @@
 ---
 repo: openclaw/clawbench
 url: https://github.com/openclaw/clawbench
-content_timestamp: 2026-04-20
-time_slice: 2026-04
-timestamp_source: web_github_page_open_2026-05-24
-collected_at: 2026-05-24T15:00:00+08:00
-source: github_web
+content_timestamp: 2026-06-04
+time_slice: 2026-06
+timestamp_source: web_observed_public_github_page_2026_06_04
+collected_at: 2026-06-04T16:00:00+08:00
+source: github
 ---
 
-## GitHub - openclaw/clawbench
+## GitHub - openclaw/clawbench: ClawBench is a benchmark for agent systems that scores the full stack through execution traces, reliability metrics, and diagnostics rather than only final-task success.
 
 **Source**: https://github.com/openclaw/clawbench
 
-**Collection note**: Captured through browser-accessible GitHub page text because local shell DNS resolution for `api.github.com` failed during this automation run.
+---
 
-## Public metadata snapshot
+# Raw public page capture notes
 
-- Repository: `openclaw/clawbench`
-- Stars observed: 97
-- Forks observed: 18
-- Commits observed: 114
-- License observed: MIT
-- Visible paths: `.agents/skills/crabbox`, `.github`, `baselines`, `clawbench`, `docs`, `profiles`, `scripts`, `tasks-domain`, `tasks-public`, `tests`, `CLAWBENCH_V0_4_SPEC.md`, `PARTNER_TRACE_SPEC.md`, `README.md`, `SPACE_README.md`, `app.py`, `docker-compose.yml`, `pyproject.toml`
+This raw-style public GitHub page capture was refreshed by the hourly public metadata update. Shell GitHub API access remained blocked in this workspace, so freshness is web-observed rather than API-verified.
 
-## Raw README signals
+## Visible repository metadata
 
-# ClawBench
+- Repository: openclaw/clawbench
+- URL: https://github.com/openclaw/clawbench
+- Stars: 106
+- Forks: 19
+- Commits: 121
+- Issues: 0
+- Pull requests: 2
+- License: MIT
+- Primary language / stack signal: Python/Trace-Scored Benchmark/Docker
+- Collection timestamp: 2026-06-04T16:00:00+08:00
 
-Rigorous agent evaluation. Signal-curated tasks. Dynamical-systems diagnostics.
+## Visible README / page excerpts
 
-What's new in Core v1 (2026-04-20): a reproducibility-first public release informed by an 8-model, 1,080-run sweep audit and five methodology layers.
+- The public GitHub page showed 106 stars, 19 forks, 121 commits, 0 issues, 2 pull requests, and MIT licensing.
+- The benchmark explicitly scores the harness, configuration, and model stack instead of treating the LLM alone as the system.
+- README sections expose execution-trace scoring, reliability quantification, variance decomposition, and partner trace specs.
+- No authenticated GitHub API freshness was used in this workspace.
 
-Innovation signals:
+## Raw capture boundary
 
-- Signal-curated task set: 19 tasks selected from a 40-task dev pool.
-- Variance decomposition: seed-noise vs capability-signal ratio per task.
-- Dynamical-systems diagnostics: trapped, limit-cycle, diffusive, mixed regimes.
-- Constraint Index C(q): principled task weighting via participation ratio, entropy, and Bayes prediction.
-- Reproducibility-first infrastructure: per-container state isolation and rejudge pipeline.
-
-Problem framing signals:
-
-- Scores alone can hide whether a model actually verified work.
-- Benchmark users need to know whether score gaps are signal or noise.
-- The benchmark distinguishes model, plugin stack, and harness version.
-
-Scoring signals:
-
-- Scores from execution traces, not just final output.
-- Completion, trajectory, behavior, and judge advisory signals are separated.
-- Deterministic checks gate judge contribution.
+No benchmark was run, no source clone was modified, and no private or authenticated metadata was used. This file preserves public page evidence for downstream classification, model-card analysis, public reports, and the site index.
