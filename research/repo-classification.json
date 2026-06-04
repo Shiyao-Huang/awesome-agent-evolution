@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-04T21:38:16+08:00",
+  "generated_at": "2026-06-05T11:00:00+08:00",
   "rows": [
     {
       "repo": "01-ai/langcrew",
@@ -1179,12 +1179,12 @@
       "prior_unclassified": "true",
       "final_category": "评测/evaluation",
       "function_tag": "benchmark-eval",
-      "base_theme": "skill",
+      "base_theme": "evaluation",
       "stack": "PDDL/Python/Website/Tasks",
       "time_slice": "2026-06",
-      "content_timestamp": "2026-06-04",
-      "evidence": "web-observed GitHub page showed 1.3k stars, 312 forks, 385 commits, 12 open issues, 49 pull requests, Apache-2.0 licensing, and runnable task plus website surfaces for skills-focused evaluation.",
-      "description": "benchflow-ai/skillsbench is a benchmark harness for testing how well agents compose and use reusable skills across multi-step tasks under deterministic verification."
+      "content_timestamp": "2026-06-05",
+      "evidence": "web-observed GitHub repo page and commit history showed about 1.3k stars, 312 forks, 12 issues, 53 pull requests, 385 commits, Apache-2.0 license, explicit Hugging Face dataset and task taxonomy surfaces, and latest visible commits on 2026-06-03.",
+      "description": "SkillsBench evaluates how well AI agents actually use reusable skills across specialized multi-step workflows under deterministic and gym-style benchmark settings."
     },
     {
       "repo": "bennettschwartz/membrane",
@@ -1297,14 +1297,14 @@
       "stars": "14300",
       "prior_category": "-",
       "prior_unclassified": "true",
-      "final_category": "评测/evaluation",
-      "function_tag": "benchmark-eval",
+      "final_category": "框架/framework",
+      "function_tag": "framework-runtime",
       "base_theme": "harness",
       "stack": "Python/CDP/Chrome Debugging/Playwright",
       "time_slice": "2026-06",
-      "content_timestamp": "2026-06-04",
-      "evidence": "web-observed GitHub page showed 14.3k stars, 1.3k forks, 391 commits, 13 open issues, 98 pull requests, visible MIT licensing, and a self-healing browser harness centered on editable helper code and domain skills.",
-      "description": "browser-use/browser-harness connects LLM agents to live browsers through a thin editable CDP harness and encourages runtime self-healing helper generation."
+      "content_timestamp": "2026-06-05",
+      "evidence": "web-observed GitHub repo page and commit history showed about 14.3k stars, 1.3k forks, 13 issues, 99 pull requests, 391 commits, MIT license, thin editable CDP harness positioning, self-healing helper generation claims, and latest visible commits on 2026-05-20.",
+      "description": "Browser Harness connects LLM agents to a real browser through a thin editable CDP harness and explicitly encourages runtime self-healing by letting the agent write missing helper code during execution."
     },
     {
       "repo": "browser-use/browser-use",
@@ -4232,6 +4232,21 @@
       "description": "KWeaver Core is a harness-first foundation for enterprise decision agents, combining governed context, knowledge networks, tool policies and TraceAI-style feedback evidence."
     },
     {
+      "repo": "kyegomez/swarms",
+      "url": "https://github.com/kyegomez/swarms",
+      "stars": "6800",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "framework-runtime",
+      "base_theme": "framework",
+      "stack": "Python/Multi-Agent Orchestration/MCP/x402/Skills Interop",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-05",
+      "evidence": "web-observed GitHub repo page and commit history showed about 6.8k stars, 935 forks, 24 issues, 50 pull requests, 5,078 commits, Apache-2.0 licensing, sequential/concurrent/hierarchical swarm architectures, MCP/x402/skills interoperability claims, and latest visible commits on 2026-05-28.",
+      "description": "Swarms is a production-oriented multi-agent orchestration framework that packages sequential, concurrent, and hierarchical agent topologies with tools, memory, protocol adapters, and marketplace-style extensions."
+    },
+    {
       "repo": "labicon/curricullm",
       "url": "https://github.com/labicon/curricullm",
       "stars": "27",
@@ -5359,16 +5374,16 @@
     {
       "repo": "microsoft/SkillOpt",
       "url": "https://github.com/microsoft/SkillOpt",
-      "stars": "4500",
+      "stars": "4000",
       "prior_category": "-",
       "prior_unclassified": "true",
-      "final_category": "论文代码/paper-code",
-      "function_tag": "skill-optimizer",
+      "final_category": "工具/tool",
+      "function_tag": "skill-orchestration",
       "base_theme": "skill",
       "stack": "Python/HTML/Skill Training Loops",
       "time_slice": "2026-06",
-      "content_timestamp": "2026-06-03",
-      "evidence": "web-observed GitHub page showed 4.5k stars, 452 forks, 91 commits, MIT license, best_skill.md deployment artifacts, per-step output directories, a 52/52 result banner, and cross-harness benchmark claims across direct chat, Codex CLI, and Claude Code.",
+      "content_timestamp": "2026-06-05",
+      "evidence": "web-observed GitHub repo page and commit history showed about 4k stars, 416 forks, 5 issues, 2 pull requests, 92 commits, MIT license, explicit epoch/batch/validation-gate framing for text-space skill optimization, and latest visible commits on 2026-05-31.",
       "description": "SkillOpt is a text-space optimizer that trains reusable natural-language skills for frozen LLM agents through trajectory-driven edits, validation-gated updates, and deployable best_skill.md artifacts."
     },
     {
@@ -6109,17 +6124,17 @@
     {
       "repo": "openai/swarm",
       "url": "https://github.com/openai/swarm",
-      "stars": "21500",
+      "stars": "21600",
       "prior_category": "-",
       "prior_unclassified": "true",
       "final_category": "框架/framework",
       "function_tag": "framework-runtime",
       "base_theme": "framework",
       "stack": "Python/Multi-Agent Orchestration/Function Calling Handoffs",
-      "time_slice": "2026-05",
-      "content_timestamp": "2026-05-30",
-      "evidence": "web-observed GitHub page showed ~21.5k stars, ~2.3k forks, 29 commits, MIT license, and README positioning Swarm as an experimental educational framework for ergonomic and lightweight multi-agent orchestration.",
-      "description": "swarm is OpenAI's educational multi-agent orchestration framework for lightweight handoffs, routines, and inspectable agent workflow patterns."
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-05",
+      "evidence": "web-observed GitHub repo page and commit history showed about 21.6k stars, 2.3k forks, 23 issues, 7 pull requests, 29 commits, MIT license, educational lightweight orchestration framing, explicit deprecation in favor of the OpenAI Agents SDK, and latest visible commits on 2026-04-15.",
+      "description": "Swarm is OpenAI’s educational multi-agent orchestration framework for lightweight handoffs, routines, and inspectable agent workflow patterns, now explicitly positioned as a predecessor to the OpenAI Agents SDK."
     },
     {
       "repo": "openautocoder/live-swe-agent",
@@ -7147,14 +7162,14 @@
       "stars": "266",
       "prior_category": "-",
       "prior_unclassified": "true",
-      "final_category": "框架/framework",
-      "function_tag": "memory-runtime",
+      "final_category": "工具/tool",
+      "function_tag": "memory-substrate",
       "base_theme": "memory",
       "stack": "Python/Redis/MCP Memory Service",
-      "time_slice": "2026-05",
-      "content_timestamp": "2026-05-28",
-      "evidence": "web-observed GitHub page showed 266 stars, 51 forks, 735 commits, MIT license, Python-first implementation, and README framing as fast/flexible memory for AI agents.",
-      "description": "agent-memory-server is Redis-maintained memory middleware that gives AI agents fast, persistent, and flexible context memory through an MCP service."
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-05",
+      "evidence": "web-observed GitHub repo page and commit history showed 266 stars, 50 forks, 19 issues, 28 pull requests, 735 commits, MIT license, agent-memory-client plus MCP/server folders, and latest visible commits on 2026-04-16.",
+      "description": "agent-memory-server is Redis-maintained memory middleware that gives AI agents fast, persistent, and flexible context memory through an MCP-compatible service and client stack."
     },
     {
       "repo": "reflexioai/reflexio",

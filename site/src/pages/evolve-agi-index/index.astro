@@ -1,11 +1,11 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import {
-  benchmarkEvidence,
   evolveAgiIndex,
   evolveAgiIndexSignals,
   evolveAgiTrend,
-  evolveAgiTrendSummary
+  evolveAgiTrendSummary,
+  mainBenchmarkEvidence
 } from '@/data/evolveAgiIndex';
 
 const external = (href: string) => href.startsWith('http');
@@ -50,7 +50,7 @@ const trendEnd = evolveAgiTrend[evolveAgiTrend.length - 1]?.date ?? '';
         <div class="hero-actions">
           {evolveAgiIndex.evidenceLinks.map((link) => (
             <a
-              class={link.label === '系统 Rank' ? 'button primary' : 'button'}
+              class={link.href === '/rank/' ? 'button primary' : 'button'}
               href={link.href}
               target={external(link.href) ? '_blank' : undefined}
               rel={external(link.href) ? 'noopener' : undefined}
@@ -201,11 +201,12 @@ const trendEnd = evolveAgiTrend[evolveAgiTrend.length - 1]?.date ?? '';
       <div class="section-head eai-benchmark-head">
         <div>
           <div class="eyebrow">Benchmark Evidence</div>
-          <h2>参与计算的分数表现</h2>
+          <h2>主指数纳入的 benchmark evidence</h2>
+          <p>这里仅展示进入主 worksheet 分数的 agent/code/web/app/algorithm-discovery benchmark family。MPA、MIRA 等 AI-for-science adjacent evidence 已在数据层分离，不进入主分。</p>
         </div>
       </div>
       <div class="eai-benchmark-grid">
-        {benchmarkEvidence.map((item) => (
+        {mainBenchmarkEvidence.map((item) => (
           <article class="eai-benchmark-card">
             <header>
               <div>

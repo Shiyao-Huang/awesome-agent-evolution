@@ -1,5 +1,5 @@
-// ── Star Quality Scoring System ──
-// GitHub 明星项目传播链分析：Star 质量评分 + 竞品对比矩阵
+// ── Star Visibility Signal Scoring System ──
+// GitHub 明星项目传播链分析：Star 传播信号分 + 竞品对比矩阵
 
 export type StarQualityScore = {
   repo: string;
@@ -21,7 +21,7 @@ export type StarQualityScore = {
   daysFrom1Kto10K: number | null;
   /** Growth pattern classification */
   growthPattern: 'organic' | 'viral' | 'suspicious' | 'steady';
-  /** Composite quality score (weighted average) */
+  /** Composite visibility-signal score (weighted average) */
   compositeScore: number;
   /** Human-readable verdict */
   verdict: string;
@@ -46,11 +46,11 @@ export type CompetitiveEntry = {
   releaseCadence: number;
   /** Is the project primarily marketing-driven? */
   marketingDriven: 'low' | 'medium' | 'high';
-  /** Actual code quality estimate (1-10) */
+  /** Code maintenance signal estimate (1-10) */
   codeQuality: number;
   /** Community health (1-10) */
   communityHealth: number;
-  /** Documentation quality (1-10) */
+  /** Documentation signal (1-10) */
   docQuality: number;
 };
 
@@ -89,7 +89,7 @@ export const starQualityScores: StarQualityScore[] = [
     daysFrom1Kto10K: 7,
     growthPattern: 'viral',
     compositeScore: 28,
-    verdict: '爆发式增长，大量一次性 star，fork 活跃度极低，issue 质量偏低。典型「Hype-driven」项目。Star 质量评分低但传播效应极强。'
+    verdict: '爆发式增长，大量一次性 star，fork 活跃度极低，issue 有效性偏低。典型「Hype-driven」传播线索；需要回到维护记录和真实使用复核。'
   },
   {
     repo: 'FoundationAgents/MetaGPT',
@@ -164,7 +164,7 @@ export const starQualityScores: StarQualityScore[] = [
     daysFrom1Kto10K: null,
     growthPattern: 'organic',
     compositeScore: 74,
-    verdict: 'AlphaEvolve 开源复现，学术驱动。增长虽慢但 fork 质量高（大量实际使用）。issue 讨论有深度。高质量小众项目。'
+    verdict: 'AlphaEvolve 开源复现，学术驱动。增长虽慢但 fork 有效性较强（大量实际使用），issue 讨论有深度；适合优先复核。'
   },
   {
     repo: 'princeton-nlp/SWE-agent',
@@ -224,7 +224,7 @@ export const starQualityScores: StarQualityScore[] = [
     daysFrom1Kto10K: null,
     growthPattern: 'organic',
     compositeScore: 62,
-    verdict: 'DeepMind 品牌但增长缓慢。数学发现应用面窄导致 star 偏低，但代码质量和学术严谨度极高。属于「被低估的高质量项目」。'
+    verdict: 'DeepMind 品牌但增长缓慢。数学发现应用面窄导致 star 偏低，但代码维护线索和学术严谨度较强；不能仅按总 Star 低估。'
   },
   {
     repo: 'noahshinn/reflexion',
@@ -254,7 +254,7 @@ export const starQualityScores: StarQualityScore[] = [
     daysFrom1Kto10K: 14,
     growthPattern: 'suspicious',
     compositeScore: 30,
-    verdict: '与 AutoGPT 同期爆发，增长模式类似但后续活跃度更低。大量 star 无转化。issue 质量低，PR 合并率低。炒作嫌疑较高。'
+    verdict: '与 AutoGPT 同期爆发，增长模式类似但后续活跃度更低。大量 star 无转化。issue 有效性低，PR 合并率低，传播异常需要复核。'
   }
 ];
 
@@ -376,7 +376,7 @@ export const propagationChains: PropagationChain[] = [
       '5天内从0→20K stars，纯蹭 Devin 热度',
       'Stars/contributor ratio = 183（极高）',
       '3个月后活跃度几乎归零',
-      'issue 质量极低，大量 "when will you add X"',
+      'issue 有效性极低，大量 "when will you add X"',
       'PR 合并率仅 38%',
       '典型 "Me-too" 项目——赶上热潮但缺乏持续投入'
     ],
@@ -409,7 +409,7 @@ export const comparisonGroups: ComparisonGroup[] = [
     avgStarsPerContributor: 154,
     avgCodeQuality: 6.3,
     avgMarketingDriven: 2.3,
-    verdict: 'AutoGPT Star 数最高但质量最低（炒作驱动）；MetaGPT 学术+商业平衡最好；CrewAI 社区健康度最高。三者代表了 Agent 框架的三种增长范式。'
+    verdict: 'AutoGPT Star 数最高但传播异常也最明显；MetaGPT 兼具论文与商业传播线索；CrewAI 社区活跃线索较强。三者代表 Agent 框架的三种增长范式。'
   },
   {
     label: 'DeepMind vs 开源社区',
@@ -419,7 +419,7 @@ export const comparisonGroups: ComparisonGroup[] = [
     avgStarsPerContributor: 105,
     avgCodeQuality: 8.5,
     avgMarketingDriven: 1.0,
-    verdict: 'DeepMind 项目 Star 偏低但质量极高。开源社区项目（OpenHands, OpenEvolve）在活跃度和实用价值上往往超越大厂。品牌背书 ≠ 社区活力。'
+    verdict: 'DeepMind 项目 Star 偏低但研究证据较强。开源社区项目（OpenHands, OpenEvolve）在活跃度和实用信号上可能超过大厂项目。品牌背书 ≠ 社区活力。'
   },
   {
     label: '中国团队 vs 海外团队',
@@ -439,7 +439,7 @@ export const comparisonGroups: ComparisonGroup[] = [
     avgStarsPerContributor: 157,
     avgCodeQuality: 6.8,
     avgMarketingDriven: 2.0,
-    verdict: '学术项目增长慢但 star 质量高、长期维护好。营销驱动项目爆发快但衰减也快（Devika：20K stars → 3个月后几乎停更）。论文引用量是比 star 数更可靠的指标。'
+    verdict: '学术项目增长慢但维护线索可能更稳。营销驱动项目爆发快但也可能快速衰减（Devika：20K stars → 3个月后几乎停更）。论文引用量和维护证据应与 Star 一起复核。'
   }
 ];
 

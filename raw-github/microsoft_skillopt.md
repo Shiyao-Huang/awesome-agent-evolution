@@ -1,10 +1,10 @@
 ---
 repo: microsoft/SkillOpt
 url: https://github.com/microsoft/SkillOpt
-content_timestamp: 2026-06-03
+content_timestamp: 2026-06-05
 time_slice: 2026-06
-timestamp_source: web_observed_public_github_page_2026_06_03
-collected_at: 2026-06-03T07:52:50+08:00
+timestamp_source: web_observed_public_github_page_2026_06_05
+collected_at: 2026-06-05T11:00:00+08:00
 source: github
 ---
 
@@ -16,26 +16,28 @@ source: github
 
 # Raw public page capture notes
 
-This raw-style public GitHub page capture was recorded by the hourly public metadata update. Shell GitHub API access remains blocked in this workspace, so freshness is web-observed rather than API-verified.
+This raw-style public GitHub page capture was refreshed by the hourly public metadata update. Shell GitHub API access remained blocked in this workspace, so freshness is web-observed rather than API-verified.
 
 ## Visible repository metadata
 
 - Repository: microsoft/SkillOpt
 - URL: https://github.com/microsoft/SkillOpt
-- Stars: 4500
-- Forks: 452
-- Commits: 91
+- Stars: 4000
+- Forks: 416
+- Commits: 92
+- Issues: 5
+- Pull requests: 2
 - License: MIT
 - Primary language / stack signal: Python/HTML/Skill Training Loops
-- Collection timestamp: 2026-06-03T19:56:18+08:00
+- Latest visible commit date: 2026-05-31
+- Collection timestamp: 2026-06-05T11:00:00+08:00
 
 ## Visible README / page excerpts
 
-- The README frames SkillOpt as a text-space optimizer that improves skill files without changing the base model.
-- The public page exposes structured outputs such as history.json, runtime_state.json, best_skill.md, and per-step artifacts.
-- The repository claims broad benchmark coverage across direct chat, Codex CLI, and Claude Code execution harnesses.
-- The public project page also advertises a 52/52 best-or-tied-best result banner and links a companion SkillLens page, which makes it more than a bare code drop.
-- Public GitHub page evidence was observed without authenticated API access.
+- The public GitHub page and commit history showed about 4k stars, 416 forks, 5 issues, 2 pull requests, and 92 commits.
+- The README explicitly frames SkillOpt as training agent skills like neural networks with epochs, mini-batches, learning rates, and validation gates.
+- Visible repository structure includes checkpoints, configs, docs, tests, and a web UI rather than only a paper artifact.
+- The latest visible commit group on the public commits page was dated 2026-05-31.
 
 ## Raw capture boundary
 

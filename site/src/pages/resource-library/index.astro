@@ -2,20 +2,20 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import { site } from '@/data/site';
 import { projects } from '@/data/projects';
-import { projectReports } from '@/data/reports';
 import { surveyStats } from '@/data/survey';
 import { evolveAgiIndex } from '@/data/evolveAgiIndex';
+import { publicCorpusStats } from '@/data/publicCorpusStats';
 
 const headlineStats = [
-  { value: '677', label: 'raw GitHub captures', detail: '进入分类表的开源项目证据' },
+  { value: String(publicCorpusStats.rawGithubCaptures), label: 'raw GitHub captures', detail: '进入分类表的开源项目证据' },
   { value: '201', label: 'raw paper files', detail: '论文原始材料磁盘口径' },
-  { value: String(projectReports.length), label: 'public project reports', detail: '可在站点阅读的项目报告' }
+  { value: String(publicCorpusStats.publicProjectReports), label: 'public project reports', detail: '可在站点阅读的项目报告' }
 ];
 
 const countBoundaries = [
-  ['677', 'raw / classified', 'GitHub 原始采集和分类表口径，说明收了多少、分到了哪里。'],
-  ['283', 'analyzed model-card reports', '治理索引中的项目分析漏斗口径，不等于站点精选列表。'],
-  [String(projectReports.length), 'public project reports', '静态站点可引用的项目报告文件数，是读者可直接进入的结果层。'],
+  [String(publicCorpusStats.rawGithubCaptures), 'raw / classified', 'GitHub 原始采集和分类表口径，说明收了多少、分到了哪里。'],
+  [String(publicCorpusStats.analyzedProjectReports), 'analyzed model-card reports', '治理索引中的项目分析漏斗口径，不等于站点精选列表。'],
+  [String(publicCorpusStats.publicProjectReports), 'public project reports', '静态站点可引用的项目报告文件数，是读者可直接进入的结果层。'],
   [String(projects.length), 'curated project records', '当前 `/projects/` 页面使用的精选展示数组。'],
   [String(surveyStats.papers), 'survey-display papers', 'Survey 页面展示用论文口径；raw paper files 当前是 201。'],
   [String(surveyStats.repos), 'survey-display repos', 'Survey 页面把论文、项目和方法组织成结论时使用的展示口径。']
@@ -70,9 +70,9 @@ const jsonLd = {
     '@type': 'DataCatalog',
     name: 'Self Evolve Evidence Catalog',
     dataset: [
-      { '@type': 'Dataset', name: 'Raw GitHub captures', description: '677 raw GitHub captures and classified repository rows.' },
+      { '@type': 'Dataset', name: 'Raw GitHub captures', description: `${publicCorpusStats.rawGithubCaptures} raw GitHub captures and classified repository rows.` },
       { '@type': 'Dataset', name: 'Raw papers', description: '201 raw paper files used by the survey and paper pipeline.' },
-      { '@type': 'Dataset', name: 'Public project reports', description: `${projectReports.length} public project report files for model-card style evidence review.` }
+      { '@type': 'Dataset', name: 'Public project reports', description: `${publicCorpusStats.publicProjectReports} public project report files for model-card style evidence review.` }
     ]
   }
 };

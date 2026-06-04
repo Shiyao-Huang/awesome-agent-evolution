@@ -1,14 +1,14 @@
 ---
 repo: redis/agent-memory-server
 url: https://github.com/redis/agent-memory-server
-content_timestamp: 2026-05-28
-time_slice: 2026-05
-timestamp_source: web_observed_public_github_page_2026_05_28
-collected_at: 2026-05-28T22:03:48+08:00
+content_timestamp: 2026-06-05
+time_slice: 2026-06
+timestamp_source: web_observed_public_github_page_2026_06_05
+collected_at: 2026-06-05T11:00:00+08:00
 source: github
 ---
 
-## GitHub - redis/agent-memory-server: agent-memory-server is Redis-maintained memory middleware that gives AI agents fast, persistent, and flexible context memory through an MCP service.
+## GitHub - redis/agent-memory-server: agent-memory-server is Redis-maintained memory middleware that gives AI agents fast, persistent, and flexible context memory through an MCP-compatible service and client stack.
 
 **Source**: https://github.com/redis/agent-memory-server
 
@@ -16,25 +16,28 @@ source: github
 
 # Raw public page capture notes
 
-This raw-style public GitHub page capture was recorded by the hourly public metadata update. Shell GitHub API access failed DNS resolution and local GitHub CLI auth was invalid, so freshness is web-observed rather than API-verified.
+This raw-style public GitHub page capture was refreshed by the hourly public metadata update. Shell GitHub API access remained blocked in this workspace, so freshness is web-observed rather than API-verified.
 
 ## Visible repository metadata
 
 - Repository: redis/agent-memory-server
 - URL: https://github.com/redis/agent-memory-server
 - Stars: 266
-- Forks: 51
+- Forks: 50
 - Commits: 735
+- Issues: 19
+- Pull requests: 28
 - License: MIT
 - Primary language / stack signal: Python/Redis/MCP Memory Service
-- Collection timestamp: 2026-05-28T22:03:48+08:00
+- Latest visible commit date: 2026-04-16
+- Collection timestamp: 2026-06-05T11:00:00+08:00
 
 ## Visible README / page excerpts
 
-- Repository tagline states this server provides fast and flexible memory for AI agents.
-- Public repository metadata shows active commit history and Redis ecosystem ownership.
-- Language distribution is Python-dominant with Docker support for deployment.
-- Counts were taken from the public GitHub page without authenticated API claims.
+- The public GitHub page and commit history showed 266 stars, 50 forks, 19 issues, 28 pull requests, and 735 commits.
+- Visible repository structure includes agent-memory-client, agent_memory_server, standalone Docker paths, docs, workbench, and tests.
+- The README/about text frames the project as fast and flexible memory for agents and AI applications using Redis.
+- The latest visible commit group on the public commits page was dated 2026-04-16.
 
 ## Raw capture boundary
 

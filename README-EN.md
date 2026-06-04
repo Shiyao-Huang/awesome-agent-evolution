@@ -58,16 +58,16 @@ flowchart LR
 
 ## Recent Evidence Updates (2026-06-04)
 
-This update is not just a metadata refresh. It fills six judgment gaps: skill ecosystems, memory benchmarks, skill benchmarks, agent harnesses, browser harnesses, and swarm runtimes.
+This update is not just a metadata refresh. It pulls swarm runtimes, skill optimizers, skills benchmarks, browser harnesses, memory middleware, and educational swarm baselines back onto one evidence chain.
 
 | Repository | Evidence gap filled | Why it matters |
 |---|---|---|
-| [voltagent/awesome-agent-skills](https://github.com/voltagent/awesome-agent-skills) | Official-team skill ecosystem | Skills become trackable engineering objects, not scattered prompt snippets. |
-| [vectorize-io/agent-memory-benchmark](https://github.com/vectorize-io/agent-memory-benchmark) | Memory benchmark | "It remembers" is not enough; retrieval, answer quality, and cost need comparable tests. |
+| [kyegomez/swarms](https://github.com/kyegomez/swarms) | Production swarm runtime | It moves agent-swarm from a "many roles" idea toward deployable runtime, protocol, and topology evidence. |
+| [microsoft/SkillOpt](https://github.com/microsoft/SkillOpt) | Self-evolving skill optimizer | It directly tests whether skills can iterate like training loops without changing base model weights. |
 | [benchflow-ai/skillsbench](https://github.com/benchflow-ai/skillsbench) | Skills benchmark | It tests whether agents can actually use skills, not merely install skill packs. |
-| [evalops/agent-harness](https://github.com/evalops/agent-harness) | Provider-comparison harness | The same task can be compared across agent backends, reducing demo bias. |
-| [browser-use/browser-harness](https://github.com/browser-use/browser-harness) | Browser harness | Browser agents need editable, repeatable tasks rather than screen-recorded demos. |
-| [swarmclawai/swarmclaw](https://github.com/swarmclawai/swarmclaw) | Swarm runtime | Agent-swarm claims need runtime, permission, delegation, and observability evidence, not just "many roles." |
+| [browser-use/browser-harness](https://github.com/browser-use/browser-harness) | Browser harness | Browser agents need editable, repeatable, self-healing task scaffolds rather than screen-recorded demos. |
+| [redis/agent-memory-server](https://github.com/redis/agent-memory-server) | Memory middleware | It adds the memory-substrate plus MCP-service layer, turning "memory" into a runtime interface. |
+| [openai/swarm](https://github.com/openai/swarm) | Educational swarm baseline | It remains the clearest lightweight handoff baseline while also marking the production path shift to the Agents SDK. |
 
 ## Core Insight
 

@@ -1,14 +1,14 @@
 ---
 repo: openai/swarm
 url: https://github.com/openai/swarm
-content_timestamp: 2026-05-30
-time_slice: 2026-05
-timestamp_source: web_observed_public_github_page_2026_05_29
-collected_at: 2026-05-30T01:15:12+08:00
+content_timestamp: 2026-06-05
+time_slice: 2026-06
+timestamp_source: web_observed_public_github_page_2026_06_05
+collected_at: 2026-06-05T11:00:00+08:00
 source: github
 ---
 
-## GitHub - openai/swarm: swarm is OpenAI's educational multi-agent orchestration framework for lightweight handoffs, routines, and inspectable agent workflow patterns.
+## GitHub - openai/swarm: Swarm is OpenAI’s educational multi-agent orchestration framework for lightweight handoffs, routines, and inspectable agent workflow patterns, now explicitly positioned as a predecessor to the OpenAI Agents SDK.
 
 **Source**: https://github.com/openai/swarm
 
@@ -16,25 +16,28 @@ source: github
 
 # Raw public page capture notes
 
-This raw-style public GitHub page capture was recorded by the hourly public metadata update. Shell GitHub API access failed DNS resolution and local GitHub CLI auth was invalid, so freshness is web-observed rather than API-verified.
+This raw-style public GitHub page capture was refreshed by the hourly public metadata update. Shell GitHub API access remained blocked in this workspace, so freshness is web-observed rather than API-verified.
 
 ## Visible repository metadata
 
 - Repository: openai/swarm
 - URL: https://github.com/openai/swarm
-- Stars: 21500
+- Stars: 21600
 - Forks: 2300
 - Commits: 29
+- Issues: 23
+- Pull requests: 7
 - License: MIT
 - Primary language / stack signal: Python/Multi-Agent Orchestration/Function Calling Handoffs
-- Collection timestamp: 2026-05-30T01:15:12+08:00
+- Latest visible commit date: 2026-04-15
+- Collection timestamp: 2026-06-05T11:00:00+08:00
 
 ## Visible README / page excerpts
 
-- README opens with: an educational framework exploring ergonomic, lightweight multi-agent orchestration.
-- Project metadata panel shows MIT licensing and Python-first implementation signals.
-- Public page count snapshot showed about 21.5k stars, 2.3k forks, and 29 commits.
-- Counts were taken from the public GitHub page without authenticated API claims.
+- The public GitHub page and commit history showed about 21.6k stars, 2.3k forks, 23 issues, 7 pull requests, and 29 commits.
+- The README now explicitly says Swarm has been replaced by the OpenAI Agents SDK for production use cases.
+- Examples and tests remain visible, making the repository useful as a baseline orchestration reference even though it is no longer the maintained production path.
+- The latest visible commit group on the public commits page was dated 2026-04-15.
 
 ## Raw capture boundary
 

@@ -4,28 +4,30 @@
 |---|---|
 | Repository | [redis/agent-memory-server](https://github.com/redis/agent-memory-server) |
 | Category | Agent Memory Runtime and Context Service |
-| Stars / forks snapshot | 266 / 51 |
+| Stars / forks snapshot | 266 / 50 |
+| Commits / issues / PRs snapshot | 735 / 19 / 28 |
 | Language | Python |
 | License | MIT |
+| Latest visible commit date | 2026-04-16 |
 | Raw capture | raw-github/redis_agent-memory-server.md |
-| Updated by | hourly public metadata update, 2026-05-28 22:03 +0800 |
+| Updated by | hourly public metadata update, 2026-06-05 11:00 +0800 |
 
 ## 1. Role in Self Evolve
 
-agent-memory-server is Redis-maintained memory middleware that gives AI agents fast, persistent, and flexible context memory through an MCP service. It matters because self-evolving agents need repeatable harness control, measurable feedback loops, and reusable skill procedures before claiming stable improvement.
+agent-memory-server is Redis-maintained memory middleware that gives AI agents fast, persistent, and flexible context memory through an MCP-compatible service and client stack. It matters because self-evolving agents need explicit runtime, memory, skill, and benchmark substrates before their improvement claims become trustworthy.
 
 ## 2. Working Principle
 
-agent event and interaction signals -> Redis-backed memory storage and retrieval -> MCP server exposes memory operations to agents -> memory context reused in downstream task loops
+capture agent events and context -> store and retrieve memory through Redis-backed services -> expose memory operations via MCP and client APIs -> feed retrieved context into later agent loops
 
 ## 3. Evidence Path
 
-web-observed GitHub page showed 266 stars, 51 forks, 735 commits, MIT license, Python-first implementation, and README framing as fast/flexible memory for AI agents. Shell GitHub API access remained blocked by DNS and local `gh` auth was invalid, so this card treats the snapshot as web-observed rather than API-verified.
+web-observed GitHub repo page and commit history showed 266 stars, 50 forks, 19 issues, 28 pull requests, 735 commits, MIT license, agent-memory-client plus MCP/server folders, and latest visible commits on 2026-04-16. This iteration keeps freshness honest: the snapshot comes from the public GitHub page observed on 2026-06-05, while shell GitHub API access remained blocked in this workspace.
 
 ## 4. Teaching Use
 
-Use this card to explain Agent Memory Runtime and Context Service: it shows how harness/runtime/benchmark layers convert agent behavior into reproducible and auditable engineering workflows.
+Use this card to explain Agent Memory Runtime and Context Service: it shows how swarm runtimes, skill optimizers, benchmark suites, browser harnesses, and memory middleware fit into the broader self-evolving-agent pipeline.
 
 ## 5. Limits
 
-The repository was not cloned in this iteration; no benchmark run, plugin install, workflow execution, or agent loop experiment was executed. Counts and claims are visible public-page/search signals unless independently revalidated later.
+The repository was not cloned in this iteration; no benchmark run, workflow execution, or agent loop experiment was executed. Counts and claims are visible public-page signals unless independently revalidated later.

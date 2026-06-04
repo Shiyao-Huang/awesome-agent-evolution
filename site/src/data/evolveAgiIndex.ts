@@ -200,7 +200,7 @@ export const benchmarkEvidence: BenchmarkEvidence[] = [
   }
 ];
 
-const mainBenchmarkEvidence = benchmarkEvidence.filter((item) => item.includeInMainIndex !== false);
+export const mainBenchmarkEvidence = benchmarkEvidence.filter((item) => item.includeInMainIndex !== false);
 const topSystemStrength = clamp(
   (average(topSystemProfiles.map((profile) => profile.metadata.composite_score)) / 8) * 100
 );

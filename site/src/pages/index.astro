@@ -3,6 +3,7 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import { featuredResearch } from '@/data/research';
 import { starQualityScores } from '@/data/starAnalysis';
 import { evolveAgiIndex, evolveAgiIndexSignals } from '@/data/evolveAgiIndex';
+import { publicCorpusStats } from '@/data/publicCorpusStats';
 import ValueLshGraph3D from '@/components/ValueLshGraph3D.astro';
 import valueLshSnapshotJson from '../../../analysis/value-lsh-index.json';
 import { getCollection } from 'astro:content';
@@ -372,7 +373,7 @@ const stripScore = (value: string) => value.replace(/\s*\([^)]*\)/g, '');
         </div>
         <div style="display:flex;gap:12px;flex-wrap:wrap;">
           <a class="text-link" href="/star-growth/">2026 增长试点账本 →</a>
-          <a class="text-link" href="/star-analysis/">完整质量分析 →</a>
+          <a class="text-link" href="/star-analysis/">传播信号分析 →</a>
         </div>
       </div>
       <p style="color: var(--muted); margin-bottom: 20px;">这个表只保留历史热度作为阅读线索，不负责判断当前质量。严肃判断必须回到 evaluator、benchmark、retention、失败记录和项目报告。</p>
@@ -383,7 +384,7 @@ const stripScore = (value: string) => value.replace(/\s*\([^)]*\)/g, '');
               <th class="rank-col">#</th>
               <th>项目</th>
               <th class="num-col">Stars</th>
-              <th class="num-col">质量分</th>
+              <th class="num-col">线索分</th>
               <th>增长</th>
               <th class="verdict-col">判定</th>
             </tr>
@@ -422,7 +423,7 @@ const stripScore = (value: string) => value.replace(/\s*\([^)]*\)/g, '');
           <h2>近期关注度只是下一步抓取线索</h2>
         </div>
       </div>
-      <p style="color: var(--muted); margin-bottom: 20px;">这里展示的是旧 star-quality 数据里的关注度线索，不是实时 GitHub 证据，也不是质量结论。完整 2026 new-star 判断必须等 star-history 覆盖达标。</p>
+      <p style="color: var(--muted); margin-bottom: 20px;">这里展示的是旧 star-signal 数据里的关注度线索，不是实时 GitHub 证据，也不是质量结论。完整 2026 new-star 判断必须等 star-history 覆盖达标。</p>
 
       <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
         {trendBoard.map((t) => (
@@ -442,7 +443,7 @@ const stripScore = (value: string) => value.replace(/\s*\([^)]*\)/g, '');
               </div>
               <div>
                 <div style="font-size: 1.4rem; font-weight: 700;">{t.forkQuality}</div>
-                <div style="font-size: 0.7rem; color: var(--muted);">Fork 质量</div>
+                <div style="font-size: 0.7rem; color: var(--muted);">Fork 有效性</div>
               </div>
             </div>
             <div class="pill-row">
@@ -531,9 +532,9 @@ const stripScore = (value: string) => value.replace(/\s*\([^)]*\)/g, '');
         <h2>核心价值不是页面数量，而是可复查判断。</h2>
       </div>
       <div class="card">
-        <p>Self Evolve 不只是索引。当前生成索引记录了 <strong>677</strong> 个 raw GitHub captures、<strong>283</strong> 个 analyzed model-card projects、<strong>99</strong> 个 strict evolution repos、<strong>204</strong> 个 broad evolution-related repos 和 <strong>483</strong> 个 public project reports。</p>
+        <p>Self Evolve 不只是索引。当前生成索引记录了 <strong>{publicCorpusStats.rawGithubCaptures}</strong> 个 raw GitHub captures、<strong>{publicCorpusStats.analyzedProjectReports}</strong> 个 analyzed project/model-card reports、<strong>{publicCorpusStats.strictEvolutionRepos}</strong> 个 strict evolution repos、<strong>{publicCorpusStats.broadEvolutionRepos}</strong> 个 broad evolution-related repos 和 <strong>{publicCorpusStats.publicProjectReports}</strong> 个 public project reports。</p>
         <p>这些数字只说明证据覆盖，不自动等于结论可信。高置信结论必须能回到论文、项目报告、benchmark 或 raw index；缺口继续标为待复核。</p>
-        <p style="color: var(--muted); font-size: 0.85rem; margin-top: 8px;">Total stars = historical adoption prior. Star growth = current momentum pilot. Value LSH = heuristic triage, not final quality truth.</p>
+        <p style="color: var(--muted); font-size: 0.85rem; margin-top: 8px;">Total stars = historical adoption prior. Star growth = current momentum pilot. Value LSH = heuristic triage, not final judgment.</p>
       </div>
     </div>
   </section>

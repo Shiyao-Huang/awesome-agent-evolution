@@ -1,12 +1,13 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import { surveyFigureAtlas } from '@/data/survey';
+import { publicCorpusStats } from '@/data/publicCorpusStats';
 
 const surveyLd = {
   '@context': 'https://schema.org',
   '@type': 'ScholarlyArticle',
   name: 'Self-Evolving AI Agents: A Survey of Feedback-Driven Generation, Evaluation, Memory, and Self-Modification',
-  description: 'Comprehensive survey on AI self-evolution covering taxonomy, methods, frameworks, evaluation, and future directions.',
+  description: 'Working survey draft on AI self-evolution covering taxonomy, methods, frameworks, evaluation, and future directions; evidence audit and source cleanup remain in progress.',
   author: { '@type': 'Organization', name: 'aha team' },
   datePublished: '2026-05',
   inLanguage: ['en', 'zh'],
@@ -23,7 +24,7 @@ const chapters = [
   ['6', 'Frameworks', 'Agent frameworks and infrastructure gaps', 'Draft-complete'],
   ['7', 'Pain Points', 'User pain points and production constraints', 'Needs source cleanup'],
   ['8', 'Future Directions', 'Open problems, roadmap, conclusion', 'Needs final tightening'],
-  ['Appendix', 'Tables', 'Projects, papers, benchmarks, star quality', 'Compiled, needs layout polish']
+  ['Appendix', 'Tables', 'Projects, papers, benchmarks, star visibility signals', 'Compiled, needs layout polish']
 ];
 
 const methodFamilies = [
@@ -48,7 +49,7 @@ const frameworkRadar = [
 const coverage = [
   { dataset: 'Papers', current: 196, coverage: 196 },
   { dataset: 'Reviews', current: 137, coverage: 156 },
-  { dataset: 'Repos', current: 677, coverage: 283 },
+  { dataset: 'Repos', current: publicCorpusStats.rawGithubCaptures, coverage: publicCorpusStats.analyzedProjectReports },
   { dataset: 'Blog Files', current: 1308, coverage: 100 },
   { dataset: 'Social JSON', current: 613, coverage: 204 },
   { dataset: 'Pain Points', current: 97, coverage: 100 },
@@ -65,7 +66,7 @@ const coverage = [
     <div class="container">
       <div class="eyebrow">Paper / 论文</div>
       <h1 class="gradient-text">Self-Evolving AI 综述论文</h1>
-      <p class="lead">论文追踪 AI Self-Evolution 的研究图谱：从推理时自改进到代码自进化，连接 196 篇 survey-display papers、677 个 raw GitHub captures、283 个 analyzed project/model-card reports 和 97 个 public pain-point signals。</p>
+      <p class="lead">论文追踪 AI Self-Evolution 的研究图谱：从推理时自改进到代码自进化，连接 {publicCorpusStats.surveyDisplayPapers} 篇 survey-display papers、{publicCorpusStats.rawGithubCaptures} 个 raw GitHub captures、{publicCorpusStats.analyzedProjectReports} 个 analyzed project/model-card reports 和 {publicCorpusStats.painPointSignals} 个 public pain-point signals。</p>
       <div class="metrics">
         <div class="metric"><strong>196</strong><span>篇论文覆盖</span></div>
         <div class="metric"><strong>677</strong><span>个 raw GitHub captures</span></div>
@@ -92,7 +93,7 @@ const coverage = [
               <h3>Self-Evolving AI Survey</h3>
             </div>
           </div>
-          <p>Comprehensive survey on AI self-evolution: taxonomy, methods, frameworks, evaluation, and future directions. 9 chapters + appendix.</p>
+          <p>Working survey draft on AI self-evolution: taxonomy, methods, frameworks, evaluation, and future directions. 8 chapters + appendix; several sections still require evidence audit and source cleanup.</p>
           <div class="pill-row">
             <span class="pill">XeLaTeX</span>
             <span class="pill">8 Chapters</span>

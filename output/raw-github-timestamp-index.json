@@ -1,7 +1,7 @@
 {
   "generated_at": "2026-06-05T00:00:00+08:00",
-  "total": 677,
-  "updated_files": 677,
+  "total": 678,
+  "updated_files": 678,
   "unknown_content_timestamp": 100,
   "records": [
     {
@@ -710,10 +710,10 @@
       "repo": "benchflow-ai/skillsbench",
       "url": "https://github.com/benchflow-ai/skillsbench",
       "file": "raw-github/benchflow-ai_skillsbench.md",
-      "content_timestamp": "2026-06-04",
-      "collected_at": "2026-06-04T15:36:30+08:00",
+      "content_timestamp": "2026-06-05",
+      "collected_at": "2026-06-05T11:00:00+08:00",
       "time_slice": "2026-06",
-      "timestamp_source": "web_observed_public_github_page_2026_06_04"
+      "timestamp_source": "web_observed_public_github_page_2026_06_05"
     },
     {
       "repo": "bennettschwartz/membrane",
@@ -782,10 +782,10 @@
       "repo": "browser-use/browser-harness",
       "url": "https://github.com/browser-use/browser-harness",
       "file": "raw-github/browser-use_browser-harness.md",
-      "content_timestamp": "2026-06-04",
-      "collected_at": "2026-06-04T15:36:30+08:00",
+      "content_timestamp": "2026-06-05",
+      "collected_at": "2026-06-05T11:00:00+08:00",
       "time_slice": "2026-06",
-      "timestamp_source": "web_observed_public_github_page_2026_06_04"
+      "timestamp_source": "web_observed_public_github_page_2026_06_05"
     },
     {
       "repo": "browser-use/browser-use",
@@ -2543,6 +2543,15 @@
       "timestamp_source": "web_observed_public_github_page_2026_05_26"
     },
     {
+      "repo": "kyegomez/swarms",
+      "url": "https://github.com/kyegomez/swarms",
+      "file": "raw-github/kyegomez_swarms.md",
+      "content_timestamp": "2026-06-05",
+      "collected_at": "2026-06-05T11:00:00+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "web_observed_public_github_page_2026_06_05"
+    },
+    {
       "repo": "labicon/curricullm",
       "url": "https://github.com/labicon/curricullm",
       "file": "raw-github/labicon_curricullm.md",
@@ -3221,10 +3230,10 @@
       "repo": "microsoft/SkillOpt",
       "url": "https://github.com/microsoft/SkillOpt",
       "file": "raw-github/microsoft_skillopt.md",
-      "content_timestamp": "2026-06-03",
-      "collected_at": "2026-06-03T07:52:50+08:00",
+      "content_timestamp": "2026-06-05",
+      "collected_at": "2026-06-05T11:00:00+08:00",
       "time_slice": "2026-06",
-      "timestamp_source": "web_observed_public_github_page_2026_06_03"
+      "timestamp_source": "web_observed_public_github_page_2026_06_05"
     },
     {
       "repo": "microsoft/skills",
@@ -3671,10 +3680,10 @@
       "repo": "openai/swarm",
       "url": "https://github.com/openai/swarm",
       "file": "raw-github/openai_swarm.md",
-      "content_timestamp": "2026-05-30",
-      "collected_at": "2026-05-30T01:15:12+08:00",
-      "time_slice": "2026-05",
-      "timestamp_source": "web_observed_public_github_page_2026_05_29"
+      "content_timestamp": "2026-06-05",
+      "collected_at": "2026-06-05T11:00:00+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "web_observed_public_github_page_2026_06_05"
     },
     {
       "repo": "openautocoder/live-swe-agent",
@@ -4292,10 +4301,10 @@
       "repo": "redis/agent-memory-server",
       "url": "https://github.com/redis/agent-memory-server",
       "file": "raw-github/redis_agent-memory-server.md",
-      "content_timestamp": "2026-05-28",
-      "collected_at": "2026-05-28T22:03:48+08:00",
-      "time_slice": "2026-05",
-      "timestamp_source": "web_observed_public_github_page_2026_05_28"
+      "content_timestamp": "2026-06-05",
+      "collected_at": "2026-06-05T11:00:00+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "web_observed_public_github_page_2026_06_05"
     },
     {
       "repo": "reflexioai/reflexio",

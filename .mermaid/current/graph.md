@@ -2,13 +2,13 @@
 
 Truth source: `.mermaid/current/graph.json`
 
-Generated: 2026-06-04T21:38:16+08:00
+Generated: 2026-06-05T11:00:00+08:00
 
 ## Nodes
 
 - **intent.direct-user-input** (ops, active): Use only direct user inputs as goal source for the hourly public metadata loop.
 - **raw.github.hourly-captures** (raw, updated): Keep public GitHub evidence raw and timestamped before analysis.
-- **processed.github-classification** (processed, updated): Refresh classification rows and model cards for benchmark, harness, and memory anchors.
+- **processed.github-classification** (processed, updated): Refresh or add classification rows and model cards for swarm, skill, benchmark, browser harness, and memory anchors.
 - **results.public-site** (results, updated): Push the metadata refresh into site project data and public reports.
 - **work.learning-note** (work, updated): Record the data flow, blockers, and repo-level evidence for the next run.
 
@@ -22,8 +22,8 @@ Generated: 2026-06-04T21:38:16+08:00
 
 ## Current Run Evidence
 
-- Web-observed repos: pinchbench/skill, howdymary/hermes-agent-metaharness, AutoJunjie/awesome-agent-harness, mem0ai/memory-benchmarks, neo4j-labs/agent-memory.
-- Refreshed raw files: raw-github/pinchbench_skill.md, raw-github/howdymary_hermes-agent-metaharness.md, raw-github/autojunjie_awesome-agent-harness.md, raw-github/mem0ai_memory-benchmarks.md, raw-github/neo4j-labs_agent-memory.md.
-- Refreshed public reports: site/public/reports/projects/51-pinchbench-skill.md, site/public/reports/projects/250-hermes-agent-metaharness-outer-loop.md, site/public/reports/projects/265-awesome-agent-harness-autojunjie-curation.md, site/public/reports/projects/87-mem0-memory-benchmarks.md, site/public/reports/projects/130-neo4j-agent-memory.md.
+- Web-observed repos: kyegomez/swarms, microsoft/SkillOpt, benchflow-ai/skillsbench, browser-use/browser-harness, redis/agent-memory-server, openai/swarm.
+- Raw files touched: raw-github/kyegomez_swarms.md, raw-github/microsoft_skillopt.md, raw-github/benchflow-ai_skillsbench.md, raw-github/browser-use_browser-harness.md, raw-github/redis_agent-memory-server.md, raw-github/openai_swarm.md.
+- Public reports touched: site/public/reports/projects/371-swarms-enterprise-multi-agent-runtime.md, site/public/reports/projects/272-skillopt-self-evolving-agent-skills.md, site/public/reports/projects/248-skillsbench-agent-skills-benchmark.md, site/public/reports/projects/261-browser-harness-self-healing-web-agent-runtime.md, site/public/reports/projects/281-redis-agent-memory-server-runtime.md, site/public/reports/projects/311-openai-swarm-multi-agent-orchestration.md.
 - Shell GitHub API access remained blocked in this workspace, so freshness is public-page observed rather than API-verified.
-- GitNexus CLI can describe the metadata flow only after explicit `--repo awesome-evolution-workspace-cleanup`; the current index remains stale against HEAD.
+- GitNexus CLI can describe the metadata flow, but command surface diverges from repo docs and the local index remains stale against HEAD.

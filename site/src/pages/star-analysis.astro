@@ -11,13 +11,13 @@ import {
 
 <BaseLayout
   title="GitHub Star 传播与异常信号分析 — Self Evolve"
-  description="AI Agent 领域 GitHub 项目的 Star 传播线索、异常增长信号和对比矩阵。它帮助复核热度来源，不等于项目质量排名。"
+  description="AI Agent 领域 GitHub 项目的 Star 传播线索、异常增长信号和对比矩阵。它帮助复核热度来源，不等于项目质量或学术价值判断。"
 >
   <section class="section">
     <div class="container">
       <div class="eyebrow">数据研究报告</div>
       <h1 class="gradient-text">GitHub Star 传播与异常信号分析</h1>
-      <p class="lead">这页只回答热度从哪里来、是否异常、哪些项目需要复核；它不是项目能力或学术价值排名。</p>
+      <p class="lead">这页只回答热度从哪里来、是否异常、哪些项目需要复核；它不是项目能力、代码质量或学术价值排名。</p>
       <p style="color: var(--muted); margin-top: 12px">覆盖 {starQualityScores.length} 个核心项目，{comparisonGroups.length} 组对比分析；严肃判断仍要回到 benchmark、报告、失败样本和原始仓库。</p>
     </div>
   </section>
@@ -27,30 +27,30 @@ import {
     <div class="container">
       <div class="section-head">
         <div>
-          <div class="eyebrow">核心发现</div>
-          <h2>Executive Summary</h2>
+          <div class="eyebrow">复核线索</div>
+          <h2>Visibility Signal Summary</h2>
         </div>
       </div>
       <div class="split">
         <div class="card">
-          <h3>关键洞察</h3>
+          <h3>需要复核的信号</h3>
           <ul class="finding-list">
-            <li><strong>Star 数 ≠ 项目质量</strong>：AutoGPT (175K stars) 综合评分仅 28，低于 OpenEvolve (6.3K stars) 的 74 分</li>
-            <li><strong>爆发式增长多为 Hype 驱动</strong>：3天内从 0→50K stars 的项目，fork 质量和 issue 质量普遍偏低</li>
-            <li><strong>学术项目被系统性低估</strong>：DSPy、SWE-Agent 等论文驱动项目 star 增长慢但 star 质量最高</li>
-            <li><strong>Devika 是典型 Me-too 项目</strong>：蹭 Devin 热度达到 20K stars，3个月后活跃度归零</li>
-            <li><strong>Stars/Contributor Ratio</strong> 是最可靠的炒作检测指标：超过 150 即为高风险</li>
+            <li><strong>Star 数只是可见性信号</strong>：高 Star 项目和低 Star 项目都需要回到 benchmark、代码维护、报告和失败样本复核。</li>
+            <li><strong>爆发式增长需要解释来源</strong>：短时间大幅增长通常应检查传播链、fork 有效性、issue 有效性和贡献者结构。</li>
+            <li><strong>论文驱动项目可能增长较慢</strong>：DSPy、SWE-Agent 等项目的可见性节奏不同，不能用总 Star 直接判断研究价值。</li>
+            <li><strong>Me-too 项目需要额外复核</strong>：借热点增长的项目要看后续维护、真实使用和 issue/PR 活动是否持续。</li>
+            <li><strong>Stars/Contributor Ratio</strong> 只是启发式异常线索：超过阈值意味着需要复核，不等于“炒作检测器”。</li>
           </ul>
         </div>
         <div class="card">
-          <h3>方法论</h3>
+          <h3>启发式信号</h3>
           <ul class="finding-list">
-            <li><strong>Star 活跃度评分</strong>：过去 90 天内有活动的 stargazer 占比</li>
+            <li><strong>Star 活跃度线索</strong>：过去 90 天内有活动的 stargazer 占比</li>
             <li><strong>贡献者多样性</strong>：Gini 系数反转，top 10 贡献者占比越低越好</li>
-            <li><strong>Fork 质量</strong>：有实际 commit/push 的 fork 占比</li>
-            <li><strong>Issue 质量</strong>：非灌水/非模板 issue 占比</li>
+            <li><strong>Fork 有效性</strong>：有实际 commit/push 的 fork 占比</li>
+            <li><strong>Issue 有效性</strong>：非灌水/非模板 issue 占比</li>
             <li><strong>PR 合并率</strong>：merged PRs / total PRs</li>
-            <li><strong>Stars/Contributor Ratio</strong>：每个贡献者对应的 star 数（高=炒作嫌疑）</li>
+            <li><strong>Stars/Contributor Ratio</strong>：每个贡献者对应的 star 数（偏高=需要复核）</li>
           </ul>
         </div>
       </div>
@@ -58,7 +58,7 @@ import {
   </section>
 
       <!-- Star Signal Queue -->
-  <section class="section" id="quality-scores">
+  <section class="section" id="signal-scores">
     <div class="container">
       <div class="section-head">
         <div>
@@ -66,7 +66,7 @@ import {
           <h2>传播信号复核队列</h2>
         </div>
       </div>
-      <p style="color: var(--muted); margin-bottom: 24px">基于 5 维度加权线索：Star 活跃度(20%) + 贡献者多样性(20%) + Fork 质量(20%) + Issue 质量(20%) + PR 合并率(20%)。分数只用于发现异常和选择复核顺序。</p>
+      <p style="color: var(--muted); margin-bottom: 24px">基于 5 维度加权线索：Star 活跃度(20%) + 贡献者多样性(20%) + Fork 有效性(20%) + Issue 有效性(20%) + PR 合并率(20%)。分数只用于发现异常和选择复核顺序。</p>
       <div class="score-table-wrap">
         <table class="score-table">
           <thead>
@@ -76,8 +76,8 @@ import {
               <th>分诊分</th>
               <th>Star 活跃</th>
               <th>贡献多样性</th>
-              <th>Fork 质量</th>
-              <th>Issue 质量</th>
+              <th>Fork 有效性</th>
+              <th>Issue 有效性</th>
               <th>PR 合并</th>
               <th>增长模式</th>
             </tr>
@@ -138,8 +138,9 @@ import {
     <div class="container">
       <div class="section-head">
         <div>
-          <div class="eyebrow">多维评分</div>
-          <h2>质量雷达对比</h2>
+          <div class="eyebrow">Visibility signal radar</div>
+          <h2>传播信号雷达</h2>
+          <p>雷达只展示 adoption/maintenance proxy，不代表代码质量、产品质量或学术价值。</p>
         </div>
       </div>
       <div class="radar-grid">
@@ -189,7 +190,7 @@ import {
               <th>Forks</th>
               <th>贡献者</th>
               <th>Star/Contrib</th>
-              <th>代码质量</th>
+              <th>代码维护线索</th>
               <th>社区</th>
               <th>文档</th>
               <th>营销度</th>
@@ -243,7 +244,7 @@ import {
             <div class="pill-row">
               <span class="pill">平均评分: {group.avgCompositeScore}</span>
               <span class="pill">Star/Contrib: {group.avgStarsPerContributor}</span>
-              <span class="pill">代码质量: {group.avgCodeQuality}/10</span>
+              <span class="pill">代码维护线索: {group.avgCodeQuality}/10</span>
             </div>
           </article>
         ))}
@@ -328,8 +329,8 @@ import {
     H --> I[Star 爆发]
     E --> J[学术引用]
     J --> K[长期稳步增长]
-    I --> L[高 Star 低质量]
-    K --> M[低 Star 高质量]
+    I --> L[高 Star 待复核]
+    K --> M[低 Star 仍可能有研究价值]
 
     style L fill:#ef4444,stroke:#ef4444,color:#fff
     style M fill:#10b981,stroke:#10b981,color:#fff`} />
@@ -341,7 +342,7 @@ import {
         A1[AutoGPT 175K] --> A2[Devika 22K]
         A1 ---|3天→50K| A3[爆发式增长]
         A2 ---|5天→20K| A3
-        A3 --> A4["低 Fork 质量 / 低 Issue 质量 / Stars/Contrib > 150"]
+        A3 --> A4["低 Fork 有效性 / 低 Issue 有效性 / Stars/Contrib > 150"]
     end
     subgraph 稳健增长
         B1[CrewAI 30K] --> B2[AutoGen 50K]
@@ -353,7 +354,7 @@ import {
         C1[DSPy 25K] --> C2[SWE-Agent 15K]
         C1 ---|90天→1K| C3[论文驱动增长]
         C2 ---|30天→1K| C3
-        C3 --> C4["高代码质量 / 高 Issue 质量 / Stars/Contrib < 160"]
+        C3 --> C4["较强代码维护线索 / 较强 Issue 有效性 / Stars/Contrib < 160"]
     end
 
     style A3 fill:#ef444480,stroke:#ef4444
@@ -369,7 +370,8 @@ import {
       <div class="section-head">
         <div>
           <div class="eyebrow">方法论</div>
-          <h2>Star 质量评分体系</h2>
+          <h2>Star 传播信号评分草案</h2>
+          <p>这个评分草案没有经过外部校准，不应作为项目质量、代码质量或学术价值判断；它只帮助发现传播异常和下一步复核顺序。</p>
         </div>
       </div>
       <div class="split">
@@ -382,8 +384,8 @@ import {
             <tbody>
               <tr><td>Star 活跃度</td><td>20%</td><td>GitHub API</td><td>90天内活跃 stargazer 占比</td></tr>
               <tr><td>贡献者多样性</td><td>20%</td><td>GitHub API</td><td>Gini 系数反转，避免单人/单组织垄断</td></tr>
-              <tr><td>Fork 质量</td><td>20%</td><td>GitHub API</td><td>有 commit 的 fork 占比（排除空 fork）</td></tr>
-              <tr><td>Issue 质量</td><td>20%</td><td>GitHub API + NLP</td><td>非灌水/非模板 issue 占比</td></tr>
+              <tr><td>Fork 有效性</td><td>20%</td><td>GitHub API</td><td>有 commit 的 fork 占比（排除空 fork）</td></tr>
+              <tr><td>Issue 有效性</td><td>20%</td><td>GitHub API + NLP</td><td>非灌水/非模板 issue 占比</td></tr>
               <tr><td>PR 合并率</td><td>20%</td><td>GitHub API</td><td>merged / total PRs 比例</td></tr>
             </tbody>
           </table>
@@ -397,8 +399,8 @@ import {
             <tbody>
               <tr><td>Stars/Contributor</td><td>健康</td><td>可能偏高</td><td>炒作嫌疑</td></tr>
               <tr><td>0→1K 天数</td><td>&gt; 30 天</td><td>7-30 天</td><td>&lt; 7 天</td></tr>
-              <tr><td>Fork 质量</td><td>&gt; 40%</td><td>20-40%</td><td>&lt; 20%</td></tr>
-              <tr><td>Issue 质量</td><td>&gt; 60%</td><td>40-60%</td><td>&lt; 40%</td></tr>
+              <tr><td>Fork 有效性</td><td>&gt; 40%</td><td>20-40%</td><td>&lt; 20%</td></tr>
+              <tr><td>Issue 有效性</td><td>&gt; 60%</td><td>40-60%</td><td>&lt; 40%</td></tr>
             </tbody>
           </table>
         </div>
@@ -411,8 +413,8 @@ import {
     <div class="container">
       <div class="card" style="border-color: var(--brand)">
         <p style="color:var(--muted);font-size:14px">
-          <strong style="color:var(--text)">声明</strong>：本分析基于公开 GitHub 数据估算，评分模型为研究用途，不代表对任何项目的价值判断。
-          Star 数是可见性指标而非质量指标。建议研究者同时参考论文引用量、代码实际使用量和社区讨论深度。
+          <strong style="color:var(--text)">声明</strong>：本分析基于公开 GitHub 数据估算，评分模型为启发式复核用途，不代表对任何项目的价值判断。
+          Star 数是可见性指标而非质量指标。建议研究者同时参考论文引用量、代码实际使用量、benchmark、失败样本和社区讨论深度。
           本报告将作为 arXiv 论文「Self Evolving AI: A Survey」的补充材料。
         </p>
       </div>

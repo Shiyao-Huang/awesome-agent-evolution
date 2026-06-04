@@ -58,16 +58,16 @@ flowchart LR
 
 ## 近期证据更新（2026-06-04）
 
-本轮不是简单“刷新元数据”，而是补了五类证据缺口：skills、memory benchmark、skills benchmark、agent harness、browser harness 和 swarm runtime。下面每个仓库都只回答一个问题：它补上了哪类判断证据。
+本轮不是简单“刷新元数据”，而是把 swarm runtime、skill optimizer、skills benchmark、browser harness、memory middleware 和 educational swarm baseline 一起拉回同一条证据链。下面每个仓库都只回答一个问题：它补上了哪类判断证据。
 
 | 仓库 | 补上的证据缺口 | 对读者的意义 |
 |---|---|---|
-| [voltagent/awesome-agent-skills](https://github.com/voltagent/awesome-agent-skills) | 官方团队维护的 skill 入口 | skill 不是零散 prompt 包，而是可以被追踪、复用和评估的工程对象。 |
-| [vectorize-io/agent-memory-benchmark](https://github.com/vectorize-io/agent-memory-benchmark) | memory benchmark | “记住了”不够，要看检索、回答质量和成本之间的可比结果。 |
+| [kyegomez/swarms](https://github.com/kyegomez/swarms) | production swarm runtime | 它把 agent-swarm 从“多角色概念”推进到可部署的 runtime、protocol 和拓扑层。 |
+| [microsoft/SkillOpt](https://github.com/microsoft/SkillOpt) | self-evolving skill optimizer | 它直接回答 skill 是否能像训练神经网络一样迭代，而不改 base model 权重。 |
 | [benchflow-ai/skillsbench](https://github.com/benchflow-ai/skillsbench) | skills benchmark | 判断 agent 是否真的会用技能，而不是只安装了 skill pack。 |
-| [evalops/agent-harness](https://github.com/evalops/agent-harness) | provider-comparison harness | 同一任务可以跨 agent backend 比较，减少只看单次 demo 的偏差。 |
-| [browser-use/browser-harness](https://github.com/browser-use/browser-harness) | browser harness | 浏览器 agent 需要可编辑、可复跑的任务框架，而不是录屏式演示。 |
-| [swarmclawai/swarmclaw](https://github.com/swarmclawai/swarmclaw) | swarm runtime | agent-swarm 需要运行时、权限、任务分配和观测证据，不能只停留在“多角色”概念。 |
+| [browser-use/browser-harness](https://github.com/browser-use/browser-harness) | browser harness | 浏览器 agent 需要可编辑、可复跑、可自修复的任务框架，而不是录屏式演示。 |
+| [redis/agent-memory-server](https://github.com/redis/agent-memory-server) | memory middleware | 它补的是 memory substrate + MCP service 这一层，把“记忆”变成可接入的运行时接口。 |
+| [openai/swarm](https://github.com/openai/swarm) | educational swarm baseline | 它仍然是最清晰的 lightweight handoff baseline，但也明确告诉读者 production 已转向 Agents SDK。 |
 
 ## 核心洞察
 

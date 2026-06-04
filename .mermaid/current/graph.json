@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-04T21:38:16+08:00",
+  "generated_at": "2026-06-05T11:00:00+08:00",
   "truth_source": ".mermaid/current/graph.json",
   "nodes": [
     {
@@ -18,11 +18,12 @@
       "layer": "raw",
       "status": "updated",
       "paths": [
-        "raw-github/pinchbench_skill.md",
-        "raw-github/howdymary_hermes-agent-metaharness.md",
-        "raw-github/autojunjie_awesome-agent-harness.md",
-        "raw-github/mem0ai_memory-benchmarks.md",
-        "raw-github/neo4j-labs_agent-memory.md"
+        "raw-github/kyegomez_swarms.md",
+        "raw-github/microsoft_skillopt.md",
+        "raw-github/benchflow-ai_skillsbench.md",
+        "raw-github/browser-use_browser-harness.md",
+        "raw-github/redis_agent-memory-server.md",
+        "raw-github/openai_swarm.md"
       ]
     },
     {
@@ -33,11 +34,12 @@
       "paths": [
         "research/repo-classification.json",
         "analysis/github-project-data-analysis.md",
-        "projects/51-pinchbench-skill.md",
-        "projects/250-hermes-agent-metaharness-outer-loop.md",
-        "projects/265-awesome-agent-harness-autojunjie-curation.md",
-        "projects/87-mem0-memory-benchmarks.md",
-        "projects/130-neo4j-agent-memory.md"
+        "projects/371-swarms-enterprise-multi-agent-runtime.md",
+        "projects/272-skillopt-self-evolving-agent-skills.md",
+        "projects/248-skillsbench-agent-skills-benchmark.md",
+        "projects/261-browser-harness-self-healing-web-agent-runtime.md",
+        "projects/281-redis-agent-memory-server-runtime.md",
+        "projects/311-openai-swarm-multi-agent-orchestration.md"
       ]
     },
     {
@@ -47,11 +49,12 @@
       "status": "updated",
       "paths": [
         "site/src/data/projects.ts",
-        "site/public/reports/projects/51-pinchbench-skill.md",
-        "site/public/reports/projects/250-hermes-agent-metaharness-outer-loop.md",
-        "site/public/reports/projects/265-awesome-agent-harness-autojunjie-curation.md",
-        "site/public/reports/projects/87-mem0-memory-benchmarks.md",
-        "site/public/reports/projects/130-neo4j-agent-memory.md"
+        "site/public/reports/projects/371-swarms-enterprise-multi-agent-runtime.md",
+        "site/public/reports/projects/272-skillopt-self-evolving-agent-skills.md",
+        "site/public/reports/projects/248-skillsbench-agent-skills-benchmark.md",
+        "site/public/reports/projects/261-browser-harness-self-healing-web-agent-runtime.md",
+        "site/public/reports/projects/281-redis-agent-memory-server-runtime.md",
+        "site/public/reports/projects/311-openai-swarm-multi-agent-orchestration.md"
       ]
     },
     {
@@ -60,7 +63,7 @@
       "layer": "work",
       "status": "updated",
       "paths": [
-        "work/research/hourly-public-metadata-update-2026-06-04-2138.md"
+        "work/research/hourly-public-metadata-update-2026-06-05-1100.md"
       ]
     }
   ],
@@ -94,60 +97,76 @@
   "current_run": {
     "repos": [
       {
-        "repo": "pinchbench/skill",
-        "raw_capture": "raw-github/pinchbench_skill.md",
-        "report": "projects/51-pinchbench-skill.md",
-        "site_report": "site/public/reports/projects/51-pinchbench-skill.md",
-        "stars": 1200,
-        "forks": 136,
-        "commits": 383,
+        "repo": "kyegomez/swarms",
+        "raw_capture": "raw-github/kyegomez_swarms.md",
+        "report": "projects/371-swarms-enterprise-multi-agent-runtime.md",
+        "site_report": "site/public/reports/projects/371-swarms-enterprise-multi-agent-runtime.md",
+        "stars": 6800,
+        "forks": 935,
+        "commits": 5078,
+        "last_visible_commit_date": "2026-05-28",
+        "theme": "framework"
+      },
+      {
+        "repo": "microsoft/SkillOpt",
+        "raw_capture": "raw-github/microsoft_skillopt.md",
+        "report": "projects/272-skillopt-self-evolving-agent-skills.md",
+        "site_report": "site/public/reports/projects/272-skillopt-self-evolving-agent-skills.md",
+        "stars": 4000,
+        "forks": 416,
+        "commits": 92,
+        "last_visible_commit_date": "2026-05-31",
+        "theme": "skill"
+      },
+      {
+        "repo": "benchflow-ai/skillsbench",
+        "raw_capture": "raw-github/benchflow-ai_skillsbench.md",
+        "report": "projects/248-skillsbench-agent-skills-benchmark.md",
+        "site_report": "site/public/reports/projects/248-skillsbench-agent-skills-benchmark.md",
+        "stars": 1300,
+        "forks": 312,
+        "commits": 385,
+        "last_visible_commit_date": "2026-06-03",
         "theme": "evaluation"
       },
       {
-        "repo": "howdymary/hermes-agent-metaharness",
-        "raw_capture": "raw-github/howdymary_hermes-agent-metaharness.md",
-        "report": "projects/250-hermes-agent-metaharness-outer-loop.md",
-        "site_report": "site/public/reports/projects/250-hermes-agent-metaharness-outer-loop.md",
-        "stars": 89,
-        "forks": 9,
-        "commits": 11,
+        "repo": "browser-use/browser-harness",
+        "raw_capture": "raw-github/browser-use_browser-harness.md",
+        "report": "projects/261-browser-harness-self-healing-web-agent-runtime.md",
+        "site_report": "site/public/reports/projects/261-browser-harness-self-healing-web-agent-runtime.md",
+        "stars": 14300,
+        "forks": 1300,
+        "commits": 391,
+        "last_visible_commit_date": "2026-05-20",
         "theme": "harness"
       },
       {
-        "repo": "AutoJunjie/awesome-agent-harness",
-        "raw_capture": "raw-github/autojunjie_awesome-agent-harness.md",
-        "report": "projects/265-awesome-agent-harness-autojunjie-curation.md",
-        "site_report": "site/public/reports/projects/265-awesome-agent-harness-autojunjie-curation.md",
-        "stars": 437,
-        "forks": 32,
-        "commits": 59,
-        "theme": "harness"
-      },
-      {
-        "repo": "mem0ai/memory-benchmarks",
-        "raw_capture": "raw-github/mem0ai_memory-benchmarks.md",
-        "report": "projects/87-mem0-memory-benchmarks.md",
-        "site_report": "site/public/reports/projects/87-mem0-memory-benchmarks.md",
-        "stars": 38,
-        "forks": 12,
-        "commits": 15,
+        "repo": "redis/agent-memory-server",
+        "raw_capture": "raw-github/redis_agent-memory-server.md",
+        "report": "projects/281-redis-agent-memory-server-runtime.md",
+        "site_report": "site/public/reports/projects/281-redis-agent-memory-server-runtime.md",
+        "stars": 266,
+        "forks": 50,
+        "commits": 735,
+        "last_visible_commit_date": "2026-04-16",
         "theme": "memory"
       },
       {
-        "repo": "neo4j-labs/agent-memory",
-        "raw_capture": "raw-github/neo4j-labs_agent-memory.md",
-        "report": "projects/130-neo4j-agent-memory.md",
-        "site_report": "site/public/reports/projects/130-neo4j-agent-memory.md",
-        "stars": 302,
-        "forks": 67,
-        "commits": 431,
-        "theme": "memory"
+        "repo": "openai/swarm",
+        "raw_capture": "raw-github/openai_swarm.md",
+        "report": "projects/311-openai-swarm-multi-agent-orchestration.md",
+        "site_report": "site/public/reports/projects/311-openai-swarm-multi-agent-orchestration.md",
+        "stars": 21600,
+        "forks": 2300,
+        "commits": 29,
+        "last_visible_commit_date": "2026-04-15",
+        "theme": "framework"
       }
     ],
     "blockers": [
       "shell GitHub API access remained blocked in this workspace",
       "gh auth status reported an invalid default GitHub token",
-      "GitNexus CLI required explicit --repo selection and the awesome-evolution index is stale against current HEAD"
+      "GitNexus CLI can answer topology queries, but some commands differ from repo docs and the index is stale against current HEAD"
     ],
     "working_principle": "public GitHub page evidence -> raw-github refresh -> repo-classification/project/site registry -> public reports -> indexes + analysis + site build"
   }

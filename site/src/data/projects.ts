@@ -3231,11 +3231,11 @@ export const projects: Project[] = [
         "url": "https://github.com/benchflow-ai/skillsbench",
         "stars": 1300,
         "forks": 312,
-        "language": "PDDL",
+        "language": "Python",
         "license": "Apache-2.0",
         "report": "projects/248-skillsbench-agent-skills-benchmark.md",
-        "pattern": "task plus skill set -> agent run -> deterministic verifier scoring -> artifact and leaderboard export -> compare skill usage quality over time",
-        "description": "benchflow-ai/skillsbench is a benchmark harness for testing how well agents compose and use reusable skills across multi-step tasks under deterministic verification.",
+        "pattern": "define skill-centric tasks -> run agent plus skill compositions -> score verifier outputs and task success -> compare per-task and per-skill behavior across models and runtimes",
+        "description": "SkillsBench evaluates how well AI agents actually use reusable skills across specialized multi-step workflows under deterministic and gym-style benchmark settings.",
         "stack": [
             "PDDL",
             "Python",
@@ -3243,17 +3243,15 @@ export const projects: Project[] = [
             "Tasks"
         ],
         "category": "Agent Skills Benchmark Harness",
-        "lastPushed": "2026-06-04T00:00:00Z",
+        "lastPushed": "2026-06-03T00:00:00Z",
         "localPath": "raw-github/benchflow-ai_skillsbench.md",
         "status": "candidate",
         "tags": [
-            "benchmark",
             "skills",
-            "evaluation harness",
-            "agent reliability",
-            "task composition",
-            "skill",
-            "benchmark-eval"
+            "benchmark",
+            "evaluation",
+            "task taxonomy",
+            "dataset"
         ]
     },
     {
@@ -3608,8 +3606,8 @@ export const projects: Project[] = [
         "language": "Python",
         "license": "MIT",
         "report": "projects/261-browser-harness-self-healing-web-agent-runtime.md",
-        "pattern": "connect llm directly to live browser cdp -> patch missing helpers in agent-workspace during runs -> use domain interaction skills -> iteratively improve execution reliability",
-        "description": "browser-use/browser-harness connects LLM agents to live browsers through a thin editable CDP harness and encourages runtime self-healing helper generation.",
+        "pattern": "attach one websocket to Chrome -> let the agent call or write browser helpers -> execute repeatable browser tasks -> keep the harness editable so the next run can reuse stronger helpers",
+        "description": "Browser Harness connects LLM agents to a real browser through a thin editable CDP harness and explicitly encourages runtime self-healing by letting the agent write missing helper code during execution.",
         "stack": [
             "Python",
             "CDP",
@@ -3617,17 +3615,15 @@ export const projects: Project[] = [
             "Playwright"
         ],
         "category": "Self-Healing Browser Agent Harness",
-        "lastPushed": "2026-06-04T00:00:00Z",
+        "lastPushed": "2026-05-20T00:00:00Z",
         "localPath": "raw-github/browser-use_browser-harness.md",
         "status": "candidate",
         "tags": [
             "browser harness",
-            "self-healing",
             "cdp",
-            "automation",
-            "agent runtime",
-            "harness",
-            "benchmark-eval"
+            "self-healing",
+            "playwright",
+            "agent workspace"
         ]
     },
     {
@@ -3920,12 +3916,12 @@ export const projects: Project[] = [
         "name": "SkillOpt",
         "repo": "microsoft/SkillOpt",
         "url": "https://github.com/microsoft/SkillOpt",
-        "stars": 4500,
-        "forks": 452,
+        "stars": 4000,
+        "forks": 416,
         "language": "Python",
         "license": "MIT",
         "report": "projects/272-skillopt-self-evolving-agent-skills.md",
-        "pattern": "trajectory-driven skill edits -> validation-gated updates -> epoch/batch-style skill training loop -> deployable best_skill artifacts for frozen-agent workflows",
+        "pattern": "collect trajectories -> propose skill edits -> validate on held-out tasks -> keep stronger best_skill artifacts -> repeat like epochs and mini-batches without touching base model weights",
         "description": "SkillOpt is a text-space optimizer that trains reusable natural-language skills for frozen LLM agents through trajectory-driven edits, validation-gated updates, and deployable best_skill.md artifacts.",
         "stack": [
             "Python",
@@ -3933,7 +3929,7 @@ export const projects: Project[] = [
             "Skill Training Loops"
         ],
         "category": "Self-Evolving Agent Skill Optimizer",
-        "lastPushed": "2026-05-28T00:00:00Z",
+        "lastPushed": "2026-05-31T00:00:00Z",
         "localPath": "raw-github/microsoft_skillopt.md",
         "status": "candidate",
         "tags": [
@@ -4171,19 +4167,19 @@ export const projects: Project[] = [
         "repo": "redis/agent-memory-server",
         "url": "https://github.com/redis/agent-memory-server",
         "stars": 266,
-        "forks": 51,
+        "forks": 50,
         "language": "Python",
         "license": "MIT",
         "report": "projects/281-redis-agent-memory-server-runtime.md",
-        "pattern": "agent event and interaction signals -> Redis-backed memory storage and retrieval -> MCP server exposes memory operations to agents -> memory context reused in downstream task loops",
-        "description": "agent-memory-server is Redis-maintained memory middleware that gives AI agents fast, persistent, and flexible context memory through an MCP service.",
+        "pattern": "capture agent events and context -> store and retrieve memory through Redis-backed services -> expose memory operations via MCP and client APIs -> feed retrieved context into later agent loops",
+        "description": "agent-memory-server is Redis-maintained memory middleware that gives AI agents fast, persistent, and flexible context memory through an MCP-compatible service and client stack.",
         "stack": [
             "Python",
             "Redis",
             "MCP Memory Service"
         ],
         "category": "Agent Memory Runtime and Context Service",
-        "lastPushed": "2026-05-28T00:00:00Z",
+        "lastPushed": "2026-04-16T00:00:00Z",
         "localPath": "raw-github/redis_agent-memory-server.md",
         "status": "candidate",
         "tags": [
@@ -4981,20 +4977,20 @@ export const projects: Project[] = [
         "name": "OpenAI Swarm",
         "repo": "openai/swarm",
         "url": "https://github.com/openai/swarm",
-        "stars": 21500,
+        "stars": 21600,
         "forks": 2300,
         "language": "Python",
         "license": "MIT",
         "report": "projects/311-openai-swarm-multi-agent-orchestration.md",
-        "pattern": "compose lightweight routines and handoffs -> route user tasks across specialized agents -> keep tool usage explicit and inspectable -> evolve orchestration workflows with reproducible function-call boundaries",
-        "description": "swarm is OpenAI's educational multi-agent orchestration framework for lightweight handoffs, routines, and inspectable agent workflow patterns.",
+        "pattern": "compose lightweight routines and handoffs -> route user tasks across specialized agents -> keep tool usage explicit and inspectable -> treat orchestration as a simple educational baseline rather than a production control plane",
+        "description": "Swarm is OpenAI’s educational multi-agent orchestration framework for lightweight handoffs, routines, and inspectable agent workflow patterns, now explicitly positioned as a predecessor to the OpenAI Agents SDK.",
         "stack": [
             "Python",
             "Multi-Agent Orchestration",
             "Function Calling Handoffs"
         ],
         "category": "Experimental Multi-Agent Orchestration Framework",
-        "lastPushed": "2026-05-29T00:00:00Z",
+        "lastPushed": "2026-04-15T00:00:00Z",
         "localPath": "raw-github/openai_swarm.md",
         "status": "candidate",
         "tags": [
@@ -5002,7 +4998,7 @@ export const projects: Project[] = [
             "orchestration",
             "handoff",
             "openai",
-            "framework"
+            "educational"
         ]
     },
     {
@@ -7888,6 +7884,36 @@ export const projects: Project[] = [
             "harness",
             "framework-runtime"
         ]
+    },
+    {
+        "name": "Swarms",
+        "repo": "kyegomez/swarms",
+        "url": "https://github.com/kyegomez/swarms",
+        "description": "Swarms is a production-oriented multi-agent orchestration framework that packages sequential, concurrent, and hierarchical agent topologies with tools, memory, protocol adapters, and marketplace-style extensions.",
+        "stack": [
+            "Python",
+            "Multi-Agent Orchestration",
+            "MCP",
+            "x402",
+            "Skills Interop"
+        ],
+        "category": "Production Multi-Agent Orchestration Runtime",
+        "status": "candidate",
+        "stars": 6800,
+        "forks": 935,
+        "lastPushed": "2026-05-28T00:00:00Z",
+        "language": "Python",
+        "license": "Apache-2.0",
+        "report": "projects/371-swarms-enterprise-multi-agent-runtime.md",
+        "pattern": "define agents and swarm topology -> run sequential/concurrent/hierarchical orchestration -> attach tools, memory, and protocol adapters -> keep workflow behavior inspectable through runtime boundaries and reusable swarm patterns",
+        "tags": [
+            "multi-agent",
+            "swarm",
+            "orchestration",
+            "mcp",
+            "production-runtime"
+        ],
+        "localPath": "raw-github/kyegomez_swarms.md"
     }
 ];
 
@@ -8298,7 +8324,8 @@ export const projectGroups = [
       "elizaOS/eliza",
       "TransformerOptimus/SuperAGI",
       "paradigmxyz/centaur",
-      "swarmclawai/swarmclaw"
+      "swarmclawai/swarmclaw",
+      "kyegomez/swarms"
     ]
   },
   {
