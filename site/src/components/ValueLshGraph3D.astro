@@ -190,7 +190,7 @@ const defaultNeighbors = defaultNode?.neighbors.slice(0, 6) ?? [];
       <span><i style={`background:${classColors[valueClass]}`}></i>{classLabels[valueClass]} <strong>{graphSnapshot.summary.value_classes[valueClass].toLocaleString()}</strong></span>
     ))}
     <span><i class="projection-dot"></i>{graphSnapshot.method.provider} + {graphSnapshot.method.projection.toUpperCase()}</span>
-    <span><i class="cluster-dot"></i>{graphSnapshot.summary.embedding_clusters} embedding clusters</span>
+    <span><i class="cluster-dot"></i>{graphSnapshot.summary.embedding_clusters} value-vector k-means clusters</span>
     <span><i class="node-dot"></i>{graphSnapshot.summary.nodes.toLocaleString()} nodes</span>
   </div>
   <div class="value-lsh-inspector" data-value-lsh-inspector aria-live="polite">
@@ -210,10 +210,11 @@ const defaultNeighbors = defaultNode?.neighbors.slice(0, 6) ?? [];
         <div class="value-lsh-selected-metrics">
           <div><strong>{defaultNode.score.toFixed(2)}</strong><span>value</span></div>
           <div><strong>{defaultNode.confidence.toFixed(2)}</strong><span>confidence</span></div>
-          <div><strong>{defaultNode.embeddingCluster}</strong><span>embedding</span></div>
+          <div><strong>{defaultNode.embeddingCluster}</strong><span>k-means cluster</span></div>
         </div>
         <p>{defaultNode.rawUrl ? <a href={defaultNode.rawUrl} target="_blank" rel="noopener">{defaultNode.sourcePath || defaultNode.id}</a> : (defaultNode.sourcePath || defaultNode.id)}{defaultNode.lshCluster ? ` · ${defaultNode.lshCluster}` : ''}</p>
         <h4>LSH neighbors</h4>
+        <p>共享 hash bands 的近邻召回，不等于上面的 k-means cluster 标签。</p>
         <ul>
           {defaultNeighbors.length ? defaultNeighbors.map((neighbor) => (
             <li>
@@ -384,10 +385,11 @@ const defaultNeighbors = defaultNode?.neighbors.slice(0, 6) ?? [];
           <div class="value-lsh-selected-metrics">
             <div><strong>${Number(node.score).toFixed(2)}</strong><span>value</span></div>
             <div><strong>${Number(node.confidence).toFixed(2)}</strong><span>confidence</span></div>
-            <div><strong>${escapeHtml(node.embeddingCluster)}</strong><span>embedding</span></div>
+            <div><strong>${escapeHtml(node.embeddingCluster)}</strong><span>k-means cluster</span></div>
           </div>
           <p>${sourcePath}${node.lshCluster ? ` · ${escapeHtml(node.lshCluster)}` : ''}</p>
           <h4>LSH neighbors</h4>
+          <p>共享 hash bands 的近邻召回，不等于上面的 k-means cluster 标签。</p>
           <ul>${neighbors || '<li><span>当前采样内没有可展示邻居。</span></li>'}</ul>
         </article>
       `;

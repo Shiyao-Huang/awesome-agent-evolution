@@ -117,7 +117,7 @@ const jsonLd = {
     <div class="container">
       <div class="eyebrow">Value LSH · 3D Graph</div>
       <h1>把 {materialCountLabel} 条素材放进同一个价值坐标系。</h1>
-      <p class="lead">每条素材先经过 26 条 value lines 的 `-1 / 0 / +1` 离散判别，再进入 LSH buckets、value clusters 和 3D projection；图上的点不是热闹程度，而是当前证据链下的价值位置。</p>
+      <p class="lead">每条素材先经过 26 条 value lines 的 `-1 / 0 / +1` 离散判别，再进入 LSH buckets、value clusters 和 3D projection；页面里的 `emb-xxx` 标签来自 value vector 上的 k-means 分组，不是 LSH bucket 编号，图上的点也不是热闹程度，而是当前证据链下的价值位置。</p>
       <div class="value-lsh-actions">
         <a class="button primary" href={`${repoPath}/analysis/value-lsh-index.md`} target="_blank" rel="noopener">查看结果报告</a>
         <a class="button" href={`${repoPath}/data-engine/value-lsh-index`} target="_blank" rel="noopener">数据集目录</a>
@@ -132,7 +132,7 @@ const jsonLd = {
         <div><strong>{summary.total_materials.toLocaleString()}</strong><span>materials</span></div>
         <div><strong>{summary.value_tag_count}</strong><span>value lines</span></div>
         <div><strong>{summary.total_buckets}</strong><span>LSH buckets</span></div>
-        <div><strong>{graphSnapshot.summary.embedding_clusters}</strong><span>embedding clusters</span></div>
+        <div><strong>{graphSnapshot.summary.embedding_clusters}</strong><span>value-vector k-means clusters</span></div>
       </div>
       <ValueLshGraph3D variant="full" maxNodes={summary.total_materials} height={590} />
     </div>
