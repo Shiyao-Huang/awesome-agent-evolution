@@ -68,6 +68,11 @@ interface Props {
   height?: number;
 }
 
+type RegionWithOptionalEnglish = typeof valueLshRegions[number] & {
+  meaningEn?: string;
+  summaryEn?: string;
+};
+
 const graphSnapshot = graphSnapshotJson as GraphSnapshot;
 const analysisSnapshot = analysisSnapshotJson as AnalysisSnapshot;
 const projectRepoBase = 'https://github.com/Shiyao-Huang/awesome-agent-evolution/blob/main/';
@@ -139,6 +144,8 @@ const metricLabels: Record<string, string> = {
   attention: 'attention signal',
   quality: 'evidence density',
 };
+const regionMeaningEn = (region: typeof valueLshRegions[number]) => (region as RegionWithOptionalEnglish).meaningEn ?? region.meaning;
+const regionSummaryEn = (region: typeof valueLshRegions[number]) => (region as RegionWithOptionalEnglish).summaryEn ?? region.summary;
 
 const classColors: Record<ValueClass, string> = {
   'high-value-candidate': '#2E6F4E',
@@ -147,8 +154,84 @@ const classColors: Record<ValueClass, string> = {
 };
 
 const clamp = (value: number, min: number, max: number) => Math.min(max, Math.max(min, value));
-const axisPositionPercent = (value: number) => clamp(((value + 1.2) / 2.4) * 100, 4, 96);
-const axisSpanPercent = (min: number, max: number) => clamp((Math.abs(max - min) / 2.4) * 100, 6, 100);
+const formatSignedDelta = (value: number) => `${value > 0 ? '+' : value < 0 ? '' : ''}${value.toFixed(2)}`;
+const regionContrastSummary = (region: typeof valueLshRegions[number]) => valueLshRegions
+  .filter((candidate) => candidate.kind !== region.kind)
+  .map((otherRegion) => {
+    const axisDiffs = (['x', 'y', 'z'] as const)
+      .map((axis) => ({
+        axis,
+        delta: Number((region.centroid[axis] - otherRegion.centroid[axis]).toFixed(2)),
+      }))
+      .sort((left, right) => Math.abs(right.delta) - Math.abs(left.delta));
+    const metricDiffs = (['frontier', 'attention', 'quality'] as const)
+      .map((metricKey) => ({
+        key: metricKey,
+        label: metricLabels[metricKey] || metricKey,
+        delta: Number(((region.metrics?.[metricKey] || 0) - (otherRegion.metrics?.[metricKey] || 0)).toFixed(2)),
+      }))
+      .sort((left, right) => Math.abs(right.delta) - Math.abs(left.delta));
+    const dominantAxis = axisDiffs[0];
+    const dominantMetric = metricDiffs[0];
+    return {
+      kind: otherRegion.kind,
+      arrow: otherRegion.arrow,
+      rankingLabel: otherRegion.rankingLabel,
+      clusterId: otherRegion.clusterId,
+      axisDiffs,
+      metricDiffs,
+      separationNote: dominantAxis.delta > 0
+        ? `当前区域在 ${dominantAxis.axis.toUpperCase()} 轴更靠正 ${Math.abs(dominantAxis.delta).toFixed(2)}。`
+        : dominantAxis.delta < 0
+          ? `当前区域在 ${dominantAxis.axis.toUpperCase()} 轴更靠负 ${Math.abs(dominantAxis.delta).toFixed(2)}。`
+          : `当前区域与它在 ${dominantAxis.axis.toUpperCase()} 轴几乎重合。`,
+      metricNote: dominantMetric.delta > 0
+        ? `${dominantMetric.label} 更高 ${Math.abs(dominantMetric.delta).toFixed(2)}。`
+        : dominantMetric.delta < 0
+          ? `${dominantMetric.label} 更低 ${Math.abs(dominantMetric.delta).toFixed(2)}。`
+          : `${dominantMetric.label} 几乎持平。`,
+    };
+  });
+const projectRegionPoint = (region: typeof valueLshRegions[number]) => ({
+  x: 500 + region.centroid.x * 390 + region.centroid.z * 72,
+  y: 270 - region.centroid.y * 190 + region.centroid.z * 34,
+});
+const regionSpatialMap = (region: typeof valueLshRegions[number]) => {
+  const projected = valueLshRegions.map((candidate) => ({ region: candidate, point: projectRegionPoint(candidate) }));
+  const minX = Math.min(...projected.map((item) => item.point.x));
+  const maxX = Math.max(...projected.map((item) => item.point.x));
+  const minY = Math.min(...projected.map((item) => item.point.y));
+  const maxY = Math.max(...projected.map((item) => item.point.y));
+  const width = 260;
+  const height = 150;
+  const padding = 18;
+  const scaleX = (value: number) => padding + (((value - minX) / Math.max(1, maxX - minX)) * (width - padding * 2));
+  const scaleY = (value: number) => padding + (((value - minY) / Math.max(1, maxY - minY)) * (height - padding * 2));
+  const nodes = projected.map(({ region: candidate, point }) => ({
+    kind: candidate.kind,
+    arrow: candidate.arrow,
+    rankingLabel: candidate.rankingLabel,
+    clusterId: candidate.clusterId,
+    x: Number(scaleX(point.x).toFixed(1)),
+    y: Number(scaleY(point.y).toFixed(1)),
+    current: candidate.kind === region.kind,
+  }));
+  const currentNode = nodes.find((item) => item.current) ?? nodes[0];
+  return {
+    width,
+    height,
+    nodes,
+    links: nodes
+      .filter((item) => !item.current)
+      .map((item) => ({
+        fromX: currentNode.x,
+        fromY: currentNode.y,
+        toX: item.x,
+        toY: item.y,
+        kind: item.kind,
+      })),
+  };
+};
 const fallbackNodes = [...sceneNodes]
   .sort((a, b) => a.z - b.z)
   .slice(0, variant === 'compact' ? 220 : 420)
@@ -194,9 +277,9 @@ const scenePayload = {
     metricKey: region.metricKey,
     metricValue: region.metricValue,
     meaning: region.meaning,
-    meaningEn: region.meaningEn,
+    meaningEn: regionMeaningEn(region),
     summary: region.summary,
-    summaryEn: region.summaryEn,
+    summaryEn: regionSummaryEn(region),
     metrics: region.metrics,
     nodeCount: region.nodeCount,
     centroid: region.centroid,
@@ -204,6 +287,8 @@ const scenePayload = {
     representativeId: region.representatives.find((rep) => sceneNodes.some((node) => node.id === rep.id))?.id ?? region.representatives[0]?.id ?? null,
     representatives: region.representatives.slice(0, 3),
     topFacets: region.topFacets,
+    contrasts: regionContrastSummary(region),
+    spatialMap: regionSpatialMap(region),
   })),
 };
 const defaultNode = sceneNodes.find((node) => node.neighbors.length > 0) ?? sceneNodes[0];
@@ -270,6 +355,10 @@ const defaultRegion = valueLshRegions[0];
         ))}
       </svg>
     </div>
+    <div class="value-lsh-stage-guide" data-region-guide aria-live="polite">
+      <strong data-region-guide-label>Guiding to ↗ 前沿证据</strong>
+      <span data-region-guide-detail>camera focus + cluster spotlight</span>
+    </div>
     <div class="value-lsh-region-markers" data-region-markers aria-label="Evidence region anchors"></div>
   </div>
   {variant === 'full' ? (
@@ -282,7 +371,7 @@ const defaultRegion = valueLshRegions[0];
             <small>{region.clusterId}</small>
           </div>
           <p>{region.meaning}</p>
-          <p><strong>English:</strong> {region.meaningEn}</p>
+          <p><strong>English:</strong> {regionMeaningEn(region)}</p>
           <div class="value-region-card-meta">
             <span>{metricLabels[region.metricKey] || region.metricKey} {region.metricValue.toFixed(2)}</span>
             <span>{region.nodeCount} nodes</span>
@@ -320,7 +409,7 @@ const defaultRegion = valueLshRegions[0];
       </div>
       <p class="value-lsh-region-summary-note" data-region-summary-note>{defaultRegion.summary}</p>
       <p data-region-summary-meaning>{defaultRegion.meaning}</p>
-      <p data-region-summary-meaning-en><strong>English:</strong> {defaultRegion.meaningEn}</p>
+      <p data-region-summary-meaning-en><strong>English:</strong> {regionMeaningEn(defaultRegion)}</p>
       <div class="value-chip-row region-summary" data-region-summary-facets>
         {defaultRegion.topFacets.slice(0, 4).map((facet) => <span>{facet.label}</span>)}
       </div>
@@ -343,6 +432,67 @@ const defaultRegion = valueLshRegions[0];
             </li>
           ))}
         </ul>
+      </div>
+      <div class="value-lsh-region-contrast">
+        <h5>How it differs from other high-value regions</h5>
+        <ul data-region-summary-contrasts>
+          {regionContrastSummary(defaultRegion).map((contrast) => (
+            <li>
+              <div class="value-lsh-region-contrast-head">
+                <strong>{contrast.arrow} {contrast.rankingLabel}</strong>
+                <span>{contrast.clusterId}</span>
+              </div>
+              <p>{contrast.separationNote} {contrast.metricNote}</p>
+              <div class="value-lsh-region-contrast-strip">
+                {contrast.axisDiffs.map((item) => (
+                  <span>{item.axis.toUpperCase()} {formatSignedDelta(item.delta)}</span>
+                ))}
+              </div>
+              <div class="value-lsh-region-contrast-strip metric">
+                {contrast.metricDiffs.map((item) => (
+                  <span>{item.label} {formatSignedDelta(item.delta)}</span>
+                ))}
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div class="value-lsh-region-spatial-map">
+        <div class="value-lsh-region-spatial-map-head">
+          <h5>Where the other high-value regions sit</h5>
+          <span>current projection view</span>
+        </div>
+        <svg
+          viewBox={`0 0 ${regionSpatialMap(defaultRegion).width} ${regionSpatialMap(defaultRegion).height}`}
+          data-region-summary-map
+          aria-label="Active region spatial delta map"
+        >
+          {regionSpatialMap(defaultRegion).links.map((link) => (
+            <path
+              d={`M ${link.fromX} ${link.fromY} L ${link.toX} ${link.toY}`}
+              fill="none"
+              stroke="rgba(20,25,34,.18)"
+              stroke-width="1.5"
+              stroke-dasharray="5 4"
+            />
+          ))}
+          {regionSpatialMap(defaultRegion).nodes.map((item) => (
+            <g>
+              <circle
+                cx={item.x}
+                cy={item.y}
+                r={item.current ? 9 : 7}
+                data-region-map-node={item.kind}
+                fill={item.current ? defaultRegion.color : 'rgba(255,252,248,.98)'}
+                stroke={item.current ? defaultRegion.color : 'rgba(20,25,34,.18)'}
+                stroke-width={item.current ? 2.5 : 1.5}
+              />
+              <text x={item.x} y={item.y + 3} text-anchor="middle" font-size="10" font-weight="700" fill={item.current ? '#fff' : '#1f2430'}>{item.arrow}</text>
+              <text x={item.x + 12} y={item.y - 8} font-size="10" font-weight="700" fill="#1f2430">{item.rankingLabel}</text>
+              <text x={item.x + 12} y={item.y + 5} font-size="9" font-weight="600" fill="rgba(31,36,48,.66)">{item.clusterId}</text>
+            </g>
+          ))}
+        </svg>
       </div>
       <h5>Representative materials</h5>
       <ul data-region-summary-representatives>
@@ -367,7 +517,7 @@ const defaultRegion = valueLshRegions[0];
             <span>{region.clusterId}</span>
           </div>
           <p>{region.summary}</p>
-          <p><strong>English:</strong> {region.summaryEn}</p>
+          <p><strong>English:</strong> {regionSummaryEn(region)}</p>
           <div class="value-lsh-region-compare-grid">
             <div><strong>{region.metrics.frontier.toFixed(2)}</strong><span>frontier</span></div>
             <div><strong>{region.metrics.attention.toFixed(2)}</strong><span>attention</span></div>
@@ -502,6 +652,36 @@ const defaultRegion = valueLshRegions[0];
       source_path?: string | null;
     }[];
     topFacets?: { id: string; label: string; average: number }[];
+    contrasts?: {
+      kind: string;
+      arrow: string;
+      rankingLabel: string;
+      clusterId: string;
+      axisDiffs: { axis: 'x' | 'y' | 'z'; delta: number }[];
+      metricDiffs: { key: 'frontier' | 'attention' | 'quality'; label: string; delta: number }[];
+      separationNote: string;
+      metricNote: string;
+    }[];
+    spatialMap?: {
+      width: number;
+      height: number;
+      nodes: {
+        kind: string;
+        arrow: string;
+        rankingLabel: string;
+        clusterId: string;
+        x: number;
+        y: number;
+        current: boolean;
+      }[];
+      links: {
+        fromX: number;
+        fromY: number;
+        toX: number;
+        toY: number;
+        kind: string;
+      }[];
+    };
   };
   type ScenePayload = { variant?: string; nodes?: SceneNode[]; colors: Record<string, string>; regions?: SceneRegion[] };
 
@@ -587,6 +767,8 @@ const defaultRegion = valueLshRegions[0];
     group.add(highlightGroup);
     const regionGroup = new THREE.Group();
     group.add(regionGroup);
+    const transitionGroup = new THREE.Group();
+    group.add(transitionGroup);
 
     const escapeHtml = (value: unknown) => String(value ?? '')
       .replace(/&/g, '&amp;')
@@ -601,6 +783,7 @@ const defaultRegion = valueLshRegions[0];
     const renderLink = (href: string | null | undefined, label: string) => href
       ? `<a href="${escapeHtml(href)}" target="_blank" rel="noopener">${escapeHtml(label)}</a>`
       : escapeHtml(label);
+    const formatSignedDeltaLabel = (value: number) => `${value > 0 ? '+' : value < 0 ? '' : ''}${value.toFixed(2)}`;
 
     const nodePosition = (node: SceneNode) => new THREE.Vector3(node.x * 1.72, node.y * 1.72, node.z * 1.72);
     const regionPosition = (region: SceneRegion) => new THREE.Vector3(region.centroid.x * 1.72, region.centroid.y * 1.72, region.centroid.z * 1.72);
@@ -635,7 +818,12 @@ const defaultRegion = valueLshRegions[0];
     const regionSummaryQuality = root.querySelector('[data-region-summary-quality]');
     const regionSummaryNodes = root.querySelector('[data-region-summary-nodes]');
     const regionSummaryRationale = root.querySelector('[data-region-summary-rationale]');
+    const regionSummaryContrasts = root.querySelector('[data-region-summary-contrasts]');
+    const regionSummaryMap = root.querySelector('[data-region-summary-map]');
     const regionSummaryRepresentatives = root.querySelector('[data-region-summary-representatives]');
+    const regionGuide = root.querySelector('[data-region-guide]');
+    const regionGuideLabel = root.querySelector('[data-region-guide-label]');
+    const regionGuideDetail = root.querySelector('[data-region-guide-detail]');
 
     const updateRegionSummaryPanel = (region?: SceneRegion | null) => {
       if (!region || !(regionSummaryPanel instanceof HTMLElement)) return;
@@ -663,6 +851,53 @@ const defaultRegion = valueLshRegions[0];
             <div class="value-lsh-region-rationale-bar"><i style="width:${Math.max(16, Math.round(Math.abs(Number(facet.average)) * 100))}%"></i></div>
           </li>
         `).join('');
+      }
+      if (regionSummaryContrasts instanceof HTMLElement) {
+        regionSummaryContrasts.innerHTML = (region.contrasts || []).map((contrast) => `
+          <li>
+            <div class="value-lsh-region-contrast-head">
+              <strong>${escapeHtml(`${contrast.arrow} ${contrast.rankingLabel}`)}</strong>
+              <span>${escapeHtml(contrast.clusterId)}</span>
+            </div>
+            <p>${escapeHtml(contrast.separationNote)} ${escapeHtml(contrast.metricNote)}</p>
+            <div class="value-lsh-region-contrast-strip">
+              ${(contrast.axisDiffs || []).map((item) => `<span>${escapeHtml(item.axis.toUpperCase())} ${formatSignedDeltaLabel(Number(item.delta || 0))}</span>`).join('')}
+            </div>
+            <div class="value-lsh-region-contrast-strip metric">
+              ${(contrast.metricDiffs || []).map((item) => `<span>${escapeHtml(item.label)} ${formatSignedDeltaLabel(Number(item.delta || 0))}</span>`).join('')}
+            </div>
+          </li>
+        `).join('');
+      }
+      if (regionSummaryMap instanceof SVGElement && region.spatialMap) {
+        regionSummaryMap.setAttribute('viewBox', `0 0 ${region.spatialMap.width} ${region.spatialMap.height}`);
+        regionSummaryMap.innerHTML = `
+          ${(region.spatialMap.links || []).map((link) => `
+            <path
+              d="M ${Number(link.fromX).toFixed(1)} ${Number(link.fromY).toFixed(1)} L ${Number(link.toX).toFixed(1)} ${Number(link.toY).toFixed(1)}"
+              fill="none"
+              stroke="rgba(20,25,34,.18)"
+              stroke-width="1.5"
+              stroke-dasharray="5 4"
+            ></path>
+          `).join('')}
+          ${(region.spatialMap.nodes || []).map((item) => `
+            <g>
+              <circle
+                cx="${Number(item.x).toFixed(1)}"
+                cy="${Number(item.y).toFixed(1)}"
+                r="${item.current ? 9 : 7}"
+                data-region-map-node="${escapeHtml(item.kind)}"
+                fill="${item.current ? escapeHtml(region.color) : 'rgba(255,252,248,.98)'}"
+                stroke="${item.current ? escapeHtml(region.color) : 'rgba(20,25,34,.18)'}"
+                stroke-width="${item.current ? 2.5 : 1.5}"
+              ></circle>
+              <text x="${Number(item.x).toFixed(1)}" y="${Number(item.y + 3).toFixed(1)}" text-anchor="middle" font-size="10" font-weight="700" fill="${item.current ? '#fff' : '#1f2430'}">${escapeHtml(item.arrow)}</text>
+              <text x="${Number(item.x + 12).toFixed(1)}" y="${Number(item.y - 8).toFixed(1)}" font-size="10" font-weight="700" fill="#1f2430">${escapeHtml(item.rankingLabel)}</text>
+              <text x="${Number(item.x + 12).toFixed(1)}" y="${Number(item.y + 5).toFixed(1)}" font-size="9" font-weight="600" fill="rgba(31,36,48,.66)">${escapeHtml(item.clusterId)}</text>
+            </g>
+          `).join('')}
+        `;
       }
       if (regionSummaryRepresentatives instanceof HTMLElement) {
         regionSummaryRepresentatives.innerHTML = (region.representatives || []).map((representative) => `
@@ -724,6 +959,7 @@ const defaultRegion = valueLshRegions[0];
     const regionNextButton = root.querySelector('[data-region-next]');
     const regionStatus = root.querySelector('[data-region-status]');
     let activeRegionIndex = 0;
+    let activeRegionId: string | null = null;
     const mutedColor = new THREE.Color('#d8d1c7');
     const setMaterialOpacity = (material: THREE.Material | THREE.Material[], opacity: number) => {
       const materials = Array.isArray(material) ? material : [material];
@@ -773,6 +1009,7 @@ const defaultRegion = valueLshRegions[0];
         marker.dataset.active = key === activeId ? 'true' : 'false';
       });
       regionVisuals.forEach((visual, key) => {
+        const isActive = key === activeId;
         const opacity = key === activeId ? 0.95 : 0.22;
         visual.children.forEach((child) => {
           const candidateMaterial = Reflect.get(child as object, 'material');
@@ -785,10 +1022,15 @@ const defaultRegion = valueLshRegions[0];
             setMaterialOpacity(child.line.material, opacity);
             setMaterialOpacity(child.cone.material, opacity);
           }
+          if (child instanceof THREE.Mesh && child.name === 'focusHalo') {
+            child.scale.setScalar(isActive ? 1.28 : 1);
+            setMaterialOpacity(child.material, isActive ? 0.82 : 0.08);
+          }
         });
       });
       const currentIndex = regions.findIndex((region) => region.kind === activeId);
       if (currentIndex >= 0) activeRegionIndex = currentIndex;
+      activeRegionId = activeId ?? null;
       if (regionStatus instanceof HTMLElement && regions.length) {
         const region = regions[activeRegionIndex];
         regionStatus.textContent = `${activeRegionIndex + 1} / ${regions.length} · ${region?.rankingLabel ?? ''} · ${region?.clusterId ?? ''}`;
@@ -829,6 +1071,15 @@ const defaultRegion = valueLshRegions[0];
       );
       anchor.position.copy(center);
       visual.add(anchor);
+
+      const halo = new THREE.Mesh(
+        new THREE.TorusGeometry(0.115, 0.012, 12, 42),
+        new THREE.MeshBasicMaterial({ color: region.color, transparent: true, opacity: 0.08 }),
+      );
+      halo.name = 'focusHalo';
+      halo.position.copy(center);
+      halo.rotation.x = Math.PI / 2;
+      visual.add(halo);
       return visual;
     };
 
@@ -925,11 +1176,72 @@ const defaultRegion = valueLshRegions[0];
       selectNode(node);
     };
 
+    let transitionFade = 0;
+    let transitionTravel = 0;
+    let transitionCurve: THREE.QuadraticBezierCurve3 | null = null;
+    const showRegionTransition = (fromRegion: SceneRegion, toRegion: SceneRegion) => {
+      transitionGroup.clear();
+      const start = regionPosition(fromRegion);
+      const end = regionPosition(toRegion);
+      const midpoint = start.clone().add(end).multiplyScalar(0.5);
+      const lift = midpoint.clone().normalize().multiplyScalar(0.35);
+      lift.y += 0.22;
+      const control = midpoint.add(lift);
+      const curve = new THREE.QuadraticBezierCurve3(start, control, end);
+      transitionCurve = curve;
+      const points = curve.getPoints(42);
+
+      const line = new THREE.Line(
+        new THREE.BufferGeometry().setFromPoints(points),
+        new THREE.LineBasicMaterial({ color: toRegion.color, transparent: true, opacity: 0.88 })
+      );
+      line.name = 'transitionArc';
+      transitionGroup.add(line);
+
+      const spark = new THREE.Mesh(
+        new THREE.SphereGeometry(0.046, 12, 12),
+        new THREE.MeshBasicMaterial({ color: toRegion.color, transparent: true, opacity: 0.95 })
+      );
+      spark.name = 'transitionSpark';
+      spark.position.copy(end);
+      transitionGroup.add(spark);
+
+      const sourceHalo = new THREE.Mesh(
+        new THREE.RingGeometry(0.075, 0.11, 32),
+        new THREE.MeshBasicMaterial({ color: fromRegion.color, transparent: true, opacity: 0.45, side: THREE.DoubleSide })
+      );
+      sourceHalo.name = 'transitionSourceHalo';
+      sourceHalo.position.copy(start);
+      sourceHalo.lookAt(camera.position);
+      transitionGroup.add(sourceHalo);
+
+      const targetHalo = new THREE.Mesh(
+        new THREE.RingGeometry(0.085, 0.125, 32),
+        new THREE.MeshBasicMaterial({ color: toRegion.color, transparent: true, opacity: 0.7, side: THREE.DoubleSide })
+      );
+      targetHalo.name = 'transitionTargetHalo';
+      targetHalo.position.copy(end);
+      targetHalo.lookAt(camera.position);
+      transitionGroup.add(targetHalo);
+
+      transitionFade = 1;
+      transitionTravel = 0;
+    };
+
     const selectRegion = (region: SceneRegion) => {
+      const previousRegion = regions.find((candidate) => candidate.kind === activeRegionId) || null;
       setRegionActiveState(region.kind);
       updateRegionSummaryPanel(region);
       focusRegion(region);
       applyRegionClusterFocus(region.clusterId);
+      targetCameraZ = baseCameraZ - (motionEnabled ? 0.48 : 0.18);
+      window.setTimeout(() => {
+        targetCameraZ = baseCameraZ;
+      }, motionEnabled ? 760 : 320);
+      announceRegionGuide(region, previousRegion);
+      if (previousRegion && previousRegion.kind !== region.kind) {
+        showRegionTransition(previousRegion, region);
+      }
       const targetNode = (region.representativeId && nodeById.get(region.representativeId))
         || nodes.find((node) => node.embeddingCluster === region.clusterId)
         || nodes[0];
@@ -975,7 +1287,27 @@ const defaultRegion = valueLshRegions[0];
     let lastY = 0;
     let targetX = group.rotation.x;
     let targetY = group.rotation.y;
+    const baseCameraZ = payload.variant === 'compact' ? 4.25 : 4.75;
+    let targetCameraZ = baseCameraZ;
+    let guideTimer = 0;
     const motionEnabled = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    const announceRegionGuide = (region: SceneRegion, previousRegion?: SceneRegion | null) => {
+      if (!(regionGuide instanceof HTMLElement)) return;
+      regionGuide.dataset.active = 'true';
+      if (regionGuideLabel instanceof HTMLElement) {
+        regionGuideLabel.textContent = `Guiding to ${region.arrow} ${region.rankingLabel}`;
+      }
+      if (regionGuideDetail instanceof HTMLElement) {
+        regionGuideDetail.textContent = previousRegion && previousRegion.kind !== region.kind
+          ? `${previousRegion.rankingLabel} -> ${region.rankingLabel} · camera focus + cluster spotlight`
+          : 'camera focus + cluster spotlight';
+      }
+      window.clearTimeout(guideTimer);
+      guideTimer = window.setTimeout(() => {
+        if (regionGuide instanceof HTMLElement) regionGuide.dataset.active = 'false';
+      }, 1400);
+    };
 
     stage.addEventListener('pointerdown', (event) => {
       pointerActive = true;
@@ -1025,6 +1357,17 @@ const defaultRegion = valueLshRegions[0];
         if (region) selectRegion(region);
       });
     });
+    if (regionSummaryMap instanceof SVGElement) {
+      regionSummaryMap.addEventListener('click', (event) => {
+        const target = event.target;
+        if (!(target instanceof Element)) return;
+        const node = target.closest('[data-region-map-node]');
+        const regionId = node?.getAttribute('data-region-map-node');
+        if (!regionId) return;
+        const region = regions.find((candidate) => candidate.kind === regionId);
+        if (region) selectRegion(region);
+      });
+    }
     if (regionPrevButton instanceof HTMLButtonElement) {
       regionPrevButton.addEventListener('click', () => selectRegionByIndex(activeRegionIndex - 1));
     }
@@ -1054,6 +1397,38 @@ const defaultRegion = valueLshRegions[0];
       }
       group.rotation.x += (targetX - group.rotation.x) * 0.08;
       group.rotation.y += (targetY - group.rotation.y) * 0.08;
+      camera.position.z += (targetCameraZ - camera.position.z) * (motionEnabled ? 0.12 : 0.18);
+      if (transitionFade > 0) {
+        transitionFade = Math.max(0, transitionFade - (motionEnabled ? 0.035 : 0.08));
+        transitionTravel = Math.min(1, transitionTravel + (motionEnabled ? 0.075 : 0.16));
+        transitionGroup.children.forEach((child) => {
+          const candidateMaterial = Reflect.get(child as object, 'material');
+          if (candidateMaterial && candidateMaterial instanceof THREE.Material) {
+            const baseOpacity = child.name === 'transitionArc'
+              ? 0.88
+              : child.name === 'transitionSpark'
+                ? 0.95
+                : child.name === 'transitionTargetHalo'
+                  ? 0.7
+                  : 0.45;
+            setMaterialOpacity(candidateMaterial, baseOpacity * transitionFade);
+          }
+          if (child instanceof THREE.Mesh && child.name === 'transitionSpark') {
+            child.scale.setScalar(0.84 + transitionFade * 0.38);
+            if (transitionCurve) {
+              child.position.copy(transitionCurve.getPoint(Math.min(0.999, transitionTravel)));
+            }
+          }
+          if (child instanceof THREE.Mesh && (child.name === 'transitionSourceHalo' || child.name === 'transitionTargetHalo')) {
+            child.lookAt(camera.position);
+            child.scale.setScalar(1 + (1 - transitionFade) * 0.22);
+          }
+        });
+        if (transitionFade === 0) {
+          transitionGroup.clear();
+          transitionCurve = null;
+        }
+      }
       updateRegionMarkers();
       renderer.render(scene, camera);
       requestAnimationFrame(tick);
@@ -1131,6 +1506,46 @@ const defaultRegion = valueLshRegions[0];
 
   .value-lsh-three.is-canvas-ready .value-lsh-fallback {
     display: none;
+  }
+
+  .value-lsh-stage-guide {
+    position: absolute;
+    left: 14px;
+    bottom: 14px;
+    display: grid;
+    gap: 3px;
+    min-width: 0;
+    max-width: min(320px, calc(100% - 28px));
+    padding: 10px 12px;
+    border: 1px solid rgba(20, 25, 34, 0.12);
+    border-radius: 12px;
+    background: rgba(255, 252, 248, 0.9);
+    box-shadow: 0 14px 28px rgba(34, 45, 68, 0.14);
+    backdrop-filter: blur(8px);
+    color: var(--fg);
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity .24s ease, transform .24s ease;
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  .value-lsh-stage-guide[data-active="true"] {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .value-lsh-stage-guide strong {
+    font-size: 12px;
+    font-weight: 850;
+    line-height: 1.3;
+  }
+
+  .value-lsh-stage-guide span {
+    color: var(--muted);
+    font-size: 11px;
+    font-weight: 800;
+    line-height: 1.35;
   }
 
   .value-lsh-region-markers {
@@ -1525,6 +1940,91 @@ const defaultRegion = valueLshRegions[0];
     height: 100%;
     border-radius: inherit;
     background: linear-gradient(90deg, rgba(0, 122, 255, 0.7), rgba(255, 107, 53, 0.82));
+  }
+
+  .value-lsh-region-contrast {
+    display: grid;
+    gap: 8px;
+  }
+
+  .value-lsh-region-contrast ul {
+    display: grid;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .value-lsh-region-contrast-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .value-lsh-region-contrast-head strong {
+    font-size: 12px;
+    font-weight: 850;
+  }
+
+  .value-lsh-region-contrast-head span {
+    color: var(--muted);
+    font-size: 11px;
+    font-weight: 800;
+  }
+
+  .value-lsh-region-contrast-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 7px;
+  }
+
+  .value-lsh-region-contrast-strip span {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: var(--surface-1);
+    padding: 4px 8px;
+    color: var(--fg);
+    font-size: 11px;
+    font-weight: 850;
+    line-height: 1.2;
+  }
+
+  .value-lsh-region-spatial-map {
+    display: grid;
+    gap: 8px;
+  }
+
+  .value-lsh-region-spatial-map-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .value-lsh-region-spatial-map-head span {
+    color: var(--muted);
+    font-size: 11px;
+    font-weight: 800;
+  }
+
+  .value-lsh-region-spatial-map svg {
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background:
+      radial-gradient(circle at top left, rgba(0, 122, 255, 0.08), transparent 36%),
+      linear-gradient(180deg, rgba(255,252,248,.98), rgba(250,247,242,.98));
+    padding: 8px;
+    overflow: visible;
+  }
+
+  .value-lsh-region-spatial-map [data-region-map-node] {
+    cursor: pointer;
   }
 
   .value-lsh-region-compare {
