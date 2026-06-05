@@ -429,6 +429,7 @@ const defaultNeighbors = defaultNode?.neighbors.slice(0, 6) ?? [];
 
     const positions = new Float32Array(nodes.length * 3);
     const colors = new Float32Array(nodes.length * 3);
+    const baseColors = new Float32Array(nodes.length * 3);
     const color = new THREE.Color();
     nodes.forEach((node: SceneNode, index: number) => {
       const i = index * 3;
@@ -439,6 +440,9 @@ const defaultNeighbors = defaultNode?.neighbors.slice(0, 6) ?? [];
       colors[i] = color.r;
       colors[i + 1] = color.g;
       colors[i + 2] = color.b;
+      baseColors[i] = color.r;
+      baseColors[i + 1] = color.g;
+      baseColors[i + 2] = color.b;
     });
 
     const geometry = new THREE.BufferGeometry();
@@ -523,12 +527,42 @@ const defaultNeighbors = defaultNode?.neighbors.slice(0, 6) ?? [];
     const regionButtons = [...root.querySelectorAll('[data-region-button]')].filter((element): element is HTMLButtonElement => element instanceof HTMLButtonElement);
     const regionVisuals = new Map<string, THREE.Group>();
     const regionMarkers = new Map<string, HTMLButtonElement>();
+    const mutedColor = new THREE.Color('#d8d1c7');
     const setMaterialOpacity = (material: THREE.Material | THREE.Material[], opacity: number) => {
       const materials = Array.isArray(material) ? material : [material];
       materials.forEach((item) => {
         item.transparent = true;
         item.opacity = opacity;
       });
+    };
+
+    const applyRegionClusterFocus = (activeClusterId?: string | null) => {
+      for (let index = 0; index < nodes.length; index += 1) {
+        const i = index * 3;
+        if (!activeClusterId) {
+          colors[i] = baseColors[i];
+          colors[i + 1] = baseColors[i + 1];
+          colors[i + 2] = baseColors[i + 2];
+          continue;
+        }
+        const isActiveCluster = nodes[index]?.embeddingCluster === activeClusterId;
+        if (isActiveCluster) {
+          colors[i] = Math.min(1, baseColors[i] * 1.08);
+          colors[i + 1] = Math.min(1, baseColors[i + 1] * 1.08);
+          colors[i + 2] = Math.min(1, baseColors[i + 2] * 1.08);
+        } else {
+          colors[i] = baseColors[i] * 0.22 + mutedColor.r * 0.78;
+          colors[i + 1] = baseColors[i + 1] * 0.22 + mutedColor.g * 0.78;
+          colors[i + 2] = baseColors[i + 2] * 0.22 + mutedColor.b * 0.78;
+        }
+      }
+      const colorAttribute = geometry.getAttribute('color');
+      if (colorAttribute) colorAttribute.needsUpdate = true;
+      material.opacity = activeClusterId ? 0.98 : 0.96;
+      material.size = activeClusterId
+        ? (payload.variant === 'compact' ? 0.076 : 0.068)
+        : (payload.variant === 'compact' ? 0.072 : 0.062);
+      material.needsUpdate = true;
     };
 
     const setRegionActiveState = (activeId?: string | null) => {
@@ -675,6 +709,7 @@ const defaultNeighbors = defaultNode?.neighbors.slice(0, 6) ?? [];
     const selectRegion = (region: SceneRegion) => {
       setRegionActiveState(region.kind);
       focusRegion(region);
+      applyRegionClusterFocus(region.clusterId);
       const targetNode = (region.representativeId && nodeById.get(region.representativeId))
         || nodes.find((node) => node.embeddingCluster === region.clusterId)
         || nodes[0];
