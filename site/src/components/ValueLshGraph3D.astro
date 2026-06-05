@@ -358,6 +358,7 @@ const defaultRegion = valueLshRegions[0];
     <div class="value-lsh-stage-guide" data-region-guide aria-live="polite">
       <strong data-region-guide-label>Guiding to ↗ 前沿证据</strong>
       <span data-region-guide-detail>camera focus + cluster spotlight</span>
+      <div class="value-lsh-stage-guide-badges" data-region-guide-badges></div>
     </div>
     <div class="value-lsh-region-markers" data-region-markers aria-label="Evidence region anchors"></div>
   </div>
@@ -824,8 +825,9 @@ const defaultRegion = valueLshRegions[0];
     const regionGuide = root.querySelector('[data-region-guide]');
     const regionGuideLabel = root.querySelector('[data-region-guide-label]');
     const regionGuideDetail = root.querySelector('[data-region-guide-detail]');
+    const regionGuideBadges = root.querySelector('[data-region-guide-badges]');
 
-    const updateRegionSummaryPanel = (region?: SceneRegion | null) => {
+    const updateRegionSummaryPanel = (region?: SceneRegion | null, previousRegion?: SceneRegion | null) => {
       if (!region || !(regionSummaryPanel instanceof HTMLElement)) return;
       if (regionSummaryCluster instanceof HTMLElement) regionSummaryCluster.textContent = `Region focus · ${region.clusterId}`;
       if (regionSummaryLabel instanceof HTMLElement) regionSummaryLabel.textContent = `${region.arrow} ${region.rankingLabel}`;
@@ -870,17 +872,101 @@ const defaultRegion = valueLshRegions[0];
         `).join('');
       }
       if (regionSummaryMap instanceof SVGElement && region.spatialMap) {
+        const transitionContrast = previousRegion && previousRegion.kind !== region.kind
+          ? (region.contrasts || []).find((item) => item.kind === previousRegion.kind)
+          : null;
+        const transitionLink = transitionContrast && previousRegion
+          ? (region.spatialMap.links || []).find((item) => item.kind === previousRegion.kind)
+          : null;
+        const transitionBadges = transitionContrast
+          ? [
+              transitionContrast.axisDiffs?.[0] ? `${transitionContrast.axisDiffs[0].axis.toUpperCase()} ${formatSignedDeltaLabel(Number(transitionContrast.axisDiffs[0].delta || 0))}` : '',
+              transitionContrast.metricDiffs?.[0] ? `${transitionContrast.metricDiffs[0].label} ${formatSignedDeltaLabel(Number(transitionContrast.metricDiffs[0].delta || 0))}` : '',
+            ].filter(Boolean)
+          : [];
         regionSummaryMap.setAttribute('viewBox', `0 0 ${region.spatialMap.width} ${region.spatialMap.height}`);
         regionSummaryMap.innerHTML = `
+          ${transitionLink ? `
+            <defs>
+              <marker
+                id="region-map-arrow-${escapeHtml(region.kind)}"
+                viewBox="0 0 10 10"
+                refX="8"
+                refY="5"
+                markerWidth="6"
+                markerHeight="6"
+                orient="auto-start-reverse"
+              >
+                <path d="M 0 0 L 10 5 L 0 10 z" fill="${escapeHtml(region.color)}"></path>
+              </marker>
+            </defs>
+          ` : ''}
           ${(region.spatialMap.links || []).map((link) => `
             <path
               d="M ${Number(link.fromX).toFixed(1)} ${Number(link.fromY).toFixed(1)} L ${Number(link.toX).toFixed(1)} ${Number(link.toY).toFixed(1)}"
               fill="none"
-              stroke="rgba(20,25,34,.18)"
-              stroke-width="1.5"
-              stroke-dasharray="5 4"
+              stroke="${transitionLink?.kind === link.kind ? escapeHtml(region.color) : 'rgba(20,25,34,.18)'}"
+              stroke-width="${transitionLink?.kind === link.kind ? '3' : '1.5'}"
+              stroke-dasharray="${transitionLink?.kind === link.kind ? 'none' : '5 4'}"
+              stroke-linecap="round"
+              marker-end="${transitionLink?.kind === link.kind ? `url(#region-map-arrow-${escapeHtml(region.kind)})` : 'none'}"
+              data-region-map-link="${escapeHtml(link.kind)}"
             ></path>
           `).join('')}
+          ${transitionLink && transitionBadges.length ? `
+            <g data-region-map-transition-group="true">
+              <rect
+                x="${Number(((transitionLink.fromX + transitionLink.toX) / 2) - 44).toFixed(1)}"
+                y="${Number(((transitionLink.fromY + transitionLink.toY) / 2) - 14).toFixed(1)}"
+                rx="9"
+                width="88"
+                height="28"
+                fill="rgba(255,252,248,.96)"
+                stroke="${escapeHtml(region.color)}"
+                stroke-width="1.5"
+              ></rect>
+              <text
+                x="${Number((transitionLink.fromX + transitionLink.toX) / 2).toFixed(1)}"
+                y="${Number(((transitionLink.fromY + transitionLink.toY) / 2) - 2).toFixed(1)}"
+                text-anchor="middle"
+                font-size="9"
+                font-weight="700"
+                fill="#1f2430"
+                data-region-map-transition-badge="axis"
+              >${escapeHtml(transitionBadges[0] || '')}</text>
+              <text
+                x="${Number((transitionLink.fromX + transitionLink.toX) / 2).toFixed(1)}"
+                y="${Number(((transitionLink.fromY + transitionLink.toY) / 2) + 9).toFixed(1)}"
+                text-anchor="middle"
+                font-size="8"
+                font-weight="700"
+                fill="rgba(31,36,48,.68)"
+                data-region-map-transition-badge="metric"
+              >${escapeHtml(transitionBadges[1] || '')}</text>
+            </g>
+          ` : ''}
+          ${transitionLink ? `
+            <circle
+              cx="${Number(transitionLink.toX).toFixed(1)}"
+              cy="${Number(transitionLink.toY).toFixed(1)}"
+              r="12"
+              fill="none"
+              stroke="${escapeHtml(region.color)}"
+              stroke-width="1.5"
+              stroke-opacity="0.3"
+              data-region-map-target-ring="true"
+            ></circle>
+            <circle
+              cx="${Number(transitionLink.fromX).toFixed(1)}"
+              cy="${Number(transitionLink.fromY).toFixed(1)}"
+              r="10"
+              fill="none"
+              stroke="rgba(20,25,34,.28)"
+              stroke-width="1.2"
+              stroke-dasharray="3 3"
+              data-region-map-source-ring="true"
+            ></circle>
+          ` : ''}
           ${(region.spatialMap.nodes || []).map((item) => `
             <g>
               <circle
@@ -1231,7 +1317,7 @@ const defaultRegion = valueLshRegions[0];
     const selectRegion = (region: SceneRegion) => {
       const previousRegion = regions.find((candidate) => candidate.kind === activeRegionId) || null;
       setRegionActiveState(region.kind);
-      updateRegionSummaryPanel(region);
+      updateRegionSummaryPanel(region, previousRegion);
       focusRegion(region);
       applyRegionClusterFocus(region.clusterId);
       targetCameraZ = baseCameraZ - (motionEnabled ? 0.48 : 0.18);
@@ -1292,16 +1378,46 @@ const defaultRegion = valueLshRegions[0];
     let guideTimer = 0;
     const motionEnabled = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+    const describeTransitionReason = (region: SceneRegion, previousRegion?: SceneRegion | null) => {
+      if (!previousRegion || previousRegion.kind === region.kind) {
+        return {
+          detail: 'camera focus + cluster spotlight',
+          badges: [] as string[],
+        };
+      }
+      const contrast = (region.contrasts || []).find((item) => item.kind === previousRegion.kind);
+      if (!contrast) {
+        return {
+          detail: `${previousRegion.rankingLabel} -> ${region.rankingLabel} · camera focus + cluster spotlight`,
+          badges: [] as string[],
+        };
+      }
+      const axisLead = contrast.axisDiffs?.[0];
+      const metricLead = contrast.metricDiffs?.[0];
+      const axisText = axisLead
+        ? `${axisLead.axis.toUpperCase()} ${formatSignedDeltaLabel(Number(axisLead.delta || 0))}`
+        : 'space delta';
+      const metricText = metricLead
+        ? `${metricLead.label} ${formatSignedDeltaLabel(Number(metricLead.delta || 0))}`
+        : 'metric delta';
+      return {
+        detail: `${previousRegion.rankingLabel} -> ${region.rankingLabel} · ${axisText} · ${metricText}`,
+        badges: [axisText, metricText].filter(Boolean),
+      };
+    };
+
     const announceRegionGuide = (region: SceneRegion, previousRegion?: SceneRegion | null) => {
       if (!(regionGuide instanceof HTMLElement)) return;
+      const guide = describeTransitionReason(region, previousRegion);
       regionGuide.dataset.active = 'true';
       if (regionGuideLabel instanceof HTMLElement) {
         regionGuideLabel.textContent = `Guiding to ${region.arrow} ${region.rankingLabel}`;
       }
       if (regionGuideDetail instanceof HTMLElement) {
-        regionGuideDetail.textContent = previousRegion && previousRegion.kind !== region.kind
-          ? `${previousRegion.rankingLabel} -> ${region.rankingLabel} · camera focus + cluster spotlight`
-          : 'camera focus + cluster spotlight';
+        regionGuideDetail.textContent = guide.detail;
+      }
+      if (regionGuideBadges instanceof HTMLElement) {
+        regionGuideBadges.innerHTML = guide.badges.map((badge) => `<span>${escapeHtml(badge)}</span>`).join('');
       }
       window.clearTimeout(guideTimer);
       guideTimer = window.setTimeout(() => {
@@ -1546,6 +1662,26 @@ const defaultRegion = valueLshRegions[0];
     font-size: 11px;
     font-weight: 800;
     line-height: 1.35;
+  }
+
+  .value-lsh-stage-guide-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    min-height: 20px;
+  }
+
+  .value-lsh-stage-guide-badges span {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid rgba(20, 25, 34, 0.12);
+    border-radius: 999px;
+    background: rgba(250, 247, 242, 0.94);
+    color: var(--fg);
+    padding: 3px 8px;
+    font-size: 10px;
+    font-weight: 850;
+    line-height: 1.2;
   }
 
   .value-lsh-region-markers {
