@@ -11,6 +11,7 @@ const blogRoot = path.join(siteRoot, 'src/content/blog');
 const researchRoot = path.join(siteRoot, 'src/content/research');
 const projectReportsRoot = path.join(siteRoot, 'public/reports/projects');
 const legacyResearchProjectReportsRoot = path.join(siteRoot, 'public/reports/research/projects');
+const paperCrossDomainReportsRoot = path.join(siteRoot, 'public/reports/papers/cross-domain');
 const surveyPublicationRoot = path.join(root, 'reports/survey-publication');
 const reportJsonPath = path.join(root, 'reports/seo-indexable-assets.json');
 const reportMdPath = path.join(root, 'reports/seo-indexable-assets.md');
@@ -145,8 +146,7 @@ for (const name of fs.readdirSync(projectReportsRoot).filter((file) => file.ends
     sourcePath,
     urlPath: `/reports/projects/${slug}/`,
     requiredType: 'Article',
-    requireFrontmatter: false,
-    indexPolicy: 'noindex'
+    requireFrontmatter: false
   }));
 }
 
@@ -160,8 +160,23 @@ if (exists(legacyResearchProjectReportsRoot)) {
       sourcePath,
       urlPath: `/reports/research/projects/${slug}/`,
       requiredType: 'Article',
-      requireFrontmatter: false,
-      indexPolicy: 'noindex'
+      requireFrontmatter: false
+    }));
+  }
+}
+
+if (exists(paperCrossDomainReportsRoot)) {
+  for (const name of fs.readdirSync(paperCrossDomainReportsRoot).filter((file) => file.endsWith('.md') && !/^index\.md$/i.test(file)).sort()) {
+    const id = stripExt(name);
+    const slug = id.toLowerCase() === 'readme' ? 'overview' : id;
+    const sourcePath = path.join(paperCrossDomainReportsRoot, name);
+    assets.push(checkHtmlAsset({
+      collection: 'paper-cross-domain-report',
+      slug,
+      sourcePath,
+      urlPath: `/reports/papers/cross-domain/${slug}/`,
+      requiredType: 'ScholarlyArticle',
+      requireFrontmatter: false
     }));
   }
 }
@@ -176,8 +191,7 @@ if (exists(surveyPublicationRoot)) {
       sourcePath,
       urlPath: `/reports/survey-publication/${slug}/`,
       requiredType: 'Article',
-      requireFrontmatter: false,
-      indexPolicy: 'noindex'
+      requireFrontmatter: false
     }));
   }
 }
@@ -186,10 +200,6 @@ for (const asset of assets) {
   if (asset.indexPolicy === 'indexable' && !sitemapUrls.has(asset.url)) {
     asset.status = 'fail';
     asset.failures.push('URL missing from sitemap');
-  }
-  if (asset.indexPolicy === 'noindex' && sitemapUrls.has(asset.url)) {
-    asset.status = 'fail';
-    asset.failures.push('review-gated URL should not appear in sitemap');
   }
 }
 
@@ -204,7 +214,7 @@ const failedAssets = assets.filter((asset) => asset.status === 'fail');
 const report = {
   generated_at: new Date().toISOString(),
   canonical_host: canonicalHost,
-  checked_collections: ['blog', 'research', 'project-report', 'legacy-research-project-report', 'survey-publication'],
+  checked_collections: ['blog', 'research', 'project-report', 'legacy-research-project-report', 'paper-cross-domain-report', 'survey-publication'],
   global_status: globalFailures.length || failedAssets.length ? 'fail' : 'pass',
   counts: {
     assets_checked: assets.length,
@@ -238,7 +248,7 @@ const md = [
   '',
   '## Scope',
   '',
-  'This audit verifies generated HTML SEO assets for `site/src/content/blog/*.mdx` and `site/src/content/research/*.mdx`: canonical URL, sitemap inclusion, meta description, Open Graph metadata, JSON-LD article type, and absence of `noindex`. Project reports in `site/public/reports/projects/*.md`, legacy research project reports in `site/public/reports/research/projects/*.md`, and survey publication slices in `reports/survey-publication/[0-9][0-9]-*.md` are generated as review-gated HTML, must emit `noindex`, and must stay out of the sitemap until their public-copy review passes.',
+  'This audit verifies generated HTML SEO assets for `site/src/content/blog/*.mdx`, `site/src/content/research/*.mdx`, `site/public/reports/projects/*.md`, `site/public/reports/research/projects/*.md`, `site/public/reports/papers/cross-domain/*.md`, and `reports/survey-publication/[0-9][0-9]-*.md`: canonical URL, sitemap inclusion, meta description, Open Graph metadata, JSON-LD article type, and absence of `noindex`. Machine index files such as `site/public/reports/projects/INDEX.md` are excluded as non-article indexes.',
   '',
   '## Failures',
   '',

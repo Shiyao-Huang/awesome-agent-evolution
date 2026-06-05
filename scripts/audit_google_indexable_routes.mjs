@@ -56,6 +56,8 @@ const routeKind = (pathname) => {
   if (pathname.startsWith('/research/')) return 'research';
   if (pathname.startsWith('/projects/')) return 'project-card';
   if (pathname.startsWith('/reports/projects/')) return 'project-report';
+  if (pathname.startsWith('/reports/research/projects/')) return 'legacy-research-project-report';
+  if (pathname.startsWith('/reports/papers/cross-domain/')) return 'paper-cross-domain-report';
   if (pathname.startsWith('/reports/survey-publication/')) return 'survey-publication';
   if (pathname.startsWith('/reports/')) return 'report-index-or-audit';
   if (pathname.startsWith('/survey/')) return 'survey';

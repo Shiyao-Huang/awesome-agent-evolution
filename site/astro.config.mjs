@@ -10,9 +10,6 @@ const basePath = siteUrl.pathname.replace(/\/$/, '');
 const noindexSitemapRoutes = [
   '/mapping-audit/',
   '/reports/en-cn-mapping-audit/',
-  '/reports/projects/',
-  '/reports/research/projects/',
-  '/reports/survey-publication/',
   '/retrospective/'
 ];
 const isSitemapIndexableRoute = (page) => {

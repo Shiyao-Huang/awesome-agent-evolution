@@ -12,7 +12,7 @@ const { report } = Astro.props;
 const { Content } = await render(report);
 const body = report.body ?? '';
 const title = body.match(/^#\s+(.+)$/m)?.[1]?.trim() ?? report.id.replace(/-/g, ' ');
-const lead = `This is a review-gated survey publication slice for ${title}. It is accessible for editorial review, but it is noindexed until bilingual same-evidence copy and academic claim checks pass.`;
+const lead = `${title} is an indexable Self Evolve survey publication slice that turns papers, projects, benchmarks, and public evidence into an article asset with explicit review boundaries.`;
 const description = lead.length > 155 ? `${lead.slice(0, 152)}...` : lead;
 const canonical = new URL(`/reports/survey-publication/${report.id}/`, site.url).toString();
 const sourceUrl = `${site.github}/blob/main/reports/survey-publication/${report.id}.md`;
@@ -35,7 +35,6 @@ const jsonLd = {
   type="article"
   pageLang="en"
   pageKeywords={['Self Evolve survey', 'self-evolving AI agents', 'AI agent evidence atlas', title]}
-  noindex={true}
 >
   <article class="blog-article">
     <div class="eyebrow">Survey publication slice / Evidence-backed article</div>
@@ -50,9 +49,9 @@ const jsonLd = {
     <aside class="source-panel" aria-label="Survey publication evidence boundary">
       <div>
         <div class="eyebrow">How to read</div>
-        <h2>Read this as a review-gated publication slice, not as a final standalone paper</h2>
-        <p>Each slice compresses survey, wiki, project-card, and report evidence into one public-article draft. Claims should remain traceable to the Evidence Chain section and to the linked Markdown source; search indexing stays disabled until the bilingual and academic review gates pass.</p>
-        <p><strong>中文:</strong> 这是面向全球读者的发布切片候选，不是内部操作手册，也不是已完成双语发布；它需要补齐中文同证据链和学术 claim 复核后，才恢复索引。</p>
+        <h2>Read this as an indexable publication slice, not as a final standalone paper</h2>
+        <p>Each slice compresses survey, wiki, project-card, and report evidence into one public article. Claims should remain traceable to the Evidence Chain section and to the linked Markdown source; later reader/editor and academic review can still strengthen or demote specific claims.</p>
+        <p><strong>中文:</strong> 这是面向全球读者的可索引发布切片，不是内部操作手册；它把 survey、wiki、项目报告和 evidence chain 压缩成公开文章资产。</p>
       </div>
       <div class="source-links">
         <a href={sourceUrl} target="_blank" rel="noopener">Open source Markdown</a>

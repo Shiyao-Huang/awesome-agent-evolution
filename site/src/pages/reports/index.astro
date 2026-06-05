@@ -2,39 +2,80 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import { legacyResearchProjectReports, paperReports, projectReports, surveyPublicationReports } from '@/data/reports';
 ---
-<BaseLayout title="Self Evolve 研究报告 — 项目深度分析与论文解读" description="Self Evolve 公开研究报告：GitHub 项目 model card 深度分析、论文精读与跨领域研究整理。">
+<BaseLayout title="Self Evolve 报告状态索引 — 可索引证据页与引用边界" description="Self Evolve 报告状态索引：把项目证据页、legacy source wrappers、论文阅读地图和 Survey 发布切片转成可索引 HTML，同时标清不同引用边界。" alternateZh="/reports/" alternateEn="/en/reports/">
   <section class="section">
     <div class="container">
       <div class="eyebrow">Reports / 研究报告</div>
-      <h1 class="gradient-text">公开研究报告索引</h1>
-      <p class="lead">这里收录已落盘的项目 model card、论文精读、legacy research 报告和 Survey 发布切片。它们共享证据链入口，但状态不同：项目报告、legacy research 报告与 Survey 发布切片当前是 review-gated 证据页，只能帮助追溯来源，不能当作已审查公开文章引用。</p>
+      <h1 class="gradient-text">这些报告能帮你追溯证据，但不是每一页都能引用。</h1>
+      <p class="lead">本页先回答三个读者问题：哪些报告能作为阅读地图，哪些页面只能帮助追溯来源，哪些结论仍在 reader/editor 与 academic review 队列里。</p>
       <div class="metrics">
         <div class="metric"><strong>{projectReports.length}</strong><span>份项目分析报告</span></div>
         <div class="metric"><strong>{legacyResearchProjectReports.length}</strong><span>份 legacy research 报告</span></div>
         <div class="metric"><strong>{surveyPublicationReports.length}</strong><span>份 Survey 发布切片</span></div>
         <div class="metric"><strong>{paperReports.length}</strong><span>份论文报告</span></div>
       </div>
+      <aside class="source-panel" aria-label="报告状态阅读边界">
+        <div>
+          <div class="eyebrow">Reading contract / 阅读契约</div>
+          <h2>先看状态，再引用内容</h2>
+          <p>报告页分成三种用法：论文地图用于继续阅读论文，项目/legacy/survey 待审页用于追溯来源，QA 审计用于修复队列。可访问不等于已完成公开文案审查。</p>
+          <p><strong>English:</strong> Accessible report pages are not automatically quality-certified. Use the English mirror to see what is reader-ready, source-only, or still gated.</p>
+        </div>
+        <div class="source-links">
+          <a href="/en/reports/">English status guide</a>
+          <a href="/en/paper/">Paper citation status</a>
+          <a href="/search/">搜索证据链</a>
+        </div>
+      </aside>
     </div>
   </section>
+
+  {paperReports.length > 0 && (
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Paper reading maps</div>
+            <h2>先读论文地图：它们帮助定位来源，不替代系统综述结论</h2>
+          </div>
+        </div>
+        <p class="lead">论文报告的用途是把跨领域论文、机制和来源连起来。引用具体 claim 前，仍要回到论文原文、当前论文页和限制段。</p>
+        <div class="grid">
+          {paperReports.map((report) => (
+            <article class="card">
+              <div class="eyebrow">{report.category} · literature map</div>
+              <h3><a href={report.href}>{report.title}</a></h3>
+              <p>{report.excerpt}</p>
+              <div class="pill-row">
+                <span class="pill">paper source trail</span>
+                <span class="pill">not peer-reviewed meta-analysis</span>
+                <a class="pill" href={report.href}>阅读报告</a>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
 
   {projectReports.length > 0 && (
     <section class="section">
       <div class="container">
         <div class="section-head">
           <div>
-            <div class="eyebrow">Review-gated project evidence</div>
-            <h2>项目证据 backlog：先追溯来源，不先引用结论</h2>
+            <div class="eyebrow">Source-only project evidence</div>
+            <h2>项目待审证据页：能追溯来源，暂不引用结论</h2>
           </div>
         </div>
-        <p class="lead">这些页面保留 GitHub 源、站内分类、机制线索和限制提醒。逐篇 reader/editor 与 academic review 完成前，它们保持 noindex；索引页只展示状态，不抽取未审查正文摘要。</p>
+        <p class="lead">这些页面保留 GitHub 源、站内分类、机制线索和限制提醒。它们进入 sitemap，作为可索引证据入口；逐篇审查完成前，不能把正文 claim 当最终结论引用。</p>
         <div class="grid">
           {projectReports.slice(0, 18).map((report) => (
             <article class="card">
               <div class="eyebrow">{report.category}</div>
               <h3><a href={report.href}>{report.title}</a></h3>
-              <p>Review-gated evidence snapshot. Use it for source tracing and follow-up reading; do not cite it as a reviewed conclusion until the public-copy gate passes.</p>
+              <p>Use this page to locate source material and unresolved evidence gaps. Do not cite the body as a reviewed conclusion until the public-copy gate passes.</p>
               <div class="pill-row">
-                <span class="pill">noindex</span>
+                <span class="pill">indexable</span>
                 <span class="pill">review pending</span>
                 <span class="pill">source trail</span>
                 <a class="pill" href={report.href}>查看待审证据页</a>
@@ -42,7 +83,7 @@ import { legacyResearchProjectReports, paperReports, projectReports, surveyPubli
             </article>
           ))}
         </div>
-        {projectReports.length > 18 && <p style="margin-top: 18px; color: var(--muted);">显示前 18 份，共 {projectReports.length} 份 review-gated 项目证据页。</p>}
+        {projectReports.length > 18 && <p style="margin-top: 18px; color: var(--muted);">显示前 18 份，共 {projectReports.length} 份可索引项目证据页。</p>}
       </div>
     </section>
   )}
@@ -53,10 +94,10 @@ import { legacyResearchProjectReports, paperReports, projectReports, surveyPubli
         <div class="section-head">
           <div>
             <div class="eyebrow">Legacy research reports</div>
-            <h2>旧 research/project Markdown 的 review-gated 入口</h2>
+            <h2>旧 research/project Markdown 的 HTML 索引入口</h2>
           </div>
         </div>
-        <p class="lead">这些文件来自早期 research/project 报告，只保留为历史证据链入口。当前 HTML 包装页 noindex，读者引用前必须回到当前项目卡、原始 GitHub 仓库和限制段复核。</p>
+        <p class="lead">这些文件来自早期 research/project 报告，现在都有 canonical HTML 包装页并进入 sitemap。它们解决发现与追溯问题；读者引用前仍必须回到当前项目卡、原始 GitHub 仓库和限制段复核。</p>
         <div class="grid">
           {legacyResearchProjectReports.slice(0, 12).map((report) => (
             <article class="card">
@@ -64,14 +105,14 @@ import { legacyResearchProjectReports, paperReports, projectReports, surveyPubli
               <h3><a href={report.href}>{report.title}</a></h3>
               <p>Review-gated legacy evidence wrapper. Use it for source tracing only; do not cite the legacy body as a current reviewed conclusion.</p>
               <div class="pill-row">
-                <span class="pill">noindex</span>
+                <span class="pill">indexable wrapper</span>
                 <span class="pill">legacy source</span>
                 <a class="pill" href={report.href}>查看待审旧报告</a>
               </div>
             </article>
           ))}
         </div>
-        {legacyResearchProjectReports.length > 12 && <p style="margin-top: 18px; color: var(--muted);">显示前 12 份，共 {legacyResearchProjectReports.length} 份 review-gated legacy research 报告。</p>}
+        {legacyResearchProjectReports.length > 12 && <p style="margin-top: 18px; color: var(--muted);">显示前 12 份，共 {legacyResearchProjectReports.length} 份可索引 legacy research 报告。</p>}
       </div>
     </section>
   )}
@@ -85,7 +126,7 @@ import { legacyResearchProjectReports, paperReports, projectReports, surveyPubli
             <h2>面向公开发布的 Survey 切片</h2>
           </div>
         </div>
-        <p class="lead">这些切片是英文发布候选，尚未补齐中文同证据链与学术审查；当前按 review-gated/noindex 页面处理，不能代表完整双语发布。</p>
+        <p class="lead">这些切片是英文发布候选，已作为可索引文章资产开放；它们尚未补齐中文同证据链与学术审查，不能代表完整双语最终发布。</p>
         <div class="grid">
           {surveyPublicationReports.map((report) => (
             <article class="card">
@@ -93,36 +134,10 @@ import { legacyResearchProjectReports, paperReports, projectReports, surveyPubli
               <h3><a href={report.href}>{report.title}</a></h3>
               <p>Review-gated publication slice. Read only as a draft evidence compression until bilingual and academic review passes.</p>
               <div class="pill-row">
-                <span class="pill">noindex</span>
+                <span class="pill">indexable</span>
                 <span class="pill">bilingual pending</span>
                 <span class="pill">academic review pending</span>
                 <a class="pill" href={report.href}>阅读待审切片</a>
-              </div>
-            </article>
-          ))}
-        </div>
-      </div>
-    </section>
-  )}
-
-  {paperReports.length > 0 && (
-    <section class="section">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <div class="eyebrow">论文报告</div>
-            <h2>论文精读与交叉分析</h2>
-          </div>
-        </div>
-        <div class="grid">
-          {paperReports.map((report) => (
-            <article class="card">
-              <div class="eyebrow">{report.category}</div>
-              <h3><a href={report.href}>{report.title}</a></h3>
-              <p>{report.excerpt}</p>
-              <div class="pill-row">
-                <span class="pill">paper</span>
-                <a class="pill" href={report.href}>阅读报告</a>
               </div>
             </article>
           ))}
@@ -143,7 +158,7 @@ import { legacyResearchProjectReports, paperReports, projectReports, surveyPubli
         <article class="card" style="border-left: 4px solid #B83224;">
           <div class="eyebrow">QA · EN→CN Mapping</div>
           <h3><a href="/reports/en-cn-mapping-audit">EN→CN Full Mapping Audit</a></h3>
-          <p>内部 QA 结果：英文论文与中文 survey/latex 结构仍有章节映射偏离。该审计页用于修复排队，保持 noindex，不作为面向外部读者的知识型文章。</p>
+          <p>质量修复队列：英文论文与中文 survey/latex 结构仍有章节映射偏离。该审计页保持 noindex，不作为面向外部读者的知识型文章。</p>
           <div class="pill-row">
             <span class="pill">audit</span>
             <span class="pill" style="background: #B83224; color: white;">2 CRITICAL</span>
