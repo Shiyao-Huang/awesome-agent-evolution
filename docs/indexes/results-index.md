@@ -10,7 +10,7 @@
 
 | Path | Status | Files | Directories | Skipped | Size |
 |---|---|---:|---:|---:|---:|
-| `reports` | present | 16 | 2 | 0 | 409 KB |
+| `reports` | present | 18 | 2 | 0 | 1.0 MB |
 | `output` | present | 8 | 1 | 0 | 689 KB |
 | `site/public/reports` | present | 521 | 6 | 0 | 3.7 MB |
 | `site/dist` | present | 1510 | 948 | 0 | 45 MB |
@@ -25,12 +25,12 @@
 - `reports/cross-validation-report.md`
 - `reports/current-value-ranking-reanalysis.md`
 - `reports/evolve-agi-index-trend.json`
+- `reports/google-indexable-routes.json`
+- `reports/google-indexable-routes.md`
 - `reports/project-discovery-leads.md`
 - `reports/propagation-chain-evidence.md`
 - `reports/seo-indexable-assets.json`
 - `reports/seo-indexable-assets.md`
-- `reports/star-analysis-report.md`
-- `reports/survey-publication/01-field-map.md`
 
 ### `output`
 

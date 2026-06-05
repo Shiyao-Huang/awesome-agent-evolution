@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-05T11:16:20.209Z",
+  "generated_at": "2026-06-05T11:48:35.706Z",
   "counts": {
     "raw_captures": 682,
     "raw_files_on_disk": 682,
@@ -63197,7 +63197,7 @@
   },
   "ranking_method": {
     "name": "recency_weighted_current_value",
-    "reference_date": "2026-06-05T11:16:20.209Z",
+    "reference_date": "2026-06-05T11:48:35.706Z",
     "weights": {
       "time": 0.5,
       "mechanism": 0.2,
@@ -63323,7 +63323,7 @@
       "report": "projects/algorithmicsuperintelligence__openevolve.md",
       "scores": {
         "current_value": 70.69,
-        "time": 56.53,
+        "time": 56.52,
         "mechanism": 79,
         "evidence": 100,
         "adoption": 72.25,
@@ -63378,7 +63378,7 @@
       "report": "projects/inter_co__science_codeevolve.md",
       "scores": {
         "current_value": 65.36,
-        "time": 72.85,
+        "time": 72.84,
         "mechanism": 59,
         "evidence": 68,
         "adoption": 37.9,
@@ -63407,7 +63407,7 @@
       "report": "projects/jarvis_xs__se_agent.md",
       "scores": {
         "current_value": 63.18,
-        "time": 47.5,
+        "time": 47.49,
         "mechanism": 77,
         "evidence": 100,
         "adoption": 46.32,
@@ -63686,7 +63686,7 @@
       "report": "projects/22-evoagentx-agent-evolution-framework.md",
       "scores": {
         "current_value": 58.34,
-        "time": 28.72,
+        "time": 28.71,
         "mechanism": 97,
         "evidence": 86,
         "adoption": 72.78,
@@ -64242,7 +64242,7 @@
       "report": "projects/10-dspy-declarative-llm-programming.md",
       "scores": {
         "current_value": 53.05,
-        "time": 28.97,
+        "time": 28.96,
         "mechanism": 59,
         "evidence": 100,
         "adoption": 86.2,
@@ -64363,8 +64363,8 @@
       "stars": 1000,
       "report": "projects/23-everos-self-evolving-agents.md",
       "scores": {
-        "current_value": 51.06,
-        "time": 28.72,
+        "current_value": 51.05,
+        "time": 28.71,
         "mechanism": 71,
         "evidence": 86,
         "adoption": 56.98,
@@ -64640,7 +64640,7 @@
       "stars": 3800,
       "report": "research/projects/44-xmu-self-evolving-agents.md",
       "scores": {
-        "current_value": 48.62,
+        "current_value": 48.61,
         "time": 30.63,
         "mechanism": 69,
         "evidence": 68,
@@ -65101,7 +65101,7 @@
       "report": "projects/33-self-improvement-llm.md",
       "scores": {
         "current_value": 47.08,
-        "time": 28.72,
+        "time": 28.71,
         "mechanism": 69,
         "evidence": 86,
         "adoption": 43.74,
@@ -65142,35 +65142,6 @@
     },
     {
       "rank": 64,
-      "repo": "DeepAuto-AI/automl-agent",
-      "name": "AutoML-Agent",
-      "url": "https://github.com/DeepAuto-AI/automl-agent",
-      "category": "多 Agent AutoML",
-      "pattern": "智能体编排 → 进化/搜索循环 → 评估器/打分器",
-      "tags": [
-        "智能体编排",
-        "Evol-Instruct",
-        "AutoML"
-      ],
-      "status": "verified",
-      "created_at": "2025-05-08T08:36:54Z",
-      "created_at_source": "github_api",
-      "first_observed_at": null,
-      "activity_at": "2025-07-11T19:39:49Z",
-      "stars": 136,
-      "report": "projects/05-automl-agent-multi-agent.md",
-      "scores": {
-        "current_value": 46.88,
-        "time": 35.34,
-        "mechanism": 59,
-        "evidence": 68,
-        "adoption": 40.58,
-        "usefulness": 63
-      },
-      "caveat": ""
-    },
-    {
-      "rank": 65,
       "repo": "addyosmani/agent-skills",
       "name": "Addy Agent Skills",
       "url": "https://github.com/addyosmani/agent-skills",
@@ -65199,6 +65170,35 @@
         "usefulness": 70
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
+    },
+    {
+      "rank": 65,
+      "repo": "DeepAuto-AI/automl-agent",
+      "name": "AutoML-Agent",
+      "url": "https://github.com/DeepAuto-AI/automl-agent",
+      "category": "多 Agent AutoML",
+      "pattern": "智能体编排 → 进化/搜索循环 → 评估器/打分器",
+      "tags": [
+        "智能体编排",
+        "Evol-Instruct",
+        "AutoML"
+      ],
+      "status": "verified",
+      "created_at": "2025-05-08T08:36:54Z",
+      "created_at_source": "github_api",
+      "first_observed_at": null,
+      "activity_at": "2025-07-11T19:39:49Z",
+      "stars": 136,
+      "report": "projects/05-automl-agent-multi-agent.md",
+      "scores": {
+        "current_value": 46.87,
+        "time": 35.33,
+        "mechanism": 59,
+        "evidence": 68,
+        "adoption": 40.58,
+        "usefulness": 63
+      },
+      "caveat": ""
     },
     {
       "rank": 66,
@@ -66309,35 +66309,6 @@
     },
     {
       "rank": 102,
-      "repo": "SWE-bench/SWE-bench",
-      "name": "swe-bench",
-      "url": "https://github.com/SWE-bench/SWE-bench",
-      "category": "Agent 评测基准",
-      "pattern": "真实 GitHub Issue → 模型生成 Patch → 评估",
-      "tags": [
-        "评测基准",
-        "软件工程",
-        "代码补丁"
-      ],
-      "status": "candidate",
-      "created_at": null,
-      "created_at_source": "unknown",
-      "first_observed_at": "2026-03-19T01:19:47+01:00",
-      "activity_at": "2026-04-01T00:00:00Z",
-      "stars": 2800,
-      "report": "research/projects/60-swe-bench-evaluation.md",
-      "scores": {
-        "current_value": 44.77,
-        "time": 41.04,
-        "mechanism": 20,
-        "evidence": 68,
-        "adoption": 65.46,
-        "usefulness": 70
-      },
-      "caveat": "created_at unavailable; time score capped and based on activity/observation only"
-    },
-    {
-      "rank": 103,
       "repo": "princeton-nlp/SWE-agent",
       "name": "SWE-Agent",
       "url": "https://github.com/princeton-nlp/SWE-agent",
@@ -66364,6 +66335,35 @@
         "usefulness": 63
       },
       "caveat": ""
+    },
+    {
+      "rank": 103,
+      "repo": "SWE-bench/SWE-bench",
+      "name": "swe-bench",
+      "url": "https://github.com/SWE-bench/SWE-bench",
+      "category": "Agent 评测基准",
+      "pattern": "真实 GitHub Issue → 模型生成 Patch → 评估",
+      "tags": [
+        "评测基准",
+        "软件工程",
+        "代码补丁"
+      ],
+      "status": "candidate",
+      "created_at": null,
+      "created_at_source": "unknown",
+      "first_observed_at": "2026-03-19T01:19:47+01:00",
+      "activity_at": "2026-04-01T00:00:00Z",
+      "stars": 2800,
+      "report": "research/projects/60-swe-bench-evaluation.md",
+      "scores": {
+        "current_value": 44.76,
+        "time": 41.03,
+        "mechanism": 20,
+        "evidence": 68,
+        "adoption": 65.46,
+        "usefulness": 70
+      },
+      "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
       "rank": 104,
@@ -66844,7 +66844,7 @@
       "report": "projects/08-autogpt-autonomous-agent.md",
       "scores": {
         "current_value": 44.14,
-        "time": 28.99,
+        "time": 28.98,
         "mechanism": 10,
         "evidence": 100,
         "adoption": 100,
@@ -67245,7 +67245,7 @@
       "stars": 17025,
       "report": "projects/12-camel-ai-communicative-agents.md",
       "scores": {
-        "current_value": 43.44,
+        "current_value": 43.43,
         "time": 28.6,
         "mechanism": 35,
         "evidence": 68,
@@ -67794,7 +67794,7 @@
       "stars": 32784,
       "report": "projects/13-langgraph-agent-workflows.md",
       "scores": {
-        "current_value": 42.72,
+        "current_value": 42.71,
         "time": 28.98,
         "mechanism": 10,
         "evidence": 100,
@@ -68504,7 +68504,7 @@
       "report": "projects/24-opentreesearch-llm-code-evolution.md",
       "scores": {
         "current_value": 41.78,
-        "time": 28.72,
+        "time": 28.71,
         "mechanism": 59,
         "evidence": 54,
         "adoption": 43.74,
@@ -69208,7 +69208,7 @@
       "report": "projects/41-opendevin-ai-software.md",
       "scores": {
         "current_value": 41.03,
-        "time": 28.72,
+        "time": 28.71,
         "mechanism": 35,
         "evidence": 54,
         "adoption": 89.23,
@@ -69689,8 +69689,8 @@
       "stars": 500,
       "report": "projects/36-llm-agent-optimization.md",
       "scores": {
-        "current_value": 40.24,
-        "time": 28.72,
+        "current_value": 40.23,
+        "time": 28.71,
         "mechanism": 31,
         "evidence": 86,
         "adoption": 51.27,
@@ -70578,7 +70578,7 @@
       "report": "projects/15-openhands-ai-software-dev.md",
       "scores": {
         "current_value": 38.59,
-        "time": 28.98,
+        "time": 28.97,
         "mechanism": 10,
         "evidence": 68,
         "adoption": 92.54,
@@ -70881,8 +70881,8 @@
       "stars": 500,
       "report": "projects/40-awesome-fm4co.md",
       "scores": {
-        "current_value": 37.44,
-        "time": 28.72,
+        "current_value": 37.43,
+        "time": 28.71,
         "mechanism": 17,
         "evidence": 86,
         "adoption": 51.27,
@@ -71091,7 +71091,7 @@
       "stars": 1200,
       "report": "research/projects/59-awesome-agent-papers.md",
       "scores": {
-        "current_value": 35.7,
+        "current_value": 35.69,
         "time": 36.79,
         "mechanism": 0,
         "evidence": 68,
@@ -71148,7 +71148,7 @@
       "report": "projects/37-awesome-code-llm.md",
       "scores": {
         "current_value": 34.48,
-        "time": 28.72,
+        "time": 28.71,
         "mechanism": 25,
         "evidence": 48,
         "adoption": 62.69,
