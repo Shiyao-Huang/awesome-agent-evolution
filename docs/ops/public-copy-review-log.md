@@ -85,7 +85,7 @@ No agent may say "public copy quality is complete" for the whole site until ever
 
 Generated source data such as `site/src/data/generatedKnowledgeGraph.ts` and `site/src/data/projects.ts` still contains public-facing claim fragments inherited from raw/project metadata. These should be handled through generated-copy templates or source-summary normalization, not one-off hand edits to generated files.
 
-## 2026-06-05 Batch C Template Findings And Fixes
+## 2026-06-05 Batch C Template Findings, Review Failures, And Fixes
 
 ### Reader/Editor Findings
 
@@ -94,7 +94,7 @@ Generated source data such as `site/src/data/generatedKnowledgeGraph.ts` and `si
 | P1 | Project detail pages displayed `Verified evidence path`, which readers could interpret as quality certification or local reproduction. | Replaced the visible status with `Source-traceable snapshot`, `Evidence candidate`, or `Verification pending`, and added a bilingual reading boundary before the model card. |
 | P1 | Project report HTML pages explained themselves as `Indexable asset`, which is internal SEO/ops language rather than reader value. | Rewrote the report template around evidence snapshots, source trails, and explicit non-ranking/non-endorsement boundaries. |
 | P1 | Project report links still pointed at `.md` routes from project pages and the project index. | Updated report links to the canonical HTML route `/reports/projects/<slug>/`. |
-| P2 | Project index ranks were visually shown as `#001`, encouraging a quality-ranking read. | Reframed the sequence as `Star #...` and added a visible caveat that Star order is historical visibility, not quality or academic value. |
+| P2 | Project index ranks were visually shown as `#001`, encouraging a quality-ranking read. | Reframed the sequence as adoption-prior order and added a visible caveat that cumulative Star is historical visibility, not quality or academic value. |
 
 ### Academic Findings
 
@@ -105,7 +105,22 @@ Generated source data such as `site/src/data/generatedKnowledgeGraph.ts` and `si
 
 ### Residual Queue
 
-This batch fixes template-level propagation risk. It does not yet certify every generated project report body; long-tail report bodies still need sampling, noindex/rewrite decisions, and per-batch reader/editor plus academic review before the whole public site can be called quality-complete.
+Initial template changes reduced propagation risk, but the six-agent follow-up review did **not** pass Batch C. It does not certify every generated project report body; long-tail report bodies still need sampling, rewrite/strengthen/demotion decisions, and per-batch reader/editor plus academic review before the whole public site can be called quality-complete.
+
+### Six-Agent Follow-Up Verdict
+
+| Channel | Verdict | Blocking Findings | Follow-Up Fix |
+|---|---|---|---|
+| Reader/editor 1 | Fail | Value LSH report links still opened raw `.md`; visible `High value/value/quality` labels pulled the page back toward value ranking. | Normalized report links to `/reports/projects/<slug>/`; changed visible labels to priority review, triage score, and evidence density. |
+| Reader/editor 2 | Fail | Report lead extracted legacy body before the boundary; report bodies still exposed legacy/internal sections; model cards remained template-like. | Replaced report lead with conservative evidence-summary extraction; added legacy-body warning before `<Content />`; status-gated project model-card copy. |
+| Reader/editor 3 | Fail | Project, report, and Value LSH pages lacked enough English same-evidence summary, and `/projects/` split Chinese understanding from English search. | Added compact English evidence-path summaries and rewrote `/projects/` lead to say Chinese/English point to the same evidence chain. |
+| Academic 1 | Fail | `quality/value/high value` semantics remained visible; project details overclaimed importance/teaching value for candidate or pending projects. | Reframed Value LSH public labels; changed project detail role/teaching copy by `verified/candidate/pending` status. |
+| Academic 2 | Fail | Unreviewed project reports were indexable without a strong enough reader boundary, while the SEO goal requires text/report assets to remain crawlable. | Kept generated project reports indexable and in sitemap, but added stronger bilingual evidence-boundary copy and changed the SEO audit to fail any accidental `noindex`. |
+| Academic 3 | Fail | MetaGPT, SWE-bench, Aider, EverOS, and related reports still contained strong claims without dated/source-limited evidence. | Downgraded sampled strong claims to versioned review cues; remaining report bodies stay in the indexable rewrite/review queue. |
+
+### Current Batch C Status
+
+Batch C is **not passed**. The current state is safer than before because generated project reports now expose clearer bilingual evidence boundaries while remaining indexable SEO assets, but project reports and model-card bodies still require a later per-report rewrite/review campaign before they can be called quality-complete public knowledge pages.
 
 ## 2026-06-05 Agent Review Conclusions
 

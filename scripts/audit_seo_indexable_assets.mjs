@@ -35,10 +35,11 @@ const extractFrontmatter = (text) => {
 };
 
 const extractAttr = (html, tagName, attrName, attrValue, wantedAttr = 'content') => {
-  const tagPattern = new RegExp(`<${tagName}[^>]*${attrName}=["']${attrValue.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}["'][^>]*>`, 'i');
+  const escapedAttrValue = attrValue.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const tagPattern = new RegExp(`<${tagName}\\b[^>]*\\b${attrName}=(["'])${escapedAttrValue}\\1[^>]*>`, 'i');
   const tag = html.match(tagPattern)?.[0];
   if (!tag) return '';
-  return tag.match(new RegExp(`${wantedAttr}=["']([^"']+)["']`, 'i'))?.[1] || '';
+  return tag.match(new RegExp(`\\b${wantedAttr}=(["'])(.*?)\\1`, 'i'))?.[2] || '';
 };
 
 const canonicalFrom = (html) => extractAttr(html, 'link', 'rel', 'canonical', 'href');
@@ -57,7 +58,7 @@ const loadSitemapUrls = () => {
   return urls;
 };
 
-const checkHtmlAsset = ({ collection, slug, sourcePath, urlPath, requiredType, requireFrontmatter = true }) => {
+const checkHtmlAsset = ({ collection, slug, sourcePath, urlPath, requiredType, requireFrontmatter = true, indexPolicy = 'indexable' }) => {
   const source = read(sourcePath);
   const frontmatter = extractFrontmatter(source);
   const sourceTitle = frontmatter.title || source.match(/^#\s+(.+)$/m)?.[1]?.trim();
@@ -86,7 +87,9 @@ const checkHtmlAsset = ({ collection, slug, sourcePath, urlPath, requiredType, r
   } else if (!sourceTitle) {
     failures.push('missing source H1 title');
   }
-  if (robots && /noindex/i.test(robots)) failures.push('page emits noindex robots meta');
+  const hasNoindex = Boolean(robots && /noindex/i.test(robots));
+  if (indexPolicy === 'indexable' && hasNoindex) failures.push('indexable page emits noindex robots meta');
+  if (indexPolicy === 'noindex' && !hasNoindex) failures.push('review-gated page is missing noindex robots meta');
   if (canonical !== url) failures.push(`canonical mismatch: expected ${url}, got ${canonical || 'missing'}`);
   if (!description || description.length < 50) failures.push('meta description missing or too short');
   if (!ogTitle) failures.push('missing og:title');
@@ -103,7 +106,8 @@ const checkHtmlAsset = ({ collection, slug, sourcePath, urlPath, requiredType, r
     status: failures.length ? 'fail' : 'pass',
     failures,
     warnings,
-    jsonLdTypes
+    jsonLdTypes,
+    indexPolicy
   };
 };
 
@@ -144,7 +148,7 @@ for (const name of fs.readdirSync(projectReportsRoot).filter((file) => file.ends
 }
 
 for (const asset of assets) {
-  if (!sitemapUrls.has(asset.url)) {
+  if (asset.indexPolicy === 'indexable' && !sitemapUrls.has(asset.url)) {
     asset.status = 'fail';
     asset.failures.push('URL missing from sitemap');
   }

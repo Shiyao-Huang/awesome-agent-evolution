@@ -26,9 +26,10 @@ const { project } = Astro.props;
 const projectSlug = slugify(project.repo);
 const title = `${project.name} Model Card — ${project.category} | Self Evolve`;
 const description = `${project.name} 项目证据卡：说明它在 Self Evolve 图谱中的角色、机制线索、可见证据和未复现边界。`;
-const publishedReportPath = project.report.replace(/\.md$/, '');
-const reportHref = `/reports/${publishedReportPath}/`;
-const localReportPath = `site/public/reports/${project.report}`;
+const reportFileName = project.report.split('/').pop() ?? project.report;
+const reportSlug = reportFileName.replace(/\.md$/, '');
+const reportHref = `/reports/projects/${reportSlug}/`;
+const localReportPath = `site/public/reports/projects/${reportFileName}`;
 const githubReportUrl = `${site.github}/blob/main/${localReportPath}`;
 const updatedDate = project.lastPushed ? project.lastPushed.slice(0, 10) : 'unknown';
 const evidenceStatus =
@@ -49,6 +50,16 @@ const evidenceStatus =
           zh: '占位项目卡，只能作为后续审查入口，不能作为公开结论引用。',
           en: 'Placeholder card for later review, not a public conclusion to cite.'
         };
+const roleCopy = project.status === 'verified'
+  ? `${project.name} 属于 ${project.category}，在 Self Evolve 图谱中是 ${project.pattern} 这一类机制的来源可追踪样本。`
+  : project.status === 'candidate'
+    ? `${project.name} 属于 ${project.category}，当前更适合作为 ${project.pattern} 这一类机制的复查候选。`
+    : `${project.name} 属于 ${project.category}，当前只作为 ${project.pattern} 这一类机制的排队线索。`;
+const teachingCopy = project.status === 'verified'
+  ? `可以把它当作 ${project.category} 的案例卡来教学，但教学重点应放在“目标任务 -> 反馈来源 -> 改动策略 -> 评估指标 -> 失败模式”五步，而不是把它当作质量背书。`
+  : project.status === 'candidate'
+    ? `可以把它当作 ${project.category} 的复查练习：先确认原始仓库、报告和 benchmark 线索，再决定是否进入正式 model card。`
+    : `它暂时只适合作为材料收集入口；完成原始证据补齐前，不应用作教学结论。`;
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'TechArticle',
@@ -110,7 +121,7 @@ const jsonLd = {
           <div class="eyebrow">How to read / 如何阅读</div>
           <h2>先把这页读成证据快照，不要读成项目质量排名</h2>
           <p>{evidenceStatus.zh}</p>
-          <p><strong>English:</strong> {evidenceStatus.en}</p>
+          <p><strong>English:</strong> This model-card page explains what the project is, which self-evolution mechanism it may represent, which source trail is visible, what has not been reproduced, and where to continue reading. {evidenceStatus.en}</p>
         </div>
         <div class="source-links">
           <a href={project.url} target="_blank" rel="noopener">原始 GitHub 仓库</a>
@@ -124,8 +135,8 @@ const jsonLd = {
       <section class="model-card-grid" aria-label="Project model card">
         <section class="model-card-block">
           <div class="eyebrow">1. 它在图谱里的角色</div>
-          <h2>为什么这个项目重要</h2>
-          <p>{project.name} 属于 <strong>{project.category}</strong>，在 Self Evolve 图谱中是 <strong>{project.pattern}</strong> 这一类机制的观察样本。它的阅读价值不只来自 Star 数，而来自它能把自进化问题落到可检查的工程环节：生成、反馈、评估、记忆、搜索、编排或训练数据闭环。</p>
+          <h2>为什么把它列入复查队列</h2>
+          <p>{roleCopy} 读者应优先检查它把自进化问题落到哪些可检查的工程环节：生成、反馈、评估、记忆、搜索、编排或训练数据闭环。</p>
         </section>
 
         <section class="model-card-block">
@@ -137,8 +148,8 @@ const jsonLd = {
 
         <section class="model-card-block">
           <div class="eyebrow">3. 教学用法</div>
-          <h2>适合拿来教什么</h2>
-          <p>适合用作 <strong>{project.category}</strong> 的案例卡。教学时可以让读者沿着 “目标任务 -> 反馈来源 -> 改动策略 -> 评估指标 -> 失败模式” 五步复盘，而不是只看 README 或安装命令。</p>
+          <h2>可以如何用于教学或复查</h2>
+          <p>{teachingCopy}</p>
         </section>
 
         <section class="model-card-block">

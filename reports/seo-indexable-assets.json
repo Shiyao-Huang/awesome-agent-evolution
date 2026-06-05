@@ -1,242 +1,20 @@
 {
-  "generated_at": "2026-06-05T07:55:51.781Z",
+  "generated_at": "2026-06-05T08:35:12.737Z",
   "canonical_host": "https://agent-evolution.com",
   "checked_collections": [
     "blog",
     "research",
     "project-report"
   ],
-  "global_status": "fail",
+  "global_status": "pass",
   "counts": {
-    "assets_checked": 524,
-    "passed": 512,
-    "failed": 12,
-    "sitemap_urls": 924
+    "assets_checked": 527,
+    "passed": 527,
+    "failed": 0,
+    "sitemap_urls": 931
   },
   "global_failures": [],
-  "failed_assets": [
-    {
-      "collection": "project-report",
-      "slug": "217-waza-agent-skill-evaluation-cli",
-      "url": "https://agent-evolution.com/reports/projects/217-waza-agent-skill-evaluation-cli/",
-      "sourcePath": "site/public/reports/projects/217-waza-agent-skill-evaluation-cli.md",
-      "htmlPath": "site/dist/reports/projects/217-waza-agent-skill-evaluation-cli/index.html",
-      "status": "fail",
-      "failures": [
-        "meta description missing or too short"
-      ],
-      "warnings": [],
-      "jsonLdTypes": [
-        "WebSite",
-        "SearchAction",
-        "Organization",
-        "Article"
-      ]
-    },
-    {
-      "collection": "project-report",
-      "slug": "305-openclaw-clownfish-maintainer-harness",
-      "url": "https://agent-evolution.com/reports/projects/305-openclaw-clownfish-maintainer-harness/",
-      "sourcePath": "site/public/reports/projects/305-openclaw-clownfish-maintainer-harness.md",
-      "htmlPath": "site/dist/reports/projects/305-openclaw-clownfish-maintainer-harness/index.html",
-      "status": "fail",
-      "failures": [
-        "meta description missing or too short"
-      ],
-      "warnings": [],
-      "jsonLdTypes": [
-        "WebSite",
-        "SearchAction",
-        "Organization",
-        "Article"
-      ]
-    },
-    {
-      "collection": "project-report",
-      "slug": "308-openclaw-crawlkit-shared-crawl-infra",
-      "url": "https://agent-evolution.com/reports/projects/308-openclaw-crawlkit-shared-crawl-infra/",
-      "sourcePath": "site/public/reports/projects/308-openclaw-crawlkit-shared-crawl-infra.md",
-      "htmlPath": "site/dist/reports/projects/308-openclaw-crawlkit-shared-crawl-infra/index.html",
-      "status": "fail",
-      "failures": [
-        "meta description missing or too short"
-      ],
-      "warnings": [],
-      "jsonLdTypes": [
-        "WebSite",
-        "SearchAction",
-        "Organization",
-        "Article"
-      ]
-    },
-    {
-      "collection": "project-report",
-      "slug": "31-asi-evolve-self-improvement",
-      "url": "https://agent-evolution.com/reports/projects/31-asi-evolve-self-improvement/",
-      "sourcePath": "site/public/reports/projects/31-asi-evolve-self-improvement.md",
-      "htmlPath": "site/dist/reports/projects/31-asi-evolve-self-improvement/index.html",
-      "status": "fail",
-      "failures": [
-        "meta description missing or too short",
-        "missing og:description"
-      ],
-      "warnings": [],
-      "jsonLdTypes": [
-        "WebSite",
-        "SearchAction",
-        "Organization",
-        "Article"
-      ]
-    },
-    {
-      "collection": "project-report",
-      "slug": "312-microsoft-agent-lightning-rl-agent-evolution",
-      "url": "https://agent-evolution.com/reports/projects/312-microsoft-agent-lightning-rl-agent-evolution/",
-      "sourcePath": "site/public/reports/projects/312-microsoft-agent-lightning-rl-agent-evolution.md",
-      "htmlPath": "site/dist/reports/projects/312-microsoft-agent-lightning-rl-agent-evolution/index.html",
-      "status": "fail",
-      "failures": [
-        "meta description missing or too short"
-      ],
-      "warnings": [],
-      "jsonLdTypes": [
-        "WebSite",
-        "SearchAction",
-        "Organization",
-        "Article"
-      ]
-    },
-    {
-      "collection": "project-report",
-      "slug": "315-openclaw-acpx-stateful-agent-runtime",
-      "url": "https://agent-evolution.com/reports/projects/315-openclaw-acpx-stateful-agent-runtime/",
-      "sourcePath": "site/public/reports/projects/315-openclaw-acpx-stateful-agent-runtime.md",
-      "htmlPath": "site/dist/reports/projects/315-openclaw-acpx-stateful-agent-runtime/index.html",
-      "status": "fail",
-      "failures": [
-        "meta description missing or too short"
-      ],
-      "warnings": [],
-      "jsonLdTypes": [
-        "WebSite",
-        "SearchAction",
-        "Organization",
-        "Article"
-      ]
-    },
-    {
-      "collection": "project-report",
-      "slug": "316-openclaw-crabbox-browser-agent-benchmark",
-      "url": "https://agent-evolution.com/reports/projects/316-openclaw-crabbox-browser-agent-benchmark/",
-      "sourcePath": "site/public/reports/projects/316-openclaw-crabbox-browser-agent-benchmark.md",
-      "htmlPath": "site/dist/reports/projects/316-openclaw-crabbox-browser-agent-benchmark/index.html",
-      "status": "fail",
-      "failures": [
-        "meta description missing or too short"
-      ],
-      "warnings": [],
-      "jsonLdTypes": [
-        "WebSite",
-        "SearchAction",
-        "Organization",
-        "Article"
-      ]
-    },
-    {
-      "collection": "project-report",
-      "slug": "32-self-evolving-agents-survey",
-      "url": "https://agent-evolution.com/reports/projects/32-self-evolving-agents-survey/",
-      "sourcePath": "site/public/reports/projects/32-self-evolving-agents-survey.md",
-      "htmlPath": "site/dist/reports/projects/32-self-evolving-agents-survey/index.html",
-      "status": "fail",
-      "failures": [
-        "meta description missing or too short",
-        "missing og:description"
-      ],
-      "warnings": [],
-      "jsonLdTypes": [
-        "WebSite",
-        "SearchAction",
-        "Organization",
-        "Article"
-      ]
-    },
-    {
-      "collection": "project-report",
-      "slug": "36-self-evolving-codegen",
-      "url": "https://agent-evolution.com/reports/projects/36-self-evolving-codegen/",
-      "sourcePath": "site/public/reports/projects/36-self-evolving-codegen.md",
-      "htmlPath": "site/dist/reports/projects/36-self-evolving-codegen/index.html",
-      "status": "fail",
-      "failures": [
-        "meta description missing or too short",
-        "missing og:description"
-      ],
-      "warnings": [],
-      "jsonLdTypes": [
-        "WebSite",
-        "SearchAction",
-        "Organization",
-        "Article"
-      ]
-    },
-    {
-      "collection": "project-report",
-      "slug": "47-genericagent",
-      "url": "https://agent-evolution.com/reports/projects/47-genericagent/",
-      "sourcePath": "site/public/reports/projects/47-genericagent.md",
-      "htmlPath": "site/dist/reports/projects/47-genericagent/index.html",
-      "status": "fail",
-      "failures": [
-        "meta description missing or too short"
-      ],
-      "warnings": [],
-      "jsonLdTypes": [
-        "WebSite",
-        "SearchAction",
-        "Organization",
-        "Article"
-      ]
-    },
-    {
-      "collection": "project-report",
-      "slug": "52-agentgpt-autonomous",
-      "url": "https://agent-evolution.com/reports/projects/52-agentgpt-autonomous/",
-      "sourcePath": "site/public/reports/projects/52-agentgpt-autonomous.md",
-      "htmlPath": "site/dist/reports/projects/52-agentgpt-autonomous/index.html",
-      "status": "fail",
-      "failures": [
-        "meta description missing or too short",
-        "missing og:description"
-      ],
-      "warnings": [],
-      "jsonLdTypes": [
-        "WebSite",
-        "SearchAction",
-        "Organization",
-        "Article"
-      ]
-    },
-    {
-      "collection": "project-report",
-      "slug": "llm-self-training-batch-report",
-      "url": "https://agent-evolution.com/reports/projects/llm-self-training-batch-report/",
-      "sourcePath": "site/public/reports/projects/llm-self-training-batch-report.md",
-      "htmlPath": "site/dist/reports/projects/llm-self-training-batch-report/index.html",
-      "status": "fail",
-      "failures": [
-        "meta description missing or too short",
-        "missing og:description"
-      ],
-      "warnings": [],
-      "jsonLdTypes": [
-        "WebSite",
-        "SearchAction",
-        "Organization",
-        "Article"
-      ]
-    }
-  ],
+  "failed_assets": [],
   "assets": [
     {
       "collection": "blog",
@@ -253,7 +31,8 @@
         "Organization",
         "BlogPosting",
         "Organization"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "blog",
@@ -270,7 +49,8 @@
         "Organization",
         "BlogPosting",
         "Organization"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "blog",
@@ -287,7 +67,8 @@
         "Organization",
         "BlogPosting",
         "Organization"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "blog",
@@ -304,7 +85,8 @@
         "Organization",
         "BlogPosting",
         "Organization"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "blog",
@@ -321,7 +103,8 @@
         "Organization",
         "BlogPosting",
         "Organization"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "blog",
@@ -338,7 +121,8 @@
         "Organization",
         "BlogPosting",
         "Organization"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "blog",
@@ -355,7 +139,8 @@
         "Organization",
         "BlogPosting",
         "Organization"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "blog",
@@ -372,7 +157,8 @@
         "Organization",
         "BlogPosting",
         "Organization"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "blog",
@@ -389,7 +175,8 @@
         "Organization",
         "BlogPosting",
         "Organization"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "blog",
@@ -406,7 +193,8 @@
         "Organization",
         "BlogPosting",
         "Organization"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "blog",
@@ -423,7 +211,8 @@
         "Organization",
         "BlogPosting",
         "Organization"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "blog",
@@ -440,7 +229,8 @@
         "Organization",
         "BlogPosting",
         "Organization"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "blog",
@@ -457,7 +247,8 @@
         "Organization",
         "BlogPosting",
         "Organization"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "blog",
@@ -474,7 +265,8 @@
         "Organization",
         "BlogPosting",
         "Organization"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "blog",
@@ -491,7 +283,8 @@
         "Organization",
         "BlogPosting",
         "Organization"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "blog",
@@ -508,7 +301,8 @@
         "Organization",
         "BlogPosting",
         "Organization"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "blog",
@@ -525,7 +319,8 @@
         "Organization",
         "BlogPosting",
         "Organization"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "blog",
@@ -542,7 +337,8 @@
         "Organization",
         "BlogPosting",
         "Organization"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "blog",
@@ -559,7 +355,8 @@
         "Organization",
         "BlogPosting",
         "Organization"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "blog",
@@ -576,7 +373,8 @@
         "Organization",
         "BlogPosting",
         "Organization"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "blog",
@@ -593,7 +391,8 @@
         "Organization",
         "BlogPosting",
         "Organization"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "blog",
@@ -610,7 +409,8 @@
         "Organization",
         "BlogPosting",
         "Organization"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "blog",
@@ -627,7 +427,8 @@
         "Organization",
         "BlogPosting",
         "Organization"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "blog",
@@ -644,7 +445,8 @@
         "Organization",
         "BlogPosting",
         "Organization"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "blog",
@@ -661,7 +463,8 @@
         "Organization",
         "BlogPosting",
         "Organization"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "research",
@@ -677,7 +480,8 @@
         "SearchAction",
         "Organization",
         "ScholarlyArticle"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "research",
@@ -693,7 +497,8 @@
         "SearchAction",
         "Organization",
         "ScholarlyArticle"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "research",
@@ -709,7 +514,8 @@
         "SearchAction",
         "Organization",
         "ScholarlyArticle"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "research",
@@ -725,7 +531,8 @@
         "SearchAction",
         "Organization",
         "ScholarlyArticle"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "research",
@@ -741,7 +548,8 @@
         "SearchAction",
         "Organization",
         "ScholarlyArticle"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "research",
@@ -757,7 +565,8 @@
         "SearchAction",
         "Organization",
         "ScholarlyArticle"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "research",
@@ -773,7 +582,8 @@
         "SearchAction",
         "Organization",
         "ScholarlyArticle"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "research",
@@ -789,7 +599,8 @@
         "SearchAction",
         "Organization",
         "ScholarlyArticle"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "research",
@@ -805,7 +616,8 @@
         "SearchAction",
         "Organization",
         "ScholarlyArticle"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "research",
@@ -821,7 +633,8 @@
         "SearchAction",
         "Organization",
         "ScholarlyArticle"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "research",
@@ -837,7 +650,8 @@
         "SearchAction",
         "Organization",
         "ScholarlyArticle"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "research",
@@ -853,7 +667,8 @@
         "SearchAction",
         "Organization",
         "ScholarlyArticle"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "research",
@@ -869,7 +684,8 @@
         "SearchAction",
         "Organization",
         "ScholarlyArticle"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "research",
@@ -885,7 +701,8 @@
         "SearchAction",
         "Organization",
         "ScholarlyArticle"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "research",
@@ -901,7 +718,8 @@
         "SearchAction",
         "Organization",
         "ScholarlyArticle"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -917,7 +735,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -933,7 +752,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -949,7 +769,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -965,7 +786,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -981,7 +803,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -997,7 +820,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -1013,7 +837,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -1029,7 +854,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -1045,7 +871,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -1061,7 +888,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -1077,7 +905,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -1093,7 +922,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -1109,7 +939,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -1125,7 +956,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -1141,7 +973,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -1157,7 +990,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -1173,7 +1007,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -1189,7 +1024,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -1205,7 +1041,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -1221,7 +1058,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -1237,7 +1075,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -1253,7 +1092,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -1269,7 +1109,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -1285,7 +1126,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -1301,7 +1143,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -1317,7 +1160,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -1333,7 +1177,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -1349,7 +1194,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -1365,7 +1211,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -1381,7 +1228,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -1397,7 +1245,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -1413,7 +1262,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -1429,7 +1279,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -1445,7 +1296,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -1461,7 +1313,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -1477,7 +1330,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -1493,7 +1347,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -1509,7 +1364,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -1525,7 +1381,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -1541,7 +1398,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -1557,7 +1415,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -1573,7 +1432,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -1589,7 +1449,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -1605,7 +1466,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -1621,7 +1483,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -1637,7 +1500,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -1653,7 +1517,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -1669,7 +1534,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -1685,7 +1551,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -1701,7 +1568,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -1717,7 +1585,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -1733,7 +1602,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -1749,7 +1619,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -1765,7 +1636,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -1781,7 +1653,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -1797,7 +1670,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -1813,7 +1687,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -1829,7 +1704,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -1845,7 +1721,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -1861,7 +1738,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -1877,7 +1755,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -1893,7 +1772,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -1909,7 +1789,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -1925,7 +1806,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -1941,7 +1823,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -1957,7 +1840,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -1973,7 +1857,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -1989,7 +1874,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -2005,7 +1891,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -2021,7 +1908,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -2037,7 +1925,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -2053,7 +1942,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -2069,7 +1959,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -2085,7 +1976,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -2101,7 +1993,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -2117,7 +2010,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -2133,7 +2027,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -2149,7 +2044,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -2165,7 +2061,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -2181,7 +2078,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -2197,7 +2095,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -2213,7 +2112,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -2229,7 +2129,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -2245,7 +2146,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -2261,7 +2163,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -2277,7 +2180,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -2293,7 +2197,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -2309,7 +2214,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -2325,7 +2231,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -2341,7 +2248,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -2357,7 +2265,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -2373,7 +2282,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -2389,7 +2299,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -2405,7 +2316,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -2421,7 +2333,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -2437,7 +2350,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -2453,7 +2367,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -2469,7 +2384,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -2485,7 +2401,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -2501,7 +2418,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -2517,7 +2435,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -2533,7 +2452,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -2549,7 +2469,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -2565,7 +2486,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -2581,7 +2503,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -2597,7 +2520,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -2613,7 +2537,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -2629,7 +2554,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -2645,7 +2571,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -2661,7 +2588,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -2677,7 +2605,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -2693,7 +2622,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -2709,7 +2639,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -2725,7 +2656,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -2741,7 +2673,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -2757,7 +2690,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -2773,7 +2707,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -2789,7 +2724,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -2805,7 +2741,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -2821,7 +2758,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -2837,7 +2775,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -2853,7 +2792,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -2869,7 +2809,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -2885,7 +2826,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -2901,7 +2843,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -2917,7 +2860,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -2933,7 +2877,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -2949,7 +2894,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -2965,7 +2911,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -2981,7 +2928,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -2997,7 +2945,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -3013,7 +2962,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -3029,7 +2979,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -3045,7 +2996,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -3061,7 +3013,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -3069,17 +3022,16 @@
       "url": "https://agent-evolution.com/reports/projects/217-waza-agent-skill-evaluation-cli/",
       "sourcePath": "site/public/reports/projects/217-waza-agent-skill-evaluation-cli.md",
       "htmlPath": "site/dist/reports/projects/217-waza-agent-skill-evaluation-cli/index.html",
-      "status": "fail",
-      "failures": [
-        "meta description missing or too short"
-      ],
+      "status": "pass",
+      "failures": [],
       "warnings": [],
       "jsonLdTypes": [
         "WebSite",
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -3095,7 +3047,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -3111,7 +3064,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -3127,7 +3081,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -3143,7 +3098,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -3159,7 +3115,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -3175,7 +3132,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -3191,7 +3149,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -3207,7 +3166,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -3223,7 +3183,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -3239,7 +3200,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -3255,7 +3217,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -3271,7 +3234,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -3287,7 +3251,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -3303,7 +3268,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -3319,7 +3285,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -3335,7 +3302,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -3351,7 +3319,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -3367,7 +3336,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -3383,7 +3353,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -3399,7 +3370,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -3415,7 +3387,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -3431,7 +3404,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -3447,7 +3421,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -3463,7 +3438,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -3479,7 +3455,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -3495,7 +3472,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -3511,7 +3489,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -3527,7 +3506,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -3543,7 +3523,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -3559,7 +3540,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -3575,7 +3557,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -3591,7 +3574,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -3607,7 +3591,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -3623,7 +3608,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -3639,7 +3625,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -3655,7 +3642,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -3671,7 +3659,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -3687,7 +3676,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -3703,7 +3693,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -3719,7 +3710,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -3735,7 +3727,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -3751,7 +3744,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -3767,7 +3761,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -3783,7 +3778,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -3799,7 +3795,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -3815,7 +3812,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -3831,7 +3829,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -3847,7 +3846,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -3863,7 +3863,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -3879,7 +3880,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -3895,7 +3897,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -3911,7 +3914,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -3927,7 +3931,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -3943,7 +3948,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -3959,7 +3965,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -3975,7 +3982,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -3991,7 +3999,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -4007,7 +4016,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -4023,7 +4033,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -4039,7 +4050,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -4055,7 +4067,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -4071,7 +4084,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -4087,7 +4101,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -4103,7 +4118,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -4119,7 +4135,25 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
+    },
+    {
+      "collection": "project-report",
+      "slug": "27-agency-swarm",
+      "url": "https://agent-evolution.com/reports/projects/27-agency-swarm/",
+      "sourcePath": "site/public/reports/projects/27-agency-swarm.md",
+      "htmlPath": "site/dist/reports/projects/27-agency-swarm/index.html",
+      "status": "pass",
+      "failures": [],
+      "warnings": [],
+      "jsonLdTypes": [
+        "WebSite",
+        "SearchAction",
+        "Organization",
+        "Article"
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -4135,7 +4169,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -4151,7 +4186,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -4167,7 +4203,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -4183,7 +4220,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -4199,7 +4237,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -4215,7 +4254,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -4231,7 +4271,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -4247,7 +4288,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -4263,7 +4305,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -4279,7 +4322,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -4295,7 +4339,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -4311,7 +4356,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -4327,7 +4373,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -4343,7 +4390,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -4359,7 +4407,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -4375,7 +4424,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -4391,7 +4441,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -4407,7 +4458,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -4423,7 +4475,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -4439,7 +4492,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -4455,7 +4509,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -4471,7 +4526,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -4487,7 +4543,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -4503,7 +4560,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -4519,7 +4577,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -4535,7 +4594,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -4551,7 +4611,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -4567,7 +4628,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -4583,7 +4645,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -4599,7 +4662,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -4615,7 +4679,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -4631,7 +4696,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -4647,7 +4713,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -4663,7 +4730,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -4679,7 +4747,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -4695,7 +4764,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -4711,7 +4781,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -4727,7 +4798,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -4743,7 +4815,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -4759,7 +4832,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -4775,7 +4849,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -4791,7 +4866,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -4807,7 +4883,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -4815,17 +4892,16 @@
       "url": "https://agent-evolution.com/reports/projects/305-openclaw-clownfish-maintainer-harness/",
       "sourcePath": "site/public/reports/projects/305-openclaw-clownfish-maintainer-harness.md",
       "htmlPath": "site/dist/reports/projects/305-openclaw-clownfish-maintainer-harness/index.html",
-      "status": "fail",
-      "failures": [
-        "meta description missing or too short"
-      ],
+      "status": "pass",
+      "failures": [],
       "warnings": [],
       "jsonLdTypes": [
         "WebSite",
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -4841,7 +4917,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -4857,7 +4934,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -4865,17 +4943,16 @@
       "url": "https://agent-evolution.com/reports/projects/308-openclaw-crawlkit-shared-crawl-infra/",
       "sourcePath": "site/public/reports/projects/308-openclaw-crawlkit-shared-crawl-infra.md",
       "htmlPath": "site/dist/reports/projects/308-openclaw-crawlkit-shared-crawl-infra/index.html",
-      "status": "fail",
-      "failures": [
-        "meta description missing or too short"
-      ],
+      "status": "pass",
+      "failures": [],
       "warnings": [],
       "jsonLdTypes": [
         "WebSite",
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -4891,7 +4968,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -4899,18 +4977,16 @@
       "url": "https://agent-evolution.com/reports/projects/31-asi-evolve-self-improvement/",
       "sourcePath": "site/public/reports/projects/31-asi-evolve-self-improvement.md",
       "htmlPath": "site/dist/reports/projects/31-asi-evolve-self-improvement/index.html",
-      "status": "fail",
-      "failures": [
-        "meta description missing or too short",
-        "missing og:description"
-      ],
+      "status": "pass",
+      "failures": [],
       "warnings": [],
       "jsonLdTypes": [
         "WebSite",
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -4926,7 +5002,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -4942,7 +5019,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -4958,7 +5036,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -4966,17 +5045,16 @@
       "url": "https://agent-evolution.com/reports/projects/312-microsoft-agent-lightning-rl-agent-evolution/",
       "sourcePath": "site/public/reports/projects/312-microsoft-agent-lightning-rl-agent-evolution.md",
       "htmlPath": "site/dist/reports/projects/312-microsoft-agent-lightning-rl-agent-evolution/index.html",
-      "status": "fail",
-      "failures": [
-        "meta description missing or too short"
-      ],
+      "status": "pass",
+      "failures": [],
       "warnings": [],
       "jsonLdTypes": [
         "WebSite",
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -4992,7 +5070,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -5000,17 +5079,16 @@
       "url": "https://agent-evolution.com/reports/projects/315-openclaw-acpx-stateful-agent-runtime/",
       "sourcePath": "site/public/reports/projects/315-openclaw-acpx-stateful-agent-runtime.md",
       "htmlPath": "site/dist/reports/projects/315-openclaw-acpx-stateful-agent-runtime/index.html",
-      "status": "fail",
-      "failures": [
-        "meta description missing or too short"
-      ],
+      "status": "pass",
+      "failures": [],
       "warnings": [],
       "jsonLdTypes": [
         "WebSite",
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -5018,17 +5096,16 @@
       "url": "https://agent-evolution.com/reports/projects/316-openclaw-crabbox-browser-agent-benchmark/",
       "sourcePath": "site/public/reports/projects/316-openclaw-crabbox-browser-agent-benchmark.md",
       "htmlPath": "site/dist/reports/projects/316-openclaw-crabbox-browser-agent-benchmark/index.html",
-      "status": "fail",
-      "failures": [
-        "meta description missing or too short"
-      ],
+      "status": "pass",
+      "failures": [],
       "warnings": [],
       "jsonLdTypes": [
         "WebSite",
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -5044,7 +5121,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -5060,7 +5138,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -5076,7 +5155,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -5092,7 +5172,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -5100,18 +5181,16 @@
       "url": "https://agent-evolution.com/reports/projects/32-self-evolving-agents-survey/",
       "sourcePath": "site/public/reports/projects/32-self-evolving-agents-survey.md",
       "htmlPath": "site/dist/reports/projects/32-self-evolving-agents-survey/index.html",
-      "status": "fail",
-      "failures": [
-        "meta description missing or too short",
-        "missing og:description"
-      ],
+      "status": "pass",
+      "failures": [],
       "warnings": [],
       "jsonLdTypes": [
         "WebSite",
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -5127,7 +5206,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -5143,7 +5223,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -5159,7 +5240,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -5175,7 +5257,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -5191,7 +5274,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -5207,7 +5291,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -5223,7 +5308,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -5239,7 +5325,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -5255,7 +5342,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -5271,7 +5359,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -5287,7 +5376,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -5303,7 +5393,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -5319,7 +5410,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -5335,7 +5427,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -5351,7 +5444,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -5367,7 +5461,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -5383,7 +5478,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -5399,7 +5495,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -5415,7 +5512,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -5431,7 +5529,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -5447,7 +5546,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -5463,7 +5563,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -5479,7 +5580,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -5495,7 +5597,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -5511,7 +5614,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -5527,7 +5631,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -5543,7 +5648,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -5559,7 +5665,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -5575,7 +5682,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -5591,7 +5699,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -5607,7 +5716,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -5623,7 +5733,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -5639,7 +5750,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -5655,7 +5767,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -5671,7 +5784,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -5687,7 +5801,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -5703,7 +5818,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -5719,7 +5835,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -5735,7 +5852,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -5751,7 +5869,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -5767,7 +5886,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -5783,7 +5903,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -5799,7 +5920,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -5815,7 +5937,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -5831,7 +5954,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -5847,7 +5971,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -5863,7 +5988,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -5879,7 +6005,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -5887,18 +6014,16 @@
       "url": "https://agent-evolution.com/reports/projects/36-self-evolving-codegen/",
       "sourcePath": "site/public/reports/projects/36-self-evolving-codegen.md",
       "htmlPath": "site/dist/reports/projects/36-self-evolving-codegen/index.html",
-      "status": "fail",
-      "failures": [
-        "meta description missing or too short",
-        "missing og:description"
-      ],
+      "status": "pass",
+      "failures": [],
       "warnings": [],
       "jsonLdTypes": [
         "WebSite",
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -5914,7 +6039,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -5930,7 +6056,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -5946,7 +6073,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -5962,7 +6090,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -5978,7 +6107,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -5994,7 +6124,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -6010,7 +6141,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -6026,7 +6158,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -6042,7 +6175,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -6058,7 +6192,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -6074,7 +6209,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -6090,7 +6226,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -6106,7 +6243,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -6122,7 +6260,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -6138,7 +6277,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -6154,7 +6294,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -6170,7 +6311,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -6186,7 +6328,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -6202,7 +6345,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -6218,7 +6362,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -6234,7 +6379,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -6250,7 +6396,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -6266,7 +6413,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -6282,7 +6430,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -6298,7 +6447,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -6314,7 +6464,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -6330,7 +6481,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -6346,7 +6498,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -6362,7 +6515,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -6378,7 +6532,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -6394,7 +6549,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -6410,7 +6566,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -6426,7 +6583,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -6442,7 +6600,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -6458,7 +6617,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -6474,7 +6634,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -6490,7 +6651,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -6506,7 +6668,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -6522,7 +6685,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -6538,7 +6702,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -6554,7 +6719,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -6570,7 +6736,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -6586,7 +6753,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -6602,7 +6770,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -6618,7 +6787,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -6634,7 +6804,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -6650,7 +6821,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -6666,7 +6838,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -6682,7 +6855,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -6698,7 +6872,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -6714,7 +6889,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -6730,7 +6906,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -6746,7 +6923,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -6762,7 +6940,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -6778,7 +6957,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -6794,7 +6974,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -6810,7 +6991,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -6826,7 +7008,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -6842,7 +7025,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -6858,7 +7042,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -6874,7 +7059,42 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
+    },
+    {
+      "collection": "project-report",
+      "slug": "404-xskill-continual-experience-skill-learning",
+      "url": "https://agent-evolution.com/reports/projects/404-xskill-continual-experience-skill-learning/",
+      "sourcePath": "site/public/reports/projects/404-xskill-continual-experience-skill-learning.md",
+      "htmlPath": "site/dist/reports/projects/404-xskill-continual-experience-skill-learning/index.html",
+      "status": "pass",
+      "failures": [],
+      "warnings": [],
+      "jsonLdTypes": [
+        "WebSite",
+        "SearchAction",
+        "Organization",
+        "Article"
+      ],
+      "indexPolicy": "indexable"
+    },
+    {
+      "collection": "project-report",
+      "slug": "405-agent-swarm-compounding-lead-worker-runtime",
+      "url": "https://agent-evolution.com/reports/projects/405-agent-swarm-compounding-lead-worker-runtime/",
+      "sourcePath": "site/public/reports/projects/405-agent-swarm-compounding-lead-worker-runtime.md",
+      "htmlPath": "site/dist/reports/projects/405-agent-swarm-compounding-lead-worker-runtime/index.html",
+      "status": "pass",
+      "failures": [],
+      "warnings": [],
+      "jsonLdTypes": [
+        "WebSite",
+        "SearchAction",
+        "Organization",
+        "Article"
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -6890,7 +7110,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -6906,7 +7127,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -6922,7 +7144,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -6938,7 +7161,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -6954,7 +7178,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -6970,7 +7195,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -6986,7 +7212,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -7002,7 +7229,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -7018,7 +7246,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -7034,7 +7263,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -7050,7 +7280,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -7066,7 +7297,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -7082,7 +7314,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -7090,17 +7323,16 @@
       "url": "https://agent-evolution.com/reports/projects/47-genericagent/",
       "sourcePath": "site/public/reports/projects/47-genericagent.md",
       "htmlPath": "site/dist/reports/projects/47-genericagent/index.html",
-      "status": "fail",
-      "failures": [
-        "meta description missing or too short"
-      ],
+      "status": "pass",
+      "failures": [],
       "warnings": [],
       "jsonLdTypes": [
         "WebSite",
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -7116,7 +7348,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -7132,7 +7365,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -7148,7 +7382,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -7164,7 +7399,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -7180,7 +7416,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -7196,7 +7433,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -7212,7 +7450,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -7228,7 +7467,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -7244,7 +7484,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -7260,7 +7501,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -7276,7 +7518,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -7292,7 +7535,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -7308,7 +7552,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -7316,18 +7561,16 @@
       "url": "https://agent-evolution.com/reports/projects/52-agentgpt-autonomous/",
       "sourcePath": "site/public/reports/projects/52-agentgpt-autonomous.md",
       "htmlPath": "site/dist/reports/projects/52-agentgpt-autonomous/index.html",
-      "status": "fail",
-      "failures": [
-        "meta description missing or too short",
-        "missing og:description"
-      ],
+      "status": "pass",
+      "failures": [],
       "warnings": [],
       "jsonLdTypes": [
         "WebSite",
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -7343,7 +7586,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -7359,7 +7603,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -7375,7 +7620,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -7391,7 +7637,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -7407,7 +7654,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -7423,7 +7671,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -7439,7 +7688,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -7455,7 +7705,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -7471,7 +7722,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -7487,7 +7739,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -7503,7 +7756,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -7519,7 +7773,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -7535,7 +7790,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -7551,7 +7807,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -7567,7 +7824,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -7583,7 +7841,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -7599,7 +7858,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -7615,7 +7875,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -7631,7 +7892,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -7647,7 +7909,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -7663,7 +7926,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -7679,7 +7943,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -7695,7 +7960,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -7711,7 +7977,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -7727,7 +7994,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -7743,7 +8011,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -7759,7 +8028,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -7775,7 +8045,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -7791,7 +8062,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -7807,7 +8079,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -7823,7 +8096,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -7839,7 +8113,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -7855,7 +8130,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -7871,7 +8147,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -7887,7 +8164,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -7903,7 +8181,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -7919,7 +8198,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -7935,7 +8215,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -7951,7 +8232,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -7967,7 +8249,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -7983,7 +8266,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -7999,7 +8283,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -8015,7 +8300,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -8031,7 +8317,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -8047,7 +8334,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -8063,7 +8351,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -8079,7 +8368,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -8095,7 +8385,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -8111,7 +8402,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -8127,7 +8419,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -8143,7 +8436,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -8159,7 +8453,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -8175,7 +8470,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -8191,7 +8487,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -8207,7 +8504,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -8223,7 +8521,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -8239,7 +8538,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -8255,7 +8555,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -8271,7 +8572,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -8287,7 +8589,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -8303,7 +8606,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -8319,7 +8623,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -8335,7 +8640,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -8351,7 +8657,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -8367,7 +8674,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -8383,7 +8691,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -8399,7 +8708,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -8415,7 +8725,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -8431,7 +8742,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -8447,7 +8759,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -8463,7 +8776,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -8479,7 +8793,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -8495,7 +8810,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -8511,7 +8827,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -8527,7 +8844,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -8543,7 +8861,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -8559,7 +8878,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -8575,7 +8895,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -8583,18 +8904,16 @@
       "url": "https://agent-evolution.com/reports/projects/llm-self-training-batch-report/",
       "sourcePath": "site/public/reports/projects/llm-self-training-batch-report.md",
       "htmlPath": "site/dist/reports/projects/llm-self-training-batch-report/index.html",
-      "status": "fail",
-      "failures": [
-        "meta description missing or too short",
-        "missing og:description"
-      ],
+      "status": "pass",
+      "failures": [],
       "warnings": [],
       "jsonLdTypes": [
         "WebSite",
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -8610,7 +8929,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -8626,7 +8946,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -8642,7 +8963,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -8658,7 +8980,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     },
     {
       "collection": "project-report",
@@ -8674,7 +8997,8 @@
         "SearchAction",
         "Organization",
         "Article"
-      ]
+      ],
+      "indexPolicy": "indexable"
     }
   ]
 }

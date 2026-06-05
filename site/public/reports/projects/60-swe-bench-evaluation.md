@@ -68,7 +68,7 @@ SWE-bench 的评估核心是容器化的执行评估引擎。每个任务在一�
 ## 与 Self-Evolve 关联
 | 关联维度 | 分析 |
 |----------|------|
-| 评估框架 | SWE-bench 是 Self-Evolve 评估层最核心的参考基准：其"Issue -> Patch -> Test Verification"的评估范式直接对应 Self-Evolve 的代码进化验证流程 |
+| 评估框架 | SWE-bench 是 Self-Evolve 评估层的重要参考基准之一：其"Issue -> Patch -> Test Verification"的评估范式可用于对照代码进化验证流程 |
 | 进化循环 | SWE-bench 的"问题描述 -> 代码生成 -> 测试验证 -> 反馈"流程与 Self-Evolve 的进化循环高度一致 |
 | Agent 编排 | SWE-agent 展示了如何编排一个完整的软件工程 Agent：代码库导航、文件定位、代码编辑、测试运行 |
 | 自主性度量 | SWE-bench 的解决率可作为 Self-Evolve 自主性层级的关键度量指标 |

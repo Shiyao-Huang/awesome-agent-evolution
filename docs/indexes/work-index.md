@@ -13,7 +13,7 @@
 | `paper-drafts` | present | 37 | 3 | 0 | 3.6 MB |
 | `paper` | present | 15 | 2 | 0 | 1023 KB |
 | `latex` | present | 9 | 2 | 0 | 53 KB |
-| `site` | present | 2183 | 987 | 0 | 60 MB |
+| `site` | present | 2193 | 994 | 0 | 61 MB |
 | `survey` | present | 94 | 4 | 0 | 3.4 MB |
 | `scripts` | present | 63 | 1 | 0 | 1.7 MB |
 | `data-engine` | present | 495 | 20 | 0 | 29 MB |
