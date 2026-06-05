@@ -1,25 +1,25 @@
 {
-  "generated_at": "2026-06-03T03:39:58.772Z",
+  "generated_at": "2026-06-05T13:45:40.977Z",
   "threshold": 0.52,
   "total": 3,
   "clusters": [
     {
       "cluster_id": "vlsh-0001",
       "label": "+local_code_or_artifact / +timestamp_freshness / +current_frontier_signal",
-      "size": 1546,
+      "size": 1570,
       "type_counts": {
-        "github": 669,
+        "github": 690,
         "paper": 197,
-        "social": 415,
-        "blog": 265
+        "social": 416,
+        "blog": 267
       },
       "value_class_counts": {
-        "needs-review": 631,
-        "high-value-candidate": 803,
-        "low-signal-or-risk": 112
+        "needs-review": 643,
+        "high-value-candidate": 813,
+        "low-signal-or-risk": 114
       },
-      "score_avg": 71.61,
-      "confidence_avg": 52.59,
+      "score_avg": 71.66,
+      "confidence_avg": 52.77,
       "top_tags": [
         {
           "id": "local_code_or_artifact",
@@ -38,27 +38,27 @@
         },
         {
           "id": "mutable_artifact_clear",
-          "average": 0.805,
+          "average": 0.806,
           "label": "Mutable artifact clear"
         },
         {
           "id": "community_momentum",
-          "average": 0.746,
+          "average": 0.752,
           "label": "Community momentum"
         },
         {
           "id": "product_usability",
-          "average": 0.733,
+          "average": 0.738,
           "label": "Product usability"
         },
         {
           "id": "open_source_reuse",
-          "average": 0.732,
+          "average": 0.734,
           "label": "Open-source reuse"
         },
         {
           "id": "implementation_runnable",
-          "average": 0.702,
+          "average": 0.706,
           "label": "Runnable implementation"
         }
       ],
@@ -80,6 +80,24 @@
           "value_score": 87.58,
           "value_class": "high-value-candidate",
           "source_path": "raw-github/cuga-project_cuga-agent.md"
+        },
+        {
+          "id": "github:vectorize-io/agent-memory-benchmark",
+          "type": "github",
+          "title": "Agent Memory Benchmark",
+          "url": "https://github.com/vectorize-io/agent-memory-benchmark",
+          "value_score": 87.58,
+          "value_class": "high-value-candidate",
+          "source_path": "raw-github/vectorize-io_agent-memory-benchmark.md"
+        },
+        {
+          "id": "github:autojunjie/awesome-agent-harness",
+          "type": "github",
+          "title": "Awesome Agent Harness (AutoJunjie)",
+          "url": "https://github.com/AutoJunjie/awesome-agent-harness",
+          "value_score": 87.26,
+          "value_class": "high-value-candidate",
+          "source_path": "raw-github/autojunjie_awesome-agent-harness.md"
         },
         {
           "id": "github:yunjuetech/yunjue-agent",
@@ -127,6 +145,15 @@
           "source_path": "raw-github/xai-liacs_llamea.md"
         },
         {
+          "id": "github:algorithmicsuperintelligence/openevolve",
+          "type": "github",
+          "title": "openevolve",
+          "url": "https://github.com/algorithmicsuperintelligence/openevolve",
+          "value_score": 86.62,
+          "value_class": "high-value-candidate",
+          "source_path": "raw-github/algorithmicsuperintelligence_openevolve.md"
+        },
+        {
           "id": "github:gepa-ai/gepa",
           "type": "github",
           "title": "gepa-ai/gepa",
@@ -143,33 +170,6 @@
           "value_score": 86.62,
           "value_class": "high-value-candidate",
           "source_path": "raw-github/gepa-ai_optimize-anything-artifact.md"
-        },
-        {
-          "id": "github:freedomintelligence/tiermem",
-          "type": "github",
-          "title": "Tiermem",
-          "url": "https://github.com/FreedomIntelligence/Tiermem",
-          "value_score": 86.31,
-          "value_class": "high-value-candidate",
-          "source_path": "raw-github/freedomintelligence_tiermem.md"
-        },
-        {
-          "id": "github:murataslan1/ai-agent-benchmark",
-          "type": "github",
-          "title": "AI Agent Benchmark",
-          "url": "https://github.com/murataslan1/ai-agent-benchmark",
-          "value_score": 86.31,
-          "value_class": "high-value-candidate",
-          "source_path": "raw-github/murataslan1_ai-agent-benchmark.md"
-        },
-        {
-          "id": "paper:2303-11366",
-          "type": "paper",
-          "title": "Reflexion: Language Agents with Verbal Reinforcement Learning",
-          "url": null,
-          "value_score": 86.31,
-          "value_class": "high-value-candidate",
-          "source_path": "raw-papers/2303-11366.md"
         }
       ]
     },

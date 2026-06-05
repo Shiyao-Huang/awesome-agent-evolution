@@ -50,13 +50,14 @@ export const nav = [
 export const navEn = [
   { href: '/en/', label: 'Start' },
   { href: '/en/topics/', label: 'Questions' },
+  { href: '/en/projects/', label: 'Projects' },
+  { href: '/en/reports/', label: 'Reports' },
+  { href: '/en/value-lsh/', label: 'Triage' },
   { href: '/en/topics/self-evolving-ai-agents/', label: 'Definition' },
   { href: '/en/topics/five-evolution-loops/', label: 'Five Loops' },
   { href: '/en/topics/code-evolution-benchmark/', label: 'Benchmark' },
   { href: '/en/paper/', label: 'Paper' },
   { href: '/resource-library/', label: 'Resources (ZH-first)' },
-  { href: '/reports/', label: 'Reports (gated)' },
-  { href: '/value-lsh/', label: 'Triage (ZH-first)' },
   { href: '/search/', label: 'Search' }
 ];
 
@@ -81,11 +82,13 @@ export const footerLinks = {
     { href: '/rss.xml', label: 'RSS' }
   ],
   en: [
+    { href: '/en/projects/', label: 'Projects evidence' },
+    { href: '/en/reports/', label: 'Reports status' },
+    { href: '/en/value-lsh/', label: 'Value triage' },
     { href: '/en/topics/self-evolving-ai-agents/', label: 'Definition' },
     { href: '/en/topics/five-evolution-loops/', label: 'Five loops' },
     { href: '/en/topics/code-evolution-benchmark/', label: 'Benchmark matrix' },
     { href: '/en/paper/', label: 'Paper status' },
-    { href: '/reports/', label: 'Review-gated reports' },
     { href: '/resource-library/', label: 'Resource coverage (ZH-first)' },
     { href: '/topics/', label: 'Chinese full topic map' },
     { href: site.github, label: 'GitHub repository' },

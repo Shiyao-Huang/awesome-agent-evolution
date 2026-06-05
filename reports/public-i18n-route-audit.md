@@ -1,6 +1,6 @@
 # Public I18N Route Audit
 
-Generated: 2026-06-05T12:48:28.863Z
+Generated: 2026-06-05T13:48:19.401Z
 
 Status: **INCOMPLETE**
 
@@ -12,13 +12,13 @@ Batch B bilingual route audit is not passed: only the core English path has pair
 
 | Metric | Count |
 |---|---:|
-| Sitemap URLs | 445 |
-| HTML routes checked | 445 |
-| English routes | 6 |
-| Chinese routes | 439 |
-| Chinese routes with English alternate | 6 |
-| English routes with Chinese alternate | 6 |
-| Chinese-first routes without English alternate | 433 |
+| Sitemap URLs | 968 |
+| HTML routes checked | 968 |
+| English routes | 14 |
+| Chinese routes | 954 |
+| Chinese routes with English alternate | 9 |
+| English routes with Chinese alternate | 9 |
+| Chinese-first routes without English alternate | 945 |
 | Noindex routes in sitemap | 0 |
 | Missing HTML routes | 0 |
 
@@ -31,9 +31,9 @@ Batch B bilingual route audit is not passed: only the core English path has pair
 | /topics/ | zh-CN | paired-or-self-declared | /en/topics/ | /topics/ | AI 自进化主题地图 — bilingual reader path for self-evolving agents |
 | /en/topics/ | en | paired-or-self-declared | /en/topics/ | /topics/ | Self-Evolving AI Agents Topic Guide — English reader path |
 | /paper/ | zh-CN | paired-or-self-declared | /en/paper/ | /paper/ | Self-Evolving AI Survey — 论文下载 &amp; 数据可视化 |
-| /projects/ | zh-CN | single-language-indexable |  | /projects/ | Self Evolve 项目索引 — GitHub 自进化 AI 仓库 |
-| /reports/ | zh-CN | single-language-indexable |  | /reports/ | Self Evolve 研究报告 — 项目深度分析与论文解读 |
-| /value-lsh/ | zh-CN | single-language-indexable |  | /value-lsh/ | Value LSH 证据分诊队列 — Self Evolve |
+| /projects/ | zh-CN | paired-or-self-declared | /en/projects/ | /projects/ | Self Evolve 项目索引 — GitHub 自进化 AI 仓库 |
+| /reports/ | zh-CN | paired-or-self-declared | /en/reports/ | /reports/ | Self Evolve 报告状态索引 — 可索引证据页与引用边界 |
+| /value-lsh/ | zh-CN | paired-or-self-declared | /en/value-lsh/ | /value-lsh/ | Value LSH 证据分诊队列 — Self Evolve |
 | /star-growth/ | zh-CN | single-language-indexable |  | /star-growth/ | 2026 GitHub Star 抓取试点 — Self Evolve |
 | /evolve-agi-index/ | zh-CN | single-language-indexable |  | /evolve-agi-index/ | Evolve-AGI Evidence Worksheet — Self Evolve |
 | /resource-library/ | zh-CN | single-language-indexable |  | /resource-library/ | Self-Evolving AI Agents 资料库 — Survey 证据源、项目报告与 Evolve-AGI Index |
@@ -48,10 +48,18 @@ Batch B bilingual route audit is not passed: only the core English path has pair
 |---|---|---|
 | /en/ | / | Self Evolve AI — English reader path for self-evolving agents |
 | /en/paper/ | /paper/ | Self-Evolving AI Survey Paper — English citation status |
+| /en/projects/ | /projects/ | Self Evolve Projects — GitHub evidence, not a quality ranking |
+| /en/reports/ | /reports/ | Self Evolve Reports — what is reviewed, what is still gated |
 | /en/topics/ | /topics/ | Self-Evolving AI Agents Topic Guide — English reader path |
 | /en/topics/code-evolution-benchmark/ | /topics/code-evolution-benchmark/ | Code Evolution Benchmark Matrix |
 | /en/topics/five-evolution-loops/ | /topics/five-evolution-loops/ | Five Evolution Loops for Self-Evolving AI Agents |
 | /en/topics/self-evolving-ai-agents/ | /topics/self-evolving-ai-agents/ | What Counts as a Self-Evolving AI Agent? |
+| /en/value-lsh/ | /value-lsh/ | Value LSH — evidence triage, not a final ranking |
+| /reports/survey-publication/01-field-map/ |  | Slice 01 — A Map of Self-Evolving AI Agents / Self Evolve Survey Publication |
+| /reports/survey-publication/02-true-vs-pseudo-evolution/ |  | Slice 02 — Which AI Agents Actually Self-Improve? / Self Evolve Survey Publication |
+| /reports/survey-publication/03-evaluation-bottleneck/ |  | Slice 03 — The Evaluation Problem in Self-Evolving AI Agents / Self Evolve Survey Publication |
+| /reports/survey-publication/04-demo-to-production-gap/ |  | Slice 04 — Why Self-Evolving Agents Break After the Demo / Self Evolve Survey Publication |
+| /reports/survey-publication/05-open-source-evidence-atlas/ |  | Slice 05 — An Evidence Atlas for Self-Evolving AI Projects / Self Evolve Survey Publication |
 
 ## Sample Chinese-First Routes Without English Alternate
 

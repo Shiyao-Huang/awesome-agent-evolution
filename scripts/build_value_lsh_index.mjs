@@ -931,6 +931,11 @@ const renderTable = (headers, rows) => {
 };
 
 const link = (label, url) => (url ? `[${String(label).replace(/\|/g, '/')}](${url})` : String(label).replace(/\|/g, '/'));
+const displayClass = (valueClass) => ({
+  'high-value-candidate': 'priority-review',
+  'needs-review': 'needs-review',
+  'low-signal-or-risk': 'repair-or-avoid-citing'
+}[valueClass] || valueClass);
 
 const renderMarkdown = ({ summary, rows, clusters, buckets, incremental }) => {
   const classCounts = summary.value_class_counts;
@@ -948,7 +953,7 @@ const renderMarkdown = ({ summary, rows, clusters, buckets, incremental }) => {
   md.push('');
   md.push('## Three Sentences');
   md.push('');
-  md.push(`This run scanned ${summary.total_materials} materials across GitHub, papers, social/X, and blogs, then generated ${summary.total_buckets} non-empty LSH buckets and ${summary.total_clusters} clusters. It does not pretend the hash is the final truth: the hash only finds near-neighbors, while the value score and evidence refs keep the ranking auditable. Incremental state is tracked in \`data-engine/value-lsh-index/manifest.json\`: ${incremental.added.length} added, ${incremental.changed.length} changed, ${incremental.removed.length} removed, ${incremental.unchanged_count} unchanged versus the previous run.`);
+  md.push(`This run scanned ${summary.total_materials} materials across GitHub, papers, social/X, and blogs, then generated ${summary.total_buckets} non-empty LSH buckets and ${summary.total_clusters} clusters. It does not pretend the hash is the final truth: the hash only finds near-neighbors, while the triage score and evidence refs keep the review queue auditable. Incremental state is tracked in \`data-engine/value-lsh-index/manifest.json\`: ${incremental.added.length} added, ${incremental.changed.length} changed, ${incremental.removed.length} removed, ${incremental.unchanged_count} unchanged versus the previous run.`);
   md.push('');
   md.push('## Why Discrete LSH');
   md.push('');
@@ -986,27 +991,27 @@ const renderMarkdown = ({ summary, rows, clusters, buckets, incremental }) => {
   md.push('');
   md.push(renderTable(['type', 'count'], Object.entries(typeCounts).sort((a, b) => b[1] - a[1])));
   md.push('');
-  md.push('## Value Class Counts');
+  md.push('## Review Class Counts');
   md.push('');
-  md.push(renderTable(['class', 'count'], Object.entries(classCounts).sort((a, b) => b[1] - a[1])));
+  md.push(renderTable(['class', 'count'], Object.entries(classCounts).sort((a, b) => b[1] - a[1]).map(([key, count]) => [displayClass(key), count])));
   md.push('');
   md.push('## Class Boundary');
   md.push('');
-  md.push('- `high-value-candidate`: value score >= 68 and no more than one negative contribution line.');
+  md.push('- `high-value-candidate`: legacy machine label for priority-review candidates; triage score >= 68 and no more than one negative contribution line.');
   md.push('- `needs-review`: mixed or incomplete evidence that should stay in the comparison pool.');
-  md.push('- `low-signal-or-risk`: value score <= 58 or at least three negative contribution lines; this means current-priority evidence is weak or risky, not that the material is permanently useless.');
+  md.push('- `low-signal-or-risk`: triage score <= 58 or at least three negative contribution lines; this means current-priority evidence is weak or risky, not that the material is permanently useless.');
   md.push('');
-  md.push('## Top High-Value Candidates');
+  md.push('## Top Priority Review Candidates');
   md.push('');
   md.push(renderTable(
-    ['rank', 'material', 'type', 'score', 'confidence', 'class', 'source'],
+    ['rank', 'material', 'type', 'triage score', 'tag coverage', 'review class', 'source'],
     high.map((row, index) => [
       index + 1,
       link(row.title || row.id, row.url),
       row.type,
       row.score.value_score,
       row.score.confidence,
-      row.score.value_class,
+      displayClass(row.score.value_class),
       row.source_path || ''
     ])
   ));
@@ -1014,7 +1019,7 @@ const renderMarkdown = ({ summary, rows, clusters, buckets, incremental }) => {
   md.push('## Risk / Contradiction Queue');
   md.push('');
   md.push(renderTable(
-    ['rank', 'material', 'type', 'score', 'negative tags', 'confidence', 'class', 'source'],
+    ['rank', 'material', 'type', 'triage score', 'negative tags', 'tag coverage', 'review class', 'source'],
     risk.map((row, index) => [
       index + 1,
       link(row.title || row.id, row.url),
@@ -1022,15 +1027,15 @@ const renderMarkdown = ({ summary, rows, clusters, buckets, incremental }) => {
       row.score.value_score,
       row.score.negative_tags,
       row.score.confidence,
-      row.score.value_class,
+      displayClass(row.score.value_class),
       row.source_path || ''
     ])
   ));
   md.push('');
-  md.push('## Largest Value Clusters');
+  md.push('## Largest Facet-Vector Clusters');
   md.push('');
   md.push(renderTable(
-    ['cluster', 'size', 'score avg', 'types', 'top tags', 'representatives'],
+    ['cluster', 'size', 'triage score avg', 'types', 'top tags', 'representatives'],
     clusters.slice(0, 20).map((cluster) => [
       cluster.cluster_id,
       cluster.size,

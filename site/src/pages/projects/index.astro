@@ -3,6 +3,7 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import { projects, projectGroups } from '@/data/projects';
 import { featuredResearch } from '@/data/research';
 import { site } from '@/data/site';
+import { publicCorpusStats } from '@/data/publicCorpusStats';
 
 const slugify = (value: string) => value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 const projectHref = (repo: string) => `/projects/${slugify(repo)}/`;
@@ -16,8 +17,29 @@ const paperHref = (url?: string) => {
 const normalize = (value = '') => value.toLowerCase().replace(/\s+/g, '');
 const rankedProjects = [...projects].sort((a, b) => Number(b.stars || 0) - Number(a.stars || 0));
 const rankByRepo = new Map(rankedProjects.map((project, index) => [project.repo.toLowerCase(), index + 1]));
-const totalStars = projects.reduce((sum, project) => sum + Number(project.stars || 0), 0);
 const recentProjects = [...projects].sort((a,b)=>new Date(b.lastPushed).valueOf()-new Date(a.lastPushed).valueOf()).slice(0,4);
+const readerPaths = [
+  {
+    title: '找真正的自进化闭环',
+    body: '先看项目改变了什么对象，再看反馈、验证、保留和回滚是否存在。',
+    href: '/en/topics/self-evolving-ai-agents/'
+  },
+  {
+    title: '找可运行的工程线索',
+    body: '优先检查 model card、源仓库、测试或 benchmark，再读 review-gated 报告。',
+    href: '/projects/modelscope-agentevolver/'
+  },
+  {
+    title: '找 2026 当前增长',
+    body: '累计 Star 只是历史可见性；当前阶段价值要看新增 star、push、release 和证据完整度。',
+    href: '/star-growth/'
+  },
+  {
+    title: '找 swarm / harness 进化',
+    body: '关注角色、拓扑、共享状态、验证器和 handoff 是否会随反馈改变。',
+    href: '/topics/five-evolution-loops/'
+  }
+];
 const relatedResearch = (project: (typeof projects)[number]) => {
   const projectTags = project.tags.map(normalize);
   const blob = normalize(`${project.name} ${project.repo} ${project.category} ${project.pattern} ${project.description} ${project.tags.join(' ')}`);
@@ -55,44 +77,56 @@ const groups = projectGroups.map((group) => {
   return { ...group, entries, groupStars };
 });
 
-const itemListLd = {
+const collectionLd = {
   '@context': 'https://schema.org',
-  '@type': 'ItemList',
+  '@type': 'CollectionPage',
   name: 'Self Evolve GitHub 项目索引',
-  description: '自进化 AI 的 GitHub 可见性与证据入口图谱，不是项目质量排名',
-  numberOfItems: projects.length,
-  itemListElement: rankedProjects.slice(0, 20).map((p, i) => ({
-    '@type': 'ListItem',
-    position: i + 1,
-    name: p.name,
-    url: `${site.url}/projects/${slugify(p.repo)}/`
-  }))
+  description: '自进化 AI 的 GitHub 证据入口图谱。累计 Star 顺序只是历史可见性线索，不是质量排名。',
+  url: `${site.url}/projects/`,
+  inLanguage: 'zh-CN',
+  isPartOf: { '@id': `${site.url}/#website` },
+  about: ['self-evolving AI agents', 'GitHub project evidence', 'AI agent model cards']
 };
 ---
-<BaseLayout title="Self Evolve 项目索引 — GitHub 自进化 AI 仓库" description="Self Evolve GitHub 项目索引，收录 OpenEvolve、AgentEvolver、Reflexion、Self-Refine 等自进化 AI 与 LLM 项目；Star 序号只是历史可见性信号，不是质量排名。">
-  <script type="application/ld+json" set:html={JSON.stringify(itemListLd)} is:inline />
+<BaseLayout title="Self Evolve 项目索引 — GitHub 自进化 AI 仓库" description="Self Evolve GitHub 项目索引，收录 OpenEvolve、AgentEvolver、Reflexion、Self-Refine 等自进化 AI 与 LLM 项目；Star 序号只是历史可见性信号，不是质量排名。" alternateZh="/projects/" alternateEn="/en/projects/">
+  <script type="application/ld+json" set:html={JSON.stringify(collectionLd)} is:inline />
   <section class="section">
     <div class="container">
       <div class="eyebrow">Projects / 项目索引</div>
-      <h1 class="gradient-text">自进化 AI 的 GitHub 实现图谱</h1>
-      <p class="lead">本页整合已落盘项目分析。中英信息指向同一条证据链：仓库、机制标签、报告入口和未复现边界。累计 Star 只表示历史 adoption prior，不能当作质量、学术价值或可运行性排名。</p>
+      <h1 class="gradient-text">哪些 AI Agent 项目真的留下了“被反馈改进过”的证据？</h1>
+      <p class="lead">本页不是仓库榜单，而是项目证据地图：先判断系统改了什么、谁验证、是否保留，再进入 model card、源仓库、自动关联论文线索和 review-gated 报告。</p>
       <div class="metrics">
-        <div class="metric"><strong>{projects.length}</strong><span>个已分析仓库</span></div>
-        <div class="metric"><strong>{totalStars.toLocaleString()}</strong><span>累计 Star / adoption prior</span></div>
+        <div class="metric"><strong>{publicCorpusStats.classifiedGithubRepos}</strong><span>classified GitHub repos</span></div>
+        <div class="metric"><strong>{projects.length}</strong><span>project cards / 证据卡</span></div>
+        <div class="metric"><strong>{publicCorpusStats.strictEvolutionRepos}</strong><span>strict evolution candidates</span></div>
         <div class="metric"><strong>{recentProjects[0]?.lastPushed.slice(0,10)}</strong><span>最近活跃项目日期</span></div>
       </div>
       <aside class="source-panel" aria-label="项目索引阅读边界">
         <div>
           <div class="eyebrow">Bilingual evidence path / 双语证据路径</div>
           <h2>这是项目证据入口，不是质量榜单</h2>
-          <p>每张卡先回答：项目是什么、它可能代表哪类自进化机制、证据从哪里来、哪些没有复现、下一步该读报告还是原仓库。</p>
-          <p><strong>English:</strong> Each entry points to the same evidence chain: repository, mechanism tag, report route, visible source trail, and non-reproduction boundary. Star order is only historical visibility, not project quality.</p>
+          <p>每张卡先回答：项目是什么、它可能代表哪类自进化机制、证据从哪里来、哪些没有复现、下一步该读证据卡、源仓库还是待审报告。</p>
+          <p><strong>English:</strong> Each entry points to the same evidence chain: repository, mechanism tag, model card, report route, visible source trail, and non-reproduction boundary. Star order is only historical visibility, not project quality.</p>
         </div>
         <div class="source-links">
+          <a href="/en/projects/">English guide</a>
           <a href="/evolve-agi-index/">查看证据指数边界</a>
           <a href="/reports/">查看报告索引</a>
         </div>
       </aside>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="section-head"><div><div class="eyebrow">Reader Path / 先按问题读</div><h2>先选你的判断任务，再进入完整目录</h2></div></div>
+      <div class="grid">
+        {readerPaths.map((path) => (
+          <article class="card">
+            <h3><a href={path.href}>{path.title}</a></h3>
+            <p>{path.body}</p>
+          </article>
+        ))}
+      </div>
     </div>
   </section>
   <section class="section">
@@ -103,14 +137,14 @@ const itemListLd = {
           <header class="card-title-row">
             <div>
               <h3>{group.title}</h3>
-              <p>{group.entries.length} repos · {group.groupStars.toLocaleString()} stars</p>
+              <p>{group.entries.length} repos · same mechanism family</p>
             </div>
           </header>
           <div class="project-link-list">
             {group.entries.map((entry) => entry.type === 'project' ? (
               <div class="project-link-row">
                 <a class="project-link-main" href={entry.project.href}>
-                  <span>Adoption prior #{String(entry.project.rank).padStart(3, '0')}</span>
+                  <span>Historical star-order signal #{String(entry.project.rank).padStart(3, '0')}</span>
                   <strong>{entry.project.name}</strong>
                   <em>{entry.project.repo}</em>
                 </a>
@@ -141,7 +175,7 @@ const itemListLd = {
   </section>
   <section class="section">
     <div class="container">
-      <div class="section-head"><div><div class="eyebrow">Repository Cards</div><h2>真实项目数据层</h2></div></div>
+      <div class="section-head"><div><div class="eyebrow">Repository Cards</div><h2>逐项复查：机制、证据、限制</h2></div></div>
       <div class="grid project-card-grid">
         {enrichedProjects.map((project)=><article class="card project-card">
           <div class="card-title-row">
@@ -149,7 +183,7 @@ const itemListLd = {
               <div class="eyebrow">{project.category}</div>
               <h3><a href={project.href}>{project.name}</a></h3>
             </div>
-            <span class="rank-badge">Adoption prior #{String(project.rank).padStart(3, '0')}</span>
+            <span class="rank-badge">Star-order signal #{String(project.rank).padStart(3, '0')}</span>
           </div>
           <p><a class="repo-link" href={project.url} target="_blank" rel="noopener">{project.repo}</a></p>
           <p>{project.description}</p>
@@ -166,15 +200,15 @@ const itemListLd = {
           {project.relatedPapers.length > 0 && (
             <div class="related-paper-row">
               {project.relatedPapers.map((paper) => (
-                <a class="pill" href={paperHref(paper.url)} target="_blank" rel="noopener">{paper.title}</a>
+                <a class="pill" href={paperHref(paper.url)} target="_blank" rel="noopener">auto paper clue: {paper.title}</a>
               ))}
             </div>
           )}
           <div class="card-actions">
-            <a class="button primary" href={project.href}>Model Card</a>
-            <a class="button" href={project.url} target="_blank" rel="noopener">GitHub</a>
-            <a class="button" href={project.reportHref}>Report</a>
-            {project.relatedPapers[0] && <a class="button" href={researchHref(project.relatedPapers[0].slug || project.relatedPapers[0].title)}>Research</a>}
+            <a class="button primary" href={project.href}>Evidence Card</a>
+            <a class="button" href={project.url} target="_blank" rel="noopener">Source Repo</a>
+            <a class="button" href={project.reportHref}>Review-gated Report</a>
+            {project.relatedPapers[0] && <a class="button" href={researchHref(project.relatedPapers[0].slug || project.relatedPapers[0].title)}>Auto-related Research</a>}
           </div>
         </article>)}
       </div>

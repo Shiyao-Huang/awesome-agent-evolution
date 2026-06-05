@@ -533,7 +533,7 @@ const defaultRegion = valueLshRegions[0];
               <strong>{representative.url ? <a href={representative.url} target="_blank" rel="noopener">{representative.title}</a> : representative.title}</strong>
               <button type="button" class="value-lsh-region-focus-button" data-region-focus-node={representative.id}>focus</button>
             </div>
-            <span>{representative.type} · triage score {representative.value_score.toFixed(2)} · confidence {representative.confidence.toFixed(2)}</span>
+            <span>{representative.type} · triage score {representative.value_score.toFixed(2)} · tag coverage {representative.confidence.toFixed(2)}</span>
           </li>
         ))}
       </ul>
@@ -583,7 +583,7 @@ const defaultRegion = valueLshRegions[0];
         </div>
         <div class="value-lsh-selected-metrics">
           <div><strong>{defaultNode.score.toFixed(2)}</strong><span>triage score</span></div>
-          <div><strong>{defaultNode.confidence.toFixed(2)}</strong><span>confidence</span></div>
+          <div><strong>{defaultNode.confidence.toFixed(2)}</strong><span>tag coverage</span></div>
           <div><strong>{defaultNode.embeddingCluster}</strong><span>k-means cluster</span></div>
         </div>
         <p>{defaultNode.rawUrl ? <a href={defaultNode.rawUrl} target="_blank" rel="noopener">{defaultNode.sourcePath || defaultNode.id}</a> : (defaultNode.sourcePath || defaultNode.id)}{defaultNode.lshCluster ? ` · ${defaultNode.lshCluster}` : ''}</p>
@@ -1050,7 +1050,7 @@ const defaultRegion = valueLshRegions[0];
               <strong>${renderLink(representative.url || null, representative.title)}</strong>
               <button type="button" class="value-lsh-region-focus-button" data-region-focus-node="${escapeHtml(representative.id)}">focus</button>
             </div>
-            <span>${escapeHtml(representative.type)} · triage score ${Number(representative.value_score).toFixed(2)} · confidence ${Number(representative.confidence).toFixed(2)}</span>
+            <span>${escapeHtml(representative.type)} · triage score ${Number(representative.value_score).toFixed(2)} · tag coverage ${Number(representative.confidence).toFixed(2)}</span>
           </li>
         `).join('');
       }
@@ -1084,7 +1084,7 @@ const defaultRegion = valueLshRegions[0];
           </div>
           <div class="value-lsh-selected-metrics">
             <div><strong>${Number(node.score).toFixed(2)}</strong><span>triage score</span></div>
-            <div><strong>${Number(node.confidence).toFixed(2)}</strong><span>confidence</span></div>
+            <div><strong>${Number(node.confidence).toFixed(2)}</strong><span>tag coverage</span></div>
             <div><strong>${escapeHtml(node.embeddingCluster)}</strong><span>k-means cluster</span></div>
           </div>
           <p>${sourcePath}${node.lshCluster ? ` · ${escapeHtml(node.lshCluster)}` : ''}</p>

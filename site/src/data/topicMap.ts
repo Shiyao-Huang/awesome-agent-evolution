@@ -168,7 +168,7 @@ export const topicClusters: TopicCluster[] = [
       { label: 'Value LSH analysis', href: 'https://github.com/Shiyao-Huang/awesome-agent-evolution/blob/main/analysis/value-lsh-index.md' },
       { label: 'Repair queue', href: 'https://github.com/Shiyao-Huang/awesome-agent-evolution/blob/main/analysis/value-evidence-repair-queue.md' },
     ],
-    nextAsset: '读 Value LSH 时，优先选择 top repair queue 项目，核对 source、facet、confidence 和待补证据。',
+    nextAsset: '读 Value LSH 时，优先选择 top repair queue 项目，核对 source、facet、标签覆盖度和待补证据。',
   },
   {
     id: 'production-pain-points',

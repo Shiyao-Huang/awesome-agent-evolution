@@ -93,9 +93,9 @@ const semanticClusters = valueLshEmbeddingClusters.slice(0, 6);
 const buckets = valueSnapshot.largest_buckets.slice(0, 6);
 const repoPath = `${site.github}/tree/main`;
 const evidenceBand = (confidence: number) => {
-  if (confidence >= 70) return '较稳';
-  if (confidence >= 45) return '待复核';
-  return '弱证据';
+  if (confidence >= 70) return 'heuristic trail stronger';
+  if (confidence >= 45) return 'partial trail';
+  return 'weak trail';
 };
 const scoreBand = (score: number) => {
   if (score >= 70) return '优先复核';
@@ -114,7 +114,7 @@ const jsonLd = {
   dateModified: valueSnapshot.generated_at,
   isPartOf: { '@id': `${site.url}/#website` },
   measurementTechnique: '-1/0/+1 triage facets, locality-sensitive hashing buckets, PCA/TSNE-ready embedding projection',
-  variableMeasured: ['triage_score', 'confidence', 'review_class', 'embedding_cluster', 'lsh_bucket'],
+  variableMeasured: ['triage_score', 'tag_coverage', 'review_class', 'embedding_cluster', 'lsh_bucket'],
 };
 ---
 
@@ -122,25 +122,38 @@ const jsonLd = {
   title="Value LSH 证据分诊队列 — Self Evolve"
   description="Self Evolve 的 Value LSH 是启发式证据分诊队列：当材料太多时，帮助决定先读哪些、先复核哪些、哪些暂时不要引用；它不是最终价值裁判。"
   pageKeywords={['Value LSH', '3D embedding graph', 'AI 自进化证据分诊', '局部敏感哈希', 'triage facet matrix']}
+  alternateZh="/value-lsh/"
+  alternateEn="/en/value-lsh/"
 >
   <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} is:inline />
 
   <section class="section value-lsh-hero">
     <div class="container">
       <div class="eyebrow">Evidence triage · heuristic queue</div>
-      <h1>材料太多时，先决定读哪 20 个、复核哪 20 个、哪些暂时不要引用。</h1>
+      <h1>材料太多时，先决定读哪一批、复核哪一批、哪些暂时不要引用。</h1>
       <p class="lead">Value LSH 是一个启发式分诊队列：用 26 个判断问题，把 {materialCountLabel} 条 GitHub、论文、社交/X 和博客材料分成“优先复核、需要复核、弱证据/风险”三类。</p>
-      <p class="value-lsh-caveat">方法边界：这里的 triage score 和 confidence 没有完成校准，也没有人工一致性验证；页面只用于排研究顺序，不能替代论文精读、项目运行验证或学术审查。<strong>English:</strong> This is a review queue, not a calibrated value judgment or final quality ranking.</p>
+      <p class="value-lsh-caveat">方法边界：这里的 triage score 和标签覆盖度没有完成校准，也没有人工一致性验证；页面只用于排研究顺序，不能替代论文精读、项目运行验证或学术审查。<strong>English:</strong> This is a review queue, not a calibrated value judgment or final quality ranking.</p>
       <div class="value-lsh-actions">
-        <a class="button primary" href={`${repoPath}/analysis/value-lsh-index.md`} target="_blank" rel="noopener">查看结果报告</a>
-        <a class="button" href={`${repoPath}/data-engine/value-lsh-index`} target="_blank" rel="noopener">数据集目录</a>
-        <a class="text-link" href="/visualizations/">其他可视化</a>
+        <a class="button primary" href="#priority-review">看优先复核候选</a>
+        <a class="button" href="#repair-queue">看证据修复队列</a>
+        <a class="text-link" href="/en/value-lsh/">English method boundary</a>
       </div>
     </div>
   </section>
 
   <section class="section value-lsh-graph-section">
     <div class="container">
+      <aside class="source-panel" aria-label="Value LSH 图谱阅读方式">
+        <div>
+          <div class="eyebrow">How to read this graph / 怎么读图</div>
+          <h2>先看区域，再看候选，最后回到源文件</h2>
+          <p>颜色和区域只是启发式分诊结果：它们回答“先读什么”和“哪里缺证据”，不是项目质量排名。距离、簇和标签覆盖度都来自 facet 向量，尚未完成校准或人工一致性验证。</p>
+        </div>
+        <div class="source-links">
+          <a href={`${repoPath}/analysis/value-lsh-index.md`} target="_blank" rel="noopener">查看生成报告</a>
+          <a href={`${repoPath}/data-engine/value-lsh-index`} target="_blank" rel="noopener">数据目录</a>
+        </div>
+      </aside>
       <div class="value-lsh-metrics" aria-label="Value LSH summary metrics">
         <div><strong>{summary.total_materials.toLocaleString()}</strong><span>materials</span></div>
         <div><strong>{summary.value_tag_count}</strong><span>triage facets</span></div>
@@ -159,6 +172,7 @@ const jsonLd = {
           <h2>先看哪一块空间，不再只看一堆散点。</h2>
         </div>
       </div>
+      <p class="lead">这些区域指标是 heuristic proxy：frontier 表示前沿性线索，attention 表示讨论/素材关注度，evidence density 表示证据链密度代理；它们不是外部验证过的学术指标。</p>
       <div class="value-region-grid">
         {regionRankings.map((region, index) => (
           <article class="value-region-panel">
@@ -176,7 +190,7 @@ const jsonLd = {
             <div class="value-region-metrics">
               <span>frontier {region.metrics.frontier.toFixed(2)}</span>
               <span>attention {region.metrics.attention.toFixed(2)}</span>
-              <span>evidence density {region.metrics.quality.toFixed(2)}</span>
+              <span>evidence-density proxy {region.metrics.quality.toFixed(2)}</span>
               <span>priority-review share {(region.metrics.highValueShare * 100).toFixed(0)}%</span>
             </div>
           </article>
@@ -235,7 +249,7 @@ const jsonLd = {
     </div>
   </section>
 
-  <section class="section" style="background: var(--surface-1);">
+  <section class="section" id="priority-review" style="background: var(--surface-1);">
     <div class="container">
       <div class="section-head">
         <div>
@@ -279,7 +293,7 @@ const jsonLd = {
     </div>
   </section>
 
-  <section class="section">
+  <section class="section" id="repair-queue">
     <div class="container value-lsh-grid">
       <div>
         <div class="section-head compact">
@@ -304,8 +318,8 @@ const jsonLd = {
       <div>
         <div class="section-head compact">
           <div>
-            <div class="eyebrow">Semantic Clusters</div>
-            <h2>把簇的含义提炼出来</h2>
+            <div class="eyebrow">Facet-vector clusters</div>
+            <h2>这些簇是启发式语义标签，不是学术分类</h2>
           </div>
         </div>
         <div class="value-clusters">
@@ -320,10 +334,10 @@ const jsonLd = {
                 {cluster.topPositiveFacets.slice(0, 4).map((tag) => <span>{tag.label}</span>)}
               </div>
               <div class="value-region-metrics">
-                <span>confidence {cluster.metrics.confidence.toFixed(1)}</span>
+                <span>tag coverage {cluster.metrics.confidence.toFixed(1)}</span>
                 <span>frontier {cluster.metrics.frontier.toFixed(2)}</span>
                 <span>attention {cluster.metrics.attention.toFixed(2)}</span>
-                <span>evidence density {cluster.metrics.quality.toFixed(2)}</span>
+                <span>evidence-density proxy {cluster.metrics.quality.toFixed(2)}</span>
               </div>
             </article>
           ))}
@@ -337,7 +351,7 @@ const jsonLd = {
       <div class="section-head">
         <div>
           <div class="eyebrow">Triage Facets</div>
-          <h2>这 26 条线决定每一次二分。</h2>
+          <h2>这 26 个判断问题如何帮读者筛材料。</h2>
         </div>
       </div>
       <div class="value-tags">
@@ -357,7 +371,7 @@ const jsonLd = {
       <div class="section-head">
         <div>
           <div class="eyebrow">Largest Buckets</div>
-          <h2>最宽的 LSH bucket 暴露了粗粒度标签。</h2>
+          <h2>最大的相似材料组也可能暴露粗标签误导。</h2>
         </div>
       </div>
       <div class="value-buckets">

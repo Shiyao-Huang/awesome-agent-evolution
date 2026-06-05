@@ -23,7 +23,7 @@ github:agent0ai/agent-zero,github,Agent Zero,84.08,73.08,high-value-candidate,1,
 github:agenta-ai/agenta,github,agenta,68.15,73.08,low-signal-or-risk,1,-1,1,0,1,1,1,1,1,1,1,-1,1,0,1,-1,0,0,0,1,1,0,1,1,1,0
 github:agentevals-dev/agentevals,github,AgentEvals.dev Benchmark Framework,72.29,61.54,needs-review,1,-1,1,0,1,0,0,1,1,1,1,1,1,1,1,-1,0,0,0,1,0,0,0,1,1,0
 github:agentic-in/elephant-agent,github,agentic-in/elephant-agent,76.43,57.69,high-value-candidate,1,1,1,0,1,1,0,1,1,1,0,0,1,1,0,-1,0,0,0,1,0,0,0,1,1,1
-github:agentmemoryworld/awesome-agent-memory,github,agentmemoryworld/awesome-agent-memory,72.61,53.85,high-value-candidate,1,0,1,0,0,1,0,1,1,0,0,0,1,1,1,-1,1,0,0,1,1,0,0,1,1,0
+github:agentmemoryworld/awesome-agent-memory,github,Awesome Agent Memory,77.39,73.08,needs-review,1,-1,1,0,1,1,0,1,1,1,1,1,1,1,1,-1,1,0,0,1,1,0,0,1,1,0
 github:agentralabs/agentic-memory,github,AgentraLabs Agentic Memory Runtime,74.52,65.38,needs-review,1,-1,1,0,1,1,0,1,1,1,1,1,1,1,1,-1,0,0,0,1,0,0,0,1,1,0
 github:agentreplay/agentreplay,github,agentreplay/agentreplay,73.57,53.85,high-value-candidate,1,0,1,1,1,1,0,1,1,1,0,0,1,0,1,-1,0,0,0,1,0,0,0,1,1,0
 github:agentscope-ai/reme,github,ReMe,76.43,69.23,needs-review,1,-1,1,1,1,1,0,1,1,1,1,1,1,1,1,-1,0,0,0,1,0,0,0,1,1,0
@@ -34,7 +34,7 @@ github:agiprolabs/claude-trading-skills,github,Claude Trading Skills,78.66,61.54
 github:agiresearch/a-mem,github,A-MEM Agentic Memory for LLM Agents,76.43,69.23,needs-review,1,-1,1,1,1,1,0,1,1,1,1,1,1,1,1,-1,0,0,0,1,0,0,0,1,1,0
 github:ai-agents-2030/darwin-mobile-agent,github,Darwin Mobile Agent,80.57,65.38,high-value-candidate,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1,-1,0,0,0,1,0,0,0,1,1,0
 github:ai-boost/awesome-ai-for-science,github,ai-boost/awesome-ai-for-science,64.33,38.46,needs-review,1,0,0,0,0,0,0,1,1,1,0,0,1,0,0,-1,1,0,0,1,1,0,0,1,0,0
-github:ai-boost/awesome-harness-engineering,github,ai-boost/awesome-harness-engineering,72.93,61.54,needs-review,1,0,1,0,1,1,1,1,1,1,0,0,1,0,1,-1,0,0,-1,1,1,0,0,1,1,0
+github:ai-boost/awesome-harness-engineering,github,ai-boost/awesome-harness-engineering,76.11,65.38,needs-review,1,1,1,0,1,1,1,1,1,1,0,0,1,0,1,-1,0,0,-1,1,1,0,0,1,1,0
 github:ai4co/awesome-fm4co,github,Awesome-FM4CO,73.25,53.85,high-value-candidate,1,0,1,0,1,0,0,1,1,1,1,1,1,0,0,-1,1,0,0,1,0,0,0,1,1,0
 github:ai4co/reevo,github,ReEvo,65.92,53.85,low-signal-or-risk,0,1,1,0,1,1,0,1,1,0,1,-1,1,0,0,-1,0,0,0,1,0,0,1,1,1,0
 github:ai4co/rl4co,github,RL4CO,68.47,61.54,low-signal-or-risk,0,1,1,0,1,1,1,1,1,0,1,-1,1,0,1,-1,0,0,0,1,1,0,1,1,0,0
@@ -51,7 +51,7 @@ github:aiwaves-cn/agents,github,agents,83.44,80.77,needs-review,1,1,1,1,1,1,0,1,
 github:akillness/oh-my-skills,github,akillness/oh-my-skills,68.47,46.15,high-value-candidate,1,0,1,0,0,0,0,1,1,1,0,0,1,1,1,-1,0,0,0,1,1,0,0,1,0,0
 github:alberto-codes/gepa-adk,github,alberto-codes/gepa-adk,78.66,61.54,high-value-candidate,1,1,1,0,1,1,1,1,1,1,0,0,1,1,1,-1,0,0,0,1,1,0,0,0,1,0
 github:alfa-group/tutorial_gp_llm,github,Tutorial-GP-LLM,62.74,50,low-signal-or-risk,0,1,1,0,1,0,1,1,1,0,1,-1,0,0,0,-1,0,0,1,1,0,0,1,1,0,0
-github:algorithmicsuperintelligence/openevolve,github,openevolve,85.03,76.92,high-value-candidate,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,-1,0,1,1,1,0,0,0,1,0,1
+github:algorithmicsuperintelligence/openevolve,github,openevolve,86.62,80.77,high-value-candidate,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,-1,1,0,1,1,0,0,0,1,1,1
 github:alibaizhanov/mengram,github,Mengram Human-Like Agent Memory,76.43,69.23,needs-review,1,-1,1,1,1,1,0,1,1,1,1,1,1,1,1,-1,0,0,0,1,0,0,0,1,1,0
 github:alienfader/continuity-benchmarks,github,Continuity Benchmarks,84.71,73.08,high-value-candidate,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,-1,0,1,0,1,0,0,0,1,1,0
 github:alirezarezvani/claude-skills,github,alirezarezvani/claude-skills,73.89,57.69,high-value-candidate,1,0,1,1,0,0,1,1,1,1,0,0,1,1,1,-1,0,0,0,1,1,0,0,1,1,0
@@ -62,20 +62,20 @@ github:ama-bench/ama-bench,github,ama-bench/ama-bench,76.75,61.54,high-value-can
 github:amap-ml/skillclaw,github,amap-ml/skillclaw,80.57,65.38,high-value-candidate,1,1,1,1,1,1,0,1,1,1,0,0,1,1,1,-1,1,0,0,1,1,0,0,0,1,0
 github:angrysky56/reflective-agent-architecture,github,angrysky56/reflective-agent-architecture,75.16,57.69,high-value-candidate,1,0,1,1,1,1,0,1,1,1,0,0,1,0,1,-1,0,0,1,1,0,0,0,1,1,0
 github:anthropics/anthropic-sdk-python,github,anthropics/anthropic-sdk-python,69.43,46.15,high-value-candidate,1,0,0,0,1,0,1,1,1,1,0,0,1,1,1,-1,0,0,0,1,1,0,0,0,0,0
-github:anthropics/skills,github,anthropics/skills,68.79,53.85,needs-review,1,0,1,0,0,0,0,1,1,1,0,0,1,1,1,-1,0,0,-1,1,1,0,0,1,1,0
+github:anthropics/skills,github,anthropics/skills,66.88,50,needs-review,1,0,1,0,0,0,0,1,1,1,0,0,1,1,1,-1,0,0,-1,1,1,0,0,1,0,0
 github:apify/agent-skills,github,Apify Agent Skills Library,73.57,65.38,needs-review,1,-1,1,0,1,0,0,1,1,1,1,1,1,1,1,-1,0,0,0,1,1,0,0,1,1,0
 github:arc-computer/cl-bench,github,Arc Continual Learning Benchmark,82.8,69.23,high-value-candidate,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,-1,0,0,0,1,0,0,0,1,1,0
 github:arcadeai/openclaw-arcade-plugin,github,OpenClaw Arcade Plugin,70.38,57.69,needs-review,1,-1,1,0,1,0,0,1,1,1,1,1,1,1,1,-1,0,0,0,1,0,0,0,1,0,0
 github:archishmansengupta/autovoiceevals,github,archishmansengupta/autovoiceevals,73.89,53.85,high-value-candidate,1,1,1,1,1,0,0,1,1,1,0,0,1,0,0,-1,0,1,0,1,0,0,0,1,0,1
 github:argus-framework/argus-ai-debate,github,argus-framework/argus-ai-debate,69.43,46.15,high-value-candidate,1,0,1,0,1,1,1,0,1,0,0,0,1,1,1,-1,0,0,0,1,1,0,0,0,0,0
-github:arthurmgraf/graphmind,github,arthurmgraf/graphmind,75.48,57.69,high-value-candidate,1,0,1,1,1,0,1,1,1,1,0,0,1,1,0,-1,0,1,0,1,0,0,0,1,1,0
+github:arthurmgraf/graphmind,github,GraphMind,70.06,57.69,needs-review,1,-1,0,1,1,0,0,1,1,1,1,1,1,0,1,-1,0,1,0,1,0,0,0,1,0,0
 github:arunagirinathan-k/awesome-ai-agents-2026,github,arunagirinathan-k/awesome-ai-agents-2026,74.84,57.69,high-value-candidate,1,0,1,1,1,1,0,1,1,1,0,0,1,0,1,-1,0,0,0,1,1,0,0,1,1,0
 github:arvid-pku/godel/agent,github,arvid-pku/godel/agent,79.94,65.38,high-value-candidate,1,1,1,1,1,0,1,1,1,1,0,0,1,1,1,-1,1,1,0,1,1,0,0,0,0,0
 github:ashish-kamboj/agentic-ai-workflows,github,ashish-kamboj/agentic-ai-workflows,74.52,57.69,high-value-candidate,1,0,1,1,0,1,0,1,1,1,0,0,1,1,1,-1,0,0,0,1,1,0,0,1,1,0
 github:asirwad/dspy-prompt-auto-optimizer,github,asirwad/dspy-prompt-auto-optimizer,75.48,57.69,high-value-candidate,1,1,1,0,1,0,0,1,1,1,0,0,1,0,1,-1,0,1,0,1,1,0,0,0,1,1
 github:autodrive-ecosystem/mrdt-marl,github,autodrive-ecosystem/mrdt-marl,62.74,34.62,needs-review,1,0,0,1,0,0,1,0,1,0,0,0,1,0,1,-1,1,0,0,1,0,0,0,0,0,0
 github:autohandai/code-cli,github,autohandai/code-cli,74.84,53.85,high-value-candidate,1,1,1,0,1,0,0,1,1,1,0,0,1,1,1,-1,0,0,0,1,0,0,0,1,1,0
-github:autojunjie/awesome-agent-harness,github,Awesome Agent Harness (AutoJunjie),81.53,76.92,needs-review,1,1,1,0,1,0,1,1,1,1,1,1,1,1,1,-1,1,0,-1,1,1,0,0,1,1,0
+github:autojunjie/awesome-agent-harness,github,Awesome Agent Harness (AutoJunjie),87.26,80.77,high-value-candidate,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,-1,1,0,0,1,1,0,0,1,1,0
 github:automl/auto-sklearn,github,auto-sklearn,71.34,69.23,low-signal-or-risk,0,1,1,0,1,0,1,1,1,1,1,-1,1,0,1,-1,0,0,1,1,1,0,1,1,1,0
 github:autox-ai-labs/autor,github,AutoR,83.76,73.08,high-value-candidate,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,-1,0,0,0,1,1,0,0,1,1,0
 github:axiomhq/agent-memory,github,Agent Memory,74.52,65.38,needs-review,1,-1,1,0,1,1,0,1,1,1,1,1,1,1,1,-1,0,0,0,1,0,0,0,1,1,0
@@ -84,7 +84,7 @@ github:bansky-cl/graphrag-arxiv-daily-paper,github,bansky-cl/graphrag-arxiv-dail
 github:bazilicum/graphltm,github,bazilicum/graphltm,73.89,53.85,high-value-candidate,1,0,1,1,1,1,0,1,1,1,0,0,1,0,0,-1,0,1,0,1,1,0,0,0,1,0
 github:beeevita/evoprompt,github,EvoPrompt,80.57,69.23,high-value-candidate,1,1,1,1,1,0,0,1,1,1,1,1,1,0,1,-1,1,0,1,1,0,0,0,1,0,1
 github:beita6969/scienceclaw,github,beita6969/scienceclaw,76.43,57.69,high-value-candidate,1,1,1,0,1,1,0,1,1,1,0,0,1,0,1,-1,1,0,0,1,0,0,0,1,1,0
-github:benchflow-ai/skillsbench,github,SkillsBench,75.16,69.23,needs-review,1,-1,1,0,1,0,0,1,1,1,1,1,1,1,1,-1,0,1,0,1,0,0,0,1,1,1
+github:benchflow-ai/skillsbench,github,SkillsBench,78.98,76.92,needs-review,1,-1,1,1,1,0,0,1,1,1,1,1,1,1,1,-1,0,1,1,1,1,0,0,1,1,0
 github:bennettschwartz/membrane,github,bennettschwartz/membrane,73.89,53.85,high-value-candidate,1,0,1,0,1,1,0,1,1,1,0,0,1,1,1,-1,0,0,0,1,0,0,0,1,1,0
 github:berriai/litellm,github,litellm,64.33,65.38,low-signal-or-risk,1,-1,0,0,1,1,1,1,1,1,1,-1,1,0,1,-1,0,0,0,1,1,0,1,1,0,0
 github:berriai/self-improving-agent,github,Self-Improving Agent,80.57,65.38,high-value-candidate,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1,-1,0,0,0,1,0,0,0,1,1,0
@@ -93,7 +93,7 @@ github:block/agent-skills,github,Agent Skills (Block),77.39,73.08,needs-review,1
 github:blockrunai/awesome-openclaw-money-maker,github,Awesome OpenClaw Money Maker Index,73.57,65.38,needs-review,1,-1,1,0,1,0,0,1,1,1,1,1,1,1,1,-1,0,0,0,1,1,0,0,1,1,0
 github:bobxwu/learning-from-rewards-llm-papers,github,bobxwu/learning-from-rewards-llm-papers,76.43,61.54,high-value-candidate,1,0,1,1,1,0,1,1,1,0,0,0,1,1,1,-1,1,1,0,1,1,0,0,1,0,0
 github:brain-research/guided-evolutionary-strategies,github,brain-research/guided-evolutionary-strategies,66.56,42.31,needs-review,1,0,0,0,0,1,0,1,1,0,0,0,1,0,0,-1,1,0,1,1,1,0,0,1,0,0
-github:browser-use/browser-harness,github,Browser Harness,72.29,61.54,needs-review,1,-1,1,0,1,0,0,1,1,1,1,1,1,1,1,-1,0,0,0,1,0,0,0,1,1,0
+github:browser-use/browser-harness,github,Browser Harness,71.66,61.54,needs-review,1,-1,1,0,1,0,0,1,1,1,1,1,1,1,1,-1,0,0,0,1,1,0,0,1,0,0
 github:browser-use/browser-use,github,browser-use/browser-use,73.89,61.54,needs-review,1,0,1,1,1,1,0,1,1,1,0,0,1,0,1,-1,0,1,-1,1,0,0,0,1,1,0
 github:browser-use/web-ui,github,browser-use/web-ui,73.57,53.85,high-value-candidate,1,0,1,1,1,1,0,1,1,1,0,0,1,0,1,-1,0,0,0,1,0,0,0,1,1,0
 github:bruno686/visplay,github,bruno686/visplay,74.52,53.85,high-value-candidate,1,1,1,1,1,0,1,1,1,0,0,0,1,0,1,-1,0,0,0,1,0,0,0,1,1,0
@@ -122,7 +122,7 @@ github:claw-bench/claw-bench,github,claw-bench/claw-bench,73.57,53.85,high-value
 github:claw-eval/claw-eval,github,claw-eval/claw-eval,72.93,53.85,high-value-candidate,1,0,0,1,1,0,1,1,1,1,0,0,1,0,1,-1,0,1,0,1,0,0,0,1,1,0
 github:clawbio/clawbio,github,clawbio/clawbio,75.48,57.69,high-value-candidate,1,0,1,1,1,1,0,1,1,1,0,0,1,0,1,-1,0,1,0,1,0,0,0,1,1,0
 github:clawdotnet/openclaw.net,github,clawdotnet/openclaw.net,74.84,53.85,high-value-candidate,1,1,1,0,1,1,0,1,1,1,0,0,1,0,1,-1,0,0,0,1,0,0,0,1,1,0
-github:clawland-ai/geneclaw,github,clawland-ai/geneclaw,77.71,61.54,high-value-candidate,1,1,1,0,1,1,1,1,1,1,0,0,1,0,1,-1,0,0,0,1,1,0,0,1,1,0
+github:clawland-ai/geneclaw,github,Geneclaw,79.62,65.38,high-value-candidate,1,1,0,0,1,0,1,1,1,1,1,1,1,1,1,-1,0,0,0,1,1,0,0,1,1,0
 github:clawsouls/soulclaw,github,SoulClaw OpenClaw Fork with Soul Memory,74.52,65.38,needs-review,1,-1,1,0,1,1,0,1,1,1,1,1,1,1,1,-1,0,0,0,1,0,0,0,1,1,0
 github:clint-kristopher-morris/llm-guided-evolution,github,clint-kristopher-morris/llm-guided-evolution,79.3,65.38,high-value-candidate,1,1,1,1,1,0,0,1,1,1,0,0,1,0,0,-1,1,1,1,1,1,0,0,1,1,0
 github:cloudllm-ai/mentisdb,github,MentisDB Agent Memory Graph Database,74.52,65.38,needs-review,1,-1,1,0,1,1,0,1,1,1,1,1,1,1,1,-1,0,0,0,1,0,0,0,1,1,0
@@ -156,6 +156,7 @@ github:deep-polyu/awesome-graphmemory,github,Awesome GraphMemory,77.39,73.08,nee
 github:deep-polyu/awesome-graphrag,github,deep-polyu/awesome-graphrag,75.16,57.69,high-value-candidate,1,0,1,0,1,1,0,1,1,1,0,0,1,1,0,-1,1,0,0,1,1,0,0,1,1,0
 github:deepauto-ai/automl-agent,github,AutoML-Agent,64.97,53.85,low-signal-or-risk,0,1,1,0,1,0,1,1,1,0,1,-1,1,0,0,-1,1,0,0,1,0,0,1,1,0,0
 github:deepelementlab/clawcode,github,deepelementlab/clawcode,80.25,65.38,high-value-candidate,1,1,1,1,1,1,0,1,1,1,0,0,1,1,1,-1,0,0,0,1,1,0,0,1,1,0
+github:desplega-ai/agent-swarm,github,Agent Swarm,77.71,73.08,needs-review,1,-1,1,1,1,1,0,1,1,1,1,1,1,1,1,-1,0,0,0,1,1,0,0,1,1,0
 github:developzir/gepa-mcp,github,developzir/gepa-mcp,76.11,57.69,high-value-candidate,1,1,1,1,1,0,0,1,1,1,0,0,1,1,0,-1,1,0,0,1,1,0,0,1,0,0
 github:diegosouzapw/awesome-omni-skills,github,diegosouzapw/awesome-omni-skills,72.61,53.85,high-value-candidate,1,0,1,0,1,0,1,1,1,1,0,0,1,1,1,-1,0,0,0,1,1,0,0,1,0,0
 github:dmgrok/agent_skills_directory,github,dmgrok/agent_skills_directory,74.2,57.69,high-value-candidate,1,0,1,1,1,0,1,1,1,1,0,0,1,0,1,-1,0,0,0,1,1,0,0,1,1,0
@@ -178,7 +179,7 @@ github:emartin59/text-game-llm-improver,github,emartin59/text-game-llm-improver,
 github:emson/elfmem,github,emson/elfmem,72.29,50,high-value-candidate,1,1,1,0,1,1,0,0,1,0,0,0,1,0,1,-1,0,0,1,1,0,0,0,1,1,0
 github:enajx/es,github,enajx/es,74.84,65.38,needs-review,1,1,1,1,1,0,0,1,1,1,0,0,1,0,1,-1,1,0,-1,1,1,0,0,1,0,1
 github:euphoria16/ui-genie,github,euphoria16/ui-genie,76.11,57.69,high-value-candidate,1,1,1,1,1,0,0,1,1,0,0,0,1,1,0,-1,1,0,1,1,1,0,0,1,0,0
-github:evalops/agent-harness,github,Agent Harness (EvalOps),72.29,61.54,needs-review,1,-1,1,0,1,0,0,1,1,1,1,1,1,1,1,-1,0,0,0,1,0,0,0,1,1,0
+github:evalops/agent-harness,github,Agent Harness (EvalOps),70.06,65.38,low-signal-or-risk,1,-1,1,0,1,0,0,1,1,1,1,1,1,1,1,-1,0,0,-1,1,1,0,0,1,0,0
 github:evalops/dspy-0to1-guide,github,evalops/dspy-0to1-guide,76.75,69.23,needs-review,1,1,1,1,1,0,1,1,1,1,0,0,1,0,1,-1,0,0,-1,1,1,0,0,1,1,1
 github:evalstate/fast-agent,github,evalstate/fast-agent,74.52,57.69,high-value-candidate,1,0,1,0,1,0,1,1,1,1,0,0,1,1,1,-1,0,0,0,1,1,0,0,1,1,0
 github:evermind-ai/everos,github,EverOS,82.17,69.23,high-value-candidate,1,1,1,0,1,1,0,1,1,1,1,1,1,1,1,-1,0,0,0,1,1,0,0,1,1,0
@@ -245,7 +246,7 @@ github:hkuds/openharness,github,hkuds/openharness,74.84,57.69,high-value-candida
 github:hkuds/openspace,github,hkuds/openspace,75.8,57.69,high-value-candidate,1,1,1,0,1,1,0,0,1,1,0,0,1,1,1,-1,0,0,0,1,1,0,0,1,1,0
 github:hkust-knowcomp/awesome-llm-scientific-discovery,github,hkust-knowcomp/awesome-llm-scientific-discovery,73.57,53.85,high-value-candidate,1,1,0,0,1,0,0,1,1,1,0,0,1,0,0,-1,1,0,1,1,1,0,0,1,1,0
 github:holaboss-ai/holaos,github,holaOS,82.8,69.23,high-value-candidate,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,-1,0,0,0,1,0,0,0,1,1,0
-github:howdymary/hermes-agent-metaharness,github,Hermes Agent Meta-Harness,80.25,73.08,needs-review,1,1,1,0,1,1,0,1,1,1,1,1,1,1,1,-1,0,0,-1,1,0,0,0,1,1,1
+github:howdymary/hermes-agent-metaharness,github,Hermes Benchmark Outer-Loop Harness,83.12,73.08,high-value-candidate,1,1,1,0,1,1,0,1,1,1,1,1,1,1,1,-1,0,0,0,1,1,0,0,1,1,1
 github:howells/arc,github,howells/arc,68.15,42.31,high-value-candidate,1,0,1,0,1,0,0,1,1,1,0,0,1,0,1,-1,0,0,0,1,0,0,0,0,1,0
 github:huggingface/agents-course,github,huggingface/agents-course,76.75,61.54,high-value-candidate,1,0,1,1,1,0,0,1,1,1,0,0,1,1,1,-1,0,1,0,1,1,0,0,1,1,0
 github:huggingface/skills,github,huggingface/skills,74.52,57.69,high-value-candidate,1,0,1,0,1,0,0,1,1,1,0,0,1,1,1,-1,1,0,0,1,1,0,0,1,1,0
@@ -254,7 +255,7 @@ github:human-agent-society/coral,github,human-agent-society/coral,78.98,61.54,hi
 github:humanitylabs-org/obsidianclaw,github,ObsidianClaw Knowledge Plugin,74.52,65.38,needs-review,1,-1,1,0,1,1,0,1,1,1,1,1,1,1,1,-1,0,0,0,1,0,0,0,1,1,0
 github:hust-ai-hyz/memoryagentbench,github,hust-ai-hyz/memoryagentbench,73.25,53.85,high-value-candidate,1,0,1,0,1,1,0,1,1,1,0,0,1,0,1,-1,1,0,0,1,0,0,0,1,1,0
 github:huytieu/cog-second-brain,github,huytieu/cog-second-brain,78.03,61.54,high-value-candidate,1,1,1,1,0,1,1,1,1,1,0,0,1,1,1,-1,0,0,0,1,1,0,0,0,1,0
-github:hwfengcs/dm-code-agent,github,hwfengcs/dm-code-agent,81.53,73.08,high-value-candidate,1,0,1,1,1,1,1,1,1,1,0,0,1,1,0,-1,1,1,0,1,1,0,0,1,1,1
+github:hwfengcs/dm-code-agent,github,DM-Code-Agent,76.11,61.54,high-value-candidate,1,0,1,1,1,0,0,1,1,1,1,1,1,0,1,-1,0,1,0,1,0,0,0,1,0,1
 github:hyperspell/hyperspell-openclaw,github,HyperSpell OpenClaw Memory Engine,80.89,65.38,high-value-candidate,1,1,1,0,1,1,0,1,1,1,1,1,1,1,1,-1,0,0,0,1,0,0,0,1,1,0
 github:ibm/awesome-agentic-workflow-optimization,github,ibm/awesome-agentic-workflow-optimization,75.48,61.54,high-value-candidate,1,1,1,0,1,0,1,0,1,1,0,0,1,0,0,-1,1,0,1,1,1,0,0,1,1,1
 github:icaros-usc/pyribs,github,pyribs,65.29,53.85,low-signal-or-risk,0,1,1,0,1,1,0,1,1,0,1,-1,1,0,0,-1,0,0,0,1,1,0,1,1,0,0
@@ -308,6 +309,7 @@ github:kodigitaccount/2026-roadmap-for-advance-ml-ai-generative-ai-agentic-ai,gi
 github:kodustech/awesome-agent-skills,github,Kodu Awesome Agent Skills,71.97,69.23,low-signal-or-risk,1,-1,1,0,1,0,0,1,1,1,1,1,1,1,1,-1,0,0,-1,1,1,0,0,1,1,0
 github:krzysztofdudek/researcherskill,github,krzysztofdudek/researcherskill,79.62,69.23,high-value-candidate,1,0,1,0,1,1,1,1,1,1,1,1,1,0,1,-1,1,0,0,1,0,0,0,1,1,1
 github:kweaver-ai/kweaver-core,github,KWeaver Core,71.97,61.54,needs-review,1,-1,0,1,1,0,0,1,1,1,1,1,1,1,1,-1,1,0,0,1,0,0,0,1,0,0
+github:kyegomez/swarms,github,Swarms,75.8,69.23,needs-review,1,-1,1,0,1,1,0,1,1,1,1,1,1,1,1,-1,0,0,0,1,1,0,0,1,1,0
 github:labicon/curricullm,github,labicon/curricullm,79.3,69.23,high-value-candidate,1,0,1,1,1,1,1,1,1,1,0,0,1,1,1,-1,1,0,0,1,1,0,0,1,0,1
 github:lamm-mit/sciagentsdiscovery,github,lamm-mit/sciagentsdiscovery,67.52,42.31,needs-review,1,1,0,1,0,0,0,0,1,0,0,0,1,0,0,-1,1,0,1,1,0,0,0,1,1,0
 github:langchain-ai/agentevals,github,LangChain AgentEvals Harness,75.16,69.23,needs-review,1,-1,1,0,1,0,1,1,1,1,1,1,1,1,1,-1,0,0,0,1,1,0,0,1,1,0
@@ -326,7 +328,8 @@ github:lean-dojo/leanagent,github,lean-dojo/leanagent,73.25,53.85,high-value-can
 github:learnprompt/cc-harness-skills,github,CC Harness Skills,74.2,65.38,needs-review,1,-1,1,1,1,0,0,1,1,1,1,1,1,1,1,-1,0,0,0,1,0,0,0,1,1,0
 github:legionio/lex-metacognition,github,legionio/lex-metacognition,75.16,57.69,high-value-candidate,1,0,1,1,0,1,0,1,1,1,0,0,1,1,1,-1,0,1,0,1,1,0,0,0,1,0
 github:leofan90/awesome-world-models,github,leofan90/awesome-world-models,61.15,30.77,needs-review,1,0,0,0,0,0,0,1,1,0,0,0,1,0,0,-1,1,0,0,0,1,0,0,1,0,0
-github:letta-ai/agentic-learning-sdk,github,letta-ai/agentic-learning-sdk,67.83,42.31,needs-review,1,0,1,0,0,1,0,1,1,1,0,0,1,0,1,-1,0,0,0,1,0,0,0,0,1,0
+github:letta-ai/agentic-learning-sdk,github,letta-ai/agentic-learning-sdk,50.64,34.62,low-signal-or-risk,0,0,1,0,0,1,0,0,0,1,0,-1,-1,0,0,-1,0,0,0,1,0,0,1,0,1,0
+github:letta-ai/learning-sdk,github,Learning SDK,76.11,76.92,low-signal-or-risk,1,-1,1,1,1,1,0,1,1,1,1,1,1,1,1,-1,0,0,-1,1,1,0,0,1,1,0
 github:letta-ai/letta,github,letta-ai/letta,78.03,61.54,high-value-candidate,1,1,1,0,1,1,1,1,1,1,0,0,1,0,1,-1,1,0,0,1,1,0,0,0,1,0
 github:lfleon9b/sakana-ai-scientist-v2,github,lfleon9b/sakana-ai-scientist-v2,74.84,57.69,high-value-candidate,1,1,1,1,0,0,1,1,1,1,0,0,1,0,1,-1,1,0,1,1,0,0,0,1,0,0
 github:lhl/agentic-memory,github,LHL Agentic Memory Module,80.89,65.38,high-value-candidate,1,1,1,0,1,1,0,1,1,1,1,1,1,1,1,-1,0,0,0,1,0,0,0,1,1,0
@@ -344,7 +347,7 @@ github:longyunfeigu/learn-hermes-agent,github,longyunfeigu/learn-hermes-agent,81
 github:lsdefine/genericagent,github,lsdefine/genericagent,73.25,57.69,needs-review,1,1,1,0,1,1,0,1,1,1,0,0,1,0,1,-1,0,0,-1,1,0,0,0,1,1,0
 github:ltzheng/curriculummarl,github,ltzheng/curriculummarl,69.11,46.15,high-value-candidate,1,0,1,1,0,0,0,1,1,0,0,0,1,1,1,-1,1,0,0,1,1,0,0,0,0,0
 github:luh-ai-devnerds/llm-guided-curriculum-rl,github,luh-ai-devnerds/llm-guided-curriculum-rl,75.16,61.54,high-value-candidate,1,0,1,1,1,0,0,1,1,1,0,0,1,0,1,-1,1,0,0,1,1,0,0,1,1,1
-github:luo-junyu/awesome-agent-papers,github,awesome-agent-papers,79.94,65.38,high-value-candidate,1,1,1,1,1,0,0,1,1,1,1,1,1,0,1,-1,1,0,0,1,0,0,0,1,1,0
+github:luo-junyu/awesome-agent-papers,github,awesome-agent-papers,82.17,69.23,high-value-candidate,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1,-1,1,0,0,1,0,0,0,1,1,0
 github:lyl1015/jarvisevo,github,lyl1015/jarvisevo,77.71,61.54,high-value-candidate,1,1,1,1,1,1,0,0,1,1,0,0,1,1,0,-1,1,0,0,1,1,0,0,1,1,0
 github:machuangtao/llm-kg4qa,github,machuangtao/llm-kg4qa,63.69,38.46,needs-review,1,0,1,0,0,0,0,0,1,1,0,0,1,0,0,-1,1,0,0,1,1,0,0,1,0,0
 github:madaan/self-refine,github,self-refine,75.8,69.23,needs-review,1,0,1,1,1,0,0,1,1,1,1,1,1,0,1,-1,1,0,0,1,0,0,1,1,1,1
@@ -364,7 +367,7 @@ github:mckruz/openclaw-langfuse,github,OpenClaw Langfuse Observability Plugin,75
 github:mdalamin5/end-to-end-agentic-ai-automation-lab,github,mdalamin5/end-to-end-agentic-ai-automation-lab,73.25,53.85,high-value-candidate,1,0,1,0,1,1,1,1,1,1,0,0,1,0,1,-1,0,0,0,1,0,0,0,1,1,0
 github:meituan/evocua,github,meituan/evocua,78.34,61.54,high-value-candidate,1,1,1,1,1,0,0,1,1,1,0,0,1,1,1,-1,1,0,0,1,1,0,0,0,1,0
 github:mem0ai/mem0,github,mem0ai/mem0,71.66,50,high-value-candidate,1,0,1,0,1,1,0,1,1,1,0,0,1,0,1,-1,0,0,0,1,0,0,0,1,1,0
-github:mem0ai/memory-benchmarks,github,mem0ai/memory-benchmarks,75.48,57.69,high-value-candidate,1,0,1,1,1,1,0,1,1,1,0,0,1,0,1,-1,0,1,0,1,0,0,0,1,1,0
+github:mem0ai/memory-benchmarks,github,mem0ai/memory-benchmarks,75.16,57.69,high-value-candidate,1,0,1,0,1,1,0,1,1,1,0,0,1,1,1,-1,0,0,0,1,1,0,0,1,1,0
 github:mem9-ai/mem9,github,mem9,74.52,65.38,needs-review,1,-1,1,0,1,1,0,1,1,1,1,1,1,1,1,-1,0,0,0,1,0,0,0,1,1,0
 github:memento-teams/memento-skills,github,memento-teams/memento-skills,83.76,73.08,high-value-candidate,1,1,1,1,1,1,1,1,1,1,0,0,1,1,1,-1,0,1,0,1,1,0,0,1,1,0
 github:memodb-io/acontext,github,Acontext,76.43,69.23,needs-review,1,-1,1,1,1,1,0,1,1,1,1,1,1,1,1,-1,0,0,0,1,0,0,0,1,1,0
@@ -387,7 +390,7 @@ github:mgechev/skills-best-practices,github,Skills Best Practices,83.44,73.08,hi
 github:microsoft/agent-lightning,github,Agent Lightning,80.57,65.38,high-value-candidate,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1,-1,0,0,0,1,0,0,0,1,1,0
 github:microsoft/autogen,github,AutoGen,65.29,69.23,low-signal-or-risk,1,-1,0,0,1,1,1,1,1,1,1,-1,1,0,1,-1,0,0,0,1,1,0,1,1,0,1
 github:microsoft/coml,github,CoML,58.92,53.85,low-signal-or-risk,-1,0,1,1,1,0,0,1,1,0,1,-1,1,0,0,-1,0,0,0,1,0,0,1,1,0,1
-github:microsoft/skillopt,github,SkillOpt,82.17,69.23,high-value-candidate,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1,-1,1,0,0,1,0,0,0,1,1,0
+github:microsoft/skillopt,github,SkillOpt,83.76,73.08,high-value-candidate,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,-1,1,0,0,1,1,0,0,1,0,0
 github:microsoft/skills,github,microsoft/skills,72.93,61.54,needs-review,1,0,1,0,1,0,1,1,1,1,0,0,1,1,1,-1,0,0,-1,1,1,0,0,1,1,0
 github:microsoft/state-bench,github,microsoft/state-bench,76.75,61.54,high-value-candidate,1,0,1,0,1,1,1,1,1,1,0,0,1,1,1,-1,0,0,0,1,1,0,0,1,1,0
 github:microsoft/waza,github,Waza,78.66,61.54,high-value-candidate,1,1,1,1,1,0,0,1,1,1,1,1,1,1,1,-1,0,0,0,1,0,0,0,1,0,0
@@ -412,7 +415,7 @@ github:n8n-io/n8n,github,n8n,78.34,76.92,needs-review,1,-1,1,0,1,1,1,1,1,1,1,1,1
 github:naivoder/mctsr,github,naivoder/mctsr,71.02,50,high-value-candidate,1,0,1,1,1,0,0,1,1,0,0,0,1,1,1,-1,0,0,0,1,1,0,0,0,0,1
 github:najeed/ai-agent-eval-harness,github,MultiAgentEval Enterprise Harness,74.2,65.38,needs-review,1,-1,1,1,1,0,0,1,1,1,1,1,1,1,1,-1,0,0,0,1,0,0,0,1,1,0
 github:nemori-ai/nemori,github,Nemori,76.43,69.23,needs-review,1,-1,1,1,1,1,0,1,1,1,1,1,1,1,1,-1,0,0,0,1,0,0,0,1,1,0
-github:neo4j-labs/agent-memory,github,neo4j-labs/agent-memory,75.16,57.69,high-value-candidate,1,0,1,1,1,1,1,1,1,1,0,0,1,0,1,-1,0,0,0,1,0,0,0,1,1,0
+github:neo4j-labs/agent-memory,github,neo4j-labs/agent-memory,77.07,61.54,high-value-candidate,1,0,1,1,1,1,0,1,1,1,0,0,1,1,1,-1,0,0,0,1,1,0,0,1,1,0
 github:neosigmaai/auto-harness,github,neosigmaai/auto-harness,77.71,69.23,needs-review,1,1,1,1,1,0,1,1,1,1,0,0,1,1,1,-1,0,1,-1,1,0,0,0,1,0,1
 github:nevamind-ai/memu,github,nevamind-ai/memu,71.34,50,high-value-candidate,1,0,1,0,0,1,0,1,1,1,0,0,1,1,1,-1,0,0,0,1,1,0,0,0,1,0
 github:ngoodman/metaprompt,github,ngoodman/metaprompt,73.89,53.85,high-value-candidate,1,1,1,1,1,0,0,0,1,0,0,0,1,1,1,-1,0,0,0,1,1,0,0,1,1,0
@@ -439,14 +442,14 @@ github:onewave-ai/claude-skills,github,onewave-ai/claude-skills,68.15,46.15,high
 github:open-gitagent/gitagent,github,Gitagent,80.89,65.38,high-value-candidate,1,1,1,0,1,1,0,1,1,1,1,1,1,1,1,-1,0,0,0,1,0,0,0,1,1,0
 github:open-webui/open-webui,github,open-webui,64.97,65.38,low-signal-or-risk,1,-1,0,0,1,1,0,1,1,1,1,-1,1,1,1,-1,0,0,0,1,1,0,1,1,0,0
 github:openai/skills,github,openai/skills,71.02,50,high-value-candidate,1,0,1,0,1,0,0,1,1,1,0,0,1,1,1,-1,0,0,0,1,1,0,0,1,0,0
-github:openai/swarm,github,OpenAI Swarm,78.66,61.54,high-value-candidate,1,1,1,0,1,0,0,1,1,1,1,1,1,1,1,-1,0,0,0,1,0,0,0,1,1,0
+github:openai/swarm,github,OpenAI Swarm,74.52,69.23,needs-review,1,-1,1,0,1,0,0,1,1,1,1,1,1,1,1,-1,0,0,0,1,1,0,0,1,1,1
 github:openautocoder/live-swe-agent,github,openautocoder/live-swe-agent,76.75,57.69,high-value-candidate,1,1,0,1,1,1,0,1,1,0,0,0,1,1,1,-1,0,1,0,1,1,0,0,1,0,0
 github:openbmb/agentverse,github,AgentVerse,64.33,53.85,low-signal-or-risk,0,0,1,0,1,1,0,1,1,0,1,-1,1,0,1,-1,0,0,0,1,0,0,1,1,1,0
 github:openbmb/chatdev,github,chatdev,66.56,57.69,low-signal-or-risk,1,0,1,0,1,1,0,1,1,1,1,-1,1,0,1,-1,0,0,0,1,0,0,1,1,0,0
 github:openbmb/clawxmemory,github,ClawXMemory,76.43,69.23,needs-review,1,-1,1,1,1,1,0,1,1,1,1,1,1,1,1,-1,0,0,0,1,0,0,0,1,1,0
 github:openbmb/edgeclaw,github,openbmb/edgeclaw,76.75,61.54,high-value-candidate,1,0,1,0,1,1,1,1,1,1,0,0,1,1,1,-1,0,0,0,1,1,0,0,1,1,0
 github:openclaw/acpx,github,ACPX,80.89,65.38,high-value-candidate,1,1,1,0,1,1,0,1,1,1,1,1,1,1,1,-1,0,0,0,1,0,0,0,1,1,0
-github:openclaw/clawbench,github,openclaw/clawbench,77.71,65.38,high-value-candidate,1,0,1,1,1,0,0,1,1,1,0,0,1,1,1,-1,0,1,0,1,1,0,0,1,1,1
+github:openclaw/clawbench,github,ClawBench,75.48,69.23,needs-review,1,-1,0,1,1,0,0,1,1,1,1,1,1,1,1,-1,0,1,0,1,1,0,0,1,1,0
 github:openclaw/clawhub,github,OpenClaw ClawHub,73.57,65.38,needs-review,1,-1,1,0,1,0,0,1,1,1,1,1,1,1,1,-1,0,0,0,1,1,0,0,1,1,0
 github:openclaw/clownfish,github,Clownfish,73.57,65.38,needs-review,1,-1,1,0,1,0,0,1,1,1,1,1,1,1,1,-1,0,0,0,1,1,0,0,1,1,0
 github:openclaw/crabbox,github,Crabbox,74.2,65.38,needs-review,1,-1,1,1,1,0,0,1,1,1,1,1,1,1,1,-1,0,1,0,1,0,0,0,1,0,0
@@ -494,7 +497,7 @@ github:plaited/agent-eval-harness,github,Plaited Agent Eval Harness,71.66,61.54,
 github:plastic-labs/honcho,github,plastic-labs/honcho,67.83,42.31,needs-review,1,0,1,0,0,1,0,1,1,1,0,0,1,0,1,-1,0,0,0,1,0,0,0,0,1,0
 github:polarseeker/openseeker,github,polarseeker/openseeker,78.03,65.38,high-value-candidate,1,0,1,1,1,0,1,1,1,1,0,0,1,1,1,-1,1,1,0,1,1,0,0,1,0,0
 github:polya20/textgrad,github,polya20/textgrad,71.34,50,high-value-candidate,1,0,1,1,1,0,0,1,1,1,0,0,1,0,1,-1,0,0,0,1,0,0,0,1,1,0
-github:princeton-nlp/swe-agent,github,SWE-Agent,71.02,69.23,low-signal-or-risk,1,0,1,1,1,1,0,1,1,0,1,-1,1,0,1,-1,0,1,0,1,1,0,1,1,0,1
+github:princeton-nlp/swe-agent,github,SWE-Agent,72.61,73.08,low-signal-or-risk,1,0,1,1,1,1,0,1,1,0,1,-1,1,0,1,-1,1,1,0,1,1,0,1,1,0,1
 github:princeton-pli/hal-harness,github,princeton-pli/hal-harness,71.34,50,high-value-candidate,1,0,0,1,1,0,0,1,1,1,0,0,1,0,1,-1,0,1,0,1,0,0,0,1,1,0
 github:privkeyio/evolve-mcp,github,privkeyio/evolve-mcp,79.94,65.38,high-value-candidate,1,1,1,1,1,1,1,1,1,1,0,0,1,0,1,-1,0,1,0,1,0,0,0,0,1,1
 github:psenger/ai-agent-skills,github,psenger/ai-agent-skills,74.52,57.69,high-value-candidate,1,0,1,0,1,0,1,1,1,1,0,0,1,1,1,-1,0,0,0,1,1,0,0,1,1,0
@@ -515,7 +518,7 @@ github:randroids-dojo/skills,github,randroids-dojo/skills,71.02,50,high-value-ca
 github:rangeking/self-evolving-agent,github,self-evolving-agent,79.62,65.38,high-value-candidate,1,1,1,0,1,0,1,1,1,1,1,1,1,1,1,-1,0,0,0,1,1,0,0,1,0,0
 github:raphaelchristi/harness-evolver,github,raphaelchristi/harness-evolver,77.07,65.38,needs-review,1,1,1,0,1,1,1,1,1,1,0,0,1,1,1,-1,0,0,-1,1,1,0,0,0,1,0
 github:razroo/state-trace,github,state-trace,76.43,69.23,needs-review,1,-1,1,1,1,1,0,1,1,1,1,1,1,1,1,-1,0,0,0,1,0,0,0,1,1,0
-github:redis/agent-memory-server,github,Redis Agent Memory Server,74.52,65.38,needs-review,1,-1,1,0,1,1,0,1,1,1,1,1,1,1,1,-1,0,0,0,1,0,0,0,1,1,0
+github:redis/agent-memory-server,github,Redis Agent Memory Server,75.8,69.23,needs-review,1,-1,1,0,1,1,0,1,1,1,1,1,1,1,1,-1,0,0,0,1,1,0,0,1,1,0
 github:reflexioai/reflexio,github,reflexioai/reflexio,77.71,61.54,high-value-candidate,1,1,1,1,1,1,0,1,1,1,0,0,1,0,1,-1,0,0,0,1,0,0,0,1,1,1
 github:regenrek/codex-1up,github,regenrek/codex-1up,65.61,46.15,needs-review,1,0,1,0,0,0,0,1,1,1,0,0,1,1,1,-1,0,0,-1,1,1,0,0,0,0,0
 github:rendro/sediment,github,rendro/sediment,71.66,50,high-value-candidate,1,0,1,0,1,1,0,1,1,1,0,0,1,0,1,-1,0,0,0,1,0,0,0,1,1,0
@@ -533,8 +536,8 @@ github:rohitg00/agentmemory,github,rohitg00/agentmemory,74.52,53.85,high-value-c
 github:rohitg00/awesome-openclaw,github,Awesome OpenClaw Plugin Index (rohitg00),82.17,69.23,high-value-candidate,1,1,1,0,1,1,0,1,1,1,1,1,1,1,1,-1,0,0,0,1,1,0,0,1,1,0
 github:ronit26mehta/argus-ai-debate,github,ronit26mehta/argus-ai-debate,60.51,26.92,needs-review,1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,-1,0,0,1,0,0,0,0,0,1,0
 github:rtk-ai/icm,github,rtk-ai/icm,71.66,50,high-value-candidate,1,0,1,0,1,1,0,1,1,1,0,0,1,0,1,-1,0,0,0,1,0,0,0,1,1,0
-github:rucbm/laser,github,rucbm/laser,81.53,73.08,high-value-candidate,1,0,1,1,1,1,0,1,1,1,0,0,1,1,1,-1,1,1,0,1,1,0,0,1,1,1
-github:ryanalberts/best-of-agent-harnesses,github,Best of Agent Harnesses,81.85,69.23,high-value-candidate,1,1,0,1,1,0,0,1,1,1,1,1,1,1,1,-1,0,1,0,1,1,0,0,1,1,0
+github:rucbm/laser,github,LaSeR,77.39,73.08,needs-review,1,-1,1,1,1,1,0,1,1,1,1,1,1,1,1,-1,1,0,0,1,1,0,0,1,0,0
+github:ryanalberts/best-of-agent-harnesses,github,Best of Agent Harnesses,85.99,76.92,high-value-candidate,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,-1,0,1,0,1,1,0,0,1,1,0
 github:sachinsharma9780/memweave,github,MemWeave,84.08,73.08,high-value-candidate,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,-1,0,0,0,1,1,0,0,1,1,0
 github:sakanaai/ai-scientist,github,sakanaai/ai-scientist,69.43,53.85,needs-review,1,0,1,1,1,0,0,1,1,1,0,0,1,0,1,-1,1,0,-1,1,0,0,0,1,0,0
 github:sakanaai/ai-scientist-v2,github,sakanaai/ai-scientist-v2,74.84,57.69,high-value-candidate,1,1,1,1,0,0,1,1,1,1,0,0,1,0,1,-1,1,0,1,1,0,0,0,1,0,0
@@ -567,6 +570,7 @@ github:shingo257/gitnexus,github,shingo257/gitnexus,75.48,57.69,high-value-candi
 github:shinpr/mcp-local-rag,github,shinpr/mcp-local-rag,76.75,61.54,high-value-candidate,1,0,1,0,1,1,1,1,1,1,0,0,1,1,1,-1,0,0,0,1,1,0,0,1,1,0
 github:shintaro-sprech/agent-orchestrator-template,github,shintaro-sprech/agent-orchestrator-template,69.75,53.85,needs-review,1,1,1,0,0,0,0,1,1,1,0,0,1,0,1,-1,0,0,-1,1,1,0,0,1,1,0
 github:shiqichen17/spa,github,shiqichen17/spa,70.06,50,high-value-candidate,1,0,1,1,0,1,1,0,1,0,0,0,1,0,1,-1,0,1,0,1,0,0,0,0,1,1
+github:shiyao-huang/awesome-agent-evolution,github,shiyao-huang/awesome-agent-evolution,76.11,65.38,needs-review,1,1,1,0,1,1,0,1,1,1,0,0,1,0,1,-1,1,0,-1,1,1,0,0,1,1,0
 github:sibyl-research-team/sibyl-research-system,github,sibyl-research-team/sibyl-research-system,78.66,65.38,high-value-candidate,1,1,1,1,1,1,0,0,1,1,0,0,1,1,0,-1,1,0,0,1,1,0,0,1,1,1
 github:siddharth-1001/agent-eval-harness,github,siddharth-1001/agent-eval-harness,71.34,57.69,needs-review,1,0,1,1,1,0,1,1,1,1,0,0,1,0,1,-1,0,0,-1,1,0,0,0,1,1,0
 github:signet-ai/signetai,github,signet-ai/signetai,75.48,57.69,high-value-candidate,1,0,1,1,1,1,0,1,1,1,0,0,1,0,1,-1,0,1,0,1,0,0,0,1,1,0
@@ -580,7 +584,7 @@ github:smiles724/awesome-llm-rlvr,github,smiles724/awesome-llm-rlvr,63.06,34.62,
 github:smol-ai/developer,github,smol-developer,54.46,46.15,low-signal-or-risk,0,-1,1,0,0,0,0,1,1,0,1,-1,1,0,1,-1,0,0,0,1,0,0,1,1,0,0
 github:snowflake-labs/agent-world-model,github,snowflake-labs/agent-world-model,73.89,53.85,high-value-candidate,1,1,1,1,0,0,0,1,1,1,0,0,1,1,1,-1,1,0,0,1,1,0,0,0,0,0
 github:soimy/openclaw-channel-dingtalk,github,OpenClaw DingTalk Channel Plugin,75.8,69.23,needs-review,1,-1,1,0,1,1,0,1,1,1,1,1,1,1,1,-1,0,0,0,1,1,0,0,1,1,0
-github:sola-st/repairagent,github,sola-st/repairagent,75.8,57.69,high-value-candidate,1,0,1,1,1,1,0,1,1,1,0,0,1,1,1,-1,0,0,0,1,0,0,0,1,1,0
+github:sola-st/repairagent,github,RepairAgent,70.06,57.69,needs-review,1,-1,1,0,1,0,0,1,1,1,1,1,1,0,1,-1,0,0,0,1,0,0,0,1,1,0
 github:sourcegraph/codescalebench,github,CodeScaleBench,75.16,69.23,needs-review,1,-1,1,1,1,0,0,1,1,1,1,1,1,1,1,-1,0,0,0,1,0,0,0,1,1,1
 github:spillwavesolutions/agent-brain,github,spillwavesolutions/agent-brain,71.66,50,high-value-candidate,1,0,1,0,1,0,0,1,1,1,0,0,1,1,1,-1,0,0,0,1,0,0,0,1,1,0
 github:spiral-rl/spiral,github,spiral-rl/spiral,76.43,61.54,high-value-candidate,1,0,1,1,1,0,1,1,1,0,0,0,1,1,1,-1,1,1,0,1,1,0,0,1,0,0
@@ -603,7 +607,7 @@ github:superagenticai/metaharness,github,Meta Harness,84.71,73.08,high-value-can
 github:supermemoryai/supermemory,github,Supermemory,80.89,65.38,high-value-candidate,1,1,1,0,1,1,0,1,1,1,1,1,1,1,1,-1,0,0,0,1,0,0,0,1,1,0
 github:suyoumo/clawprobench,github,ClawProBench,72.29,61.54,needs-review,1,-1,0,0,1,0,0,1,1,1,1,1,1,1,1,-1,0,1,0,1,0,0,0,1,1,0
 github:swapedoc/hermes2anti,github,hermes2anti,85.67,76.92,high-value-candidate,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,-1,0,0,0,1,1,0,0,1,1,0
-github:swarmclawai/swarmclaw,github,swarmclawai/swarmclaw,75.16,57.69,high-value-candidate,1,0,1,0,1,1,0,1,1,1,0,0,1,1,1,-1,0,0,0,1,1,0,0,1,1,0
+github:swarmclawai/swarmclaw,github,swarmclaw,75.8,69.23,needs-review,1,-1,1,0,1,1,0,1,1,1,1,1,1,1,1,-1,0,0,0,1,1,0,0,1,1,0
 github:swe-agent/swe-agent,github,swe-agent/swe-agent,70.06,50,high-value-candidate,1,0,1,0,1,0,1,0,1,0,0,0,1,1,1,-1,1,0,0,1,1,0,0,1,0,0
 github:swe-bench/swe-bench,github,swe-bench,73.57,65.38,needs-review,1,-1,1,0,1,0,0,1,1,1,1,1,1,1,1,-1,0,1,0,1,1,0,0,1,0,0
 github:synaptent/aragora,github,synaptent/aragora,81.85,73.08,high-value-candidate,1,0,1,0,1,1,1,1,1,1,1,1,1,1,1,-1,0,0,1,1,0,0,0,1,1,1
@@ -644,7 +648,7 @@ github:tylerdotai/meta-harness-evolver,github,tylerdotai/meta-harness-evolver,84
 github:tzussman/openevolve,github,tzussman/openevolve,75.48,57.69,high-value-candidate,1,1,1,1,1,0,0,1,1,0,0,0,1,0,1,-1,0,1,1,1,0,0,0,1,0,1
 github:uid4oe/insight-swarm,github,uid4oe/insight-swarm,66.24,38.46,needs-review,1,0,1,1,0,0,0,1,1,0,0,0,1,1,1,-1,0,0,0,1,0,0,0,0,0,0
 github:unicomai/hexagent,github,HexAgent,71.97,61.54,needs-review,1,-1,1,0,1,0,1,1,1,1,1,1,1,1,1,-1,0,0,0,1,0,0,0,1,0,0
-github:vectorize-io/agent-memory-benchmark,github,Agent Memory Benchmark,85.99,76.92,high-value-candidate,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,-1,0,1,0,1,1,0,0,1,1,0
+github:vectorize-io/agent-memory-benchmark,github,Agent Memory Benchmark,87.58,80.77,high-value-candidate,1,1,1,1,1,1,0,1,1,1,1,1,1,1,1,-1,1,1,0,1,1,0,0,1,1,0
 github:vectorize-io/hindsight,github,vectorize-io/hindsight,71.02,46.15,high-value-candidate,1,1,1,0,0,1,0,1,1,1,0,0,1,0,1,-1,0,0,0,1,0,0,0,0,1,0
 github:vectorspacelab/general-agentic-memory,github,VectorSpaceLab General Agentic Memory,74.52,65.38,needs-review,1,-1,1,0,1,1,0,1,1,1,1,1,1,1,1,-1,0,0,0,1,0,0,0,1,1,0
 github:ventr1c/memma,github,ventr1c/memma,79.3,65.38,high-value-candidate,1,1,1,1,1,1,0,1,1,1,0,0,1,0,1,-1,1,0,0,1,0,0,0,1,1,1
@@ -659,10 +663,11 @@ github:vilmire/adhdev,github,ADHDev,75.16,69.23,needs-review,1,-1,1,1,1,0,1,1,1,
 github:vision-intelligence-and-robots-group/best-incremental-learning,github,vision-intelligence-and-robots-group/best-incremental-learning,60.51,26.92,needs-review,1,0,1,0,0,1,0,0,1,0,0,0,1,0,0,-1,0,0,0,0,0,0,0,0,1,0
 github:vivy-yi/awesome-agent-orchestration,github,vivy-yi/awesome-agent-orchestration,70.06,50,high-value-candidate,1,0,1,1,0,0,0,1,1,1,0,0,1,0,1,-1,0,0,0,1,1,0,0,1,1,0
 github:volcengine/openviking,github,volcengine/openviking,76.11,57.69,high-value-candidate,1,1,1,0,1,1,0,1,1,1,0,0,1,0,1,-1,0,0,0,1,1,0,0,1,1,0
-github:voltagent/awesome-agent-skills,github,voltagent/awesome-agent-skills,68.15,46.15,high-value-candidate,1,0,1,0,0,0,0,1,1,1,0,0,1,0,1,-1,0,0,0,1,1,0,0,1,1,0
+github:voltagent/awesome-agent-skills,github,Awesome Agent Skills,71.66,61.54,needs-review,1,-1,1,0,1,0,0,1,1,1,1,1,1,1,1,-1,0,0,0,1,1,0,0,1,0,0
 github:voltagent/awesome-openclaw-skills,github,Awesome OpenClaw Skills,73.57,65.38,needs-review,1,-1,1,0,1,0,0,1,1,1,1,1,1,1,1,-1,0,0,0,1,1,0,0,1,1,0
+github:vrsen/agency-swarm,github,Agency Swarm,76.43,73.08,needs-review,1,-1,0,0,1,1,0,1,1,1,1,1,1,1,1,-1,1,0,0,1,1,0,0,1,1,1
 github:vsonicv/es-fine-tuning-paper,github,vsonicv/es-fine-tuning-paper,71.66,50,high-value-candidate,1,0,1,1,1,0,0,1,1,0,0,0,1,1,1,-1,1,0,0,1,1,0,0,0,0,0
-github:wanxingai/lightagent,github,wanxingai/lightagent,76.75,61.54,high-value-candidate,1,0,1,0,1,1,1,1,1,1,0,0,1,1,1,-1,0,0,0,1,1,0,0,1,1,0
+github:wanxingai/lightagent,github,LightAgent,77.71,73.08,needs-review,1,-1,1,1,1,1,0,1,1,1,1,1,1,1,1,-1,0,0,0,1,1,0,0,1,1,0
 github:wazionapps/nexo,github,NEXO Brain,84.39,73.08,high-value-candidate,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,-1,0,0,0,1,0,0,0,1,1,0
 github:weaviate/query-agent-benchmarking,github,Weaviate Query Agent Benchmarking Toolkit,68.47,53.85,needs-review,1,-1,0,0,1,0,0,1,1,1,1,1,1,1,1,-1,0,0,0,1,0,0,0,1,0,0
 github:web-arena-x/webarena,github,webarena,58.6,53.85,low-signal-or-risk,0,-1,0,1,1,0,0,1,1,1,1,-1,1,0,1,-1,0,0,0,1,0,0,1,1,0,0
@@ -683,9 +688,10 @@ github:xizaoqu/worldmem,github,xizaoqu/worldmem,78.98,65.38,high-value-candidate
 github:xlang-ai/openagents,github,openagents,59.24,53.85,low-signal-or-risk,0,-1,1,0,1,1,0,1,1,0,1,-1,1,0,1,-1,0,0,0,1,0,0,1,1,0,0
 github:xlang-ai/osworld,github,osworld,73.89,65.38,needs-review,1,-1,0,1,1,1,0,1,1,1,1,1,1,0,1,-1,1,0,0,1,0,0,0,1,1,0
 github:xmudeeplit/awesome-self-evolving-agents,github,awesome-self-evolving-agents,78.34,61.54,high-value-candidate,1,1,0,1,1,0,1,1,1,0,1,1,1,1,1,-1,1,0,0,1,0,0,0,1,0,0
+github:xskill-agent/xskill,github,XSkill,80.25,80.77,needs-review,1,-1,1,1,1,1,0,1,1,1,1,1,1,1,1,-1,1,0,0,1,1,0,0,1,1,1
 github:xuchen-li/llm-arxiv-daily,github,xuchen-li/llm-arxiv-daily,74.52,57.69,high-value-candidate,1,0,1,0,1,0,0,1,1,1,0,0,1,1,1,-1,1,0,0,1,1,0,0,1,1,0
 github:yang1999code/controllable-agent,github,yang1999code/controllable-agent,81.53,69.23,high-value-candidate,1,1,1,1,1,1,1,1,1,1,0,0,1,0,1,-1,0,1,0,1,1,0,0,1,1,0
-github:yennning/awesome-code-as-agent-harness-papers,github,yennning/awesome-code-as-agent-harness-papers,64.97,38.46,needs-review,1,0,1,0,0,0,0,1,1,0,0,0,1,0,0,-1,1,0,0,0,1,0,0,1,1,0
+github:yennning/awesome-code-as-agent-harness-papers,github,Awesome Code as Agent Harness Papers,77.39,73.08,needs-review,1,-1,1,0,1,1,0,1,1,1,1,1,1,1,1,-1,1,0,0,1,1,0,0,1,1,0
 github:yf-he/evotest,github,yf-he/evotest,80.25,65.38,high-value-candidate,1,1,1,0,1,1,1,1,1,1,0,0,1,1,1,-1,1,0,0,1,1,0,0,0,1,0
 github:yinbo0927/fate,github,yinbo0927/fate,72.93,50,high-value-candidate,1,1,1,1,1,0,1,1,1,0,0,0,1,0,0,-1,0,1,0,1,0,0,0,1,0,0
 github:yingchengyang/reinforcement-learning-papers,github,yingchengyang/reinforcement-learning-papers,63.06,34.62,needs-review,1,0,0,0,0,0,0,1,1,0,0,0,1,0,0,-1,1,0,0,0,1,0,0,1,1,0
@@ -706,7 +712,7 @@ github:zbinxp/deer-flow,github,zbinxp/deer-flow,75.8,65.38,needs-review,1,0,1,1,
 github:zed-industries/zed,github,zed-industries/zed,65.92,38.46,needs-review,1,0,1,0,1,0,0,1,1,1,0,0,1,0,0,-1,0,0,0,1,0,0,0,1,0,0
 github:zerolu/awesome-openclaw,github,Awesome OpenClaw,71.66,61.54,needs-review,1,-1,1,0,1,0,0,1,1,1,1,1,1,1,1,-1,0,0,0,1,1,0,0,1,0,0
 github:zesearch/self-improvement-llm,github,self-improvement-llm,80.57,65.38,high-value-candidate,1,1,1,1,1,0,0,1,1,1,1,1,1,1,0,-1,1,0,0,1,0,0,0,1,1,0
-github:zhang677/accelopt,github,zhang677/accelopt,80.57,65.38,high-value-candidate,1,1,1,1,1,1,0,1,1,1,0,0,1,1,0,-1,1,0,1,1,0,0,0,1,1,0
+github:zhang677/accelopt,github,AccelOpt,82.17,69.23,high-value-candidate,1,1,1,1,1,1,0,1,1,1,1,1,1,0,1,-1,1,0,0,1,0,0,0,1,1,0
 github:zhangfengcdt/memoir,github,Memoir,83.76,73.08,high-value-candidate,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,-1,0,0,0,1,1,0,0,1,1,0
 github:zhangyiqun018/agent-for-debate,github,zhangyiqun018/agent-for-debate,67.2,46.15,needs-review,1,0,1,1,0,0,1,0,1,0,0,0,1,0,0,-1,1,1,0,1,0,0,0,1,0,1
 github:zhentingwang/dump,github,zhentingwang/dump,70.38,50,high-value-candidate,1,0,1,1,1,0,0,1,1,1,0,0,1,0,0,-1,1,0,0,1,0,0,0,1,0,1

@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-06-05T12:48:28.863Z",
+  "generated_at": "2026-06-05T13:48:19.401Z",
   "canonical_host": "https://agent-evolution.com",
   "global_status": "incomplete",
   "verdict": "Batch B bilingual route audit is not passed: only the core English path has paired routes; most indexable pages are still Chinese-first without English same-evidence mirrors.",
   "counts": {
-    "sitemap_urls": 445,
-    "html_routes_checked": 445,
+    "sitemap_urls": 968,
+    "html_routes_checked": 968,
     "missing_html": 0,
-    "english_routes": 6,
-    "zh_routes": 439,
-    "zh_routes_with_en_alternate": 6,
-    "en_routes_with_zh_alternate": 6,
-    "zh_first_without_en_alternate": 433,
+    "english_routes": 14,
+    "zh_routes": 954,
+    "zh_routes_with_en_alternate": 9,
+    "en_routes_with_zh_alternate": 9,
+    "zh_first_without_en_alternate": 945,
     "noindex_in_sitemap": 0
   },
   "route_kind_counts": {
@@ -19,9 +19,9 @@
     "site-page": 16,
     "blog": 26,
     "blog-tag": 79,
-    "english": 6,
+    "english": 9,
     "project-card": 291,
-    "report-index-or-audit": 3,
+    "report-index-or-audit": 523,
     "research": 16,
     "survey": 3,
     "topic": 4
@@ -70,24 +70,24 @@
     {
       "pathname": "/projects/",
       "lang": "zh-CN",
-      "status": "single-language-indexable",
-      "en_alternate": "",
+      "status": "paired-or-self-declared",
+      "en_alternate": "/en/projects/",
       "zh_alternate": "/projects/",
       "title": "Self Evolve 项目索引 — GitHub 自进化 AI 仓库"
     },
     {
       "pathname": "/reports/",
       "lang": "zh-CN",
-      "status": "single-language-indexable",
-      "en_alternate": "",
+      "status": "paired-or-self-declared",
+      "en_alternate": "/en/reports/",
       "zh_alternate": "/reports/",
-      "title": "Self Evolve 研究报告 — 项目深度分析与论文解读"
+      "title": "Self Evolve 报告状态索引 — 可索引证据页与引用边界"
     },
     {
       "pathname": "/value-lsh/",
       "lang": "zh-CN",
-      "status": "single-language-indexable",
-      "en_alternate": "",
+      "status": "paired-or-self-declared",
+      "en_alternate": "/en/value-lsh/",
       "zh_alternate": "/value-lsh/",
       "title": "Value LSH 证据分诊队列 — Self Evolve"
     },
@@ -160,6 +160,16 @@
       "zh_alternate": "/paper/"
     },
     {
+      "pathname": "/en/projects/",
+      "title": "Self Evolve Projects — GitHub evidence, not a quality ranking",
+      "zh_alternate": "/projects/"
+    },
+    {
+      "pathname": "/en/reports/",
+      "title": "Self Evolve Reports — what is reviewed, what is still gated",
+      "zh_alternate": "/reports/"
+    },
+    {
       "pathname": "/en/topics/",
       "title": "Self-Evolving AI Agents Topic Guide — English reader path",
       "zh_alternate": "/topics/"
@@ -178,6 +188,36 @@
       "pathname": "/en/topics/self-evolving-ai-agents/",
       "title": "What Counts as a Self-Evolving AI Agent?",
       "zh_alternate": "/topics/self-evolving-ai-agents/"
+    },
+    {
+      "pathname": "/en/value-lsh/",
+      "title": "Value LSH — evidence triage, not a final ranking",
+      "zh_alternate": "/value-lsh/"
+    },
+    {
+      "pathname": "/reports/survey-publication/01-field-map/",
+      "title": "Slice 01 — A Map of Self-Evolving AI Agents | Self Evolve Survey Publication",
+      "zh_alternate": ""
+    },
+    {
+      "pathname": "/reports/survey-publication/02-true-vs-pseudo-evolution/",
+      "title": "Slice 02 — Which AI Agents Actually Self-Improve? | Self Evolve Survey Publication",
+      "zh_alternate": ""
+    },
+    {
+      "pathname": "/reports/survey-publication/03-evaluation-bottleneck/",
+      "title": "Slice 03 — The Evaluation Problem in Self-Evolving AI Agents | Self Evolve Survey Publication",
+      "zh_alternate": ""
+    },
+    {
+      "pathname": "/reports/survey-publication/04-demo-to-production-gap/",
+      "title": "Slice 04 — Why Self-Evolving Agents Break After the Demo | Self Evolve Survey Publication",
+      "zh_alternate": ""
+    },
+    {
+      "pathname": "/reports/survey-publication/05-open-source-evidence-atlas/",
+      "title": "Slice 05 — An Evidence Atlas for Self-Evolving AI Projects | Self Evolve Survey Publication",
+      "zh_alternate": ""
     }
   ],
   "zh_first_sample": [
@@ -732,11 +772,6 @@
       "title": "卡片墙 — Self Evolve AI"
     },
     {
-      "pathname": "/projects/",
-      "kind": "project-card",
-      "title": "Self Evolve 项目索引 — GitHub 自进化 AI 仓库"
-    },
-    {
       "pathname": "/projects/0xnyk-lacp/",
       "kind": "project-card",
       "title": "LACP Lightweight Agent Context Protocol Model Card — Agent Context Protocol and Interoperability Tooling | Self Evolve"
@@ -780,6 +815,11 @@
       "pathname": "/projects/agentralabs-agentic-memory/",
       "kind": "project-card",
       "title": "AgentraLabs Agentic Memory Runtime Model Card — Agentic Memory Runtime Framework for Persistent Context | Self Evolve"
+    },
+    {
+      "pathname": "/projects/agentscope-ai-reme/",
+      "kind": "project-card",
+      "title": "ReMe Model Card — Long-Term Agent Memory and Context Compression Framework | Self Evolve"
     }
   ],
   "missing_html": [],

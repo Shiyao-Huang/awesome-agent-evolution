@@ -1,6 +1,6 @@
 # Value LSH Index
 
-> Generated: 2026-06-03T03:39:58.772Z. Discrete value-tag LSH index for GitHub projects, papers, social/X captures, and blogs.
+> Generated: 2026-06-05T13:45:40.977Z. Discrete value-tag LSH index for GitHub projects, papers, social/X captures, and blogs.
 
 ## One Sentence
 
@@ -8,7 +8,7 @@ Value LSH turns comparison into a fast discrete scan: each material gets a `-1/0
 
 ## Three Sentences
 
-This run scanned 2230 materials across GitHub, papers, social/X, and blogs, then generated 171 non-empty LSH buckets and 3 clusters. It does not pretend the hash is the final truth: the hash only finds near-neighbors, while the value score and evidence refs keep the ranking auditable. Incremental state is tracked in `data-engine/value-lsh-index/manifest.json`: 0 added, 23 changed, 0 removed, 2207 unchanged versus the previous run.
+This run scanned 2236 materials across GitHub, papers, social/X, and blogs, then generated 174 non-empty LSH buckets and 3 clusters. It does not pretend the hash is the final truth: the hash only finds near-neighbors, while the triage score and evidence refs keep the review queue auditable. Incremental state is tracked in `data-engine/value-lsh-index/manifest.json`: 0 added, 13 changed, 0 removed, 2223 unchanged versus the previous run.
 
 ## Why Discrete LSH
 
@@ -33,93 +33,93 @@ flowchart LR
 
 | metric | value |
 | --- | --- |
-| materials | 2230 |
+| materials | 2236 |
 | value tags | 26 |
-| LSH buckets | 171 |
+| LSH buckets | 174 |
 | clusters | 3 |
-| candidate pairs scanned | 64878 |
-| accepted pairs | 55293 |
-| broad buckets skipped | 27 |
+| candidate pairs scanned | 69553 |
+| accepted pairs | 58969 |
+| broad buckets skipped | 26 |
 | tag version | 19810f296115 |
 
 ## Type Counts
 
 | type | count |
 | --- | ---: |
-| github | 728 |
+| github | 734 |
 | blog | 655 |
 | social | 650 |
 | paper | 197 |
 
-## Value Class Counts
+## Review Class Counts
 
 | class | count |
 | --- | ---: |
-| needs-review | 1075 |
-| high-value-candidate | 858 |
-| low-signal-or-risk | 297 |
+| needs-review | 1085 |
+| priority-review | 851 |
+| repair-or-avoid-citing | 300 |
 
 ## Class Boundary
 
-- `high-value-candidate`: value score >= 68 and no more than one negative contribution line.
+- `high-value-candidate`: legacy machine label for priority-review candidates; triage score >= 68 and no more than one negative contribution line.
 - `needs-review`: mixed or incomplete evidence that should stay in the comparison pool.
-- `low-signal-or-risk`: value score <= 58 or at least three negative contribution lines; this means current-priority evidence is weak or risky, not that the material is permanently useless.
+- `low-signal-or-risk`: triage score <= 58 or at least three negative contribution lines; this means current-priority evidence is weak or risky, not that the material is permanently useless.
 
-## Top High-Value Candidates
+## Top Priority Review Candidates
 
-| rank | material | type | score | confidence | class | source |
+| rank | material | type | triage score | tag coverage | review class | source |
 | ---: | --- | --- | ---: | --- | --- | --- |
-| 1 | [AgentEvolver](https://github.com/modelscope/AgentEvolver) | github | 88.54 | 84.62 | high-value-candidate | raw-github/modelscope_agentevolver.md |
-| 2 | [CUGA Agent](https://github.com/cuga-project/cuga-agent) | github | 87.58 | 80.77 | high-value-candidate | raw-github/cuga-project_cuga-agent.md |
-| 3 | 0166 cloud tencent com AI 100 | social | 87.26 | 84.62 | high-value-candidate | raw-social/0166-cloud-tencent-com-AI-100.md |
-| 4 | 0171 36kr com 7 GPU 36 | social | 87.26 | 84.62 | high-value-candidate | raw-social/0171-36kr-com-7-GPU-36.md |
-| 5 | [Yunjue Agent](https://github.com/YunjueTech/Yunjue-Agent) | github | 87.26 | 80.77 | high-value-candidate | raw-github/yunjuetech_yunjue-agent.md |
-| 6 | [EvoAgentX](https://github.com/EvoAgentX/EvoAgentX) | github | 86.94 | 80.77 | high-value-candidate | raw-github/evoagentx_evoagentx.md |
-| 7 | [LLaMEA](https://github.com/XAI-liacs/LLaMEA) | github | 86.94 | 80.77 | high-value-candidate | raw-github/xai-liacs_llamea.md |
-| 8 | [gepa-ai/gepa](https://github.com/gepa-ai/gepa) | github | 86.62 | 80.77 | high-value-candidate | raw-github/gepa-ai_gepa.md |
-| 9 | [gepa-ai/optimize-anything-artifact](https://github.com/gepa-ai/optimize-anything-artifact) | github | 86.62 | 80.77 | high-value-candidate | raw-github/gepa-ai_optimize-anything-artifact.md |
-| 10 | 0176 36kr com Anthropic Meta 36 | social | 86.31 | 80.77 | high-value-candidate | raw-social/0176-36kr-com-Anthropic-Meta-36.md |
-| 11 | 0178 36kr com Skills Skill Agent 36 | social | 86.31 | 80.77 | high-value-candidate | raw-social/0178-36kr-com-Skills-Skill-Agent-36.md |
-| 12 | [Tiermem](https://github.com/FreedomIntelligence/Tiermem) | github | 86.31 | 76.92 | high-value-candidate | raw-github/freedomintelligence_tiermem.md |
-| 13 | [AI Agent Benchmark](https://github.com/murataslan1/ai-agent-benchmark) | github | 86.31 | 76.92 | high-value-candidate | raw-github/murataslan1_ai-agent-benchmark.md |
-| 14 | Reflexion: Language Agents with Verbal Reinforcement Learning | paper | 86.31 | 76.92 | high-value-candidate | raw-papers/2303-11366.md |
-| 15 | Raw Papers Classification Index | paper | 85.99 | 84.62 | high-value-candidate | raw-papers/classification-index.md |
-| 16 | [PinchBench Skill](https://github.com/pinchbench/skill) | github | 85.99 | 76.92 | high-value-candidate | raw-github/pinchbench_skill.md |
-| 17 | [Agent Memory Benchmark](https://github.com/vectorize-io/agent-memory-benchmark) | github | 85.99 | 76.92 | high-value-candidate | raw-github/vectorize-io_agent-memory-benchmark.md |
-| 18 | 0113 CSDN 12 | social | 85.67 | 80.77 | high-value-candidate | raw-social/0113-CSDN-12.md |
-| 19 | [hermes2anti](https://github.com/swapedoc/hermes2anti) | github | 85.67 | 76.92 | high-value-candidate | raw-github/swapedoc_hermes2anti.md |
-| 20 | [AgentMemory Benchmark Framework](https://github.com/webzler/agentMemory) | github | 85.67 | 76.92 | high-value-candidate | raw-github/webzler_agentmemory.md |
+| 1 | [AgentEvolver](https://github.com/modelscope/AgentEvolver) | github | 88.54 | 84.62 | priority-review | raw-github/modelscope_agentevolver.md |
+| 2 | [CUGA Agent](https://github.com/cuga-project/cuga-agent) | github | 87.58 | 80.77 | priority-review | raw-github/cuga-project_cuga-agent.md |
+| 3 | [Agent Memory Benchmark](https://github.com/vectorize-io/agent-memory-benchmark) | github | 87.58 | 80.77 | priority-review | raw-github/vectorize-io_agent-memory-benchmark.md |
+| 4 | 0166 cloud tencent com AI 100 | social | 87.26 | 84.62 | priority-review | raw-social/0166-cloud-tencent-com-AI-100.md |
+| 5 | 0171 36kr com 7 GPU 36 | social | 87.26 | 84.62 | priority-review | raw-social/0171-36kr-com-7-GPU-36.md |
+| 6 | [Awesome Agent Harness (AutoJunjie)](https://github.com/AutoJunjie/awesome-agent-harness) | github | 87.26 | 80.77 | priority-review | raw-github/autojunjie_awesome-agent-harness.md |
+| 7 | [Yunjue Agent](https://github.com/YunjueTech/Yunjue-Agent) | github | 87.26 | 80.77 | priority-review | raw-github/yunjuetech_yunjue-agent.md |
+| 8 | [EvoAgentX](https://github.com/EvoAgentX/EvoAgentX) | github | 86.94 | 80.77 | priority-review | raw-github/evoagentx_evoagentx.md |
+| 9 | [LLaMEA](https://github.com/XAI-liacs/LLaMEA) | github | 86.94 | 80.77 | priority-review | raw-github/xai-liacs_llamea.md |
+| 10 | [openevolve](https://github.com/algorithmicsuperintelligence/openevolve) | github | 86.62 | 80.77 | priority-review | raw-github/algorithmicsuperintelligence_openevolve.md |
+| 11 | [gepa-ai/gepa](https://github.com/gepa-ai/gepa) | github | 86.62 | 80.77 | priority-review | raw-github/gepa-ai_gepa.md |
+| 12 | [gepa-ai/optimize-anything-artifact](https://github.com/gepa-ai/optimize-anything-artifact) | github | 86.62 | 80.77 | priority-review | raw-github/gepa-ai_optimize-anything-artifact.md |
+| 13 | 0176 36kr com Anthropic Meta 36 | social | 86.31 | 80.77 | priority-review | raw-social/0176-36kr-com-Anthropic-Meta-36.md |
+| 14 | 0178 36kr com Skills Skill Agent 36 | social | 86.31 | 80.77 | priority-review | raw-social/0178-36kr-com-Skills-Skill-Agent-36.md |
+| 15 | [Tiermem](https://github.com/FreedomIntelligence/Tiermem) | github | 86.31 | 76.92 | priority-review | raw-github/freedomintelligence_tiermem.md |
+| 16 | [AI Agent Benchmark](https://github.com/murataslan1/ai-agent-benchmark) | github | 86.31 | 76.92 | priority-review | raw-github/murataslan1_ai-agent-benchmark.md |
+| 17 | Reflexion: Language Agents with Verbal Reinforcement Learning | paper | 86.31 | 76.92 | priority-review | raw-papers/2303-11366.md |
+| 18 | Raw Papers Classification Index | paper | 85.99 | 84.62 | priority-review | raw-papers/classification-index.md |
+| 19 | [PinchBench Skill](https://github.com/pinchbench/skill) | github | 85.99 | 76.92 | priority-review | raw-github/pinchbench_skill.md |
+| 20 | [Best of Agent Harnesses](https://github.com/RyanAlberts/best-of-Agent-Harnesses) | github | 85.99 | 76.92 | priority-review | raw-github/ryanalberts_best-of-agent-harnesses.md |
 
 ## Risk / Contradiction Queue
 
-| rank | material | type | score | negative tags | confidence | class | source |
+| rank | material | type | triage score | negative tags | tag coverage | review class | source |
 | ---: | --- | --- | ---: | --- | --- | --- | --- |
-| 1 | [smol-developer](https://github.com/smol-ai/developer) | github | 54.46 | 4 | 46.15 | low-signal-or-risk |  |
-| 2 | [agentgpt](https://github.com/reworkd/AgentGPT) | github | 58.6 | 4 | 53.85 | low-signal-or-risk |  |
-| 3 | [webarena](https://github.com/web-arena-x/webarena) | github | 58.6 | 4 | 53.85 | low-signal-or-risk |  |
-| 4 | [CoML](https://github.com/microsoft/CoML) | github | 58.92 | 4 | 53.85 | low-signal-or-risk |  |
-| 5 | [OpenELM](https://github.com/carperai/openelm) | github | 59.24 | 4 | 53.85 | low-signal-or-risk |  |
-| 6 | [openagents](https://github.com/xlang-ai/OpenAgents) | github | 59.24 | 4 | 53.85 | low-signal-or-risk |  |
-| 7 | [FunSearch](https://github.com/google-deepmind/funsearch) | github | 59.55 | 4 | 53.85 | low-signal-or-risk |  |
-| 8 | [OPRO](https://github.com/google-deepmind/opro) | github | 59.55 | 4 | 53.85 | low-signal-or-risk |  |
-| 9 | [bisheng](https://github.com/dataelement/bisheng) | github | 59.87 | 4 | 53.85 | low-signal-or-risk |  |
-| 10 | [AgentBench](https://github.com/THUDM/AgentBench) | github | 61.78 | 4 | 61.54 | low-signal-or-risk |  |
-| 11 | [ADAS](https://github.com/ShengranHu/ADAS) | github | 61.78 | 4 | 57.69 | low-signal-or-risk |  |
-| 12 | [flowise](https://github.com/FlowiseAI/Flowise) | github | 62.74 | 4 | 61.54 | low-signal-or-risk |  |
-| 13 | [ag2](https://github.com/ag2ai/ag2) | github | 64.33 | 4 | 65.38 | low-signal-or-risk |  |
-| 14 | [litellm](https://github.com/BerriAI/litellm) | github | 64.33 | 4 | 65.38 | low-signal-or-risk |  |
-| 15 | [chainlit](https://github.com/Chainlit/chainlit) | github | 64.33 | 4 | 65.38 | low-signal-or-risk |  |
-| 16 | [ollama](https://github.com/ollama/ollama) | github | 64.33 | 4 | 65.38 | low-signal-or-risk |  |
-| 17 | [cheshire-cat](https://github.com/cheshire-cat-ai/core) | github | 64.97 | 4 | 65.38 | low-signal-or-risk |  |
-| 18 | [open-webui](https://github.com/open-webui/open-webui) | github | 64.97 | 4 | 65.38 | low-signal-or-risk |  |
-| 19 | [AutoGen](https://github.com/microsoft/autogen) | github | 65.29 | 4 | 69.23 | low-signal-or-risk |  |
-| 20 | [e2b](https://github.com/e2b-dev/e2b) | github | 65.29 | 4 | 65.38 | low-signal-or-risk |  |
+| 1 | [letta-ai/agentic-learning-sdk](https://github.com/letta-ai/agentic-learning-sdk) | github | 50.64 | 4 | 34.62 | repair-or-avoid-citing |  |
+| 2 | [smol-developer](https://github.com/smol-ai/developer) | github | 54.46 | 4 | 46.15 | repair-or-avoid-citing |  |
+| 3 | [agentgpt](https://github.com/reworkd/AgentGPT) | github | 58.6 | 4 | 53.85 | repair-or-avoid-citing |  |
+| 4 | [webarena](https://github.com/web-arena-x/webarena) | github | 58.6 | 4 | 53.85 | repair-or-avoid-citing |  |
+| 5 | [CoML](https://github.com/microsoft/CoML) | github | 58.92 | 4 | 53.85 | repair-or-avoid-citing |  |
+| 6 | [OpenELM](https://github.com/carperai/openelm) | github | 59.24 | 4 | 53.85 | repair-or-avoid-citing |  |
+| 7 | [openagents](https://github.com/xlang-ai/OpenAgents) | github | 59.24 | 4 | 53.85 | repair-or-avoid-citing |  |
+| 8 | [FunSearch](https://github.com/google-deepmind/funsearch) | github | 59.55 | 4 | 53.85 | repair-or-avoid-citing |  |
+| 9 | [OPRO](https://github.com/google-deepmind/opro) | github | 59.55 | 4 | 53.85 | repair-or-avoid-citing |  |
+| 10 | [bisheng](https://github.com/dataelement/bisheng) | github | 59.87 | 4 | 53.85 | repair-or-avoid-citing |  |
+| 11 | [AgentBench](https://github.com/THUDM/AgentBench) | github | 61.78 | 4 | 61.54 | repair-or-avoid-citing |  |
+| 12 | [ADAS](https://github.com/ShengranHu/ADAS) | github | 61.78 | 4 | 57.69 | repair-or-avoid-citing |  |
+| 13 | [flowise](https://github.com/FlowiseAI/Flowise) | github | 62.74 | 4 | 61.54 | repair-or-avoid-citing |  |
+| 14 | [ag2](https://github.com/ag2ai/ag2) | github | 64.33 | 4 | 65.38 | repair-or-avoid-citing |  |
+| 15 | [litellm](https://github.com/BerriAI/litellm) | github | 64.33 | 4 | 65.38 | repair-or-avoid-citing |  |
+| 16 | [chainlit](https://github.com/Chainlit/chainlit) | github | 64.33 | 4 | 65.38 | repair-or-avoid-citing |  |
+| 17 | [ollama](https://github.com/ollama/ollama) | github | 64.33 | 4 | 65.38 | repair-or-avoid-citing |  |
+| 18 | [cheshire-cat](https://github.com/cheshire-cat-ai/core) | github | 64.97 | 4 | 65.38 | repair-or-avoid-citing |  |
+| 19 | [open-webui](https://github.com/open-webui/open-webui) | github | 64.97 | 4 | 65.38 | repair-or-avoid-citing |  |
+| 20 | [AutoGen](https://github.com/microsoft/autogen) | github | 65.29 | 4 | 69.23 | repair-or-avoid-citing |  |
 
-## Largest Value Clusters
+## Largest Facet-Vector Clusters
 
-| cluster | size | score avg | types | top tags | representatives |
+| cluster | size | triage score avg | types | top tags | representatives |
 | --- | ---: | ---: | --- | --- | --- |
-| vlsh-0001 | 1546 | 71.61 | github:669, paper:197, social:415, blog:265 | +local_code_or_artifact, +timestamp_freshness, +current_frontier_signal, +mutable_artifact_clear, +community_momentum, +product_usability, +open_source_reuse, +implementation_runnable | AgentEvolver; CUGA Agent; Yunjue Agent |
+| vlsh-0001 | 1570 | 71.66 | github:690, paper:197, social:416, blog:267 | +local_code_or_artifact, +timestamp_freshness, +current_frontier_signal, +mutable_artifact_clear, +community_momentum, +product_usability, +open_source_reuse, +implementation_runnable | AgentEvolver; CUGA Agent; Agent Memory Benchmark |
 | vlsh-0002 | 3 | 63.27 | social:3 | +current_frontier_signal, +implementation_runnable, +local_code_or_artifact, +product_usability, -evidence_chain_complete, +timestamp_freshness, +open_source_reuse, +hype_without_evidence | 0194 Linux do agent LINUX DO; 0251 Hacker News DeepSeek and Tsinghua Developing Self Improving AI Models; 0334 Hacker News Crewai Raises 18M But Are AI Agents Ready for Prime Time |
 | vlsh-0003 | 2 | 64.33 | blog:2 | +current_frontier_signal, +self_evolution_loop_fit, +implementation_runnable, +local_code_or_artifact, +product_usability, -evidence_chain_complete, +timestamp_freshness, +community_momentum | 0190 36Kr 7 GPU 36; 0425 Tencent Cloud Dev |
 
@@ -127,21 +127,21 @@ flowchart LR
 
 | bucket | size | band | features | chars |
 | --- | ---: | --- | --- | --- |
-| v0:b4:421658a47e32aadc | 926 | 4 | user_need_fit, compare_anchor_baseline | +0 |
+| v0:b4:421658a47e32aadc | 925 | 4 | user_need_fit, compare_anchor_baseline | +0 |
 | v0:b1:ffab79b53e3e2b24 | 724 | 1 | rollback_or_safety, implementation_runnable, local_code_or_artifact, product_usability, teaching_model_card, evidence_chain_complete | 0+++0- |
 | v0:b2:753aee4409944ae1 | 665 | 2 | timestamp_freshness, continuity_active, community_momentum, star_growth_current, paper_quality_signal, benchmark_result | +0+000 |
-| v0:b3:d4db65dcbacb56a1 | 367 | 3 | method_novelty, open_source_reuse, issue_resource_signal, hype_without_evidence, stale_or_unknown_metadata, useful_for_survey_seo | 0+000+ |
+| v0:b3:d4db65dcbacb56a1 | 361 | 3 | method_novelty, open_source_reuse, issue_resource_signal, hype_without_evidence, stale_or_unknown_metadata, useful_for_survey_seo | 0+000+ |
+| v0:b3:a4bfae29739268c9 | 357 | 3 | method_novelty, open_source_reuse, issue_resource_signal, hype_without_evidence, stale_or_unknown_metadata, useful_for_survey_seo | 0++00+ |
 | v0:b0:00f7c10f6056128a | 346 | 0 | current_frontier_signal, self_evolution_loop_fit, mutable_artifact_clear, feedback_signal_clear, verifier_or_benchmark, retention_or_memory | +00000 |
-| v0:b3:a4bfae29739268c9 | 345 | 3 | method_novelty, open_source_reuse, issue_resource_signal, hype_without_evidence, stale_or_unknown_metadata, useful_for_survey_seo | 0++00+ |
 | v0:b0:b5ac1c4242079445 | 311 | 0 | current_frontier_signal, self_evolution_loop_fit, mutable_artifact_clear, feedback_signal_clear, verifier_or_benchmark, retention_or_memory | ++0000 |
 | v0:b2:cd2d4041a8bcb5b8 | 295 | 2 | timestamp_freshness, continuity_active, community_momentum, star_growth_current, paper_quality_signal, benchmark_result | +00000 |
-| v0:b2:b0cfcf471baa9a30 | 286 | 2 | timestamp_freshness, continuity_active, community_momentum, star_growth_current, paper_quality_signal, benchmark_result | +++-00 |
+| v0:b2:b0cfcf471baa9a30 | 292 | 2 | timestamp_freshness, continuity_active, community_momentum, star_growth_current, paper_quality_signal, benchmark_result | +++-00 |
 | v0:b3:0ea31210b6d09644 | 218 | 3 | method_novelty, open_source_reuse, issue_resource_signal, hype_without_evidence, stale_or_unknown_metadata, useful_for_survey_seo | 00000+ |
-| v0:b1:037bd87daa04a195 | 217 | 1 | rollback_or_safety, implementation_runnable, local_code_or_artifact, product_usability, teaching_model_card, evidence_chain_complete | 0+++00 |
+| v0:b1:037bd87daa04a195 | 212 | 1 | rollback_or_safety, implementation_runnable, local_code_or_artifact, product_usability, teaching_model_card, evidence_chain_complete | 0+++00 |
 | v0:b1:0af6e4c9f59f7de0 | 198 | 1 | rollback_or_safety, implementation_runnable, local_code_or_artifact, product_usability, teaching_model_card, evidence_chain_complete | 00+00- |
-| v0:b0:8088ac357b58efec | 194 | 0 | current_frontier_signal, self_evolution_loop_fit, mutable_artifact_clear, feedback_signal_clear, verifier_or_benchmark, retention_or_memory | +0+000 |
-| v0:b3:f0cf96aa4cdb6fc0 | 190 | 3 | method_novelty, open_source_reuse, issue_resource_signal, hype_without_evidence, stale_or_unknown_metadata, useful_for_survey_seo | 000+00 |
-| v0:b0:14cf7a29abb6e554 | 189 | 0 | current_frontier_signal, self_evolution_loop_fit, mutable_artifact_clear, feedback_signal_clear, verifier_or_benchmark, retention_or_memory | ++++++ |
+| v0:b0:14cf7a29abb6e554 | 192 | 0 | current_frontier_signal, self_evolution_loop_fit, mutable_artifact_clear, feedback_signal_clear, verifier_or_benchmark, retention_or_memory | ++++++ |
+| v0:b0:8088ac357b58efec | 192 | 0 | current_frontier_signal, self_evolution_loop_fit, mutable_artifact_clear, feedback_signal_clear, verifier_or_benchmark, retention_or_memory | +0+000 |
+| v0:b1:88062eb178d67991 | 190 | 1 | rollback_or_safety, implementation_runnable, local_code_or_artifact, product_usability, teaching_model_card, evidence_chain_complete | 0+++++ |
 
 ## Value Lines
 
