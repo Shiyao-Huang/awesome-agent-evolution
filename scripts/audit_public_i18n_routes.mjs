@@ -229,9 +229,9 @@ const md = [
   '',
   '## Required Follow-Up',
   '',
-  '- Keep the current English path honest: `/en/`, `/en/topics/`, and the three English topic pages are summary mirrors, not full-site parity.',
+  '- Keep the current English path honest: `/en/`, `/en/topics/`, `/en/paper/`, `/en/projects/`, `/en/reports/`, `/en/value-lsh/`, `/en/star-growth/`, `/en/evolve-agi-index/`, `/en/resource-library/`, `/en/survey/`, `/en/blog/`, `/en/research/`, and `/en/graph/` are same-evidence core mirrors or guides, not full long-tail translation parity.',
   '- Promote a page from Chinese-first to bilingual only after it has an English same-evidence summary with the same claim boundary, limitations, and next step.',
-  '- Add or generate English summaries for high-traffic public routes before calling website i18n complete: `/paper/`, `/projects/`, `/value-lsh/`, `/reports/`, `/star-growth/`, `/evolve-agi-index/`, `/resource-library/`, `/survey/`, `/blog/`, and `/research/`.',
+  '- Continue with long-tail parity before calling website i18n complete: blog article bodies, blog tags, project detail cards, research notes, project/report pages, benchmark pages, visualizations, and survey subpages still need English same-evidence mirrors or explicit non-parity labels.',
   '- Re-run this audit after every public-site or metadata change.',
   ''
 ].join('\n');

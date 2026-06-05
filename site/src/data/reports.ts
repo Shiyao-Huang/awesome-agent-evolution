@@ -84,11 +84,10 @@ function listSurveyPublicationFiles(): ReportEntry[] {
   const full = path.resolve('..', 'reports/survey-publication');
   if (!statSync(full, { throwIfNoEntry: false })?.isDirectory()) return [];
   return readdirSync(full)
-    .filter((f) => f.endsWith('.md'))
+    .filter((f) => /^[0-9][0-9]-.*\.md$/.test(f))
     .map((f) => {
       const content = readFileSync(path.join(full, f), 'utf8');
-      const id = f.replace(/\.md$/, '');
-      const slug = id.toLowerCase() === 'readme' ? 'overview' : id;
+      const slug = f.replace(/\.md$/, '');
       return {
         slug,
         title: parseTitle(content),

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-05T14:29:30.293Z",
+  "generated_at": "2026-06-05T14:57:38.247Z",
   "canonical_host": "https://agent-evolution.com",
   "checked_collections": [
     "blog",
@@ -11,10 +11,10 @@
   ],
   "global_status": "pass",
   "counts": {
-    "assets_checked": 566,
-    "passed": 566,
+    "assets_checked": 564,
+    "passed": 564,
     "failed": 0,
-    "sitemap_urls": 981
+    "sitemap_urls": 979
   },
   "global_failures": [],
   "failed_assets": [],
@@ -9621,40 +9621,6 @@
       "url": "https://agent-evolution.com/reports/survey-publication/05-open-source-evidence-atlas/",
       "sourcePath": "reports/survey-publication/05-open-source-evidence-atlas.md",
       "htmlPath": "site/dist/reports/survey-publication/05-open-source-evidence-atlas/index.html",
-      "status": "pass",
-      "failures": [],
-      "warnings": [],
-      "jsonLdTypes": [
-        "WebSite",
-        "SearchAction",
-        "Organization",
-        "Article"
-      ],
-      "indexPolicy": "indexable"
-    },
-    {
-      "collection": "survey-publication",
-      "slug": "overview",
-      "url": "https://agent-evolution.com/reports/survey-publication/overview/",
-      "sourcePath": "reports/survey-publication/README.md",
-      "htmlPath": "site/dist/reports/survey-publication/overview/index.html",
-      "status": "pass",
-      "failures": [],
-      "warnings": [],
-      "jsonLdTypes": [
-        "WebSite",
-        "SearchAction",
-        "Organization",
-        "Article"
-      ],
-      "indexPolicy": "indexable"
-    },
-    {
-      "collection": "survey-publication",
-      "slug": "hn-submission-pack",
-      "url": "https://agent-evolution.com/reports/survey-publication/hn-submission-pack/",
-      "sourcePath": "reports/survey-publication/hn-submission-pack.md",
-      "htmlPath": "site/dist/reports/survey-publication/hn-submission-pack/index.html",
       "status": "pass",
       "failures": [],
       "warnings": [],

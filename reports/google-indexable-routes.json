@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-06-05T14:29:30.329Z",
+  "generated_at": "2026-06-05T14:57:38.319Z",
   "canonical_host": "https://agent-evolution.com",
   "global_status": "pass",
   "counts": {
-    "sitemap_urls": 981,
-    "routes_checked": 981,
-    "passed": 981,
+    "sitemap_urls": 979,
+    "routes_checked": 979,
+    "passed": 979,
     "failed": 0
   },
   "route_kind_counts": {
@@ -19,7 +19,7 @@
     "paper-cross-domain-report": 2,
     "project-report": 489,
     "legacy-research-project-report": 28,
-    "survey-publication": 7,
+    "survey-publication": 5,
     "research": 16,
     "survey": 3,
     "topic": 4
@@ -11415,30 +11415,6 @@
       "failures": []
     },
     {
-      "url": "https://agent-evolution.com/reports/survey-publication/hn-submission-pack/",
-      "pathname": "/reports/survey-publication/hn-submission-pack/",
-      "kind": "survey-publication",
-      "htmlPath": "site/dist/reports/survey-publication/hn-submission-pack/index.html",
-      "title": "Hacker News Submission Pack | Self Evolve Survey Publication",
-      "description": "Indexable launch-readiness note for Self Evolve: HN title choices, landing-page fit, Show HN boundary, human comment outline, and pre-posting checklist.",
-      "lang": "en",
-      "canonical": "https://agent-evolution.com/reports/survey-publication/hn-submission-pack/",
-      "status": "pass",
-      "failures": []
-    },
-    {
-      "url": "https://agent-evolution.com/reports/survey-publication/overview/",
-      "pathname": "/reports/survey-publication/overview/",
-      "kind": "survey-publication",
-      "htmlPath": "site/dist/reports/survey-publication/overview/index.html",
-      "title": "Survey Publication Pack: Value-First Release Plan | Self Evolve Survey Publication",
-      "description": "Indexable publication plan for the Self Evolve survey package: release slices, reader decisions, Hacker News fit, quality bar, and source anchors.",
-      "lang": "en",
-      "canonical": "https://agent-evolution.com/reports/survey-publication/overview/",
-      "status": "pass",
-      "failures": []
-    },
-    {
       "url": "https://agent-evolution.com/research/",
       "pathname": "/research/",
       "kind": "research",
@@ -11708,7 +11684,7 @@
       "kind": "survey",
       "htmlPath": "site/dist/survey/case-studies/index.html",
       "title": "六大案例研究 — DGM/ADAS/AlphaEvolve深度证据分析",
-      "description": "六个自进化系统的深度案例研究：DGM代码自修改、ADAS自动架构搜索、AlphaEvolve算法发现、Voyager技能库、Reflexion语言反思、Self-Rewarding自奖励。每个案例包含可验证的证据链。",
+      "description": "六个自进化系统的 source-scoped 案例笔记：DGM代码自修改、ADAS自动架构搜索、AlphaEvolve算法发现、Voyager技能库、Reflexion语言反思、Self-Rewarding自奖励。案例数字按论文或项目来源转述，本站不声称独立复现。",
       "lang": "zh-CN",
       "canonical": "https://agent-evolution.com/survey/case-studies/",
       "status": "pass",
@@ -11719,8 +11695,8 @@
       "pathname": "/survey/mechanisms/",
       "kind": "survey",
       "htmlPath": "site/dist/survey/mechanisms/index.html",
-      "title": "五大进化环详解 — AI 自进化机制与证据边界分析",
-      "description": "AI自进化的统一框架：规范到执行环、搜索环、评估环、反思环、种群环。每个环的机制、证据、失效模式和组合模式。",
+      "title": "五类工作回路详解 — AI 自进化机制与证据边界分析",
+      "description": "AI 自进化的当前 working taxonomy：规范到执行环、搜索环、评估环、反思环、种群环。每个环都需要回到机制、证据、失效模式和组合边界复核。",
       "lang": "zh-CN",
       "canonical": "https://agent-evolution.com/survey/mechanisms/",
       "status": "pass",

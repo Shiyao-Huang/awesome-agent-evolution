@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-06-05T13:48:19.401Z",
+  "generated_at": "2026-06-05T15:08:53.645Z",
   "canonical_host": "https://agent-evolution.com",
   "global_status": "incomplete",
   "verdict": "Batch B bilingual route audit is not passed: only the core English path has paired routes; most indexable pages are still Chinese-first without English same-evidence mirrors.",
   "counts": {
-    "sitemap_urls": 968,
-    "html_routes_checked": 968,
+    "sitemap_urls": 979,
+    "html_routes_checked": 979,
     "missing_html": 0,
-    "english_routes": 14,
-    "zh_routes": 954,
-    "zh_routes_with_en_alternate": 9,
-    "en_routes_with_zh_alternate": 9,
-    "zh_first_without_en_alternate": 945,
+    "english_routes": 21,
+    "zh_routes": 958,
+    "zh_routes_with_en_alternate": 16,
+    "en_routes_with_zh_alternate": 16,
+    "zh_first_without_en_alternate": 942,
     "noindex_in_sitemap": 0
   },
   "route_kind_counts": {
@@ -19,9 +19,9 @@
     "site-page": 16,
     "blog": 26,
     "blog-tag": 79,
-    "english": 9,
-    "project-card": 291,
-    "report-index-or-audit": 523,
+    "english": 16,
+    "project-card": 293,
+    "report-index-or-audit": 525,
     "research": 16,
     "survey": 3,
     "topic": 4
@@ -94,58 +94,58 @@
     {
       "pathname": "/star-growth/",
       "lang": "zh-CN",
-      "status": "single-language-indexable",
-      "en_alternate": "",
+      "status": "paired-or-self-declared",
+      "en_alternate": "/en/star-growth/",
       "zh_alternate": "/star-growth/",
       "title": "2026 GitHub Star 抓取试点 — Self Evolve"
     },
     {
       "pathname": "/evolve-agi-index/",
       "lang": "zh-CN",
-      "status": "single-language-indexable",
-      "en_alternate": "",
+      "status": "paired-or-self-declared",
+      "en_alternate": "/en/evolve-agi-index/",
       "zh_alternate": "/evolve-agi-index/",
       "title": "Evolve-AGI Evidence Worksheet — Self Evolve"
     },
     {
       "pathname": "/resource-library/",
       "lang": "zh-CN",
-      "status": "single-language-indexable",
-      "en_alternate": "",
+      "status": "paired-or-self-declared",
+      "en_alternate": "/en/resource-library/",
       "zh_alternate": "/resource-library/",
       "title": "Self-Evolving AI Agents 资料库 — Survey 证据源、项目报告与 Evolve-AGI Index"
     },
     {
       "pathname": "/survey/",
       "lang": "zh-CN",
-      "status": "single-language-indexable",
-      "en_alternate": "",
+      "status": "paired-or-self-declared",
+      "en_alternate": "/en/survey/",
       "zh_alternate": "/survey/",
       "title": "Survey核心发现 — AI自进化机制分析与案例研究"
     },
     {
       "pathname": "/blog/",
       "lang": "zh-CN",
-      "status": "single-language-indexable",
-      "en_alternate": "",
+      "status": "paired-or-self-declared",
+      "en_alternate": "/en/blog/",
       "zh_alternate": "/blog/",
       "title": "Self Evolve 博客 — AI 自我进化实践笔记与证据导读"
     },
     {
       "pathname": "/research/",
       "lang": "zh-CN",
-      "status": "single-language-indexable",
-      "en_alternate": "",
+      "status": "paired-or-self-declared",
+      "en_alternate": "/en/research/",
       "zh_alternate": "/research/",
-      "title": "Self Evolve 研究图谱 — 自进化智能体论文索引"
+      "title": "Self Evolve 研究图谱 — 自进化智能体论文复核入口"
     },
     {
       "pathname": "/graph/",
       "lang": "zh-CN",
-      "status": "single-language-indexable",
-      "en_alternate": "",
+      "status": "paired-or-self-declared",
+      "en_alternate": "/en/graph/",
       "zh_alternate": "/graph/",
-      "title": "Self Evolve 知识图谱 — 项目、论文与机制关系"
+      "title": "Self Evolve 探索性证据图 — 项目、论文与机制候选关系"
     }
   ],
   "english_routes": [
@@ -153,6 +153,21 @@
       "pathname": "/en/",
       "title": "Self Evolve AI — English reader path for self-evolving agents",
       "zh_alternate": "/"
+    },
+    {
+      "pathname": "/en/blog/",
+      "title": "Self Evolve Blog Guide — English reading path",
+      "zh_alternate": "/blog/"
+    },
+    {
+      "pathname": "/en/evolve-agi-index/",
+      "title": "Evolve-AGI Evidence Worksheet — not an AGI score",
+      "zh_alternate": "/evolve-agi-index/"
+    },
+    {
+      "pathname": "/en/graph/",
+      "title": "Self Evolve Evidence Graph — exploratory links, not proof",
+      "zh_alternate": "/graph/"
     },
     {
       "pathname": "/en/paper/",
@@ -168,6 +183,26 @@
       "pathname": "/en/reports/",
       "title": "Self Evolve Reports — what is reviewed, what is still gated",
       "zh_alternate": "/reports/"
+    },
+    {
+      "pathname": "/en/research/",
+      "title": "Self Evolve Research Map — papers, mechanisms, and coverage gaps",
+      "zh_alternate": "/research/"
+    },
+    {
+      "pathname": "/en/resource-library/",
+      "title": "Self Evolve Resource Library — corpus scope, evidence layers, and limits",
+      "zh_alternate": "/resource-library/"
+    },
+    {
+      "pathname": "/en/star-growth/",
+      "title": "GitHub Star Growth Pilot — coverage before momentum",
+      "zh_alternate": "/star-growth/"
+    },
+    {
+      "pathname": "/en/survey/",
+      "title": "Self-Evolving AI Agents Survey Snapshot — working taxonomy and claim limits",
+      "zh_alternate": "/survey/"
     },
     {
       "pathname": "/en/topics/",
@@ -225,11 +260,6 @@
       "pathname": "/benchmark/",
       "kind": "site-page",
       "title": "Benchmark &amp; Evaluation — AI 自进化评估体系"
-    },
-    {
-      "pathname": "/blog/",
-      "kind": "blog",
-      "title": "Self Evolve 博客 — AI 自我进化实践笔记与证据导读"
     },
     {
       "pathname": "/blog/adas-to-dgm-evolution/",
@@ -752,19 +782,9 @@
       "title": "用户真正痛的不是 Agent 不够聪明，而是不可靠、不可观测、不可控 | Self Evolve"
     },
     {
-      "pathname": "/evolve-agi-index/",
-      "kind": "site-page",
-      "title": "Evolve-AGI Evidence Worksheet — Self Evolve"
-    },
-    {
       "pathname": "/github/",
       "kind": "site-page",
       "title": "Self Evolve GitHub 证据链 — 源码、论文、项目与博客入口"
-    },
-    {
-      "pathname": "/graph/",
-      "kind": "site-page",
-      "title": "Self Evolve 知识图谱 — 项目、论文与机制关系"
     },
     {
       "pathname": "/postcards/",
@@ -820,6 +840,21 @@
       "pathname": "/projects/agentscope-ai-reme/",
       "kind": "project-card",
       "title": "ReMe Model Card — Long-Term Agent Memory and Context Compression Framework | Self Evolve"
+    },
+    {
+      "pathname": "/projects/agiprolabs-claude-trading-skills/",
+      "kind": "project-card",
+      "title": "Claude Trading Skills Model Card — Domain Agent Skill Workflow Pack | Self Evolve"
+    },
+    {
+      "pathname": "/projects/agiresearch-a-mem/",
+      "kind": "project-card",
+      "title": "A-MEM Agentic Memory for LLM Agents Model Card — Agentic Memory Architecture for LLM Agent Long-Term Context Retention | Self Evolve"
+    },
+    {
+      "pathname": "/projects/ai-agents-2030-darwin-mobile-agent/",
+      "kind": "project-card",
+      "title": "Darwin Mobile Agent Model Card — Mobile Agent Self-Evolution Framework | Self Evolve"
     }
   ],
   "missing_html": [],

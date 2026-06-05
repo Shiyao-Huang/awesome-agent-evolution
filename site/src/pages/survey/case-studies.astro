@@ -15,7 +15,7 @@ const caseStudyLd = {
 
 <BaseLayout
   title="六大案例研究 — DGM/ADAS/AlphaEvolve深度证据分析"
-  description="六个自进化系统的深度案例研究：DGM代码自修改、ADAS自动架构搜索、AlphaEvolve算法发现、Voyager技能库、Reflexion语言反思、Self-Rewarding自奖励。每个案例包含可验证的证据链。"
+  description="六个自进化系统的 source-scoped 案例笔记：DGM代码自修改、ADAS自动架构搜索、AlphaEvolve算法发现、Voyager技能库、Reflexion语言反思、Self-Rewarding自奖励。案例数字按论文或项目来源转述，本站不声称独立复现。"
 >
   <script type="application/ld+json" set:html={JSON.stringify(caseStudyLd)} is:inline />
 
@@ -94,7 +94,7 @@ const caseStudyLd = {
           <tbody>
             <tr><td><strong>DGM</strong></td><td>Architecture Search</td><td>Search + Population</td><td>Code</td><td>SWE-bench 20→50%</td></tr>
             <tr><td><strong>ADAS</strong></td><td>Architecture Search</td><td>Search + Evaluator</td><td>Code</td><td>Cross-task transfer</td></tr>
-            <tr><td><strong>AlphaEvolve</strong></td><td>Algorithm Discovery</td><td>Population + Evaluator</td><td>Code</td><td>4×4 matmul 49→47</td></tr>
+            <tr><td><strong>AlphaEvolve</strong></td><td>Algorithm Discovery</td><td>Population + Evaluator</td><td>Code</td><td>4×4 complex matmul 49→48, source-reported</td></tr>
             <tr><td><strong>Voyager</strong></td><td>Skill Library</td><td>Reflection + Memory</td><td>Skill, Memory</td><td>Items 3.6x</td></tr>
             <tr><td><strong>Reflexion</strong></td><td>Reflection</td><td>Reflection</td><td>Memory</td><td>HumanEval 91%</td></tr>
             <tr><td><strong>Self-Rewarding</strong></td><td>Self-Play</td><td>Search + Evaluator</td><td>Policy</td><td>Zero annotation</td></tr>
@@ -119,7 +119,7 @@ const caseStudyLd = {
         </article>
         <article class="card" style="border-left: 4px solid #e74c3c;">
           <h3>2. 评估器决定进化方向</h3>
-          <p>AlphaEvolve 用数学证明，DGM 用 SWE-bench。评估器质量决定结果质量。</p>
+          <p>AlphaEvolve 在可自动验证的数学/算法任务中报告结果，DGM 使用 SWE-bench 等评估面。评估器质量决定结果质量；本站需要继续区分 source-reported、reviewed 和 reproduced。</p>
         </article>
         <article class="card" style="border-left: 4px solid #2ecc71;">
           <h3>3. 记忆和技能创造复合回报</h3>
