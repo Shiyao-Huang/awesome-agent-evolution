@@ -37,7 +37,7 @@ autogluon/
 ## 核心模块分析
 
 ### 1. 表格数据模块 (`autogluon/tabular/`)
-AutoGluon 的旗舰模块，在 AutoML Benchmark 2025 中取得 SOTA 成绩。采用多层堆叠集成（multi-layer stacking ensemble）策略，自动将 LightGBM、XGBoost、CatBoost、神经网络等多种模型组合为强大的集成预测器。支持自动特征工程、数据清洗和缺失值处理，用户只需调用 `TabularPredictor.fit()` 即可。
+AutoGluon 的旗舰模块，在 AutoML Benchmark 2025 中有公开结果线索，具体相对位置需要按 benchmark 版本复核。它采用多层堆叠集成（multi-layer stacking ensemble）策略，自动将 LightGBM、XGBoost、CatBoost、神经网络等多种模型组合为集成预测器。支持自动特征工程、数据清洗和缺失值处理，用户只需调用 `TabularPredictor.fit()` 即可。
 
 ### 2. 多模态模块 (`autogluon/multimodal/`, AutoMM)
 该模块是 AutoGluon 区别于其他 AutoML 框架的核心差异化能力。支持文本、图像、表格数据的任意混合建模，自动选择合适的预训练模型（如 BERT、ViT、CLIP 等），并通过自动超参数优化和模型融合实现最优的多模态预测性能。
@@ -50,7 +50,7 @@ AutoGluon 的旗舰模块，在 AutoML Benchmark 2025 中取得 SOTA 成绩。�
 - **多层堆叠集成**：独创的多层模型堆叠策略，在每一层自动选择最优基学习器并构建元学习器，通过贪婪搜索实现近乎穷举的模型组合效果，极大提升了集成性能
 - **多模态统一建模**：在单一框架内支持文本、图像、表格和时序数据的联合建模，自动识别数据类型并选择合适的预训练骨干网络，无需手动指定模型架构
 - **零代码多智能体 AutoML**：AutoGluon Assistant 通过多智能体协作自动完成从数据理解、特征工程到模型训练的全流程，将 AutoML 的自动化程度推向新高度
-- **高性能与易用性兼备**：在保持 API 极简（`fit()` + `predict()`）的同时，在多个权威基准测试中取得领先成绩，兼顾了易用性与预测精度
+- **性能与易用性兼顾**：在保持 API 极简（`fit()` + `predict()`）的同时，提供多个基准测试结果入口，便于复查易用性与预测精度之间的取舍
 
 ## 与 Self-Evolve 关联
 

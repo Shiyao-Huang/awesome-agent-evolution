@@ -6,7 +6,7 @@ import { site } from '@/data/site';
 
 const slugify = (value: string) => value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 const projectHref = (repo: string) => `/projects/${slugify(repo)}/`;
-const reportHref = (report: string) => `/reports/${report}`;
+const reportHref = (report: string) => `/reports/${report.replace(/\.md$/, '')}/`;
 const researchHref = (slugOrTitle: string) => `/research/${slugify(slugOrTitle)}/`;
 const paperHref = (url?: string) => {
   if (!url) return '';
@@ -59,7 +59,7 @@ const itemListLd = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
   name: 'Self Evolve GitHub 项目索引',
-  description: '自进化 AI 的 GitHub 实现图谱',
+  description: '自进化 AI 的 GitHub 可见性与证据入口图谱，不是项目质量排名',
   numberOfItems: projects.length,
   itemListElement: rankedProjects.slice(0, 20).map((p, i) => ({
     '@type': 'ListItem',
@@ -69,13 +69,13 @@ const itemListLd = {
   }))
 };
 ---
-<BaseLayout title="Self Evolve 项目索引 — GitHub 自进化 AI 仓库" description="Self Evolve GitHub 项目索引，收录 OpenEvolve、AgentEvolver、Reflexion、Self-Refine 等自进化 AI 与 LLM 项目。">
+<BaseLayout title="Self Evolve 项目索引 — GitHub 自进化 AI 仓库" description="Self Evolve GitHub 项目索引，收录 OpenEvolve、AgentEvolver、Reflexion、Self-Refine 等自进化 AI 与 LLM 项目；Star 序号只是历史可见性信号，不是质量排名。">
   <script type="application/ld+json" set:html={JSON.stringify(itemListLd)} is:inline />
   <section class="section">
     <div class="container">
       <div class="eyebrow">Projects / 项目索引</div>
       <h1 class="gradient-text">自进化 AI 的 GitHub 实现图谱</h1>
-      <p class="lead">本页整合已落盘项目分析。中文摘要用于快速理解，英文仓库名、技术栈和关键词保留用于搜索与国际读者检索。</p>
+      <p class="lead">本页整合已落盘项目分析。中文摘要用于快速理解，英文仓库名、技术栈和关键词保留用于搜索与国际读者检索；Star 序号只表示历史可见性，不能当作质量、学术价值或可运行性排名。</p>
       <div class="metrics">
         <div class="metric"><strong>{projects.length}</strong><span>个已分析仓库</span></div>
         <div class="metric"><strong>{totalStars.toLocaleString()}</strong><span>GitHub Stars 合计</span></div>
@@ -98,7 +98,7 @@ const itemListLd = {
             {group.entries.map((entry) => entry.type === 'project' ? (
               <div class="project-link-row">
                 <a class="project-link-main" href={entry.project.href}>
-                  <span>#{String(entry.project.rank).padStart(3, '0')}</span>
+                  <span>Star #{String(entry.project.rank).padStart(3, '0')}</span>
                   <strong>{entry.project.name}</strong>
                   <em>{entry.project.repo}</em>
                 </a>
@@ -137,7 +137,7 @@ const itemListLd = {
               <div class="eyebrow">{project.category}</div>
               <h3><a href={project.href}>{project.name}</a></h3>
             </div>
-            <span class="rank-badge">#{String(project.rank).padStart(3, '0')}</span>
+            <span class="rank-badge">Star #{String(project.rank).padStart(3, '0')}</span>
           </div>
           <p><a class="repo-link" href={project.url} target="_blank" rel="noopener">{project.repo}</a></p>
           <p>{project.description}</p>

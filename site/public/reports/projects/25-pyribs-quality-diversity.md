@@ -13,7 +13,7 @@
 
 ## 项目简介
 
-pyribs 是一个专注于**质量多样性（Quality Diversity, QD）优化**的精简 Python 库，实现了高度模块化的 RIBS（Rapid Illumination of Behavior Space）框架。QD 优化是优化领域的一个子领域，其目标是生成一组既高质量又多样化的解决方案集合，覆盖行为空间的每个区域同时最大化单一目标。pyribs 是 CMA-ME、CMA-MEGA、CMA-MAE、Scalable CMA-MAE 和 Discount Model Search (DMS) 等前沿 QD 算法的官方实现。
+pyribs 是一个专注于**质量多样性（Quality Diversity, QD）优化**的精简 Python 库，实现了高度模块化的 RIBS（Rapid Illumination of Behavior Space）框架。QD 优化是优化领域的一个子领域，其目标是生成一组既有较高目标分值又保持多样性的解决方案集合，覆盖行为空间的不同区域。pyribs 是 CMA-ME、CMA-MEGA、CMA-MAE、Scalable CMA-MAE 和 Discount Model Search (DMS) 等 QD 算法的官方实现入口之一。
 
 核心理念：**照亮行为空间** -- 不仅寻找单一最优解，而是在整个行为空间中找到每个区域的最佳代表，生成类似热力图的存档输出。
 
@@ -127,7 +127,7 @@ plt.show()
 
 | 维度 | pyribs 贡献 |
 |------|-----------|
-| 质量多样性优化 | QD 优化的"既高质量又多样化"理念直接适用于 Self-Evolve 系统中 Agent/工作流的进化目标——不只要找到最优解，还要维持解空间的多样性 |
+| 质量多样性优化 | QD 优化的"高目标分值 + 多样化"理念可用于启发 Self-Evolve 系统中 Agent/工作流的进化目标——不只追单一候选，还要维持解空间的多样性 |
 | 模块化进化架构 | 存档-发射器-调度器的三组件设计为 Self-Evolve 系统的进化引擎提供了可复用的模块化架构参考 |
 | 行为空间搜索 | 通过度量函数定义行为空间的概念，启发了 Self-Evolve 系统中以行为特征为导向的 Agent 策略搜索 |
 | Ask-Tell 评估接口 | ask-tell 模式将候选解生成与评估分离，与 LLM 代码进化的"生成-执行-评估"流程天然契合 |

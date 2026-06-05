@@ -3,7 +3,7 @@
 | Field | Value |
 |---|---|
 | Repository | [RyanAlberts/best-of-Agent-Harnesses](https://github.com/RyanAlberts/best-of-Agent-Harnesses) |
-| Category | Ranked Agent Harness Landscape Index |
+| Category | Agent Harness Landscape Index |
 | Stars / forks snapshot | 64 / 4 |
 | Language | Python |
 | License | CC-BY-SA-4.0 |
@@ -12,11 +12,11 @@
 
 ## 1. Role in Self Evolve
 
-best-of-Agent-Harnesses curates and ranks 100+ agent harness projects to provide a comparative map of harness engineering options. It matters because self-evolving agents need repeatable harness control, measurable feedback loops, and reusable skill procedures before claiming stable improvement.
+best-of-Agent-Harnesses curates a README-ranked list of 100+ agent harness projects, which can be read as a comparative map of harness engineering options. It matters because self-evolving agents need repeatable harness control, measurable feedback loops, and reusable skill procedures before claiming stable improvement.
 
 ## 2. Working Principle
 
-collect harness projects -> score and rank ecosystem coverage -> expose category tags and update cadence -> provide comparative entrypoint for reliability-oriented harness selection
+collect harness projects -> expose category tags, list order and update cadence -> provide comparative entrypoint for reliability-oriented harness selection
 
 ## 3. Evidence Path
 
@@ -24,7 +24,7 @@ web-observed GitHub page showed 64 stars, 4 forks, CC-BY-SA-4.0 license, and REA
 
 ## 4. Teaching Use
 
-Use this card to explain Ranked Agent Harness Landscape Index: it shows how harness/runtime/benchmark layers convert agent behavior into reproducible and auditable engineering workflows.
+Use this card to explain an Agent Harness Landscape Index: it shows how harness/runtime/benchmark layers convert agent behavior into reproducible and auditable engineering workflows.
 
 ## 5. Limits
 

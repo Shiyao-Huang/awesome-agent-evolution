@@ -9,6 +9,7 @@ const siteRoot = path.join(root, 'site');
 const distRoot = path.join(siteRoot, 'dist');
 const blogRoot = path.join(siteRoot, 'src/content/blog');
 const researchRoot = path.join(siteRoot, 'src/content/research');
+const projectReportsRoot = path.join(siteRoot, 'public/reports/projects');
 const reportJsonPath = path.join(root, 'reports/seo-indexable-assets.json');
 const reportMdPath = path.join(root, 'reports/seo-indexable-assets.md');
 const canonicalHost = 'https://agent-evolution.com';
@@ -16,7 +17,7 @@ const canonicalHost = 'https://agent-evolution.com';
 const read = (file) => fs.readFileSync(file, 'utf8');
 const exists = (file) => fs.existsSync(file);
 const listMdx = (dir) => fs.readdirSync(dir).filter((name) => name.endsWith('.mdx')).sort();
-const stripExt = (name) => name.replace(/\.mdx$/, '');
+const stripExt = (name) => name.replace(/\.(mdx|md)$/, '');
 
 const extractFrontmatter = (text) => {
   const match = text.match(/^---\n([\s\S]*?)\n---/);
@@ -56,9 +57,10 @@ const loadSitemapUrls = () => {
   return urls;
 };
 
-const checkHtmlAsset = ({ collection, slug, sourcePath, urlPath, requiredType }) => {
+const checkHtmlAsset = ({ collection, slug, sourcePath, urlPath, requiredType, requireFrontmatter = true }) => {
   const source = read(sourcePath);
   const frontmatter = extractFrontmatter(source);
+  const sourceTitle = frontmatter.title || source.match(/^#\s+(.+)$/m)?.[1]?.trim();
   const url = `${canonicalHost}${urlPath}`;
   const htmlPath = path.join(distRoot, urlPath, 'index.html');
   const failures = [];
@@ -77,9 +79,13 @@ const checkHtmlAsset = ({ collection, slug, sourcePath, urlPath, requiredType })
   const jsonLdTypes = Array.from(html.matchAll(/"@type"\s*:\s*"([^"]+)"/g)).map((match) => match[1]);
 
   if (frontmatter.draft === 'true') warnings.push('draft source is excluded from static paths');
-  if (!frontmatter.title) failures.push('missing source title frontmatter');
-  if (!frontmatter.description) failures.push('missing source description frontmatter');
-  if (!frontmatter.pubDate) failures.push('missing source pubDate frontmatter');
+  if (requireFrontmatter) {
+    if (!frontmatter.title) failures.push('missing source title frontmatter');
+    if (!frontmatter.description) failures.push('missing source description frontmatter');
+    if (!frontmatter.pubDate) failures.push('missing source pubDate frontmatter');
+  } else if (!sourceTitle) {
+    failures.push('missing source H1 title');
+  }
   if (robots && /noindex/i.test(robots)) failures.push('page emits noindex robots meta');
   if (canonical !== url) failures.push(`canonical mismatch: expected ${url}, got ${canonical || 'missing'}`);
   if (!description || description.length < 50) failures.push('meta description missing or too short');
@@ -124,6 +130,19 @@ for (const name of listMdx(researchRoot)) {
   assets.push(checkHtmlAsset({ collection: 'research', slug, sourcePath, urlPath: `/research/${slug}/`, requiredType: 'ScholarlyArticle' }));
 }
 
+for (const name of fs.readdirSync(projectReportsRoot).filter((file) => file.endsWith('.md') && !/^index\.md$/i.test(file)).sort()) {
+  const slug = stripExt(name);
+  const sourcePath = path.join(projectReportsRoot, name);
+  assets.push(checkHtmlAsset({
+    collection: 'project-report',
+    slug,
+    sourcePath,
+    urlPath: `/reports/projects/${slug}/`,
+    requiredType: 'Article',
+    requireFrontmatter: false
+  }));
+}
+
 for (const asset of assets) {
   if (!sitemapUrls.has(asset.url)) {
     asset.status = 'fail';
@@ -142,7 +161,7 @@ const failedAssets = assets.filter((asset) => asset.status === 'fail');
 const report = {
   generated_at: new Date().toISOString(),
   canonical_host: canonicalHost,
-  checked_collections: ['blog', 'research'],
+  checked_collections: ['blog', 'research', 'project-report'],
   global_status: globalFailures.length || failedAssets.length ? 'fail' : 'pass',
   counts: {
     assets_checked: assets.length,
@@ -176,7 +195,7 @@ const md = [
   '',
   '## Scope',
   '',
-  'This audit verifies generated HTML SEO assets for `site/src/content/blog/*.mdx` and `site/src/content/research/*.mdx`: canonical URL, sitemap inclusion, meta description, Open Graph metadata, JSON-LD article type, and absence of `noindex`.',
+  'This audit verifies generated HTML SEO assets for `site/src/content/blog/*.mdx`, `site/src/content/research/*.mdx`, and `site/public/reports/projects/*.md`: canonical URL, sitemap inclusion, meta description, Open Graph metadata, JSON-LD article type, and absence of `noindex`.',
   '',
   '## Failures',
   '',

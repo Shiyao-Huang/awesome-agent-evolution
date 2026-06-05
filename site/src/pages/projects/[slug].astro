@@ -25,17 +25,30 @@ export async function getStaticPaths() {
 const { project } = Astro.props;
 const projectSlug = slugify(project.repo);
 const title = `${project.name} Model Card — ${project.category} | Self Evolve`;
-const description = `${project.name} 深度分析：${project.description} 机制模式：${project.pattern}。`;
-const reportHref = `/reports/${project.report}`;
-const localReportPath = `research/${project.report}`;
+const description = `${project.name} 项目证据卡：说明它在 Self Evolve 图谱中的角色、机制线索、可见证据和未复现边界。`;
+const publishedReportPath = project.report.replace(/\.md$/, '');
+const reportHref = `/reports/${publishedReportPath}/`;
+const localReportPath = `site/public/reports/${project.report}`;
 const githubReportUrl = `${site.github}/blob/main/${localReportPath}`;
 const updatedDate = project.lastPushed ? project.lastPushed.slice(0, 10) : 'unknown';
-const maturity =
+const evidenceStatus =
   project.status === 'verified'
-    ? 'Verified evidence path'
+    ? {
+        label: 'Source-traceable snapshot',
+        zh: '已连到 GitHub 源、站内报告和项目索引；这不等于本仓库完成了本地复现、benchmark 复跑或质量背书。',
+        en: 'Source-traceable snapshot; not a local reproduction, benchmark rerun, or quality endorsement.'
+      }
     : project.status === 'candidate'
-      ? 'Candidate requiring more evidence'
-      : 'Placeholder requiring verification';
+      ? {
+          label: 'Evidence candidate',
+          zh: '已有可读线索，但仍需要补充原始材料、运行证据或第三方复核。',
+          en: 'Readable evidence exists, but source coverage, execution evidence, or independent review is still incomplete.'
+        }
+      : {
+          label: 'Verification pending',
+          zh: '占位项目卡，只能作为后续审查入口，不能作为公开结论引用。',
+          en: 'Placeholder card for later review, not a public conclusion to cite.'
+        };
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'TechArticle',
@@ -78,7 +91,7 @@ const jsonLd = {
             <a class="pill" href={project.url} target="_blank" rel="noopener">{project.repo}</a>
             <span class="pill">{project.language}</span>
             <span class="pill">{project.license}</span>
-            <span class="pill">{maturity}</span>
+            <span class="pill">{evidenceStatus.label}</span>
           </div>
         </div>
         <aside class="model-card-summary" aria-label={`${project.name} model card summary`}>
@@ -92,13 +105,27 @@ const jsonLd = {
         </aside>
       </header>
 
+      <aside class="source-panel" aria-label={`${project.name} evidence boundary`}>
+        <div>
+          <div class="eyebrow">How to read / 如何阅读</div>
+          <h2>先把这页读成证据快照，不要读成项目质量排名</h2>
+          <p>{evidenceStatus.zh}</p>
+          <p><strong>English:</strong> {evidenceStatus.en}</p>
+        </div>
+        <div class="source-links">
+          <a href={project.url} target="_blank" rel="noopener">原始 GitHub 仓库</a>
+          <a href={reportHref}>公开项目报告</a>
+          <a href="/evolve-agi-index/">查看证据指数边界</a>
+        </div>
+      </aside>
+
       <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} is:inline />
 
       <section class="model-card-grid" aria-label="Project model card">
         <section class="model-card-block">
           <div class="eyebrow">1. 它在图谱里的角色</div>
           <h2>为什么这个项目重要</h2>
-          <p>{project.name} 属于 <strong>{project.category}</strong>，在 Self Evolve 图谱中承担 <strong>{project.pattern}</strong> 这一类机制的代表样本。它的价值不只来自 Star 数，而来自它能把自进化问题落到可观察的工程环节：生成、反馈、评估、记忆、搜索、编排或训练数据闭环。</p>
+          <p>{project.name} 属于 <strong>{project.category}</strong>，在 Self Evolve 图谱中是 <strong>{project.pattern}</strong> 这一类机制的观察样本。它的阅读价值不只来自 Star 数，而来自它能把自进化问题落到可检查的工程环节：生成、反馈、评估、记忆、搜索、编排或训练数据闭环。</p>
         </section>
 
         <section class="model-card-block">
@@ -123,7 +150,7 @@ const jsonLd = {
         <section class="model-card-block">
           <div class="eyebrow">5. 证据链</div>
           <h2>从原始材料到分析</h2>
-          <p>站内数据保留了 GitHub 源、局部镜像路径和报告路径。若公开报告尚未同步到站点，仍以本页 model card 作为读者与教学入口，并把原始仓库作为第一证据源。</p>
+          <p>站内数据保留了 GitHub 源、局部镜像路径和公开报告路径。这里的证据链优先说明“材料从哪里来、我们如何归类、哪里还没有复现”，而不是替原项目做最终质量裁决。</p>
           <ul>
             <li>GitHub: <a href={project.url} target="_blank" rel="noopener">{project.url}</a></li>
             <li>Local mirror: <code>{project.localPath ?? 'not recorded'}</code></li>

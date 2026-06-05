@@ -187,7 +187,7 @@ score = evaluator(program)
 
 | 维度 | DSPy 贡献 |
 |------|-----------|
-| Prompt 优化 | **最成熟的自动 Prompt 优化框架**，将 Prompt 视为可优化参数 |
+| Prompt 优化 | **自动 Prompt 优化框架样本**，将 Prompt 视为可优化参数 |
 | 自我改进 | SIMBA 的自我反思 + 规则生成机制是 Agent 自我进化的参考 |
 | 模块化 | Module/Signature/Predict 三层抽象可借鉴于 Agent 架构设计 |
 | 评估 | Evaluate 框架 + metric 驱动的优化循环 |

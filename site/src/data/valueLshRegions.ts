@@ -165,29 +165,29 @@ const facetLabels: Record<string, string> = {
 const regionDefinitions: RegionDefinition[] = [
   {
     kind: 'most-advanced',
-    title: 'Most advanced frontier zone',
-    shortLabel: 'Advanced',
+    title: 'Frontier evidence zone',
+    shortLabel: 'Frontier',
     arrow: '↗',
     color: '#FF6B35',
-    rankingLabel: '最先进',
+    rankingLabel: '前沿证据',
     metricKey: 'frontier',
   },
   {
     kind: 'most-attended',
-    title: 'Most attended narrative zone',
+    title: 'High-attention evidence zone',
     shortLabel: 'Attention',
     arrow: '→',
     color: '#007AFF',
-    rankingLabel: '最引人关注',
+    rankingLabel: '高关注证据',
     metricKey: 'attention',
   },
   {
     kind: 'highest-quality',
-    title: 'Highest quality evidence zone',
-    shortLabel: 'Quality',
+    title: 'Evidence-dense review zone',
+    shortLabel: 'Evidence',
     arrow: '↑',
     color: '#2E8B57',
-    rankingLabel: '最高质量',
+    rankingLabel: '证据密度',
     metricKey: 'quality',
   },
 ];
@@ -212,21 +212,21 @@ const describeCluster = (
     return {
       semanticTitle: 'Evidence-backed runnable cluster',
       semanticSummary: `${dominantTypeText}；证据链、验证器和可运行性都比较强。`,
-      meaning: '这个簇更适合当论文、首页或公开判断的“可靠证据带”，不是热点叙事带。',
+      meaning: '这个簇更适合当论文、首页或公开判断的“证据较完整参考带”，不是热点叙事带，也不是最终质量裁决。',
     };
   }
   if (metrics.attention >= 0.55 && metrics.socialBlogShare >= 0.45) {
     return {
       semanticTitle: 'Attention-heavy discourse cluster',
       semanticSummary: `${dominantTypeText}；关注度和传播面强，但证据密度不一定同步。`,
-      meaning: '这个簇适合告诉读者“大家都在看哪里”，但需要额外提醒它不等于高质量证据。',
+      meaning: '这个簇适合告诉读者“大家都在看哪里”，但需要额外提醒它不等于证据完备或质量更高。',
     };
   }
   if (metrics.frontier >= 0.62 && topIds.has('self_evolution_loop_fit')) {
     return {
       semanticTitle: 'Frontier self-evolution systems',
       semanticSummary: `${dominantTypeText}；前沿信号、自进化回路和可变对象描述更清晰。`,
-      meaning: '这个簇是找“最先进路径”时该先看的区域，适合继续做项目级 deep read。',
+      meaning: '这个簇是找“前沿候选路径”时该先看的区域，适合继续做项目级 deep read。',
     };
   }
   if (topIds.has('retention_or_memory')) {

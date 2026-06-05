@@ -85,6 +85,28 @@ No agent may say "public copy quality is complete" for the whole site until ever
 
 Generated source data such as `site/src/data/generatedKnowledgeGraph.ts` and `site/src/data/projects.ts` still contains public-facing claim fragments inherited from raw/project metadata. These should be handled through generated-copy templates or source-summary normalization, not one-off hand edits to generated files.
 
+## 2026-06-05 Batch C Template Findings And Fixes
+
+### Reader/Editor Findings
+
+| Priority | Finding | Action |
+|---|---|---|
+| P1 | Project detail pages displayed `Verified evidence path`, which readers could interpret as quality certification or local reproduction. | Replaced the visible status with `Source-traceable snapshot`, `Evidence candidate`, or `Verification pending`, and added a bilingual reading boundary before the model card. |
+| P1 | Project report HTML pages explained themselves as `Indexable asset`, which is internal SEO/ops language rather than reader value. | Rewrote the report template around evidence snapshots, source trails, and explicit non-ranking/non-endorsement boundaries. |
+| P1 | Project report links still pointed at `.md` routes from project pages and the project index. | Updated report links to the canonical HTML route `/reports/projects/<slug>/`. |
+| P2 | Project index ranks were visually shown as `#001`, encouraging a quality-ranking read. | Reframed the sequence as `Star #...` and added a visible caveat that Star order is historical visibility, not quality or academic value. |
+
+### Academic Findings
+
+| Priority | Finding | Action |
+|---|---|---|
+| P1 | Value LSH region labels such as `最先进` and `最高质量` implied final comparative claims from heuristic scores. | Reframed them as `前沿证据`, `高关注证据`, and `证据密度`, preserving triage utility without claiming final quality. |
+| P2 | Cluster descriptions could still sound like a settled "best path." | Rewrote affected meanings as candidate paths, evidence-dense zones, and review prompts rather than final judgments. |
+
+### Residual Queue
+
+This batch fixes template-level propagation risk. It does not yet certify every generated project report body; long-tail report bodies still need sampling, noindex/rewrite decisions, and per-batch reader/editor plus academic review before the whole public site can be called quality-complete.
+
 ## 2026-06-05 Agent Review Conclusions
 
 ### Does This Need Major Revision?

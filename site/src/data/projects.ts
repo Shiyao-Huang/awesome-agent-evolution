@@ -291,7 +291,7 @@ export const projects: Project[] = [
         "license": "Apache-2.0",
         "report": "projects/01-opro-llm-as-optimizer.md",
         "pattern": "进化/搜索循环 → 评估器/打分器",
-        "description": "Google DeepMind 的 OPRO（Optimization by PROmpting），用 LLM 作为优化器，通过进化式 Prompt 迭代搜索最优解。",
+        "description": "Google DeepMind 的 OPRO（Optimization by PROmpting），用 LLM 作为优化器，通过进化式 Prompt 迭代搜索更优候选。",
         "stack": [
             "Python",
             "Google PaLM/Gemini API"
@@ -342,7 +342,7 @@ export const projects: Project[] = [
         "license": "MIT",
         "report": "projects/03-adas-automated-design-agentic-systems.md",
         "pattern": "进化/搜索循环 → 智能体编排 → 评估器/打分器",
-        "description": "自动设计智能体系统（ADAS），使用 Meta Agent Search 在代码层面搜索最优 Agent 架构。",
+        "description": "自动设计智能体系统（ADAS），使用 Meta Agent Search 在代码层面搜索候选 Agent 架构。",
         "stack": [
             "Python",
             "Anthropic Claude API"
@@ -447,7 +447,7 @@ export const projects: Project[] = [
         "license": "MIT",
         "report": "projects/07-metagpt-multi-agent-framework.md",
         "pattern": "智能体编排 → 反馈-精炼",
-        "description": "最成熟的多智能体协作框架，Code = SOP(Team) 理念，含 SELA（MCTS+LLM）和 AFlow（ICLR 2025 Oral）。",
+        "description": "高可见度的多智能体协作框架，Code = SOP(Team) 理念，含 SELA（MCTS+LLM）和 AFlow（ICLR 2025 Oral）线索。",
         "stack": [
             "Python",
             "OpenAI/Azure/Ollama API"
@@ -473,7 +473,7 @@ export const projects: Project[] = [
         "license": "MIT",
         "report": "projects/08-autogpt-autonomous-agent.md",
         "pattern": "智能体编排",
-        "description": "GitHub 历史最高星标之一，定义了自主 Agent 的 TAO 循环（Thought-Action-Observation），已演进为完整 Agent 平台。",
+        "description": "GitHub 历史高星标自主 Agent 项目之一，定义了 TAO 循环（Thought-Action-Observation），并演进出平台化形态。",
         "stack": [
             "Python",
             "Docker",
@@ -580,7 +580,7 @@ export const projects: Project[] = [
         "license": "Apache-2.0",
         "report": "projects/12-camel-ai-communicative-agents.md",
         "pattern": "智能体编排 → 反馈-精炼",
-        "description": "最早探索多 Agent 角色扮演对话的框架，含 Critic 在环批评机制和 Self-Instruct 数据生成。",
+        "description": "较早探索多 Agent 角色扮演对话的框架，含 Critic 在环批评机制和 Self-Instruct 数据生成。",
         "stack": [
             "Python",
             "OpenAI/Anthropic/Google API",
@@ -633,7 +633,7 @@ export const projects: Project[] = [
         "license": "MIT",
         "report": "projects/14-swe-agent-software-engineering.md",
         "pattern": "反馈-精炼 → 评估器/打分器",
-        "description": "Princeton NLP 软件工程 Agent，ICLR 2025 Oral，首创 Agent-Computer Interface (ACI)，在 SWE-bench 上达到 SOTA。",
+        "description": "Princeton NLP 软件工程 Agent，ICLR 2025 Oral，提出 Agent-Computer Interface (ACI)；SWE-bench 结果需按论文和 leaderboard 版本复查。",
         "stack": [
             "Python",
             "Jinja2",
@@ -1607,7 +1607,7 @@ export const projects: Project[] = [
         "license": "MIT",
         "report": "research/projects/50-smol-developer.md",
         "pattern": "最小 Agent → 代码生成 → 迭代",
-        "description": "Smol Developer 极简 AI 开发助手，以最少的代码实现 AI 辅助开发。",
+        "description": "Smol Developer 极简 AI 开发助手，以少量代码展示 AI 辅助开发路径。",
         "stack": [
             "Python",
             "LLM API"
@@ -1852,7 +1852,7 @@ export const projects: Project[] = [
         "license": "MIT",
         "report": "research/projects/59-awesome-agent-papers.md",
         "pattern": "论文索引 → LLM Agent 研究追踪",
-        "description": "Awesome Agent Papers LLM Agent 研究论文精选列表，追踪 Agent 领域最新进展。",
+        "description": "Awesome Agent Papers 是 LLM Agent 研究论文精选列表，用于持续追踪 Agent 领域进展。",
         "stack": [
             "Markdown"
         ],
@@ -7914,6 +7914,123 @@ export const projects: Project[] = [
             "production-runtime"
         ],
         "localPath": "raw-github/kyegomez_swarms.md"
+    },
+    {
+        "name": "Agent Swarm",
+        "repo": "desplega-ai/agent-swarm",
+        "url": "https://github.com/desplega-ai/agent-swarm",
+        "description": "Agent Swarm is a production-oriented lead-worker runtime that routes work from Slack/GitHub/Email/API into Dockerized agent workers, persists memory and identity, and exposes MCP, workflows, pages, and recurring task patterns as reusable swarm infrastructure.",
+        "stack": [
+            "TypeScript",
+            "Docker",
+            "MCP",
+            "Lead-Worker Swarm"
+        ],
+        "category": "Compounding Lead-Worker Agent Runtime",
+        "status": "candidate",
+        "stars": 505,
+        "forks": 56,
+        "lastPushed": "2026-06-04T00:00:00Z",
+        "language": "TypeScript",
+        "license": "MIT",
+        "report": "projects/405-agent-swarm-compounding-lead-worker-runtime.md",
+        "pattern": "ingest tasks from external channels -> lead agent plans and delegates -> workers run inside isolated Docker environments -> shared memory and identity accumulate across sessions -> pages, PRs, replies, and scheduled workflows turn learnings into reusable operations",
+        "tags": [
+            "agent-swarm",
+            "lead-worker",
+            "docker",
+            "mcp",
+            "compounding-memory"
+        ],
+        "localPath": "raw-github/desplega-ai_agent-swarm.md"
+    },
+    {
+        "name": "Agency Swarm",
+        "repo": "VRSEN/agency-swarm",
+        "url": "https://github.com/VRSEN/agency-swarm",
+        "description": "Agency Swarm is a mature Python orchestration framework that layers role-aware communication flows, type-safe tools, thread persistence, and terminal/web demos on top of the OpenAI Agents SDK.",
+        "stack": [
+            "Python",
+            "OpenAI Agents SDK",
+            "Agency CLI",
+            "State Persistence"
+        ],
+        "category": "OpenAI Agents SDK Swarm Orchestrator",
+        "status": "candidate",
+        "stars": 4400,
+        "forks": 1100,
+        "lastPushed": "2026-05-24T00:00:00Z",
+        "language": "Python",
+        "license": "MIT",
+        "report": "projects/27-agency-swarm.md",
+        "pattern": "define agents and directional communication flows -> attach function tools and persistence callbacks -> route work through agency-level orchestration -> reuse terminal/web demos and docs as reproducible multi-agent operating patterns",
+        "tags": [
+            "agency-swarm",
+            "openai-agents-sdk",
+            "multi-agent",
+            "state-persistence",
+            "cli"
+        ],
+        "localPath": "raw-github/vrsen_agency-swarm.md"
+    },
+    {
+        "name": "XSkill",
+        "repo": "XSkill-Agent/XSkill",
+        "url": "https://github.com/XSkill-Agent/XSkill",
+        "description": "XSkill is a multimodal continual-learning paper implementation that extracts task-level skills and action-level experiences from agent trajectories, stores them in a memory bank, and re-injects them during inference across benchmark suites.",
+        "stack": [
+            "Python",
+            "Multimodal Agent",
+            "Memory Bank",
+            "Benchmark Eval"
+        ],
+        "category": "Continual Experience and Skill Learning Paper Code",
+        "status": "candidate",
+        "stars": 216,
+        "forks": 27,
+        "lastPushed": "2026-05-01T00:00:00Z",
+        "language": "Python",
+        "license": "MIT",
+        "report": "projects/404-xskill-continual-experience-skill-learning.md",
+        "pattern": "collect multimodal trajectories -> summarize and critique experiences -> consolidate reusable skill documents and experience entries -> retrieve relevant memory for new tasks -> evaluate transfer on benchmark suites",
+        "tags": [
+            "xskill",
+            "continual-learning",
+            "memory-bank",
+            "skills",
+            "benchmark"
+        ],
+        "localPath": "raw-github/xskill-agent_xskill.md"
+    },
+    {
+        "name": "LightAgent",
+        "repo": "wanxingai/LightAgent",
+        "url": "https://github.com/wanxingai/LightAgent",
+        "description": "LightAgent is a lightweight Python agent framework that combines persistent memory, MCP integration, native skills, LightSwarm collaboration, and newly surfaced LightFlow workflow orchestration into a small-footprint self-learning runtime.",
+        "stack": [
+            "Python",
+            "MCP",
+            "mem0",
+            "Agent Skills",
+            "LightFlow"
+        ],
+        "category": "Memory/MCP Skill Agent Framework",
+        "status": "candidate",
+        "stars": 1100,
+        "forks": 141,
+        "lastPushed": "2026-06-02T00:00:00Z",
+        "language": "Python",
+        "license": "Apache-2.0",
+        "report": "projects/139-lightagent-memory-mcp-skills.md",
+        "pattern": "compose lightweight agents with tools, MCP, and memory -> add native skills and optional trace observability -> delegate via LightSwarm -> chain deterministic multi-step flows with LightFlow -> keep self-learning behavior grounded in runtime memory and reusable tool plans",
+        "tags": [
+            "lightagent",
+            "memory",
+            "mcp",
+            "skills",
+            "workflow"
+        ],
+        "localPath": "raw-github/wanxingai_lightagent.md"
     }
 ];
 
@@ -8314,7 +8431,8 @@ export const projectGroups = [
       "letta-ai/learning-sdk",
       "yennning/awesome-code-as-agent-harness-papers",
       "voltagent/awesome-agent-skills",
-      "vectorize-io/agent-memory-benchmark"
+      "vectorize-io/agent-memory-benchmark",
+      "XSkill-Agent/XSkill"
     ]
   },
   {
@@ -8325,7 +8443,9 @@ export const projectGroups = [
       "TransformerOptimus/SuperAGI",
       "paradigmxyz/centaur",
       "swarmclawai/swarmclaw",
-      "kyegomez/swarms"
+      "kyegomez/swarms",
+      "VRSEN/agency-swarm",
+      "desplega-ai/agent-swarm"
     ]
   },
   {

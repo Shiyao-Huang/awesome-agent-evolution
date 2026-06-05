@@ -12,9 +12,9 @@
 
 ## 项目简介
 
-SWE-bench 是一个用于评估大语言模型在真实世界 GitHub Issue 上解决软件工程问题能力的基准测试框架。给定一个代码库和一个 Issue 描述，语言模型需要生成能够解决所描述问题的代码补丁（Patch）。该基准测试已成为衡量 AI 编程 Agent 能力的最重要标准之一，被 ICLR 2024 接收为口头报告论文。
+SWE-bench 是一个用于评估大语言模型在真实世界 GitHub Issue 上解决软件工程问题能力的基准测试框架。给定一个代码库和一个 Issue 描述，语言模型需要生成能够解决所描述问题的代码补丁（Patch）。它是 AI 编程 Agent 能力评估中常被引用的基准之一，被 ICLR 2024 接收为口头报告论文。
 
-SWE-bench 的核心创新在于其数据集来源：所有任务均从真实的 GitHub 仓库中收集，涵盖了 Django、Flask、SymPy、Matplotlib、Scikit-learn 等 12 个流行 Python 项目的真实 Issue 和对应的合并 PR。这种基于真实软件工程场景的评估方式，使得 SWE-bench 成为衡量 AI 系统"能否像真正的软件工程师一样工作"的可靠度量工具。
+SWE-bench 的核心创新在于其数据集来源：任务从真实的 GitHub 仓库中收集，涵盖了 Django、Flask、SymPy、Matplotlib、Scikit-learn 等 12 个流行 Python 项目的 Issue 和对应合并 PR。这种基于真实软件工程场景的评估方式，使 SWE-bench 成为观察 AI 系统能否处理软件工程问题的重要证据入口；具体结论仍要看任务子集、执行环境和 leaderboard 版本。
 
 项目已发展出多个变体：SWE-bench Verified（500 个人工验证的可解决问题）、SWE-bench Lite（精简子集）、SWE-bench Multimodal（多模态版本，ICLR 2025）和 SWE-bench Multilingual。配套的 SWE-agent、SWE-smith 等工具链形成了完整的软件工程 Agent 评估生态。
 
@@ -63,7 +63,7 @@ SWE-bench 的评估核心是容器化的执行评估引擎。每个任务在一�
 2. **容器化评估**：完全基于 Docker 的隔离评估环境，确保可重复性和跨平台公平性
 3. **测试套件验证**：使用项目原生测试套件验证 Patch 正确性，避免了启发式评估的偏差
 4. **多维度数据集**：Full/Lite/Verified/Multimodal/Multilingual 五种变体，覆盖不同评估场景
-5. **完整工具链生态**：SWE-agent（Agent 框架）、SWE-smith（数据生成）、sb-cli（云评估）、SWE-ReX（远程执行）形成完整生态
+5. **配套工具链生态**：SWE-agent（Agent 框架）、SWE-smith（数据生成）、sb-cli（云评估）、SWE-ReX（远程执行）形成配套生态
 
 ## 与 Self-Evolve 关联
 | 关联维度 | 分析 |

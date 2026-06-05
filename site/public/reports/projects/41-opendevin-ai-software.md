@@ -136,7 +136,7 @@ OpenHands 支持丰富的外部集成:
 
 ## 技术亮点
 
-1. **SWE-bench 77.6%**: 在真实 GitHub Issue 解决基准上取得领先成绩
+1. **SWE-bench 77.6%**: 公开资料报告的真实 GitHub Issue 解决基准结果；相对位置需要按评测日期和 leaderboard 版本复核
 2. **全栈 Agent 能力**: 从需求理解、代码编写、测试执行到 Git 操作的全流程自动化
 3. **多形态部署**: SDK、CLI、GUI、Cloud、Enterprise 五种部署方式,适配不同使用场景
 4. **安全沙箱**: Docker 容器隔离执行,确保 AI Agent 的操作不会影响宿主系统

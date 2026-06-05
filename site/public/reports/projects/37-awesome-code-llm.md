@@ -12,7 +12,7 @@
 
 ## 项目简介
 
-Awesome-Code-LLM是TMLR论文"Unifying the Perspectives of NLP and Software Engineering: A Survey on Language Models for Code"的配套资源仓库。该仓库系统性地收集了代码大语言模型(Code LLM)领域的研究论文,涵盖模型架构、预训练策略、下游任务、代码推理、评估基准等全方位内容,是目前代码LLM领域最全面的资源列表之一。仓库持续更新至2026年5月,收录了数百篇高质量论文。
+Awesome-Code-LLM是TMLR论文"Unifying the Perspectives of NLP and Software Engineering: A Survey on Language Models for Code"的配套资源仓库。该仓库系统性地收集了代码大语言模型(Code LLM)领域的研究论文,涵盖模型架构、预训练策略、下游任务、代码推理、评估基准等多类内容,可作为代码LLM领域资源列表入口之一。仓库持续更新至2026年5月,收录了数百篇论文条目。
 
 ## 目录结构
 

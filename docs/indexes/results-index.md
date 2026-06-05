@@ -10,10 +10,10 @@
 
 | Path | Status | Files | Directories | Skipped | Size |
 |---|---|---:|---:|---:|---:|
-| `reports` | present | 16 | 2 | 0 | 119 KB |
+| `reports` | present | 16 | 2 | 0 | 681 KB |
 | `output` | present | 8 | 1 | 0 | 685 KB |
 | `site/public/reports` | present | 518 | 6 | 0 | 3.7 MB |
-| `site/dist` | present | 1010 | 450 | 0 | 37 MB |
+| `site/dist` | present | 1495 | 935 | 0 | 44 MB |
 | `paper-drafts/main.pdf` | present | 1 | 0 | 0 | 1.6 MB |
 | `docs/publishing-readiness-check.md` | present | 1 | 0 | 0 | 3.5 KB |
 
@@ -60,12 +60,12 @@
 
 - `site/dist/CNAME`
 - `site/dist/_astro/BaseLayout.Bsw8u1pc.css`
-- `site/dist/_astro/ValueLshGraph3D.astro_astro_type_script_index_0_lang.B9u0h_ek.js`
+- `site/dist/_astro/ValueLshGraph3D.astro_astro_type_script_index_0_lang.D1zkfLez.js`
 - `site/dist/_astro/client.BpEju3qh.js`
-- `site/dist/_astro/index.B-ztvEHt.css`
 - `site/dist/_astro/index.BPKjW9fM.css`
 - `site/dist/_astro/index.CD76ZKuK.css`
 - `site/dist/_astro/index.CmLyJJUK.css`
+- `site/dist/_astro/index.CsgLbD3f.css`
 - `site/dist/_astro/index.DmBefzs_.css`
 - `site/dist/_astro/index.RJBPLimb.css`
 

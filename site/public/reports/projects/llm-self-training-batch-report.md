@@ -21,7 +21,7 @@ LLM 自我训练（Self-Training）是指大语言模型在不依赖外部人工
 #### ReST-MCTS* (THUDM/清华)
 - **仓库**：https://github.com/THUDM/ReST-MCTS
 - **方向**：结合过程奖励引导与树搜索的强化自训练
-- **核心方法**：MCTS* + 过程奖励模型 + 高质量训练数据采集
+- **核心方法**：MCTS* + 过程奖励模型 + 筛选后的训练数据采集
 - **技术栈**：Python, PyTorch, Transformers
 
 ### 2. SPIN（Self-Play Fine-Tuning）

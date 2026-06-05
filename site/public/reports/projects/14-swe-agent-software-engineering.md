@@ -168,7 +168,7 @@ class TemplateConfig(BaseModel):
 ## 技术亮点
 
 1. **ACI 设计**：为 LLM 量身定制的 Agent-Computer Interface
-2. **ICLR 2025 Oral**：在 SWE-bench 上达到 SOTA
+2. **ICLR 2025 Oral**：SWE-bench 结果需要按论文、leaderboard 与评测日期复核
 3. **多轮重试**：Reviewer 机制 + 多轨迹选择最优解
 4. **Docker 隔离**：安全的代码执行环境
 5. **Inspector**：可视化运行轨迹分析

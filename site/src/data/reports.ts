@@ -26,7 +26,7 @@ function listMarkdownFiles(dir: string, category: 'projects' | 'papers'): Report
   const full = path.join(reportsRoot, dir);
   if (!statSync(full, { throwIfNoEntry: false })?.isDirectory()) return [];
   return readdirSync(full)
-    .filter((f) => f.endsWith('.md'))
+    .filter((f) => f.endsWith('.md') && !/^index\.md$/i.test(f))
     .map((f) => {
       const content = readFileSync(path.join(full, f), 'utf8');
       const slug = f.replace(/\.md$/, '');

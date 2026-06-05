@@ -13,7 +13,7 @@
 
 ## 项目简介
 
-MetaGPT 是当前最成熟的多智能体协作框架之一。核心理念：**Code = SOP(Team)** — 将软件公司的标准操作流程（SOP）应用于 LLM 团队。
+MetaGPT 是高可见度的多智能体协作框架之一。核心理念：**Code = SOP(Team)** — 将软件公司的标准操作流程（SOP）应用于 LLM 团队。
 
 一句话输入 → 输出完整软件项目（用户故事、竞品分析、需求文档、数据结构、API、代码等）。
 
@@ -89,7 +89,7 @@ Role (角色)
 - 论文：[SELA: Tree-Search Enhanced LLM Agents for Automated Machine Learning](https://arxiv.org/abs/2410.17238)
 
 **AFlow（Automating Agentic Workflow Generation）**：
-- ICLR 2025 口头报告（前 1.8%），LLM-based Agent 类排名第二
+- ICLR 2025 口头报告线索；具体百分位和同类排名需要回到 OpenReview/论文版本复核
 - 自动生成 Agent 工作流
 - 论文：[AFlow](https://openreview.net/forum?id=z5uVAKwmjf)
 
@@ -137,7 +137,7 @@ class ProductManager(Role):
 
 | 维度 | MetaGPT 贡献 |
 |------|-------------|
-| 多 Agent | **最成熟的 SOP 多 Agent 框架**，角色-动作-消息模式参考 |
+| 多 Agent | **SOP 多 Agent 框架样本**，角色-动作-消息模式参考 |
 | 自我改进 | SELA (MCTS+LLM) 和 AFlow（自动工作流生成）是自我进化的实践 |
 | 记忆 | 多层记忆系统设计可参考 |
 | 学习 | skill_loader + 技能积累机制 |
