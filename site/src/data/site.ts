@@ -9,6 +9,9 @@ export const site = {
     'Self Evolve 是 AI Agent 自进化证据地图：先判断系统改了什么、谁验证、能否保留和回滚，再进入论文、项目、benchmark 与证据边界。English core summaries are available; full parity is still in progress.',
   keywords: [
     'Self Evolve AI',
+    'awesome-agent-evolution',
+    'agent-evolution',
+    'self-evolving-agents',
     'AI Self Evolution',
     '自进化智能体',
     'AI 自我进化',

@@ -4,6 +4,8 @@
 
 [中文主入口](README.md) | [英文版](README-EN.md) | [在线网站](https://shiyao-huang.github.io/awesome-agent-evolution/) | [论文 PDF](paper-drafts/main.pdf) | [Evolve-AGI Index](analysis/evolve-agi-index.md) | [项目报告](projects/INDEX.md)
 
+GitHub Topics: `agent-evolution`, `self-evolving-agents`, `self-evolution`, `self-improvement`, `ai-agent`, `llm-agent`, `agent-swarm`, `memory-system`, `skill-library`, `harness-engineering`, `benchmark`.
+
 ![Self Evolve 公开研究管线](site/public/visuals/self-evolve-readme-banner.png)
 
 ## 一句话
