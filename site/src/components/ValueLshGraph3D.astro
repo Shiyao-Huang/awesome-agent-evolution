@@ -148,6 +148,25 @@ const fallbackNodes = [...sceneNodes]
     opacity: clamp(0.38 + (node.z + 1) * 0.24, 0.28, 0.92),
   }));
 
+const fallbackRegionOverlays = valueLshRegions.map((region, index) => {
+  const centerX = clamp(500 + region.centroid.x * 390 + region.centroid.z * 72, 92, 908);
+  const centerY = clamp(270 - region.centroid.y * 190 + region.centroid.z * 34, 74, 472);
+  const boxWidth = clamp(Math.abs(region.bounds.max.x - region.bounds.min.x) * 410 + 110, 110, 360);
+  const boxHeight = clamp(Math.abs(region.bounds.max.y - region.bounds.min.y) * 230 + 84, 84, 260);
+  return {
+    ...region,
+    rank: index + 1,
+    centerX,
+    centerY,
+    boxWidth,
+    boxHeight,
+    boxX: centerX - boxWidth / 2,
+    boxY: centerY - boxHeight / 2,
+    labelX: clamp(centerX + boxWidth / 2 + 18, 120, 908),
+    labelY: clamp(centerY - boxHeight / 2 - 16, 34, 504),
+  };
+});
+
 const scenePayload = {
   variant,
   nodes: sceneNodes,
@@ -201,8 +220,40 @@ const defaultNeighbors = defaultNode?.neighbors.slice(0, 6) ?? [];
             fill-opacity={node.opacity}
           />
         ))}
+        {fallbackRegionOverlays.map((region) => (
+          <g>
+            <rect
+              x={region.boxX}
+              y={region.boxY}
+              width={region.boxWidth}
+              height={region.boxHeight}
+              rx="18"
+              fill="none"
+              stroke={region.color}
+              stroke-opacity="0.34"
+              stroke-width="2"
+              stroke-dasharray="8 6"
+            />
+            <circle cx={region.centerX} cy={region.centerY} r="6" fill={region.color} fill-opacity="0.9" />
+            <path
+              d={`M ${region.centerX + 8} ${region.centerY - 8} L ${region.labelX - 18} ${region.labelY + 14}`}
+              fill="none"
+              stroke={region.color}
+              stroke-opacity="0.42"
+              stroke-width="2"
+            />
+            <g transform={`translate(${region.labelX}, ${region.labelY})`}>
+              <rect x="0" y="0" width="146" height="40" rx="16" fill="rgba(255,252,248,.92)" stroke="rgba(20,25,34,.10)" />
+              <circle cx="18" cy="20" r="10" fill="rgba(246,239,230,.98)" />
+              <text x="18" y="24" text-anchor="middle" font-size="11" font-weight="700" fill="#1f2430">{region.rank}</text>
+              <text x="36" y="16" font-size="12" font-weight="700" fill="#1f2430">{region.arrow} {region.rankingLabel}</text>
+              <text x="36" y="29" font-size="10" font-weight="600" fill="rgba(31,36,48,.66)">{region.clusterId}</text>
+            </g>
+          </g>
+        ))}
       </svg>
     </div>
+    <div class="value-lsh-region-markers" data-region-markers aria-label="High-value region anchors"></div>
   </div>
   {variant === 'full' ? (
     <div class="value-lsh-region-rail" aria-label="High-value region ranking">
@@ -340,7 +391,8 @@ const defaultNeighbors = defaultNode?.neighbors.slice(0, 6) ?? [];
     const stage = root.querySelector('[data-value-lsh-stage]');
     const canvas = root.querySelector('[data-value-lsh-canvas]');
     const inspector = root.querySelector('[data-value-lsh-inspector]');
-    if (!(payloadElement instanceof HTMLScriptElement) || !(stage instanceof HTMLElement) || !(canvas instanceof HTMLCanvasElement) || !(inspector instanceof HTMLElement)) return;
+    const markerLayer = root.querySelector('[data-region-markers]');
+    if (!(payloadElement instanceof HTMLScriptElement) || !(stage instanceof HTMLElement) || !(canvas instanceof HTMLCanvasElement) || !(inspector instanceof HTMLElement) || !(markerLayer instanceof HTMLElement)) return;
 
     let payload: ScenePayload;
     try {
@@ -462,6 +514,7 @@ const defaultNeighbors = defaultNode?.neighbors.slice(0, 6) ?? [];
 
     const regionButtons = [...root.querySelectorAll('[data-region-button]')].filter((element): element is HTMLButtonElement => element instanceof HTMLButtonElement);
     const regionVisuals = new Map<string, THREE.Group>();
+    const regionMarkers = new Map<string, HTMLButtonElement>();
     const setMaterialOpacity = (material: THREE.Material | THREE.Material[], opacity: number) => {
       const materials = Array.isArray(material) ? material : [material];
       materials.forEach((item) => {
@@ -473,6 +526,9 @@ const defaultNeighbors = defaultNode?.neighbors.slice(0, 6) ?? [];
     const setRegionActiveState = (activeId?: string | null) => {
       regionButtons.forEach((button) => {
         button.dataset.active = button.dataset.regionId === activeId ? 'true' : 'false';
+      });
+      regionMarkers.forEach((marker, key) => {
+        marker.dataset.active = key === activeId ? 'true' : 'false';
       });
       regionVisuals.forEach((visual, key) => {
         const opacity = key === activeId ? 0.95 : 0.22;
@@ -522,11 +578,55 @@ const defaultNeighbors = defaultNode?.neighbors.slice(0, 6) ?? [];
       return visual;
     };
 
+    const createRegionMarker = (region: SceneRegion, index: number) => {
+      const marker = document.createElement('button');
+      marker.type = 'button';
+      marker.className = 'value-region-marker';
+      marker.dataset.regionId = region.kind;
+      marker.setAttribute('aria-label', `${index + 1}. ${region.rankingLabel}`);
+      marker.innerHTML = `
+        <span class="value-region-marker-rank">${index + 1}</span>
+        <span class="value-region-marker-copy">
+          <strong>${escapeHtml(region.arrow)} ${escapeHtml(region.rankingLabel)}</strong>
+          <small>${escapeHtml(region.clusterId)}</small>
+        </span>
+      `;
+      marker.addEventListener('click', () => selectRegion(region));
+      markerLayer.append(marker);
+      regionMarkers.set(region.kind, marker);
+    };
+
     regions.forEach((region) => {
       const visual = createRegionVisual(region);
       regionVisuals.set(region.kind, visual);
       regionGroup.add(visual);
     });
+    regions.forEach((region, index) => createRegionMarker(region, index));
+
+    const updateRegionMarkers = () => {
+      const width = stage.clientWidth;
+      const height = stage.clientHeight;
+      group.updateMatrixWorld(true);
+      camera.updateMatrixWorld();
+      regions.forEach((region) => {
+        const marker = regionMarkers.get(region.kind);
+        if (!marker) return;
+        const world = group.localToWorld(regionPosition(region).clone());
+        const projected = world.project(camera);
+        const visible = projected.z > -1 && projected.z < 1;
+        if (!visible) {
+          marker.dataset.hidden = 'true';
+          return;
+        }
+        const x = ((projected.x + 1) / 2) * width;
+        const y = ((-projected.y + 1) / 2) * height;
+        const insideViewport = x >= 24 && x <= width - 24 && y >= 24 && y <= height - 24;
+        marker.dataset.hidden = insideViewport ? 'false' : 'true';
+        if (insideViewport) {
+          marker.style.transform = `translate(${x}px, ${y}px) translate(-50%, -50%)`;
+        }
+      });
+    };
 
     const selectNode = (node: SceneNode) => {
       highlightGroup.clear();
@@ -659,6 +759,7 @@ const defaultNeighbors = defaultNode?.neighbors.slice(0, 6) ?? [];
       }
       group.rotation.x += (targetX - group.rotation.x) * 0.08;
       group.rotation.y += (targetY - group.rotation.y) * 0.08;
+      updateRegionMarkers();
       renderer.render(scene, camera);
       requestAnimationFrame(tick);
     };
@@ -735,6 +836,74 @@ const defaultNeighbors = defaultNode?.neighbors.slice(0, 6) ?? [];
 
   .value-lsh-three.is-canvas-ready .value-lsh-fallback {
     display: none;
+  }
+
+  .value-lsh-region-markers {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+
+  .value-region-marker {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+    padding: 7px 10px;
+    border: 1px solid rgba(20, 25, 34, 0.12);
+    border-radius: 999px;
+    background: rgba(255, 252, 248, 0.92);
+    box-shadow: 0 12px 24px rgba(34, 45, 68, 0.12);
+    color: var(--fg);
+    transform: translate(-50%, -50%);
+    transition: opacity .18s ease, transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+    pointer-events: auto;
+    backdrop-filter: blur(8px);
+  }
+
+  .value-region-marker[data-hidden="true"] {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .value-region-marker[data-active="true"] {
+    border-color: rgba(0, 122, 255, .32);
+    box-shadow: 0 16px 30px rgba(38, 64, 108, 0.16);
+  }
+
+  .value-region-marker-rank {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    border-radius: 999px;
+    background: var(--surface-1);
+    font-size: 11px;
+    font-weight: 850;
+    flex: 0 0 auto;
+  }
+
+  .value-region-marker-copy {
+    display: grid;
+    min-width: 0;
+    line-height: 1.1;
+  }
+
+  .value-region-marker-copy strong {
+    font-size: 12px;
+    font-weight: 850;
+    white-space: nowrap;
+  }
+
+  .value-region-marker-copy small {
+    color: var(--muted);
+    font-size: 10px;
+    font-weight: 800;
+    white-space: nowrap;
   }
 
   .value-lsh-legend {
@@ -1007,11 +1176,19 @@ const defaultNeighbors = defaultNode?.neighbors.slice(0, 6) ?? [];
       gap: 6px;
       font-size: 11px;
     }
+
+    .value-region-marker-copy small {
+      display: none;
+    }
   }
 
   @media (max-width: 560px) {
     .value-lsh-region-rail {
       grid-template-columns: minmax(0, 1fr);
+    }
+
+    .value-region-marker {
+      padding: 6px 8px;
     }
   }
 </style>
