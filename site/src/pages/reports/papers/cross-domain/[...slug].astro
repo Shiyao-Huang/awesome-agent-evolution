@@ -1,0 +1,82 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { getCollection, render } from 'astro:content';
+import { site } from '@/data/site';
+
+export async function getStaticPaths() {
+  const reports = await getCollection('paperCrossDomainReports');
+  return reports.map((report) => ({
+    params: { slug: report.id.toLowerCase() === 'readme' ? 'overview' : report.id },
+    props: { report }
+  }));
+}
+
+const { report } = Astro.props;
+const { Content } = await render(report);
+const body = report.body ?? '';
+const title = body.match(/^#\s+(.+)$/m)?.[1]?.trim() ?? `Cross-domain paper report: ${report.id}`;
+const cleanMarkdown = (value: string) =>
+  value
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
+    .replace(/[`*_~]/g, '')
+    .replace(/->/g, ' to ')
+    .replace(/[<>]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+const excerpt = body
+  .split(/\n{2,}/)
+  .map((block) => block.trim())
+  .filter((block) => block && !block.startsWith('#') && !block.startsWith('|') && !block.startsWith('```') && !block.startsWith('>'))
+  .map(cleanMarkdown)
+  .find((block) => block.length >= 50);
+const fallbackDescription = `${title} 是 Self Evolve 跨领域论文图谱的可访问 HTML 版本，连接 AutoML、NAS、LLM 自我改进、进化计算和 Agent 框架证据。`;
+const descriptionSource = excerpt ?? fallbackDescription;
+const description = descriptionSource.length > 155 ? `${descriptionSource.slice(0, 152)}...` : descriptionSource;
+const slug = report.id.toLowerCase() === 'readme' ? 'overview' : report.id;
+const canonical = new URL(`/reports/papers/cross-domain/${slug}/`, site.url).toString();
+const sourceUrl = `${site.github}/blob/main/site/public/reports/papers/cross-domain/${report.id}.md`;
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ScholarlyArticle',
+  headline: title,
+  description,
+  inLanguage: 'zh-CN',
+  author: { '@id': `${site.url}/#organization` },
+  publisher: { '@id': `${site.url}/#organization` },
+  mainEntityOfPage: canonical,
+  isBasedOn: sourceUrl,
+  about: ['self-evolving AI agents', 'cross-domain research map', 'AI agent survey']
+};
+---
+<BaseLayout
+  title={`${title} | Self Evolve Cross-Domain Paper Report`}
+  description={description}
+  type="article"
+  pageKeywords={['Self Evolve paper report', 'cross-domain AI research', 'self-evolving AI agents', title]}
+>
+  <article class="blog-article">
+    <div class="eyebrow">Cross-domain paper report / 跨领域论文图谱</div>
+    <h1>{title}</h1>
+    <p class="lead">这是跨领域论文报告的公开阅读入口。它把原始 Markdown 报告整理成可浏览的网页，方便读者从主题地图进入证据链，同时保留源文件作为来源。</p>
+    <div class="pill-row">
+      <a class="pill" href="/reports/">报告索引</a>
+      <a class="pill" href="/research/cross-domain-map/">研究图谱入口</a>
+      <a class="pill" href={sourceUrl} target="_blank" rel="noopener">Markdown source</a>
+    </div>
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} is:inline />
+    <aside class="source-panel" aria-label="Cross-domain paper report boundary">
+      <div>
+        <div class="eyebrow">How to read / 如何阅读</div>
+        <h2>把它当成跨领域阅读地图，而不是单篇论文结论</h2>
+        <p>这个报告连接 AutoML、NAS、LLM 自我改进、进化计算和 Agent 框架。引用具体 claim 前，仍应检查报告中的来源链接、论文原文和更新后的研究页。</p>
+        <p><strong>English:</strong> This is a public cross-domain reading map. It improves discovery, but each claim should still be traced to the linked source papers and current research pages.</p>
+      </div>
+      <div class="source-links">
+        <a href={sourceUrl} target="_blank" rel="noopener">Open Markdown source</a>
+        <a href="/research/">Research hub</a>
+        <a href="/paper/">Paper hub</a>
+      </div>
+    </aside>
+    <Content />
+  </article>
+</BaseLayout>

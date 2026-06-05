@@ -41,9 +41,9 @@ To judge whether an AI agent is actually self-evolving, ask five questions first
 
 | Who you are | Read first | What you take away |
 |---|---|---|
-| New reader | [Definition topic page](https://agent-evolution.com/topics/self-evolving-ai-agents/) | A checklist: what changed, who verified it, how it is retained, and whether it can roll back. |
-| Research reader | [Five evolution loops](https://agent-evolution.com/topics/five-evolution-loops/) | A mechanism map that separates specification, search, evaluation, reflection, and population archives. |
-| Builder | [Code self-improvement Benchmark Matrix](https://agent-evolution.com/topics/code-evolution-benchmark/) and [project reports](projects/INDEX.md) | A way to compare evaluator strength, archive evidence, lineage, and limitations instead of demos. |
+| New reader | [Definition topic page](https://agent-evolution.com/en/topics/self-evolving-ai-agents/) | A checklist: what changed, who verified it, how it is retained, and whether it can roll back. |
+| Research reader | [Five evolution loops](https://agent-evolution.com/en/topics/five-evolution-loops/) | A mechanism map that separates specification, search, evaluation, reflection, and population archives. |
+| Builder | [Code self-improvement Benchmark Matrix](https://agent-evolution.com/en/topics/code-evolution-benchmark/) and [review-gated project reports](projects/INDEX.md) | A way to compare evaluator strength, archive evidence, lineage, and limitations instead of demos. |
 | Trend or product reader | [2026 star-growth fetch pilot](https://agent-evolution.com/star-growth/) and [Value LSH evidence triage](https://agent-evolution.com/value-lsh/) | A separation between historical popularity, current momentum, heuristic triage, and evidence repair. |
 
 English readers can currently follow the core path through `/en/`, the English definition page, the English five-loop page, and the English code benchmark matrix. Project reports, growth pilots, Value LSH, and long-tail pages remain Chinese-first, with evidence links preserved, so this repository does not yet claim full English parity.
@@ -117,7 +117,7 @@ EAI = Σ(signal_score × signal_weight)
 
 The weights are editorial/proposed weights for this survey: they make different evidence types discussable in one table, but they are not yet a peer-reviewed field standard, and they still need sensitivity analysis and uncertainty estimates.
 
-**Data Snapshot:** the Evolve-AGI trend uses the `2026-06-01` trend-input snapshot: `93` strict evolution repos, `200` broad evolution repos, and `239` trend public-report records. Repository governance and site coverage use the latest generated [docs/indexes/master-index.md](docs/indexes/master-index.md) scope: `682` classified GitHub repositories, `290` analyzed project/model-card reports, `99` strict evolution repos, `205` broad evolution repos, and `488` public project report files. Do not mix those denominators: the former supports trend reconstruction; the latter supports repository coverage auditing. Public project reports are indexable evidence snapshots, not per-page quality-certified conclusions.
+**Data Snapshot:** the Evolve-AGI trend uses the `2026-06-01` trend-input snapshot: `93` strict evolution repos, `200` broad evolution repos, and `239` trend public-report records. Repository governance and site coverage use the latest generated [docs/indexes/master-index.md](docs/indexes/master-index.md) scope: `682` classified GitHub repositories, `290` analyzed project/model-card reports, `99` strict evolution repos, `205` broad evolution repos, and `488` public project report files. Do not mix those denominators: the former supports trend reconstruction; the latter supports repository coverage auditing. Public project reports are review-gated/noindex evidence pages, not per-page quality-certified conclusions.
 
 ## Survey Evidence Map
 
@@ -159,13 +159,13 @@ flowchart TB
 | You want to know | Read first | Then read |
 |---|---|---|
 | The one-line field thesis | [Core Insight](#core-insight) | [paper abstract](paper-drafts/main.tex) |
-| What counts under the strict self-evolution scope | [Definition topic page](https://agent-evolution.com/topics/self-evolving-ai-agents/) | [definition criteria](analysis/self-evolution-definition-criteria.md), [ch1 intro](paper-drafts/ch1-intro.tex) |
-| How self-evolution actually happens | [Five evolution loops](https://agent-evolution.com/topics/five-evolution-loops/) | [five-loop analysis](analysis/five-evolution-loops-topic.md), [survey mechanisms](site/src/pages/survey/mechanisms.astro) |
-| Which systems really improve code | [Code self-improvement Benchmark Matrix](https://agent-evolution.com/topics/code-evolution-benchmark/) | [code benchmark matrix](analysis/code-evolution-benchmark-matrix.md), [benchmark page](site/src/pages/benchmark/index.astro) |
+| What counts under the strict self-evolution scope | [Definition topic page](https://agent-evolution.com/en/topics/self-evolving-ai-agents/) | [definition criteria](analysis/self-evolution-definition-criteria.md), [ch1 intro](paper-drafts/ch1-intro.tex) |
+| How self-evolution actually happens | [Five evolution loops](https://agent-evolution.com/en/topics/five-evolution-loops/) | [five-loop analysis](analysis/five-evolution-loops-topic.md), [survey mechanisms](site/src/pages/survey/mechanisms.astro) |
+| Which systems really improve code | [Code self-improvement Benchmark Matrix](https://agent-evolution.com/en/topics/code-evolution-benchmark/) | [code benchmark matrix](analysis/code-evolution-benchmark-matrix.md), [benchmark page](site/src/pages/benchmark/index.astro) |
 | Which projects count as self-evolving under this survey | [Core Findings](#core-findings) | [projects/INDEX.md](projects/INDEX.md), [analysis/github-project-data-analysis.md](analysis/github-project-data-analysis.md) |
 | Which projects are growing in 2026 | [Public star-growth pilot ledger](https://agent-evolution.com/star-growth/) | [GitHub star growth analysis](analysis/github-star-growth-ranking.md), [data-engine schema](data-engine/github-star-history/README.md) |
 | Which materials deserve deeper review first | [Value LSH evidence triage](https://agent-evolution.com/value-lsh/) | [value LSH index](analysis/value-lsh-index.md), [evidence repair queue](analysis/value-evidence-repair-queue.md) |
-| How the paper is organized | [Paper Spine](#paper-spine) | [paper-drafts/main.tex](paper-drafts/main.tex), [survey/latex/main.tex](survey/latex/main.tex) |
+| How the paper is organized | [Paper Spine](#paper-spine) | [English paper page](https://agent-evolution.com/en/paper/), [paper-drafts/main.tex](paper-drafts/main.tex), [survey/latex/main.tex](survey/latex/main.tex) |
 | Which figures support the survey and paper | [Paper figure page](https://agent-evolution.com/paper/) and [visualization page](https://agent-evolution.com/visualizations/) | [survey figures](survey/figures/README.md), [paper figure exporter](scripts/export_survey_figures_for_paper.mjs), [paper figure assets](paper-drafts/figures/) |
 | What boundary the AGI index has | [Evolve-AGI Index In The Paper Core](#evolve-agi-index-in-the-paper-core) | [analysis/evolve-agi-index.md](analysis/evolve-agi-index.md), [site page](site/src/pages/evolve-agi-index/index.astro) |
 | Where the full lists live | [CONTENT_INDEX.md](CONTENT_INDEX.md) | [docs/indexes/master-index.md](docs/indexes/master-index.md) |
@@ -190,7 +190,7 @@ flowchart TB
 | Read the paper deeply | Open [paper-drafts/main.pdf](paper-drafts/main.pdf) or the [paper page](site/src/pages/paper/index.astro). |
 | Inspect project evidence | Use [projects/INDEX.md](projects/INDEX.md) and [public project reports](site/public/reports/projects/INDEX.md). |
 | Check data coverage | Start with the [resource library page](https://agent-evolution.com/resource-library/), then inspect [analysis/resource-library-coverage-audit.md](analysis/resource-library-coverage-audit.md), [docs/indexes/master-index.md](docs/indexes/master-index.md), and [analysis/github-project-data-analysis.md](analysis/github-project-data-analysis.md). |
-| Find topics by question | Open the [topic guide](https://agent-evolution.com/topics/) for definitions, five loops, [code self-improvement](https://agent-evolution.com/topics/code-evolution-benchmark/), Agent-Swarm, evaluation governance, and production pain points. |
+| Find topics by question | Open the [English topic guide](https://agent-evolution.com/en/topics/) for definitions, five loops, [code self-improvement](https://agent-evolution.com/en/topics/code-evolution-benchmark/), Agent-Swarm, evaluation governance, and production pain points. |
 | Browse the website | Open the [Self Evolve site](https://agent-evolution.com/) or the [site source](site/). |
 
 ## Citation

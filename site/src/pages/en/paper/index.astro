@@ -1,0 +1,118 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { publicCorpusStats } from '@/data/publicCorpusStats';
+import { paperReports } from '@/data/reports';
+
+const citationStatus = [
+  {
+    label: 'Working draft',
+    body: 'The English PDF can be cited as a dated working survey draft, not as a peer-reviewed field standard.'
+  },
+  {
+    label: 'Stable core',
+    body: 'The safest claims are the definition checklist, the five evolution loops, and the evidence-boundary vocabulary.'
+  },
+  {
+    label: 'Provisional metrics',
+    body: 'Method-family shares, framework scores, corpus counts, and Evolve-AGI worksheets are dated snapshots and need source-level audits before strong citation.'
+  },
+  {
+    label: 'Chinese parity',
+    body: 'The Chinese reading PDF and survey pages are useful companions, but chapter-level EN-CN mapping still needs cleanup before parity can be claimed.'
+  }
+];
+
+const evidenceRows = [
+  ['Survey-display papers', publicCorpusStats.surveyDisplayPapers, '196-paper display snapshot used by the current figure atlas.'],
+  ['GitHub raw captures', publicCorpusStats.rawGithubCaptures, 'Raw capture scope for repository discovery, not a quality ranking.'],
+  ['Project/model-card analyses', publicCorpusStats.analyzedProjectReports, 'Teaching and review layer for project evidence.'],
+  ['Public project reports', publicCorpusStats.publicProjectReports, 'Review-gated evidence pages; individual public-copy review is still pending.'],
+  ['Paper report files', paperReports.length, 'Public paper report files used as evidence entry points.']
+];
+---
+
+<BaseLayout
+  pageLang="en"
+  alternateZh="/paper/"
+  alternateEn="/en/paper/"
+  title="Self-Evolving AI Survey Paper — English citation status"
+  description="English mirror for the Self-Evolving AI survey paper: PDF links, citation boundary, provisional metrics, corpus scope, and Chinese parity status."
+  pageKeywords={['Self-Evolving AI survey', 'AI agent self-evolution paper', 'evidence boundary', 'working survey draft']}
+>
+  <section class="section">
+    <div class="container">
+      <div class="eyebrow">Paper / English mirror</div>
+      <h1 class="gradient-text">Self-Evolving AI Survey: what can be cited today?</h1>
+      <p class="lead">This is the English evidence and citation page for the working survey draft. It gives readers a narrow answer first: cite the paper as a dated working draft, cite the definition and five-loop framework with the current evidence boundary, and treat scores, counts, and framework rankings as provisional snapshots.</p>
+      <div class="hero-actions">
+        <a class="button primary" href="/reports/self-evolve-survey-en.pdf" target="_blank" rel="noopener">Download English PDF</a>
+        <a class="button" href="/reports/self-evolve-survey-zh.pdf" target="_blank" rel="noopener">Download Chinese reading PDF</a>
+        <a class="text-link" href="/paper/">中文论文页</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background: var(--surface-1);">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Citation boundary</div>
+          <h2>Use the draft, but do not overstate it.</h2>
+        </div>
+      </div>
+      <div class="grid">
+        {citationStatus.map((item) => (
+          <article class="card">
+            <div class="eyebrow">{item.label}</div>
+            <p>{item.body}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Evidence snapshot</div>
+          <h2>The corpus is large; the public conclusions remain gated.</h2>
+        </div>
+      </div>
+      <div class="score-table-wrap">
+        <table class="score-table">
+          <thead>
+            <tr><th>Evidence surface</th><th>Count</th><th>How to read it</th></tr>
+          </thead>
+          <tbody>
+            {evidenceRows.map(([label, count, boundary]) => (
+              <tr>
+                <td><strong>{label}</strong></td>
+                <td>{count}</td>
+                <td>{boundary}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background: var(--surface-1);">
+    <div class="container split">
+      <div>
+        <div class="eyebrow">Reading path</div>
+        <h2>Read the framework before the long corpus.</h2>
+      </div>
+      <div class="card">
+        <p>Start with the definition page, then the five-loop page, then the code-evolution benchmark matrix. Those three pages teach the claim test before sending readers into project reports, growth pilots, and report backlogs.</p>
+        <div class="pill-row">
+          <a class="pill" href="/en/topics/self-evolving-ai-agents/">Definition</a>
+          <a class="pill" href="/en/topics/five-evolution-loops/">Five loops</a>
+          <a class="pill" href="/en/topics/code-evolution-benchmark/">Benchmark matrix</a>
+          <a class="pill" href="/reports/">Review-gated reports</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

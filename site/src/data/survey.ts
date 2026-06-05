@@ -220,7 +220,7 @@ export const caseStudies: CaseStudy[] = [
     whatItDoes: 'Combines LLMs with evolutionary computation to discover novel algorithms for math, scheduling, and hardware design.',
     howItEvolves: 'LLM proposes code mutations -> automated evaluators score -> MAP-Elites maintains diverse population -> selected solutions survive. The paper reports a new matrix multiplication result in a historically studied task.',
     evidence: [
-      { metric: '4×4 matrix multiplication', before: '49 steps (Strassen)', after: '47 steps (new record)' },
+      { metric: '4×4 complex-valued matrix multiplication', before: '49 scalar multiplications (Strassen setting)', after: '48 scalar multiplications (reported after 56 years)' },
       { metric: 'Data center scheduling', before: 'Standard heuristic', after: 'Reported ~0.7% compute recovery in the paper context' },
     ],
     keyTakeaway: 'LLM + evolution + strong evaluator can support algorithm discovery on tasks with executable scoring; claims should stay tied to the reported benchmark context.',

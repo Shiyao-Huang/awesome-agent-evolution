@@ -1,0 +1,79 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { getCollection, render } from 'astro:content';
+import { site } from '@/data/site';
+
+export async function getStaticPaths() {
+  const reports = await getCollection('legacyResearchProjectReports');
+  return reports.map((report) => ({ params: { slug: report.id }, props: { report } }));
+}
+
+const { report } = Astro.props;
+const { Content } = await render(report);
+const body = report.body ?? '';
+const title = body.match(/^#\s+(.+)$/m)?.[1]?.trim() ?? report.id.replace(/-/g, ' ');
+const cleanMarkdown = (value: string) =>
+  value
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
+    .replace(/[`*_~]/g, '')
+    .replace(/->/g, ' to ')
+    .replace(/[<>]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+const excerpt = body
+  .split(/\n{2,}/)
+  .map((block) => block.trim())
+  .filter((block) => block && !block.startsWith('#') && !block.startsWith('|') && !block.startsWith('```') && !block.startsWith('>'))
+  .map(cleanMarkdown)
+  .find((block) => block.length >= 50);
+const fallbackDescription = `${title} 的 Self Evolve legacy research project report：把早期项目分析保留为 review-gated 历史证据材料，并明确标注它需要用当前项目卡继续复核。`;
+const descriptionSource = excerpt ?? fallbackDescription;
+const description = descriptionSource.length > 155 ? `${descriptionSource.slice(0, 152)}...` : descriptionSource;
+const canonical = new URL(`/reports/research/projects/${report.id}/`, site.url).toString();
+const sourceUrl = `${site.github}/blob/main/site/public/reports/research/projects/${report.id}.md`;
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description,
+  inLanguage: 'zh-CN',
+  author: { '@id': `${site.url}/#organization` },
+  publisher: { '@id': `${site.url}/#organization` },
+  mainEntityOfPage: canonical,
+  isBasedOn: sourceUrl,
+  about: ['self-evolving AI agents', 'legacy research project report', 'AI agent project evidence']
+};
+---
+<BaseLayout
+  title={`${title} | Self Evolve Legacy Research Report`}
+  description={description}
+  type="article"
+  pageKeywords={['Self Evolve legacy report', 'AI agent project report', 'AI agent evidence', title]}
+  noindex={true}
+>
+  <article class="blog-article">
+    <div class="eyebrow">Legacy research project report / review-gated 历史证据材料</div>
+    <h1>{title}</h1>
+    <p class="lead">这是早期 research/project 报告的 HTML 公开入口。它被保留为可访问的历史证据材料，用于补足分析链路；当前设置 noindex，读者引用前仍应回到当前项目卡、原始 GitHub 仓库和限制段做复核。</p>
+    <div class="pill-row">
+      <a class="pill" href="/reports/">报告索引</a>
+      <a class="pill" href="/projects/">当前项目索引</a>
+      <a class="pill" href={sourceUrl} target="_blank" rel="noopener">Markdown source</a>
+    </div>
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} is:inline />
+    <aside class="source-panel" aria-label="Legacy report boundary">
+      <div>
+        <div class="eyebrow">Evidence boundary / 证据边界</div>
+        <h2>旧报告可以访问，但不能替代当前证据复核</h2>
+        <p>这个页面解决的是历史 Markdown 可访问问题：把已公开材料转成 canonical HTML、补齐 metadata 和 JSON-LD。它不改变原始报告内容，也不声称旧分析已经完成最新 reader/editor 或 academic review。</p>
+        <p><strong>English:</strong> This is a noindexed wrapper for a legacy research report. Use it for source tracing, then verify claims against the current project card, original repository, and newer evidence reports.</p>
+      </div>
+      <div class="source-links">
+        <a href={sourceUrl} target="_blank" rel="noopener">Open Markdown source</a>
+        <a href="/reports/">Back to reports</a>
+        <a href={`/search/?q=${encodeURIComponent(title)}`}>Search related material</a>
+      </div>
+    </aside>
+    <Content />
+  </article>
+</BaseLayout>

@@ -84,7 +84,9 @@ const corpusRows = [
 
 <BaseLayout
   title="Self-Evolving AI Survey — 论文下载 & 数据可视化"
-  description="Self-Evolving AI 综述论文入口：提供中英文 PDF、方法分类图、框架对比草稿和证据边界说明；当前页面是中文主入口，英文 PDF 已提供但网页镜像仍在推进。"
+  description="Self-Evolving AI 综述论文入口：提供中英文 PDF、方法分类图、框架对比草稿和证据边界说明；中文为默认入口，英文 citation/status 镜像已提供。"
+  alternateZh="/paper/"
+  alternateEn="/en/paper/"
 >
   <section class="section">
     <script type="application/ld+json" set:html={JSON.stringify(surveyLd)} is:inline />
@@ -350,11 +352,11 @@ const corpusRows = [
       </div>
       <div class="grid">
         {[
-          '可引用：定义框架、五类进化回路、主要证据边界和当前公开 PDF。',
+          '可作为 working draft 引用：定义框架、五类进化回路、主要证据边界和当前公开 PDF；引用时必须标注版本日期与 provisional status。',
           '谨慎引用：方法族比例、框架 1-5 分、项目覆盖数字和痛点统计，它们仍是 dated snapshot。',
           '不要引用为最终结论：Evolve-AGI worksheet、Star/Rank 页面、framework radar 和 corpus count。',
           '引用数字时必须带日期：当前公开语料快照为 2026-06-05，部分站点元数据会继续更新。',
-          '需要继续补强：逐项 citation mapping、benchmark source audit、中文长稿同步和英文网页镜像。'
+          '需要继续补强：逐项 citation mapping、benchmark source audit、中文长稿同步和英文网页镜像的图表逐项说明。'
         ].map((item) => (
           <article class="card">
             <p>{item}</p>

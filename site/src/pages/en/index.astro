@@ -1,5 +1,50 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
+
+const evidenceCards = [
+  {
+    label: 'Paper',
+    title: 'Citation status first',
+    body: 'English mirror for the survey PDF, working-draft boundary, provisional metrics, and Chinese parity status.',
+    href: '/en/paper/',
+    status: 'EN mirror'
+  },
+  {
+    label: 'Definition',
+    title: 'What changed?',
+    body: 'The core claim test: mutable object, feedback, verification, retention, and rollback.',
+    href: '/en/topics/self-evolving-ai-agents/',
+    status: 'EN mirror'
+  },
+  {
+    label: 'Value LSH',
+    title: 'Evidence triage, not ranking',
+    body: 'A Chinese-first map for deciding which materials deserve review and which need evidence repair.',
+    href: '/value-lsh/',
+    status: 'ZH-first'
+  },
+  {
+    label: 'Resource coverage',
+    title: 'Corpus scope and gaps',
+    body: 'Coverage audit for raw sources, processed analysis, project cards, and public result layers.',
+    href: '/resource-library/',
+    status: 'ZH-first'
+  },
+  {
+    label: 'Reports',
+    title: 'Backlog, not finished copy',
+    body: 'Project and survey publication pages are accessible for source tracing, but remain review-gated and noindexed.',
+    href: '/reports/',
+    status: 'review-gated'
+  },
+  {
+    label: 'Search',
+    title: 'Find the evidence trail',
+    body: 'Use search when the English mirror is thin and you need the Chinese-first source chain.',
+    href: '/search/',
+    status: 'mixed'
+  }
+];
 ---
 
 <BaseLayout
@@ -72,6 +117,29 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
       <div class="card">
         <p>The English path covers the definition, five evolution loops, and code-evolution benchmark matrix. That is enough to start judging the central claim: whether feedback produces retained, verified change.</p>
         <p style="color: var(--muted); margin-top: 10px;">Boundary: project reports, resource data views, Value LSH, and growth pilots remain Chinese-first for now; their source links and evidence boundaries are preserved.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background: var(--surface-1);">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Evidence you can inspect now</div>
+          <h2>English mirrors the core path; the wider corpus stays explicitly labeled.</h2>
+        </div>
+      </div>
+      <div class="grid">
+        {evidenceCards.map((card) => (
+          <a class="card" href={card.href} style="text-decoration: none; color: inherit;">
+            <div class="eyebrow">{card.label}</div>
+            <h3>{card.title}</h3>
+            <p>{card.body}</p>
+            <div class="pill-row">
+              <span class="pill">{card.status}</span>
+            </div>
+          </a>
+        ))}
       </div>
     </div>
   </section>

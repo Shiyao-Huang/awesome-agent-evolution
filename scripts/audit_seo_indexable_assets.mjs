@@ -10,6 +10,7 @@ const distRoot = path.join(siteRoot, 'dist');
 const blogRoot = path.join(siteRoot, 'src/content/blog');
 const researchRoot = path.join(siteRoot, 'src/content/research');
 const projectReportsRoot = path.join(siteRoot, 'public/reports/projects');
+const legacyResearchProjectReportsRoot = path.join(siteRoot, 'public/reports/research/projects');
 const surveyPublicationRoot = path.join(root, 'reports/survey-publication');
 const reportJsonPath = path.join(root, 'reports/seo-indexable-assets.json');
 const reportMdPath = path.join(root, 'reports/seo-indexable-assets.md');
@@ -144,8 +145,25 @@ for (const name of fs.readdirSync(projectReportsRoot).filter((file) => file.ends
     sourcePath,
     urlPath: `/reports/projects/${slug}/`,
     requiredType: 'Article',
-    requireFrontmatter: false
+    requireFrontmatter: false,
+    indexPolicy: 'noindex'
   }));
+}
+
+if (exists(legacyResearchProjectReportsRoot)) {
+  for (const name of fs.readdirSync(legacyResearchProjectReportsRoot).filter((file) => file.endsWith('.md') && !/^index\.md$/i.test(file)).sort()) {
+    const slug = stripExt(name);
+    const sourcePath = path.join(legacyResearchProjectReportsRoot, name);
+    assets.push(checkHtmlAsset({
+      collection: 'legacy-research-project-report',
+      slug,
+      sourcePath,
+      urlPath: `/reports/research/projects/${slug}/`,
+      requiredType: 'Article',
+      requireFrontmatter: false,
+      indexPolicy: 'noindex'
+    }));
+  }
 }
 
 if (exists(surveyPublicationRoot)) {
@@ -158,7 +176,8 @@ if (exists(surveyPublicationRoot)) {
       sourcePath,
       urlPath: `/reports/survey-publication/${slug}/`,
       requiredType: 'Article',
-      requireFrontmatter: false
+      requireFrontmatter: false,
+      indexPolicy: 'noindex'
     }));
   }
 }
@@ -167,6 +186,10 @@ for (const asset of assets) {
   if (asset.indexPolicy === 'indexable' && !sitemapUrls.has(asset.url)) {
     asset.status = 'fail';
     asset.failures.push('URL missing from sitemap');
+  }
+  if (asset.indexPolicy === 'noindex' && sitemapUrls.has(asset.url)) {
+    asset.status = 'fail';
+    asset.failures.push('review-gated URL should not appear in sitemap');
   }
 }
 
@@ -181,7 +204,7 @@ const failedAssets = assets.filter((asset) => asset.status === 'fail');
 const report = {
   generated_at: new Date().toISOString(),
   canonical_host: canonicalHost,
-  checked_collections: ['blog', 'research', 'project-report', 'survey-publication'],
+  checked_collections: ['blog', 'research', 'project-report', 'legacy-research-project-report', 'survey-publication'],
   global_status: globalFailures.length || failedAssets.length ? 'fail' : 'pass',
   counts: {
     assets_checked: assets.length,
@@ -215,7 +238,7 @@ const md = [
   '',
   '## Scope',
   '',
-  'This audit verifies generated HTML SEO assets for `site/src/content/blog/*.mdx`, `site/src/content/research/*.mdx`, `site/public/reports/projects/*.md`, and `reports/survey-publication/[0-9][0-9]-*.md`: canonical URL, sitemap inclusion, meta description, Open Graph metadata, JSON-LD article type, and absence of `noindex`.',
+  'This audit verifies generated HTML SEO assets for `site/src/content/blog/*.mdx` and `site/src/content/research/*.mdx`: canonical URL, sitemap inclusion, meta description, Open Graph metadata, JSON-LD article type, and absence of `noindex`. Project reports in `site/public/reports/projects/*.md`, legacy research project reports in `site/public/reports/research/projects/*.md`, and survey publication slices in `reports/survey-publication/[0-9][0-9]-*.md` are generated as review-gated HTML, must emit `noindex`, and must stay out of the sitemap until their public-copy review passes.',
   '',
   '## Failures',
   '',

@@ -7,6 +7,17 @@ const { note } = Astro.props;
 const { Content } = await render(note);
 const canonical = new URL(`/research/${note.id}/`, site.url).toString();
 const sourceUrl = `${site.github}/blob/main/site/src/content/research/${note.id}.mdx`;
+const claimLabels = {
+  known: '[KNOWN]',
+  inferred: '[INFERRED]',
+  unverified: '[UNVERIFIED]'
+};
+const primarySources = note.data.primarySources ?? [];
+const sourceHref = (source: string) => {
+  if (source.startsWith('http')) return source;
+  if (source.startsWith('/')) return source;
+  return `${site.github}/blob/main/${source}`;
+};
 const jsonLd = {'@context':'https://schema.org','@type':'ScholarlyArticle',headline:note.data.title,description:note.data.description,datePublished:note.data.pubDate.toISOString(),inLanguage:'zh-CN',keywords:note.data.tags,image:new URL('/visuals/self-evolve-og.png', site.url).toString(),author:{'@id':`${site.url}/#organization`},publisher:{'@id':`${site.url}/#organization`},mainEntityOfPage:canonical,...(note.data.arxiv ? {sameAs:`https://arxiv.org/abs/${note.data.arxiv}`} : {})};
 ---
 <BaseLayout title={`${note.data.title} | Self Evolve 研究图谱`} description={note.data.description} type="article" publishedTime={note.data.pubDate.toISOString()} modifiedTime={note.data.pubDate.toISOString()} pageKeywords={note.data.tags}>
@@ -16,6 +27,20 @@ const jsonLd = {'@context':'https://schema.org','@type':'ScholarlyArticle',headl
     <p class="lead">{note.data.description}</p>
     <div class="pill-row">{note.data.arxiv && <a class="pill" href={`https://arxiv.org/abs/${note.data.arxiv}`} target="_blank" rel="noopener">arXiv</a>}{note.data.tags.map((tag)=><span class="pill">{tag}</span>)}</div>
     <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} is:inline />
+    <aside class="source-panel" aria-label="研究笔记 claim 边界">
+      <div>
+        <div class="eyebrow">Claim boundary / 证据边界</div>
+        <h2>{claimLabels[note.data.claimStatus]}</h2>
+        <p>{note.data.claimBoundary}</p>
+        <p><strong>Workflow status:</strong> {note.data.status} is a site review state, not peer review. Treat strong claims as provisional unless the source links below cover them directly.</p>
+      </div>
+      <div class="source-links">
+        {primarySources.length > 0
+          ? primarySources.slice(0, 5).map((source) => <a href={sourceHref(source)} target={source.startsWith('http') ? '_blank' : undefined} rel={source.startsWith('http') ? 'noopener' : undefined}>{source}</a>)
+          : <span class="pill">primary source metadata pending</span>}
+        <a href={sourceUrl} target="_blank" rel="noopener">查看研究笔记源码</a>
+      </div>
+    </aside>
     <Content />
     <aside class="source-panel" aria-label="研究笔记证据链">
       <div>

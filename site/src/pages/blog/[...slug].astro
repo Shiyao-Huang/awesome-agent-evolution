@@ -17,10 +17,36 @@ const relatedPosts = allPosts
   .slice(0, 3)
   .map((item) => item.post);
 const sourceUrl = `${site.github}/blob/main/site/src/content/blog/${post.id}.mdx`;
+const claimLabels = {
+  known: '[KNOWN]',
+  inferred: '[INFERRED]',
+  unverified: '[UNVERIFIED]'
+};
+const primarySources = post.data.primarySources ?? [];
+const sourceHref = (source: string) => {
+  if (source.startsWith('http')) return source;
+  if (source.startsWith('/')) return source;
+  return `${site.github}/blob/main/${source}`;
+};
 const jsonLd = {'@context':'https://schema.org','@type':'BlogPosting',headline:post.data.title,description:post.data.description,datePublished:post.data.pubDate.toISOString(),dateModified:(post.data.updatedDate ?? post.data.pubDate).toISOString(),inLanguage:'zh-CN',keywords:post.data.tags,image:new URL('/visuals/self-evolve-og.png', site.url).toString(),author:{'@type':'Organization',name:post.data.author},publisher:{'@id':`${site.url}/#organization`},mainEntityOfPage:canonical};
 ---
 <BaseLayout title={`${post.data.title} | Self Evolve`} description={post.data.description} type="article" publishedTime={post.data.pubDate.toISOString()} modifiedTime={(post.data.updatedDate ?? post.data.pubDate).toISOString()} pageKeywords={post.data.tags}>
-  <article class="blog-article"><div class="eyebrow">{post.data.pubDate.toISOString().slice(0,10)} · {post.data.author}</div><h1>{post.data.title}</h1><p class="lead">{post.data.description}</p><div class="pill-row">{post.data.tags.map((tag)=><a class="pill" href={`/blog/tag/${encodeURIComponent(tag)}`}>{tag}</a>)}</div><script type="application/ld+json" set:html={JSON.stringify(jsonLd)} is:inline /><Content />
+  <article class="blog-article"><div class="eyebrow">{post.data.pubDate.toISOString().slice(0,10)} · {post.data.author}</div><h1>{post.data.title}</h1><p class="lead">{post.data.description}</p><div class="pill-row">{post.data.tags.map((tag)=><a class="pill" href={`/blog/tag/${encodeURIComponent(tag)}`}>{tag}</a>)}</div><script type="application/ld+json" set:html={JSON.stringify(jsonLd)} is:inline />
+    <aside class="source-panel" aria-label="文章 claim 边界">
+      <div>
+        <div class="eyebrow">Claim boundary / 证据边界</div>
+        <h2>{claimLabels[post.data.claimStatus]}</h2>
+        <p>{post.data.claimBoundary}</p>
+        <p><strong>English:</strong> Read this article as a guided interpretation unless the primary-source links below fully cover the claim you want to cite.</p>
+      </div>
+      <div class="source-links">
+        {primarySources.length > 0
+          ? primarySources.slice(0, 5).map((source) => <a href={sourceHref(source)} target={source.startsWith('http') ? '_blank' : undefined} rel={source.startsWith('http') ? 'noopener' : undefined}>{source}</a>)
+          : <span class="pill">primary source metadata pending</span>}
+        <a href={sourceUrl} target="_blank" rel="noopener">查看本文 MDX 源码</a>
+      </div>
+    </aside>
+    <Content />
     <aside class="source-panel" aria-label="文章证据链与下一步阅读">
       <div>
         <div class="eyebrow">Evidence / Source</div>

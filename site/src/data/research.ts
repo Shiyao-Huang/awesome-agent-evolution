@@ -134,7 +134,7 @@ export const featuredResearch: ResearchItem[] = [
   {
     title: 'AlphaEvolve：Gemini 驱动的进化式算法发现',
     year: '2025',
-    insight: '结合 Gemini Flash（广度）+ Pro（深度）做 MAP-Elites 质量多样性搜索。56 年来首次改进 Strassen 矩阵乘法。Google DeepMind。',
+    insight: '结合 Gemini Flash（广度）+ Pro（深度）做 MAP-Elites 质量多样性搜索；报告了 4×4 complex-valued matrix multiplication 的 48-scalar result。Google DeepMind。',
     tags: ['MAP-Elites', '质量多样性', '算法发现'],
     url: 'https://arxiv.org/abs/2506.13131',
     cluster: '进化计算 + LLM',

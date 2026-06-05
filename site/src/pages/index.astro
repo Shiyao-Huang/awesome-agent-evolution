@@ -37,7 +37,7 @@ const homeEvidenceBand = (confidence: number) => {
   return '弱证据';
 };
 const homeScoreBand = (score: number) => {
-  if (score >= 70) return '优先深读';
+  if (score >= 70) return '优先复核';
   if (score >= 45) return '需要复核';
   return '暂不引用';
 };
@@ -49,6 +49,7 @@ const readerPromises = [
     body: '不是看名字里有没有 evolve，而是看可变对象、反馈、验证、保留和回滚。',
     bodyEn: 'Do not start with the name. Start with the mutable object, feedback signal, verifier, retention, and rollback path.',
     href: '/topics/self-evolving-ai-agents/',
+    enHref: '/en/topics/self-evolving-ai-agents/',
   },
   {
     label: 'Mechanism',
@@ -56,6 +57,7 @@ const readerPromises = [
     body: '反思、搜索、评估、代码自改进、种群/归档不是同一件事，证据强度也不同。',
     bodyEn: 'Reflection, search, evaluator loops, code evolution, and population archives are different evidence modes.',
     href: '/topics/five-evolution-loops/',
+    enHref: '/en/topics/five-evolution-loops/',
   },
   {
     label: 'Evidence',
@@ -63,14 +65,15 @@ const readerPromises = [
     body: 'Star、benchmark、项目报告、Value LSH 和 Evolve-AGI Index 都只是证据面，不是单点答案。',
     bodyEn: 'Stars, benchmarks, project reports, Value LSH, and the Evolve-AGI Index are evidence surfaces, not one-number truth.',
     href: '/resource-library/',
+    enHref: '/en/paper/',
   },
 ];
 
 const corePaths = [
-  ['New reader', '从定义页开始', 'Start with the definition page', '/topics/self-evolving-ai-agents/'],
-  ['Researcher', '看五类回路和论文主线', 'Read the five loops and paper spine', '/topics/five-evolution-loops/'],
-  ['Builder', '看 benchmark 与项目报告', 'Compare benchmarks and project reports', '/topics/code-evolution-benchmark/'],
-  ['Investor / product', '看增长、价值分类和信任边界', 'Use growth, value classification, and trust boundaries', '/value-lsh/'],
+  { reader: 'New reader', zh: '从定义页开始', en: 'Start with the definition page', zhHref: '/topics/self-evolving-ai-agents/', enHref: '/en/topics/self-evolving-ai-agents/', status: 'paired core' },
+  { reader: 'Researcher', zh: '看五类回路和论文主线', en: 'Read the five loops and paper spine', zhHref: '/topics/five-evolution-loops/', enHref: '/en/topics/five-evolution-loops/', status: 'paired core' },
+  { reader: 'Builder', zh: '看 benchmark 与项目报告', en: 'Compare benchmarks and project evidence', zhHref: '/topics/code-evolution-benchmark/', enHref: '/en/topics/code-evolution-benchmark/', status: 'paired core + gated reports' },
+  { reader: 'Investor / product', zh: '看增长、价值分类和信任边界', en: 'Use growth, value classification, and trust boundaries', zhHref: '/value-lsh/', enHref: '/en/paper/', status: 'ZH-first evidence' },
 ];
 
 // ── Legacy adoption priors (Top 15 by historical star count) ──
@@ -109,10 +112,11 @@ const directionMap = [
     tier: 'Tier A',
     champion: 'AlphaEvolve',
     championScore: 7.06,
-    evidence: '打破 56 年矩阵乘法记录，75% SOTA 恢复率',
+    evidence: 'DeepMind 报告 4x4 complex-valued matrix multiplication 的 48-scalar result；SOTA 恢复率仍需按来源逐项复核',
     runnerUp: 'DGM (6.78)',
     maturity: 'L4 Code Self-Mod',
     paperCount: 7,
+    sourceHref: '/research/alphaevolve/',
   },
   {
     direction: 'Agent 自动设计',
@@ -121,10 +125,11 @@ const directionMap = [
     tier: 'Tier A',
     champion: 'ADAS',
     championScore: 6.50,
-    evidence: '自动发现 Agent 架构，跨域迁移',
+    evidence: '自动发现 Agent 架构是机制锚点；跨域迁移需要回到 held-out tasks、消融和失败候选',
     runnerUp: 'OpenEvolve (6.42)',
     maturity: 'L4 Arch Search',
     paperCount: 5,
+    sourceHref: '/rank/',
   },
   {
     direction: '推理时自我修正',
@@ -133,10 +138,11 @@ const directionMap = [
     tier: 'Tier B+',
     champion: 'Reflexion',
     championScore: 6.39,
-    evidence: 'HumanEval 91%, AlfWorld 97%',
+    evidence: 'HumanEval / AlfWorld 数字只作论文报告线索，需回到 evaluator 设置和任务口径',
     runnerUp: 'Self-Refine (6.00)',
     maturity: 'L2 Prompt/Output',
     paperCount: 15,
+    sourceHref: '/topics/five-evolution-loops/',
   },
   {
     direction: '训练时自博弈',
@@ -145,10 +151,11 @@ const directionMap = [
     tier: 'Tier B',
     champion: 'Absolute Zero',
     championScore: 6.33,
-    evidence: '零外部数据自博弈，NeurIPS Best Paper',
+    evidence: '零外部数据自博弈是候选机制；venue、benchmark 与训练口径需要来源页复核',
     runnerUp: 'ReVeal (5.89)',
     maturity: 'L2 Self-Play RL',
     paperCount: 12,
+    sourceHref: '/research/',
   },
   {
     direction: '声明式 Prompt 优化',
@@ -157,10 +164,11 @@ const directionMap = [
     tier: 'Tier B',
     champion: 'DSPy',
     championScore: 6.15,
-    evidence: '最广泛采用，编译式 prompt 优化',
+    evidence: '采用广泛只是 adoption prior；编译式 prompt 优化不自动等于自进化闭环',
     runnerUp: 'OPRO',
     maturity: 'L2 Prompt Evo',
     paperCount: 10,
+    sourceHref: '/projects/',
   },
   {
     direction: '技能/记忆积累',
@@ -169,10 +177,11 @@ const directionMap = [
     tier: 'Tier B',
     champion: 'Voyager',
     championScore: 5.78,
-    evidence: '3.3x 独特物品，技能库终身学习',
+    evidence: '技能库与开放式探索是证据锚点；具体数字 claim 需要回到 benchmark source',
     runnerUp: 'SE-Agent (5.96)',
     maturity: 'L3 Memory/Skill',
     paperCount: 18,
+    sourceHref: '/topics/five-evolution-loops/',
   },
 ];
 
@@ -229,7 +238,8 @@ const stripScore = (value: string) => value.replace(/\s*\([^)]*\)/g, '');
         <p class="lead">这不是链接收藏，而是面向可审计改进系统的判断图：一个 agent 到底改了什么、由什么反馈选择、谁验证、能否保留，失败时能不能回滚。</p>
         <p class="english-note">English core summaries are available under /en/. The full evidence corpus remains Chinese-first while parity is being built.</p>
         <div class="hero-actions">
-          <a class="button primary" href="/topics/self-evolving-ai-agents/">先看定义 / Start</a>
+          <a class="button primary" href="/topics/self-evolving-ai-agents/">先看定义</a>
+          <a class="button" href="/en/topics/self-evolving-ai-agents/">English start</a>
           <a class="button" href="/topics/five-evolution-loops/">五类回路</a>
           <a class="button" href="/topics/code-evolution-benchmark/">Benchmark Matrix</a>
           <a class="button" href="/value-lsh/">Value LSH</a>
@@ -263,26 +273,30 @@ const stripScore = (value: string) => value.replace(/\s*\([^)]*\)/g, '');
       </div>
       <div class="grid reader-promise-grid">
         {readerPromises.map((item) => (
-          <a class="card" href={item.href} style="text-decoration: none; color: inherit;">
+          <article class="card">
             <div class="eyebrow">{item.label}</div>
             <h3>{item.title}</h3>
             <p>{item.body}</p>
             <p class="english-note">{item.bodyEn}</p>
-          </a>
+            <div class="pill-row">
+              <a class="pill" href={item.href}>中文</a>
+              <a class="pill" href={item.enHref}>English</a>
+            </div>
+          </article>
         ))}
       </div>
       <div class="score-table-wrap reader-path-table">
         <table class="score-table">
           <thead>
-            <tr><th>Reader</th><th>中文路径</th><th>English path</th><th>Entry</th></tr>
+            <tr><th>Reader</th><th>中文路径</th><th>English path</th><th>Status</th></tr>
           </thead>
           <tbody>
-            {corePaths.map(([reader, zh, en, href]) => (
+            {corePaths.map((path) => (
               <tr>
-                <td><strong>{reader}</strong></td>
-                <td>{zh}</td>
-                <td>{en}</td>
-                <td><a class="text-link" href={href}>Open</a></td>
+                <td><strong>{path.reader}</strong></td>
+                <td><a class="text-link" href={path.zhHref}>{path.zh}</a></td>
+                <td><a class="text-link" href={path.enHref}>{path.en}</a></td>
+                <td>{path.status}</td>
               </tr>
             ))}
           </tbody>
@@ -490,6 +504,7 @@ const stripScore = (value: string) => value.replace(/\s*\([^)]*\)/g, '');
             </div>
             <div class="pill-row" style="margin-top: 6px;">
               <span class="pill">{d.paperCount} 篇论文</span>
+              <a class="pill" href={d.sourceHref}>证据入口</a>
             </div>
           </article>
         ))}

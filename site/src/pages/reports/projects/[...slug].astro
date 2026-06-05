@@ -14,31 +14,9 @@ const { report } = Astro.props;
 const { Content } = await render(report);
 const body = report.body ?? '';
 const title = body.match(/^#\s+(.+)$/m)?.[1]?.trim() ?? report.id.replace(/-/g, ' ');
-const cleanMarkdown = (value: string) =>
-  value
-    .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
-    .replace(/[`*_~]/g, '')
-    .replace(/\s+/g, ' ')
-    .trim();
-const paragraphs = body
-  .split(/\n{2,}/)
-  .map((paragraph) => paragraph.trim())
-  .filter((paragraph) => paragraph && !paragraph.startsWith('#') && !paragraph.startsWith('|') && !paragraph.startsWith('>') && !paragraph.startsWith('```'))
-  .map(cleanMarkdown)
-  .filter((paragraph) => paragraph.length >= 40);
-const roleMatch = body.match(/##\s+(?:1\.\s+)?Role in Self Evolve\s*\n+([\s\S]*?)(?:\n##\s+|$)/i)?.[1];
-const roleExcerpt = roleMatch
-  ? cleanMarkdown(
-      roleMatch
-        .split(/\n{2,}/)
-        .map((paragraph) => paragraph.trim())
-        .find((paragraph) => paragraph && !paragraph.startsWith('|') && !paragraph.startsWith('>') && !paragraph.startsWith('```')) ?? ''
-    )
-  : '';
-const excerpt = roleExcerpt.length >= 50 ? roleExcerpt : paragraphs[0] ?? '';
 const fallbackDescription = `${title} 的 Self Evolve 项目报告证据页：帮助读者检查 GitHub 可见信号、站内归类、机制线索和未复现限制；不是项目质量排名。`;
-const lead = excerpt.length > 260 ? `${excerpt.slice(0, 257)}...` : excerpt || fallbackDescription;
-const descriptionSource = excerpt.length >= 50 ? excerpt : fallbackDescription;
+const lead = `这是 review-gated 项目报告证据页：它保留 ${title} 的源材料入口、机制线索和限制提醒，但正文尚未完成逐篇 reader/editor 与 academic public-copy review。`;
+const descriptionSource = fallbackDescription;
 const safeDescription = descriptionSource
   .replace(/->/g, ' to ')
   .replace(/[<>]/g, ' ')
@@ -65,6 +43,7 @@ const jsonLd = {
   description={description}
   type="article"
   pageKeywords={['Self Evolve project report', 'AI agent evolution', 'GitHub project analysis', title]}
+  noindex={true}
 >
   <article class="blog-article">
     <div class="eyebrow">Project report / GitHub evidence</div>
@@ -81,7 +60,7 @@ const jsonLd = {
         <div class="eyebrow">How to read / 如何阅读</div>
         <h2>先看证据从哪里来，再判断是否值得深读</h2>
         <p>这类页面是项目报告的公开阅读入口，作用是把 GitHub 可见信号、站内分类、机制猜想和限制放在一起。它不是质量排名，不代表我们已经克隆源码、复跑 benchmark 或完成学术复核。</p>
-        <p><strong>English:</strong> This page is an indexable evidence snapshot. It supports source tracing and follow-up reading; it does not prove project quality, reproduce benchmarks, or endorse the repository. Use the source file, original GitHub repository, and limitation section before citing any claim.</p>
+        <p><strong>English:</strong> This page is a review-gated evidence snapshot. It supports source tracing and follow-up reading; it does not prove project quality, reproduce benchmarks, or endorse the repository. Use the source file, original GitHub repository, and limitation section before citing any claim.</p>
       </div>
       <div class="source-links">
         <a href={sourceUrl} target="_blank" rel="noopener">查看 Markdown 源文件</a>
@@ -92,8 +71,8 @@ const jsonLd = {
     <aside class="source-panel" aria-label="未逐篇审查正文边界">
       <div>
         <div class="eyebrow">Legacy body / 未逐篇审查正文</div>
-        <h2>下面正文保留为可索引证据材料，但不是最终背书</h2>
-        <p>正文可能仍含旧报告里的强 claim、内部分析段或待补信息。当前模板已给出证据边界；下一批会按 reader/editor 与 academic gate 逐篇决定重写、强化或降权。</p>
+        <h2>下面正文保留为可访问证据材料，但暂不进入搜索索引</h2>
+        <p>正文可能仍含旧报告里的强 claim、内部分析段或待补信息。当前模板已给出证据边界并设置 noindex；下一批会按 reader/editor 与 academic gate 逐篇决定重写、强化、降权或恢复索引。</p>
       </div>
       <div class="source-links">
         <a href="/reports/">查看报告索引</a>

@@ -1,15 +1,16 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
-import { projectReports, paperReports, surveyPublicationReports } from '@/data/reports';
+import { legacyResearchProjectReports, paperReports, projectReports, surveyPublicationReports } from '@/data/reports';
 ---
 <BaseLayout title="Self Evolve 研究报告 — 项目深度分析与论文解读" description="Self Evolve 公开研究报告：GitHub 项目 model card 深度分析、论文精读与跨领域研究整理。">
   <section class="section">
     <div class="container">
       <div class="eyebrow">Reports / 研究报告</div>
       <h1 class="gradient-text">公开研究报告索引</h1>
-      <p class="lead">这里收录已落盘的项目 model card、论文精读和 Survey 发布切片。项目报告与 Survey 发布切片现在作为可索引证据快照公开：可以帮助追溯来源和发现主题，但不等于逐篇质量背书。</p>
+      <p class="lead">这里收录已落盘的项目 model card、论文精读、legacy research 报告和 Survey 发布切片。它们共享证据链入口，但状态不同：项目报告、legacy research 报告与 Survey 发布切片当前是 review-gated 证据页，只能帮助追溯来源，不能当作已审查公开文章引用。</p>
       <div class="metrics">
         <div class="metric"><strong>{projectReports.length}</strong><span>份项目分析报告</span></div>
+        <div class="metric"><strong>{legacyResearchProjectReports.length}</strong><span>份 legacy research 报告</span></div>
         <div class="metric"><strong>{surveyPublicationReports.length}</strong><span>份 Survey 发布切片</span></div>
         <div class="metric"><strong>{paperReports.length}</strong><span>份论文报告</span></div>
       </div>
@@ -21,27 +22,56 @@ import { projectReports, paperReports, surveyPublicationReports } from '@/data/r
       <div class="container">
         <div class="section-head">
           <div>
-            <div class="eyebrow">Indexable project evidence</div>
-            <h2>项目证据库：先追溯来源，再判断结论强度</h2>
+            <div class="eyebrow">Review-gated project evidence</div>
+            <h2>项目证据 backlog：先追溯来源，不先引用结论</h2>
           </div>
         </div>
-        <p class="lead">这些页面保留 GitHub 源、站内分类、机制线索和限制提醒。它们可被搜索引擎索引，用来形成公开证据入口；逐篇 reader/editor 与 academic review 完成前，不把它们当最终结论引用。</p>
+        <p class="lead">这些页面保留 GitHub 源、站内分类、机制线索和限制提醒。逐篇 reader/editor 与 academic review 完成前，它们保持 noindex；索引页只展示状态，不抽取未审查正文摘要。</p>
         <div class="grid">
           {projectReports.slice(0, 18).map((report) => (
             <article class="card">
               <div class="eyebrow">{report.category}</div>
               <h3><a href={report.href}>{report.title}</a></h3>
-              <p>Indexable evidence snapshot. Use it for source tracing and follow-up reading; do not cite it as a reviewed conclusion until the public-copy gate passes.</p>
+              <p>Review-gated evidence snapshot. Use it for source tracing and follow-up reading; do not cite it as a reviewed conclusion until the public-copy gate passes.</p>
               <div class="pill-row">
-                <span class="pill">indexable</span>
+                <span class="pill">noindex</span>
                 <span class="pill">review pending</span>
                 <span class="pill">source trail</span>
-                <a class="pill" href={report.href}>查看证据页</a>
+                <a class="pill" href={report.href}>查看待审证据页</a>
               </div>
             </article>
           ))}
         </div>
-        {projectReports.length > 18 && <p style="margin-top: 18px; color: var(--muted);">显示前 18 份，共 {projectReports.length} 份可索引项目证据页。</p>}
+        {projectReports.length > 18 && <p style="margin-top: 18px; color: var(--muted);">显示前 18 份，共 {projectReports.length} 份 review-gated 项目证据页。</p>}
+      </div>
+    </section>
+  )}
+
+  {legacyResearchProjectReports.length > 0 && (
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Legacy research reports</div>
+            <h2>旧 research/project Markdown 的 review-gated 入口</h2>
+          </div>
+        </div>
+        <p class="lead">这些文件来自早期 research/project 报告，只保留为历史证据链入口。当前 HTML 包装页 noindex，读者引用前必须回到当前项目卡、原始 GitHub 仓库和限制段复核。</p>
+        <div class="grid">
+          {legacyResearchProjectReports.slice(0, 12).map((report) => (
+            <article class="card">
+              <div class="eyebrow">{report.category}</div>
+              <h3><a href={report.href}>{report.title}</a></h3>
+              <p>Review-gated legacy evidence wrapper. Use it for source tracing only; do not cite the legacy body as a current reviewed conclusion.</p>
+              <div class="pill-row">
+                <span class="pill">noindex</span>
+                <span class="pill">legacy source</span>
+                <a class="pill" href={report.href}>查看待审旧报告</a>
+              </div>
+            </article>
+          ))}
+        </div>
+        {legacyResearchProjectReports.length > 12 && <p style="margin-top: 18px; color: var(--muted);">显示前 12 份，共 {legacyResearchProjectReports.length} 份 review-gated legacy research 报告。</p>}
       </div>
     </section>
   )}
@@ -55,18 +85,18 @@ import { projectReports, paperReports, surveyPublicationReports } from '@/data/r
             <h2>面向公开发布的 Survey 切片</h2>
           </div>
         </div>
-        <p class="lead">这些切片是英文发布候选，已经作为可索引文章资产开放；它们尚未补齐中文同证据链与学术审查，不能代表完整双语最终发布。</p>
+        <p class="lead">这些切片是英文发布候选，尚未补齐中文同证据链与学术审查；当前按 review-gated/noindex 页面处理，不能代表完整双语发布。</p>
         <div class="grid">
           {surveyPublicationReports.map((report) => (
             <article class="card">
               <div class="eyebrow">{report.category}</div>
               <h3><a href={report.href}>{report.title}</a></h3>
-              <p>Indexable publication slice. Read it as evidence compression; bilingual and academic review can still strengthen or demote specific claims.</p>
+              <p>Review-gated publication slice. Read only as a draft evidence compression until bilingual and academic review passes.</p>
               <div class="pill-row">
-                <span class="pill">indexable</span>
+                <span class="pill">noindex</span>
                 <span class="pill">bilingual pending</span>
                 <span class="pill">academic review pending</span>
-                <a class="pill" href={report.href}>阅读发布切片</a>
+                <a class="pill" href={report.href}>阅读待审切片</a>
               </div>
             </article>
           ))}

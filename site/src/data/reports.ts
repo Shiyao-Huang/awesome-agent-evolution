@@ -6,7 +6,7 @@ const reportsRoot = path.resolve('public/reports');
 export interface ReportEntry {
   slug: string;
   title: string;
-  category: 'projects' | 'papers' | 'survey-publication';
+  category: 'projects' | 'legacy-research-projects' | 'papers' | 'survey-publication';
   href: string;
   excerpt: string;
 }
@@ -41,6 +41,45 @@ function listMarkdownFiles(dir: string, category: 'projects' | 'papers'): Report
     .sort((a, b) => a.slug.localeCompare(b.slug));
 }
 
+function listLegacyResearchProjectFiles(): ReportEntry[] {
+  const full = path.join(reportsRoot, 'research/projects');
+  if (!statSync(full, { throwIfNoEntry: false })?.isDirectory()) return [];
+  return readdirSync(full)
+    .filter((f) => f.endsWith('.md') && !/^index\.md$/i.test(f))
+    .map((f) => {
+      const content = readFileSync(path.join(full, f), 'utf8');
+      const slug = f.replace(/\.md$/, '');
+      return {
+        slug,
+        title: parseTitle(content),
+        category: 'legacy-research-projects' as const,
+        href: `/reports/research/projects/${slug}/`,
+        excerpt: parseExcerpt(content)
+      };
+    })
+    .sort((a, b) => a.slug.localeCompare(b.slug));
+}
+
+function listPaperCrossDomainFiles(): ReportEntry[] {
+  const full = path.join(reportsRoot, 'papers/cross-domain');
+  if (!statSync(full, { throwIfNoEntry: false })?.isDirectory()) return [];
+  return readdirSync(full)
+    .filter((f) => f.endsWith('.md') && !/^index\.md$/i.test(f))
+    .map((f) => {
+      const content = readFileSync(path.join(full, f), 'utf8');
+      const id = f.replace(/\.md$/, '');
+      const slug = id.toLowerCase() === 'readme' ? 'overview' : id;
+      return {
+        slug,
+        title: parseTitle(content),
+        category: 'papers' as const,
+        href: `/reports/papers/cross-domain/${slug}/`,
+        excerpt: parseExcerpt(content)
+      };
+    })
+    .sort((a, b) => a.slug.localeCompare(b.slug));
+}
+
 function listSurveyPublicationFiles(): ReportEntry[] {
   const full = path.resolve('..', 'reports/survey-publication');
   if (!statSync(full, { throwIfNoEntry: false })?.isDirectory()) return [];
@@ -61,6 +100,7 @@ function listSurveyPublicationFiles(): ReportEntry[] {
 }
 
 export const projectReports: ReportEntry[] = listMarkdownFiles('projects', 'projects');
-export const paperReports: ReportEntry[] = listMarkdownFiles('papers', 'papers');
+export const legacyResearchProjectReports: ReportEntry[] = listLegacyResearchProjectFiles();
+export const paperReports: ReportEntry[] = [...listMarkdownFiles('papers', 'papers'), ...listPaperCrossDomainFiles()];
 export const surveyPublicationReports: ReportEntry[] = listSurveyPublicationFiles();
-export const allReports: ReportEntry[] = [...projectReports, ...paperReports, ...surveyPublicationReports];
+export const allReports: ReportEntry[] = [...projectReports, ...legacyResearchProjectReports, ...paperReports, ...surveyPublicationReports];

@@ -385,6 +385,9 @@ const defaultRegion = valueLshRegions[0];
       <span class="value-lsh-stage-semantic-kicker" data-region-stage-semantic-kicker>Region meaning</span>
       <strong data-region-stage-semantic-title>↗ 前沿证据</strong>
       <p data-region-stage-semantic-detail>证据链、验证器和可运行性都比较强。</p>
+      <div class="value-lsh-stage-semantic-axis" data-region-stage-semantic-axis></div>
+      <div class="value-lsh-stage-semantic-deltas" data-region-stage-semantic-deltas></div>
+      <div class="value-lsh-stage-semantic-shift" data-region-stage-semantic-shift></div>
       <div class="value-lsh-stage-semantic-facets" data-region-stage-semantic-facets></div>
     </div>
     <div class="value-lsh-region-markers" data-region-markers aria-label="Evidence region anchors"></div>
@@ -873,6 +876,9 @@ const defaultRegion = valueLshRegions[0];
     const regionStageSemanticKicker = root.querySelector('[data-region-stage-semantic-kicker]');
     const regionStageSemanticTitle = root.querySelector('[data-region-stage-semantic-title]');
     const regionStageSemanticDetail = root.querySelector('[data-region-stage-semantic-detail]');
+    const regionStageSemanticAxis = root.querySelector('[data-region-stage-semantic-axis]');
+    const regionStageSemanticDeltas = root.querySelector('[data-region-stage-semantic-deltas]');
+    const regionStageSemanticShift = root.querySelector('[data-region-stage-semantic-shift]');
     const regionStageSemanticFacets = root.querySelector('[data-region-stage-semantic-facets]');
     const fallbackSurface = root.querySelector('[data-value-lsh-fallback]');
     const fallbackSvg = root.querySelector('[data-region-fallback-svg]');
@@ -1385,7 +1391,7 @@ const defaultRegion = valueLshRegions[0];
       }, motionEnabled ? 760 : 320);
       announceRegionGuide(region, previousRegion);
       updateArcGuide(region, previousRegion);
-      updateStageSemanticGuide(region);
+      updateStageSemanticGuide(region, previousRegion);
       updateFallbackStage(region, previousRegion);
       if (previousRegion && previousRegion.kind !== region.kind) {
         showRegionTransition(previousRegion, region);
@@ -1477,6 +1483,25 @@ const defaultRegion = valueLshRegions[0];
       };
     };
 
+    const axisSignature = (region: SceneRegion) => {
+      const axisEntries = (['x', 'y', 'z'] as const).map((axis) => {
+        const rawValue = Number(region.centroid?.[axis] || 0);
+        const sign = rawValue > 0.04 ? '+' : rawValue < -0.04 ? '−' : '≈';
+        const magnitude = Math.abs(rawValue);
+        return {
+          axis: axis.toUpperCase(),
+          rawValue,
+          sign,
+          magnitude,
+          label: `${axis.toUpperCase()}${sign}${magnitude.toFixed(2)}`,
+        };
+      });
+      const dominantAxis = axisEntries
+        .slice()
+        .sort((left, right) => right.magnitude - left.magnitude)[0];
+      return { axisEntries, dominantAxis };
+    };
+
     const updateArcGuidePosition = () => {
       if (!(regionArcGuide instanceof HTMLElement) || !transitionGuidePoint) return;
       const width = stage.clientWidth;
@@ -1520,13 +1545,25 @@ const defaultRegion = valueLshRegions[0];
       }
     };
 
-    const updateStageSemanticGuide = (region: SceneRegion) => {
+    const updateStageSemanticGuide = (region: SceneRegion, previousRegion?: SceneRegion | null) => {
       semanticGuideRegion = region;
       if (!(regionStageSemantic instanceof HTMLElement)) return;
       regionStageSemantic.dataset.active = 'true';
       regionStageSemantic.style.setProperty('--stage-semantic-accent', region.color);
+      const guide = describeTransitionReason(region, previousRegion);
+      const currentFacetLabels = (region.topFacets || []).slice(0, 3).map((facet) => facet.label);
+      const previousFacetLabels = (previousRegion?.topFacets || []).slice(0, 3).map((facet) => facet.label);
+      const hasSemanticShift = Boolean(previousRegion && previousRegion.kind !== region.kind);
+      const gainedFacets = hasSemanticShift
+        ? currentFacetLabels.filter((facet) => !previousFacetLabels.includes(facet)).slice(0, 2)
+        : [];
+      const lostFacets = hasSemanticShift
+        ? previousFacetLabels.filter((facet) => !currentFacetLabels.includes(facet)).slice(0, 2)
+        : [];
       if (regionStageSemanticKicker instanceof HTMLElement) {
-        regionStageSemanticKicker.textContent = `Region meaning · ${region.clusterId}`;
+        regionStageSemanticKicker.textContent = previousRegion && previousRegion.kind !== region.kind
+          ? `Region meaning shift · ${previousRegion.clusterId} → ${region.clusterId}`
+          : `Region meaning · ${region.clusterId}`;
       }
       if (regionStageSemanticTitle instanceof HTMLElement) {
         regionStageSemanticTitle.textContent = `${region.arrow} ${region.rankingLabel}`;
@@ -1534,8 +1571,28 @@ const defaultRegion = valueLshRegions[0];
       if (regionStageSemanticDetail instanceof HTMLElement) {
         regionStageSemanticDetail.textContent = region.summary || region.meaning;
       }
+      if (regionStageSemanticAxis instanceof HTMLElement) {
+        const signature = axisSignature(region);
+        regionStageSemanticAxis.innerHTML = signature.axisEntries.map((entry) => `
+          <span data-axis="${escapeHtml(entry.axis)}" data-polarity="${entry.sign === '≈' ? 'neutral' : (entry.rawValue >= 0 ? 'positive' : 'negative')}" data-dominant="${signature.dominantAxis?.axis === entry.axis ? 'true' : 'false'}">
+            <strong>${escapeHtml(entry.axis)}</strong>
+            <i>${escapeHtml(entry.sign)}</i>
+            <small>${entry.magnitude.toFixed(2)}</small>
+          </span>
+        `).join('');
+      }
+      if (regionStageSemanticDeltas instanceof HTMLElement) {
+        regionStageSemanticDeltas.innerHTML = guide.badges.slice(0, 2).map((badge) => `<span>${escapeHtml(badge)}</span>`).join('');
+        regionStageSemanticDeltas.dataset.active = guide.badges.length ? 'true' : 'false';
+      }
+      if (regionStageSemanticShift instanceof HTMLElement) {
+        const gained = gainedFacets.map((facet) => `<span data-shift-kind="gained">+ ${escapeHtml(facet)}</span>`);
+        const lost = lostFacets.map((facet) => `<span data-shift-kind="lost">- ${escapeHtml(facet)}</span>`);
+        regionStageSemanticShift.innerHTML = [...gained, ...lost].join('');
+        regionStageSemanticShift.dataset.active = gained.length || lost.length ? 'true' : 'false';
+      }
       if (regionStageSemanticFacets instanceof HTMLElement) {
-        regionStageSemanticFacets.innerHTML = (region.topFacets || []).slice(0, 3).map((facet) => `<span>${escapeHtml(facet.label)}</span>`).join('');
+        regionStageSemanticFacets.innerHTML = currentFacetLabels.map((facet) => `<span>${escapeHtml(facet)}</span>`).join('');
       }
     };
 
@@ -2093,6 +2150,123 @@ const defaultRegion = valueLshRegions[0];
     font-size: 11px;
     font-weight: 700;
     line-height: 1.35;
+  }
+
+  .value-lsh-stage-semantic-axis {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 6px;
+  }
+
+  .value-lsh-stage-semantic-axis span {
+    display: grid;
+    justify-items: center;
+    gap: 1px;
+    border: 1px solid color-mix(in srgb, var(--stage-semantic-accent) 16%, rgba(20, 25, 34, 0.1));
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 5px 4px 4px;
+    text-align: center;
+  }
+
+  .value-lsh-stage-semantic-axis span[data-dominant="true"] {
+    border-color: color-mix(in srgb, var(--stage-semantic-accent) 34%, rgba(20, 25, 34, 0.12));
+    background: color-mix(in srgb, var(--stage-semantic-accent) 10%, rgba(255, 255, 255, 0.92));
+    box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--stage-semantic-accent) 10%, transparent);
+  }
+
+  .value-lsh-stage-semantic-axis span[data-polarity="positive"] i {
+    color: #1f6c46;
+  }
+
+  .value-lsh-stage-semantic-axis span[data-polarity="negative"] i {
+    color: #8f4722;
+  }
+
+  .value-lsh-stage-semantic-axis span[data-polarity="neutral"] i {
+    color: var(--muted);
+  }
+
+  .value-lsh-stage-semantic-axis strong,
+  .value-lsh-stage-semantic-axis i,
+  .value-lsh-stage-semantic-axis small {
+    display: block;
+    line-height: 1;
+    font-style: normal;
+  }
+
+  .value-lsh-stage-semantic-axis strong {
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+  }
+
+  .value-lsh-stage-semantic-axis i {
+    font-size: 12px;
+    font-weight: 900;
+  }
+
+  .value-lsh-stage-semantic-axis small {
+    color: var(--muted);
+    font-size: 9px;
+    font-weight: 800;
+  }
+
+  .value-lsh-stage-semantic-deltas {
+    display: none;
+    flex-wrap: wrap;
+    gap: 6px;
+    min-height: 18px;
+  }
+
+  .value-lsh-stage-semantic-deltas[data-active="true"] {
+    display: flex;
+  }
+
+  .value-lsh-stage-semantic-deltas span {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid color-mix(in srgb, var(--stage-semantic-accent) 18%, rgba(20, 25, 34, 0.1));
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--stage-semantic-accent) 10%, rgba(255, 252, 248, 0.98));
+    color: var(--fg);
+    padding: 3px 8px;
+    font-size: 10px;
+    font-weight: 850;
+    line-height: 1.2;
+  }
+
+  .value-lsh-stage-semantic-shift {
+    display: none;
+    flex-wrap: wrap;
+    gap: 6px;
+    min-height: 18px;
+  }
+
+  .value-lsh-stage-semantic-shift[data-active="true"] {
+    display: flex;
+  }
+
+  .value-lsh-stage-semantic-shift span {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 999px;
+    padding: 3px 8px;
+    font-size: 10px;
+    font-weight: 850;
+    line-height: 1.2;
+  }
+
+  .value-lsh-stage-semantic-shift [data-shift-kind="gained"] {
+    border: 1px solid rgba(46, 139, 87, 0.18);
+    background: rgba(46, 139, 87, 0.1);
+    color: #1f6c46;
+  }
+
+  .value-lsh-stage-semantic-shift [data-shift-kind="lost"] {
+    border: 1px solid rgba(191, 93, 42, 0.16);
+    background: rgba(191, 93, 42, 0.1);
+    color: #8f4722;
   }
 
   .value-lsh-stage-semantic-facets {

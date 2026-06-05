@@ -47,7 +47,7 @@ export const topicClusters: TopicCluster[] = [
       { label: 'Survey definition', href: '/survey/' },
       { label: 'Paper', href: '/paper/' },
     ],
-    nextAsset: '定义页已上线；下一步补 self-evolution vs AutoML / online learning / ordinary workflow 的对照页。',
+    nextAsset: '读完定义后，对照 AutoML、online learning 和普通 workflow，先判断系统到底哪里发生了 retained change。',
   },
   {
     id: 'five-loops',
@@ -64,7 +64,7 @@ export const topicClusters: TopicCluster[] = [
       { label: 'Mechanisms', href: '/survey/mechanisms/' },
       { label: 'Case studies', href: '/survey/case-studies/' },
     ],
-    nextAsset: '五类回路主题页已上线；下一步把每个 loop 拆成长尾页，并补代表论文、项目、benchmark 和失败模式。',
+    nextAsset: '读完五类回路后，选择一个代表系统，检查它的 feedback、evaluator、archive 和失败模式是否公开。',
   },
   {
     id: 'code-algorithm-discovery',
@@ -81,7 +81,7 @@ export const topicClusters: TopicCluster[] = [
       { label: 'Benchmark', href: '/benchmark/' },
       { label: 'Projects', href: '/projects/' },
     ],
-    nextAsset: 'Code-evolution benchmark matrix 已上线；下一步拆 DGM/SICA、AlphaEvolve/OpenEvolve、ADAS/A-Evolve 的代表系统页。',
+    nextAsset: '读完 benchmark matrix 后，按 DGM/SICA、AlphaEvolve/OpenEvolve、ADAS/A-Evolve 逐组检查 evaluator 和 retained artifacts。',
   },
   {
     id: 'memory-skills',
@@ -98,7 +98,7 @@ export const topicClusters: TopicCluster[] = [
       { label: 'Projects', href: '/projects/' },
       { label: 'Search memory', href: '/search/?q=memory' },
     ],
-    nextAsset: '补一个 memory/skill substrate 页面，按持久化、污染、遗忘、迁移、权限和回滚切分。',
+    nextAsset: '先看 memory/skill 是否能持久化，再查污染、遗忘、迁移、权限和回滚边界。',
   },
   {
     id: 'agent-swarm',
@@ -115,7 +115,7 @@ export const topicClusters: TopicCluster[] = [
       { label: 'Homepage section', href: '/#agent-swarm-evolve' },
       { label: 'Search swarm', href: '/search/?q=swarm' },
     ],
-    nextAsset: '把 swarm 组织结构做成 topology matrix：角色、共享状态、handoff、验证器、lineage、权限边界。',
+    nextAsset: '阅读 swarm 项目时，按角色、共享状态、handoff、验证器、lineage 和权限边界逐项复核。',
   },
   {
     id: 'evaluation-governance',
@@ -134,7 +134,7 @@ export const topicClusters: TopicCluster[] = [
       { label: 'Value LSH', href: '/value-lsh/' },
       { label: 'Reports', href: '/reports/' },
     ],
-    nextAsset: '把每个 index signal 做成可解释小页，并链接到代表报告和 benchmark 表。',
+    nextAsset: '读指数页时，把每个 signal 当作问题清单，并回到代表报告和 benchmark 表核对来源。',
   },
   {
     id: 'github-growth',
@@ -151,7 +151,7 @@ export const topicClusters: TopicCluster[] = [
       { label: 'Growth audit ledger', href: 'https://github.com/Shiyao-Huang/awesome-agent-evolution/blob/main/analysis/github-star-growth-ranking.md' },
       { label: 'Evolve-AGI Index', href: '/evolve-agi-index/' },
     ],
-    nextAsset: '扩大 strict evolution repos 的完整 stargazer pagination，并把 complete rows 回灌到 Evolve-AGI Index 和 frontier queue。',
+    nextAsset: '读增长页时，先区分累计 star 与 2026 new-star growth；覆盖不足的项目只当候选线索。',
   },
   {
     id: 'value-lsh',
@@ -168,7 +168,7 @@ export const topicClusters: TopicCluster[] = [
       { label: 'Value LSH analysis', href: 'https://github.com/Shiyao-Huang/awesome-agent-evolution/blob/main/analysis/value-lsh-index.md' },
       { label: 'Repair queue', href: 'https://github.com/Shiyao-Huang/awesome-agent-evolution/blob/main/analysis/value-evidence-repair-queue.md' },
     ],
-    nextAsset: '把 repair queue 的 top projects 逐个转成 model-card 深读，并把稳定 facet 回灌到 Evolve-AGI Index。',
+    nextAsset: '读 Value LSH 时，优先选择 top repair queue 项目，核对 source、facet、confidence 和待补证据。',
   },
   {
     id: 'production-pain-points',
@@ -185,7 +185,7 @@ export const topicClusters: TopicCluster[] = [
       { label: 'Blog', href: '/blog/' },
       { label: 'Search reliability', href: '/search/?q=reliability' },
     ],
-    nextAsset: '将 97 个 pain points 转成可搜索 FAQ 和 buyer guide，面向工程负责人和产品读者。',
+    nextAsset: '读 pain points 时，先把问题归到可靠性、成本、可观测性、权限或记忆污染，再找对应证据。',
   },
   {
     id: 'resource-library',
@@ -203,6 +203,6 @@ export const topicClusters: TopicCluster[] = [
       { label: 'GitHub evidence', href: '/github/' },
       { label: 'Project reports', href: '/reports/' },
     ],
-    nextAsset: '让站内搜索和项目报告页按 topic cluster 过滤，让读者从问题直接进入证据。',
+    nextAsset: '从搜索进入时，先用 topic cluster 缩小范围，再回到项目报告、论文页或 benchmark 证据。',
   },
 ];

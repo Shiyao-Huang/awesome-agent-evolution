@@ -1,0 +1,106 @@
+# Public I18N Route Audit
+
+Generated: 2026-06-05T12:48:28.863Z
+
+Status: **INCOMPLETE**
+
+## Verdict
+
+Batch B bilingual route audit is not passed: only the core English path has paired routes; most indexable pages are still Chinese-first without English same-evidence mirrors.
+
+## Metrics
+
+| Metric | Count |
+|---|---:|
+| Sitemap URLs | 445 |
+| HTML routes checked | 445 |
+| English routes | 6 |
+| Chinese routes | 439 |
+| Chinese routes with English alternate | 6 |
+| English routes with Chinese alternate | 6 |
+| Chinese-first routes without English alternate | 433 |
+| Noindex routes in sitemap | 0 |
+| Missing HTML routes | 0 |
+
+## Important Reader Routes
+
+| Route | Lang | Status | EN alternate | ZH alternate | Title |
+|---|---|---|---|---|---|
+| / | zh-CN | paired-or-self-declared | /en/ | / | Self Evolve AI — Self-Evolving Agents Survey / AI 自进化证据地图 |
+| /en/ | en | paired-or-self-declared | /en/ | / | Self Evolve AI — English reader path for self-evolving agents |
+| /topics/ | zh-CN | paired-or-self-declared | /en/topics/ | /topics/ | AI 自进化主题地图 — bilingual reader path for self-evolving agents |
+| /en/topics/ | en | paired-or-self-declared | /en/topics/ | /topics/ | Self-Evolving AI Agents Topic Guide — English reader path |
+| /paper/ | zh-CN | paired-or-self-declared | /en/paper/ | /paper/ | Self-Evolving AI Survey — 论文下载 &amp; 数据可视化 |
+| /projects/ | zh-CN | single-language-indexable |  | /projects/ | Self Evolve 项目索引 — GitHub 自进化 AI 仓库 |
+| /reports/ | zh-CN | single-language-indexable |  | /reports/ | Self Evolve 研究报告 — 项目深度分析与论文解读 |
+| /value-lsh/ | zh-CN | single-language-indexable |  | /value-lsh/ | Value LSH 证据分诊队列 — Self Evolve |
+| /star-growth/ | zh-CN | single-language-indexable |  | /star-growth/ | 2026 GitHub Star 抓取试点 — Self Evolve |
+| /evolve-agi-index/ | zh-CN | single-language-indexable |  | /evolve-agi-index/ | Evolve-AGI Evidence Worksheet — Self Evolve |
+| /resource-library/ | zh-CN | single-language-indexable |  | /resource-library/ | Self-Evolving AI Agents 资料库 — Survey 证据源、项目报告与 Evolve-AGI Index |
+| /survey/ | zh-CN | single-language-indexable |  | /survey/ | Survey核心发现 — AI自进化机制分析与案例研究 |
+| /blog/ | zh-CN | single-language-indexable |  | /blog/ | Self Evolve 博客 — AI 自我进化实践笔记与证据导读 |
+| /research/ | zh-CN | single-language-indexable |  | /research/ | Self Evolve 研究图谱 — 自进化智能体论文索引 |
+| /graph/ | zh-CN | single-language-indexable |  | /graph/ | Self Evolve 知识图谱 — 项目、论文与机制关系 |
+
+## English Routes
+
+| Route | Chinese alternate | Title |
+|---|---|---|
+| /en/ | / | Self Evolve AI — English reader path for self-evolving agents |
+| /en/paper/ | /paper/ | Self-Evolving AI Survey Paper — English citation status |
+| /en/topics/ | /topics/ | Self-Evolving AI Agents Topic Guide — English reader path |
+| /en/topics/code-evolution-benchmark/ | /topics/code-evolution-benchmark/ | Code Evolution Benchmark Matrix |
+| /en/topics/five-evolution-loops/ | /topics/five-evolution-loops/ | Five Evolution Loops for Self-Evolving AI Agents |
+| /en/topics/self-evolving-ai-agents/ | /topics/self-evolving-ai-agents/ | What Counts as a Self-Evolving AI Agent? |
+
+## Sample Chinese-First Routes Without English Alternate
+
+| Route | Kind | Title |
+|---|---|---|
+| /benchmark/ | site-page | Benchmark &amp; Evaluation — AI 自进化评估体系 |
+| /blog/ | blog | Self Evolve 博客 — AI 自我进化实践笔记与证据导读 |
+| /blog/adas-to-dgm-evolution/ | blog | ADAS 到 DGM：智能体架构自动搜索的进化之路 / Self Evolve |
+| /blog/agent-evolution-layer/ | blog | Reflexion 深度解读：用语言反思替代参数更新 / Self Evolve |
+| /blog/agent-frameworks-evolution-layer/ | blog | Agent 框架不是自进化：AutoGPT、MetaGPT、AutoGen、CrewAI、DSPy、LangGraph 差在哪 / Self Evolve |
+| /blog/ai-self-evolution-from-concept-to-implementation/ | blog | AI 自我进化：从概念到实现的证据导读 / Self Evolve |
+| /blog/ai-self-evolution-map/ | blog | 什么是 AI 自我进化？一张面向开发者的地图 / Self Evolve |
+| /blog/alphaevolve-deep-dive/ | blog | AlphaEvolve 深度解析：从 MAP-Elites 到算法发现证据 / Self Evolve |
+| /blog/anthropic-dynamic-workflows-agent-swarm-evolve/ | blog | Anthropic Dynamic Workflows：为什么它是 Agent-Swarm Evolve 的热点证据 / Self Evolve |
+| /blog/anthropic-may-2026-agentops-platform-shift/ | blog | Anthropic 五月热点：从 Opus 4.8、Stainless 到 965B 估值，AgentOps 栈正在成型 / Self Evolve |
+| /blog/code-self-improvement-playbook/ | blog | 代码自我改进：从智能体补丁到回归门禁 / Self Evolve |
+| /blog/cross-domain-research-map/ | blog | AI 自我进化的跨领域图谱：从 AutoML 到 Agent 自修改 / Self Evolve |
+| /blog/evaluation-benchmarks-for-self-evolving-agents/ | blog | 自进化 Agent 怎么评估：别只看分数，要看改进是否可复现 / Self Evolve |
+| /blog/evolutionary-code-and-algorithm-discovery/ | blog | 进化式代码与算法发现：为什么 AlphaEvolve、DGM 和 OpenEvolve 重要 / Self Evolve |
+| /blog/evolutionary-computation-llm-survey/ | blog | 进化计算 × 大语言模型：2024-2025 前沿导读 / Self Evolve |
+| /blog/five-evolution-loops-for-ai-agents/ | blog | 自进化 Agent 的五个循环：反馈、搜索、评估、反思与种群 / Self Evolve |
+| /blog/future-roadmap-for-self-evolving-ai-agents/ | blog | 自进化 AI 的未来路线图：评估器、记忆、安全、组合性和生产治理 / Self Evolve |
+| /blog/how-to-build-self-evolving-agent/ | blog | 如何构建自我进化的 AI Agent：最小闭环设计笔记 / Self Evolve |
+| /blog/llm-as-evolutionary-optimizer/ | blog | LLM 即优化器：从 OPRO 到 FunSearch 的进化式编码 / Self Evolve |
+| /blog/llm-five-self-improvement-paradigms/ | blog | LLM 自我改进的五种范式：从 Self-Refine 到 Absolute Zero / Self Evolve |
+| /blog/open-source-self-evolving-projects/ | blog | 开源自进化 AI 项目巡礼：10 个可复核的仓库 / Self Evolve |
+| /blog/researcher-network/ | blog | Self Evolve 研究者图谱：谁在推动 AI 自我进化 / Self Evolve |
+| /blog/self-evolve-project-index/ | blog | Self Evolve GitHub 项目索引如何阅读 / Self Evolve |
+| /blog/self-evolving-ai-introduction-static-to-evolving-agents/ | blog | AI Agent 自进化入门：从静态模型到会改进自己的系统 / Self Evolve |
+| /blog/self-improvement-methods-for-llm-agents/ | blog | LLM 自我改进方法全图：Self-Refine、Reflexion、RISE 到 Absolute Zero / Self Evolve |
+| /blog/selfevolve-paper-deep-dive/ | blog | SelfEvolve 论文深度解读：LLM 如何实现代码自我改进 / Self Evolve |
+| /blog/tag/%E4%BB%A3%E7%A0%81%E8%87%AA%E6%88%91%E6%94%B9%E8%BF%9B/ | blog-tag | 标签「代码自我改进」的博客 — Self Evolve |
+| /blog/tag/%E5%88%86%E7%B1%BB%E4%BD%93%E7%B3%BB/ | blog-tag | 标签「分类体系」的博客 — Self Evolve |
+| /blog/tag/%E5%8F%8D%E6%80%9D%E8%AE%B0%E5%BF%86/ | blog-tag | 标签「反思记忆」的博客 — Self Evolve |
+| /blog/tag/%E5%8F%AF%E8%A7%82%E6%B5%8B%E6%80%A7/ | blog-tag | 标签「可观测性」的博客 — Self Evolve |
+| /blog/tag/%E5%8F%AF%E9%9D%A0%E6%80%A7/ | blog-tag | 标签「可靠性」的博客 — Self Evolve |
+| /blog/tag/%E5%93%A5%E5%BE%B7%E5%B0%94%E6%9C%BA/ | blog-tag | 标签「哥德尔机」的博客 — Self Evolve |
+| /blog/tag/%E5%AD%A6%E6%9C%AF%E5%9B%BE%E8%B0%B1/ | blog-tag | 标签「学术图谱」的博客 — Self Evolve |
+| /blog/tag/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/ | blog-tag | 标签「开源项目」的博客 — Self Evolve |
+| /blog/tag/%E6%8A%80%E6%9C%AF%E5%9B%BE%E8%B0%B1/ | blog-tag | 标签「技术图谱」的博客 — Self Evolve |
+| /blog/tag/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/ | blog-tag | 标签「技术教程」的博客 — Self Evolve |
+| /blog/tag/%E6%99%BA%E8%83%BD%E4%BD%93%E6%9E%B6%E6%9E%84%E6%90%9C%E7%B4%A2/ | blog-tag | 标签「智能体架构搜索」的博客 — Self Evolve |
+| /blog/tag/%E6%99%BA%E8%83%BD%E4%BD%93/ | blog-tag | 标签「智能体」的博客 — Self Evolve |
+| /blog/tag/%E6%9C%AA%E6%9D%A5%E8%B7%AF%E7%BA%BF%E5%9B%BE/ | blog-tag | 标签「未来路线图」的博客 — Self Evolve |
+| /blog/tag/%E7%94%9F%E4%BA%A7%E9%83%A8%E7%BD%B2/ | blog-tag | 标签「生产部署」的博客 — Self Evolve |
+
+## Required Follow-Up
+
+- Keep the current English path honest: `/en/`, `/en/topics/`, and the three English topic pages are summary mirrors, not full-site parity.
+- Promote a page from Chinese-first to bilingual only after it has an English same-evidence summary with the same claim boundary, limitations, and next step.
+- Add or generate English summaries for high-traffic public routes before calling website i18n complete: `/paper/`, `/projects/`, `/value-lsh/`, `/reports/`, `/star-growth/`, `/evolve-agi-index/`, `/resource-library/`, `/survey/`, `/blog/`, and `/research/`.
+- Re-run this audit after every public-site or metadata change.

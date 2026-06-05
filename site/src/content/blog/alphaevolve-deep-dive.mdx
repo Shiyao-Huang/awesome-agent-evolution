@@ -1,14 +1,19 @@
 ---
-title: "AlphaEvolve 深度解析：DeepMind 的进化算法革命"
-description: "深入分析 Google DeepMind 的 AlphaEvolve 系统：双模型架构、MAP-Elites 质量多样性搜索、56 年来首次改进 Strassen 算法。探索进化计算 × LLM 的未来。"
+title: "AlphaEvolve 深度解析：从 MAP-Elites 到算法发现证据"
+description: "分析 Google DeepMind AlphaEvolve 的双模型架构、MAP-Elites 质量多样性搜索和 4×4 complex-valued matrix multiplication 的 48-scalar result，并标出复核边界。"
 pubDate: 2026-05-22
 tags: ["AlphaEvolve", "DeepMind", "进化计算", "MAP-Elites", "AI Self Evolution"]
 author: "aha team"
+primarySources:
+  - "https://arxiv.org/abs/2506.13131"
+  - "https://deepmind.google/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/"
+claimStatus: "inferred"
+claimBoundary: "This article is an editorial reading guide over AlphaEvolve sources. The 48-scalar 4x4 complex-valued matrix multiplication claim is source-backed; broader impact and reproduction claims stay source-scoped."
 ---
 
 ## 为什么 AlphaEvolve 重要
 
-2025 年，Google DeepMind 发布了 AlphaEvolve——一个用 LLM 驱动进化搜索的系统。它做到了一件震撼学术界的事情：**56 年来首次改进 Strassen 矩阵乘法算法**，将 4×4 复数矩阵乘法从 49 次乘法降到 48 次。
+2025 年，Google DeepMind 发布了 AlphaEvolve——一个用 LLM 驱动进化搜索的系统。最值得复核的结果是：在 4×4 complex-valued matrix multiplication 这个设定下，AlphaEvolve 报告了 **48 scalar multiplications**，相对 Strassen 1969 年以来的 49 次口径形成改进。
 
 这不是一个小众优化。Strassen 算法自 1969 年以来一直是算法理论的标杆，无数研究者尝试改进而未果。
 

@@ -1,0 +1,787 @@
+{
+  "generated_at": "2026-06-05T12:48:28.863Z",
+  "canonical_host": "https://agent-evolution.com",
+  "global_status": "incomplete",
+  "verdict": "Batch B bilingual route audit is not passed: only the core English path has paired routes; most indexable pages are still Chinese-first without English same-evidence mirrors.",
+  "counts": {
+    "sitemap_urls": 445,
+    "html_routes_checked": 445,
+    "missing_html": 0,
+    "english_routes": 6,
+    "zh_routes": 439,
+    "zh_routes_with_en_alternate": 6,
+    "en_routes_with_zh_alternate": 6,
+    "zh_first_without_en_alternate": 433,
+    "noindex_in_sitemap": 0
+  },
+  "route_kind_counts": {
+    "home": 1,
+    "site-page": 16,
+    "blog": 26,
+    "blog-tag": 79,
+    "english": 6,
+    "project-card": 291,
+    "report-index-or-audit": 3,
+    "research": 16,
+    "survey": 3,
+    "topic": 4
+  },
+  "important_routes": [
+    {
+      "pathname": "/",
+      "lang": "zh-CN",
+      "status": "paired-or-self-declared",
+      "en_alternate": "/en/",
+      "zh_alternate": "/",
+      "title": "Self Evolve AI — Self-Evolving Agents Survey / AI 自进化证据地图"
+    },
+    {
+      "pathname": "/en/",
+      "lang": "en",
+      "status": "paired-or-self-declared",
+      "en_alternate": "/en/",
+      "zh_alternate": "/",
+      "title": "Self Evolve AI — English reader path for self-evolving agents"
+    },
+    {
+      "pathname": "/topics/",
+      "lang": "zh-CN",
+      "status": "paired-or-self-declared",
+      "en_alternate": "/en/topics/",
+      "zh_alternate": "/topics/",
+      "title": "AI 自进化主题地图 — bilingual reader path for self-evolving agents"
+    },
+    {
+      "pathname": "/en/topics/",
+      "lang": "en",
+      "status": "paired-or-self-declared",
+      "en_alternate": "/en/topics/",
+      "zh_alternate": "/topics/",
+      "title": "Self-Evolving AI Agents Topic Guide — English reader path"
+    },
+    {
+      "pathname": "/paper/",
+      "lang": "zh-CN",
+      "status": "paired-or-self-declared",
+      "en_alternate": "/en/paper/",
+      "zh_alternate": "/paper/",
+      "title": "Self-Evolving AI Survey — 论文下载 &amp; 数据可视化"
+    },
+    {
+      "pathname": "/projects/",
+      "lang": "zh-CN",
+      "status": "single-language-indexable",
+      "en_alternate": "",
+      "zh_alternate": "/projects/",
+      "title": "Self Evolve 项目索引 — GitHub 自进化 AI 仓库"
+    },
+    {
+      "pathname": "/reports/",
+      "lang": "zh-CN",
+      "status": "single-language-indexable",
+      "en_alternate": "",
+      "zh_alternate": "/reports/",
+      "title": "Self Evolve 研究报告 — 项目深度分析与论文解读"
+    },
+    {
+      "pathname": "/value-lsh/",
+      "lang": "zh-CN",
+      "status": "single-language-indexable",
+      "en_alternate": "",
+      "zh_alternate": "/value-lsh/",
+      "title": "Value LSH 证据分诊队列 — Self Evolve"
+    },
+    {
+      "pathname": "/star-growth/",
+      "lang": "zh-CN",
+      "status": "single-language-indexable",
+      "en_alternate": "",
+      "zh_alternate": "/star-growth/",
+      "title": "2026 GitHub Star 抓取试点 — Self Evolve"
+    },
+    {
+      "pathname": "/evolve-agi-index/",
+      "lang": "zh-CN",
+      "status": "single-language-indexable",
+      "en_alternate": "",
+      "zh_alternate": "/evolve-agi-index/",
+      "title": "Evolve-AGI Evidence Worksheet — Self Evolve"
+    },
+    {
+      "pathname": "/resource-library/",
+      "lang": "zh-CN",
+      "status": "single-language-indexable",
+      "en_alternate": "",
+      "zh_alternate": "/resource-library/",
+      "title": "Self-Evolving AI Agents 资料库 — Survey 证据源、项目报告与 Evolve-AGI Index"
+    },
+    {
+      "pathname": "/survey/",
+      "lang": "zh-CN",
+      "status": "single-language-indexable",
+      "en_alternate": "",
+      "zh_alternate": "/survey/",
+      "title": "Survey核心发现 — AI自进化机制分析与案例研究"
+    },
+    {
+      "pathname": "/blog/",
+      "lang": "zh-CN",
+      "status": "single-language-indexable",
+      "en_alternate": "",
+      "zh_alternate": "/blog/",
+      "title": "Self Evolve 博客 — AI 自我进化实践笔记与证据导读"
+    },
+    {
+      "pathname": "/research/",
+      "lang": "zh-CN",
+      "status": "single-language-indexable",
+      "en_alternate": "",
+      "zh_alternate": "/research/",
+      "title": "Self Evolve 研究图谱 — 自进化智能体论文索引"
+    },
+    {
+      "pathname": "/graph/",
+      "lang": "zh-CN",
+      "status": "single-language-indexable",
+      "en_alternate": "",
+      "zh_alternate": "/graph/",
+      "title": "Self Evolve 知识图谱 — 项目、论文与机制关系"
+    }
+  ],
+  "english_routes": [
+    {
+      "pathname": "/en/",
+      "title": "Self Evolve AI — English reader path for self-evolving agents",
+      "zh_alternate": "/"
+    },
+    {
+      "pathname": "/en/paper/",
+      "title": "Self-Evolving AI Survey Paper — English citation status",
+      "zh_alternate": "/paper/"
+    },
+    {
+      "pathname": "/en/topics/",
+      "title": "Self-Evolving AI Agents Topic Guide — English reader path",
+      "zh_alternate": "/topics/"
+    },
+    {
+      "pathname": "/en/topics/code-evolution-benchmark/",
+      "title": "Code Evolution Benchmark Matrix",
+      "zh_alternate": "/topics/code-evolution-benchmark/"
+    },
+    {
+      "pathname": "/en/topics/five-evolution-loops/",
+      "title": "Five Evolution Loops for Self-Evolving AI Agents",
+      "zh_alternate": "/topics/five-evolution-loops/"
+    },
+    {
+      "pathname": "/en/topics/self-evolving-ai-agents/",
+      "title": "What Counts as a Self-Evolving AI Agent?",
+      "zh_alternate": "/topics/self-evolving-ai-agents/"
+    }
+  ],
+  "zh_first_sample": [
+    {
+      "pathname": "/benchmark/",
+      "kind": "site-page",
+      "title": "Benchmark &amp; Evaluation — AI 自进化评估体系"
+    },
+    {
+      "pathname": "/blog/",
+      "kind": "blog",
+      "title": "Self Evolve 博客 — AI 自我进化实践笔记与证据导读"
+    },
+    {
+      "pathname": "/blog/adas-to-dgm-evolution/",
+      "kind": "blog",
+      "title": "ADAS 到 DGM：智能体架构自动搜索的进化之路 | Self Evolve"
+    },
+    {
+      "pathname": "/blog/agent-evolution-layer/",
+      "kind": "blog",
+      "title": "Reflexion 深度解读：用语言反思替代参数更新 | Self Evolve"
+    },
+    {
+      "pathname": "/blog/agent-frameworks-evolution-layer/",
+      "kind": "blog",
+      "title": "Agent 框架不是自进化：AutoGPT、MetaGPT、AutoGen、CrewAI、DSPy、LangGraph 差在哪 | Self Evolve"
+    },
+    {
+      "pathname": "/blog/ai-self-evolution-from-concept-to-implementation/",
+      "kind": "blog",
+      "title": "AI 自我进化：从概念到实现的证据导读 | Self Evolve"
+    },
+    {
+      "pathname": "/blog/ai-self-evolution-map/",
+      "kind": "blog",
+      "title": "什么是 AI 自我进化？一张面向开发者的地图 | Self Evolve"
+    },
+    {
+      "pathname": "/blog/alphaevolve-deep-dive/",
+      "kind": "blog",
+      "title": "AlphaEvolve 深度解析：从 MAP-Elites 到算法发现证据 | Self Evolve"
+    },
+    {
+      "pathname": "/blog/anthropic-dynamic-workflows-agent-swarm-evolve/",
+      "kind": "blog",
+      "title": "Anthropic Dynamic Workflows：为什么它是 Agent-Swarm Evolve 的热点证据 | Self Evolve"
+    },
+    {
+      "pathname": "/blog/anthropic-may-2026-agentops-platform-shift/",
+      "kind": "blog",
+      "title": "Anthropic 五月热点：从 Opus 4.8、Stainless 到 965B 估值，AgentOps 栈正在成型 | Self Evolve"
+    },
+    {
+      "pathname": "/blog/code-self-improvement-playbook/",
+      "kind": "blog",
+      "title": "代码自我改进：从智能体补丁到回归门禁 | Self Evolve"
+    },
+    {
+      "pathname": "/blog/cross-domain-research-map/",
+      "kind": "blog",
+      "title": "AI 自我进化的跨领域图谱：从 AutoML 到 Agent 自修改 | Self Evolve"
+    },
+    {
+      "pathname": "/blog/evaluation-benchmarks-for-self-evolving-agents/",
+      "kind": "blog",
+      "title": "自进化 Agent 怎么评估：别只看分数，要看改进是否可复现 | Self Evolve"
+    },
+    {
+      "pathname": "/blog/evolutionary-code-and-algorithm-discovery/",
+      "kind": "blog",
+      "title": "进化式代码与算法发现：为什么 AlphaEvolve、DGM 和 OpenEvolve 重要 | Self Evolve"
+    },
+    {
+      "pathname": "/blog/evolutionary-computation-llm-survey/",
+      "kind": "blog",
+      "title": "进化计算 × 大语言模型：2024-2025 前沿导读 | Self Evolve"
+    },
+    {
+      "pathname": "/blog/five-evolution-loops-for-ai-agents/",
+      "kind": "blog",
+      "title": "自进化 Agent 的五个循环：反馈、搜索、评估、反思与种群 | Self Evolve"
+    },
+    {
+      "pathname": "/blog/future-roadmap-for-self-evolving-ai-agents/",
+      "kind": "blog",
+      "title": "自进化 AI 的未来路线图：评估器、记忆、安全、组合性和生产治理 | Self Evolve"
+    },
+    {
+      "pathname": "/blog/how-to-build-self-evolving-agent/",
+      "kind": "blog",
+      "title": "如何构建自我进化的 AI Agent：最小闭环设计笔记 | Self Evolve"
+    },
+    {
+      "pathname": "/blog/llm-as-evolutionary-optimizer/",
+      "kind": "blog",
+      "title": "LLM 即优化器：从 OPRO 到 FunSearch 的进化式编码 | Self Evolve"
+    },
+    {
+      "pathname": "/blog/llm-five-self-improvement-paradigms/",
+      "kind": "blog",
+      "title": "LLM 自我改进的五种范式：从 Self-Refine 到 Absolute Zero | Self Evolve"
+    },
+    {
+      "pathname": "/blog/open-source-self-evolving-projects/",
+      "kind": "blog",
+      "title": "开源自进化 AI 项目巡礼：10 个可复核的仓库 | Self Evolve"
+    },
+    {
+      "pathname": "/blog/researcher-network/",
+      "kind": "blog",
+      "title": "Self Evolve 研究者图谱：谁在推动 AI 自我进化 | Self Evolve"
+    },
+    {
+      "pathname": "/blog/self-evolve-project-index/",
+      "kind": "blog",
+      "title": "Self Evolve GitHub 项目索引如何阅读 | Self Evolve"
+    },
+    {
+      "pathname": "/blog/self-evolving-ai-introduction-static-to-evolving-agents/",
+      "kind": "blog",
+      "title": "AI Agent 自进化入门：从静态模型到会改进自己的系统 | Self Evolve"
+    },
+    {
+      "pathname": "/blog/self-improvement-methods-for-llm-agents/",
+      "kind": "blog",
+      "title": "LLM 自我改进方法全图：Self-Refine、Reflexion、RISE 到 Absolute Zero | Self Evolve"
+    },
+    {
+      "pathname": "/blog/selfevolve-paper-deep-dive/",
+      "kind": "blog",
+      "title": "SelfEvolve 论文深度解读：LLM 如何实现代码自我改进 | Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/%E4%BB%A3%E7%A0%81%E8%87%AA%E6%88%91%E6%94%B9%E8%BF%9B/",
+      "kind": "blog-tag",
+      "title": "标签「代码自我改进」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/%E5%88%86%E7%B1%BB%E4%BD%93%E7%B3%BB/",
+      "kind": "blog-tag",
+      "title": "标签「分类体系」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/%E5%8F%8D%E6%80%9D%E8%AE%B0%E5%BF%86/",
+      "kind": "blog-tag",
+      "title": "标签「反思记忆」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/%E5%8F%AF%E8%A7%82%E6%B5%8B%E6%80%A7/",
+      "kind": "blog-tag",
+      "title": "标签「可观测性」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/%E5%8F%AF%E9%9D%A0%E6%80%A7/",
+      "kind": "blog-tag",
+      "title": "标签「可靠性」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/%E5%93%A5%E5%BE%B7%E5%B0%94%E6%9C%BA/",
+      "kind": "blog-tag",
+      "title": "标签「哥德尔机」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/%E5%AD%A6%E6%9C%AF%E5%9B%BE%E8%B0%B1/",
+      "kind": "blog-tag",
+      "title": "标签「学术图谱」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE/",
+      "kind": "blog-tag",
+      "title": "标签「开源项目」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/%E6%8A%80%E6%9C%AF%E5%9B%BE%E8%B0%B1/",
+      "kind": "blog-tag",
+      "title": "标签「技术图谱」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/",
+      "kind": "blog-tag",
+      "title": "标签「技术教程」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/%E6%99%BA%E8%83%BD%E4%BD%93%E6%9E%B6%E6%9E%84%E6%90%9C%E7%B4%A2/",
+      "kind": "blog-tag",
+      "title": "标签「智能体架构搜索」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/%E6%99%BA%E8%83%BD%E4%BD%93/",
+      "kind": "blog-tag",
+      "title": "标签「智能体」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/%E6%9C%AA%E6%9D%A5%E8%B7%AF%E7%BA%BF%E5%9B%BE/",
+      "kind": "blog-tag",
+      "title": "标签「未来路线图」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/%E7%94%9F%E4%BA%A7%E9%83%A8%E7%BD%B2/",
+      "kind": "blog-tag",
+      "title": "标签「生产部署」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/%E7%A0%94%E7%A9%B6%E8%80%85%E7%BD%91%E7%BB%9C/",
+      "kind": "blog-tag",
+      "title": "标签「研究者网络」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/%E7%A8%8B%E5%BA%8F%E8%BF%9B%E5%8C%96/",
+      "kind": "blog-tag",
+      "title": "标签「程序进化」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/%E8%87%AA%E8%BF%9B%E5%8C%96%20AI/",
+      "kind": "blog-tag",
+      "title": "标签「自进化 AI」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/%E8%87%AA%E8%BF%9B%E5%8C%96%E6%99%BA%E8%83%BD%E4%BD%93/",
+      "kind": "blog-tag",
+      "title": "标签「自进化智能体」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/%E8%AE%B0%E5%BF%86%E7%B3%BB%E7%BB%9F/",
+      "kind": "blog-tag",
+      "title": "标签「记忆系统」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/%E8%AE%BA%E6%96%87%E6%8B%86%E8%A7%A3/",
+      "kind": "blog-tag",
+      "title": "标签「论文拆解」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/%E8%AF%84%E4%BC%B0%E5%99%A8/",
+      "kind": "blog-tag",
+      "title": "标签「评估器」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/%E8%AF%84%E4%BC%B0%E9%97%AD%E7%8E%AF/",
+      "kind": "blog-tag",
+      "title": "标签「评估闭环」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/%E8%AF%84%E6%B5%8B/",
+      "kind": "blog-tag",
+      "title": "标签「评测」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/%E8%AF%AD%E8%A8%80%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/",
+      "kind": "blog-tag",
+      "title": "标签「语言强化学习」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/%E8%BF%9B%E5%8C%96%E8%AE%A1%E7%AE%97/",
+      "kind": "blog-tag",
+      "title": "标签「进化计算」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/%E9%A1%B9%E7%9B%AE%E7%B4%A2%E5%BC%95/",
+      "kind": "blog-tag",
+      "title": "标签「项目索引」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/ADAS/",
+      "kind": "blog-tag",
+      "title": "标签「ADAS」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/AI%20%E8%87%AA%E6%88%91%E8%BF%9B%E5%8C%96/",
+      "kind": "blog-tag",
+      "title": "标签「AI 自我进化」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/AI%20Self%20Evolution/",
+      "kind": "blog-tag",
+      "title": "标签「AI Self Evolution」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/Absolute%20Zero/",
+      "kind": "blog-tag",
+      "title": "标签「Absolute Zero」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/Agent%20%E5%AE%89%E5%85%A8/",
+      "kind": "blog-tag",
+      "title": "标签「Agent 安全」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/Agent%20%E6%9E%B6%E6%9E%84/",
+      "kind": "blog-tag",
+      "title": "标签「Agent 架构」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/Agent%20%E6%A1%86%E6%9E%B6/",
+      "kind": "blog-tag",
+      "title": "标签「Agent 框架」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/Agent%20%E7%97%9B%E7%82%B9/",
+      "kind": "blog-tag",
+      "title": "标签「Agent 痛点」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/Agent%20%E8%AE%BE%E8%AE%A1/",
+      "kind": "blog-tag",
+      "title": "标签「Agent 设计」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/Agent%20%E8%AF%84%E4%BC%B0/",
+      "kind": "blog-tag",
+      "title": "标签「Agent 评估」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/Agent%20Framework/",
+      "kind": "blog-tag",
+      "title": "标签「Agent Framework」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/Agent-Swarm%20Evolve/",
+      "kind": "blog-tag",
+      "title": "标签「Agent-Swarm Evolve」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/AgentOps/",
+      "kind": "blog-tag",
+      "title": "标签「AgentOps」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/AlphaEvolve/",
+      "kind": "blog-tag",
+      "title": "标签「AlphaEvolve」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/Anthropic/",
+      "kind": "blog-tag",
+      "title": "标签「Anthropic」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/AutoGPT/",
+      "kind": "blog-tag",
+      "title": "标签「AutoGPT」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/AutoGen/",
+      "kind": "blog-tag",
+      "title": "标签「AutoGen」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/AutoML/",
+      "kind": "blog-tag",
+      "title": "标签「AutoML」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/Benchmark/",
+      "kind": "blog-tag",
+      "title": "标签「Benchmark」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/Claude%20Code/",
+      "kind": "blog-tag",
+      "title": "标签「Claude Code」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/Claude%20Opus%204.8/",
+      "kind": "blog-tag",
+      "title": "标签「Claude Opus 4.8」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/Code%20Self%20Improvement/",
+      "kind": "blog-tag",
+      "title": "标签「Code Self Improvement」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/CrewAI/",
+      "kind": "blog-tag",
+      "title": "标签「CrewAI」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/DGM/",
+      "kind": "blog-tag",
+      "title": "标签「DGM」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/DSPy/",
+      "kind": "blog-tag",
+      "title": "标签「DSPy」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/Darwin%20G%C3%B6del%20Machine/",
+      "kind": "blog-tag",
+      "title": "标签「Darwin Gödel Machine」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/DeepMind/",
+      "kind": "blog-tag",
+      "title": "标签「DeepMind」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/Dynamic%20Workflows/",
+      "kind": "blog-tag",
+      "title": "标签「Dynamic Workflows」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/Five%20Evolution%20Loops/",
+      "kind": "blog-tag",
+      "title": "标签「Five Evolution Loops」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/FunSearch/",
+      "kind": "blog-tag",
+      "title": "标签「FunSearch」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/GitHub%20%E9%A1%B9%E7%9B%AE/",
+      "kind": "blog-tag",
+      "title": "标签「GitHub 项目」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/GitHub/",
+      "kind": "blog-tag",
+      "title": "标签「GitHub」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/HumanEval/",
+      "kind": "blog-tag",
+      "title": "标签「HumanEval」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/Jeff%20Clune/",
+      "kind": "blog-tag",
+      "title": "标签「Jeff Clune」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/LLM%20%E4%BC%98%E5%8C%96%E5%99%A8/",
+      "kind": "blog-tag",
+      "title": "标签「LLM 优化器」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/LLM%20%E8%87%AA%E6%88%91%E6%94%B9%E8%BF%9B/",
+      "kind": "blog-tag",
+      "title": "标签「LLM 自我改进」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/LLM%20%E8%87%AA%E8%B0%83%E8%AF%95/",
+      "kind": "blog-tag",
+      "title": "标签「LLM 自调试」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/LLM%20%E8%BF%AD%E4%BB%A3%E4%BC%98%E5%8C%96/",
+      "kind": "blog-tag",
+      "title": "标签「LLM 迭代优化」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/LangGraph/",
+      "kind": "blog-tag",
+      "title": "标签「LangGraph」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/MAP-Elites/",
+      "kind": "blog-tag",
+      "title": "标签「MAP-Elites」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/MCP/",
+      "kind": "blog-tag",
+      "title": "标签「MCP」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/Mom%20Test/",
+      "kind": "blog-tag",
+      "title": "标签「Mom Test」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/NAS/",
+      "kind": "blog-tag",
+      "title": "标签「NAS」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/OpenEvolve/",
+      "kind": "blog-tag",
+      "title": "标签「OpenEvolve」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/RISE/",
+      "kind": "blog-tag",
+      "title": "标签「RISE」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/Reflexion/",
+      "kind": "blog-tag",
+      "title": "标签「Reflexion」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/SWE-Bench/",
+      "kind": "blog-tag",
+      "title": "标签「SWE-Bench」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/Self%20Evolve%20AI/",
+      "kind": "blog-tag",
+      "title": "标签「Self Evolve AI」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/Self%20Evolve/",
+      "kind": "blog-tag",
+      "title": "标签「Self Evolve」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/Self-Evolving%20Agents/",
+      "kind": "blog-tag",
+      "title": "标签「Self-Evolving Agents」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/Self-Refine/",
+      "kind": "blog-tag",
+      "title": "标签「Self-Refine」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/SelfEvolve/",
+      "kind": "blog-tag",
+      "title": "标签「SelfEvolve」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/tag/Stainless/",
+      "kind": "blog-tag",
+      "title": "标签「Stainless」的博客 — Self Evolve"
+    },
+    {
+      "pathname": "/blog/user-painpoints-production-self-evolving-agents/",
+      "kind": "blog",
+      "title": "用户真正痛的不是 Agent 不够聪明，而是不可靠、不可观测、不可控 | Self Evolve"
+    },
+    {
+      "pathname": "/evolve-agi-index/",
+      "kind": "site-page",
+      "title": "Evolve-AGI Evidence Worksheet — Self Evolve"
+    },
+    {
+      "pathname": "/github/",
+      "kind": "site-page",
+      "title": "Self Evolve GitHub 证据链 — 源码、论文、项目与博客入口"
+    },
+    {
+      "pathname": "/graph/",
+      "kind": "site-page",
+      "title": "Self Evolve 知识图谱 — 项目、论文与机制关系"
+    },
+    {
+      "pathname": "/postcards/",
+      "kind": "site-page",
+      "title": "卡片墙 — Self Evolve AI"
+    },
+    {
+      "pathname": "/projects/",
+      "kind": "project-card",
+      "title": "Self Evolve 项目索引 — GitHub 自进化 AI 仓库"
+    },
+    {
+      "pathname": "/projects/0xnyk-lacp/",
+      "kind": "project-card",
+      "title": "LACP Lightweight Agent Context Protocol Model Card — Agent Context Protocol and Interoperability Tooling | Self Evolve"
+    },
+    {
+      "pathname": "/projects/aayoawoyemi-ori-mnemos/",
+      "kind": "project-card",
+      "title": "Ori Mnemos Memory Harness Model Card — Agent Memory Substrate and Runtime Tracing Harness | Self Evolve"
+    },
+    {
+      "pathname": "/projects/addyosmani-agent-skills/",
+      "kind": "project-card",
+      "title": "Addy Agent Skills Model Card — Production Engineering Skill Pack for Coding Agents | Self Evolve"
+    },
+    {
+      "pathname": "/projects/ag2ai-ag2/",
+      "kind": "project-card",
+      "title": "ag2 Model Card — 多 Agent 协作框架 | Self Evolve"
+    },
+    {
+      "pathname": "/projects/agent0ai-agent-zero/",
+      "kind": "project-card",
+      "title": "Agent Zero Model Card — Autonomous Agent Runtime | Self Evolve"
+    },
+    {
+      "pathname": "/projects/agenta-ai-agenta/",
+      "kind": "project-card",
+      "title": "agenta Model Card — LLM 评测平台 | Self Evolve"
+    },
+    {
+      "pathname": "/projects/agentevals-dev-agentevals/",
+      "kind": "project-card",
+      "title": "AgentEvals.dev Benchmark Framework Model Card — Benchmark and Evaluation Framework for Agent Systems | Self Evolve"
+    },
+    {
+      "pathname": "/projects/agentmemoryworld-awesome-agent-memory/",
+      "kind": "project-card",
+      "title": "Awesome Agent Memory Model Card — Agent Memory Resource Survey Index | Self Evolve"
+    },
+    {
+      "pathname": "/projects/agentralabs-agentic-memory/",
+      "kind": "project-card",
+      "title": "AgentraLabs Agentic Memory Runtime Model Card — Agentic Memory Runtime Framework for Persistent Context | Self Evolve"
+    }
+  ],
+  "missing_html": [],
+  "noindex_in_sitemap": []
+}
