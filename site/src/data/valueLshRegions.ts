@@ -92,7 +92,9 @@ export type ValueLshEmbeddingCluster = {
   topNegativeFacets: { id: string; label: string; average: number }[];
   semanticTitle: string;
   semanticSummary: string;
+  semanticSummaryEn: string;
   meaning: string;
+  meaningEn: string;
   representatives: ClusterRepresentative[];
 };
 
@@ -113,7 +115,9 @@ export type ValueLshRegion = {
     max: { x: number; y: number; z: number };
   };
   meaning: string;
+  meaningEn: string;
   summary: string;
+  summaryEn: string;
   dominantTypes: { type: string; count: number }[];
   topFacets: { id: string; label: string; average: number }[];
   representatives: ClusterRepresentative[];
@@ -212,43 +216,57 @@ const describeCluster = (
     return {
       semanticTitle: 'Evidence-backed runnable cluster',
       semanticSummary: `${dominantTypeText}；证据链、验证器和可运行性都比较强。`,
+      semanticSummaryEn: `${dominantTypeText}; source trail, verifier, and runnable clues are comparatively dense.`,
       meaning: '这个簇更适合当论文、首页或公开判断的“证据较完整参考带”，不是热点叙事带，也不是最终质量裁决。',
+      meaningEn: 'Use this as an evidence-dense reference zone, not as a final quality judgement.',
     };
   }
   if (metrics.attention >= 0.55 && metrics.socialBlogShare >= 0.45) {
     return {
       semanticTitle: 'Attention-heavy discourse cluster',
       semanticSummary: `${dominantTypeText}；关注度和传播面强，但证据密度不一定同步。`,
+      semanticSummaryEn: `${dominantTypeText}; attention is high, but evidence density may not match it.`,
       meaning: '这个簇适合告诉读者“大家都在看哪里”，但需要额外提醒它不等于证据完备或质量更高。',
+      meaningEn: 'Use this to see where attention concentrates, not to infer stronger evidence or higher quality.',
     };
   }
   if (metrics.frontier >= 0.62 && topIds.has('self_evolution_loop_fit')) {
     return {
       semanticTitle: 'Frontier self-evolution systems',
       semanticSummary: `${dominantTypeText}；前沿信号、自进化回路和可变对象描述更清晰。`,
+      semanticSummaryEn: `${dominantTypeText}; frontier signal, loop fit, and mutable-object descriptions are clearer.`,
       meaning: '这个簇是找“前沿候选路径”时该先看的区域，适合继续做项目级 deep read。',
+      meaningEn: 'Use this as a frontier-candidate review queue for deeper project reading.',
     };
   }
   if (topIds.has('retention_or_memory')) {
     return {
       semanticTitle: 'Memory and retention substrate cluster',
       semanticSummary: `${dominantTypeText}；长期记忆、回放、知识沉淀是主线。`,
+      semanticSummaryEn: `${dominantTypeText}; long-term memory, replay, and retained knowledge are the main thread.`,
       meaning: '这个簇回答的是 agent 如何把经验沉淀成可复用资产，而不是只追新模型。 ',
+      meaningEn: 'Use this to inspect how agents retain experience as reusable assets, not to rank models.',
     };
   }
   if (topIds.has('benchmark_result') || topIds.has('verifier_or_benchmark')) {
     return {
       semanticTitle: 'Evaluation and benchmark cluster',
       semanticSummary: `${dominantTypeText}；更偏评测、验证器和结果可比性。`,
+      semanticSummaryEn: `${dominantTypeText}; evaluation harnesses, verifiers, and comparable results dominate.`,
       meaning: '这个簇的意义在于帮助区分“看起来强”和“真的被测过”的材料。',
+      meaningEn: 'Use this to separate impressive claims from materials that expose evaluation evidence.',
     };
   }
   return {
     semanticTitle: 'Mixed evidence exploration cluster',
     semanticSummary: `${dominantTypeText}；同时混合候选、讨论和待修复证据。`,
+    semanticSummaryEn: `${dominantTypeText}; candidates, discussions, and evidence-repair items are mixed together.`,
     meaning: topNegative.length
       ? `这个簇的价值在于比较，而不是直接下结论。当前主要风险是 ${topNegative[0].label.toLowerCase()}。`
       : '这个簇的价值在于比较，而不是直接下结论；它更像一个探索区而不是结论区。',
+    meaningEn: topNegative.length
+      ? `Use this for comparison, not conclusions. The main current risk is ${topNegative[0].label.toLowerCase()}.`
+      : 'Use this for comparison, not conclusions; it is an exploration zone rather than a result zone.',
   };
 };
 
@@ -373,7 +391,9 @@ const embeddingClusters = Object.entries(
     topNegativeFacets,
     semanticTitle: semantic.semanticTitle,
     semanticSummary: semantic.semanticSummary,
+    semanticSummaryEn: semantic.semanticSummaryEn,
     meaning: semantic.meaning,
+    meaningEn: semantic.meaningEn,
     representatives: members
       .slice()
       .sort((a, b) => b.row.value_score - a.row.value_score)
@@ -421,7 +441,9 @@ const valueLshRegions = regionDefinitions.map((definition) => {
     centroid: chosen.centroid,
     bounds: chosen.bounds,
     meaning: chosen.meaning,
+    meaningEn: chosen.meaningEn,
     summary: chosen.semanticSummary,
+    summaryEn: chosen.semanticSummaryEn,
     dominantTypes: chosen.dominantTypes,
     topFacets: chosen.topPositiveFacets.slice(0, 4),
     representatives: chosen.representatives,

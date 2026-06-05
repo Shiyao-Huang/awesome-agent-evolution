@@ -60,7 +60,7 @@
 
 - `site/dist/CNAME`
 - `site/dist/_astro/BaseLayout.Bsw8u1pc.css`
-- `site/dist/_astro/ValueLshGraph3D.astro_astro_type_script_index_0_lang.CD3D-X0N.js`
+- `site/dist/_astro/ValueLshGraph3D.astro_astro_type_script_index_0_lang.DSVpoytj.js`
 - `site/dist/_astro/client.BpEju3qh.js`
 - `site/dist/_astro/index.BPKjW9fM.css`
 - `site/dist/_astro/index.CD76ZKuK.css`

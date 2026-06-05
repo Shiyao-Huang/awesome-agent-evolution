@@ -26,4 +26,9 @@ const research = defineCollection({
   })
 });
 
-export const collections = { blog, research };
+const projectReports = defineCollection({
+  loader: glob({ pattern: '*.md', base: './public/reports/projects' }),
+  schema: z.object({}).passthrough()
+});
+
+export const collections = { blog, research, projectReports };
