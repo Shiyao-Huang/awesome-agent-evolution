@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-05T13:48:19.189Z",
+  "generated_at": "2026-06-05T14:29:30.293Z",
   "canonical_host": "https://agent-evolution.com",
   "checked_collections": [
     "blog",
@@ -11,10 +11,10 @@
   ],
   "global_status": "pass",
   "counts": {
-    "assets_checked": 562,
-    "passed": 562,
+    "assets_checked": 566,
+    "passed": 566,
     "failed": 0,
-    "sitemap_urls": 968
+    "sitemap_urls": 981
   },
   "global_failures": [],
   "failed_assets": [],
@@ -7101,6 +7101,40 @@
     },
     {
       "collection": "project-report",
+      "slug": "406-composio-agent-orchestrator-coding-swarm",
+      "url": "https://agent-evolution.com/reports/projects/406-composio-agent-orchestrator-coding-swarm/",
+      "sourcePath": "site/public/reports/projects/406-composio-agent-orchestrator-coding-swarm.md",
+      "htmlPath": "site/dist/reports/projects/406-composio-agent-orchestrator-coding-swarm/index.html",
+      "status": "pass",
+      "failures": [],
+      "warnings": [],
+      "jsonLdTypes": [
+        "WebSite",
+        "SearchAction",
+        "Organization",
+        "Article"
+      ],
+      "indexPolicy": "indexable"
+    },
+    {
+      "collection": "project-report",
+      "slug": "407-medmemorybench-agent-memory-benchmark",
+      "url": "https://agent-evolution.com/reports/projects/407-medmemorybench-agent-memory-benchmark/",
+      "sourcePath": "site/public/reports/projects/407-medmemorybench-agent-memory-benchmark.md",
+      "htmlPath": "site/dist/reports/projects/407-medmemorybench-agent-memory-benchmark/index.html",
+      "status": "pass",
+      "failures": [],
+      "warnings": [],
+      "jsonLdTypes": [
+        "WebSite",
+        "SearchAction",
+        "Organization",
+        "Article"
+      ],
+      "indexPolicy": "indexable"
+    },
+    {
+      "collection": "project-report",
       "slug": "41-awesome-self-evolving",
       "url": "https://agent-evolution.com/reports/projects/41-awesome-self-evolving/",
       "sourcePath": "site/public/reports/projects/41-awesome-self-evolving.md",
@@ -9587,6 +9621,40 @@
       "url": "https://agent-evolution.com/reports/survey-publication/05-open-source-evidence-atlas/",
       "sourcePath": "reports/survey-publication/05-open-source-evidence-atlas.md",
       "htmlPath": "site/dist/reports/survey-publication/05-open-source-evidence-atlas/index.html",
+      "status": "pass",
+      "failures": [],
+      "warnings": [],
+      "jsonLdTypes": [
+        "WebSite",
+        "SearchAction",
+        "Organization",
+        "Article"
+      ],
+      "indexPolicy": "indexable"
+    },
+    {
+      "collection": "survey-publication",
+      "slug": "overview",
+      "url": "https://agent-evolution.com/reports/survey-publication/overview/",
+      "sourcePath": "reports/survey-publication/README.md",
+      "htmlPath": "site/dist/reports/survey-publication/overview/index.html",
+      "status": "pass",
+      "failures": [],
+      "warnings": [],
+      "jsonLdTypes": [
+        "WebSite",
+        "SearchAction",
+        "Organization",
+        "Article"
+      ],
+      "indexPolicy": "indexable"
+    },
+    {
+      "collection": "survey-publication",
+      "slug": "hn-submission-pack",
+      "url": "https://agent-evolution.com/reports/survey-publication/hn-submission-pack/",
+      "sourcePath": "reports/survey-publication/hn-submission-pack.md",
+      "htmlPath": "site/dist/reports/survey-publication/hn-submission-pack/index.html",
       "status": "pass",
       "failures": [],
       "warnings": [],

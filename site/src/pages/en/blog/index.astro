@@ -1,0 +1,82 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog')).filter((p) => !p.data.draft).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()).slice(0, 8);
+
+const readingRoutes = [
+  ['Definition first', 'Start by deciding what changed, who verified it, and whether the change was retained.', '/en/topics/self-evolving-ai-agents/'],
+  ['Mechanism next', 'Use the five-loop page to separate reflection, search, evaluation, memory, and archive pressure.', '/en/topics/five-evolution-loops/'],
+  ['Project evidence', 'Move from article claims to repository evidence, model cards, and report boundaries.', '/en/projects/'],
+  ['Research map', 'Use papers and graph links as source trails before citing a stronger claim.', '/en/research/']
+];
+---
+
+<BaseLayout
+  pageLang="en"
+  alternateZh="/blog/"
+  alternateEn="/en/blog/"
+  title="Self Evolve Blog Guide — English reading path"
+  description="English guide to the Self Evolve blog: Chinese-first research notes with same-evidence routes for definitions, mechanisms, projects, research, and source boundaries."
+  pageKeywords={['Self Evolve blog', 'AI self evolution notes', 'self-evolving agents articles']}
+>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <div class="eyebrow">Blog / English guide</div>
+        <h1>Use the blog as a doorway into evidence, not as the evidence itself.</h1>
+        <p class="lead">The article archive remains Chinese-first. This English page gives the same-evidence reading path so global readers can move from concepts to project cards, papers, graph prompts, and source trails.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="/blog/">Open Chinese article index</a>
+          <a class="button" href="/en/resource-library/">Evidence library</a>
+          <a class="text-link" href="/rss.xml">RSS</a>
+        </div>
+      </div>
+      <aside class="hero-evidence">
+        <div class="eyebrow">Boundary</div>
+        <ol>
+          <li><span>Language</span><strong>Full article archive is Chinese-first.</strong></li>
+          <li><span>Mirror</span><strong>English pages cover the core evidence path.</strong></li>
+          <li><span>Cite</span><strong>Open source links before citing article claims.</strong></li>
+        </ol>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section" style="background: var(--surface-1);">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Reading routes</div>
+          <h2>Read by question.</h2>
+        </div>
+      </div>
+      <div class="grid">
+        {readingRoutes.map(([title, body, href]) => (
+          <article class="card"><h3><a href={href}>{title}</a></h3><p>{body}</p></article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Recent Chinese-first notes</div>
+          <h2>Open the note, then follow its source trail.</h2>
+        </div>
+      </div>
+      <div class="grid">
+        {posts.map((post) => (
+          <article class="card">
+            <div class="eyebrow">{post.data.pubDate.toISOString().slice(0, 10)}</div>
+            <h3><a href={`/blog/${post.id}/`}>{post.data.title}</a></h3>
+            <p>{post.data.description}</p>
+            <div class="pill-row">{post.data.tags.slice(0, 4).map((tag) => <span class="pill">{tag}</span>)}</div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

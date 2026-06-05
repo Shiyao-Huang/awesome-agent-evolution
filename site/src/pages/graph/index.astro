@@ -55,14 +55,19 @@ const graphMetaPayload = JSON.stringify({
 });
 const siteBasePath = new URL(site.url).pathname.replace(/\/$/, '');
 ---
-<BaseLayout title="Self Evolve 知识图谱 — 项目、论文与机制关系" description="Self Evolve 知识图谱，把自进化 AI 项目、论文、机制标签和研究簇连接成可检索的关系网络。">
+<BaseLayout
+  title="Self Evolve 探索性证据图 — 项目、论文与机制候选关系"
+  description="Self Evolve 探索性证据图，把自进化 AI 项目、论文、机制标签和研究簇连接成可检索的候选关系网络；边代表 inferred links，不代表引用、因果或已验证证据。"
+  alternateZh="/graph/"
+  alternateEn="/en/graph/"
+>
   <section class="section graph-section">
     <div class="graph-shell">
       <div class="graph-panel">
         <div class="graph-toolbar">
           <div class="graph-title">
-            <h1>Knowledge graph</h1>
-            <p>{knowledgeGraphStats.nodes} nodes · {knowledgeGraphStats.edges} edges · {knowledgeGraphStats.projects + knowledgeGraphStats.papers} projects + papers</p>
+            <h1>Evidence graph</h1>
+            <p>{knowledgeGraphStats.nodes} nodes · {knowledgeGraphStats.edges} inferred links · {knowledgeGraphStats.projects + knowledgeGraphStats.papers} projects + papers</p>
           </div>
           <label>
             <span>Search</span>
@@ -83,9 +88,9 @@ const siteBasePath = new URL(site.url).pathname.replace(/\/$/, '');
         <svg id="knowledge-graph" viewBox="0 0 1400 720" role="img" aria-label="Self Evolve knowledge graph"></svg>
       </div>
       <aside class="graph-prompt-panel" id="graph-detail">
-        <div class="eyebrow">AI Research Prompt</div>
-        <h2 id="graph-prompt-title">点击节点生成调研 Prompt</h2>
-        <p id="graph-prompt-summary">选择 graph 中的项目、论文、概念或 cluster 后，这里会自动组装可复制给 AI 的继续调研提示词。</p>
+        <div class="eyebrow">Exploratory prompt</div>
+        <h2 id="graph-prompt-title">点击节点生成复核 Prompt</h2>
+        <p id="graph-prompt-summary">选择 graph 中的项目、论文、概念或 cluster 后，这里会组装继续复核提示词；边只是候选关联，不能当作引用或因果证明。</p>
         <div class="graph-prompt-links" id="graph-prompt-links"></div>
         <textarea id="graph-prompt" readonly rows="14" aria-label="AI research prompt"></textarea>
         <div class="graph-prompt-actions">
@@ -261,7 +266,7 @@ const siteBasePath = new URL(site.url).pathname.replace(/\/$/, '');
       const meta = metaById.get(node.id);
       const links = [];
       if (meta?.kind === 'project') {
-        links.push({ label: `${meta.name} model card`, href: absoluteHref(meta.href), note: `rank #${String(meta.rank).padStart(3, '0')} · ${Number(meta.stars || 0).toLocaleString()} stars` });
+        links.push({ label: `${meta.name} model card`, href: absoluteHref(meta.href), note: `adoption-prior order #${String(meta.rank).padStart(3, '0')} · ${Number(meta.stars || 0).toLocaleString()} stars` });
         links.push({ label: `${meta.repo} GitHub`, href: meta.url, note: `${meta.category} · ${meta.updated}` });
         links.push({ label: `${meta.name} published report`, href: absoluteHref(meta.reportHref), note: meta.localPath ? `local: ${meta.localPath}` : 'site report' });
       } else if (meta?.kind === 'paper') {
@@ -290,7 +295,7 @@ const siteBasePath = new URL(site.url).pathname.replace(/\/$/, '');
     function nodeLine(node) {
       const meta = metaById.get(node.id);
       if (meta?.kind === 'project') {
-        return `- project: ${meta.name} (${meta.repo}) | rank #${String(meta.rank).padStart(3, '0')} | stars ${Number(meta.stars || 0).toLocaleString()} | pattern: ${meta.pattern}`;
+        return `- project: ${meta.name} (${meta.repo}) | adoption-prior order #${String(meta.rank).padStart(3, '0')} | stars ${Number(meta.stars || 0).toLocaleString()} | pattern: ${meta.pattern}`;
       }
       if (meta?.kind === 'paper') {
         return `- paper: ${meta.title} (${meta.year}) | cluster: ${meta.cluster || 'unknown'} | relation: ${meta.relation || 'unknown'}`;
@@ -313,6 +318,8 @@ const siteBasePath = new URL(site.url).pathname.replace(/\/$/, '');
         : '- 暂无直接关系。';
       return `你是 Self Evolve / AI 自我进化研究助理。请基于下面的 graph 节点继续做深度调研，不要只总结网页，要沿着 GitHub、论文/PDF、站内报告交叉验证。
 
+注意: graph edge 是站内整理出的 inferred candidate link，不是引用关系、因果关系或已验证证据链。所有结论必须回到 source traceability、benchmark clarity、reproduction/review status。
+
 焦点节点:
 - ${focusTitle}
 - 摘要: ${focusSummary}
@@ -325,7 +332,7 @@ ${linkLines}
 
 请输出:
 1. 这个节点在 Self Evolve 中的机制位置：它改进 prompt、代码、记忆、工具、策略、数据、模型权重，还是 agent 组织？
-2. 证据质量 rank：按 GitHub stars/最近活跃、论文可信度、可复现实验、benchmark/评估器是否明确排序。
+2. 证据复核顺序：先按 source traceability、benchmark clarity、reproduction/review status 排序；stars 和最近活跃只能作为 adoption/attention prior。
 3. 对应 GitHub 仓库和论文/PDF 的证据表：每条证据说明它支持了什么判断。
 4. 与相邻项目/论文的差异：哪些只是同名概念，哪些有可证据支持的新机制。
 5. 下一步研究计划：raw 要抓什么、processed 要抽取什么、work 中要画什么图、results 可以产出什么文章/报告。

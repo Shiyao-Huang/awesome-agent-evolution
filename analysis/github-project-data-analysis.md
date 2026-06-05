@@ -1,16 +1,16 @@
 # GitHub Project Data Analysis
 
-Generated: 2026-06-05T14:02:05.516Z
+Generated: 2026-06-05T14:17:06.770Z
 
 ## One-Sentence Compression
 
-The project corpus has 682 timestamp-indexed raw GitHub captures, 684 classified repositories, 292 site/paper model-card projects, 99 strict evolution-theme repositories, and 205 broad evolution-related repositories.
+The project corpus has 684 timestamp-indexed raw GitHub captures, 684 classified repositories, 292 site/paper model-card projects, 99 strict evolution-theme repositories, and 205 broad evolution-related repositories.
 
 ## Corpus Funnel
 
 | Layer | Count | Definition |
 |---|---:|---|
-| Raw GitHub captures | 682 | Records in `output/raw-github-timestamp-index.json`; each points to one `raw-github/*.md` capture. |
+| Raw GitHub captures | 684 | Records in `output/raw-github-timestamp-index.json`; each points to one `raw-github/*.md` capture. |
 | Classified repositories | 684 | Rows in `research/repo-classification.json` with category, theme, stack, and time slice. |
 | Analyzed model-card projects | 292 | Repositories in `site/src/data/projects.ts` that receive public project pages and reports. |
 | Strict evolution-theme repositories | 99 | Classified rows whose `base_theme` is `evolution`. |
@@ -487,7 +487,7 @@ This table joins each public model-card project back to raw capture, classificat
 |---|---:|---|
 | GitHub API/cache metadata | 25 | Projects with verified `github_api` metadata in `analysis/github-created-at-cache.json`. |
 | Local git mirror evidence | 76 | Projects whose `localPath` points to a local git clone and can report first/last commit, count, branch, and HEAD. |
-| Raw timestamp capture | 238 | Public projects that also appear in `output/raw-github-timestamp-index.json`. |
+| Raw timestamp capture | 240 | Public projects that also appear in `output/raw-github-timestamp-index.json`. |
 | Classification row | 239 | Public projects that also appear in `research/repo-classification.json`. |
 | Public model-card report | 292 | Public projects with a generated report under `site/public/reports/projects/`. |
 
@@ -540,7 +540,7 @@ This table joins each public model-card project back to raw capture, classificat
 | [dataelement/bisheng](https://github.com/dataelement/bisheng) | - | missing | [report](../research/projects/69-bisheng-llm-platform.md) | github_api_403 | unknown | 2026-05 | 8000/1300 | 1 commits @ 9eb9328 (2026-05 -> 2026-05) |
 | [EvoMap/evolver](https://github.com/EvoMap/evolver) | [raw](../raw-github/evomap_evolver.md) | memory | [report](../projects/336-evomap-evolver-self-evolving-memory-framework.md) | github_api_403 | unknown | 2026-05 | 7600/773 | - |
 | [automl/auto-sklearn](https://github.com/automl/auto-sklearn) | - | missing | [report](../projects/31-autosklearn-automl.md) | github_api_403 | unknown | 2025-01 | 7500/1000 | 1 commits @ 6732112 (2023-04 -> 2023-04) |
-| [ComposioHQ/agent-orchestrator](https://github.com/ComposioHQ/agent-orchestrator) | - | harness | [report](../projects/406-composio-agent-orchestrator-coding-swarm.md) | github_api_fetch_error | unknown | 2026-06 | 7400/1000 | - |
+| [ComposioHQ/agent-orchestrator](https://github.com/ComposioHQ/agent-orchestrator) | [raw](../raw-github/composiohq_agent-orchestrator.md) | harness | [report](../projects/406-composio-agent-orchestrator-coding-swarm.md) | github_api_fetch_error | unknown | 2026-06 | 7400/1000 | - |
 | [e2b-dev/e2b](https://github.com/e2b-dev/e2b) | - | missing | [report](../research/projects/54-e2b-sandbox.md) | github_api_403 | unknown | 2026-05 | 7000/450 | 1 commits @ b355e7c (2026-05 -> 2026-05) |
 | [EvoAgentX/EvoAgentX](https://github.com/EvoAgentX/EvoAgentX) | [raw](../raw-github/evoagentx_evoagentx.md) | evolution | [report](../projects/22-evoagentx-agent-evolution-framework.md) | github_api_403 | unknown | 2026-01 | 6800/669 | 1 commits @ f542ce4 (2026-05 -> 2026-05) |
 | [kyegomez/swarms](https://github.com/kyegomez/swarms) | [raw](../raw-github/kyegomez_swarms.md) | framework | [report](../projects/371-swarms-enterprise-multi-agent-runtime.md) | github_api_fetch_error | unknown | 2026-05 | 6800/935 | - |
@@ -696,7 +696,7 @@ This table joins each public model-card project back to raw capture, classificat
 | [inter-co/science-codeevolve](https://github.com/inter-co/science-codeevolve) | - | missing | [report](../projects/inter_co__science_codeevolve.md) | github_api | 2025-10 | 2026-04 | 98/14 | 1 commits @ c077959 (2026-04 -> 2026-04) |
 | [block/agent-skills](https://github.com/block/agent-skills) | [raw](../raw-github/block_agent-skills.md) | skill | [report](../projects/326-block-agent-skills-enterprise-playbook.md) | github_api_fetch_error | unknown | 2026-05 | 96/25 | - |
 | [longmans/self-evolve](https://github.com/longmans/self-evolve) | [raw](../raw-github/longmans_self-evolve.md) | evolution | [report](../projects/355-self-evolve-openclaw-playground.md) | github_api_fetch_error | unknown | 2026-06 | 96/5 | - |
-| [AQ-MedAI/MedMemoryBench](https://github.com/AQ-MedAI/MedMemoryBench) | - | memory | [report](../projects/407-medmemorybench-agent-memory-benchmark.md) | github_api_fetch_error | unknown | 2026-05 | 95/8 | - |
+| [AQ-MedAI/MedMemoryBench](https://github.com/AQ-MedAI/MedMemoryBench) | [raw](../raw-github/aq-medai_medmemorybench.md) | memory | [report](../projects/407-medmemorybench-agent-memory-benchmark.md) | github_api_fetch_error | unknown | 2026-05 | 95/8 | - |
 | [seb1n/awesome-ai-agent-skills](https://github.com/seb1n/awesome-ai-agent-skills) | [raw](../raw-github/seb1n_awesome-ai-agent-skills.md) | skill | [report](../projects/313-awesome-ai-agent-skills-cross-agent-skill-index.md) | github_api_fetch_error | unknown | 2026-05 | 92/17 | - |
 | [howdymary/hermes-agent-metaharness](https://github.com/howdymary/hermes-agent-metaharness) | [raw](../raw-github/howdymary_hermes-agent-metaharness.md) | harness | [report](../projects/250-hermes-agent-metaharness-outer-loop.md) | github_api_fetch_error | unknown | 2026-05 | 89/9 | - |
 | [dceoy/speckit-agent-skills](https://github.com/dceoy/speckit-agent-skills) | [raw](../raw-github/dceoy_speckit-agent-skills.md) | skill | [report](../projects/236-speckit-agent-skills-spec-driven-workflow.md) | github_api_fetch_error | unknown | 2026-05 | 88/21 | - |

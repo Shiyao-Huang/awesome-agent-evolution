@@ -39,7 +39,9 @@ const trendEnd = evolveAgiTrend[evolveAgiTrend.length - 1]?.date ?? '';
 <BaseLayout
   title="Evolve-AGI Evidence Worksheet — Self Evolve"
   description="Evolve-AGI 是探索性的证据成熟度工作表，不是 AGI 能力分或领域标准；它用于检查 AI Agent 自进化证据的 benchmark、闭环、迁移、治理和覆盖缺口。"
-  pageKeywords={['Evolve-AGI Index', '自进化系数', 'AI Agent 自进化', 'Self Evolve rank']}
+  pageKeywords={['Evolve-AGI evidence worksheet', '自进化证据工作表', 'AI Agent 自进化', 'Self Evolve evidence triage']}
+  alternateZh="/evolve-agi-index/"
+  alternateEn="/en/evolve-agi-index/"
 >
   <section class="section evolve-hero">
     <div class="container evolve-hero-grid">
@@ -262,7 +264,7 @@ const trendEnd = evolveAgiTrend[evolveAgiTrend.length - 1]?.date ?? '';
         <div class="eai-list">
           {evolveAgiIndex.leaders.map((leader) => (
             <article class="eai-row">
-              <div class="eai-order">Queue {leader.rank}</div>
+              <div class="eai-order">Worksheet row {leader.rank}</div>
               <div>
                 <h3>{leader.name}</h3>
                 <p>{leader.summary}</p>
@@ -287,7 +289,7 @@ const trendEnd = evolveAgiTrend[evolveAgiTrend.length - 1]?.date ?? '';
         <div class="eai-list">
           {evolveAgiIndex.currentSignals.map((signal) => (
             <article class="eai-row">
-              <div class="eai-order">Lead {signal.rank}</div>
+              <div class="eai-order">Research clue {signal.rank}</div>
               <div>
                 <h3>{signal.name}</h3>
                 <p>{signal.pattern}</p>

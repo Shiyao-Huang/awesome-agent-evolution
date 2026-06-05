@@ -1,0 +1,79 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { evolveAgiIndex, evolveAgiIndexSignals, evolveAgiTrend } from '@/data/evolveAgiIndex';
+
+const trendStart = evolveAgiTrend[0]?.date ?? '';
+const trendEnd = evolveAgiTrend[evolveAgiTrend.length - 1]?.date ?? '';
+---
+
+<BaseLayout
+  pageLang="en"
+  alternateZh="/evolve-agi-index/"
+  alternateEn="/en/evolve-agi-index/"
+  title="Evolve-AGI Evidence Worksheet — not an AGI score"
+  description="English guide to the Evolve-AGI evidence worksheet: benchmark, loop, evidence, transfer, implementation, momentum, and governance signals with explicit limits."
+  pageKeywords={['Evolve-AGI evidence worksheet', 'AI agent self-evolution evidence', 'agent evaluation worksheet']}
+>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <div class="eyebrow">Evolve-AGI / English mirror</div>
+        <h1>Use it as a review worksheet, not as an AGI scoreboard.</h1>
+        <p class="lead">{evolveAgiIndex.oneSentence}</p>
+        <p class="lead-note">The worksheet asks whether evidence is strong enough for the next review: can the benchmark be rerun, is the loop retained, are transfer and governance claims stated, and is the source chain visible?</p>
+        <div class="hero-actions">
+          <a class="button primary" href="/evolve-agi-index/">Open full Chinese page</a>
+          <a class="button" href="/en/resource-library/">Evidence library</a>
+          <a class="text-link" href="/en/value-lsh/">Value triage boundary</a>
+        </div>
+      </div>
+      <aside class="hero-evidence">
+        <div class="eyebrow">Current snapshot</div>
+        <ol>
+          <li><span>Score</span><strong>{evolveAgiIndex.score}</strong></li>
+          <li><span>Meaning</span><strong>worksheet score</strong></li>
+          <li><span>Band</span><strong>editorial rubric</strong></li>
+          <li><span>Trend</span><strong>{trendStart} to {trendEnd}</strong></li>
+        </ol>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section" style="background: var(--surface-1);">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Boundary</div>
+          <h2>The score does not decide which system is best.</h2>
+        </div>
+      </div>
+      <div class="card">
+        <p>Weights are editorial/proposed survey weights. This page does not claim peer-reviewed field consensus, confidence intervals, reviewer agreement, or sensitivity analysis. Treat it as a structured way to find weak evidence before making stronger claims.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Signals</div>
+          <h2>Seven questions behind the worksheet.</h2>
+        </div>
+      </div>
+      <div class="grid">
+        {evolveAgiIndexSignals.map((signal) => (
+          <article class="card">
+            <div class="eyebrow">Weight {signal.weight}%</div>
+            <h3>{signal.label}</h3>
+            <p>{signal.description}</p>
+            <div class="pill-row">
+              <span class="pill">score {signal.score}/100</span>
+              <span class="pill">{signal.evidence}</span>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,79 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { featuredResearch, researchClusters } from '@/data/research';
+import { researchCoverage } from '@/data/researchCoverage';
+---
+
+<BaseLayout
+  pageLang="en"
+  alternateZh="/research/"
+  alternateEn="/en/research/"
+  title="Self Evolve Research Map — papers, mechanisms, and coverage gaps"
+  description="English guide to the Self Evolve research map: paper notes, mechanism clusters, benchmark settings, and source-tracing gaps for self-evolving AI agents."
+  pageKeywords={['self-evolving AI papers', 'AI agent research map', 'code self-improvement papers']}
+>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <div class="eyebrow">Research map / English mirror</div>
+        <h1>Ask what a paper proves, then ask what it leaves open.</h1>
+        <p class="lead">The research map connects paper reviews, benchmark settings, mechanism clusters, and coverage gaps. It is a review workflow for source tracing, not a claim that the literature survey is complete.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="/research/">Open full Chinese map</a>
+          <a class="button" href="/en/graph/">Evidence graph guide</a>
+          <a class="text-link" href="/en/survey/">Survey snapshot</a>
+        </div>
+      </div>
+      <aside class="hero-evidence">
+        <div class="eyebrow">Coverage</div>
+        <ol>
+          <li><span>Raw IDs</span><strong>{researchCoverage.rawUniqueIds}</strong></li>
+          <li><span>Reviews</span><strong>{researchCoverage.reviewFiles}</strong></li>
+          <li><span>Priority gaps</span><strong>{researchCoverage.identifiedCoverageGaps}</strong></li>
+          <li><span>Status</span><strong>ongoing map</strong></li>
+        </ol>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section" style="background: var(--surface-1);">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Mechanism clusters</div>
+          <h2>Read clusters as comparison sets.</h2>
+        </div>
+      </div>
+      <div class="grid">
+        {researchClusters.map((cluster) => (
+          <article class="card">
+            <h3>{cluster.title}</h3>
+            <p>{cluster.summary}</p>
+            <div class="pill-row">{cluster.items.slice(0, 4).map((item) => <span class="pill">{item}</span>)}</div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Representative works</div>
+          <h2>Use papers as source trails, not slogans.</h2>
+        </div>
+      </div>
+      <div class="grid">
+        {featuredResearch.slice(0, 9).map((paper) => (
+          <article class="card">
+            <div class="eyebrow">{paper.year} · {paper.cluster}</div>
+            <h3>{paper.url ? <a href={paper.url} target="_blank" rel="noopener">{paper.title}</a> : paper.title}</h3>
+            <p>{paper.insight}</p>
+            <p><strong>Relation:</strong> {paper.relation}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -28,13 +28,18 @@ const readingRoutes = [
   }
 ];
 ---
-<BaseLayout title="Self Evolve 博客 — AI 自我进化实践笔记与证据导读" description="围绕自进化智能体、LLM 迭代优化、代码自我改进、评测闭环和公开项目证据链的双语研究笔记、证据导读和项目阅读入口。">
+<BaseLayout
+  title="Self Evolve 博客 — AI 自我进化实践笔记与证据导读"
+  description="围绕自进化智能体、LLM 迭代优化、代码自我改进、评测闭环和公开项目证据链的中文默认研究笔记；英文入口汇总核心阅读路径。"
+  alternateZh="/blog/"
+  alternateEn="/en/blog/"
+>
   <section class="section blog-index-hero">
     <div class="container">
       <div>
         <div class="eyebrow">博客</div>
         <h1>Self Evolve 实践笔记</h1>
-        <p class="lead">把自进化智能体、LLM 迭代优化、代码自我改进和评测闭环写成可搜索、可引用、能继续生长的研究笔记；中文默认入口保留，核心概念同步给英文读者。</p>
+        <p class="lead">把自进化智能体、LLM 迭代优化、代码自我改进和评测闭环写成可搜索、可引用、能继续生长的研究笔记；中文是默认全文入口，英文页先提供同证据链的阅读路径和边界说明。</p>
       </div>
       <aside class="blog-note">
         <p>博客是这个站点的阅读入口：先用短文章建立概念，再进入项目 model card、论文精读和知识图谱。</p>
@@ -42,6 +47,7 @@ const readingRoutes = [
           <a class="pill" href="/rss.xml">RSS</a>
           <a class="pill" href="/research/">研究图谱</a>
           <a class="pill" href="/projects/">项目索引</a>
+          <a class="pill" href="/en/blog/">English guide</a>
           <a class="pill" href={site.github} target="_blank" rel="noopener">GitHub</a>
         </div>
       </aside>

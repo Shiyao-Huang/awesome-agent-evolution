@@ -1,0 +1,49 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { knowledgeGraphStats } from '@/data/knowledgeGraph';
+---
+
+<BaseLayout
+  pageLang="en"
+  alternateZh="/graph/"
+  alternateEn="/en/graph/"
+  title="Self Evolve Evidence Graph — exploratory links, not proof"
+  description="English guide to the Self Evolve evidence graph: projects, papers, concepts, and clusters connected by inferred candidate links that require source-level verification."
+  pageKeywords={['Self Evolve evidence graph', 'self-evolving AI knowledge graph', 'AI agent research graph']}
+>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <div class="eyebrow">Evidence graph / English guide</div>
+        <h1>The graph is a research prompt, not a proof system.</h1>
+        <p class="lead">The interactive Chinese page links {knowledgeGraphStats.nodes} nodes through {knowledgeGraphStats.edges} inferred candidate links. Those edges help you decide what to inspect next; they do not prove citation, causality, or mechanism equivalence.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="/graph/">Open interactive graph</a>
+          <a class="button" href="/en/research/">Research guide</a>
+          <a class="button" href="/en/projects/">Project evidence</a>
+        </div>
+      </div>
+      <aside class="hero-evidence">
+        <div class="eyebrow">Use safely</div>
+        <ol>
+          <li><span>Click</span><strong>Use a node to generate a focused research prompt.</strong></li>
+          <li><span>Verify</span><strong>Open GitHub, paper, PDF, or report links before citing.</strong></li>
+          <li><span>Downgrade</span><strong>Treat stars as adoption priors, not evidence quality.</strong></li>
+          <li><span>Report</span><strong>Keep inferred and verified relationships separate.</strong></li>
+        </ol>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section" style="background: var(--surface-1);">
+    <div class="container split">
+      <div>
+        <div class="eyebrow">Reader contract</div>
+        <h2>The useful output is a source table.</h2>
+      </div>
+      <div class="card">
+        <p>When the graph suggests a project-paper-concept cluster, the next step is not to summarize the cluster. The next step is to build a small evidence table: source, claim supported, benchmark or evaluator, reproduction status, and unresolved limit.</p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

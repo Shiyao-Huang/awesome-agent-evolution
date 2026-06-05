@@ -1,0 +1,55 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { site } from '@/data/site';
+import { Content } from '../../../../../reports/survey-publication/hn-submission-pack.md';
+
+const title = 'Hacker News Submission Pack';
+const description = 'Indexable launch-readiness note for Self Evolve: HN title choices, landing-page fit, Show HN boundary, human comment outline, and pre-posting checklist.';
+const canonical = new URL('/reports/survey-publication/hn-submission-pack/', site.url).toString();
+const sourceUrl = `${site.github}/blob/main/reports/survey-publication/hn-submission-pack.md`;
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description,
+  inLanguage: 'en',
+  author: { '@id': `${site.url}/#organization` },
+  publisher: { '@id': `${site.url}/#organization` },
+  mainEntityOfPage: canonical,
+  isBasedOn: sourceUrl,
+  about: ['self-evolving AI agents', 'Hacker News', 'launch readiness', 'SEO evidence asset']
+};
+---
+<BaseLayout
+  title={`${title} | Self Evolve Survey Publication`}
+  description={description}
+  type="article"
+  pageLang="en"
+  pageKeywords={['Hacker News AI agents', 'Self Evolve launch', 'self-evolving AI agents', 'SEO evidence asset']}
+>
+  <article class="blog-article">
+    <div class="eyebrow">HN submission pack / Indexable launch-readiness note</div>
+    <h1>{title}</h1>
+    <p class="lead">{description}</p>
+    <div class="pill-row">
+      <a class="pill" href="/reports/">Reports index</a>
+      <a class="pill" href="/search/">Search atlas</a>
+      <a class="pill" href={sourceUrl} target="_blank" rel="noopener">Markdown source</a>
+    </div>
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} is:inline />
+    <aside class="source-panel" aria-label="Hacker News submission evidence boundary">
+      <div>
+        <div class="eyebrow">How to read</div>
+        <h2>Read this as launch readiness, not a generated comment to paste</h2>
+        <p>The submission pack is public because launch framing, HN fit, and HTTPS readiness are part of the evidence chain. It should guide a human submitter, not replace human discussion.</p>
+        <p><strong>中文:</strong> 这是面向发布准备的公开证据页，不是要复制到 HN 的自动生成评论。</p>
+      </div>
+      <div class="source-links">
+        <a href={sourceUrl} target="_blank" rel="noopener">Open source Markdown</a>
+        <a href="/search/">Try the evidence atlas</a>
+        <a href="/reports/survey-publication/overview/">Read the release plan</a>
+      </div>
+    </aside>
+    <Content />
+  </article>
+</BaseLayout>

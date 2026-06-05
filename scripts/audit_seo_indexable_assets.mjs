@@ -21,6 +21,7 @@ const read = (file) => fs.readFileSync(file, 'utf8');
 const exists = (file) => fs.existsSync(file);
 const listMdx = (dir) => fs.readdirSync(dir).filter((name) => name.endsWith('.mdx')).sort();
 const stripExt = (name) => name.replace(/\.(mdx|md)$/, '');
+const publicSlugFromId = (id) => id.toLowerCase() === 'readme' ? 'overview' : id;
 
 const extractFrontmatter = (text) => {
   const match = text.match(/^---\n([\s\S]*?)\n---/);
@@ -182,8 +183,9 @@ if (exists(paperCrossDomainReportsRoot)) {
 }
 
 if (exists(surveyPublicationRoot)) {
-  for (const name of fs.readdirSync(surveyPublicationRoot).filter((file) => /^[0-9][0-9]-.*\.md$/.test(file)).sort()) {
-    const slug = stripExt(name);
+  for (const name of fs.readdirSync(surveyPublicationRoot).filter((file) => file.endsWith('.md')).sort()) {
+    const id = stripExt(name);
+    const slug = publicSlugFromId(id);
     const sourcePath = path.join(surveyPublicationRoot, name);
     assets.push(checkHtmlAsset({
       collection: 'survey-publication',
@@ -248,7 +250,7 @@ const md = [
   '',
   '## Scope',
   '',
-  'This audit verifies generated HTML SEO assets for `site/src/content/blog/*.mdx`, `site/src/content/research/*.mdx`, `site/public/reports/projects/*.md`, `site/public/reports/research/projects/*.md`, `site/public/reports/papers/cross-domain/*.md`, and `reports/survey-publication/[0-9][0-9]-*.md`: canonical URL, sitemap inclusion, meta description, Open Graph metadata, JSON-LD article type, and absence of `noindex`. Machine index files such as `site/public/reports/projects/INDEX.md` are excluded as non-article indexes.',
+  'This audit verifies generated HTML SEO assets for `site/src/content/blog/*.mdx`, `site/src/content/research/*.mdx`, `site/public/reports/projects/*.md`, `site/public/reports/research/projects/*.md`, `site/public/reports/papers/cross-domain/*.md`, and `reports/survey-publication/*.md`: canonical URL, sitemap inclusion, meta description, Open Graph metadata, JSON-LD article type, and absence of `noindex`. Machine index files such as `site/public/reports/projects/INDEX.md` are excluded as non-article indexes.',
   '',
   '## Failures',
   '',

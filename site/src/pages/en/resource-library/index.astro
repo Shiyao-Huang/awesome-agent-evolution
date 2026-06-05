@@ -1,0 +1,115 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { site } from '@/data/site';
+import { publicCorpusStats } from '@/data/publicCorpusStats';
+import { surveyStats } from '@/data/survey';
+import { evolveAgiIndex } from '@/data/evolveAgiIndex';
+
+const countRows = [
+  [String(publicCorpusStats.rawGithubCaptures), 'raw GitHub captures', 'Source captures used before classification and analysis.'],
+  [String(publicCorpusStats.classifiedGithubRepos), 'classified GitHub repos', 'Repository rows that have entered the evidence taxonomy.'],
+  [String(publicCorpusStats.analyzedProjectReports), 'analyzed model-card reports', 'Processed project reports tracked by the governance index.'],
+  [String(publicCorpusStats.publicProjectReports), 'review-gated public report snapshots', 'Readable source-tracing pages, not per-page quality certification.'],
+  [String(surveyStats.papers), 'survey-display papers', 'Papers currently shown by the site survey view.'],
+  [String(surveyStats.painPoints), 'public discussion signals', 'Public semantic signals, not controlled interview results.']
+];
+
+const pipeline = [
+  ['Raw sources', 'GitHub, papers, blogs, and public discussion material remain the claim source.'],
+  ['Processed analysis', 'Classification, model cards, paper reviews, triage queues, and worksheet scores turn sources into comparable evidence.'],
+  ['Survey synthesis', 'The survey organizes mechanisms into working loops and keeps claim limits visible.'],
+  ['Public results', 'The site, reports, graph, PDF, and topic pages help readers move from conclusion back to source.']
+];
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: 'Self Evolve Resource Library',
+  description: 'English same-evidence guide to the Self Evolve resource library and evidence pipeline.',
+  url: `${site.url}/en/resource-library/`,
+  inLanguage: 'en',
+  isPartOf: { '@id': `${site.url}/#website` }
+};
+---
+
+<BaseLayout
+  pageLang="en"
+  alternateZh="/resource-library/"
+  alternateEn="/en/resource-library/"
+  title="Self Evolve Resource Library — corpus scope, evidence layers, and limits"
+  description="English same-evidence guide to the Self Evolve resource library: raw sources, processed analysis, survey synthesis, review-gated reports, and Evolve-AGI worksheet boundaries."
+  pageKeywords={['Self-Evolving AI Agents Resource Library', 'AI self evolution evidence', 'agent evolution corpus', 'Evolve-AGI worksheet']}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} is:inline />
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <div class="eyebrow">Resource library / English mirror</div>
+        <h1>Read the corpus as an evidence chain, not as a pile of links.</h1>
+        <p class="lead">The useful question is not how many repositories or papers were collected. The useful question is whether a public claim can move backward from a site page to a report, an index, a paper, or a source repository.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="/resource-library/">Open full Chinese page</a>
+          <a class="button" href="/en/survey/">Survey boundary</a>
+          <a class="button" href="/en/evolve-agi-index/">Worksheet boundary</a>
+        </div>
+      </div>
+      <aside class="hero-evidence">
+        <div class="eyebrow">Reader rule</div>
+        <ol>
+          <li><span>Source</span><strong>What raw material supports the claim?</strong></li>
+          <li><span>Transform</span><strong>How did it become analysis or a report?</strong></li>
+          <li><span>Limit</span><strong>What remains unverified or only inferred?</strong></li>
+          <li><span>Next</span><strong>Which source should be opened before citing it?</strong></li>
+        </ol>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section" style="background: var(--surface-1);">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Count boundaries</div>
+          <h2>Different numbers answer different questions.</h2>
+        </div>
+      </div>
+      <div class="score-table-wrap">
+        <table class="score-table">
+          <thead><tr><th>Count</th><th>Scope</th><th>How to read it</th></tr></thead>
+          <tbody>
+            {countRows.map(([count, scope, meaning]) => (
+              <tr><td><strong>{count}</strong></td><td>{scope}</td><td>{meaning}</td></tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Pipeline</div>
+          <h2>From source material to public claims.</h2>
+        </div>
+      </div>
+      <div class="grid">
+        {pipeline.map(([title, body]) => (
+          <article class="card"><h3>{title}</h3><p>{body}</p></article>
+        ))}
+      </div>
+      <aside class="source-panel" style="margin-top: 22px;">
+        <div>
+          <div class="eyebrow">Worksheet boundary</div>
+          <h2>{evolveAgiIndex.score} is a worksheet score, not an AGI score.</h2>
+          <p>The Evolve-AGI worksheet helps decide what deserves the next review. Its weights are editorial/proposed, with no peer-reviewed field consensus, confidence interval, or sensitivity analysis claimed yet.</p>
+        </div>
+        <div class="source-links">
+          <a href="/en/evolve-agi-index/">Read worksheet guide</a>
+          <a href="/en/reports/">Read report status</a>
+        </div>
+      </aside>
+    </div>
+  </section>
+</BaseLayout>

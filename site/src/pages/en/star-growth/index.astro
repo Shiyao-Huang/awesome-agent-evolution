@@ -1,0 +1,146 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { site } from '@/data/site';
+import growthSnapshotJson from '../../../../../analysis/github-star-growth-ranking.json';
+
+interface GrowthRow {
+  rank: number;
+  repo: string;
+  url: string;
+  category: string;
+  current_total_stars: number;
+  new_stars_year: number;
+  new_stars_recent_90d: number;
+  growth_quality_score: number;
+  coverage_status: string;
+  fetch_priority_rank: number | null;
+}
+
+interface GrowthSnapshot {
+  generated_at: string;
+  counts: Record<string, number>;
+  coverage_qualified_ranking: GrowthRow[];
+  fetch_priority_backlog: GrowthRow[];
+}
+
+const snapshot = growthSnapshotJson as GrowthSnapshot;
+const counts = snapshot.counts;
+const qualifiedRows = snapshot.coverage_qualified_ranking;
+const backlogRows = snapshot.fetch_priority_backlog.slice(0, 12);
+const generatedDate = snapshot.generated_at.slice(0, 10);
+const coverageRate = counts.seed_repositories
+  ? Math.round((counts.repos_complete_or_near_complete / counts.seed_repositories) * 1000) / 10
+  : 0;
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Dataset',
+  name: 'GitHub Star Growth Pilot Ledger for Self-Evolving AI Agents',
+  description: 'English guide to the coverage-aware GitHub stargazer-history pilot ledger.',
+  url: `${site.url}/en/star-growth/`,
+  inLanguage: 'en',
+  dateModified: snapshot.generated_at,
+  isPartOf: { '@id': `${site.url}/#website` }
+};
+---
+
+<BaseLayout
+  pageLang="en"
+  alternateZh="/star-growth/"
+  alternateEn="/en/star-growth/"
+  title="GitHub Star Growth Pilot — coverage before momentum"
+  description="English guide to the Self Evolve GitHub star-growth pilot: a coverage-aware stargazer-history ledger, not a final 2026 growth ranking."
+  pageKeywords={['GitHub star growth pilot', '2026 new stars', 'AI agent momentum evidence', 'coverage-aware ranking']}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} is:inline />
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <div class="eyebrow">Star growth / English mirror</div>
+        <h1>Measure coverage first. Discuss momentum second.</h1>
+        <p class="lead">This page is a fetch pilot. Only repositories with complete or near-complete stargazer history can support a 2026 new-star claim. Missing history means missing data, not missing demand.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="/star-growth/">Open full Chinese ledger</a>
+          <a class="button" href="/en/evolve-agi-index/">Back to worksheet</a>
+          <a class="text-link" href="/star-analysis/">Historical star analysis</a>
+        </div>
+      </div>
+      <aside class="hero-evidence">
+        <div class="eyebrow">Snapshot</div>
+        <ol>
+          <li><span>Generated</span><strong>{generatedDate}</strong></li>
+          <li><span>Seed repos</span><strong>{counts.seed_repositories}</strong></li>
+          <li><span>Qualified</span><strong>{counts.coverage_qualified_rows}</strong></li>
+          <li><span>Coverage</span><strong>{coverageRate}%</strong></li>
+        </ol>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section" style="background: var(--surface-1);">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Public-use rule</div>
+          <h2>This is not a leaderboard.</h2>
+        </div>
+      </div>
+      <div class="card">
+        <p>Total stars are historical adoption priors. The pilot uses starred_at event coverage to decide whether a current-year growth claim is even eligible. Until coverage is complete, the safest public statement is about the fetch backlog, not project momentum.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Coverage-qualified example</div>
+          <h2>One usable example does not make a ranking.</h2>
+        </div>
+      </div>
+      <div class="score-table-wrap">
+        <table class="score-table">
+          <thead><tr><th>Example</th><th>Repo</th><th>2026 new</th><th>Recent 90d</th><th>Total</th><th>Fetch-quality heuristic</th><th>Coverage</th></tr></thead>
+          <tbody>
+            {qualifiedRows.map((row) => (
+              <tr>
+                <td>{row.rank}</td>
+                <td><a href={row.url} target="_blank" rel="noopener">{row.repo}</a><br /><small>{row.category}</small></td>
+                <td>{row.new_stars_year}</td>
+                <td>{row.new_stars_recent_90d}</td>
+                <td>{row.current_total_stars}</td>
+                <td>{Math.round(row.growth_quality_score)}</td>
+                <td>{row.coverage_status}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background: var(--surface-1);">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Fetch backlog</div>
+          <h2>These are data-budget priorities, not growth winners.</h2>
+        </div>
+      </div>
+      <div class="grid">
+        {backlogRows.map((row) => (
+          <article class="card">
+            <div class="eyebrow">Fetch {row.fetch_priority_rank}</div>
+            <h3><a href={row.url} target="_blank" rel="noopener">{row.repo}</a></h3>
+            <p>{row.category}</p>
+            <div class="pill-row">
+              <span class="pill">{row.current_total_stars.toLocaleString()} total-star prior</span>
+              <span class="pill">{row.coverage_status}</span>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -6,7 +6,7 @@
 
 GitHub Topics: `agent-evolution`, `self-evolving-agents`, `self-evolution`, `self-improvement`, `ai-agent`, `llm-agent`, `agent-swarm`, `memory-system`, `skill-library`, `harness-engineering`, `benchmark`.
 
-GitHub topic 收录状态（2026-06-05）：GitHub API 和 `gh search repos 'topic:agent-evolution'` 已经能看到 `Shiyao-Huang/awesome-agent-evolution`；如果网页话题页仍显示旧仓库或短暂缺席，优先按 GitHub search/API 证据判断，这是 GitHub topic 页面缓存或同步延迟，不代表本仓库没有设置 `agent-evolution` topic。
+GitHub topic 收录证据（2026-06-05）：`gh search repos --topic agent-evolution --sort stars` 已返回本仓库；如果网页 topic 页短暂滞后，按 GitHub search/API 作为更新鲜证据。
 
 ![Self Evolve 公开研究管线](site/public/visuals/self-evolve-readme-banner.png)
 
@@ -46,7 +46,7 @@ GitHub topic 收录状态（2026-06-05）：GitHub API 和 `gh search repos 'top
 | 想比较项目 | [代码自我改进 Benchmark Matrix](https://agent-evolution.com/topics/code-evolution-benchmark/) 和 [项目报告](projects/INDEX.md) | 不被 star 或 demo 带偏，先看 evaluator、archive、lineage 和限制。 |
 | 想查趋势 | [2026 Star 抓取试点](https://agent-evolution.com/star-growth/) 和 [Value LSH 证据分诊](https://agent-evolution.com/value-lsh/) | 区分历史热度、当前动量、启发式分诊和证据修复队列。 |
 
-英文读者现在可以从 `/en/`、英文定义页、英文五类回路和英文代码 benchmark matrix 进入；项目报告、增长试点、Value LSH 和长尾页面仍是中文优先页面，保留证据链接，但暂不宣称完整英文镜像。
+英文读者现在可以从 `/en/` 进入定义、五类回路、代码 benchmark、项目证据、报告状态、Value LSH、资料库覆盖、Survey 快照、研究图谱、证据图、增长试点、Evolve-AGI worksheet、论文和博客导读。长尾文章正文和许多 report 页仍是中文优先或 source-tracing 页面，因此不宣称完整翻译 parity。
 
 ## 证据管线
 
@@ -64,14 +64,14 @@ flowchart LR
 
 本轮不是简单“刷新元数据”，而是把 production swarm、coding-agent harness、memory benchmark、OpenAI Agents SDK orchestrator、continual skill-memory paper code 和轻量 memory/MCP/skill runtime 一起拉回同一条证据链。下面每个仓库都只回答一个问题：它补上了哪类判断证据。
 
-| 仓库 | 补上的证据缺口 | 对读者的意义 |
-|---|---|---|
-| [desplega-ai/agent-swarm](https://github.com/desplega-ai/agent-swarm) | production lead-worker swarm runtime | 它把 agent-swarm 从“多角色编排”推进到带 Docker worker、persistent identity、compounding memory 和 HITL gate 的生产执行面。 |
-| [ComposioHQ/agent-orchestrator](https://github.com/ComposioHQ/agent-orchestrator) | coding-agent swarm harness with worktree isolation | 它把 coding-agent orchestration 从单线程执行推进到可并行 worktree、技能复用、memory 和记审流程共存的工程控制面。 |
-| [VRSEN/agency-swarm](https://github.com/VRSEN/agency-swarm) | OpenAI Agents SDK orchestration baseline | 它回答的是 production multi-agent 编排在 2026 年已经如何从 Assistants API 迁移到 Agents SDK，并保留通信流、工具和状态持久化。 |
-| [XSkill-Agent/XSkill](https://github.com/XSkill-Agent/XSkill) | continual skill-memory benchmarked paper code | 它补的是“skills 和 experiences 如何被积累、存储、检索并在 benchmark 上复用”这一层，而不是只给一个概念性 continual-learning 口号。 |
-| [AQ-MedAI/MedMemoryBench](https://github.com/AQ-MedAI/MedMemoryBench) | safety-sensitive longitudinal memory benchmark | 它把 memory 评估从通用 recall 推进到 personalized healthcare 的长时程、高风险场景，帮助读者区分“记住了”与“记对了并用对了”。 |
-| [wanxingai/LightAgent](https://github.com/wanxingai/LightAgent) | lightweight memory/MCP/skill runtime refresh | 它把轻量 agent runtime 这条线补到 2026-06-02 的 LightFlow、native skills、persistent memory 和 trace observability 证据。 |
+| 仓库 | 补上的证据缺口 | 对读者的意义 | 证据状态 |
+|---|---|---|---|
+| [desplega-ai/agent-swarm](https://github.com/desplega-ai/agent-swarm) | production lead-worker swarm runtime | 它把 agent-swarm 从“多角色编排”推进到带 Docker worker、persistent identity、compounding memory 和 HITL gate 的生产执行面。 | [KNOWN] GitHub source-scoped；未做独立生产审计。 |
+| [ComposioHQ/agent-orchestrator](https://github.com/ComposioHQ/agent-orchestrator) | coding-agent swarm harness with worktree isolation | 它把 coding-agent orchestration 从单线程执行推进到可并行 worktree、技能复用、memory 和记审流程共存的工程控制面。 | [KNOWN] GitHub source-scoped；工程控制面说法需继续用 runs/tests/logs 复核。 |
+| [VRSEN/agency-swarm](https://github.com/VRSEN/agency-swarm) | OpenAI Agents SDK orchestration baseline | 它回答的是 production multi-agent 编排在 2026 年已经如何从 Assistants API 迁移到 Agents SDK，并保留通信流、工具和状态持久化。 | [KNOWN] public repo/source-scoped；SDK 迁移结论需随 upstream 更新复核。 |
+| [XSkill-Agent/XSkill](https://github.com/XSkill-Agent/XSkill) | continual skill-memory benchmarked paper code | 它补的是“skills 和 experiences 如何被积累、存储、检索并在 benchmark 上复用”这一层，而不是只给一个概念性 continual-learning 口号。 | [KNOWN] paper-code source-scoped；benchmark claim 不等于本站复现。 |
+| [AQ-MedAI/MedMemoryBench](https://github.com/AQ-MedAI/MedMemoryBench) | safety-sensitive longitudinal memory benchmark | 它把 memory 评估从通用 recall 推进到 personalized healthcare 的长时程、高风险场景，帮助读者区分“记住了”与“记对了并用对了”。 | [KNOWN] benchmark repo source-scoped；医疗场景结论需安全/评估复核。 |
+| [wanxingai/LightAgent](https://github.com/wanxingai/LightAgent) | lightweight memory/MCP/skill runtime refresh | 它把轻量 agent runtime 这条线补到 2026-06-02 的 LightFlow、native skills、persistent memory 和 trace observability 证据。 | [KNOWN] repo snapshot source-scoped；运行时能力需继续以 tests/logs 复核。 |
 
 ## 核心洞察
 

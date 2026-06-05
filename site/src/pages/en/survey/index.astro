@@ -1,0 +1,81 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { surveyStats, methodFamilies, evolutionLoops } from '@/data/survey';
+import { publicCorpusStats } from '@/data/publicCorpusStats';
+---
+
+<BaseLayout
+  pageLang="en"
+  alternateZh="/survey/"
+  alternateEn="/en/survey/"
+  title="Self-Evolving AI Agents Survey Snapshot — working taxonomy and claim limits"
+  description="English guide to the Self Evolve dated survey snapshot: five working loops, method families, case-study limits, and source-scoped claims."
+  pageKeywords={['self-evolving AI agents survey', 'AI self evolution taxonomy', 'agent evolution mechanisms']}
+>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <div class="eyebrow">Survey snapshot / English mirror</div>
+        <h1>Treat self-evolution as a system process that still needs verification.</h1>
+        <p class="lead">This is a dated survey snapshot, not a completed systematic review. It organizes {surveyStats.papers} display papers, {publicCorpusStats.classifiedGithubRepos} classified GitHub repos, and {surveyStats.painPoints} public discussion signals into working loops while keeping claim limits visible.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="/survey/">Open full Chinese survey</a>
+          <a class="button" href="/paper/">Paper page</a>
+          <a class="button" href="/en/evolve-agi-index/">Worksheet boundary</a>
+        </div>
+      </div>
+      <aside class="hero-evidence">
+        <div class="eyebrow">Claim status</div>
+        <ol>
+          <li><span>Known</span><strong>Counts come from generated site data and repository indexes.</strong></li>
+          <li><span>Inferred</span><strong>The five-loop taxonomy is this survey's current synthesis.</strong></li>
+          <li><span>Pending</span><strong>Per-claim source matrices are still being filled.</strong></li>
+          <li><span>Limit</span><strong>Case-study metrics are source-reported, not independently reproduced here.</strong></li>
+        </ol>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section" style="background: var(--surface-1);">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Working loops</div>
+          <h2>Five review lenses, not a final field standard.</h2>
+        </div>
+      </div>
+      <div class="grid">
+        {evolutionLoops.map((loop) => (
+          <article class="card">
+            <div class="eyebrow">{loop.name}</div>
+            <h3>{loop.nameZh}</h3>
+            <p>{loop.description}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Method families</div>
+          <h2>The distribution is a display lens, not a claim of field completeness.</h2>
+        </div>
+      </div>
+      <div class="grid">
+        {methodFamilies.map((family) => (
+          <article class="card">
+            <h3>{family.name}</h3>
+            <p>{family.nameZh}</p>
+            <div class="pill-row">
+              <span class="pill">{family.papers} display papers</span>
+              <span class="pill">{family.share}</span>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

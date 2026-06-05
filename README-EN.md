@@ -6,7 +6,7 @@
 
 GitHub Topics: `agent-evolution`, `self-evolving-agents`, `self-evolution`, `self-improvement`, `ai-agent`, `llm-agent`, `agent-swarm`, `memory-system`, `skill-library`, `harness-engineering`, `benchmark`.
 
-GitHub topic indexing status (2026-06-05): GitHub API and `gh search repos 'topic:agent-evolution'` already return `Shiyao-Huang/awesome-agent-evolution`. If the rendered topic page still shows an older repository identity or briefly misses this repository, treat GitHub search/API as the fresher evidence; that is a GitHub topic-page cache or synchronization lag, not missing `agent-evolution` metadata on this repository.
+GitHub topic evidence (2026-06-05): `gh search repos --topic agent-evolution --sort stars` returns this repository; if the rendered topic page briefly lags, treat GitHub search/API as the fresher evidence.
 
 ![Self Evolve public research pipeline](site/public/visuals/self-evolve-readme-banner.png)
 
@@ -46,7 +46,7 @@ To judge whether an AI agent is actually self-evolving, ask five questions first
 | Builder | [Code self-improvement Benchmark Matrix](https://agent-evolution.com/en/topics/code-evolution-benchmark/) and [review-gated project reports](projects/INDEX.md) | A way to compare evaluator strength, archive evidence, lineage, and limitations instead of demos. |
 | Trend or product reader | [2026 star-growth fetch pilot](https://agent-evolution.com/star-growth/) and [Value LSH evidence triage](https://agent-evolution.com/value-lsh/) | A separation between historical popularity, current momentum, heuristic triage, and evidence repair. |
 
-English readers can currently follow the core path through `/en/`, the English definition page, the English five-loop page, and the English code benchmark matrix. Project reports, growth pilots, Value LSH, and long-tail pages remain Chinese-first, with evidence links preserved, so this repository does not yet claim full English parity.
+English readers can now follow the core path through `/en/`: definition, five loops, code benchmark matrix, projects, report status, Value LSH, resource coverage, survey snapshot, research map, evidence graph, star-growth pilot, Evolve-AGI worksheet, paper status, and blog guide. Long-tail article bodies and many report pages remain Chinese-first or source-tracing pages, so this repository still does not claim complete translation parity.
 
 ## Evidence Pipeline
 
@@ -64,14 +64,14 @@ flowchart LR
 
 This update is not just a metadata refresh. It pulls a production swarm, a coding-agent harness, a safety-sensitive memory benchmark, an OpenAI Agents SDK orchestrator, continual skill-memory paper code, and a lightweight memory/MCP/skill runtime back onto one evidence chain.
 
-| Repository | Evidence gap filled | Why it matters |
-|---|---|---|
-| [desplega-ai/agent-swarm](https://github.com/desplega-ai/agent-swarm) | Production lead-worker swarm runtime | It turns agent-swarm from a "many roles" idea into a Docker-worker execution plane with persistent identity, compounding memory, and HITL workflow gates. |
-| [ComposioHQ/agent-orchestrator](https://github.com/ComposioHQ/agent-orchestrator) | Coding-agent swarm harness with worktree isolation | It shows how coding-agent orchestration becomes an engineering control plane with parallel worktrees, reusable skills, memory, and review gates instead of a single-thread agent demo. |
-| [VRSEN/agency-swarm](https://github.com/VRSEN/agency-swarm) | OpenAI Agents SDK orchestration baseline | It shows how a 2026 production multi-agent orchestrator has already moved from Assistants-era framing to Agents SDK-era communication, tools, and persistence. |
-| [XSkill-Agent/XSkill](https://github.com/XSkill-Agent/XSkill) | Continual skill-memory benchmarked paper code | It fills the layer where skills and experiences are accumulated, stored, retrieved, and reused on benchmarks instead of being described only as a continual-learning idea. |
-| [AQ-MedAI/MedMemoryBench](https://github.com/AQ-MedAI/MedMemoryBench) | Safety-sensitive longitudinal memory benchmark | It moves memory evaluation from generic recall toward personalized healthcare settings where remembering the right longitudinal context matters more than simply remembering more. |
-| [wanxingai/LightAgent](https://github.com/wanxingai/LightAgent) | Lightweight memory/MCP/skill runtime refresh | It refreshes the lightweight runtime line with current public evidence for LightFlow, native skills, persistent memory, and trace observability. |
+| Repository | Evidence gap filled | Why it matters | Evidence state |
+|---|---|---|---|
+| [desplega-ai/agent-swarm](https://github.com/desplega-ai/agent-swarm) | Production lead-worker swarm runtime | It turns agent-swarm from a "many roles" idea into a Docker-worker execution plane with persistent identity, compounding memory, and HITL workflow gates. | [KNOWN] GitHub source-scoped; no independent production audit here. |
+| [ComposioHQ/agent-orchestrator](https://github.com/ComposioHQ/agent-orchestrator) | Coding-agent swarm harness with worktree isolation | It shows how coding-agent orchestration becomes an engineering control plane with parallel worktrees, reusable skills, memory, and review gates instead of a single-thread agent demo. | [KNOWN] GitHub source-scoped; engineering-control wording needs runs/tests/log reviews. |
+| [VRSEN/agency-swarm](https://github.com/VRSEN/agency-swarm) | OpenAI Agents SDK orchestration baseline | It shows how a 2026 production multi-agent orchestrator has already moved from Assistants-era framing to Agents SDK-era communication, tools, and persistence. | [KNOWN] public-repo/source-scoped; SDK migration wording needs upstream rechecks. |
+| [XSkill-Agent/XSkill](https://github.com/XSkill-Agent/XSkill) | Continual skill-memory benchmarked paper code | It fills the layer where skills and experiences are accumulated, stored, retrieved, and reused on benchmarks instead of being described only as a continual-learning idea. | [KNOWN] paper-code/source-scoped; benchmark claims are not reproduced by this site. |
+| [AQ-MedAI/MedMemoryBench](https://github.com/AQ-MedAI/MedMemoryBench) | Safety-sensitive longitudinal memory benchmark | It moves memory evaluation from generic recall toward personalized healthcare settings where remembering the right longitudinal context matters more than simply remembering more. | [KNOWN] benchmark-repo/source-scoped; medical setting claims need safety/evaluation review. |
+| [wanxingai/LightAgent](https://github.com/wanxingai/LightAgent) | Lightweight memory/MCP/skill runtime refresh | It refreshes the lightweight runtime line with current public evidence for LightFlow, native skills, persistent memory, and trace observability. | [KNOWN] repo snapshot/source-scoped; runtime claims still need tests/logs review. |
 
 ## Core Insight
 
