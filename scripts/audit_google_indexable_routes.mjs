@@ -129,6 +129,7 @@ const kindCounts = routes.reduce((counts, route) => {
 const report = {
   generated_at: new Date().toISOString(),
   canonical_host: canonicalHost,
+  audit_boundary: 'Generated-site audit only. PASS means sitemap-listed HTML routes have indexable metadata in the local build; it does not prove Google has crawled, indexed, or can reach the custom domain over trusted HTTPS.',
   global_status: failedRoutes.length ? 'fail' : 'pass',
   counts: {
     sitemap_urls: sitemapUrls.length,
@@ -164,6 +165,8 @@ const md = [
   '## Scope',
   '',
   'This audit checks every HTML route exposed through the generated sitemap. A route is treated as a Google-indexable asset only when it has generated HTML, no `noindex` robots meta, a matching canonical URL, a useful title and description, Open Graph title/description metadata, a main landmark, and an HTML language tag.',
+  '',
+  '**Boundary:** this is a generated-site audit, not a live Google crawl report. `PASS` means the local build exposes sitemap-listed HTML routes with indexable metadata; it does not prove Google has crawled or indexed the pages, and it does not clear external custom-domain HTTPS certificate blockers.',
   '',
   '## Metrics',
   '',

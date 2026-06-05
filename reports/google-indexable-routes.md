@@ -1,6 +1,6 @@
 # Google Indexable Routes Audit
 
-Generated: 2026-06-05T14:57:38.319Z
+Generated: 2026-06-05T15:14:19.894Z
 
 Canonical host: https://agent-evolution.com
 
@@ -9,6 +9,8 @@ Global status: **PASS**
 ## Scope
 
 This audit checks every HTML route exposed through the generated sitemap. A route is treated as a Google-indexable asset only when it has generated HTML, no `noindex` robots meta, a matching canonical URL, a useful title and description, Open Graph title/description metadata, a main landmark, and an HTML language tag.
+
+**Boundary:** this is a generated-site audit, not a live Google crawl report. `PASS` means the local build exposes sitemap-listed HTML routes with indexable metadata; it does not prove Google has crawled or indexed the pages, and it does not clear external custom-domain HTTPS certificate blockers.
 
 ## Metrics
 

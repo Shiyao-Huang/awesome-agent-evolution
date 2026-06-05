@@ -1,6 +1,6 @@
 # Public I18N Route Audit
 
-Generated: 2026-06-05T15:08:53.645Z
+Generated: 2026-06-05T15:15:12.848Z
 
 Status: **INCOMPLETE**
 

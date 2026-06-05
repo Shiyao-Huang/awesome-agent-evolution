@@ -47,8 +47,8 @@ import { publicCorpusStats } from '@/data/publicCorpusStats';
       <div class="grid">
         {evolutionLoops.map((loop) => (
           <article class="card">
-            <div class="eyebrow">{loop.name}</div>
-            <h3>{loop.nameZh}</h3>
+            <div class="eyebrow">{loop.id}</div>
+            <h3>{loop.name}</h3>
             <p>{loop.description}</p>
           </article>
         ))}
@@ -68,7 +68,7 @@ import { publicCorpusStats } from '@/data/publicCorpusStats';
         {methodFamilies.map((family) => (
           <article class="card">
             <h3>{family.name}</h3>
-            <p>{family.nameZh}</p>
+            <p>{family.oneLineInsight}</p>
             <div class="pill-row">
               <span class="pill">{family.papers} display papers</span>
               <span class="pill">{family.share}</span>

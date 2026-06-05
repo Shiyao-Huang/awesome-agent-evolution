@@ -119,7 +119,7 @@ EAI = Σ(signal_score × signal_weight)
 
 The weights are editorial/proposed weights for this survey: they make different evidence types discussable in one table, but they are not yet a peer-reviewed field standard, and they still need sensitivity analysis and uncertainty estimates.
 
-**Data Snapshot:** the Evolve-AGI trend uses the `2026-06-01` trend-input snapshot: `93` strict evolution repos, `200` broad evolution repos, and `239` trend public-report records. Repository governance and site coverage use the latest generated [docs/indexes/master-index.md](docs/indexes/master-index.md) scope: `682` classified GitHub repositories, `290` analyzed project/model-card reports, `99` strict evolution repos, `205` broad evolution repos, and `488` public project report files. Do not mix those denominators: the former supports trend reconstruction; the latter supports repository coverage auditing. Public project reports are review-gated/noindex evidence pages, not per-page quality-certified conclusions.
+**Data Snapshot:** the Evolve-AGI trend uses the `2026-06-01` trend-input snapshot: `93` strict evolution repos, `200` broad evolution repos, and `239` trend public-report records. Repository governance and site coverage use the latest generated [docs/indexes/master-index.md](docs/indexes/master-index.md) scope: `684` classified GitHub repositories, `292` analyzed project/model-card reports, `99` strict evolution repos, `205` broad evolution repos, and `490` public project report files. Do not mix those denominators: the former supports trend reconstruction; the latter supports repository coverage auditing. Public project reports are indexable evidence pages, not per-page quality-certified conclusions.
 
 ## Survey Evidence Map
 

@@ -1,6 +1,7 @@
 {
-  "generated_at": "2026-06-05T14:57:38.319Z",
+  "generated_at": "2026-06-05T15:14:19.894Z",
   "canonical_host": "https://agent-evolution.com",
+  "audit_boundary": "Generated-site audit only. PASS means sitemap-listed HTML routes have indexable metadata in the local build; it does not prove Google has crawled, indexed, or can reach the custom domain over trusted HTTPS.",
   "global_status": "pass",
   "counts": {
     "sitemap_urls": 979,
