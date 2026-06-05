@@ -663,3 +663,13 @@
 - Verified the rendered topic-page HTML includes the repository at zero-based rank `1`; future visual misses should rerun the audit before changing metadata.
 - Kept Google/custom-domain HTTPS as a separate publication blocker in `reports/live-publication-readiness.md`.
 **产出:** `scripts/audit_github_topic_indexing.mjs`, `reports/github-topic-indexing-readiness.md`, `work/wiki/synthesis/github-topic-indexing-readiness.md`
+
+## [2026-06-05 16:49] synthesis+publication | Text Asset Indexability Coverage
+
+**操作:** Added a repository-wide text asset indexability audit for the active SEO asset goal.
+**详情:**
+- Distinguished route-level SEO PASS from repository-wide text coverage: sitemap routes can pass while processed Markdown/TeX assets remain unpublished.
+- Classified text files into public Google-indexable sources, GitHub README/root assets, processed-but-unrouted files, raw-do-not-publish sources, external mirrors, internal work, ops/docs, and generated data indexes.
+- Preserved raw/mirror boundaries: raw sources and external repo mirrors are not automatically public article candidates.
+- Added `/reports/text-asset-indexability/` as the public QA surface and linked it from README and reports indexes.
+**产出:** `scripts/audit_text_asset_indexability.mjs`, `reports/text-asset-indexability.md`, `work/wiki/synthesis/text-asset-indexability-coverage.md`

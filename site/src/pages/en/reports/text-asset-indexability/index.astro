@@ -1,0 +1,58 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { site } from '@/data/site';
+import { Content } from '../../../../../../reports/text-asset-indexability.md';
+
+const title = 'Text Asset Indexability Audit';
+const description = 'English mirror for the Self Evolve repository-wide text asset indexability audit: public HTML routes, GitHub README assets, processed-but-unrouted material, raw sources, mirrors, and publication candidates.';
+const canonical = new URL('/en/reports/text-asset-indexability/', site.url).toString();
+const sourceUrl = `${site.github}/blob/main/reports/text-asset-indexability.md`;
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'TechArticle',
+  headline: title,
+  description,
+  inLanguage: 'en',
+  author: { '@id': `${site.url}/#organization` },
+  publisher: { '@id': `${site.url}/#organization` },
+  mainEntityOfPage: canonical,
+  isBasedOn: sourceUrl,
+  about: ['Google-indexable content', 'text asset coverage', 'GitHub topic indexing', 'SEO governance']
+};
+---
+<BaseLayout
+  title={`${title} | Self Evolve Reports`}
+  description={description}
+  type="article"
+  pageLang="en"
+  alternateZh="/reports/text-asset-indexability/"
+  alternateEn="/en/reports/text-asset-indexability/"
+  pageKeywords={['text asset SEO audit', 'Google indexable Markdown', 'Self Evolve content coverage', 'GitHub topic indexing']}
+>
+  <article class="blog-article">
+    <div class="eyebrow">Publication QA / English mirror</div>
+    <h1>{title}</h1>
+    <p class="lead">{description}</p>
+    <div class="pill-row">
+      <a class="pill" href="/en/reports/">Reports guide</a>
+      <a class="pill" href="/reports/text-asset-indexability/">中文默认页</a>
+      <a class="pill" href="/reports/live-publication-readiness/">Live readiness</a>
+      <a class="pill" href={sourceUrl} target="_blank" rel="noopener">Markdown source</a>
+    </div>
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} is:inline />
+    <aside class="source-panel" aria-label="Text asset indexability boundary">
+      <div>
+        <div class="eyebrow">How to read</div>
+        <h2>Indexable routes are not the same as full repository text coverage.</h2>
+        <p>The sitemap audit proves that generated pages have local indexability metadata. This audit asks which Markdown, MDX, and TeX files have not yet become reviewed public HTML assets.</p>
+        <p><strong>GitHub topic boundary:</strong> GitHub topic visibility depends on repository topics, description, README rendering, GitHub Search, and GitHub refresh timing. Google SEO depends on live pages, sitemap, canonical URLs, robots policy, and HTTPS reachability.</p>
+      </div>
+      <div class="source-links">
+        <a href={sourceUrl} target="_blank" rel="noopener">Open generated report</a>
+        <a href="/reports/text-asset-indexability/">中文默认页</a>
+        <a href="/en/reports/">Back to English report guide</a>
+      </div>
+    </aside>
+    <Content />
+  </article>
+</BaseLayout>

@@ -1,6 +1,6 @@
 # Public I18N Route Audit
 
-Generated: 2026-06-05T16:31:13.761Z
+Generated: 2026-06-05T17:46:22.620Z
 
 Status: **INCOMPLETE**
 
@@ -12,12 +12,12 @@ Batch B bilingual route audit is not passed: only the core English path has pair
 
 | Metric | Count |
 |---|---:|
-| Sitemap URLs | 981 |
-| HTML routes checked | 981 |
-| English routes | 23 |
-| Chinese routes | 958 |
-| Chinese routes with English alternate | 16 |
-| English routes with Chinese alternate | 16 |
+| Sitemap URLs | 983 |
+| HTML routes checked | 983 |
+| English routes | 24 |
+| Chinese routes | 959 |
+| Chinese routes with English alternate | 17 |
+| English routes with Chinese alternate | 17 |
 | Chinese-first routes without English alternate | 942 |
 | Noindex routes in sitemap | 0 |
 | Missing HTML routes | 0 |
@@ -53,6 +53,7 @@ Batch B bilingual route audit is not passed: only the core English path has pair
 | /en/paper/ | /paper/ | Self-Evolving AI Survey Paper — English citation status |
 | /en/projects/ | /projects/ | Self Evolve Projects — GitHub evidence, not a quality ranking |
 | /en/reports/ | /reports/ | Self Evolve Reports — what is reviewed, what is still gated |
+| /en/reports/text-asset-indexability/ | /reports/text-asset-indexability/ | Text Asset Indexability Audit / Self Evolve Reports |
 | /en/research/ | /research/ | Self Evolve Research Map — papers, mechanisms, and coverage gaps |
 | /en/resource-library/ | /resource-library/ | Self Evolve Resource Library — corpus scope, evidence layers, and limits |
 | /en/star-growth/ | /star-growth/ | GitHub Star Growth Pilot — coverage before momentum |

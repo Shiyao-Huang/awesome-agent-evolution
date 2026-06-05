@@ -1,8 +1,8 @@
 {
-  "generated": "2026-06-05T16:30:12.217Z",
+  "generated": "2026-06-05T17:18:43.045Z",
   "stats": {
-    "pages": 78,
-    "keywords": 948
+    "pages": 79,
+    "keywords": 953
   },
   "catalog": [
     {
@@ -862,6 +862,18 @@
       ]
     },
     {
+      "path": "synthesis/text-asset-indexability-coverage.md",
+      "title": "Text Asset Indexability Coverage",
+      "rank": "A",
+      "type": "synthesis",
+      "tags": [
+        "seo",
+        "text-assets",
+        "google-indexability",
+        "publication-gate"
+      ]
+    },
+    {
       "path": "synthesis/tylerdotai-meta-harness-evolver-frontier-deep-dive.md",
       "title": "tylerdotai Meta-Harness Evolver Frontier Deep Dive",
       "rank": "A",
@@ -1033,6 +1045,7 @@
       "synthesis/modelscope-agentevolver-frontier-deep-dive.md",
       "synthesis/survey-spark-evolve-agi-core.md",
       "synthesis/talent-landscape.md",
+      "synthesis/text-asset-indexability-coverage.md",
       "synthesis/value-screening-dual-chain-knowledge-base.md"
     ],
     "multi-agent-coevolution": [
@@ -3612,7 +3625,8 @@
       "synthesis/code-evolution-benchmark-matrix.md",
       "synthesis/five-evolution-loops-topic.md",
       "synthesis/google-indexing-custom-domain-triage.md",
-      "synthesis/survey-seo-topic-map.md"
+      "synthesis/survey-seo-topic-map.md",
+      "synthesis/text-asset-indexability-coverage.md"
     ],
     "three sentences": [
       "synthesis/code-evolution-benchmark-matrix.md",
@@ -3821,13 +3835,16 @@
       "synthesis/github-topic-indexing-readiness.md"
     ],
     "one-sentence rule": [
-      "synthesis/github-topic-indexing-readiness.md"
+      "synthesis/github-topic-indexing-readiness.md",
+      "synthesis/text-asset-indexability-coverage.md"
     ],
     "working principle": [
-      "synthesis/github-topic-indexing-readiness.md"
+      "synthesis/github-topic-indexing-readiness.md",
+      "synthesis/text-asset-indexability-coverage.md"
     ],
     "google-indexing-custom-domain-triage": [
-      "synthesis/github-topic-indexing-readiness.md"
+      "synthesis/github-topic-indexing-readiness.md",
+      "synthesis/text-asset-indexability-coverage.md"
     ],
     "survey-seo-topic-map": [
       "synthesis/github-topic-indexing-readiness.md",
@@ -3836,7 +3853,8 @@
     ],
     "resource-library-coverage-audit": [
       "synthesis/github-topic-indexing-readiness.md",
-      "synthesis/google-indexing-custom-domain-triage.md"
+      "synthesis/google-indexing-custom-domain-triage.md",
+      "synthesis/text-asset-indexability-coverage.md"
     ],
     "google indexing custom domain triage": [
       "synthesis/google-indexing-custom-domain-triage.md"
@@ -4132,6 +4150,21 @@
     ],
     "academic-industry bridge accelerates m1": [
       "synthesis/talent-landscape.md"
+    ],
+    "text asset indexability coverage": [
+      "synthesis/text-asset-indexability-coverage.md"
+    ],
+    "text-assets": [
+      "synthesis/text-asset-indexability-coverage.md"
+    ],
+    "google-indexability": [
+      "synthesis/text-asset-indexability-coverage.md"
+    ],
+    "publication-gate": [
+      "synthesis/text-asset-indexability-coverage.md"
+    ],
+    "github-topic-indexing-readiness": [
+      "synthesis/text-asset-indexability-coverage.md"
     ],
     "tylerdotai meta-harness evolver frontier deep dive": [
       "synthesis/tylerdotai-meta-harness-evolver-frontier-deep-dive.md"

@@ -63,6 +63,7 @@ const jsonLd = {
         <a class="button" href="/en/projects/">Project evidence guide</a>
         <a class="text-link" href="/reports/live-publication-readiness/">Live publication readiness</a>
         <a class="text-link" href="/reports/github-topic-indexing-readiness/">GitHub topic readiness</a>
+        <a class="text-link" href="/en/reports/text-asset-indexability/">Text asset coverage</a>
       </div>
       <aside class="source-panel" aria-label="Report citation boundary">
         <div>
@@ -75,6 +76,7 @@ const jsonLd = {
           <a href="/reports/">Full report list</a>
           <a href="/reports/live-publication-readiness/">Live crawl readiness</a>
           <a href="/reports/github-topic-indexing-readiness/">GitHub topic readiness</a>
+          <a href="/en/reports/text-asset-indexability/">Text asset coverage</a>
           <a href="/search/">Search evidence</a>
         </div>
       </aside>
@@ -102,6 +104,49 @@ const jsonLd = {
   </section>
 
   <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">QA Audits</div>
+          <h2>High-signal publication gates.</h2>
+        </div>
+      </div>
+      <div class="grid">
+        <article class="card" style="border-left: 4px solid #B83224;">
+          <div class="eyebrow">QA · Live publication</div>
+          <h3><a href="/reports/live-publication-readiness/">Live Publication Readiness Audit</a></h3>
+          <p>Separates local SEO metadata success from strict HTTPS crawl readiness on the custom domain.</p>
+          <div class="pill-row">
+            <span class="pill">external crawl gate</span>
+            <span class="pill" style="background: #B83224; color: white;">HTTPS BLOCKER</span>
+            <a class="pill" href="/reports/live-publication-readiness/">Open status</a>
+          </div>
+        </article>
+        <article class="card" style="border-left: 4px solid #2F6F4E;">
+          <div class="eyebrow">QA · GitHub topic</div>
+          <h3><a href="/reports/github-topic-indexing-readiness/">GitHub Topic Indexing Readiness</a></h3>
+          <p>Checks repository topics, description, homepage, GitHub Search, and topic-page rendering instead of treating Google SEO as GitHub topic evidence.</p>
+          <div class="pill-row">
+            <span class="pill">GitHub discovery</span>
+            <span class="pill" style="background: #2F6F4E; color: white;">TOPIC PASS</span>
+            <a class="pill" href="/reports/github-topic-indexing-readiness/">Open topic status</a>
+          </div>
+        </article>
+        <article class="card" style="border-left: 4px solid #B8860B;">
+          <div class="eyebrow">QA · Text assets</div>
+          <h3><a href="/en/reports/text-asset-indexability/">Text Asset Indexability Audit</a></h3>
+          <p>Answers whether repository text has become indexable public assets by separating public HTML, GitHub README assets, processed-but-unrouted work, raw sources, and external mirrors.</p>
+          <div class="pill-row">
+            <span class="pill">coverage gate</span>
+            <span class="pill" style="background: #B8860B; color: white;">INCOMPLETE</span>
+            <a class="pill" href="/en/reports/text-asset-indexability/">Open text coverage</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
     <div class="container split">
       <div>
         <div class="eyebrow">How to use</div>
@@ -114,6 +159,122 @@ const jsonLd = {
       </div>
     </div>
   </section>
+
+  {paperReports.length > 0 && (
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Paper reading maps</div>
+            <h2>Start with paper maps: they locate sources, not final survey verdicts.</h2>
+          </div>
+        </div>
+        <p class="lead">These pages connect cross-domain papers, mechanisms, and source trails. Before citing a claim, return to the original paper, the current paper page, and the limitation notes.</p>
+        <div class="grid">
+          {paperReports.map((report) => (
+            <article class="card">
+              <div class="eyebrow">{report.category} · literature map</div>
+              <h3><a href={report.href}>{report.title}</a></h3>
+              <p>{report.excerpt}</p>
+              <div class="pill-row">
+                <span class="pill">paper source trail</span>
+                <span class="pill">not peer-reviewed meta-analysis</span>
+                <a class="pill" href={report.href}>Read report</a>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  {projectReports.length > 0 && (
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Source-only project evidence</div>
+            <h2>Project evidence pages: trace sources now, cite conclusions later.</h2>
+          </div>
+        </div>
+        <p class="lead">These pages keep GitHub sources, classification hints, mechanism links, and limitations discoverable. They are indexable evidence entry points, but page-body claims stay review-gated until public-copy review passes.</p>
+        <div class="grid">
+          {projectReports.slice(0, 18).map((report) => (
+            <article class="card">
+              <div class="eyebrow">{report.category}</div>
+              <h3><a href={report.href}>{report.title}</a></h3>
+              <p>Use this page to locate source material and unresolved evidence gaps. Do not cite the body as a reviewed conclusion until the public-copy gate passes.</p>
+              <div class="pill-row">
+                <span class="pill">indexable</span>
+                <span class="pill">review pending</span>
+                <span class="pill">source trail</span>
+                <a class="pill" href={report.href}>Open evidence page</a>
+              </div>
+            </article>
+          ))}
+        </div>
+        {projectReports.length > 18 && <p style="margin-top: 18px; color: var(--muted);">Showing the first 18 of {projectReports.length} indexable project evidence pages.</p>}
+      </div>
+    </section>
+  )}
+
+  {legacyResearchProjectReports.length > 0 && (
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Legacy research reports</div>
+            <h2>HTML wrappers for older research/project Markdown.</h2>
+          </div>
+        </div>
+        <p class="lead">These files come from earlier research/project reports and now have canonical HTML wrappers in the sitemap. They solve discovery and traceability; readers should still verify against current project cards, original GitHub repositories, and limitation notes.</p>
+        <div class="grid">
+          {legacyResearchProjectReports.slice(0, 12).map((report) => (
+            <article class="card">
+              <div class="eyebrow">{report.category}</div>
+              <h3><a href={report.href}>{report.title}</a></h3>
+              <p>Review-gated legacy evidence wrapper. Use it for source tracing only; do not cite the legacy body as a current reviewed conclusion.</p>
+              <div class="pill-row">
+                <span class="pill">indexable wrapper</span>
+                <span class="pill">legacy source</span>
+                <a class="pill" href={report.href}>Open legacy wrapper</a>
+              </div>
+            </article>
+          ))}
+        </div>
+        {legacyResearchProjectReports.length > 12 && <p style="margin-top: 18px; color: var(--muted);">Showing the first 12 of {legacyResearchProjectReports.length} indexable legacy research reports.</p>}
+      </div>
+    </section>
+  )}
+
+  {surveyPublicationReports.length > 0 && (
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Survey publication</div>
+            <h2>Public-facing survey slices.</h2>
+          </div>
+        </div>
+        <p class="lead">These slices are English publication candidates and are open as indexable article assets. They still need Chinese same-evidence parity and academic review before they can represent a complete bilingual release.</p>
+        <div class="grid">
+          {surveyPublicationReports.map((report) => (
+            <article class="card">
+              <div class="eyebrow">{report.category}</div>
+              <h3><a href={report.href}>{report.title}</a></h3>
+              <p>Review-gated publication slice. Read only as a draft evidence compression until bilingual and academic review passes.</p>
+              <div class="pill-row">
+                <span class="pill">indexable</span>
+                <span class="pill">bilingual pending</span>
+                <span class="pill">academic review pending</span>
+                <a class="pill" href={report.href}>Read slice</a>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
 
   <section class="section" style="background: var(--surface-1);">
     <div class="container">

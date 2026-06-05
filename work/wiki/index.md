@@ -104,6 +104,7 @@ _Cross-cutting analyses, comparisons, evolving theses_
 - [JARVIS-Xs SE-Agent Frontier Deep Dive](synthesis/jarvis-xs-se-agent-frontier-deep-dive.md) — 第二个项目级双链深读样本：SE-Agent 的轨迹池、算子演化、SWE-agent 复用和复现/发布风险 | Rank: A | 2026-06-01
 - [Google Indexing Custom Domain Triage](synthesis/google-indexing-custom-domain-triage.md) — `agent-evolution.com` 是公开 canonical 域；sitemap 有 URL，当前阻断点是 GitHub Pages 自定义域名 HTTPS 证书 | Rank: B | 2026-06-01
 - [GitHub Topic Indexing Readiness](synthesis/github-topic-indexing-readiness.md) — 区分 GitHub repository topics/Search/API 与 rendered topic 页面；当前 `agent-evolution` topic 收录、Search 和页面渲染均通过 | Rank: A | 2026-06-05
+- [Text Asset Indexability Coverage](synthesis/text-asset-indexability-coverage.md) — 区分 route-level SEO PASS 与全仓库文字资产覆盖；当前 processed analyses/project cards/reports 仍有未公开 HTML 队列 | Rank: A | 2026-06-05
 
 ---
 
@@ -114,5 +115,5 @@ _Cross-cutting analyses, comparisons, evolving theses_
 | Entities | 8 |
 | Concepts | 10 |
 | Sources | 31 |
-| Synthesis pages | 29 |
+| Synthesis pages | 30 |
 | Last updated | 2026-06-05 |

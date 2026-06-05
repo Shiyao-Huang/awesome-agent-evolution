@@ -183,6 +183,7 @@ flowchart TB
 - [KNOWN] Evolve-AGI Index 方法、权重和 benchmark 输入来自 [analysis/evolve-agi-index.md](analysis/evolve-agi-index.md)、[site/src/data/evolveAgiIndex.ts](site/src/data/evolveAgiIndex.ts) 和 [reports/evolve-agi-index-trend.json](reports/evolve-agi-index-trend.json)。
 - [KNOWN] Survey 章节和论文主稿来自 [paper-drafts/main.tex](paper-drafts/main.tex) 与 [survey/latex/main.tex](survey/latex/main.tex)。
 - [KNOWN] GitHub topic 发现状态来自 [reports/github-topic-indexing-readiness.md](reports/github-topic-indexing-readiness.md)：远端 `agent-evolution` topic、仓库 description/homepage、GitHub Search 和 topic 页面渲染都已验证；网页展示延迟不能等同于 metadata 未生效。
+- [KNOWN] 全仓库文字资产是否真的变成 Google 可索引资产，以 [reports/text-asset-indexability.md](reports/text-asset-indexability.md) 为覆盖审计；它区分 public HTML、GitHub README、processed-but-unrouted、raw-do-not-publish 和 external mirrors。
 - [KNOWN] Google/SEO 发布状态要同时看本地 sitemap/meta 审计和 live crawl 前提；当前 live readiness 证据在 [reports/live-publication-readiness.md](reports/live-publication-readiness.md)，它明确区分“生成站点可索引”和“自定义域名严格 HTTPS 可抓取”。
 - [INFERRED] “核心洞察”是对上述证据的综合判断：把 Awesome 仓库升级为受控自进化领域的 Survey、指数和证据图谱，而不是一个单纯链接站。
 

@@ -73,11 +73,11 @@ import { legacyResearchProjectReports, paperReports, projectReports, surveyPubli
             <article class="card">
               <div class="eyebrow">{report.category}</div>
               <h3><a href={report.href}>{report.title}</a></h3>
-              <p>Use this page to locate source material and unresolved evidence gaps. Do not cite the body as a reviewed conclusion until the public-copy gate passes.</p>
+              <p>用这页定位原始来源和未解决证据缺口。公开文案审查通过前，不要把正文当作已审定结论引用。</p>
               <div class="pill-row">
-                <span class="pill">indexable</span>
-                <span class="pill">review pending</span>
-                <span class="pill">source trail</span>
+                <span class="pill">可索引入口</span>
+                <span class="pill">审查中</span>
+                <span class="pill">来源追踪</span>
                 <a class="pill" href={report.href}>查看待审证据页</a>
               </div>
             </article>
@@ -103,10 +103,10 @@ import { legacyResearchProjectReports, paperReports, projectReports, surveyPubli
             <article class="card">
               <div class="eyebrow">{report.category}</div>
               <h3><a href={report.href}>{report.title}</a></h3>
-              <p>Review-gated legacy evidence wrapper. Use it for source tracing only; do not cite the legacy body as a current reviewed conclusion.</p>
+              <p>旧报告的待审 HTML 包装页。它只适合追溯来源；不要把旧正文当作当前已审定结论引用。</p>
               <div class="pill-row">
-                <span class="pill">indexable wrapper</span>
-                <span class="pill">legacy source</span>
+                <span class="pill">可索引包装页</span>
+                <span class="pill">旧来源</span>
                 <a class="pill" href={report.href}>查看待审旧报告</a>
               </div>
             </article>
@@ -132,11 +132,11 @@ import { legacyResearchProjectReports, paperReports, projectReports, surveyPubli
             <article class="card">
               <div class="eyebrow">{report.category}</div>
               <h3><a href={report.href}>{report.title}</a></h3>
-              <p>Review-gated publication slice. Read only as a draft evidence compression until bilingual and academic review passes.</p>
+              <p>待审发布切片。双语同证据链和学术审查通过前，只能当作草稿级证据压缩来读。</p>
               <div class="pill-row">
-                <span class="pill">indexable</span>
-                <span class="pill">bilingual pending</span>
-                <span class="pill">academic review pending</span>
+                <span class="pill">可索引</span>
+                <span class="pill">双语待补齐</span>
+                <span class="pill">学术审查中</span>
                 <a class="pill" href={report.href}>阅读待审切片</a>
               </div>
             </article>
@@ -183,6 +183,16 @@ import { legacyResearchProjectReports, paperReports, projectReports, surveyPubli
             <span class="pill">GitHub discovery</span>
             <span class="pill" style="background: #2F6F4E; color: white;">TOPIC PASS</span>
             <a class="pill" href="/reports/github-topic-indexing-readiness/">查看 Topic 状态</a>
+          </div>
+        </article>
+        <article class="card" style="border-left: 4px solid #B8860B;">
+          <div class="eyebrow">QA · Text assets</div>
+          <h3><a href="/reports/text-asset-indexability/">Text Asset Indexability Audit</a></h3>
+          <p>回答“所有文字是否都已变成可索引资产”：区分 public HTML、GitHub README、processed-but-unrouted、raw-do-not-publish 和 external mirrors。</p>
+          <div class="pill-row">
+            <span class="pill">coverage gate</span>
+            <span class="pill" style="background: #B8860B; color: white;">INCOMPLETE</span>
+            <a class="pill" href="/reports/text-asset-indexability/">查看文字资产覆盖</a>
           </div>
         </article>
       </div>

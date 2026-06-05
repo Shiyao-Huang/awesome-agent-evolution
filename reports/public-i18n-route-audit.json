@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-06-05T16:31:13.761Z",
+  "generated_at": "2026-06-05T17:46:22.620Z",
   "canonical_host": "https://agent-evolution.com",
   "global_status": "incomplete",
   "verdict": "Batch B bilingual route audit is not passed: only the core English path has paired routes; most indexable pages are still Chinese-first without English same-evidence mirrors.",
   "counts": {
-    "sitemap_urls": 981,
-    "html_routes_checked": 981,
+    "sitemap_urls": 983,
+    "html_routes_checked": 983,
     "missing_html": 0,
-    "english_routes": 23,
-    "zh_routes": 958,
-    "zh_routes_with_en_alternate": 16,
-    "en_routes_with_zh_alternate": 16,
+    "english_routes": 24,
+    "zh_routes": 959,
+    "zh_routes_with_en_alternate": 17,
+    "en_routes_with_zh_alternate": 17,
     "zh_first_without_en_alternate": 942,
     "noindex_in_sitemap": 0
   },
@@ -19,9 +19,9 @@
     "site-page": 16,
     "blog": 26,
     "blog-tag": 79,
-    "english": 16,
+    "english": 17,
     "project-card": 293,
-    "report-index-or-audit": 527,
+    "report-index-or-audit": 528,
     "research": 16,
     "survey": 3,
     "topic": 4
@@ -183,6 +183,11 @@
       "pathname": "/en/reports/",
       "title": "Self Evolve Reports — what is reviewed, what is still gated",
       "zh_alternate": "/reports/"
+    },
+    {
+      "pathname": "/en/reports/text-asset-indexability/",
+      "title": "Text Asset Indexability Audit | Self Evolve Reports",
+      "zh_alternate": "/reports/text-asset-indexability/"
     },
     {
       "pathname": "/en/research/",

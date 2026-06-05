@@ -48,6 +48,18 @@
       ]
     },
     {
+      "id": "results.text-asset-indexability",
+      "title": "Text asset indexability coverage",
+      "layer": "results",
+      "status": "incomplete",
+      "paths": [
+        "reports/text-asset-indexability.md",
+        "scripts/audit_text_asset_indexability.mjs",
+        "site/src/pages/reports/text-asset-indexability.astro",
+        "work/wiki/synthesis/text-asset-indexability-coverage.md"
+      ]
+    },
+    {
       "id": "processed.github-classification",
       "title": "GitHub classification and project cards",
       "layer": "processed",
@@ -104,6 +116,11 @@
       "results.live-publication-readiness",
       "results.public-site",
       "blocks-google-crawl-readiness"
+    ],
+    [
+      "results.text-asset-indexability",
+      "results.public-site",
+      "measures-text-coverage"
     ],
     [
       "processed.github-classification",
@@ -168,9 +185,10 @@
     ],
     "blockers": [
       "Custom-domain strict HTTPS remains blocked because GitHub Pages has not issued a certificate covering agent-evolution.com",
+      "Repository-wide text asset coverage remains incomplete: route-level SEO passes, but many processed assets are not yet public HTML",
       "Long-tail i18n route parity remains incomplete",
       "GitNexus symbol impact returned UNKNOWN for public report page targets; final scope is checked with detect-changes"
     ],
-    "working_principle": "GitHub repository metadata -> topic/search/topic-page audit -> reports + wiki synthesis -> README/site report surfaces -> indexes + analysis + site build"
+    "working_principle": "repository text inventory -> route/sitemap mapping -> coverage audit -> reports + wiki synthesis -> README/site report surfaces -> indexes + analysis + site build"
   }
 }

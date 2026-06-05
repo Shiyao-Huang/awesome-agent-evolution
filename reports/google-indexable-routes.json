@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-06-05T16:31:13.737Z",
+  "generated_at": "2026-06-05T17:46:22.357Z",
   "canonical_host": "https://agent-evolution.com",
   "audit_boundary": "Generated-site audit only. PASS means sitemap-listed HTML routes have indexable metadata in the local build; it does not prove Google has crawled, indexed, or can reach the custom domain over trusted HTTPS.",
   "global_status": "pass",
   "counts": {
-    "sitemap_urls": 981,
-    "routes_checked": 981,
-    "passed": 981,
+    "sitemap_urls": 983,
+    "routes_checked": 983,
+    "passed": 983,
     "failed": 0
   },
   "route_kind_counts": {
@@ -14,9 +14,9 @@
     "site-page": 16,
     "blog": 26,
     "blog-tag": 79,
-    "english": 16,
+    "english": 17,
     "project-card": 293,
-    "report-index-or-audit": 3,
+    "report-index-or-audit": 4,
     "paper-cross-domain-report": 2,
     "project-report": 489,
     "legacy-research-project-report": 28,
@@ -1392,6 +1392,18 @@
       "description": "English guide to Self Evolve reports: project evidence pages, legacy research wrappers, survey publication slices, paper maps, review-gated policy, and citation boundaries.",
       "lang": "en",
       "canonical": "https://agent-evolution.com/en/reports/",
+      "status": "pass",
+      "failures": []
+    },
+    {
+      "url": "https://agent-evolution.com/en/reports/text-asset-indexability/",
+      "pathname": "/en/reports/text-asset-indexability/",
+      "kind": "english",
+      "htmlPath": "site/dist/en/reports/text-asset-indexability/index.html",
+      "title": "Text Asset Indexability Audit | Self Evolve Reports",
+      "description": "English mirror for the Self Evolve repository-wide text asset indexability audit: public HTML routes, GitHub README assets, processed-but-unrouted material, raw sources, mirrors, and publication candidates.",
+      "lang": "en",
+      "canonical": "https://agent-evolution.com/en/reports/text-asset-indexability/",
       "status": "pass",
       "failures": []
     },
@@ -11436,6 +11448,18 @@
       "description": "Slice 05 — An Evidence Atlas for Self-Evolving AI Projects is an indexable Self Evolve survey publication slice that turns papers, projects, benchmarks,...",
       "lang": "en",
       "canonical": "https://agent-evolution.com/reports/survey-publication/05-open-source-evidence-atlas/",
+      "status": "pass",
+      "failures": []
+    },
+    {
+      "url": "https://agent-evolution.com/reports/text-asset-indexability/",
+      "pathname": "/reports/text-asset-indexability/",
+      "kind": "report-index-or-audit",
+      "htmlPath": "site/dist/reports/text-asset-indexability/index.html",
+      "title": "文字资产可索引覆盖审计 | Self Evolve Reports",
+      "description": "Self Evolve 全仓库文字资产可索引覆盖审计：区分公开 HTML、GitHub README、已加工但未发布的分析、raw 素材、外部镜像和待发布队列。",
+      "lang": "zh-CN",
+      "canonical": "https://agent-evolution.com/reports/text-asset-indexability/",
       "status": "pass",
       "failures": []
     },

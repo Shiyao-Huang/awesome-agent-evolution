@@ -1,0 +1,58 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { site } from '@/data/site';
+import { Content } from '../../../../reports/text-asset-indexability.md';
+
+const title = '文字资产可索引覆盖审计';
+const description = 'Self Evolve 全仓库文字资产可索引覆盖审计：区分公开 HTML、GitHub README、已加工但未发布的分析、raw 素材、外部镜像和待发布队列。';
+const canonical = new URL('/reports/text-asset-indexability/', site.url).toString();
+const sourceUrl = `${site.github}/blob/main/reports/text-asset-indexability.md`;
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'TechArticle',
+  headline: title,
+  description,
+  inLanguage: 'zh-CN',
+  author: { '@id': `${site.url}/#organization` },
+  publisher: { '@id': `${site.url}/#organization` },
+  mainEntityOfPage: canonical,
+  isBasedOn: sourceUrl,
+  about: ['Google-indexable content', 'text asset coverage', 'Markdown publication pipeline', 'SEO governance']
+};
+---
+<BaseLayout
+  title={`${title} | Self Evolve Reports`}
+  description={description}
+  type="article"
+  pageLang="zh-CN"
+  alternateZh="/reports/text-asset-indexability/"
+  alternateEn="/en/reports/text-asset-indexability/"
+  pageKeywords={['文字资产 SEO 审计', 'Google 可索引 Markdown', 'Self Evolve 内容覆盖', 'SEO asset governance']}
+>
+  <article class="blog-article">
+    <div class="eyebrow">Publication QA / text asset coverage</div>
+    <h1>{title}</h1>
+    <p class="lead">{description}</p>
+    <div class="pill-row">
+      <a class="pill" href="/reports/">报告索引</a>
+      <a class="pill" href="/en/reports/text-asset-indexability/">English mirror</a>
+      <a class="pill" href="/reports/live-publication-readiness/">线上发布状态</a>
+      <a class="pill" href={sourceUrl} target="_blank" rel="noopener">Markdown 源文件</a>
+    </div>
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} is:inline />
+    <aside class="source-panel" aria-label="Text asset indexability boundary">
+      <div>
+        <div class="eyebrow">如何阅读</div>
+        <h2>可索引 route 不等于全仓库文字资产都已发布。</h2>
+        <p>站点 sitemap 审计证明“已生成页面”具备本地可索引 metadata；本审计回答更难的问题：哪些 Markdown、MDX、TeX 还没有成为公开、双语、审查过的 HTML 资产？</p>
+        <p><strong>GitHub topic 边界:</strong> topic 列表由 GitHub 远端 topics、description、README、搜索索引和 GitHub 刷新节奏决定；Google SEO 则依赖线上页面、sitemap、canonical、robots 和 HTTPS。</p>
+      </div>
+      <div class="source-links">
+        <a href={sourceUrl} target="_blank" rel="noopener">打开生成报告</a>
+        <a href="/en/reports/text-asset-indexability/">English mirror</a>
+        <a href="/reports/">返回报告状态</a>
+      </div>
+    </aside>
+    <Content />
+  </article>
+</BaseLayout>
