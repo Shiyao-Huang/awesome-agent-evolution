@@ -59,7 +59,7 @@
 ### `site/dist`
 
 - `site/dist/CNAME`
-- `site/dist/_astro/BaseLayout.Dnh_NTE-.css`
+- `site/dist/_astro/BaseLayout.DzpfsuEa.css`
 - `site/dist/_astro/ValueLshGraph3D.astro_astro_type_script_index_0_lang.B9u0h_ek.js`
 - `site/dist/_astro/client.BpEju3qh.js`
 - `site/dist/_astro/index.B-ztvEHt.css`
