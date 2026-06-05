@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-05T11:00:00+08:00",
+  "generated_at": "2026-06-05T15:43:00+08:00",
   "rows": [
     {
       "repo": "01-ai/langcrew",
@@ -2100,6 +2100,21 @@
       "content_timestamp": "2026-05-21",
       "evidence": "kept prior human/analysis category + README verified",
       "description": "ClawCode is claude code inspired implementation in python and Rust focused on agents and experience-based evolution, and is an Open-source coding-agent CLI for Anthropic, OpenAI, Gemini, DeepSeek, GLM, Kimit, Ollama, Cod"
+    },
+    {
+      "repo": "desplega-ai/agent-swarm",
+      "url": "https://github.com/desplega-ai/agent-swarm",
+      "stars": "505",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "framework-runtime",
+      "base_theme": "framework",
+      "stack": "TypeScript/Docker/MCP/Lead-Worker Swarm",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-04",
+      "evidence": "web-observed GitHub repo page showed 505 stars, 56 forks, 1 issue, 5 pull requests, 1,542 commits, MIT license, 89 releases with v1.91.0 latest on 2026-06-04, plus lead/worker Docker orchestration, MCP API, compounding memory, HITL workflow gates, and skills-based swarm operations.",
+      "description": "Agent Swarm is a production-oriented lead-worker runtime that routes work from Slack/GitHub/Email/API into Dockerized agent workers, persists memory and identity, and exposes MCP, workflows, pages, and recurring task patterns as reusable swarm infrastructure."
     },
     {
       "repo": "developzir/gepa-mcp",
@@ -9257,6 +9272,21 @@
       "description": "awesome-openclaw-skills is a large curated index of OpenClaw skills, prompts, and reusable agent workflow assets."
     },
     {
+      "repo": "VRSEN/agency-swarm",
+      "url": "https://github.com/VRSEN/agency-swarm",
+      "stars": "4400",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "framework-runtime",
+      "base_theme": "framework",
+      "stack": "Python/OpenAI Agents SDK/Agency CLI/State Persistence",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-24",
+      "evidence": "web-observed GitHub repo page showed 4.4k stars, 1.1k forks, 1 issue, 6 pull requests, 2,491 commits, MIT license, 62 releases with v1.9.9 latest on 2026-05-24, and explicit positioning as a structured orchestration layer built on the OpenAI Agents SDK with communication flows and state persistence callbacks.",
+      "description": "Agency Swarm is a mature Python orchestration framework that layers role-aware communication flows, type-safe tools, thread persistence, and terminal/web demos on top of the OpenAI Agents SDK."
+    },
+    {
       "repo": "vsonicv/es-fine-tuning-paper",
       "url": "https://github.com/vsonicv/es-fine-tuning-paper",
       "stars": "356",
@@ -9274,17 +9304,17 @@
     {
       "repo": "wanxingai/LightAgent",
       "url": "https://github.com/wanxingai/LightAgent",
-      "stars": "987",
+      "stars": "1100",
       "prior_category": "-",
       "prior_unclassified": "true",
       "final_category": "框架/framework",
       "function_tag": "framework-runtime",
       "base_theme": "framework",
-      "stack": "Python/MCP/mem0/Agent Skills",
-      "time_slice": "2026-05",
-      "content_timestamp": "2026-05-25",
-      "evidence": "web GitHub page observed 81 commits, Apache-2.0 license, 987 stars and 127 forks; README says LightAgent natively supports Skills, persistent memory, MCP over stdio/SSE, Tree-of-Thought, multi-agent collaboration, OpenAI-compatible streaming APIs, and self-learning agents, with v0.6.0 introducing native skill support on 2026-04-26",
-      "description": "LightAgent 是轻量级 Python Agent 框架，把 Skills、持久记忆、MCP、Tree-of-Thought 和 multi-agent collaboration 组合成可快速嵌入的 self-learning runtime。"
+      "stack": "Python/MCP/mem0/Agent Skills/LightFlow",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-02",
+      "evidence": "web-observed GitHub repo page showed 1.1k stars, 141 forks, 7 issues, 1 pull request, 104 commits, Apache-2.0 license, 20 releases with v0.7.5 latest on 2026-06-01, and README news dated 2026-06-02 for LightFlow workflow orchestration plus persistent memory, MCP, native skills, trace observability, and self-learning agent claims.",
+      "description": "LightAgent is a lightweight Python agent framework that combines persistent memory, MCP integration, native skills, LightSwarm collaboration, and newly surfaced LightFlow workflow orchestration into a small-footprint self-learning runtime."
     },
     {
       "repo": "wazionapps/nexo",
@@ -9540,6 +9570,21 @@
       "content_timestamp": "2026-05-21",
       "evidence": "kept prior human/analysis category + README verified",
       "description": "A Survey of Self-Evolving Agents | A curated list of resources (surveys, papers, benchmarks, and opensource projects) on Self-Evolving Agents."
+    },
+    {
+      "repo": "XSkill-Agent/XSkill",
+      "url": "https://github.com/XSkill-Agent/XSkill",
+      "stars": "216",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "论文代码/paper-code",
+      "function_tag": "benchmark-eval",
+      "base_theme": "skill",
+      "stack": "Python/Multimodal Agent/Memory Bank/Benchmark Eval",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-01",
+      "evidence": "web-observed GitHub repo page showed 216 stars, 27 forks, 1 issue, 0 pull requests, 16 commits, MIT license, no releases, ICML 2026 acceptance news dated 2026-05-01, and a runtime-generated memory_bank plus benchmark/eval folders covering VisualToolBench, TIR-Bench, MMSearch-Plus, AgentVista, and MMBrowseComp.",
+      "description": "XSkill is a multimodal continual-learning paper implementation that extracts task-level skills and action-level experiences from agent trajectories, stores them in a memory bank, and re-injects them during inference across benchmark suites."
     },
     {
       "repo": "xuchen-li/llm-arxiv-daily",

@@ -1,7 +1,7 @@
 {
   "generated_at": "2026-06-05T00:00:00+08:00",
-  "total": 678,
-  "updated_files": 678,
+  "total": 681,
+  "updated_files": 681,
   "unknown_content_timestamp": 100,
   "records": [
     {
@@ -1263,6 +1263,15 @@
       "collected_at": "2026-05-20T17:45:19Z",
       "time_slice": "2026-05",
       "timestamp_source": "github_latest_commit_or_update_text"
+    },
+    {
+      "repo": "desplega-ai/agent-swarm",
+      "url": "https://github.com/desplega-ai/agent-swarm",
+      "file": "raw-github/desplega-ai_agent-swarm.md",
+      "content_timestamp": "2026-06-04",
+      "collected_at": "2026-06-05T15:43:00+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "web_observed_public_github_page_2026_06_05_1543"
     },
     {
       "repo": "developzir/gepa-mcp",
@@ -5558,6 +5567,15 @@
       "timestamp_source": "web_observed_public_github_page_2026_05_28"
     },
     {
+      "repo": "VRSEN/agency-swarm",
+      "url": "https://github.com/VRSEN/agency-swarm",
+      "file": "raw-github/vrsen_agency-swarm.md",
+      "content_timestamp": "2026-05-24",
+      "collected_at": "2026-06-05T15:43:00+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_06_05_1543"
+    },
+    {
       "repo": "vsonicv/es-fine-tuning-paper",
       "url": "https://github.com/vsonicv/es-fine-tuning-paper",
       "file": "raw-github/vsonicv_es-fine-tuning-paper.md",
@@ -5570,10 +5588,10 @@
       "repo": "wanxingai/LightAgent",
       "url": "https://github.com/wanxingai/LightAgent",
       "file": "raw-github/wanxingai_lightagent.md",
-      "content_timestamp": "2026-05-25",
-      "collected_at": "2026-05-24T21:11:06Z",
-      "time_slice": "2026-05",
-      "timestamp_source": "web_observed_github_page"
+      "content_timestamp": "2026-06-02",
+      "collected_at": "2026-06-05T15:43:00+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "web_observed_public_github_page_2026_06_05_1543"
     },
     {
       "repo": "wazionapps/nexo",
@@ -5727,6 +5745,15 @@
       "collected_at": "2026-05-20T17:45:19Z",
       "time_slice": "2026-05",
       "timestamp_source": "github_latest_commit_or_update_text"
+    },
+    {
+      "repo": "XSkill-Agent/XSkill",
+      "url": "https://github.com/XSkill-Agent/XSkill",
+      "file": "raw-github/xskill-agent_xskill.md",
+      "content_timestamp": "2026-05-01",
+      "collected_at": "2026-06-05T15:43:00+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_06_05_1543"
     },
     {
       "repo": "xuchen-li/llm-arxiv-daily",

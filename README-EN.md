@@ -58,18 +58,16 @@ flowchart LR
   SURVEY --> SITE["site + graph + reports"]
 ```
 
-## Recent Evidence Updates (2026-06-04)
+## Recent Evidence Updates (2026-06-05)
 
-This update is not just a metadata refresh. It pulls swarm runtimes, skill optimizers, skills benchmarks, browser harnesses, memory middleware, and educational swarm baselines back onto one evidence chain.
+This update is not just a metadata refresh. It pulls production swarms, an OpenAI Agents SDK orchestrator, continual skill-memory paper code, and a lightweight memory/MCP/skill runtime back onto one evidence chain.
 
 | Repository | Evidence gap filled | Why it matters |
 |---|---|---|
-| [kyegomez/swarms](https://github.com/kyegomez/swarms) | Production swarm runtime | It moves agent-swarm from a "many roles" idea toward deployable runtime, protocol, and topology evidence. |
-| [microsoft/SkillOpt](https://github.com/microsoft/SkillOpt) | Self-evolving skill optimizer | It directly tests whether skills can iterate like training loops without changing base model weights. |
-| [benchflow-ai/skillsbench](https://github.com/benchflow-ai/skillsbench) | Skills benchmark | It tests whether agents can actually use skills, not merely install skill packs. |
-| [browser-use/browser-harness](https://github.com/browser-use/browser-harness) | Browser harness | Browser agents need editable, repeatable, self-healing task scaffolds rather than screen-recorded demos. |
-| [redis/agent-memory-server](https://github.com/redis/agent-memory-server) | Memory middleware | It adds the memory-substrate plus MCP-service layer, turning "memory" into a runtime interface. |
-| [openai/swarm](https://github.com/openai/swarm) | Educational swarm baseline | It remains the clearest lightweight handoff baseline while also marking the production path shift to the Agents SDK. |
+| [desplega-ai/agent-swarm](https://github.com/desplega-ai/agent-swarm) | Production lead-worker swarm runtime | It turns agent-swarm from a "many roles" idea into a Docker-worker execution plane with persistent identity, compounding memory, and HITL workflow gates. |
+| [VRSEN/agency-swarm](https://github.com/VRSEN/agency-swarm) | OpenAI Agents SDK orchestration baseline | It shows how a 2026 production multi-agent orchestrator has already moved from Assistants-era framing to Agents SDK-era communication, tools, and persistence. |
+| [XSkill-Agent/XSkill](https://github.com/XSkill-Agent/XSkill) | Continual skill-memory benchmarked paper code | It fills the layer where skills and experiences are accumulated, stored, retrieved, and reused on benchmarks instead of being described only as a continual-learning idea. |
+| [wanxingai/LightAgent](https://github.com/wanxingai/LightAgent) | Lightweight memory/MCP/skill runtime refresh | It refreshes the lightweight runtime line with current public evidence for LightFlow, native skills, persistent memory, and trace observability. |
 
 ## Core Insight
 

@@ -35,16 +35,14 @@ GitHub Topics: `agent-evolution`, `self-evolving-agents`, `self-evolution`, `sel
 | 产品/投资/行业读者 | 区分真实能力积累、刷榜、演示热度和治理成熟度。 |
 | 内容创作者 | 获得带证据入口的选题地图：项目、论文、趋势、痛点、图谱和长尾 SEO 页面。 |
 
-## 本轮 GitHub Metadata 修复包
+## 本轮 GitHub Metadata 修复包（2026-06-05）
 
 | 仓库 | 这轮补了什么 | 为什么重要 |
 |---|---|---|
-| [kyegomez/swarms](https://github.com/kyegomez/swarms) | 新增 raw capture、project card、site public report 与分类元数据，统一到 2026-06-05 的公开 GitHub 页面与 commit-history 证据。 | 它把 agent-swarm 从“多角色概念”推进到可部署的 runtime、protocol 和 topology 证据层。 |
-| [microsoft/SkillOpt](https://github.com/microsoft/SkillOpt) | 刷新 raw capture、project card、site public report 与分类元数据，统一到 2026-06-05 的公开 GitHub 页面与 commit-history 证据。 | 它直接回答 skill 能不能像训练循环一样迭代，而不改 base model 权重。 |
-| [benchflow-ai/skillsbench](https://github.com/benchflow-ai/skillsbench) | 刷新 raw capture、project card、site public report 与分类元数据，统一到 2026-06-05 的公开 GitHub 页面与 commit-history 证据。 | 它补的是“skills 到底有没有被 agent 用好”这一层，比 skill pack 本身更接近用户要求的 benchmark/eval 证据链。 |
-| [browser-use/browser-harness](https://github.com/browser-use/browser-harness) | 刷新 raw capture、project card、site public report 与分类元数据，统一到 2026-06-05 的公开 GitHub 页面与 commit-history 证据。 | 它把 browser-use 从单纯 demo 提升到可编辑、可自修复的 harness 形态，正好补上 browser/skill/harness 的交叉层。 |
-| [redis/agent-memory-server](https://github.com/redis/agent-memory-server) | 刷新 raw capture、project card、site public report 与分类元数据，统一到 2026-06-05 的公开 GitHub 页面与 commit-history 证据。 | 它补的是 memory substrate + MCP service 这一层，把“记忆”变成可接入的运行时接口。 |
-| [openai/swarm](https://github.com/openai/swarm) | 刷新 raw capture、project card、site public report 与分类元数据，统一到 2026-06-05 的公开 GitHub 页面与 commit-history 证据。 | 它仍然是最清晰的 lightweight handoff baseline，同时也明确告诉读者 production 已转向 Agents SDK。 |
+| [desplega-ai/agent-swarm](https://github.com/desplega-ai/agent-swarm) | 新增 raw capture、project card、site public report 与分类元数据，统一到 2026-06-05 的公开 GitHub 页面与 release/README dated signal 证据。 | 它把 agent-swarm 从“多角色编排”推进到带 Docker worker、persistent identity、compounding memory 和 HITL workflow gate 的生产执行面。 |
+| [VRSEN/agency-swarm](https://github.com/VRSEN/agency-swarm) | 把旧的静态项目说明升级成 current public model card，并补入 site public report 与项目注册表。 | 它回答的是 production multi-agent 编排在 2026 年已经如何从 Assistants API 迁移到 Agents SDK，并保留通信流、工具和状态持久化。 |
+| [XSkill-Agent/XSkill](https://github.com/XSkill-Agent/XSkill) | 新增 raw capture、paper-code model card 与 site public report，并把 continual-learning 证据接回 benchmark/eval 面。 | 它补的是“skills 和 experiences 如何被积累、存储、检索并在 benchmark 上复用”这一层，而不是只给一个 continual-learning 口号。 |
+| [wanxingai/LightAgent](https://github.com/wanxingai/LightAgent) | 刷新 raw capture、project card、site public report 与分类元数据，统一到 2026-06-02 的 release/README dated signal。 | 它把轻量 agent runtime 这条线补到 LightFlow、native skills、persistent memory 和 trace observability 的最新公开证据。 |
 
 ## 核心洞察
 

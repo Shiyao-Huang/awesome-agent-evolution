@@ -58,18 +58,16 @@ flowchart LR
   SURVEY --> SITE["网站 + 图谱 + 报告"]
 ```
 
-## 近期证据更新（2026-06-04）
+## 近期证据更新（2026-06-05）
 
-本轮不是简单“刷新元数据”，而是把 swarm runtime、skill optimizer、skills benchmark、browser harness、memory middleware 和 educational swarm baseline 一起拉回同一条证据链。下面每个仓库都只回答一个问题：它补上了哪类判断证据。
+本轮不是简单“刷新元数据”，而是把 production swarm、OpenAI Agents SDK orchestrator、continual skill-memory paper code 和轻量 memory/MCP/skill runtime 一起拉回同一条证据链。下面每个仓库都只回答一个问题：它补上了哪类判断证据。
 
 | 仓库 | 补上的证据缺口 | 对读者的意义 |
 |---|---|---|
-| [kyegomez/swarms](https://github.com/kyegomez/swarms) | production swarm runtime | 它把 agent-swarm 从“多角色概念”推进到可部署的 runtime、protocol 和拓扑层。 |
-| [microsoft/SkillOpt](https://github.com/microsoft/SkillOpt) | self-evolving skill optimizer | 它直接回答 skill 是否能像训练神经网络一样迭代，而不改 base model 权重。 |
-| [benchflow-ai/skillsbench](https://github.com/benchflow-ai/skillsbench) | skills benchmark | 判断 agent 是否真的会用技能，而不是只安装了 skill pack。 |
-| [browser-use/browser-harness](https://github.com/browser-use/browser-harness) | browser harness | 浏览器 agent 需要可编辑、可复跑、可自修复的任务框架，而不是录屏式演示。 |
-| [redis/agent-memory-server](https://github.com/redis/agent-memory-server) | memory middleware | 它补的是 memory substrate + MCP service 这一层，把“记忆”变成可接入的运行时接口。 |
-| [openai/swarm](https://github.com/openai/swarm) | educational swarm baseline | 它仍然是最清晰的 lightweight handoff baseline，但也明确告诉读者 production 已转向 Agents SDK。 |
+| [desplega-ai/agent-swarm](https://github.com/desplega-ai/agent-swarm) | production lead-worker swarm runtime | 它把 agent-swarm 从“多角色编排”推进到带 Docker worker、persistent identity、compounding memory 和 HITL gate 的生产执行面。 |
+| [VRSEN/agency-swarm](https://github.com/VRSEN/agency-swarm) | OpenAI Agents SDK orchestration baseline | 它回答的是 production multi-agent 编排在 2026 年已经如何从 Assistants API 迁移到 Agents SDK，并保留通信流、工具和状态持久化。 |
+| [XSkill-Agent/XSkill](https://github.com/XSkill-Agent/XSkill) | continual skill-memory benchmarked paper code | 它补的是“skills 和 experiences 如何被积累、存储、检索并在 benchmark 上复用”这一层，而不是只给一个概念性 continual-learning 口号。 |
+| [wanxingai/LightAgent](https://github.com/wanxingai/LightAgent) | lightweight memory/MCP/skill runtime refresh | 它把轻量 agent runtime 这条线补到 2026-06-02 的 LightFlow、native skills、persistent memory 和 trace observability 证据。 |
 
 ## 核心洞察
 
