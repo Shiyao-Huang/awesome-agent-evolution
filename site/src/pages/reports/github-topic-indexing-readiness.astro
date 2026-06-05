@@ -1,0 +1,54 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { site } from '@/data/site';
+import { Content } from '../../../../reports/github-topic-indexing-readiness.md';
+
+const title = 'GitHub Topic Indexing Readiness Audit';
+const description = 'GitHub topic readiness audit for awesome-agent-evolution: repository topics, description, homepage, GitHub Search membership, and rendered topic-page visibility.';
+const canonical = new URL('/reports/github-topic-indexing-readiness/', site.url).toString();
+const sourceUrl = `${site.github}/blob/main/reports/github-topic-indexing-readiness.md`;
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'TechArticle',
+  headline: title,
+  description,
+  inLanguage: 'en',
+  author: { '@id': `${site.url}/#organization` },
+  publisher: { '@id': `${site.url}/#organization` },
+  mainEntityOfPage: canonical,
+  isBasedOn: sourceUrl,
+  about: ['GitHub Topics', 'repository metadata', 'agent-evolution', 'GitHub Search indexing']
+};
+---
+<BaseLayout
+  title={`${title} | Self Evolve Reports`}
+  description={description}
+  type="article"
+  pageLang="en"
+  pageKeywords={['GitHub topic indexing', 'agent-evolution topic', 'awesome-agent-evolution metadata', 'GitHub repository SEO']}
+>
+  <article class="blog-article">
+    <div class="eyebrow">Publication QA / GitHub discovery</div>
+    <h1>{title}</h1>
+    <p class="lead">{description}</p>
+    <div class="pill-row">
+      <a class="pill" href="/reports/">Reports index</a>
+      <a class="pill" href="https://github.com/topics/agent-evolution?o=desc&s=stars" target="_blank" rel="noopener">GitHub topic page</a>
+      <a class="pill" href={sourceUrl} target="_blank" rel="noopener">Markdown source</a>
+    </div>
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} is:inline />
+    <aside class="source-panel" aria-label="GitHub topic indexing boundary">
+      <div>
+        <div class="eyebrow">How to read</div>
+        <h2>Topic membership and rendered topic-page placement are different checks.</h2>
+        <p>GitHub repository topics and Search/API results are the stronger freshness signal. The rendered topic page can lag, paginate, or cache results, especially when sorted by accumulated stars.</p>
+        <p><strong>中文:</strong> 仓库是否进入 topic，首先看远端 topics 和 GitHub search/API；topic 网页按 stars 渲染时可能有缓存、分页和排序延迟。</p>
+      </div>
+      <div class="source-links">
+        <a href={sourceUrl} target="_blank" rel="noopener">Open generated report</a>
+        <a href="/reports/">Back to report status</a>
+      </div>
+    </aside>
+    <Content />
+  </article>
+</BaseLayout>

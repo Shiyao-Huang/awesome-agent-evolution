@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-06-05T15:15:12.848Z",
+  "generated_at": "2026-06-05T16:31:13.761Z",
   "canonical_host": "https://agent-evolution.com",
   "global_status": "incomplete",
   "verdict": "Batch B bilingual route audit is not passed: only the core English path has paired routes; most indexable pages are still Chinese-first without English same-evidence mirrors.",
   "counts": {
-    "sitemap_urls": 979,
-    "html_routes_checked": 979,
+    "sitemap_urls": 981,
+    "html_routes_checked": 981,
     "missing_html": 0,
-    "english_routes": 21,
+    "english_routes": 23,
     "zh_routes": 958,
     "zh_routes_with_en_alternate": 16,
     "en_routes_with_zh_alternate": 16,
@@ -21,7 +21,7 @@
     "blog-tag": 79,
     "english": 16,
     "project-card": 293,
-    "report-index-or-audit": 525,
+    "report-index-or-audit": 527,
     "research": 16,
     "survey": 3,
     "topic": 4
@@ -228,6 +228,16 @@
       "pathname": "/en/value-lsh/",
       "title": "Value LSH — evidence triage, not a final ranking",
       "zh_alternate": "/value-lsh/"
+    },
+    {
+      "pathname": "/reports/github-topic-indexing-readiness/",
+      "title": "GitHub Topic Indexing Readiness Audit | Self Evolve Reports",
+      "zh_alternate": ""
+    },
+    {
+      "pathname": "/reports/live-publication-readiness/",
+      "title": "Live Publication Readiness Audit | Self Evolve Reports",
+      "zh_alternate": ""
     },
     {
       "pathname": "/reports/survey-publication/01-field-map/",

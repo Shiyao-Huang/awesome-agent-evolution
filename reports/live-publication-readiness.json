@@ -1,0 +1,77 @@
+{
+  "generated_at": "2026-06-05T16:31:22.166Z",
+  "canonical_host": "https://agent-evolution.com",
+  "global_status": "fail",
+  "boundary": "Live publication readiness checks external crawl prerequisites. It complements local sitemap/metadata audits and can fail even when the generated site build is valid.",
+  "blocking_failures": [
+    "GitHub Pages HTTPS enforcement is disabled",
+    "TLS certificate does not cover agent-evolution.com",
+    "Strict HTTPS homepage is not reachable: Hostname/IP does not match certificate's altnames: Host: agent-evolution.com. is not in the cert's altnames: DNS:*.github.com, DNS:*.github.io, DNS:*.githubusercontent.com, DNS:github.com, DNS:github.io, DNS:githubusercontent.com",
+    "Strict HTTPS sitemap is not reachable: Hostname/IP does not match certificate's altnames: Host: agent-evolution.com. is not in the cert's altnames: DNS:*.github.com, DNS:*.github.io, DNS:*.githubusercontent.com, DNS:github.com, DNS:github.io, DNS:githubusercontent.com"
+  ],
+  "github_pages": {
+    "cname": "agent-evolution.com",
+    "html_url": "http://agent-evolution.com/",
+    "https_enforced": false,
+    "protected_domain_state": null,
+    "pending_domain_unverified_at": null,
+    "error": null
+  },
+  "dns": {
+    "apex_a": [
+      "198.18.0.151"
+    ],
+    "apex_aaaa": {
+      "error": "queryAaaa ENODATA agent-evolution.com",
+      "code": "ENODATA"
+    },
+    "www_cname": [
+      "shiyao-huang.github.io"
+    ],
+    "www_a": [
+      "198.18.0.155"
+    ]
+  },
+  "tls_certificate": {
+    "ok": true,
+    "subject": {
+      "CN": "*.github.io"
+    },
+    "issuer": {
+      "C": "US",
+      "O": "Let's Encrypt",
+      "CN": "R12"
+    },
+    "valid_from": "Apr  6 23:32:36 2026 GMT",
+    "valid_to": "Jul  5 23:32:35 2026 GMT",
+    "subjectaltname": "DNS:*.github.com, DNS:*.github.io, DNS:*.githubusercontent.com, DNS:github.com, DNS:github.io, DNS:githubusercontent.com",
+    "covers_host": false
+  },
+  "requests": {
+    "strict_home": {
+      "ok": false,
+      "error": "Hostname/IP does not match certificate's altnames: Host: agent-evolution.com. is not in the cert's altnames: DNS:*.github.com, DNS:*.github.io, DNS:*.githubusercontent.com, DNS:github.com, DNS:github.io, DNS:githubusercontent.com",
+      "code": "ERR_TLS_CERT_ALTNAME_INVALID"
+    },
+    "relaxed_home": {
+      "ok": true,
+      "statusCode": 200,
+      "location": null
+    },
+    "http_home": {
+      "ok": true,
+      "statusCode": 200,
+      "location": null
+    },
+    "strict_sitemap": {
+      "ok": false,
+      "error": "Hostname/IP does not match certificate's altnames: Host: agent-evolution.com. is not in the cert's altnames: DNS:*.github.com, DNS:*.github.io, DNS:*.githubusercontent.com, DNS:github.com, DNS:github.io, DNS:githubusercontent.com",
+      "code": "ERR_TLS_CERT_ALTNAME_INVALID"
+    },
+    "relaxed_sitemap": {
+      "ok": true,
+      "statusCode": 200,
+      "location": null
+    }
+  }
+}

@@ -1,6 +1,6 @@
 # Mirrors / 外部仓库镜像 Index
 
-> Generated: 2026-06-05
+> Generated: 2026-06-06
 
 ## Rule
 

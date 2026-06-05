@@ -653,3 +653,13 @@
 - The target's value score/confidence became `79.62 / 69.23`, with `implementation_runnable=1`, `teaching_model_card=1`, `evidence_chain_complete=1`, and `star_growth_current=-1` because stargazer history is still not fetched.
 - The next top repair targets are `sola-st/repairagent`, `zhang677/accelopt`, `hwfengcs/dm-code-agent`, `rucbm/laser`, and `arthurmgraf/graphmind`.
 **产出:** `analysis/value-lsh-index.md`, `analysis/value-evidence-repair-queue.md`, `analysis/value-lsh-graph-3d.json`, `work/wiki/search-index.json`, `docs/indexes/master-index.md`, `site/dist/`
+
+## [2026-06-05 16:27] synthesis+publication | GitHub Topic Indexing Readiness
+
+**操作:** Converted the user question about `https://github.com/topics/agent-evolution?o=desc&s=stars` into a repeatable GitHub topic indexing audit and public evidence surface.
+**详情:**
+- Verified remote repository topics include `agent-evolution` and expected adjacent discovery topics.
+- Verified `gh search repos --topic agent-evolution --owner Shiyao-Huang` returns `Shiyao-Huang/awesome-agent-evolution`.
+- Verified the rendered topic-page HTML includes the repository at zero-based rank `1`; future visual misses should rerun the audit before changing metadata.
+- Kept Google/custom-domain HTTPS as a separate publication blocker in `reports/live-publication-readiness.md`.
+**产出:** `scripts/audit_github_topic_indexing.mjs`, `reports/github-topic-indexing-readiness.md`, `work/wiki/synthesis/github-topic-indexing-readiness.md`

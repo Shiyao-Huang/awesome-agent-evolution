@@ -165,6 +165,26 @@ import { legacyResearchProjectReports, paperReports, projectReports, surveyPubli
             <a class="pill" href="/reports/en-cn-mapping-audit">查看审查</a>
           </div>
         </article>
+        <article class="card" style="border-left: 4px solid #B83224;">
+          <div class="eyebrow">QA · Live publication</div>
+          <h3><a href="/reports/live-publication-readiness/">Live Publication Readiness Audit</a></h3>
+          <p>区分本地 SEO metadata 通过和 Google 严格 HTTPS 抓取可用：当前重点检查 GitHub Pages HTTPS enforcement、证书 SAN、首页与 sitemap。</p>
+          <div class="pill-row">
+            <span class="pill">external crawl gate</span>
+            <span class="pill" style="background: #B83224; color: white;">HTTPS BLOCKER</span>
+            <a class="pill" href="/reports/live-publication-readiness/">查看发布状态</a>
+          </div>
+        </article>
+        <article class="card" style="border-left: 4px solid #2F6F4E;">
+          <div class="eyebrow">QA · GitHub topic</div>
+          <h3><a href="/reports/github-topic-indexing-readiness/">GitHub Topic Indexing Readiness</a></h3>
+          <p>回答 `agent-evolution` topic 是否收录：检查远端 topics、仓库 description/homepage、GitHub Search 和 topic 页面渲染，避免把网页缓存误判成 metadata 缺失。</p>
+          <div class="pill-row">
+            <span class="pill">GitHub discovery</span>
+            <span class="pill" style="background: #2F6F4E; color: white;">TOPIC PASS</span>
+            <a class="pill" href="/reports/github-topic-indexing-readiness/">查看 Topic 状态</a>
+          </div>
+        </article>
       </div>
     </div>
   </section>

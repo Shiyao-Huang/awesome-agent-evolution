@@ -1,6 +1,7 @@
 flowchart LR
   INTENT["Direct user intent"] --> RAW["raw-github refresh and add"]
-  TOPIC["GitHub topic indexing evidence"] --> SITE["README + site + public reports"]
+  TOPIC["GitHub topic indexing readiness PASS"] --> SITE["README + site + public reports"]
+  HTTPS["Live publication readiness HTTPS blocker"] --> SITE
   RAW --> PROC["classification + project cards"]
   PROC --> SITE
   PROC --> NOTE["work learning note"]

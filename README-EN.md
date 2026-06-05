@@ -6,7 +6,7 @@
 
 GitHub Topics: `agent-evolution`, `self-evolving-agents`, `self-evolution`, `self-improvement`, `ai-agent`, `llm-agent`, `agent-swarm`, `memory-system`, `skill-library`, `harness-engineering`, `benchmark`.
 
-GitHub topic evidence (2026-06-05): `gh search repos --topic agent-evolution --sort stars` returns this repository; if the rendered topic page briefly lags, treat GitHub search/API as the fresher evidence.
+GitHub topic evidence (2026-06-05): [GitHub Topic Indexing Readiness](reports/github-topic-indexing-readiness.md) verifies that repository topics, GitHub Search, and the rendered topic page all return this repository; if the rendered topic page briefly lags, treat GitHub search/API as the fresher evidence.
 
 ![Self Evolve public research pipeline](site/public/visuals/self-evolve-readme-banner.png)
 
@@ -182,6 +182,8 @@ flowchart TB
 - [KNOWN] Coverage boundaries, count meanings, and current gaps come from [analysis/resource-library-coverage-audit.md](analysis/resource-library-coverage-audit.md); for the latest raw/classified/model-card/public-report counts, use [docs/indexes/master-index.md](docs/indexes/master-index.md) and [analysis/github-project-data-analysis.md](analysis/github-project-data-analysis.md).
 - [KNOWN] Evolve-AGI Index methodology, weights, and benchmark inputs come from [analysis/evolve-agi-index.md](analysis/evolve-agi-index.md), [site/src/data/evolveAgiIndex.ts](site/src/data/evolveAgiIndex.ts), and [reports/evolve-agi-index-trend.json](reports/evolve-agi-index-trend.json).
 - [KNOWN] Survey chapters and the paper draft come from [paper-drafts/main.tex](paper-drafts/main.tex) and [survey/latex/main.tex](survey/latex/main.tex).
+- [KNOWN] GitHub topic discovery status comes from [reports/github-topic-indexing-readiness.md](reports/github-topic-indexing-readiness.md): the remote `agent-evolution` topic, repository description/homepage, GitHub Search, and rendered topic page are verified; topic-page display lag is not the same as missing metadata.
+- [KNOWN] Google/SEO publication status must combine local sitemap/meta audits with live crawl prerequisites; [reports/live-publication-readiness.md](reports/live-publication-readiness.md) separates "generated site is indexable" from "the custom domain is reachable over strict HTTPS."
 - [INFERRED] The "core insight" is a synthesis over those sources: upgrading the Awesome repository into a survey + index + evidence graph for controlled self-evolution, not a simple link site.
 
 ## Reader Next Steps

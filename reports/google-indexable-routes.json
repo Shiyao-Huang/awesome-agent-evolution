@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-06-05T15:14:19.894Z",
+  "generated_at": "2026-06-05T16:31:13.737Z",
   "canonical_host": "https://agent-evolution.com",
   "audit_boundary": "Generated-site audit only. PASS means sitemap-listed HTML routes have indexable metadata in the local build; it does not prove Google has crawled, indexed, or can reach the custom domain over trusted HTTPS.",
   "global_status": "pass",
   "counts": {
-    "sitemap_urls": 979,
-    "routes_checked": 979,
-    "passed": 979,
+    "sitemap_urls": 981,
+    "routes_checked": 981,
+    "passed": 981,
     "failed": 0
   },
   "route_kind_counts": {
@@ -16,7 +16,7 @@
     "blog-tag": 79,
     "english": 16,
     "project-card": 293,
-    "report-index-or-audit": 1,
+    "report-index-or-audit": 3,
     "paper-cross-domain-report": 2,
     "project-report": 489,
     "legacy-research-project-report": 28,
@@ -1389,7 +1389,7 @@
       "kind": "english",
       "htmlPath": "site/dist/en/reports/index.html",
       "title": "Self Evolve Reports — what is reviewed, what is still gated",
-      "description": "English guide to Self Evolve reports: project evidence pages, legacy research wrappers, survey publication slices, paper maps, noindex policy, and citation boundaries.",
+      "description": "English guide to Self Evolve reports: project evidence pages, legacy research wrappers, survey publication slices, paper maps, review-gated policy, and citation boundaries.",
       "lang": "en",
       "canonical": "https://agent-evolution.com/en/reports/",
       "status": "pass",
@@ -5124,6 +5124,30 @@
       "description": "Self Evolve 报告状态索引：把项目证据页、legacy source wrappers、论文阅读地图和 Survey 发布切片转成可索引 HTML，同时标清不同引用边界。",
       "lang": "zh-CN",
       "canonical": "https://agent-evolution.com/reports/",
+      "status": "pass",
+      "failures": []
+    },
+    {
+      "url": "https://agent-evolution.com/reports/github-topic-indexing-readiness/",
+      "pathname": "/reports/github-topic-indexing-readiness/",
+      "kind": "report-index-or-audit",
+      "htmlPath": "site/dist/reports/github-topic-indexing-readiness/index.html",
+      "title": "GitHub Topic Indexing Readiness Audit | Self Evolve Reports",
+      "description": "GitHub topic readiness audit for awesome-agent-evolution: repository topics, description, homepage, GitHub Search membership, and rendered topic-page visibility.",
+      "lang": "en",
+      "canonical": "https://agent-evolution.com/reports/github-topic-indexing-readiness/",
+      "status": "pass",
+      "failures": []
+    },
+    {
+      "url": "https://agent-evolution.com/reports/live-publication-readiness/",
+      "pathname": "/reports/live-publication-readiness/",
+      "kind": "report-index-or-audit",
+      "htmlPath": "site/dist/reports/live-publication-readiness/index.html",
+      "title": "Live Publication Readiness Audit | Self Evolve Reports",
+      "description": "Live readiness audit for agent-evolution.com: GitHub Pages HTTPS enforcement, TLS certificate coverage, strict HTTPS homepage, sitemap reachability, and DNS observations.",
+      "lang": "en",
+      "canonical": "https://agent-evolution.com/reports/live-publication-readiness/",
       "status": "pass",
       "failures": []
     },

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-05T15:13:50.932Z",
+  "generated_at": "2026-06-05T16:30:12.220Z",
   "counts": {
     "raw_captures": 684,
     "raw_files_on_disk": 684,
@@ -63520,7 +63520,7 @@
   },
   "ranking_method": {
     "name": "recency_weighted_current_value",
-    "reference_date": "2026-06-05T15:13:50.932Z",
+    "reference_date": "2026-06-05T16:30:12.220Z",
     "weights": {
       "time": 0.5,
       "mechanism": 0.2,
@@ -63559,8 +63559,8 @@
       "stars": 1440,
       "report": "projects/modelscope__agentevolver.md",
       "scores": {
-        "current_value": 82.93,
-        "time": 75.06,
+        "current_value": 82.92,
+        "time": 75.05,
         "mechanism": 100,
         "evidence": 100,
         "adoption": 59.98,
@@ -63588,7 +63588,7 @@
       "report": "projects/zju_llm_safety__darwin.md",
       "scores": {
         "current_value": 76.5,
-        "time": 92.94,
+        "time": 92.93,
         "mechanism": 75,
         "evidence": 62,
         "adoption": 30.83,
@@ -63646,7 +63646,7 @@
       "report": "projects/algorithmicsuperintelligence__openevolve.md",
       "scores": {
         "current_value": 70.67,
-        "time": 56.5,
+        "time": 56.49,
         "mechanism": 79,
         "evidence": 100,
         "adoption": 72.25,
@@ -63673,7 +63673,7 @@
       "report": "projects/jarvispei__scope.md",
       "scores": {
         "current_value": 67.88,
-        "time": 77.88,
+        "time": 77.87,
         "mechanism": 67,
         "evidence": 62,
         "adoption": 35.93,
@@ -63700,8 +63700,8 @@
       "stars": 98,
       "report": "projects/inter_co__science_codeevolve.md",
       "scores": {
-        "current_value": 65.35,
-        "time": 72.82,
+        "current_value": 65.34,
+        "time": 72.81,
         "mechanism": 59,
         "evidence": 68,
         "adoption": 37.9,
@@ -63729,8 +63729,8 @@
       "stars": 274,
       "report": "projects/jarvis_xs__se_agent.md",
       "scores": {
-        "current_value": 63.17,
-        "time": 47.47,
+        "current_value": 63.16,
+        "time": 47.46,
         "mechanism": 77,
         "evidence": 100,
         "adoption": 46.32,
@@ -64008,7 +64008,7 @@
       "stars": 6800,
       "report": "projects/22-evoagentx-agent-evolution-framework.md",
       "scores": {
-        "current_value": 58.33,
+        "current_value": 58.32,
         "time": 28.69,
         "mechanism": 97,
         "evidence": 86,
@@ -64504,7 +64504,7 @@
       "report": "projects/228-yunjue-agent-in-situ-self-evolving-agent.md",
       "scores": {
         "current_value": 53.95,
-        "time": 34.31,
+        "time": 34.3,
         "mechanism": 97,
         "evidence": 56,
         "adoption": 49.95,
@@ -64564,7 +64564,7 @@
       "stars": 34604,
       "report": "projects/10-dspy-declarative-llm-programming.md",
       "scores": {
-        "current_value": 53.05,
+        "current_value": 53.04,
         "time": 28.95,
         "mechanism": 59,
         "evidence": 100,
@@ -64686,7 +64686,7 @@
       "stars": 1000,
       "report": "projects/23-everos-self-evolving-agents.md",
       "scores": {
-        "current_value": 51.05,
+        "current_value": 51.04,
         "time": 28.69,
         "mechanism": 71,
         "evidence": 86,
@@ -64964,7 +64964,7 @@
       "report": "research/projects/44-xmu-self-evolving-agents.md",
       "scores": {
         "current_value": 48.6,
-        "time": 30.61,
+        "time": 30.6,
         "mechanism": 69,
         "evidence": 68,
         "adoption": 67.98,
@@ -65515,7 +65515,7 @@
       "report": "projects/05-automl-agent-multi-agent.md",
       "scores": {
         "current_value": 46.86,
-        "time": 35.31,
+        "time": 35.3,
         "mechanism": 59,
         "evidence": 68,
         "adoption": 40.58,
@@ -66312,8 +66312,8 @@
       "stars": 21600,
       "report": "projects/311-openai-swarm-multi-agent-orchestration.md",
       "scores": {
-        "current_value": 45.2,
-        "time": 42.93,
+        "current_value": 45.19,
+        "time": 42.92,
         "mechanism": 18,
         "evidence": 56,
         "adoption": 82.31,
@@ -66711,7 +66711,7 @@
       "report": "research/projects/60-swe-bench-evaluation.md",
       "scores": {
         "current_value": 44.75,
-        "time": 41.02,
+        "time": 41.01,
         "mechanism": 20,
         "evidence": 68,
         "adoption": 65.46,
@@ -66923,7 +66923,7 @@
       "report": "projects/09-crewai-multi-agent-framework.md",
       "scores": {
         "current_value": 44.33,
-        "time": 28.95,
+        "time": 28.94,
         "mechanism": 10,
         "evidence": 100,
         "adoption": 89.56,
@@ -67227,7 +67227,7 @@
       "stars": 184482,
       "report": "projects/08-autogpt-autonomous-agent.md",
       "scores": {
-        "current_value": 44.14,
+        "current_value": 44.13,
         "time": 28.97,
         "mechanism": 10,
         "evidence": 100,
@@ -67630,7 +67630,7 @@
       "report": "projects/12-camel-ai-communicative-agents.md",
       "scores": {
         "current_value": 43.43,
-        "time": 28.59,
+        "time": 28.58,
         "mechanism": 35,
         "evidence": 68,
         "adoption": 80.35,
@@ -68179,7 +68179,7 @@
       "report": "projects/13-langgraph-agent-workflows.md",
       "scores": {
         "current_value": 42.71,
-        "time": 28.97,
+        "time": 28.96,
         "mechanism": 10,
         "evidence": 100,
         "adoption": 85.75,
@@ -69165,7 +69165,7 @@
       "report": "projects/281-redis-agent-memory-server-runtime.md",
       "scores": {
         "current_value": 41.64,
-        "time": 43.07,
+        "time": 43.06,
         "mechanism": 18,
         "evidence": 56,
         "adoption": 46.08,
@@ -69833,7 +69833,7 @@
       "report": "research/projects/46-chatdev-multi-agent-platform.md",
       "scores": {
         "current_value": 40.64,
-        "time": 29.52,
+        "time": 29.51,
         "mechanism": 43,
         "evidence": 36,
         "adoption": 83.84,
@@ -70349,7 +70349,7 @@
       "stars": 68239,
       "report": "projects/07-metagpt-multi-agent-framework.md",
       "scores": {
-        "current_value": 39.73,
+        "current_value": 39.72,
         "time": 18.89,
         "mechanism": 35,
         "evidence": 68,
@@ -70961,7 +70961,7 @@
       "stars": 74662,
       "report": "projects/15-openhands-ai-software-dev.md",
       "scores": {
-        "current_value": 38.59,
+        "current_value": 38.58,
         "time": 28.96,
         "mechanism": 10,
         "evidence": 68,
@@ -71357,7 +71357,7 @@
       "report": "research/projects/61-osworld-agent-evaluation.md",
       "scores": {
         "current_value": 36.97,
-        "time": 24.45,
+        "time": 24.44,
         "mechanism": 28,
         "evidence": 62,
         "adoption": 63.48,
@@ -71476,7 +71476,7 @@
       "report": "research/projects/59-awesome-agent-papers.md",
       "scores": {
         "current_value": 35.68,
-        "time": 36.77,
+        "time": 36.76,
         "mechanism": 0,
         "evidence": 68,
         "adoption": 58.48,
@@ -71531,7 +71531,7 @@
       "stars": 2000,
       "report": "projects/37-awesome-code-llm.md",
       "scores": {
-        "current_value": 34.47,
+        "current_value": 34.46,
         "time": 28.69,
         "mechanism": 25,
         "evidence": 48,
@@ -71561,7 +71561,7 @@
       "report": "projects/03-adas-automated-design-agentic-systems.md",
       "scores": {
         "current_value": 33.93,
-        "time": 5.42,
+        "time": 5.41,
         "mechanism": 59,
         "evidence": 68,
         "adoption": 60.75,
@@ -72120,8 +72120,8 @@
       "stars": 2800,
       "report": "research/projects/62-webarena-web-evaluation.md",
       "scores": {
-        "current_value": 25.5,
-        "time": 16.1,
+        "current_value": 25.49,
+        "time": 16.09,
         "mechanism": 10,
         "evidence": 36,
         "adoption": 65.46,
@@ -72294,8 +72294,8 @@
       "stars": 33000,
       "report": "research/projects/52-agentgpt-autonomous.md",
       "scores": {
-        "current_value": 22.11,
-        "time": 7.75,
+        "current_value": 22.1,
+        "time": 7.74,
         "mechanism": 10,
         "evidence": 36,
         "adoption": 85.81,
@@ -72352,8 +72352,8 @@
       "stars": 4200,
       "report": "research/projects/47-openagents-platform.md",
       "scores": {
-        "current_value": 20.41,
-        "time": 7.75,
+        "current_value": 20.4,
+        "time": 7.74,
         "mechanism": 10,
         "evidence": 36,
         "adoption": 68.81,

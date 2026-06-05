@@ -1,6 +1,6 @@
 # Work / 工作产物 Index
 
-> Generated: 2026-06-05
+> Generated: 2026-06-06
 
 ## Rule
 
@@ -13,12 +13,12 @@
 | `paper-drafts` | present | 37 | 3 | 0 | 3.6 MB |
 | `paper` | present | 15 | 2 | 0 | 1023 KB |
 | `latex` | present | 9 | 2 | 0 | 53 KB |
-| `site` | present | 2264 | 1061 | 0 | 66 MB |
+| `site` | present | 2268 | 1063 | 0 | 66 MB |
 | `survey` | present | 94 | 4 | 0 | 3.4 MB |
-| `scripts` | present | 65 | 1 | 0 | 1.8 MB |
+| `scripts` | present | 67 | 1 | 0 | 1.8 MB |
 | `data-engine` | present | 495 | 20 | 0 | 29 MB |
 | `work/research` | present | 80 | 2 | 0 | 2.2 MB |
-| `work/wiki` | present | 81 | 6 | 0 | 571 KB |
+| `work/wiki` | present | 82 | 6 | 0 | 575 KB |
 | `wiki` | present | 8 | 2 | 0 | 4.2 MB |
 
 ## Representative Files
@@ -90,15 +90,15 @@
 ### `scripts`
 
 - `scripts/analyze_github_project_data.mjs`
+- `scripts/audit_github_topic_indexing.mjs`
 - `scripts/audit_google_indexable_routes.mjs`
+- `scripts/audit_live_publication_readiness.mjs`
 - `scripts/audit_public_i18n_routes.mjs`
 - `scripts/audit_seo_indexable_assets.mjs`
 - `scripts/auto-commit-shield.sh`
 - `scripts/build_github_star_history_db.mjs`
 - `scripts/build_value_embedding_projection.mjs`
 - `scripts/build_value_evidence_repair_queue.mjs`
-- `scripts/build_value_lsh_index.mjs`
-- `scripts/enforce_raw_timestamps.py`
 
 ### `data-engine`
 

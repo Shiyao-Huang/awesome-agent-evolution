@@ -1,8 +1,8 @@
 {
-  "generated": "2026-06-02T17:24:16.790Z",
+  "generated": "2026-06-05T16:30:12.217Z",
   "stats": {
-    "pages": 77,
-    "keywords": 940
+    "pages": 78,
+    "keywords": 948
   },
   "catalog": [
     {
@@ -651,6 +651,18 @@
       ]
     },
     {
+      "path": "synthesis/github-topic-indexing-readiness.md",
+      "title": "GitHub Topic Indexing Readiness",
+      "rank": "A",
+      "type": "synthesis",
+      "tags": [
+        "github-topic",
+        "repository-metadata",
+        "public-discovery",
+        "agent-evolution"
+      ]
+    },
+    {
       "path": "synthesis/google-indexing-custom-domain-triage.md",
       "title": "Google Indexing Custom Domain Triage",
       "rank": "B",
@@ -969,7 +981,8 @@
       "synthesis/self-evolution-definition-criteria.md"
     ],
     "boundary": [
-      "concepts/agent-swarm-evolve.md"
+      "concepts/agent-swarm-evolve.md",
+      "synthesis/github-topic-indexing-readiness.md"
     ],
     "evidence": [
       "concepts/agent-swarm-evolve.md",
@@ -1013,6 +1026,7 @@
       "sources/talent-flow-analysis.md",
       "synthesis/frontier-value-queue.md",
       "synthesis/github-star-growth-database.md",
+      "synthesis/github-topic-indexing-readiness.md",
       "synthesis/google-indexing-custom-domain-triage.md",
       "synthesis/jarvis-xs-se-agent-frontier-deep-dive.md",
       "synthesis/mechanism-framework.md",
@@ -3791,6 +3805,39 @@
       "synthesis/github-star-growth-database.md",
       "synthesis/modelscope-agentevolver-frontier-deep-dive.md"
     ],
+    "github topic indexing readiness": [
+      "synthesis/github-topic-indexing-readiness.md"
+    ],
+    "github-topic": [
+      "synthesis/github-topic-indexing-readiness.md"
+    ],
+    "repository-metadata": [
+      "synthesis/github-topic-indexing-readiness.md"
+    ],
+    "public-discovery": [
+      "synthesis/github-topic-indexing-readiness.md"
+    ],
+    "agent-evolution": [
+      "synthesis/github-topic-indexing-readiness.md"
+    ],
+    "one-sentence rule": [
+      "synthesis/github-topic-indexing-readiness.md"
+    ],
+    "working principle": [
+      "synthesis/github-topic-indexing-readiness.md"
+    ],
+    "google-indexing-custom-domain-triage": [
+      "synthesis/github-topic-indexing-readiness.md"
+    ],
+    "survey-seo-topic-map": [
+      "synthesis/github-topic-indexing-readiness.md",
+      "synthesis/google-indexing-custom-domain-triage.md",
+      "synthesis/value-screening-dual-chain-knowledge-base.md"
+    ],
+    "resource-library-coverage-audit": [
+      "synthesis/github-topic-indexing-readiness.md",
+      "synthesis/google-indexing-custom-domain-triage.md"
+    ],
     "google indexing custom domain triage": [
       "synthesis/google-indexing-custom-domain-triage.md"
     ],
@@ -3804,13 +3851,6 @@
       "synthesis/google-indexing-custom-domain-triage.md"
     ],
     "claims": [
-      "synthesis/google-indexing-custom-domain-triage.md"
-    ],
-    "survey-seo-topic-map": [
-      "synthesis/google-indexing-custom-domain-triage.md",
-      "synthesis/value-screening-dual-chain-knowledge-base.md"
-    ],
-    "resource-library-coverage-audit": [
       "synthesis/google-indexing-custom-domain-triage.md"
     ],
     "inclusionai aworld-rl frontier deep dive": [

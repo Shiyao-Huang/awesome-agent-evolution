@@ -1,0 +1,54 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { site } from '@/data/site';
+import { Content } from '../../../../reports/live-publication-readiness.md';
+
+const title = 'Live Publication Readiness Audit';
+const description = 'Live readiness audit for agent-evolution.com: GitHub Pages HTTPS enforcement, TLS certificate coverage, strict HTTPS homepage, sitemap reachability, and DNS observations.';
+const canonical = new URL('/reports/live-publication-readiness/', site.url).toString();
+const sourceUrl = `${site.github}/blob/main/reports/live-publication-readiness.md`;
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'TechArticle',
+  headline: title,
+  description,
+  inLanguage: 'en',
+  author: { '@id': `${site.url}/#organization` },
+  publisher: { '@id': `${site.url}/#organization` },
+  mainEntityOfPage: canonical,
+  isBasedOn: sourceUrl,
+  about: ['Google crawl readiness', 'GitHub Pages', 'HTTPS certificate', 'SEO publication readiness']
+};
+---
+<BaseLayout
+  title={`${title} | Self Evolve Reports`}
+  description={description}
+  type="article"
+  pageLang="en"
+  pageKeywords={['Google indexing readiness', 'GitHub Pages HTTPS', 'Self Evolve SEO audit', 'agent-evolution.com certificate']}
+>
+  <article class="blog-article">
+    <div class="eyebrow">Publication QA / live crawl readiness</div>
+    <h1>{title}</h1>
+    <p class="lead">{description}</p>
+    <div class="pill-row">
+      <a class="pill" href="/reports/">Reports index</a>
+      <a class="pill" href={sourceUrl} target="_blank" rel="noopener">Markdown source</a>
+    </div>
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} is:inline />
+    <aside class="source-panel" aria-label="Live publication readiness boundary">
+      <div>
+        <div class="eyebrow">How to read</div>
+        <h2>This page checks external crawl prerequisites, not article quality.</h2>
+        <p>Local SEO audits can pass while Google still cannot reliably crawl the custom domain over strict HTTPS. This report separates generated-site quality from live publication infrastructure.</p>
+        <p>What still works today: generated pages build, sitemap/meta audits pass, and relaxed HTTPS/HTTP reads return content. What remains blocked is trusted strict HTTPS for the custom domain.</p>
+        <p><strong>中文:</strong> 这个页面不是研究结论，而是公开发布状态审计：它说明本地 sitemap/meta 通过和自定义域名 HTTPS 可抓取不是一回事。</p>
+      </div>
+      <div class="source-links">
+        <a href={sourceUrl} target="_blank" rel="noopener">Open generated report</a>
+        <a href="/reports/">Back to report status</a>
+      </div>
+    </aside>
+    <Content />
+  </article>
+</BaseLayout>

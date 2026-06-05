@@ -29,10 +29,22 @@
     {
       "id": "raw.github.topic-indexing-evidence",
       "title": "GitHub topic indexing evidence",
-      "layer": "raw",
-      "status": "retained",
+      "layer": "processed",
+      "status": "verified",
       "paths": [
-        "raw-github/shiyao-huang_awesome-agent-evolution.md"
+        "reports/github-topic-indexing-readiness.md",
+        "scripts/audit_github_topic_indexing.mjs",
+        "work/wiki/synthesis/github-topic-indexing-readiness.md"
+      ]
+    },
+    {
+      "id": "results.live-publication-readiness",
+      "title": "Live publication readiness evidence",
+      "layer": "results",
+      "status": "blocked",
+      "paths": [
+        "reports/live-publication-readiness.md",
+        "site/src/pages/reports/live-publication-readiness.astro"
       ]
     },
     {
@@ -87,6 +99,11 @@
       "raw.github.topic-indexing-evidence",
       "results.public-site",
       "clarifies-discovery"
+    ],
+    [
+      "results.live-publication-readiness",
+      "results.public-site",
+      "blocks-google-crawl-readiness"
     ],
     [
       "processed.github-classification",
@@ -150,10 +167,10 @@
       }
     ],
     "blockers": [
-      "gh search against api.github.com failed in this workspace during this run, so new metadata is public-page-observed rather than GitHub-API-verified",
-      "GitNexus index was stale at start of this turn and requires refresh before final validation",
-      "public copy review gate remains incomplete for README and other reader-facing pages"
+      "Custom-domain strict HTTPS remains blocked because GitHub Pages has not issued a certificate covering agent-evolution.com",
+      "Long-tail i18n route parity remains incomplete",
+      "GitNexus symbol impact returned UNKNOWN for public report page targets; final scope is checked with detect-changes"
     ],
-    "working_principle": "public GitHub page evidence -> raw-github refresh -> repo-classification/project/site registry -> public reports -> README/site registry -> indexes + analysis + site build"
+    "working_principle": "GitHub repository metadata -> topic/search/topic-page audit -> reports + wiki synthesis -> README/site report surfaces -> indexes + analysis + site build"
   }
 }

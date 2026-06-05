@@ -1,6 +1,6 @@
 # Public I18N Route Audit
 
-Generated: 2026-06-05T15:15:12.848Z
+Generated: 2026-06-05T16:31:13.761Z
 
 Status: **INCOMPLETE**
 
@@ -12,9 +12,9 @@ Batch B bilingual route audit is not passed: only the core English path has pair
 
 | Metric | Count |
 |---|---:|
-| Sitemap URLs | 979 |
-| HTML routes checked | 979 |
-| English routes | 21 |
+| Sitemap URLs | 981 |
+| HTML routes checked | 981 |
+| English routes | 23 |
 | Chinese routes | 958 |
 | Chinese routes with English alternate | 16 |
 | English routes with Chinese alternate | 16 |
@@ -62,6 +62,8 @@ Batch B bilingual route audit is not passed: only the core English path has pair
 | /en/topics/five-evolution-loops/ | /topics/five-evolution-loops/ | Five Evolution Loops for Self-Evolving AI Agents |
 | /en/topics/self-evolving-ai-agents/ | /topics/self-evolving-ai-agents/ | What Counts as a Self-Evolving AI Agent? |
 | /en/value-lsh/ | /value-lsh/ | Value LSH — evidence triage, not a final ranking |
+| /reports/github-topic-indexing-readiness/ |  | GitHub Topic Indexing Readiness Audit / Self Evolve Reports |
+| /reports/live-publication-readiness/ |  | Live Publication Readiness Audit / Self Evolve Reports |
 | /reports/survey-publication/01-field-map/ |  | Slice 01 — A Map of Self-Evolving AI Agents / Self Evolve Survey Publication |
 | /reports/survey-publication/02-true-vs-pseudo-evolution/ |  | Slice 02 — Which AI Agents Actually Self-Improve? / Self Evolve Survey Publication |
 | /reports/survey-publication/03-evaluation-bottleneck/ |  | Slice 03 — The Evaluation Problem in Self-Evolving AI Agents / Self Evolve Survey Publication |

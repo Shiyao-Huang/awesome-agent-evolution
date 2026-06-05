@@ -7,7 +7,7 @@ const reportStates = [
   {
     label: 'Project reports',
     count: projectReports.length,
-    body: 'Source-tracing evidence pages for repositories. They are accessible for review but remain noindexed until page-level copy and claim checks pass.'
+    body: 'Source-tracing evidence pages for repositories. They are indexable evidence entry points, but their body claims remain review-gated until page-level copy and claim checks pass.'
   },
   {
     label: 'Legacy research reports',
@@ -29,7 +29,7 @@ const reportStates = [
 const readingRules = [
   'Read report pages as a source trail first, not as a verdict.',
   'Check whether the claim points back to raw GitHub, paper, benchmark, or current project card evidence.',
-  'Use noindex/review-gated labels as a warning that public-copy review is not finished.',
+  'Use review-gated labels as a warning that public-copy review is not finished, even when a page is indexable.',
   'Prefer current project cards and paper pages when legacy report language conflicts with newer evidence.'
 ];
 
@@ -49,7 +49,7 @@ const jsonLd = {
   alternateZh="/reports/"
   alternateEn="/en/reports/"
   title="Self Evolve Reports — what is reviewed, what is still gated"
-  description="English guide to Self Evolve reports: project evidence pages, legacy research wrappers, survey publication slices, paper maps, noindex policy, and citation boundaries."
+  description="English guide to Self Evolve reports: project evidence pages, legacy research wrappers, survey publication slices, paper maps, review-gated policy, and citation boundaries."
   pageKeywords={['Self Evolve reports', 'review-gated evidence', 'AI agent project reports', 'self-evolving AI survey reports']}
 >
   <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} is:inline />
@@ -61,7 +61,8 @@ const jsonLd = {
       <div class="hero-actions">
         <a class="button primary" href="/reports/">Open full report index</a>
         <a class="button" href="/en/projects/">Project evidence guide</a>
-        <a class="text-link" href="/en/paper/">Paper citation status</a>
+        <a class="text-link" href="/reports/live-publication-readiness/">Live publication readiness</a>
+        <a class="text-link" href="/reports/github-topic-indexing-readiness/">GitHub topic readiness</a>
       </div>
       <aside class="source-panel" aria-label="Report citation boundary">
         <div>
@@ -72,6 +73,8 @@ const jsonLd = {
         </div>
         <div class="source-links">
           <a href="/reports/">Full report list</a>
+          <a href="/reports/live-publication-readiness/">Live crawl readiness</a>
+          <a href="/reports/github-topic-indexing-readiness/">GitHub topic readiness</a>
           <a href="/search/">Search evidence</a>
         </div>
       </aside>
