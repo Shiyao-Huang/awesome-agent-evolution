@@ -1,21 +1,21 @@
 # SEO Indexable Assets Audit
 
-Generated: 2026-06-05T09:33:36.489Z
+Generated: 2026-06-05T10:19:53.546Z
 
 Canonical host: https://agent-evolution.com
 
 | Metric | Count |
 |---|---:|
-| Assets checked | 527 |
-| Passed | 527 |
+| Assets checked | 532 |
+| Passed | 532 |
 | Failed | 0 |
-| Sitemap URLs | 931 |
+| Sitemap URLs | 444 |
 
 Global status: **PASS**
 
 ## Scope
 
-This audit verifies generated HTML SEO assets for `site/src/content/blog/*.mdx`, `site/src/content/research/*.mdx`, and `site/public/reports/projects/*.md`: canonical URL, sitemap inclusion, meta description, Open Graph metadata, JSON-LD article type, and absence of `noindex`.
+This audit verifies generated HTML SEO assets for `site/src/content/blog/*.mdx` and `site/src/content/research/*.mdx`: canonical URL, sitemap inclusion, meta description, Open Graph metadata, JSON-LD article type, and absence of `noindex`. Project reports in `site/public/reports/projects/*.md` and survey publication slices in `reports/survey-publication/[0-9][0-9]-*.md` are generated as review-gated HTML, must emit `noindex`, and must stay out of the sitemap until their public-copy review passes.
 
 ## Failures
 

@@ -15,7 +15,10 @@ export default defineConfig({
   integrations: [
     mdx(),
     sitemap({
-      filter: (page) => !page.endsWith('/retrospective/')
+      filter: (page) =>
+        !page.endsWith('/retrospective/') &&
+        !page.includes('/reports/projects/') &&
+        !page.includes('/reports/survey-publication/')
     }),
     react()
   ],

@@ -10,6 +10,7 @@ const distRoot = path.join(siteRoot, 'dist');
 const blogRoot = path.join(siteRoot, 'src/content/blog');
 const researchRoot = path.join(siteRoot, 'src/content/research');
 const projectReportsRoot = path.join(siteRoot, 'public/reports/projects');
+const surveyPublicationRoot = path.join(root, 'reports/survey-publication');
 const reportJsonPath = path.join(root, 'reports/seo-indexable-assets.json');
 const reportMdPath = path.join(root, 'reports/seo-indexable-assets.md');
 const canonicalHost = 'https://agent-evolution.com';
@@ -143,14 +144,35 @@ for (const name of fs.readdirSync(projectReportsRoot).filter((file) => file.ends
     sourcePath,
     urlPath: `/reports/projects/${slug}/`,
     requiredType: 'Article',
-    requireFrontmatter: false
+    requireFrontmatter: false,
+    indexPolicy: 'noindex'
   }));
+}
+
+if (exists(surveyPublicationRoot)) {
+  for (const name of fs.readdirSync(surveyPublicationRoot).filter((file) => /^[0-9][0-9]-.*\.md$/.test(file)).sort()) {
+    const slug = stripExt(name);
+    const sourcePath = path.join(surveyPublicationRoot, name);
+    assets.push(checkHtmlAsset({
+      collection: 'survey-publication',
+      slug,
+      sourcePath,
+      urlPath: `/reports/survey-publication/${slug}/`,
+      requiredType: 'Article',
+      requireFrontmatter: false,
+      indexPolicy: 'noindex'
+    }));
+  }
 }
 
 for (const asset of assets) {
   if (asset.indexPolicy === 'indexable' && !sitemapUrls.has(asset.url)) {
     asset.status = 'fail';
     asset.failures.push('URL missing from sitemap');
+  }
+  if (asset.indexPolicy === 'noindex' && sitemapUrls.has(asset.url)) {
+    asset.status = 'fail';
+    asset.failures.push('review-gated URL should not appear in sitemap');
   }
 }
 
@@ -165,7 +187,7 @@ const failedAssets = assets.filter((asset) => asset.status === 'fail');
 const report = {
   generated_at: new Date().toISOString(),
   canonical_host: canonicalHost,
-  checked_collections: ['blog', 'research', 'project-report'],
+  checked_collections: ['blog', 'research', 'project-report', 'survey-publication'],
   global_status: globalFailures.length || failedAssets.length ? 'fail' : 'pass',
   counts: {
     assets_checked: assets.length,
@@ -199,7 +221,7 @@ const md = [
   '',
   '## Scope',
   '',
-  'This audit verifies generated HTML SEO assets for `site/src/content/blog/*.mdx`, `site/src/content/research/*.mdx`, and `site/public/reports/projects/*.md`: canonical URL, sitemap inclusion, meta description, Open Graph metadata, JSON-LD article type, and absence of `noindex`.',
+  'This audit verifies generated HTML SEO assets for `site/src/content/blog/*.mdx` and `site/src/content/research/*.mdx`: canonical URL, sitemap inclusion, meta description, Open Graph metadata, JSON-LD article type, and absence of `noindex`. Project reports in `site/public/reports/projects/*.md` and survey publication slices in `reports/survey-publication/[0-9][0-9]-*.md` are generated as review-gated HTML, must emit `noindex`, and must stay out of the sitemap until their public-copy review passes.',
   '',
   '## Failures',
   '',

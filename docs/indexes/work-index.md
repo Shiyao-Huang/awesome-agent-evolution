@@ -13,7 +13,7 @@
 | `paper-drafts` | present | 37 | 3 | 0 | 3.6 MB |
 | `paper` | present | 15 | 2 | 0 | 1023 KB |
 | `latex` | present | 9 | 2 | 0 | 53 KB |
-| `site` | present | 2193 | 994 | 0 | 61 MB |
+| `site` | present | 2200 | 1001 | 0 | 65 MB |
 | `survey` | present | 94 | 4 | 0 | 3.4 MB |
 | `scripts` | present | 63 | 1 | 0 | 1.7 MB |
 | `data-engine` | present | 495 | 20 | 0 | 29 MB |
@@ -66,13 +66,13 @@
 - `site/.astro/collections/blog.schema.json`
 - `site/.astro/collections/projectReports.schema.json`
 - `site/.astro/collections/research.schema.json`
+- `site/.astro/collections/surveyPublication.schema.json`
 - `site/.astro/content-assets.mjs`
 - `site/.astro/content-modules.mjs`
 - `site/.astro/content.d.ts`
 - `site/.astro/data-store.json`
 - `site/.astro/settings.json`
 - `site/.astro/types.d.ts`
-- `site/BUILD_SEO_VALIDATION.md`
 
 ### `survey`
 

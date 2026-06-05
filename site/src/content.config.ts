@@ -31,4 +31,9 @@ const projectReports = defineCollection({
   schema: z.object({}).passthrough()
 });
 
-export const collections = { blog, research, projectReports };
+const surveyPublication = defineCollection({
+  loader: glob({ pattern: '[0-9][0-9]-*.md', base: '../reports/survey-publication' }),
+  schema: z.object({}).passthrough()
+});
+
+export const collections = { blog, research, projectReports, surveyPublication };

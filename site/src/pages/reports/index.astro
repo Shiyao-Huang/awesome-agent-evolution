@@ -1,15 +1,16 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
-import { projectReports, paperReports } from '@/data/reports';
+import { projectReports, paperReports, surveyPublicationReports } from '@/data/reports';
 ---
 <BaseLayout title="Self Evolve 研究报告 — 项目深度分析与论文解读" description="Self Evolve 公开研究报告：GitHub 项目 model card 深度分析、论文精读与跨领域研究整理。">
   <section class="section">
     <div class="container">
       <div class="eyebrow">Reports / 研究报告</div>
       <h1 class="gradient-text">公开研究报告索引</h1>
-      <p class="lead">这里收录所有已落盘的项目 model card 深度分析和论文精读报告。每份报告都遵循证据链规范，从原始材料到分析结论全程可追溯。</p>
+      <p class="lead">这里收录已落盘的项目 model card、论文精读和 Survey 发布切片。它们共享证据链入口，但状态不同：未完成 reader/editor 与 academic public-copy review 的页面只保留可访问入口，暂不作为搜索索引内容。</p>
       <div class="metrics">
         <div class="metric"><strong>{projectReports.length}</strong><span>份项目分析报告</span></div>
+        <div class="metric"><strong>{surveyPublicationReports.length}</strong><span>份 Survey 发布切片</span></div>
         <div class="metric"><strong>{paperReports.length}</strong><span>份论文报告</span></div>
       </div>
     </div>
@@ -38,6 +39,33 @@ import { projectReports, paperReports } from '@/data/reports';
           ))}
         </div>
         {projectReports.length > 30 && <p style="margin-top: 18px; color: var(--muted);">显示前 30 份，共 {projectReports.length} 份项目报告。</p>}
+      </div>
+    </section>
+  )}
+
+  {surveyPublicationReports.length > 0 && (
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Survey publication</div>
+            <h2>面向公开发布的 Survey 切片</h2>
+          </div>
+        </div>
+        <p class="lead">这些切片是英文发布候选，尚未补齐中文同证据链与学术审查；当前按 review-gated 页面处理。</p>
+        <div class="grid">
+          {surveyPublicationReports.map((report) => (
+            <article class="card">
+              <div class="eyebrow">{report.category}</div>
+              <h3><a href={report.href}>{report.title}</a></h3>
+              <p>{report.excerpt}</p>
+              <div class="pill-row">
+                <span class="pill">survey</span>
+                <a class="pill" href={report.href}>阅读切片</a>
+              </div>
+            </article>
+          ))}
+        </div>
       </div>
     </section>
   )}

@@ -115,12 +115,12 @@ Initial template changes reduced propagation risk, but the six-agent follow-up r
 | Reader/editor 2 | Fail | Report lead extracted legacy body before the boundary; report bodies still exposed legacy/internal sections; model cards remained template-like. | Replaced report lead with conservative evidence-summary extraction; added legacy-body warning before `<Content />`; status-gated project model-card copy. |
 | Reader/editor 3 | Fail | Project, report, and Value LSH pages lacked enough English same-evidence summary, and `/projects/` split Chinese understanding from English search. | Added compact English evidence-path summaries and rewrote `/projects/` lead to say Chinese/English point to the same evidence chain. |
 | Academic 1 | Fail | `quality/value/high value` semantics remained visible; project details overclaimed importance/teaching value for candidate or pending projects. | Reframed Value LSH public labels; changed project detail role/teaching copy by `verified/candidate/pending` status. |
-| Academic 2 | Fail | Unreviewed project reports were indexable without a strong enough reader boundary, while the SEO goal requires text/report assets to remain crawlable. | Kept generated project reports indexable and in sitemap, but added stronger bilingual evidence-boundary copy and changed the SEO audit to fail any accidental `noindex`. |
+| Academic 2 | Fail | Unreviewed project reports were indexable without a strong enough reader boundary; this conflicts with the highest public-copy guidance even if it helps SEO coverage. | Kept generated project-report HTML accessible for review, but set it to `noindex`, excluded it from the sitemap, and changed the SEO audit to fail accidental sitemap re-entry before public-copy review passes. |
 | Academic 3 | Fail | MetaGPT, SWE-bench, Aider, EverOS, and related reports still contained strong claims without dated/source-limited evidence. | Downgraded sampled strong claims to versioned review cues; remaining report bodies stay in the indexable rewrite/review queue. |
 
 ### Current Batch C Status
 
-Batch C is **not passed**. The current state is safer than before because generated project reports now expose clearer bilingual evidence boundaries while remaining indexable SEO assets, but project reports and model-card bodies still require a later per-report rewrite/review campaign before they can be called quality-complete public knowledge pages.
+Batch C is **not passed**. The current state is safer than before because generated project reports now expose clearer bilingual evidence boundaries and are noindexed until per-report review passes, but project reports and model-card bodies still require a later rewrite/review campaign before they can be called quality-complete public knowledge pages.
 
 ## 2026-06-05 Agent Review Conclusions
 

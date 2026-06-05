@@ -73,7 +73,7 @@ const summary = valueSnapshot.summary;
 const generatedDate = valueSnapshot.generated_at.slice(0, 10);
 const materialCountLabel = summary.total_materials.toLocaleString();
 const classLabels: Record<ValueClass, string> = {
-  'high-value-candidate': '优先深读',
+  'high-value-candidate': '优先复核',
   'needs-review': '待复核',
   'low-signal-or-risk': '修复 / 风险',
 };
@@ -98,7 +98,7 @@ const evidenceBand = (confidence: number) => {
   return '弱证据';
 };
 const scoreBand = (score: number) => {
-  if (score >= 70) return '优先深读';
+  if (score >= 70) return '优先复核';
   if (score >= 45) return '需要复核';
   return '暂不引用';
 };
@@ -108,20 +108,20 @@ const jsonLd = {
   '@type': 'Dataset',
   name: 'Value LSH Evidence Triage Queue',
   alternateName: 'AI 自进化素材证据分诊队列',
-  description: 'A heuristic value-facet triage queue over GitHub projects, papers, social/X captures, and blog materials for deciding what to read, review, or avoid citing for now.',
+  description: 'A heuristic triage-facet queue over GitHub projects, papers, social/X captures, and blog materials for deciding what to read, review, or avoid citing for now.',
   url: `${site.url}/value-lsh/`,
   inLanguage: 'zh-CN',
   dateModified: valueSnapshot.generated_at,
   isPartOf: { '@id': `${site.url}/#website` },
-  measurementTechnique: '-1/0/+1 value facets, locality-sensitive hashing buckets, PCA/TSNE-ready embedding projection',
-  variableMeasured: ['value_score', 'confidence', 'value_class', 'embedding_cluster', 'lsh_bucket'],
+  measurementTechnique: '-1/0/+1 triage facets, locality-sensitive hashing buckets, PCA/TSNE-ready embedding projection',
+  variableMeasured: ['triage_score', 'confidence', 'review_class', 'embedding_cluster', 'lsh_bucket'],
 };
 ---
 
 <BaseLayout
   title="Value LSH 证据分诊队列 — Self Evolve"
   description="Self Evolve 的 Value LSH 是启发式证据分诊队列：当材料太多时，帮助决定先读哪些、先复核哪些、哪些暂时不要引用；它不是最终价值裁判。"
-  pageKeywords={['Value LSH', '3D embedding graph', 'AI 自进化证据分诊', '局部敏感哈希', 'value facet matrix']}
+  pageKeywords={['Value LSH', '3D embedding graph', 'AI 自进化证据分诊', '局部敏感哈希', 'triage facet matrix']}
 >
   <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} is:inline />
 
@@ -129,8 +129,8 @@ const jsonLd = {
     <div class="container">
       <div class="eyebrow">Evidence triage · heuristic queue</div>
       <h1>材料太多时，先决定读哪 20 个、复核哪 20 个、哪些暂时不要引用。</h1>
-      <p class="lead">Value LSH 是一个启发式分诊队列：用 26 个判断问题，把 {materialCountLabel} 条 GitHub、论文、社交/X 和博客材料分成“优先深读、需要复核、弱证据/风险”三类。</p>
-      <p class="value-lsh-caveat">方法边界：这里的 value score 和 confidence 没有完成校准，也没有人工一致性验证；页面只用于排研究顺序，不能替代论文精读、项目运行验证或学术审查。</p>
+      <p class="lead">Value LSH 是一个启发式分诊队列：用 26 个判断问题，把 {materialCountLabel} 条 GitHub、论文、社交/X 和博客材料分成“优先复核、需要复核、弱证据/风险”三类。</p>
+      <p class="value-lsh-caveat">方法边界：这里的 triage score 和 confidence 没有完成校准，也没有人工一致性验证；页面只用于排研究顺序，不能替代论文精读、项目运行验证或学术审查。<strong>English:</strong> This is a review queue, not a calibrated value judgment or final quality ranking.</p>
       <div class="value-lsh-actions">
         <a class="button primary" href={`${repoPath}/analysis/value-lsh-index.md`} target="_blank" rel="noopener">查看结果报告</a>
         <a class="button" href={`${repoPath}/data-engine/value-lsh-index`} target="_blank" rel="noopener">数据集目录</a>
@@ -143,9 +143,9 @@ const jsonLd = {
     <div class="container">
       <div class="value-lsh-metrics" aria-label="Value LSH summary metrics">
         <div><strong>{summary.total_materials.toLocaleString()}</strong><span>materials</span></div>
-        <div><strong>{summary.value_tag_count}</strong><span>value lines</span></div>
+        <div><strong>{summary.value_tag_count}</strong><span>triage facets</span></div>
         <div><strong>{summary.total_buckets}</strong><span>LSH buckets</span></div>
-        <div><strong>{graphSnapshot.summary.embedding_clusters}</strong><span>value-vector k-means clusters</span></div>
+        <div><strong>{graphSnapshot.summary.embedding_clusters}</strong><span>facet-vector clusters</span></div>
       </div>
       <ValueLshGraph3D variant="full" maxNodes={summary.total_materials} height={590} />
     </div>
@@ -176,8 +176,8 @@ const jsonLd = {
             <div class="value-region-metrics">
               <span>frontier {region.metrics.frontier.toFixed(2)}</span>
               <span>attention {region.metrics.attention.toFixed(2)}</span>
-              <span>quality {region.metrics.quality.toFixed(2)}</span>
-              <span>priority-candidate share {(region.metrics.highValueShare * 100).toFixed(0)}%</span>
+              <span>evidence density {region.metrics.quality.toFixed(2)}</span>
+              <span>priority-review share {(region.metrics.highValueShare * 100).toFixed(0)}%</span>
             </div>
           </article>
         ))}
@@ -239,8 +239,8 @@ const jsonLd = {
     <div class="container">
       <div class="section-head">
         <div>
-          <div class="eyebrow">High Value Candidates</div>
-          <h2>当前最值得深挖的候选</h2>
+          <div class="eyebrow">Priority Review Candidates</div>
+          <h2>当前优先复核的候选</h2>
         </div>
         <span class="value-lsh-date">Generated {generatedDate}</span>
       </div>
@@ -313,7 +313,7 @@ const jsonLd = {
             <article>
               <div>
                 <strong>{cluster.semanticTitle}</strong>
-                <span>{cluster.clusterId} · {cluster.size.toLocaleString()} items · avg value {cluster.metrics.value.toFixed(1)}</span>
+                <span>{cluster.clusterId} · {cluster.size.toLocaleString()} items · avg triage score {cluster.metrics.value.toFixed(1)}</span>
               </div>
               <p>{cluster.meaning}</p>
               <div class="value-chip-row">
@@ -323,7 +323,7 @@ const jsonLd = {
                 <span>confidence {cluster.metrics.confidence.toFixed(1)}</span>
                 <span>frontier {cluster.metrics.frontier.toFixed(2)}</span>
                 <span>attention {cluster.metrics.attention.toFixed(2)}</span>
-                <span>quality {cluster.metrics.quality.toFixed(2)}</span>
+                <span>evidence density {cluster.metrics.quality.toFixed(2)}</span>
               </div>
             </article>
           ))}
@@ -336,7 +336,7 @@ const jsonLd = {
     <div class="container">
       <div class="section-head">
         <div>
-          <div class="eyebrow">Value Facets</div>
+          <div class="eyebrow">Triage Facets</div>
           <h2>这 26 条线决定每一次二分。</h2>
         </div>
       </div>

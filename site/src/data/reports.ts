@@ -6,7 +6,7 @@ const reportsRoot = path.resolve('public/reports');
 export interface ReportEntry {
   slug: string;
   title: string;
-  category: 'projects' | 'papers';
+  category: 'projects' | 'papers' | 'survey-publication';
   href: string;
   excerpt: string;
 }
@@ -34,7 +34,26 @@ function listMarkdownFiles(dir: string, category: 'projects' | 'papers'): Report
         slug,
         title: parseTitle(content),
         category,
-        href: `/reports/${dir}/${slug}`,
+        href: `/reports/${dir}/${slug}/`,
+        excerpt: parseExcerpt(content)
+      };
+    })
+    .sort((a, b) => a.slug.localeCompare(b.slug));
+}
+
+function listSurveyPublicationFiles(): ReportEntry[] {
+  const full = path.resolve('..', 'reports/survey-publication');
+  if (!statSync(full, { throwIfNoEntry: false })?.isDirectory()) return [];
+  return readdirSync(full)
+    .filter((f) => /^[0-9][0-9]-.*\.md$/.test(f))
+    .map((f) => {
+      const content = readFileSync(path.join(full, f), 'utf8');
+      const slug = f.replace(/\.md$/, '');
+      return {
+        slug,
+        title: parseTitle(content),
+        category: 'survey-publication' as const,
+        href: `/reports/survey-publication/${slug}/`,
         excerpt: parseExcerpt(content)
       };
     })
@@ -43,4 +62,5 @@ function listMarkdownFiles(dir: string, category: 'projects' | 'papers'): Report
 
 export const projectReports: ReportEntry[] = listMarkdownFiles('projects', 'projects');
 export const paperReports: ReportEntry[] = listMarkdownFiles('papers', 'papers');
-export const allReports: ReportEntry[] = [...projectReports, ...paperReports];
+export const surveyPublicationReports: ReportEntry[] = listSurveyPublicationFiles();
+export const allReports: ReportEntry[] = [...projectReports, ...paperReports, ...surveyPublicationReports];

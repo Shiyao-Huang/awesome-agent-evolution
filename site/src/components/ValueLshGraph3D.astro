@@ -359,11 +359,12 @@ const defaultRegion = valueLshRegions[0];
               stroke-width="2"
             />
             <g transform={`translate(${region.labelX}, ${region.labelY})`}>
-              <rect x="0" y="0" width="146" height="40" rx="16" fill="rgba(255,252,248,.92)" stroke="rgba(20,25,34,.10)" />
+              <rect x="0" y="0" width="176" height="54" rx="16" fill="rgba(255,252,248,.92)" stroke="rgba(20,25,34,.10)" />
               <circle cx="18" cy="20" r="10" fill="rgba(246,239,230,.98)" />
               <text x="18" y="24" text-anchor="middle" font-size="11" font-weight="700" fill="#1f2430">{region.rank}</text>
               <text x="36" y="16" font-size="12" font-weight="700" fill="#1f2430">{region.arrow} {region.rankingLabel}</text>
               <text x="36" y="29" font-size="10" font-weight="600" fill="rgba(31,36,48,.66)">{region.clusterId}</text>
+              <text x="36" y="43" font-size="9" font-weight="700" fill="rgba(31,36,48,.72)">{region.topFacets.slice(0, 2).map((facet) => facet.label).join(' · ')}</text>
             </g>
           </g>
         ))}
@@ -379,6 +380,12 @@ const defaultRegion = valueLshRegions[0];
       <strong data-region-arc-title>↗ 前沿证据</strong>
       <p data-region-arc-detail>camera focus + cluster spotlight</p>
       <div class="value-lsh-arc-guide-badges" data-region-arc-badges></div>
+    </div>
+    <div class="value-lsh-stage-semantic" data-region-stage-semantic aria-hidden="true">
+      <span class="value-lsh-stage-semantic-kicker" data-region-stage-semantic-kicker>Region meaning</span>
+      <strong data-region-stage-semantic-title>↗ 前沿证据</strong>
+      <p data-region-stage-semantic-detail>证据链、验证器和可运行性都比较强。</p>
+      <div class="value-lsh-stage-semantic-facets" data-region-stage-semantic-facets></div>
     </div>
     <div class="value-lsh-region-markers" data-region-markers aria-label="Evidence region anchors"></div>
   </div>
@@ -862,6 +869,11 @@ const defaultRegion = valueLshRegions[0];
     const regionArcGuideTitle = root.querySelector('[data-region-arc-title]');
     const regionArcGuideDetail = root.querySelector('[data-region-arc-detail]');
     const regionArcGuideBadges = root.querySelector('[data-region-arc-badges]');
+    const regionStageSemantic = root.querySelector('[data-region-stage-semantic]');
+    const regionStageSemanticKicker = root.querySelector('[data-region-stage-semantic-kicker]');
+    const regionStageSemanticTitle = root.querySelector('[data-region-stage-semantic-title]');
+    const regionStageSemanticDetail = root.querySelector('[data-region-stage-semantic-detail]');
+    const regionStageSemanticFacets = root.querySelector('[data-region-stage-semantic-facets]');
     const fallbackSurface = root.querySelector('[data-value-lsh-fallback]');
     const fallbackSvg = root.querySelector('[data-region-fallback-svg]');
     const fallbackRouteLayer = root.querySelector('[data-region-fallback-route]');
@@ -1210,6 +1222,8 @@ const defaultRegion = valueLshRegions[0];
     };
 
     const createRegionMarker = (region: SceneRegion, index: number) => {
+      const markerSummary = region.summary || region.meaning;
+      const markerFacets = (region.topFacets || []).slice(0, 2).map((facet) => facet.label);
       const marker = document.createElement('button');
       marker.type = 'button';
       marker.className = 'value-region-marker';
@@ -1219,7 +1233,9 @@ const defaultRegion = valueLshRegions[0];
         <span class="value-region-marker-rank">${index + 1}</span>
         <span class="value-region-marker-copy">
           <strong>${escapeHtml(region.arrow)} ${escapeHtml(region.rankingLabel)}</strong>
-          <small>${escapeHtml(region.clusterId)}</small>
+          <small class="value-region-marker-cluster">${escapeHtml(region.clusterId)}</small>
+          <span class="value-region-marker-summary">${escapeHtml(markerSummary)}</span>
+          <span class="value-region-marker-facets">${markerFacets.map((facet) => `<i>${escapeHtml(facet)}</i>`).join('')}</span>
         </span>
       `;
       marker.addEventListener('click', () => selectRegion(region));
@@ -1306,6 +1322,7 @@ const defaultRegion = valueLshRegions[0];
     let transitionTravel = 0;
     let transitionCurve: THREE.QuadraticBezierCurve3 | null = null;
     let transitionGuidePoint: THREE.Vector3 | null = null;
+    let semanticGuideRegion: SceneRegion | null = null;
     const showRegionTransition = (fromRegion: SceneRegion, toRegion: SceneRegion) => {
       transitionGroup.clear();
       const start = regionPosition(fromRegion);
@@ -1368,6 +1385,7 @@ const defaultRegion = valueLshRegions[0];
       }, motionEnabled ? 760 : 320);
       announceRegionGuide(region, previousRegion);
       updateArcGuide(region, previousRegion);
+      updateStageSemanticGuide(region);
       updateFallbackStage(region, previousRegion);
       if (previousRegion && previousRegion.kind !== region.kind) {
         showRegionTransition(previousRegion, region);
@@ -1500,6 +1518,49 @@ const defaultRegion = valueLshRegions[0];
       if (regionArcGuideBadges instanceof HTMLElement) {
         regionArcGuideBadges.innerHTML = guide.badges.map((badge) => `<span>${escapeHtml(badge)}</span>`).join('');
       }
+    };
+
+    const updateStageSemanticGuide = (region: SceneRegion) => {
+      semanticGuideRegion = region;
+      if (!(regionStageSemantic instanceof HTMLElement)) return;
+      regionStageSemantic.dataset.active = 'true';
+      regionStageSemantic.style.setProperty('--stage-semantic-accent', region.color);
+      if (regionStageSemanticKicker instanceof HTMLElement) {
+        regionStageSemanticKicker.textContent = `Region meaning · ${region.clusterId}`;
+      }
+      if (regionStageSemanticTitle instanceof HTMLElement) {
+        regionStageSemanticTitle.textContent = `${region.arrow} ${region.rankingLabel}`;
+      }
+      if (regionStageSemanticDetail instanceof HTMLElement) {
+        regionStageSemanticDetail.textContent = region.summary || region.meaning;
+      }
+      if (regionStageSemanticFacets instanceof HTMLElement) {
+        regionStageSemanticFacets.innerHTML = (region.topFacets || []).slice(0, 3).map((facet) => `<span>${escapeHtml(facet.label)}</span>`).join('');
+      }
+    };
+
+    const updateStageSemanticGuidePosition = () => {
+      if (!(regionStageSemantic instanceof HTMLElement) || !semanticGuideRegion) return;
+      const width = stage.clientWidth;
+      const height = stage.clientHeight;
+      group.updateMatrixWorld(true);
+      camera.updateMatrixWorld();
+      const cuePoint = regionPosition(semanticGuideRegion).clone().add(new THREE.Vector3(0, 0.26, 0));
+      const world = group.localToWorld(cuePoint);
+      const projected = world.project(camera);
+      const visible = projected.z > -1 && projected.z < 1;
+      if (!visible) {
+        regionStageSemantic.dataset.active = 'false';
+        return;
+      }
+      const x = ((projected.x + 1) / 2) * width;
+      const y = ((-projected.y + 1) / 2) * height;
+      const guideWidth = regionStageSemantic.offsetWidth || 228;
+      const guideHeight = regionStageSemantic.offsetHeight || 92;
+      const clampedX = Math.min(width - guideWidth / 2 - 8, Math.max(guideWidth / 2 + 8, x));
+      const clampedY = Math.min(height - 10, Math.max(guideHeight + 6, y));
+      regionStageSemantic.dataset.active = 'true';
+      regionStageSemantic.style.transform = `translate(${clampedX}px, ${clampedY}px) translate(-50%, -100%)`;
     };
 
     const updateFallbackStage = (region: SceneRegion, previousRegion?: SceneRegion | null) => {
@@ -1721,6 +1782,7 @@ const defaultRegion = valueLshRegions[0];
       }
       updateRegionMarkers();
       updateArcGuidePosition();
+      updateStageSemanticGuidePosition();
       renderer?.render(scene, camera);
       requestAnimationFrame(tick);
     };
@@ -1973,6 +2035,86 @@ const defaultRegion = valueLshRegions[0];
     line-height: 1.2;
   }
 
+  .value-lsh-stage-semantic {
+    --stage-semantic-accent: #FF6B35;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: grid;
+    gap: 4px;
+    min-width: 176px;
+    max-width: min(250px, calc(100% - 24px));
+    padding: 10px 12px;
+    border: 1px solid color-mix(in srgb, var(--stage-semantic-accent) 26%, rgba(20, 25, 34, 0.1));
+    border-radius: 16px;
+    background: rgba(255, 252, 248, 0.94);
+    box-shadow: 0 18px 34px rgba(34, 45, 68, 0.14);
+    backdrop-filter: blur(10px);
+    pointer-events: none;
+    opacity: 0;
+    z-index: 2;
+    transition: opacity .18s ease;
+  }
+
+  .value-lsh-stage-semantic[data-active="true"] {
+    opacity: 1;
+  }
+
+  .value-lsh-stage-semantic::after {
+    content: '';
+    position: absolute;
+    left: 20px;
+    bottom: -8px;
+    width: 14px;
+    height: 14px;
+    border-right: 1px solid color-mix(in srgb, var(--stage-semantic-accent) 26%, rgba(20, 25, 34, 0.1));
+    border-bottom: 1px solid color-mix(in srgb, var(--stage-semantic-accent) 26%, rgba(20, 25, 34, 0.1));
+    background: rgba(255, 252, 248, 0.94);
+    transform: rotate(45deg);
+  }
+
+  .value-lsh-stage-semantic-kicker {
+    color: color-mix(in srgb, var(--stage-semantic-accent) 72%, #1f2430);
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .value-lsh-stage-semantic strong {
+    font-size: 12px;
+    font-weight: 850;
+    line-height: 1.35;
+  }
+
+  .value-lsh-stage-semantic p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1.35;
+  }
+
+  .value-lsh-stage-semantic-facets {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    min-height: 18px;
+  }
+
+  .value-lsh-stage-semantic-facets span {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid color-mix(in srgb, var(--stage-semantic-accent) 18%, rgba(20, 25, 34, 0.1));
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--stage-semantic-accent) 8%, rgba(255, 252, 248, 0.98));
+    color: var(--fg);
+    padding: 3px 8px;
+    font-size: 10px;
+    font-weight: 850;
+    line-height: 1.2;
+  }
+
   .value-lsh-region-markers {
     position: absolute;
     inset: 0;
@@ -1984,12 +2126,13 @@ const defaultRegion = valueLshRegions[0];
     left: 0;
     top: 0;
     display: inline-flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 8px;
     min-width: 0;
-    padding: 7px 10px;
+    max-width: min(228px, calc(100% - 16px));
+    padding: 8px 10px;
     border: 1px solid rgba(20, 25, 34, 0.12);
-    border-radius: 999px;
+    border-radius: 18px;
     background: rgba(255, 252, 248, 0.92);
     box-shadow: 0 12px 24px rgba(34, 45, 68, 0.12);
     color: var(--fg);
@@ -2025,7 +2168,8 @@ const defaultRegion = valueLshRegions[0];
   .value-region-marker-copy {
     display: grid;
     min-width: 0;
-    line-height: 1.1;
+    gap: 2px;
+    line-height: 1.15;
   }
 
   .value-region-marker-copy strong {
@@ -2034,11 +2178,49 @@ const defaultRegion = valueLshRegions[0];
     white-space: nowrap;
   }
 
-  .value-region-marker-copy small {
+  .value-region-marker-cluster {
     color: var(--muted);
     font-size: 10px;
     font-weight: 800;
     white-space: nowrap;
+  }
+
+  .value-region-marker-summary {
+    display: none;
+    color: color-mix(in srgb, var(--fg) 88%, white);
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 1.35;
+    overflow-wrap: anywhere;
+  }
+
+  .value-region-marker-facets {
+    display: none;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-top: 1px;
+  }
+
+  .value-region-marker-facets i {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid rgba(20, 25, 34, 0.08);
+    border-radius: 999px;
+    background: rgba(246, 239, 230, 0.9);
+    color: color-mix(in srgb, var(--fg) 84%, white);
+    padding: 2px 6px;
+    font-size: 9px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 1.2;
+  }
+
+  .value-region-marker[data-active="true"] .value-region-marker-summary {
+    display: block;
+  }
+
+  .value-region-marker[data-active="true"] .value-region-marker-facets {
+    display: flex;
   }
 
   .value-lsh-legend {
