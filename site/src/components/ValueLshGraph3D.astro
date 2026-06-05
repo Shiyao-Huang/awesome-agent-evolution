@@ -620,10 +620,14 @@ const defaultNeighbors = defaultNode?.neighbors.slice(0, 6) ?? [];
         }
         const x = ((projected.x + 1) / 2) * width;
         const y = ((-projected.y + 1) / 2) * height;
-        const insideViewport = x >= 24 && x <= width - 24 && y >= 24 && y <= height - 24;
+        const markerWidth = marker.offsetWidth || 146;
+        const markerHeight = marker.offsetHeight || 40;
+        const clampedX = Math.min(width - markerWidth / 2 - 8, Math.max(markerWidth / 2 + 8, x));
+        const clampedY = Math.min(height - markerHeight / 2 - 8, Math.max(markerHeight / 2 + 8, y));
+        const insideViewport = clampedX >= markerWidth / 2 && clampedX <= width - markerWidth / 2 && clampedY >= markerHeight / 2 && clampedY <= height - markerHeight / 2;
         marker.dataset.hidden = insideViewport ? 'false' : 'true';
         if (insideViewport) {
-          marker.style.transform = `translate(${x}px, ${y}px) translate(-50%, -50%)`;
+          marker.style.transform = `translate(${clampedX}px, ${clampedY}px) translate(-50%, -50%)`;
         }
       });
     };
