@@ -34,7 +34,7 @@ function listMarkdownFiles(dir: string, category: 'projects' | 'papers'): Report
         slug,
         title: parseTitle(content),
         category,
-        href: `/reports/${dir}/${slug}`,
+        href: `/reports/${dir}/${slug}/`,
         excerpt: parseExcerpt(content)
       };
     })

@@ -1,0 +1,70 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { getCollection, render } from 'astro:content';
+import { site } from '@/data/site';
+
+export async function getStaticPaths() {
+  const reports = await getCollection('projectReports');
+  return reports.map((report) => ({ params: { slug: report.id }, props: { report } }));
+}
+
+const { report } = Astro.props;
+const { Content } = await render(report);
+const body = report.body ?? '';
+const title = body.match(/^#\s+(.+)$/m)?.[1]?.trim() ?? report.id.replace(/-/g, ' ');
+const excerpt = body
+  .split('\n')
+  .map((line) => line.trim())
+  .filter((line) => line && !line.startsWith('#') && !line.startsWith('|') && !line.startsWith('```'))
+  .slice(0, 4)
+  .join(' ')
+  .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
+  .replace(/\s+/g, ' ')
+  .trim();
+const description = excerpt.length > 155 ? `${excerpt.slice(0, 152)}...` : excerpt || `Self Evolve project report for ${title}.`;
+const sourceUrl = `${site.github}/blob/main/site/public/reports/projects/${report.id}.md`;
+const canonical = new URL(`/reports/projects/${report.id}/`, site.url).toString();
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: title,
+  description,
+  inLanguage: 'zh-CN',
+  author: { '@id': `${site.url}/#organization` },
+  publisher: { '@id': `${site.url}/#organization` },
+  mainEntityOfPage: canonical,
+  isBasedOn: sourceUrl,
+  about: ['self-evolving AI agents', 'AI agent project report', 'GitHub evidence map']
+};
+---
+<BaseLayout
+  title={`${title} | Self Evolve 项目报告`}
+  description={description}
+  type="article"
+  pageKeywords={['Self Evolve project report', 'AI agent evolution', 'GitHub project analysis', title]}
+>
+  <article class="blog-article">
+    <div class="eyebrow">Project report / GitHub evidence</div>
+    <h1>{title}</h1>
+    <p class="lead">{description}</p>
+    <div class="pill-row">
+      <a class="pill" href="/reports/">报告索引</a>
+      <a class="pill" href="/projects/">项目索引</a>
+      <a class="pill" href={sourceUrl} target="_blank" rel="noopener">Markdown source</a>
+    </div>
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} is:inline />
+    <Content />
+    <aside class="source-panel" aria-label="项目报告证据链">
+      <div>
+        <div class="eyebrow">Indexable asset</div>
+        <h2>这份 Markdown 报告现在有 HTML 资产页</h2>
+        <p>原始报告仍保留在 `site/public/reports/projects/`，本页提供可被 sitemap、canonical、Open Graph 和结构化数据覆盖的公开 HTML 入口。</p>
+      </div>
+      <div class="source-links">
+        <a href={sourceUrl} target="_blank" rel="noopener">查看 Markdown 源文件</a>
+        <a href="/reports/">返回报告索引</a>
+        <a href={`/search/?q=${encodeURIComponent(title)}`}>搜索相关材料</a>
+      </div>
+    </aside>
+  </article>
+</BaseLayout>

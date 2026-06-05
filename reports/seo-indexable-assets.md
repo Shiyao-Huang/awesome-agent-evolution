@@ -1,6 +1,6 @@
 # SEO Indexable Assets Audit
 
-Generated: 2026-06-05T06:46:26.238Z
+Generated: 2026-06-05T07:12:01.986Z
 
 Canonical host: https://agent-evolution.com
 
@@ -9,7 +9,7 @@ Canonical host: https://agent-evolution.com
 | Assets checked | 40 |
 | Passed | 40 |
 | Failed | 0 |
-| Sitemap URLs | 440 |
+| Sitemap URLs | 925 |
 
 Global status: **PASS**
 

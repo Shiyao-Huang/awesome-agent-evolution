@@ -73,17 +73,15 @@ flowchart LR
 
 ## 核心洞察
 
-一句话：本项目的核心洞察，是把 Self-Evolving AI Agents 从“自我改进的故事”变成“可审计的改进系统”。
+Self-Evolving AI 的关键不是“系统说自己会自我改进”，而是它能不能把反馈变成可审计、可复查、可回滚的长期变化。
 
-三句话：一个系统只有在反馈中改变自己的 prompt、memory、tool policy、workflow、code、weights 或 population，并且保留可验证证据时，才进入自进化范围。Survey 背后的全部资源现在按同一个问题重排：哪个对象在变，什么信号驱动它变，谁阻止它变坏。Evolve-AGI Index 是这次重排后的工作型证据表，用来暴露 benchmark、闭环、迁移和治理证据是否足够，而不是给领域下最终分数。
+这份 Survey 因此只追三件事：哪个对象在变，什么信号驱动它变，谁阻止它变坏。论文、项目、benchmark、社交/博客信号和用户痛点都被放回这条判断链里；Evolve-AGI Index 只是把证据成熟度摊开给读者检查，不是给领域下最终分数。
 
-五句话展开：
+读者可以这样使用它：
 
-1. 过去读者需要在链接、star 热度、论文列表和网站材料之间自行判断；现在先看到结论，再进入证据。
-2. Survey 不是“论文综述合集”，而是把论文、项目、benchmark、社交/博客信号和用户痛点互相校验。
-3. 关键判断不再是“项目名字里有没有 evolution”，而是“系统是否形成 Observe -> Interpret -> Modify -> Verify -> Retain 的闭环”。
-4. Evolve-AGI Index 不只是网站模块，而是一个方法原型：把不同证据摆到同一张可审查的表里，同时暴露权重、口径和验证缺口。
-5. 对外读者看到的每个核心判断都应该能回到论文、项目报告、数据索引或 benchmark 证据；没有证据链的结论标记为 `[UNVERIFIED]`。
+1. 先看变化对象：prompt、memory、tool policy、workflow、code、weights 或 population。
+2. 再看验证与保留：有没有 evaluator、失败候选、回归记录、lineage 和 rollback。
+3. 最后看证据入口：每个核心判断都应能回到论文、项目报告、数据索引或 benchmark；无法追溯的结论标记为 `[UNVERIFIED]`。
 
 ## 核心结论
 
@@ -123,15 +121,15 @@ EAI = Σ(signal_score × signal_weight)
 
 | 层级 | 当前角色 | 关键证据 |
 |---|---|---|
-| 原始证据 | 保留 GitHub、论文、博客、社交素材，作为判断起点。 | [raw index](docs/indexes/raw-index.md), `raw-github/`, `raw-papers/`, `raw-social/`, `raw-blogs/` |
-| 加工分析 | 把素材转成分类、机制、model card、paper review、证据队列和 Evolve-AGI Index。 | [processed index](docs/indexes/processed-index.md), [GitHub analysis](analysis/github-project-data-analysis.md), [projects index](projects/INDEX.md) |
+| 来源材料 | 保留 GitHub、论文、博客和公开讨论，作为每条判断的起点。 | [raw index](docs/indexes/raw-index.md), `raw-github/`, `raw-papers/`, `raw-social/`, `raw-blogs/` |
+| 证据整理 | 把材料转成分类、机制说明、model card、paper review、证据队列和 Evolve-AGI Index。 | [processed index](docs/indexes/processed-index.md), [GitHub analysis](analysis/github-project-data-analysis.md), [projects index](projects/INDEX.md) |
 | Survey 论文 | 把机制、系统、评估、工业实践、痛点和未来方向写成论文结构。 | [survey CN chapters](survey/ch1-intro-cn.md), [paper drafts](paper-drafts/main.tex), [survey latex](survey/latex/main.tex) |
 | 公开结果 | 发布 PDF、网站、报告、图谱、趋势快照和主题页面。 | [results index](docs/indexes/results-index.md), [site](site/src/pages/index.astro), [reports](reports/) |
-| 证据目录 | 给读者检查证据链、索引和公开结果的入口。 | [CONTENT_INDEX.md](CONTENT_INDEX.md), [master index](docs/indexes/master-index.md) |
+| 索引与审计 | 给读者检查证据链、覆盖范围和公开结果的入口。 | [CONTENT_INDEX.md](CONTENT_INDEX.md), [master index](docs/indexes/master-index.md) |
 
 ```mermaid
 flowchart TB
-  Q["核心问题<br/>严格口径下什么算自进化?"] --> A["资源重组<br/>原始证据 -> 加工分析 -> Survey -> 公开结果"]
+  Q["核心问题<br/>严格口径下什么算自进化?"] --> A["证据路径<br/>来源材料 -> 证据整理 -> Survey -> 公开结果"]
   A --> B["机制框架<br/>Five Evolution Loops"]
   A --> C["证据框架<br/>trust chain + model card"]
   A --> D["测量框架<br/>Evolve-AGI Index"]

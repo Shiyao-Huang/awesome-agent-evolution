@@ -73,17 +73,15 @@ This update is not just a metadata refresh. It pulls swarm runtimes, skill optim
 
 ## Core Insight
 
-One sentence: the core insight is to turn Self-Evolving AI Agents from a story about self-improvement into an auditable improvement system.
+The key question is not whether a system says it improves itself, but whether feedback becomes a durable change that can be audited, reviewed, and rolled back.
 
-Three sentences: A system enters this survey's self-evolution scope only when feedback changes its prompt, memory, tool policy, workflow, code, weights, or population and leaves verifiable evidence. All resources behind the survey are now reorganized around one question: what object changes, what signal drives it, and what prevents the change from becoming harmful. The Evolve-AGI Index is a working evidence worksheet for that reorganization, exposing whether benchmark, loop, transfer, and governance evidence is strong enough rather than assigning a final field score.
+This survey therefore follows three things: what object changes, what signal drives the change, and what prevents the change from becoming harmful. Papers, projects, benchmarks, social/blog signals, and user pain points are all placed back onto that judgment chain; the Evolve-AGI Index only exposes evidence maturity for inspection, not a final field score.
 
-Five-sentence expansion:
+Use it this way:
 
-1. Readers used to move between links, stars, paper lists, and site pages on their own; now they see the conclusion first, then the evidence path.
-2. The survey is not just a literature roundup; it cross-checks papers, projects, benchmarks, social/blog signals, and user pain points.
-3. The key judgment is no longer whether a project name includes "evolution"; it is whether the system forms an Observe -> Interpret -> Modify -> Verify -> Retain loop.
-4. The Evolve-AGI Index is no longer just a site module; it becomes a method prototype for placing different evidence types into one inspectable table while exposing weights, denominators, and validation gaps.
-5. Every core claim exposed to readers should trace back to the paper, project reports, data indexes, or benchmark evidence; unsupported claims are marked `[UNVERIFIED]`.
+1. First inspect the mutable object: prompt, memory, tool policy, workflow, code, weights, or population.
+2. Then inspect verification and retention: evaluator, rejected candidates, regression records, lineage, and rollback.
+3. Finally inspect the evidence entry: each core claim should trace back to a paper, project report, data index, or benchmark; unsupported claims are marked `[UNVERIFIED]`.
 
 ## Core Findings
 
@@ -123,15 +121,15 @@ The weights are editorial/proposed weights for this survey: they make different 
 
 | Layer | Current role | Evidence |
 |---|---|---|
-| Source evidence | Keeps GitHub, paper, blog, and social material as the starting point for claims. | [raw index](docs/indexes/raw-index.md), `raw-github/`, `raw-papers/`, `raw-social/`, `raw-blogs/` |
-| Processed analysis | Turns sources into classifications, mechanisms, model cards, paper reviews, evidence queues, and the Evolve-AGI Index. | [processed index](docs/indexes/processed-index.md), [GitHub analysis](analysis/github-project-data-analysis.md), [projects index](projects/INDEX.md) |
+| Source material | Keeps GitHub, papers, blogs, and public discussion as the starting point for each claim. | [raw index](docs/indexes/raw-index.md), `raw-github/`, `raw-papers/`, `raw-social/`, `raw-blogs/` |
+| Evidence organization | Turns material into classifications, mechanism notes, model cards, paper reviews, evidence queues, and the Evolve-AGI Index. | [processed index](docs/indexes/processed-index.md), [GitHub analysis](analysis/github-project-data-analysis.md), [projects index](projects/INDEX.md) |
 | Survey paper | Turns mechanisms, systems, evaluation, industry practice, pain points, and futures into paper structure. | [survey CN chapters](survey/ch1-intro-cn.md), [paper drafts](paper-drafts/main.tex), [survey latex](survey/latex/main.tex) |
 | Public results | Publishes PDFs, site pages, reports, graphs, trend snapshots, and topic pages. | [results index](docs/indexes/results-index.md), [site](site/src/pages/index.astro), [reports](reports/) |
-| Evidence catalog | Lets readers inspect evidence chains, indexes, and public results. | [CONTENT_INDEX.md](CONTENT_INDEX.md), [master index](docs/indexes/master-index.md) |
+| Index and audit | Lets readers inspect evidence chains, coverage boundaries, and public results. | [CONTENT_INDEX.md](CONTENT_INDEX.md), [master index](docs/indexes/master-index.md) |
 
 ```mermaid
 flowchart TB
-  Q["Core question<br/>what counts under the strict self-evolution scope?"] --> A["resource reorganization<br/>raw -> processed -> survey -> results"]
+  Q["Core question<br/>what counts under the strict self-evolution scope?"] --> A["evidence path<br/>source material -> evidence organization -> survey -> public results"]
   A --> B["mechanism framework<br/>Five Evolution Loops"]
   A --> C["evidence framework<br/>trust chain + model card"]
   A --> D["measurement framework<br/>Evolve-AGI Index"]
