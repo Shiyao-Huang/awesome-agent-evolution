@@ -71,7 +71,11 @@ interface Props {
 const graphSnapshot = graphSnapshotJson as GraphSnapshot;
 const analysisSnapshot = analysisSnapshotJson as AnalysisSnapshot;
 const projectRepoBase = 'https://github.com/Shiyao-Huang/awesome-agent-evolution/blob/main/';
-const toPublicReportUrl = (value?: string | null) => value ? `/${value.replace(/^site\/public\//, '')}` : null;
+const toPublicReportUrl = (value?: string | null) => {
+  if (!value) return null;
+  const fileName = value.split('/').pop();
+  return fileName ? `/reports/projects/${fileName.replace(/\.md$/, '')}/` : null;
+};
 const toRawCaptureUrl = (value?: string | null) => value ? `${projectRepoBase}${value}` : null;
 const projectLinkMap = new Map<string, { reportUrl?: string | null; rawUrl?: string | null; sourceUrl?: string | null }>();
 
@@ -125,9 +129,15 @@ const sceneNodes = allNodes
   });
 
 const classLabels: Record<ValueClass, string> = {
-  'high-value-candidate': 'High value',
+  'high-value-candidate': 'Priority review',
   'needs-review': 'Needs review',
   'low-signal-or-risk': 'Repair / risk',
+};
+
+const metricLabels: Record<string, string> = {
+  frontier: 'frontier evidence',
+  attention: 'attention signal',
+  quality: 'evidence density',
 };
 
 const classColors: Record<ValueClass, string> = {
@@ -137,6 +147,8 @@ const classColors: Record<ValueClass, string> = {
 };
 
 const clamp = (value: number, min: number, max: number) => Math.min(max, Math.max(min, value));
+const axisPositionPercent = (value: number) => clamp(((value + 1.2) / 2.4) * 100, 4, 96);
+const axisSpanPercent = (min: number, max: number) => clamp((Math.abs(max - min) / 2.4) * 100, 6, 100);
 const fallbackNodes = [...sceneNodes]
   .sort((a, b) => a.z - b.z)
   .slice(0, variant === 'compact' ? 220 : 420)
@@ -182,22 +194,27 @@ const scenePayload = {
     metricKey: region.metricKey,
     metricValue: region.metricValue,
     meaning: region.meaning,
+    meaningEn: region.meaningEn,
     summary: region.summary,
+    summaryEn: region.summaryEn,
+    metrics: region.metrics,
     nodeCount: region.nodeCount,
     centroid: region.centroid,
     bounds: region.bounds,
     representativeId: region.representatives.find((rep) => sceneNodes.some((node) => node.id === rep.id))?.id ?? region.representatives[0]?.id ?? null,
+    representatives: region.representatives.slice(0, 3),
     topFacets: region.topFacets,
   })),
 };
 const defaultNode = sceneNodes.find((node) => node.neighbors.length > 0) ?? sceneNodes[0];
 const defaultNeighbors = defaultNode?.neighbors.slice(0, 6) ?? [];
+const defaultRegion = valueLshRegions[0];
 ---
 
 <div class={`value-lsh-three ${variant}`} data-value-lsh-three style={`--value-graph-height:${height}px;`}>
   <script type="application/json" data-value-lsh-points set:html={JSON.stringify(scenePayload)} is:inline />
   <div class="value-lsh-stage" data-value-lsh-stage>
-    <canvas data-value-lsh-canvas aria-label="Value LSH 3D graph"></canvas>
+    <canvas data-value-lsh-canvas aria-label="Value LSH evidence triage graph"></canvas>
     <div class="value-lsh-fallback" aria-hidden="true">
       <svg viewBox="0 0 1000 540" role="img">
         <defs>
@@ -265,8 +282,9 @@ const defaultNeighbors = defaultNode?.neighbors.slice(0, 6) ?? [];
             <small>{region.clusterId}</small>
           </div>
           <p>{region.meaning}</p>
+          <p><strong>English:</strong> {region.meaningEn}</p>
           <div class="value-region-card-meta">
-            <span>{region.metricKey} {region.metricValue.toFixed(2)}</span>
+            <span>{metricLabels[region.metricKey] || region.metricKey} {region.metricValue.toFixed(2)}</span>
             <span>{region.nodeCount} nodes</span>
           </div>
           <div class="value-chip-row region">
@@ -288,12 +306,84 @@ const defaultNeighbors = defaultNode?.neighbors.slice(0, 6) ?? [];
       </div>
     </div>
   ) : null}
-  <div class="value-lsh-legend" aria-label="Value LSH legend">
+  {variant === 'full' && defaultRegion ? (
+    <div class="value-lsh-region-summary-panel" data-region-summary-panel aria-label="Active evidence region summary">
+      <div class="value-lsh-region-summary-head">
+        <div>
+          <span data-region-summary-cluster>Region focus · {defaultRegion.clusterId}</span>
+          <h4 data-region-summary-label>{defaultRegion.arrow} {defaultRegion.rankingLabel}</h4>
+        </div>
+        <div class="value-lsh-region-summary-metrics">
+          <strong data-region-summary-metric-value>{defaultRegion.metricValue.toFixed(2)}</strong>
+          <span data-region-summary-metric-key>{metricLabels[defaultRegion.metricKey] || defaultRegion.metricKey}</span>
+        </div>
+      </div>
+      <p class="value-lsh-region-summary-note" data-region-summary-note>{defaultRegion.summary}</p>
+      <p data-region-summary-meaning>{defaultRegion.meaning}</p>
+      <p data-region-summary-meaning-en><strong>English:</strong> {defaultRegion.meaningEn}</p>
+      <div class="value-chip-row region-summary" data-region-summary-facets>
+        {defaultRegion.topFacets.slice(0, 4).map((facet) => <span>{facet.label}</span>)}
+      </div>
+      <div class="value-lsh-region-summary-grid">
+        <div><strong data-region-summary-frontier>{defaultRegion.metrics.frontier.toFixed(2)}</strong><span>frontier</span></div>
+        <div><strong data-region-summary-attention>{defaultRegion.metrics.attention.toFixed(2)}</strong><span>attention</span></div>
+        <div><strong data-region-summary-quality>{defaultRegion.metrics.quality.toFixed(2)}</strong><span>evidence density</span></div>
+        <div><strong data-region-summary-nodes>{defaultRegion.nodeCount}</strong><span>nodes</span></div>
+      </div>
+      <div class="value-lsh-region-rationale">
+        <h5>Why this zone</h5>
+        <ul data-region-summary-rationale>
+          {defaultRegion.topFacets.slice(0, 4).map((facet) => (
+            <li>
+              <div class="value-lsh-region-rationale-head">
+                <strong>{facet.label}</strong>
+                <span>{facet.average.toFixed(2)}</span>
+              </div>
+              <div class="value-lsh-region-rationale-bar"><i style={`width:${Math.max(16, Math.round(Math.abs(facet.average) * 100))}%`}></i></div>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <h5>Representative materials</h5>
+      <ul data-region-summary-representatives>
+        {defaultRegion.representatives.slice(0, 3).map((representative) => (
+          <li>
+            <div class="value-lsh-region-representative-head">
+              <strong>{representative.url ? <a href={representative.url} target="_blank" rel="noopener">{representative.title}</a> : representative.title}</strong>
+              <button type="button" class="value-lsh-region-focus-button" data-region-focus-node={representative.id}>focus</button>
+            </div>
+            <span>{representative.type} · triage score {representative.value_score.toFixed(2)} · confidence {representative.confidence.toFixed(2)}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  ) : null}
+  {variant === 'full' ? (
+    <div class="value-lsh-region-compare" aria-label="Evidence region comparison">
+      {valueLshRegions.map((region) => (
+        <button type="button" class="value-lsh-region-compare-card" data-region-compare-id={region.kind}>
+          <div class="value-lsh-region-compare-head">
+            <strong>{region.arrow} {region.rankingLabel}</strong>
+            <span>{region.clusterId}</span>
+          </div>
+          <p>{region.summary}</p>
+          <p><strong>English:</strong> {region.summaryEn}</p>
+          <div class="value-lsh-region-compare-grid">
+            <div><strong>{region.metrics.frontier.toFixed(2)}</strong><span>frontier</span></div>
+            <div><strong>{region.metrics.attention.toFixed(2)}</strong><span>attention</span></div>
+            <div><strong>{region.metrics.quality.toFixed(2)}</strong><span>evidence density</span></div>
+            <div><strong>{region.nodeCount}</strong><span>nodes</span></div>
+          </div>
+        </button>
+      ))}
+    </div>
+  ) : null}
+  <div class="value-lsh-legend" aria-label="Value LSH triage legend">
     {(Object.keys(classLabels) as ValueClass[]).map((valueClass) => (
       <span><i style={`background:${classColors[valueClass]}`}></i>{classLabels[valueClass]} <strong>{graphSnapshot.summary.value_classes[valueClass].toLocaleString()}</strong></span>
     ))}
     <span><i class="projection-dot"></i>{graphSnapshot.method.provider} + {graphSnapshot.method.projection.toUpperCase()}</span>
-    <span><i class="cluster-dot"></i>{graphSnapshot.summary.embedding_clusters} value-vector k-means clusters</span>
+    <span><i class="cluster-dot"></i>{graphSnapshot.summary.embedding_clusters} facet-vector k-means clusters</span>
     <span><i class="node-dot"></i>{graphSnapshot.summary.nodes.toLocaleString()} nodes</span>
   </div>
   <div class="value-lsh-inspector" data-value-lsh-inspector aria-live="polite">
@@ -311,7 +401,7 @@ const defaultNeighbors = defaultNode?.neighbors.slice(0, 6) ?? [];
           </div>
         </div>
         <div class="value-lsh-selected-metrics">
-          <div><strong>{defaultNode.score.toFixed(2)}</strong><span>value</span></div>
+          <div><strong>{defaultNode.score.toFixed(2)}</strong><span>triage score</span></div>
           <div><strong>{defaultNode.confidence.toFixed(2)}</strong><span>confidence</span></div>
           <div><strong>{defaultNode.embeddingCluster}</strong><span>k-means cluster</span></div>
         </div>
@@ -322,7 +412,7 @@ const defaultNeighbors = defaultNode?.neighbors.slice(0, 6) ?? [];
           {defaultNeighbors.length ? defaultNeighbors.map((neighbor) => (
             <li>
               <strong>{neighbor.reportUrl || neighbor.url || neighbor.rawUrl ? <a href={neighbor.reportUrl || neighbor.url || neighbor.rawUrl || undefined} target="_blank" rel="noopener">{neighbor.title}</a> : neighbor.title}</strong>
-              <span>{neighbor.type} · value {neighbor.value_score.toFixed(2)} · shared buckets {neighbor.shared_bucket_count}</span>
+              <span>{neighbor.type} · triage score {neighbor.value_score.toFixed(2)} · shared buckets {neighbor.shared_bucket_count}</span>
               <small>{neighbor.shared_features.slice(0, 4).join(' / ')}</small>
             </li>
           )) : (
@@ -382,7 +472,19 @@ const defaultNeighbors = defaultNode?.neighbors.slice(0, 6) ?? [];
     metricKey: string;
     metricValue: number;
     meaning: string;
+    meaningEn: string;
     summary: string;
+    summaryEn: string;
+    metrics?: {
+      value: number;
+      confidence: number;
+      frontier: number;
+      attention: number;
+      quality: number;
+      highValueShare: number;
+      githubPaperShare: number;
+      socialBlogShare: number;
+    };
     nodeCount: number;
     centroid: { x: number; y: number; z: number };
     bounds: {
@@ -390,6 +492,15 @@ const defaultNeighbors = defaultNode?.neighbors.slice(0, 6) ?? [];
       max: { x: number; y: number; z: number };
     };
     representativeId?: string | null;
+    representatives?: {
+      id: string;
+      title: string;
+      type: string;
+      url?: string | null;
+      value_score: number;
+      confidence: number;
+      source_path?: string | null;
+    }[];
     topFacets?: { id: string; label: string; average: number }[];
   };
   type ScenePayload = { variant?: string; nodes?: SceneNode[]; colors: Record<string, string>; regions?: SceneRegion[] };
@@ -482,12 +593,25 @@ const defaultNeighbors = defaultNode?.neighbors.slice(0, 6) ?? [];
       .replace(/</g, '&lt;')
       .replace(/>/g, '&gt;')
       .replace(/"/g, '&quot;');
+    const metricLabel = (key?: string | null) => ({
+      frontier: 'frontier evidence',
+      attention: 'attention signal',
+      quality: 'evidence density',
+    }[String(key || '')] || String(key || 'triage metric'));
     const renderLink = (href: string | null | undefined, label: string) => href
       ? `<a href="${escapeHtml(href)}" target="_blank" rel="noopener">${escapeHtml(label)}</a>`
       : escapeHtml(label);
 
     const nodePosition = (node: SceneNode) => new THREE.Vector3(node.x * 1.72, node.y * 1.72, node.z * 1.72);
     const regionPosition = (region: SceneRegion) => new THREE.Vector3(region.centroid.x * 1.72, region.centroid.y * 1.72, region.centroid.z * 1.72);
+    const focusNodeInView = (node: SceneNode) => {
+      const focusVector = nodePosition(node).normalize();
+      const planar = Math.sqrt(focusVector.x ** 2 + focusVector.z ** 2) || 1;
+      const focusTilt = -Math.atan2(focusVector.y, planar) - 0.08;
+      const focusTurn = Math.atan2(focusVector.x, focusVector.z) - 0.04;
+      targetX = Math.max(-1.15, Math.min(1.15, focusTilt));
+      targetY = focusTurn;
+    };
     const focusRegion = (region: SceneRegion) => {
       const focusVector = regionPosition(region).normalize();
       const planar = Math.sqrt(focusVector.x ** 2 + focusVector.z ** 2) || 1;
@@ -495,6 +619,62 @@ const defaultNeighbors = defaultNode?.neighbors.slice(0, 6) ?? [];
       const focusTurn = Math.atan2(focusVector.x, focusVector.z) - 0.08;
       targetX = Math.max(-1.15, Math.min(1.15, focusTilt));
       targetY = focusTurn;
+    };
+
+    const regionSummaryPanel = root.querySelector('[data-region-summary-panel]');
+    const regionSummaryCluster = root.querySelector('[data-region-summary-cluster]');
+    const regionSummaryLabel = root.querySelector('[data-region-summary-label]');
+    const regionSummaryMetricValue = root.querySelector('[data-region-summary-metric-value]');
+    const regionSummaryMetricKey = root.querySelector('[data-region-summary-metric-key]');
+    const regionSummaryNote = root.querySelector('[data-region-summary-note]');
+    const regionSummaryMeaning = root.querySelector('[data-region-summary-meaning]');
+    const regionSummaryMeaningEn = root.querySelector('[data-region-summary-meaning-en]');
+    const regionSummaryFacets = root.querySelector('[data-region-summary-facets]');
+    const regionSummaryFrontier = root.querySelector('[data-region-summary-frontier]');
+    const regionSummaryAttention = root.querySelector('[data-region-summary-attention]');
+    const regionSummaryQuality = root.querySelector('[data-region-summary-quality]');
+    const regionSummaryNodes = root.querySelector('[data-region-summary-nodes]');
+    const regionSummaryRationale = root.querySelector('[data-region-summary-rationale]');
+    const regionSummaryRepresentatives = root.querySelector('[data-region-summary-representatives]');
+
+    const updateRegionSummaryPanel = (region?: SceneRegion | null) => {
+      if (!region || !(regionSummaryPanel instanceof HTMLElement)) return;
+      if (regionSummaryCluster instanceof HTMLElement) regionSummaryCluster.textContent = `Region focus · ${region.clusterId}`;
+      if (regionSummaryLabel instanceof HTMLElement) regionSummaryLabel.textContent = `${region.arrow} ${region.rankingLabel}`;
+      if (regionSummaryMetricValue instanceof HTMLElement) regionSummaryMetricValue.textContent = Number(region.metricValue).toFixed(2);
+      if (regionSummaryMetricKey instanceof HTMLElement) regionSummaryMetricKey.textContent = metricLabel(region.metricKey);
+      if (regionSummaryNote instanceof HTMLElement) regionSummaryNote.textContent = region.summary;
+      if (regionSummaryMeaning instanceof HTMLElement) regionSummaryMeaning.textContent = region.meaning;
+      if (regionSummaryMeaningEn instanceof HTMLElement) regionSummaryMeaningEn.innerHTML = `<strong>English:</strong> ${escapeHtml(region.meaningEn || region.summaryEn || '')}`;
+      if (regionSummaryFrontier instanceof HTMLElement) regionSummaryFrontier.textContent = Number(region.metrics?.frontier || 0).toFixed(2);
+      if (regionSummaryAttention instanceof HTMLElement) regionSummaryAttention.textContent = Number(region.metrics?.attention || 0).toFixed(2);
+      if (regionSummaryQuality instanceof HTMLElement) regionSummaryQuality.textContent = Number(region.metrics?.quality || 0).toFixed(2);
+      if (regionSummaryNodes instanceof HTMLElement) regionSummaryNodes.textContent = String(region.nodeCount);
+      if (regionSummaryFacets instanceof HTMLElement) {
+        regionSummaryFacets.innerHTML = (region.topFacets || []).slice(0, 4).map((facet) => `<span>${escapeHtml(facet.label)}</span>`).join('');
+      }
+      if (regionSummaryRationale instanceof HTMLElement) {
+        regionSummaryRationale.innerHTML = (region.topFacets || []).slice(0, 4).map((facet) => `
+          <li>
+            <div class="value-lsh-region-rationale-head">
+              <strong>${escapeHtml(facet.label)}</strong>
+              <span>${Number(facet.average).toFixed(2)}</span>
+            </div>
+            <div class="value-lsh-region-rationale-bar"><i style="width:${Math.max(16, Math.round(Math.abs(Number(facet.average)) * 100))}%"></i></div>
+          </li>
+        `).join('');
+      }
+      if (regionSummaryRepresentatives instanceof HTMLElement) {
+        regionSummaryRepresentatives.innerHTML = (region.representatives || []).map((representative) => `
+          <li>
+            <div class="value-lsh-region-representative-head">
+              <strong>${renderLink(representative.url || null, representative.title)}</strong>
+              <button type="button" class="value-lsh-region-focus-button" data-region-focus-node="${escapeHtml(representative.id)}">focus</button>
+            </div>
+            <span>${escapeHtml(representative.type)} · triage score ${Number(representative.value_score).toFixed(2)} · confidence ${Number(representative.confidence).toFixed(2)}</span>
+          </li>
+        `).join('');
+      }
     };
 
     const renderInspector = (node: SceneNode) => {
@@ -510,7 +690,7 @@ const defaultNeighbors = defaultNode?.neighbors.slice(0, 6) ?? [];
       const neighbors = node.neighbors.slice(0, 6).map((neighbor) => `
         <li>
           <strong>${renderLink(neighbor.reportUrl || neighbor.url || neighbor.rawUrl, neighbor.title)}</strong>
-          <span>${escapeHtml(neighbor.type)} · value ${Number(neighbor.value_score).toFixed(2)} · shared buckets ${neighbor.shared_bucket_count}</span>
+          <span>${escapeHtml(neighbor.type)} · triage score ${Number(neighbor.value_score).toFixed(2)} · shared buckets ${neighbor.shared_bucket_count}</span>
           <small>${escapeHtml((neighbor.shared_features || []).slice(0, 4).join(' / '))}</small>
         </li>
       `).join('');
@@ -524,7 +704,7 @@ const defaultNeighbors = defaultNode?.neighbors.slice(0, 6) ?? [];
             <div class="value-lsh-selected-actions">${actions}</div>
           </div>
           <div class="value-lsh-selected-metrics">
-            <div><strong>${Number(node.score).toFixed(2)}</strong><span>value</span></div>
+            <div><strong>${Number(node.score).toFixed(2)}</strong><span>triage score</span></div>
             <div><strong>${Number(node.confidence).toFixed(2)}</strong><span>confidence</span></div>
             <div><strong>${escapeHtml(node.embeddingCluster)}</strong><span>k-means cluster</span></div>
           </div>
@@ -537,6 +717,7 @@ const defaultNeighbors = defaultNode?.neighbors.slice(0, 6) ?? [];
     };
 
     const regionButtons = [...root.querySelectorAll('[data-region-button]')].filter((element): element is HTMLButtonElement => element instanceof HTMLButtonElement);
+    const regionCompareButtons = [...root.querySelectorAll('[data-region-compare-id]')].filter((element): element is HTMLButtonElement => element instanceof HTMLButtonElement);
     const regionVisuals = new Map<string, THREE.Group>();
     const regionMarkers = new Map<string, HTMLButtonElement>();
     const regionPrevButton = root.querySelector('[data-region-prev]');
@@ -584,6 +765,9 @@ const defaultNeighbors = defaultNode?.neighbors.slice(0, 6) ?? [];
     const setRegionActiveState = (activeId?: string | null) => {
       regionButtons.forEach((button) => {
         button.dataset.active = button.dataset.regionId === activeId ? 'true' : 'false';
+      });
+      regionCompareButtons.forEach((button) => {
+        button.dataset.active = button.dataset.regionCompareId === activeId ? 'true' : 'false';
       });
       regionMarkers.forEach((marker, key) => {
         marker.dataset.active = key === activeId ? 'true' : 'false';
@@ -734,8 +918,16 @@ const defaultNeighbors = defaultNode?.neighbors.slice(0, 6) ?? [];
       renderInspector(node);
     };
 
+    const focusRepresentativeNode = (nodeId: string) => {
+      const node = nodeById.get(nodeId);
+      if (!node) return;
+      focusNodeInView(node);
+      selectNode(node);
+    };
+
     const selectRegion = (region: SceneRegion) => {
       setRegionActiveState(region.kind);
+      updateRegionSummaryPanel(region);
       focusRegion(region);
       applyRegionClusterFocus(region.clusterId);
       const targetNode = (region.representativeId && nodeById.get(region.representativeId))
@@ -827,11 +1019,25 @@ const defaultNeighbors = defaultNode?.neighbors.slice(0, 6) ?? [];
         if (region) selectRegion(region);
       });
     });
+    regionCompareButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const region = regions.find((candidate) => candidate.kind === button.dataset.regionCompareId);
+        if (region) selectRegion(region);
+      });
+    });
     if (regionPrevButton instanceof HTMLButtonElement) {
       regionPrevButton.addEventListener('click', () => selectRegionByIndex(activeRegionIndex - 1));
     }
     if (regionNextButton instanceof HTMLButtonElement) {
       regionNextButton.addEventListener('click', () => selectRegionByIndex(activeRegionIndex + 1));
+    }
+    if (regionSummaryPanel instanceof HTMLElement) {
+      regionSummaryPanel.addEventListener('click', (event) => {
+        const target = event.target instanceof HTMLElement ? event.target.closest('[data-region-focus-node]') : null;
+        if (!(target instanceof HTMLElement)) return;
+        const nodeId = target.dataset.regionFocusNode;
+        if (nodeId) focusRepresentativeNode(nodeId);
+      });
     }
 
     const defaultRegion = regions[0];
@@ -1171,6 +1377,255 @@ const defaultNeighbors = defaultNode?.neighbors.slice(0, 6) ?? [];
     line-height: 1.6;
   }
 
+  .value-lsh-region-summary-panel {
+    display: grid;
+    gap: 10px;
+    grid-column: 1 / -1;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--surface-card);
+    box-shadow: var(--shadow-mockup);
+    padding: 16px;
+    margin-top: -2px;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 14px;
+  }
+
+  .value-lsh-region-summary-head {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .value-lsh-region-summary-head span,
+  .value-lsh-region-summary-note,
+  .value-lsh-region-summary-panel p,
+  .value-lsh-region-summary-panel li span,
+  .value-lsh-region-summary-metrics span {
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 750;
+    line-height: 1.4;
+  }
+
+  .value-lsh-region-summary-panel h4,
+  .value-lsh-region-summary-panel h5 {
+    margin: 4px 0 0;
+    font-size: 14px;
+    font-weight: 850;
+  }
+
+  .value-lsh-region-summary-metrics {
+    flex: 0 0 auto;
+    text-align: right;
+  }
+
+  .value-lsh-region-summary-metrics strong,
+  .value-lsh-region-summary-metrics span {
+    display: block;
+  }
+
+  .value-lsh-region-summary-metrics strong {
+    font-family: var(--font-display);
+    font-size: 22px;
+    line-height: 1;
+  }
+
+  .value-lsh-region-summary-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .value-lsh-region-summary-grid div {
+    border: 1px solid var(--line);
+    border-radius: 7px;
+    background: var(--surface-1);
+    padding: 9px;
+  }
+
+  .value-lsh-region-summary-grid strong,
+  .value-lsh-region-summary-grid span {
+    display: block;
+    overflow-wrap: anywhere;
+  }
+
+  .value-lsh-region-summary-grid strong {
+    font-family: var(--font-display);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1;
+  }
+
+  .value-lsh-region-summary-panel ul {
+    display: grid;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .value-lsh-region-summary-panel li {
+    border-top: 1px solid var(--line);
+    padding-top: 8px;
+  }
+
+  .value-lsh-region-summary-panel li strong,
+  .value-lsh-region-summary-panel li span {
+    display: block;
+    overflow-wrap: anywhere;
+  }
+
+  .value-lsh-region-rationale {
+    display: grid;
+    gap: 8px;
+  }
+
+  .value-lsh-region-rationale ul {
+    display: grid;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .value-lsh-region-rationale li {
+    display: grid;
+    gap: 6px;
+  }
+
+  .value-lsh-region-rationale-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .value-lsh-region-rationale-head strong {
+    font-size: 12px;
+    font-weight: 850;
+  }
+
+  .value-lsh-region-rationale-head span {
+    color: var(--muted);
+    font-size: 11px;
+    font-weight: 800;
+  }
+
+  .value-lsh-region-rationale-bar {
+    height: 8px;
+    border-radius: 999px;
+    background: rgba(20, 25, 34, 0.08);
+    overflow: hidden;
+  }
+
+  .value-lsh-region-rationale-bar i {
+    display: block;
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(90deg, rgba(0, 122, 255, 0.7), rgba(255, 107, 53, 0.82));
+  }
+
+  .value-lsh-region-compare {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+    grid-column: 1 / -1;
+  }
+
+  .value-lsh-region-compare-card {
+    appearance: none;
+    display: grid;
+    gap: 10px;
+    width: 100%;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--surface-card);
+    box-shadow: var(--shadow-mockup);
+    padding: 14px;
+    text-align: left;
+    cursor: pointer;
+    transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+  }
+
+  .value-lsh-region-compare-card[data-active="true"] {
+    border-color: rgba(0, 122, 255, 0.35);
+    box-shadow: 0 16px 30px rgba(38, 64, 108, 0.12);
+    transform: translateY(-2px);
+  }
+
+  .value-lsh-region-compare-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .value-lsh-region-compare-head strong {
+    font-size: 14px;
+    font-weight: 850;
+  }
+
+  .value-lsh-region-compare-head span,
+  .value-lsh-region-compare-card p,
+  .value-lsh-region-compare-grid span {
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 750;
+    line-height: 1.4;
+  }
+
+  .value-lsh-region-compare-card p {
+    margin: 0;
+  }
+
+  .value-lsh-region-compare-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .value-lsh-region-compare-grid div {
+    border: 1px solid var(--line);
+    border-radius: 7px;
+    background: var(--surface-1);
+    padding: 9px;
+  }
+
+  .value-lsh-region-compare-grid strong,
+  .value-lsh-region-compare-grid span {
+    display: block;
+    overflow-wrap: anywhere;
+  }
+
+  .value-lsh-region-compare-grid strong {
+    font-family: var(--font-display);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1;
+  }
+
+  .value-lsh-region-representative-head {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  .value-lsh-region-focus-button {
+    appearance: none;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: var(--surface-1);
+    color: var(--fg);
+    padding: 4px 8px;
+    font-size: 11px;
+    font-weight: 850;
+    cursor: pointer;
+    flex: 0 0 auto;
+  }
+
   .value-lsh-selected-head {
     display: flex;
     align-items: start;
@@ -1324,6 +1779,14 @@ const defaultNeighbors = defaultNode?.neighbors.slice(0, 6) ?? [];
 
     .value-lsh-region-tour-actions button {
       flex: 1 1 0;
+    }
+
+    .value-lsh-region-summary-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .value-lsh-region-compare {
+      grid-template-columns: minmax(0, 1fr);
     }
 
     .value-lsh-stage {
