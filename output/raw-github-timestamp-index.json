@@ -1,7 +1,7 @@
 {
   "generated_at": "2026-06-05T00:00:00+08:00",
-  "total": 682,
-  "updated_files": 682,
+  "total": 684,
+  "updated_files": 684,
   "unknown_content_timestamp": 100,
   "records": [
     {
@@ -534,6 +534,15 @@
       "collected_at": "2026-06-02T01:55:44+08:00",
       "time_slice": "2026-06",
       "timestamp_source": "web_observed_public_github_page_2026_06_02"
+    },
+    {
+      "repo": "AQ-MedAI/MedMemoryBench",
+      "url": "https://github.com/AQ-MedAI/MedMemoryBench",
+      "file": "raw-github/aq-medai_medmemorybench.md",
+      "content_timestamp": "2026-05-01",
+      "collected_at": "2026-06-05T21:15:00+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_06_05_2115_with_visible_release_month_2026_05"
     },
     {
       "repo": "Arc-Computer/CL-Bench",
@@ -1092,6 +1101,15 @@
       "collected_at": "2026-06-01T01:50:26+08:00",
       "time_slice": "2026-06",
       "timestamp_source": "web_observed_public_github_page_2026_06_01"
+    },
+    {
+      "repo": "ComposioHQ/agent-orchestrator",
+      "url": "https://github.com/ComposioHQ/agent-orchestrator",
+      "file": "raw-github/composiohq_agent-orchestrator.md",
+      "content_timestamp": "2026-06-01",
+      "collected_at": "2026-06-05T21:10:00+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "web_observed_public_github_page_2026_06_05_2110_plus_commits_main_2026_06_01"
     },
     {
       "repo": "ComposioHQ/awesome-agent-clis",

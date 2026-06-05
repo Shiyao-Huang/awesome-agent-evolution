@@ -6,6 +6,8 @@
 
 GitHub Topics: `agent-evolution`, `self-evolving-agents`, `self-evolution`, `self-improvement`, `ai-agent`, `llm-agent`, `agent-swarm`, `memory-system`, `skill-library`, `harness-engineering`, `benchmark`.
 
+GitHub topic 收录状态（2026-06-05）：GitHub API 和 `gh search repos 'topic:agent-evolution'` 已经能看到 `Shiyao-Huang/awesome-agent-evolution`；如果网页话题页仍显示旧仓库或短暂缺席，优先按 GitHub search/API 证据判断，这是 GitHub topic 页面缓存或同步延迟，不代表本仓库没有设置 `agent-evolution` topic。
+
 ![Self Evolve 公开研究管线](site/public/visuals/self-evolve-readme-banner.png)
 
 ## 一句话

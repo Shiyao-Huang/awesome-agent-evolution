@@ -7916,6 +7916,63 @@ export const projects: Project[] = [
         "localPath": "raw-github/kyegomez_swarms.md"
     },
     {
+        "name": "Composio Agent Orchestrator",
+        "repo": "ComposioHQ/agent-orchestrator",
+        "url": "https://github.com/ComposioHQ/agent-orchestrator",
+        "description": "Composio Agent Orchestrator is a production coding-agent swarm that runs spec, build, test, review, and merge flows through Git worktrees, skills, memory, and MCP-connected execution.",
+        "stack": [
+            "TypeScript",
+            "Git Worktrees",
+            "MCP",
+            "Skills",
+            "Coding-Agent Swarm"
+        ],
+        "category": "Production Coding-Agent Swarm Orchestrator",
+        "status": "candidate",
+        "stars": 7400,
+        "forks": 1000,
+        "lastPushed": "2026-06-01T00:00:00Z",
+        "language": "TypeScript",
+        "license": "MIT",
+        "report": "projects/406-composio-agent-orchestrator-coding-swarm.md",
+        "pattern": "route coding tasks into specialized agents -> isolate changes in Git worktrees -> reuse skills and memory across execution steps -> coordinate MCP/tool calls and review gates -> merge accepted work back into the main engineering flow",
+        "tags": [
+            "coding-agent",
+            "swarm",
+            "harness",
+            "worktree",
+            "mcp"
+        ],
+        "localPath": "raw-github/composiohq_agent-orchestrator.md"
+    },
+    {
+        "name": "MedMemoryBench",
+        "repo": "AQ-MedAI/MedMemoryBench",
+        "url": "https://github.com/AQ-MedAI/MedMemoryBench",
+        "description": "MedMemoryBench is a benchmark for agent memory in personalized healthcare, testing whether clinical agents retain, retrieve, and use longitudinal patient context safely and accurately.",
+        "stack": [
+            "Python",
+            "Healthcare Memory Benchmark",
+            "Longitudinal Evaluation"
+        ],
+        "category": "Personalized Healthcare Agent Memory Benchmark",
+        "status": "candidate",
+        "stars": 95,
+        "forks": 8,
+        "lastPushed": "2026-05-01T00:00:00Z",
+        "language": "Python",
+        "license": "MIT",
+        "report": "projects/407-medmemorybench-agent-memory-benchmark.md",
+        "pattern": "construct longitudinal healthcare episodes -> require agents to recall and apply patient-specific context -> score temporal memory quality and downstream task success -> expose where memory retrieval helps or harms clinical reasoning",
+        "tags": [
+            "memory",
+            "benchmark",
+            "healthcare",
+            "longitudinal-context"
+        ],
+        "localPath": "raw-github/aq-medai_medmemorybench.md"
+    },
+    {
         "name": "Agent Swarm",
         "repo": "desplega-ai/agent-swarm",
         "url": "https://github.com/desplega-ai/agent-swarm",
@@ -8295,6 +8352,7 @@ export const projectGroups = [
       "AutoJunjie/awesome-agent-harness",
       "shareAI-lab/learn-claude-code",
       "murataslan1/ai-agent-benchmark",
+      "AQ-MedAI/MedMemoryBench",
       "holaboss-ai/holaOS",
       "langchain-ai/deepagents",
       "coleam00/Archon",
@@ -8439,6 +8497,7 @@ export const projectGroups = [
     "title": "Production Agent Runtimes With Evolution Substrate",
     "repos": [
       "agent0ai/agent-zero",
+      "ComposioHQ/agent-orchestrator",
       "elizaOS/eliza",
       "TransformerOptimus/SuperAGI",
       "paradigmxyz/centaur",

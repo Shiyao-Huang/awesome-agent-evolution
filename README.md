@@ -62,13 +62,15 @@ flowchart LR
 
 ## 近期证据更新（2026-06-05）
 
-本轮不是简单“刷新元数据”，而是把 production swarm、OpenAI Agents SDK orchestrator、continual skill-memory paper code 和轻量 memory/MCP/skill runtime 一起拉回同一条证据链。下面每个仓库都只回答一个问题：它补上了哪类判断证据。
+本轮不是简单“刷新元数据”，而是把 production swarm、coding-agent harness、memory benchmark、OpenAI Agents SDK orchestrator、continual skill-memory paper code 和轻量 memory/MCP/skill runtime 一起拉回同一条证据链。下面每个仓库都只回答一个问题：它补上了哪类判断证据。
 
 | 仓库 | 补上的证据缺口 | 对读者的意义 |
 |---|---|---|
 | [desplega-ai/agent-swarm](https://github.com/desplega-ai/agent-swarm) | production lead-worker swarm runtime | 它把 agent-swarm 从“多角色编排”推进到带 Docker worker、persistent identity、compounding memory 和 HITL gate 的生产执行面。 |
+| [ComposioHQ/agent-orchestrator](https://github.com/ComposioHQ/agent-orchestrator) | coding-agent swarm harness with worktree isolation | 它把 coding-agent orchestration 从单线程执行推进到可并行 worktree、技能复用、memory 和记审流程共存的工程控制面。 |
 | [VRSEN/agency-swarm](https://github.com/VRSEN/agency-swarm) | OpenAI Agents SDK orchestration baseline | 它回答的是 production multi-agent 编排在 2026 年已经如何从 Assistants API 迁移到 Agents SDK，并保留通信流、工具和状态持久化。 |
 | [XSkill-Agent/XSkill](https://github.com/XSkill-Agent/XSkill) | continual skill-memory benchmarked paper code | 它补的是“skills 和 experiences 如何被积累、存储、检索并在 benchmark 上复用”这一层，而不是只给一个概念性 continual-learning 口号。 |
+| [AQ-MedAI/MedMemoryBench](https://github.com/AQ-MedAI/MedMemoryBench) | safety-sensitive longitudinal memory benchmark | 它把 memory 评估从通用 recall 推进到 personalized healthcare 的长时程、高风险场景，帮助读者区分“记住了”与“记对了并用对了”。 |
 | [wanxingai/LightAgent](https://github.com/wanxingai/LightAgent) | lightweight memory/MCP/skill runtime refresh | 它把轻量 agent runtime 这条线补到 2026-06-02 的 LightFlow、native skills、persistent memory 和 trace observability 证据。 |
 
 ## 核心洞察

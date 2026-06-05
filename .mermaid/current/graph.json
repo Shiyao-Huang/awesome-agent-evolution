@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-05T19:00:31+08:00",
+  "generated_at": "2026-06-05T22:00:00+08:00",
   "truth_source": ".mermaid/current/graph.json",
   "nodes": [
     {
@@ -18,6 +18,8 @@
       "layer": "raw",
       "status": "updated",
       "paths": [
+        "raw-github/composiohq_agent-orchestrator.md",
+        "raw-github/aq-medai_medmemorybench.md",
         "raw-github/desplega-ai_agent-swarm.md",
         "raw-github/vrsen_agency-swarm.md",
         "raw-github/xskill-agent_xskill.md",
@@ -28,20 +30,9 @@
       "id": "raw.github.topic-indexing-evidence",
       "title": "GitHub topic indexing evidence",
       "layer": "raw",
-      "status": "updated",
+      "status": "retained",
       "paths": [
         "raw-github/shiyao-huang_awesome-agent-evolution.md"
-      ]
-    },
-    {
-      "id": "ops.github-linguist-signals",
-      "title": "GitHub Linguist and topic metadata signals",
-      "layer": "ops",
-      "status": "updated",
-      "paths": [
-        ".gitattributes",
-        "README.md",
-        "README-EN.md"
       ]
     },
     {
@@ -52,10 +43,8 @@
       "paths": [
         "research/repo-classification.json",
         "analysis/github-project-data-analysis.md",
-        "projects/405-agent-swarm-compounding-lead-worker-runtime.md",
-        "projects/27-agency-swarm.md",
-        "projects/404-xskill-continual-experience-skill-learning.md",
-        "projects/139-lightagent-memory-mcp-skills.md"
+        "projects/406-composio-agent-orchestrator-coding-swarm.md",
+        "projects/407-medmemorybench-agent-memory-benchmark.md"
       ]
     },
     {
@@ -65,10 +54,12 @@
       "status": "updated",
       "paths": [
         "site/src/data/projects.ts",
-        "site/public/reports/projects/405-agent-swarm-compounding-lead-worker-runtime.md",
-        "site/public/reports/projects/27-agency-swarm.md",
-        "site/public/reports/projects/404-xskill-continual-experience-skill-learning.md",
-        "site/public/reports/projects/139-lightagent-memory-mcp-skills.md"
+        "site/public/reports/projects/406-composio-agent-orchestrator-coding-swarm.md",
+        "site/public/reports/projects/407-medmemorybench-agent-memory-benchmark.md",
+        "README.md",
+        "README-EN.md",
+        "README-ZH.md",
+        "CONTENT_INDEX.md"
       ]
     },
     {
@@ -77,7 +68,7 @@
       "layer": "work",
       "status": "updated",
       "paths": [
-        "work/research/hourly-public-metadata-update-2026-06-05-1543.md"
+        "work/research/hourly-public-metadata-update-2026-06-05-2200.md"
       ]
     }
   ],
@@ -94,13 +85,8 @@
     ],
     [
       "raw.github.topic-indexing-evidence",
-      "ops.github-linguist-signals",
-      "explains"
-    ],
-    [
-      "ops.github-linguist-signals",
       "results.public-site",
-      "improves-discovery"
+      "clarifies-discovery"
     ],
     [
       "processed.github-classification",
@@ -121,64 +107,53 @@
   "current_run": {
     "repos": [
       {
-        "repo": "Shiyao-Huang/awesome-agent-evolution",
-        "raw_capture": "raw-github/shiyao-huang_awesome-agent-evolution.md",
-        "stars": 136,
-        "forks": null,
-        "commits": null,
-        "last_visible_commit_date": "2026-06-05",
-        "theme": "awesome-list-topic-indexing"
+        "repo": "ComposioHQ/agent-orchestrator",
+        "raw_capture": "raw-github/composiohq_agent-orchestrator.md",
+        "report": "projects/406-composio-agent-orchestrator-coding-swarm.md",
+        "site_report": "site/public/reports/projects/406-composio-agent-orchestrator-coding-swarm.md",
+        "stars": 7400,
+        "forks": 1000,
+        "commits": 1276,
+        "last_visible_commit_date": "2026-06-01",
+        "theme": "harness"
+      },
+      {
+        "repo": "AQ-MedAI/MedMemoryBench",
+        "raw_capture": "raw-github/aq-medai_medmemorybench.md",
+        "report": "projects/407-medmemorybench-agent-memory-benchmark.md",
+        "site_report": "site/public/reports/projects/407-medmemorybench-agent-memory-benchmark.md",
+        "stars": 95,
+        "forks": 8,
+        "commits": 44,
+        "last_visible_commit_date": "2026-05-01",
+        "theme": "memory"
       },
       {
         "repo": "desplega-ai/agent-swarm",
         "raw_capture": "raw-github/desplega-ai_agent-swarm.md",
-        "report": "projects/405-agent-swarm-compounding-lead-worker-runtime.md",
-        "site_report": "site/public/reports/projects/405-agent-swarm-compounding-lead-worker-runtime.md",
-        "stars": 505,
-        "forks": 56,
-        "commits": 1542,
-        "last_visible_commit_date": "2026-06-04",
         "theme": "framework"
       },
       {
         "repo": "VRSEN/agency-swarm",
         "raw_capture": "raw-github/vrsen_agency-swarm.md",
-        "report": "projects/27-agency-swarm.md",
-        "site_report": "site/public/reports/projects/27-agency-swarm.md",
-        "stars": 4400,
-        "forks": 1100,
-        "commits": 2491,
-        "last_visible_commit_date": "2026-05-24",
         "theme": "framework"
       },
       {
         "repo": "XSkill-Agent/XSkill",
         "raw_capture": "raw-github/xskill-agent_xskill.md",
-        "report": "projects/404-xskill-continual-experience-skill-learning.md",
-        "site_report": "site/public/reports/projects/404-xskill-continual-experience-skill-learning.md",
-        "stars": 216,
-        "forks": 27,
-        "commits": 16,
-        "last_visible_commit_date": "2026-05-01",
         "theme": "skill"
       },
       {
         "repo": "wanxingai/LightAgent",
         "raw_capture": "raw-github/wanxingai_lightagent.md",
-        "report": "projects/139-lightagent-memory-mcp-skills.md",
-        "site_report": "site/public/reports/projects/139-lightagent-memory-mcp-skills.md",
-        "stars": 1100,
-        "forks": 141,
-        "commits": 104,
-        "last_visible_commit_date": "2026-06-02",
         "theme": "framework"
       }
     ],
     "blockers": [
-      "GitHub rendered topic page still showed EvoMap/awesome-agent-evolution while GitHub API/search already returned Shiyao-Huang/awesome-agent-evolution",
-      "GitHub API reported the repository primary language as TeX before Linguist rules were added",
-      "GitNexus index was stale at start of this turn and was refreshed before commit"
+      "gh search against api.github.com failed in this workspace during this run, so new metadata is public-page-observed rather than GitHub-API-verified",
+      "GitNexus index was stale at start of this turn and requires refresh before final validation",
+      "public copy review gate remains incomplete for README and other reader-facing pages"
     ],
-    "working_principle": "public GitHub page/API/search evidence -> raw-github refresh -> repo-classification/project/site registry -> public reports -> README/site registry -> Linguist/topic metadata -> indexes + analysis + site build"
+    "working_principle": "public GitHub page evidence -> raw-github refresh -> repo-classification/project/site registry -> public reports -> README/site registry -> indexes + analysis + site build"
   }
 }

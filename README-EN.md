@@ -62,13 +62,15 @@ flowchart LR
 
 ## Recent Evidence Updates (2026-06-05)
 
-This update is not just a metadata refresh. It pulls production swarms, an OpenAI Agents SDK orchestrator, continual skill-memory paper code, and a lightweight memory/MCP/skill runtime back onto one evidence chain.
+This update is not just a metadata refresh. It pulls a production swarm, a coding-agent harness, a safety-sensitive memory benchmark, an OpenAI Agents SDK orchestrator, continual skill-memory paper code, and a lightweight memory/MCP/skill runtime back onto one evidence chain.
 
 | Repository | Evidence gap filled | Why it matters |
 |---|---|---|
 | [desplega-ai/agent-swarm](https://github.com/desplega-ai/agent-swarm) | Production lead-worker swarm runtime | It turns agent-swarm from a "many roles" idea into a Docker-worker execution plane with persistent identity, compounding memory, and HITL workflow gates. |
+| [ComposioHQ/agent-orchestrator](https://github.com/ComposioHQ/agent-orchestrator) | Coding-agent swarm harness with worktree isolation | It shows how coding-agent orchestration becomes an engineering control plane with parallel worktrees, reusable skills, memory, and review gates instead of a single-thread agent demo. |
 | [VRSEN/agency-swarm](https://github.com/VRSEN/agency-swarm) | OpenAI Agents SDK orchestration baseline | It shows how a 2026 production multi-agent orchestrator has already moved from Assistants-era framing to Agents SDK-era communication, tools, and persistence. |
 | [XSkill-Agent/XSkill](https://github.com/XSkill-Agent/XSkill) | Continual skill-memory benchmarked paper code | It fills the layer where skills and experiences are accumulated, stored, retrieved, and reused on benchmarks instead of being described only as a continual-learning idea. |
+| [AQ-MedAI/MedMemoryBench](https://github.com/AQ-MedAI/MedMemoryBench) | Safety-sensitive longitudinal memory benchmark | It moves memory evaluation from generic recall toward personalized healthcare settings where remembering the right longitudinal context matters more than simply remembering more. |
 | [wanxingai/LightAgent](https://github.com/wanxingai/LightAgent) | Lightweight memory/MCP/skill runtime refresh | It refreshes the lightweight runtime line with current public evidence for LightFlow, native skills, persistent memory, and trace observability. |
 
 ## Core Insight

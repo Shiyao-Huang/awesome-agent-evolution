@@ -2,6 +2,21 @@
   "generated_at": "2026-06-05T19:15:00+08:00",
   "rows": [
     {
+      "repo": "AQ-MedAI/MedMemoryBench",
+      "url": "https://github.com/AQ-MedAI/MedMemoryBench",
+      "stars": "95",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "评测/evaluation",
+      "function_tag": "benchmark-eval",
+      "base_theme": "memory",
+      "stack": "Python/Healthcare Memory Benchmark",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-01",
+      "evidence": "web-observed GitHub page showed 95 stars, 8 forks, 44 commits, MIT license, and a visible [2026.05] update marker; README positions MedMemoryBench as a personalized-healthcare benchmark for longitudinal agent memory quality rather than generic retrieval recall",
+      "description": "MedMemoryBench 是面向 personalized healthcare agents 的记忆 benchmark，用长期患者画像、时间线推理和任务成功率检验 memory 是否真正提升高风险场景下的 agent 决策。"
+    },
+    {
       "repo": "01-ai/langcrew",
       "url": "https://github.com/01-ai/langcrew",
       "stars": "114",
@@ -1800,6 +1815,21 @@
       "content_timestamp": "2026-05-28",
       "evidence": "web-observed GitHub page showed 21.9k stars, 3.3k forks, 1,449 commits, MIT license, and README claims around deterministic workflow gates for coding agents.",
       "description": "Archon is an open-source harness builder for AI coding that turns development processes into deterministic, reusable workflows."
+    },
+    {
+      "repo": "ComposioHQ/agent-orchestrator",
+      "url": "https://github.com/ComposioHQ/agent-orchestrator",
+      "stars": "7400",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "framework-runtime",
+      "base_theme": "harness",
+      "stack": "TypeScript/Git Worktrees/MCP/Coding-Agent Swarm",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-01",
+      "evidence": "web-observed GitHub page showed 7.4k stars, 1k forks, 1,276 commits, MIT license, TypeScript-heavy implementation, and a latest visible 2026-06-01 commit on commits/main; public README/about position it as a production coding-agent orchestrator with swarms, worktrees, skills, memory, and MCP tools",
+      "description": "Composio Agent Orchestrator 是 production coding-agent swarm harness，把 spec、build、test、review、merge 流程拆给专门化 agents，并用 Git worktrees、skills、memory 和 MCP 执行面串成可审计的工程闭环。"
     },
     {
       "repo": "composio-community/awesome-openclaw-plugins",
