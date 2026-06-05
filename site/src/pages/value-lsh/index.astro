@@ -2,6 +2,7 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import ValueLshGraph3D from '@/components/ValueLshGraph3D.astro';
 import { site } from '@/data/site';
+import { valueLshEmbeddingClusters, valueLshRegions } from '@/data/valueLshRegions';
 import valueSnapshotJson from '../../../../analysis/value-lsh-index.json';
 import graphSnapshotJson from '../../../../analysis/value-lsh-graph-3d.json';
 
@@ -87,7 +88,8 @@ const typeRows = Object.entries(summary.type_counts).map(([key, count]) => ({ ke
 const maxTypeCount = Math.max(...typeRows.map((row) => row.count), 1);
 const topCandidates = valueSnapshot.top_high_value_candidates.slice(0, 12);
 const repairQueue = valueSnapshot.low_signal_or_risk_queue.slice(0, 12);
-const clusters = valueSnapshot.clusters.slice(0, 6);
+const regionRankings = valueLshRegions;
+const semanticClusters = valueLshEmbeddingClusters.slice(0, 6);
 const buckets = valueSnapshot.largest_buckets.slice(0, 6);
 const repoPath = `${site.github}/tree/main`;
 const evidenceBand = (confidence: number) => {
@@ -146,6 +148,40 @@ const jsonLd = {
         <div><strong>{graphSnapshot.summary.embedding_clusters}</strong><span>value-vector k-means clusters</span></div>
       </div>
       <ValueLshGraph3D variant="full" maxNodes={summary.total_materials} height={590} />
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">High-Value Regions</div>
+          <h2>先看哪一块空间，不再只看一堆散点。</h2>
+        </div>
+      </div>
+      <div class="value-region-grid">
+        {regionRankings.map((region, index) => (
+          <article class="value-region-panel">
+            <div class="value-region-panel-head">
+              <span class="value-region-panel-rank">{index + 1}</span>
+              <div>
+                <strong>{region.arrow} {region.rankingLabel}</strong>
+                <span>{region.clusterId} · {region.nodeCount} nodes</span>
+              </div>
+            </div>
+            <p>{region.meaning}</p>
+            <div class="value-chip-row">
+              {region.topFacets.slice(0, 4).map((facet) => <span>{facet.label}</span>)}
+            </div>
+            <div class="value-region-metrics">
+              <span>frontier {region.metrics.frontier.toFixed(2)}</span>
+              <span>attention {region.metrics.attention.toFixed(2)}</span>
+              <span>quality {region.metrics.quality.toFixed(2)}</span>
+              <span>high-value share {(region.metrics.highValueShare * 100).toFixed(0)}%</span>
+            </div>
+          </article>
+        ))}
+      </div>
     </div>
   </section>
 
@@ -268,20 +304,26 @@ const jsonLd = {
       <div>
         <div class="section-head compact">
           <div>
-            <div class="eyebrow">Value Clusters</div>
-            <h2>LSH 聚类轮廓</h2>
+            <div class="eyebrow">Semantic Clusters</div>
+            <h2>把簇的含义提炼出来</h2>
           </div>
         </div>
         <div class="value-clusters">
-          {clusters.map((cluster) => (
+          {semanticClusters.map((cluster) => (
             <article>
               <div>
-                <strong>{cluster.cluster_id}</strong>
-                <span>{cluster.size.toLocaleString()} items · avg band {Math.round(cluster.score_avg)}</span>
+                <strong>{cluster.semanticTitle}</strong>
+                <span>{cluster.clusterId} · {cluster.size.toLocaleString()} items · avg value {cluster.metrics.value.toFixed(1)}</span>
               </div>
-              <p>{cluster.label}</p>
+              <p>{cluster.meaning}</p>
               <div class="value-chip-row">
-                {cluster.top_tags.slice(0, 4).map((tag) => <span>{tag.label}</span>)}
+                {cluster.topPositiveFacets.slice(0, 4).map((tag) => <span>{tag.label}</span>)}
+              </div>
+              <div class="value-region-metrics">
+                <span>confidence {cluster.metrics.confidence.toFixed(1)}</span>
+                <span>frontier {cluster.metrics.frontier.toFixed(2)}</span>
+                <span>attention {cluster.metrics.attention.toFixed(2)}</span>
+                <span>quality {cluster.metrics.quality.toFixed(2)}</span>
               </div>
             </article>
           ))}
@@ -411,6 +453,67 @@ const jsonLd = {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 22px;
+  }
+
+  .value-region-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .value-region-panel {
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--surface-card);
+    box-shadow: var(--shadow-mockup);
+    padding: 16px;
+  }
+
+  .value-region-panel-head {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .value-region-panel-rank {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 999px;
+    background: var(--surface-1);
+    font-size: 12px;
+    font-weight: 850;
+  }
+
+  .value-region-panel strong,
+  .value-region-panel span {
+    display: block;
+  }
+
+  .value-region-panel > p {
+    margin-top: 10px;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .value-region-metrics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+  }
+
+  .value-region-metrics span {
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: var(--surface-1);
+    padding: 5px 8px;
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 800;
   }
 
   .section-head.compact {
@@ -593,7 +696,8 @@ const jsonLd = {
   @media (max-width: 900px) {
     .value-lsh-metrics,
     .value-lsh-grid,
-    .value-tags {
+    .value-tags,
+    .value-region-grid {
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
@@ -605,7 +709,8 @@ const jsonLd = {
 
     .value-lsh-metrics,
     .value-lsh-grid,
-    .value-tags {
+    .value-tags,
+    .value-region-grid {
       grid-template-columns: minmax(0, 1fr);
     }
 

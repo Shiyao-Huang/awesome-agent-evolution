@@ -1,6 +1,7 @@
 ---
 import graphSnapshotJson from '../../../analysis/value-lsh-graph-3d.json';
 import analysisSnapshotJson from '../data/analysis.json';
+import { valueLshRegions } from '@/data/valueLshRegions';
 
 type ValueClass = 'high-value-candidate' | 'needs-review' | 'low-signal-or-risk';
 type AnalysisProject = {
@@ -151,6 +152,24 @@ const scenePayload = {
   variant,
   nodes: sceneNodes,
   colors: classColors,
+  regions: valueLshRegions.map((region) => ({
+    kind: region.kind,
+    title: region.title,
+    shortLabel: region.shortLabel,
+    arrow: region.arrow,
+    color: region.color,
+    clusterId: region.clusterId,
+    rankingLabel: region.rankingLabel,
+    metricKey: region.metricKey,
+    metricValue: region.metricValue,
+    meaning: region.meaning,
+    summary: region.summary,
+    nodeCount: region.nodeCount,
+    centroid: region.centroid,
+    bounds: region.bounds,
+    representativeId: region.representatives.find((rep) => sceneNodes.some((node) => node.id === rep.id))?.id ?? region.representatives[0]?.id ?? null,
+    topFacets: region.topFacets,
+  })),
 };
 const defaultNode = sceneNodes.find((node) => node.neighbors.length > 0) ?? sceneNodes[0];
 const defaultNeighbors = defaultNode?.neighbors.slice(0, 6) ?? [];
@@ -185,6 +204,27 @@ const defaultNeighbors = defaultNode?.neighbors.slice(0, 6) ?? [];
       </svg>
     </div>
   </div>
+  {variant === 'full' ? (
+    <div class="value-lsh-region-rail" aria-label="High-value region ranking">
+      {valueLshRegions.map((region, index) => (
+        <button type="button" class="value-region-card" data-region-button data-region-id={region.kind}>
+          <div class="value-region-card-head">
+            <span class="value-region-rank">{index + 1}</span>
+            <strong>{region.arrow} {region.rankingLabel}</strong>
+            <small>{region.clusterId}</small>
+          </div>
+          <p>{region.meaning}</p>
+          <div class="value-region-card-meta">
+            <span>{region.metricKey} {region.metricValue.toFixed(2)}</span>
+            <span>{region.nodeCount} nodes</span>
+          </div>
+          <div class="value-chip-row region">
+            {region.topFacets.slice(0, 3).map((facet) => <span>{facet.label}</span>)}
+          </div>
+        </button>
+      ))}
+    </div>
+  ) : null}
   <div class="value-lsh-legend" aria-label="Value LSH legend">
     {(Object.keys(classLabels) as ValueClass[]).map((valueClass) => (
       <span><i style={`background:${classColors[valueClass]}`}></i>{classLabels[valueClass]} <strong>{graphSnapshot.summary.value_classes[valueClass].toLocaleString()}</strong></span>
@@ -268,7 +308,28 @@ const defaultNeighbors = defaultNode?.neighbors.slice(0, 6) ?? [];
     y: number;
     z: number;
   };
-  type ScenePayload = { variant?: string; nodes?: SceneNode[]; colors: Record<string, string> };
+  type SceneRegion = {
+    kind: string;
+    title: string;
+    shortLabel: string;
+    arrow: string;
+    color: string;
+    clusterId: string;
+    rankingLabel: string;
+    metricKey: string;
+    metricValue: number;
+    meaning: string;
+    summary: string;
+    nodeCount: number;
+    centroid: { x: number; y: number; z: number };
+    bounds: {
+      min: { x: number; y: number; z: number };
+      max: { x: number; y: number; z: number };
+    };
+    representativeId?: string | null;
+    topFacets?: { id: string; label: string; average: number }[];
+  };
+  type ScenePayload = { variant?: string; nodes?: SceneNode[]; colors: Record<string, string>; regions?: SceneRegion[] };
 
   const roots = document.querySelectorAll('[data-value-lsh-three]');
   roots.forEach((root) => {
@@ -288,6 +349,7 @@ const defaultNeighbors = defaultNode?.neighbors.slice(0, 6) ?? [];
       return;
     }
     const nodes: SceneNode[] = Array.isArray(payload.nodes) ? payload.nodes : [];
+    const regions: SceneRegion[] = Array.isArray(payload.regions) ? payload.regions : [];
     if (!nodes.length) return;
 
     let renderer;
@@ -344,6 +406,8 @@ const defaultNeighbors = defaultNode?.neighbors.slice(0, 6) ?? [];
 
     const highlightGroup = new THREE.Group();
     group.add(highlightGroup);
+    const regionGroup = new THREE.Group();
+    group.add(regionGroup);
 
     const escapeHtml = (value: unknown) => String(value ?? '')
       .replace(/&/g, '&amp;')
@@ -355,6 +419,7 @@ const defaultNeighbors = defaultNode?.neighbors.slice(0, 6) ?? [];
       : escapeHtml(label);
 
     const nodePosition = (node: SceneNode) => new THREE.Vector3(node.x * 1.72, node.y * 1.72, node.z * 1.72);
+    const regionPosition = (region: SceneRegion) => new THREE.Vector3(region.centroid.x * 1.72, region.centroid.y * 1.72, region.centroid.z * 1.72);
 
     const renderInspector = (node: SceneNode) => {
       const title = renderLink(node.primaryUrl, node.title);
@@ -395,6 +460,74 @@ const defaultNeighbors = defaultNode?.neighbors.slice(0, 6) ?? [];
       `;
     };
 
+    const regionButtons = [...root.querySelectorAll('[data-region-button]')].filter((element): element is HTMLButtonElement => element instanceof HTMLButtonElement);
+    const regionVisuals = new Map<string, THREE.Group>();
+    const setMaterialOpacity = (material: THREE.Material | THREE.Material[], opacity: number) => {
+      const materials = Array.isArray(material) ? material : [material];
+      materials.forEach((item) => {
+        item.transparent = true;
+        item.opacity = opacity;
+      });
+    };
+
+    const setRegionActiveState = (activeId?: string | null) => {
+      regionButtons.forEach((button) => {
+        button.dataset.active = button.dataset.regionId === activeId ? 'true' : 'false';
+      });
+      regionVisuals.forEach((visual, key) => {
+        const opacity = key === activeId ? 0.95 : 0.22;
+        visual.children.forEach((child) => {
+          const candidateMaterial = Reflect.get(child as object, 'material');
+          if (candidateMaterial && candidateMaterial instanceof THREE.Material) {
+            setMaterialOpacity(candidateMaterial, opacity);
+          } else if (Array.isArray(candidateMaterial) && candidateMaterial.every((item) => item instanceof THREE.Material)) {
+            setMaterialOpacity(candidateMaterial, opacity);
+          }
+          if (child instanceof THREE.ArrowHelper) {
+            setMaterialOpacity(child.line.material, opacity);
+            setMaterialOpacity(child.cone.material, opacity);
+          }
+        });
+      });
+    };
+
+    const createRegionVisual = (region: SceneRegion) => {
+      const visual = new THREE.Group();
+      const size = new THREE.Vector3(
+        Math.max((region.bounds.max.x - region.bounds.min.x) * 1.72, 0.2),
+        Math.max((region.bounds.max.y - region.bounds.min.y) * 1.72, 0.2),
+        Math.max((region.bounds.max.z - region.bounds.min.z) * 1.72, 0.2),
+      );
+      const center = regionPosition(region);
+      const outline = new THREE.LineSegments(
+        new THREE.EdgesGeometry(new THREE.BoxGeometry(size.x, size.y, size.z)),
+        new THREE.LineBasicMaterial({ color: region.color, transparent: true, opacity: 0.22 }),
+      );
+      outline.position.copy(center);
+      visual.add(outline);
+
+      const arrowDirection = center.clone().normalize();
+      const arrowOrigin = center.clone().addScaledVector(arrowDirection, -0.65);
+      const arrow = new THREE.ArrowHelper(arrowDirection, arrowOrigin, 0.52, region.color, 0.12, 0.08);
+      setMaterialOpacity(arrow.line.material, 0.22);
+      setMaterialOpacity(arrow.cone.material, 0.22);
+      visual.add(arrow);
+
+      const anchor = new THREE.Mesh(
+        new THREE.SphereGeometry(0.055, 14, 14),
+        new THREE.MeshBasicMaterial({ color: region.color, transparent: true, opacity: 0.22 }),
+      );
+      anchor.position.copy(center);
+      visual.add(anchor);
+      return visual;
+    };
+
+    regions.forEach((region) => {
+      const visual = createRegionVisual(region);
+      regionVisuals.set(region.kind, visual);
+      regionGroup.add(visual);
+    });
+
     const selectNode = (node: SceneNode) => {
       highlightGroup.clear();
       const selectedMaterial = new THREE.MeshBasicMaterial({ color: payload.colors[node.valueClass] || '#007AFF', transparent: true, opacity: 0.95 });
@@ -425,6 +558,14 @@ const defaultNeighbors = defaultNode?.neighbors.slice(0, 6) ?? [];
         ));
       }
       renderInspector(node);
+    };
+
+    const selectRegion = (region: SceneRegion) => {
+      setRegionActiveState(region.kind);
+      const targetNode = (region.representativeId && nodeById.get(region.representativeId))
+        || nodes.find((node) => node.embeddingCluster === region.clusterId)
+        || nodes[0];
+      if (targetNode) selectNode(targetNode);
     };
 
     const ringMaterial = new THREE.LineBasicMaterial({ color: 0x7a6b5e, transparent: true, opacity: 0.18 });
@@ -497,7 +638,19 @@ const defaultNeighbors = defaultNode?.neighbors.slice(0, 6) ?? [];
       if (node) selectNode(node);
     });
 
-    selectNode(nodes.find((node) => node.neighbors.length > 0) || nodes[0]);
+    regionButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const region = regions.find((candidate) => candidate.kind === button.dataset.regionId);
+        if (region) selectRegion(region);
+      });
+    });
+
+    const defaultRegion = regions[0];
+    if (defaultRegion) {
+      selectRegion(defaultRegion);
+    } else {
+      selectNode(nodes.find((node) => node.neighbors.length > 0) || nodes[0]);
+    }
 
     root.classList.add('is-canvas-ready');
     const tick = () => {
@@ -542,6 +695,13 @@ const defaultNeighbors = defaultNode?.neighbors.slice(0, 6) ?? [];
   .value-lsh-three.full .value-lsh-legend {
     grid-column: 1 / -1;
     grid-row: 2;
+  }
+
+  .value-lsh-region-rail {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+    grid-column: 1 / -1;
   }
 
   .value-lsh-stage {
@@ -609,6 +769,74 @@ const defaultNeighbors = defaultNode?.neighbors.slice(0, 6) ?? [];
 
   .value-lsh-legend strong {
     font-weight: 850;
+  }
+
+  .value-region-card {
+    appearance: none;
+    display: grid;
+    gap: 10px;
+    width: 100%;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--surface-card);
+    box-shadow: var(--shadow-mockup);
+    padding: 14px;
+    text-align: left;
+    cursor: pointer;
+    transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+  }
+
+  .value-region-card:hover,
+  .value-region-card[data-active="true"] {
+    transform: translateY(-2px);
+    border-color: rgba(0, 122, 255, .35);
+    box-shadow: 0 16px 30px rgba(38, 64, 108, 0.12);
+  }
+
+  .value-region-card-head {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 4px 10px;
+    align-items: baseline;
+  }
+
+  .value-region-rank {
+    grid-row: 1 / span 2;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 999px;
+    background: var(--surface-1);
+    color: var(--fg);
+    font-size: 12px;
+    font-weight: 850;
+  }
+
+  .value-region-card strong {
+    font-size: 14px;
+    font-weight: 850;
+  }
+
+  .value-region-card small,
+  .value-region-card p,
+  .value-region-card-meta span {
+    color: var(--muted);
+  }
+
+  .value-region-card p {
+    margin: 0;
+    line-height: 1.5;
+    font-size: 13px;
+  }
+
+  .value-region-card-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 12px;
+    font-weight: 800;
   }
 
   .value-lsh-inspector {
@@ -752,6 +980,10 @@ const defaultNeighbors = defaultNode?.neighbors.slice(0, 6) ?? [];
   }
 
   @media (max-width: 760px) {
+    .value-lsh-region-rail {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
     .value-lsh-three.full {
       grid-template-columns: minmax(0, 1fr);
     }
@@ -774,6 +1006,12 @@ const defaultNeighbors = defaultNode?.neighbors.slice(0, 6) ?? [];
     .value-lsh-legend {
       gap: 6px;
       font-size: 11px;
+    }
+  }
+
+  @media (max-width: 560px) {
+    .value-lsh-region-rail {
+      grid-template-columns: minmax(0, 1fr);
     }
   }
 </style>
