@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-05T15:43:00+08:00",
+  "generated_at": "2026-06-05T19:00:31+08:00",
   "truth_source": ".mermaid/current/graph.json",
   "nodes": [
     {
@@ -22,6 +22,26 @@
         "raw-github/vrsen_agency-swarm.md",
         "raw-github/xskill-agent_xskill.md",
         "raw-github/wanxingai_lightagent.md"
+      ]
+    },
+    {
+      "id": "raw.github.topic-indexing-evidence",
+      "title": "GitHub topic indexing evidence",
+      "layer": "raw",
+      "status": "updated",
+      "paths": [
+        "raw-github/shiyao-huang_awesome-agent-evolution.md"
+      ]
+    },
+    {
+      "id": "ops.github-linguist-signals",
+      "title": "GitHub Linguist and topic metadata signals",
+      "layer": "ops",
+      "status": "updated",
+      "paths": [
+        ".gitattributes",
+        "README.md",
+        "README-EN.md"
       ]
     },
     {
@@ -73,6 +93,16 @@
       "feeds"
     ],
     [
+      "raw.github.topic-indexing-evidence",
+      "ops.github-linguist-signals",
+      "explains"
+    ],
+    [
+      "ops.github-linguist-signals",
+      "results.public-site",
+      "improves-discovery"
+    ],
+    [
       "processed.github-classification",
       "results.public-site",
       "publishes"
@@ -90,6 +120,15 @@
   ],
   "current_run": {
     "repos": [
+      {
+        "repo": "Shiyao-Huang/awesome-agent-evolution",
+        "raw_capture": "raw-github/shiyao-huang_awesome-agent-evolution.md",
+        "stars": 136,
+        "forks": null,
+        "commits": null,
+        "last_visible_commit_date": "2026-06-05",
+        "theme": "awesome-list-topic-indexing"
+      },
       {
         "repo": "desplega-ai/agent-swarm",
         "raw_capture": "raw-github/desplega-ai_agent-swarm.md",
@@ -136,10 +175,10 @@
       }
     ],
     "blockers": [
-      "shell GitHub API access remained blocked in this workspace",
-      "gh auth status reported an invalid default GitHub token",
-      "GitNexus CLI can answer topology queries, but some commands differ from repo docs and the index is stale against current HEAD"
+      "GitHub rendered topic page still showed EvoMap/awesome-agent-evolution while GitHub API/search already returned Shiyao-Huang/awesome-agent-evolution",
+      "GitHub API reported the repository primary language as TeX before Linguist rules were added",
+      "GitNexus index was stale at start of this turn and was refreshed before commit"
     ],
-    "working_principle": "public GitHub page evidence -> raw-github refresh -> repo-classification/project/site registry -> public reports -> README/site registry -> indexes + analysis + site build"
+    "working_principle": "public GitHub page/API/search evidence -> raw-github refresh -> repo-classification/project/site registry -> public reports -> README/site registry -> Linguist/topic metadata -> indexes + analysis + site build"
   }
 }

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-05T15:43:00+08:00",
+  "generated_at": "2026-06-05T19:15:00+08:00",
   "rows": [
     {
       "repo": "01-ai/langcrew",
@@ -10215,6 +10215,21 @@
       "content_timestamp": "unknown",
       "evidence": "awesome/list/tutorial/survey resource signal",
       "description": "[ACM Computing Surveys 2025] This repository collects awesome survey, resource, and paper for Lifelong Learning with Large Language Models. (Updated Regularly)"
+    },
+    {
+      "repo": "shiyao-huang/awesome-agent-evolution",
+      "url": "https://github.com/Shiyao-Huang/awesome-agent-evolution",
+      "stars": "136",
+      "prior_category": "教程",
+      "prior_unclassified": "false",
+      "final_category": "教程/tutorial",
+      "function_tag": "resource-index",
+      "base_theme": "tutorial",
+      "stack": "Markdown",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-05",
+      "evidence": "GitHub API/search topic capture + README verified",
+      "description": "Open survey and evidence map for AI agent evolution, self-evolving agents, memory, skills, harnesses, benchmarks, and agent-swarm systems."
     }
   ]
 }

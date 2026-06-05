@@ -6,6 +6,8 @@
 
 GitHub Topics: `agent-evolution`, `self-evolving-agents`, `self-evolution`, `self-improvement`, `ai-agent`, `llm-agent`, `agent-swarm`, `memory-system`, `skill-library`, `harness-engineering`, `benchmark`.
 
+GitHub topic 收录状态（2026-06-05）：GitHub API 和 `gh search repos 'topic:agent-evolution'` 已经能看到 `Shiyao-Huang/awesome-agent-evolution`；如果网页话题页仍显示旧仓库或短暂缺席，优先按 GitHub search/API 证据判断，这是 GitHub topic 页面缓存或同步延迟，不代表本仓库没有设置 `agent-evolution` topic。
+
 ![Self Evolve 公开研究管线](site/public/visuals/self-evolve-readme-banner.png)
 
 ## 一句话
@@ -115,7 +117,7 @@ EAI = Σ(signal_score × signal_weight)
 
 权重是当前 Survey 的 editorial/proposed weights，用来把不同证据放在同一张可讨论的表里；它们还不是经同行验证的领域标准，也没有完成敏感性分析或置信区间估计。
 
-**Data Snapshot / 数据快照：**Evolve-AGI trend 使用的是 `2026-06-01` 趋势输入快照：`93` 个 strict evolution repos、`200` 个 broad evolution repos、`239` 条 trend public-report records。仓库治理和网站覆盖使用 [docs/indexes/master-index.md](docs/indexes/master-index.md) 的最新生成口径：`678` 个 classified GitHub repositories、`286` 个 analyzed project/model-card reports、`99` 个 strict evolution repos、`204` 个 broad evolution repos、`485` 个 public project report files。两个口径不能混用：前者服务指数趋势，后者服务仓库覆盖审计。
+**Data Snapshot / 数据快照：**Evolve-AGI trend 使用的是 `2026-06-01` 趋势输入快照：`93` 个 strict evolution repos、`200` 个 broad evolution repos、`239` 条 trend public-report records。仓库治理和网站覆盖使用 [docs/indexes/master-index.md](docs/indexes/master-index.md) 的最新生成口径：`682` 个 classified GitHub repositories、`290` 个 analyzed project/model-card reports、`99` 个 strict evolution repos、`205` 个 broad evolution repos、`488` 个 public project report files。两个口径不能混用：前者服务指数趋势，后者服务仓库覆盖审计；public project reports 当前是可索引证据快照，不等于逐篇文案审查完成。
 
 ## Survey 证据地图
 

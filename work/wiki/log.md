@@ -564,6 +564,15 @@
 
 ## [2026-06-02 11:58] data+index | Continual Harness Repair Queue Resolution
 
+## [2026-06-05 19:00] raw+ops | GitHub Topic Indexing Evidence
+
+**操作:** Verified `agent-evolution` topic indexing status for the public repository and recorded the API/search vs rendered topic-page mismatch.
+**详情:**
+- GitHub API reports `Shiyao-Huang/awesome-agent-evolution` as public, non-fork, 136 stars, MIT licensed, homepage `https://agent-evolution.com/`, and carrying `agent-evolution` plus related AI-agent topics.
+- `gh search repos 'topic:agent-evolution'` returns `Shiyao-Huang/awesome-agent-evolution`, while the rendered topic page still showed `EvoMap/awesome-agent-evolution`; this is treated as GitHub topic-page cache/synchronization lag, not missing repository metadata.
+- Added `.gitattributes` to reduce GitHub Linguist misclassification as TeX and updated README/README-EN with the topic indexing boundary.
+**产出:** `raw-github/shiyao-huang_awesome-agent-evolution.md`, `.gitattributes`, `README.md`, `README-EN.md`, `work/research/github-topic-indexing-2026-06-05.md`, `.mermaid/current/graph.json`
+
 **操作:** Rebuilt value-LSH, projection, repair queue, wiki search index, project indexes, and site build after the sixth deep-read packet.
 **详情:**
 - Verified `sethkarten/continual-harness` now has `evidence_refs.analysis_report = analysis/frontier-projects/sethkarten-continual-harness-dual-chain.md`.

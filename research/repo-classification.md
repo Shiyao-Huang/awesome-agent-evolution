@@ -712,3 +712,9 @@
 | 679 | [zou-group/textgrad](https://github.com/zou-group/textgrad) | 3 | - | 评测/evaluation | Python | evaluation | benchmark-eval | 2026-05 | 2026-05-21 | benchmark/evaluation/harness signal |
 | 680 | [zylos-ai/zylos-core](https://github.com/zylos-ai/zylos-core) | 1400 | - | 框架/framework | Python | evolution | framework-runtime | 2026-05 | 2026-05-25 | web search and public GitHub page evidence observed Apache-2.0 license, Python stack, 1.4k stars and 158 forks; project description positions Zylos as a self-evolving AI team platform for specialized agents, memory, automation, and marketplace-style extensibility |
 | 681 | [zzz47zzz/awesome-lifelong-learning-methods-for-llm](https://github.com/zzz47zzz/awesome-lifelong-learning-methods-for-llm) | 162 | - | 教程/tutorial | Unknown | education-list | resource-index | unknown | unknown | awesome/list/tutorial/survey resource signal |
+
+## 9. Current Repository Topic-Indexing Classification
+
+| Repo | Stars | Final category | Stack | Evidence |
+|---|---:|---|---|---|
+| [shiyao-huang/awesome-agent-evolution](https://github.com/Shiyao-Huang/awesome-agent-evolution) | 136 | 教程/tutorial | Markdown | GitHub API/search topic capture + README verified |

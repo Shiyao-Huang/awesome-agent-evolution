@@ -1,7 +1,7 @@
 {
   "generated_at": "2026-06-05T00:00:00+08:00",
-  "total": 681,
-  "updated_files": 681,
+  "total": 682,
+  "updated_files": 682,
   "unknown_content_timestamp": 100,
   "records": [
     {
@@ -4755,6 +4755,15 @@
       "collected_at": "2026-05-20T17:45:19Z",
       "time_slice": "2026-05",
       "timestamp_source": "github_latest_commit_or_update_text"
+    },
+    {
+      "repo": "shiyao-huang/awesome-agent-evolution",
+      "url": "https://github.com/Shiyao-Huang/awesome-agent-evolution",
+      "file": "raw-github/shiyao-huang_awesome-agent-evolution.md",
+      "content_timestamp": "2026-06-05",
+      "collected_at": "2026-06-05T19:00:31+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "github_api_and_topic_search_observed_2026-06-05"
     },
     {
       "repo": "sibyl-research-team/sibyl-research-system",

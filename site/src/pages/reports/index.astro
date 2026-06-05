@@ -7,7 +7,7 @@ import { projectReports, paperReports, surveyPublicationReports } from '@/data/r
     <div class="container">
       <div class="eyebrow">Reports / 研究报告</div>
       <h1 class="gradient-text">公开研究报告索引</h1>
-      <p class="lead">这里收录已落盘的项目 model card、论文精读和 Survey 发布切片。它们共享证据链入口，但状态不同：未完成 reader/editor 与 academic public-copy review 的页面只保留可访问入口，暂不作为搜索索引内容。</p>
+      <p class="lead">这里收录已落盘的项目 model card、论文精读和 Survey 发布切片。项目报告与 Survey 发布切片现在作为可索引证据快照公开：可以帮助追溯来源和发现主题，但不等于逐篇质量背书。</p>
       <div class="metrics">
         <div class="metric"><strong>{projectReports.length}</strong><span>份项目分析报告</span></div>
         <div class="metric"><strong>{surveyPublicationReports.length}</strong><span>份 Survey 发布切片</span></div>
@@ -21,24 +21,27 @@ import { projectReports, paperReports, surveyPublicationReports } from '@/data/r
       <div class="container">
         <div class="section-head">
           <div>
-            <div class="eyebrow">项目报告</div>
-            <h2>GitHub 项目深度分析</h2>
+            <div class="eyebrow">Indexable project evidence</div>
+            <h2>项目证据库：先追溯来源，再判断结论强度</h2>
           </div>
         </div>
+        <p class="lead">这些页面保留 GitHub 源、站内分类、机制线索和限制提醒。它们可被搜索引擎索引，用来形成公开证据入口；逐篇 reader/editor 与 academic review 完成前，不把它们当最终结论引用。</p>
         <div class="grid">
-          {projectReports.slice(0, 30).map((report) => (
+          {projectReports.slice(0, 18).map((report) => (
             <article class="card">
               <div class="eyebrow">{report.category}</div>
               <h3><a href={report.href}>{report.title}</a></h3>
-              <p>{report.excerpt}</p>
+              <p>Indexable evidence snapshot. Use it for source tracing and follow-up reading; do not cite it as a reviewed conclusion until the public-copy gate passes.</p>
               <div class="pill-row">
-                <span class="pill">project</span>
-                <a class="pill" href={report.href}>阅读报告</a>
+                <span class="pill">indexable</span>
+                <span class="pill">review pending</span>
+                <span class="pill">source trail</span>
+                <a class="pill" href={report.href}>查看证据页</a>
               </div>
             </article>
           ))}
         </div>
-        {projectReports.length > 30 && <p style="margin-top: 18px; color: var(--muted);">显示前 30 份，共 {projectReports.length} 份项目报告。</p>}
+        {projectReports.length > 18 && <p style="margin-top: 18px; color: var(--muted);">显示前 18 份，共 {projectReports.length} 份可索引项目证据页。</p>}
       </div>
     </section>
   )}
@@ -52,16 +55,18 @@ import { projectReports, paperReports, surveyPublicationReports } from '@/data/r
             <h2>面向公开发布的 Survey 切片</h2>
           </div>
         </div>
-        <p class="lead">这些切片是英文发布候选，尚未补齐中文同证据链与学术审查；当前按 review-gated 页面处理。</p>
+        <p class="lead">这些切片是英文发布候选，已经作为可索引文章资产开放；它们尚未补齐中文同证据链与学术审查，不能代表完整双语最终发布。</p>
         <div class="grid">
           {surveyPublicationReports.map((report) => (
             <article class="card">
               <div class="eyebrow">{report.category}</div>
               <h3><a href={report.href}>{report.title}</a></h3>
-              <p>{report.excerpt}</p>
+              <p>Indexable publication slice. Read it as evidence compression; bilingual and academic review can still strengthen or demote specific claims.</p>
               <div class="pill-row">
-                <span class="pill">survey</span>
-                <a class="pill" href={report.href}>阅读切片</a>
+                <span class="pill">indexable</span>
+                <span class="pill">bilingual pending</span>
+                <span class="pill">academic review pending</span>
+                <a class="pill" href={report.href}>阅读发布切片</a>
               </div>
             </article>
           ))}
@@ -108,7 +113,7 @@ import { projectReports, paperReports, surveyPublicationReports } from '@/data/r
         <article class="card" style="border-left: 4px solid #B83224;">
           <div class="eyebrow">QA · EN→CN Mapping</div>
           <h3><a href="/reports/en-cn-mapping-audit">EN→CN Full Mapping Audit</a></h3>
-          <p>八篇章节逐章对比：英文 Source of Truth 与中文 survey/latex 结构映射完整性评估。7/8 章节存在结构偏离，2 章分类法根本不同。</p>
+          <p>内部 QA 结果：英文论文与中文 survey/latex 结构仍有章节映射偏离。该审计页用于修复排队，保持 noindex，不作为面向外部读者的知识型文章。</p>
           <div class="pill-row">
             <span class="pill">audit</span>
             <span class="pill" style="background: #B83224; color: white;">2 CRITICAL</span>

@@ -1,0 +1,18 @@
+# Keep GitHub Linguist focused on the public repository surface.
+# The survey corpus and papers are first-class project assets, but they should
+# not make GitHub classify this awesome list primarily as TeX or generated data.
+paper-drafts/** linguist-documentation
+survey/** linguist-documentation
+raw-github/** linguist-vendored
+raw-papers/** linguist-vendored
+raw-blogs/** linguist-vendored
+raw-social/** linguist-vendored
+raw-social-rank/** linguist-vendored
+reports/** linguist-documentation
+output/** linguist-generated
+work/** linguist-generated
+site/public/reports/** linguist-documentation
+site/dist/** linguist-generated
+*.tex linguist-documentation
+*.bib linguist-documentation
+*.pdf linguist-generated

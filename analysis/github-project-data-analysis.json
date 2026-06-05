@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-06-05T08:49:50.562Z",
+  "generated_at": "2026-06-05T11:16:20.209Z",
   "counts": {
-    "raw_captures": 681,
-    "raw_files_on_disk": 681,
-    "classified_repos": 681,
+    "raw_captures": 682,
+    "raw_files_on_disk": 682,
+    "classified_repos": 682,
     "analyzed_projects": 290,
     "analyzed_in_raw_timestamp_index": 238,
     "analyzed_in_classification": 237,
@@ -17,7 +17,7 @@
     "analyzed_with_local_git_tags_24m": 5,
     "analyzed_with_public_report": 290,
     "raw_core_evolution": 99,
-    "raw_broad_evolution": 204,
+    "raw_broad_evolution": 205,
     "raw_unknown_time_slice": 100
   },
   "raw_category_counts": [
@@ -31,7 +31,7 @@
     },
     {
       "key": "教程/tutorial",
-      "count": 131
+      "count": 132
     },
     {
       "key": "工具/tool",
@@ -102,12 +102,16 @@
     {
       "key": "safety",
       "count": 2
+    },
+    {
+      "key": "tutorial",
+      "count": 1
     }
   ],
   "raw_stack_counts": [
     {
       "key": "Markdown",
-      "count": 195
+      "count": 196
     },
     {
       "key": "Python",
@@ -1137,7 +1141,7 @@
     },
     {
       "key": "2026-06",
-      "count": 80
+      "count": 81
     },
     {
       "key": "2024-Q2",
@@ -12692,6 +12696,21 @@
       "content_timestamp": "unknown",
       "evidence": "awesome/list/tutorial/survey resource signal",
       "description": "[ACM Computing Surveys 2025] This repository collects awesome survey, resource, and paper for Lifelong Learning with Large Language Models. (Updated Regularly)"
+    },
+    {
+      "repo": "shiyao-huang/awesome-agent-evolution",
+      "url": "https://github.com/Shiyao-Huang/awesome-agent-evolution",
+      "stars": "136",
+      "prior_category": "教程",
+      "prior_unclassified": "false",
+      "final_category": "教程/tutorial",
+      "function_tag": "resource-index",
+      "base_theme": "tutorial",
+      "stack": "Markdown",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-05",
+      "evidence": "GitHub API/search topic capture + README verified",
+      "description": "Open survey and evidence map for AI agent evolution, self-evolving agents, memory, skills, harnesses, benchmarks, and agent-swarm systems."
     }
   ],
   "raw_core_evolution_repositories": [
@@ -17241,6 +17260,21 @@
       "content_timestamp": "2026-05-25",
       "evidence": "web search and public GitHub page evidence observed Apache-2.0 license, Python stack, 1.4k stars and 158 forks; project description positions Zylos as a self-evolving AI team platform for specialized agents, memory, automation, and marketplace-style extensibility",
       "description": "Zylos Core 是 self-evolving AI team platform，把专门化 agents、共享记忆、工具市场和交付界面组合成持续改进的团队运行时。"
+    },
+    {
+      "repo": "shiyao-huang/awesome-agent-evolution",
+      "url": "https://github.com/Shiyao-Huang/awesome-agent-evolution",
+      "stars": "136",
+      "prior_category": "教程",
+      "prior_unclassified": "false",
+      "final_category": "教程/tutorial",
+      "function_tag": "resource-index",
+      "base_theme": "tutorial",
+      "stack": "Markdown",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-05",
+      "evidence": "GitHub API/search topic capture + README verified",
+      "description": "Open survey and evidence map for AI agent evolution, self-evolving agents, memory, skills, harnesses, benchmarks, and agent-swarm systems."
     }
   ],
   "analyzed_projects": [
@@ -63163,7 +63197,7 @@
   },
   "ranking_method": {
     "name": "recency_weighted_current_value",
-    "reference_date": "2026-06-05T08:49:50.562Z",
+    "reference_date": "2026-06-05T11:16:20.209Z",
     "weights": {
       "time": 0.5,
       "mechanism": 0.2,
@@ -63202,8 +63236,8 @@
       "stars": 1440,
       "report": "projects/modelscope__agentevolver.md",
       "scores": {
-        "current_value": 82.95,
-        "time": 75.11,
+        "current_value": 82.94,
+        "time": 75.09,
         "mechanism": 100,
         "evidence": 100,
         "adoption": 59.98,
@@ -63230,8 +63264,8 @@
       "stars": 41,
       "report": "projects/zju_llm_safety__darwin.md",
       "scores": {
-        "current_value": 76.53,
-        "time": 92.99,
+        "current_value": 76.52,
+        "time": 92.97,
         "mechanism": 75,
         "evidence": 62,
         "adoption": 30.83,
@@ -63260,8 +63294,8 @@
       "stars": 43,
       "report": "projects/oppo_mente_lab__llm_self_judge.md",
       "scores": {
-        "current_value": 75.49,
-        "time": 85.83,
+        "current_value": 75.48,
+        "time": 85.81,
         "mechanism": 85,
         "evidence": 62,
         "adoption": 31.21,
@@ -63288,8 +63322,8 @@
       "stars": 6377,
       "report": "projects/algorithmicsuperintelligence__openevolve.md",
       "scores": {
-        "current_value": 70.7,
-        "time": 56.55,
+        "current_value": 70.69,
+        "time": 56.53,
         "mechanism": 79,
         "evidence": 100,
         "adoption": 72.25,
@@ -63315,8 +63349,8 @@
       "stars": 77,
       "report": "projects/jarvispei__scope.md",
       "scores": {
-        "current_value": 67.91,
-        "time": 77.93,
+        "current_value": 67.9,
+        "time": 77.91,
         "mechanism": 67,
         "evidence": 62,
         "adoption": 35.93,
@@ -63343,8 +63377,8 @@
       "stars": 98,
       "report": "projects/inter_co__science_codeevolve.md",
       "scores": {
-        "current_value": 65.37,
-        "time": 72.87,
+        "current_value": 65.36,
+        "time": 72.85,
         "mechanism": 59,
         "evidence": 68,
         "adoption": 37.9,
@@ -63372,8 +63406,8 @@
       "stars": 274,
       "report": "projects/jarvis_xs__se_agent.md",
       "scores": {
-        "current_value": 63.19,
-        "time": 47.52,
+        "current_value": 63.18,
+        "time": 47.5,
         "mechanism": 77,
         "evidence": 100,
         "adoption": 46.32,
@@ -63652,7 +63686,7 @@
       "report": "projects/22-evoagentx-agent-evolution-framework.md",
       "scores": {
         "current_value": 58.34,
-        "time": 28.73,
+        "time": 28.72,
         "mechanism": 97,
         "evidence": 86,
         "adoption": 72.78,
@@ -64146,8 +64180,8 @@
       "stars": 426,
       "report": "projects/228-yunjue-agent-in-situ-self-evolving-agent.md",
       "scores": {
-        "current_value": 53.97,
-        "time": 34.34,
+        "current_value": 53.96,
+        "time": 34.33,
         "mechanism": 97,
         "evidence": 56,
         "adoption": 49.95,
@@ -64207,7 +64241,7 @@
       "stars": 34604,
       "report": "projects/10-dspy-declarative-llm-programming.md",
       "scores": {
-        "current_value": 53.06,
+        "current_value": 53.05,
         "time": 28.97,
         "mechanism": 59,
         "evidence": 100,
@@ -64330,7 +64364,7 @@
       "report": "projects/23-everos-self-evolving-agents.md",
       "scores": {
         "current_value": 51.06,
-        "time": 28.73,
+        "time": 28.72,
         "mechanism": 71,
         "evidence": 86,
         "adoption": 56.98,
@@ -64607,7 +64641,7 @@
       "report": "research/projects/44-xmu-self-evolving-agents.md",
       "scores": {
         "current_value": 48.62,
-        "time": 30.65,
+        "time": 30.63,
         "mechanism": 69,
         "evidence": 68,
         "adoption": 67.98,
@@ -65066,8 +65100,8 @@
       "stars": 200,
       "report": "projects/33-self-improvement-llm.md",
       "scores": {
-        "current_value": 47.09,
-        "time": 28.73,
+        "current_value": 47.08,
+        "time": 28.72,
         "mechanism": 69,
         "evidence": 86,
         "adoption": 43.74,
@@ -65127,7 +65161,7 @@
       "report": "projects/05-automl-agent-multi-agent.md",
       "scores": {
         "current_value": 46.88,
-        "time": 35.35,
+        "time": 35.34,
         "mechanism": 59,
         "evidence": 68,
         "adoption": 40.58,
@@ -65895,8 +65929,8 @@
       "stars": 21600,
       "report": "projects/311-openai-swarm-multi-agent-orchestration.md",
       "scores": {
-        "current_value": 45.22,
-        "time": 42.97,
+        "current_value": 45.21,
+        "time": 42.95,
         "mechanism": 18,
         "evidence": 56,
         "adoption": 82.31,
@@ -66294,7 +66328,7 @@
       "report": "research/projects/60-swe-bench-evaluation.md",
       "scores": {
         "current_value": 44.77,
-        "time": 41.05,
+        "time": 41.04,
         "mechanism": 20,
         "evidence": 68,
         "adoption": 65.46,
@@ -66323,7 +66357,7 @@
       "report": "projects/14-swe-agent-software-engineering.md",
       "scores": {
         "current_value": 44.77,
-        "time": 28.57,
+        "time": 28.56,
         "mechanism": 45,
         "evidence": 68,
         "adoption": 81.37,
@@ -66535,7 +66569,7 @@
       "report": "projects/09-crewai-multi-agent-framework.md",
       "scores": {
         "current_value": 44.34,
-        "time": 28.97,
+        "time": 28.96,
         "mechanism": 10,
         "evidence": 100,
         "adoption": 89.56,
@@ -66760,35 +66794,6 @@
     },
     {
       "rank": 118,
-      "repo": "Significant-Gravitas/AutoGPT",
-      "name": "AutoGPT",
-      "url": "https://github.com/Significant-Gravitas/AutoGPT",
-      "category": "自主 Agent 平台",
-      "pattern": "智能体编排",
-      "tags": [
-        "智能体编排",
-        "TAO循环",
-        "Agent平台"
-      ],
-      "status": "verified",
-      "created_at": "2023-03-16T09:21:07Z",
-      "created_at_source": "github_api",
-      "first_observed_at": null,
-      "activity_at": "2026-05-24T03:06:57Z",
-      "stars": 184482,
-      "report": "projects/08-autogpt-autonomous-agent.md",
-      "scores": {
-        "current_value": 44.15,
-        "time": 28.99,
-        "mechanism": 10,
-        "evidence": 100,
-        "adoption": 100,
-        "usefulness": 53
-      },
-      "caveat": ""
-    },
-    {
-      "rank": 119,
       "repo": "lhl/agentic-memory",
       "name": "LHL Agentic Memory Module",
       "url": "https://github.com/lhl/agentic-memory",
@@ -66817,6 +66822,35 @@
         "usefulness": 70
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
+    },
+    {
+      "rank": 119,
+      "repo": "Significant-Gravitas/AutoGPT",
+      "name": "AutoGPT",
+      "url": "https://github.com/Significant-Gravitas/AutoGPT",
+      "category": "自主 Agent 平台",
+      "pattern": "智能体编排",
+      "tags": [
+        "智能体编排",
+        "TAO循环",
+        "Agent平台"
+      ],
+      "status": "verified",
+      "created_at": "2023-03-16T09:21:07Z",
+      "created_at_source": "github_api",
+      "first_observed_at": null,
+      "activity_at": "2026-05-24T03:06:57Z",
+      "stars": 184482,
+      "report": "projects/08-autogpt-autonomous-agent.md",
+      "scores": {
+        "current_value": 44.14,
+        "time": 28.99,
+        "mechanism": 10,
+        "evidence": 100,
+        "adoption": 100,
+        "usefulness": 53
+      },
+      "caveat": ""
     },
     {
       "rank": 120,
@@ -67212,7 +67246,7 @@
       "report": "projects/12-camel-ai-communicative-agents.md",
       "scores": {
         "current_value": 43.44,
-        "time": 28.61,
+        "time": 28.6,
         "mechanism": 35,
         "evidence": 68,
         "adoption": 80.35,
@@ -67761,7 +67795,7 @@
       "report": "projects/13-langgraph-agent-workflows.md",
       "scores": {
         "current_value": 42.72,
-        "time": 28.99,
+        "time": 28.98,
         "mechanism": 10,
         "evidence": 100,
         "adoption": 85.75,
@@ -68469,8 +68503,8 @@
       "stars": 200,
       "report": "projects/24-opentreesearch-llm-code-evolution.md",
       "scores": {
-        "current_value": 41.79,
-        "time": 28.73,
+        "current_value": 41.78,
+        "time": 28.72,
         "mechanism": 59,
         "evidence": 54,
         "adoption": 43.74,
@@ -68686,8 +68720,8 @@
       "stars": 266,
       "report": "projects/281-redis-agent-memory-server-runtime.md",
       "scores": {
-        "current_value": 41.66,
-        "time": 43.11,
+        "current_value": 41.65,
+        "time": 43.09,
         "mechanism": 18,
         "evidence": 56,
         "adoption": 46.08,
@@ -69173,8 +69207,8 @@
       "stars": 50000,
       "report": "projects/41-opendevin-ai-software.md",
       "scores": {
-        "current_value": 41.04,
-        "time": 28.73,
+        "current_value": 41.03,
+        "time": 28.72,
         "mechanism": 35,
         "evidence": 54,
         "adoption": 89.23,
@@ -69414,8 +69448,8 @@
       "stars": 26000,
       "report": "research/projects/46-chatdev-multi-agent-platform.md",
       "scores": {
-        "current_value": 40.66,
-        "time": 29.55,
+        "current_value": 40.65,
+        "time": 29.54,
         "mechanism": 43,
         "evidence": 36,
         "adoption": 83.84,
@@ -69656,7 +69690,7 @@
       "report": "projects/36-llm-agent-optimization.md",
       "scores": {
         "current_value": 40.24,
-        "time": 28.73,
+        "time": 28.72,
         "mechanism": 31,
         "evidence": 86,
         "adoption": 51.27,
@@ -69931,8 +69965,8 @@
       "stars": 68239,
       "report": "projects/07-metagpt-multi-agent-framework.md",
       "scores": {
-        "current_value": 39.74,
-        "time": 18.92,
+        "current_value": 39.73,
+        "time": 18.91,
         "mechanism": 35,
         "evidence": 68,
         "adoption": 91.8,
@@ -70543,7 +70577,7 @@
       "stars": 74662,
       "report": "projects/15-openhands-ai-software-dev.md",
       "scores": {
-        "current_value": 38.6,
+        "current_value": 38.59,
         "time": 28.98,
         "mechanism": 10,
         "evidence": 68,
@@ -70726,7 +70760,7 @@
       "report": "projects/11-autogen-multi-agent-conversation.md",
       "scores": {
         "current_value": 38.06,
-        "time": 25.82,
+        "time": 25.81,
         "mechanism": 10,
         "evidence": 68,
         "adoption": 90.5,
@@ -70848,7 +70882,7 @@
       "report": "projects/40-awesome-fm4co.md",
       "scores": {
         "current_value": 37.44,
-        "time": 28.73,
+        "time": 28.72,
         "mechanism": 17,
         "evidence": 86,
         "adoption": 51.27,
@@ -70938,8 +70972,8 @@
       "stars": 2200,
       "report": "research/projects/61-osworld-agent-evaluation.md",
       "scores": {
-        "current_value": 36.99,
-        "time": 24.49,
+        "current_value": 36.98,
+        "time": 24.47,
         "mechanism": 28,
         "evidence": 62,
         "adoption": 63.48,
@@ -71058,7 +71092,7 @@
       "report": "research/projects/59-awesome-agent-papers.md",
       "scores": {
         "current_value": 35.7,
-        "time": 36.81,
+        "time": 36.79,
         "mechanism": 0,
         "evidence": 68,
         "adoption": 58.48,
@@ -71114,7 +71148,7 @@
       "report": "projects/37-awesome-code-llm.md",
       "scores": {
         "current_value": 34.48,
-        "time": 28.73,
+        "time": 28.72,
         "mechanism": 25,
         "evidence": 48,
         "adoption": 62.69,
@@ -71142,8 +71176,8 @@
       "stars": 1581,
       "report": "projects/03-adas-automated-design-agentic-systems.md",
       "scores": {
-        "current_value": 33.95,
-        "time": 5.44,
+        "current_value": 33.94,
+        "time": 5.43,
         "mechanism": 59,
         "evidence": 68,
         "adoption": 60.75,
@@ -71702,8 +71736,8 @@
       "stars": 2800,
       "report": "research/projects/62-webarena-web-evaluation.md",
       "scores": {
-        "current_value": 25.52,
-        "time": 16.14,
+        "current_value": 25.51,
+        "time": 16.12,
         "mechanism": 10,
         "evidence": 36,
         "adoption": 65.46,
@@ -71877,7 +71911,7 @@
       "report": "research/projects/52-agentgpt-autonomous.md",
       "scores": {
         "current_value": 22.12,
-        "time": 7.79,
+        "time": 7.77,
         "mechanism": 10,
         "evidence": 36,
         "adoption": 85.81,
@@ -71935,7 +71969,7 @@
       "report": "research/projects/47-openagents-platform.md",
       "scores": {
         "current_value": 20.42,
-        "time": 7.79,
+        "time": 7.77,
         "mechanism": 10,
         "evidence": 36,
         "adoption": 68.81,

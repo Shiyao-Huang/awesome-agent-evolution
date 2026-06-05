@@ -13,12 +13,12 @@
 | `paper-drafts` | present | 37 | 3 | 0 | 3.6 MB |
 | `paper` | present | 15 | 2 | 0 | 1023 KB |
 | `latex` | present | 9 | 2 | 0 | 53 KB |
-| `site` | present | 2200 | 1001 | 0 | 65 MB |
+| `site` | present | 2202 | 1003 | 0 | 65 MB |
 | `survey` | present | 94 | 4 | 0 | 3.4 MB |
-| `scripts` | present | 63 | 1 | 0 | 1.7 MB |
+| `scripts` | present | 64 | 1 | 0 | 1.7 MB |
 | `data-engine` | present | 495 | 20 | 0 | 29 MB |
-| `work/research` | present | 78 | 2 | 0 | 2.2 MB |
-| `work/wiki` | present | 81 | 6 | 0 | 570 KB |
+| `work/research` | present | 79 | 2 | 0 | 2.2 MB |
+| `work/wiki` | present | 81 | 6 | 0 | 571 KB |
 | `wiki` | present | 8 | 2 | 0 | 4.2 MB |
 
 ## Representative Files
@@ -90,6 +90,7 @@
 ### `scripts`
 
 - `scripts/analyze_github_project_data.mjs`
+- `scripts/audit_public_i18n_routes.mjs`
 - `scripts/audit_seo_indexable_assets.mjs`
 - `scripts/auto-commit-shield.sh`
 - `scripts/build_github_star_history_db.mjs`
@@ -98,7 +99,6 @@
 - `scripts/build_value_lsh_index.mjs`
 - `scripts/enforce_raw_timestamps.py`
 - `scripts/export_survey_figures_for_paper.mjs`
-- `scripts/generate-site-knowledge-graph.mjs`
 
 ### `data-engine`
 

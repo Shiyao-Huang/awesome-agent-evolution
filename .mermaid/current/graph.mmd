@@ -1,6 +1,8 @@
 flowchart LR
   INTENT["Direct user intent"] --> RAW["raw-github refresh and add"]
+  TOPIC["GitHub topic API/search evidence"] --> LINGUIST["README topic status + Linguist rules"]
   RAW --> PROC["classification + project cards"]
+  LINGUIST --> SITE
   PROC --> SITE["site data + public reports"]
   PROC --> NOTE["work learning note"]
   NOTE --> INTENT

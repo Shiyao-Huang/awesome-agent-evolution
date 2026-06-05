@@ -12,7 +12,7 @@
 |---|---|---:|---:|---:|---:|
 | `README.md` | present | 1 | 0 | 0 | 20 KB |
 | `README-ZH.md` | present | 1 | 0 | 0 | 16 KB |
-| `README-EN.md` | present | 1 | 0 | 0 | 21 KB |
+| `README-EN.md` | present | 1 | 0 | 0 | 22 KB |
 | `CONTENT_INDEX.md` | present | 1 | 0 | 0 | 16 KB |
 | `AGENTS.md` | present | 1 | 0 | 0 | 23 KB |
 | `CLAUDE.md` | present | 1 | 0 | 0 | 15 KB |

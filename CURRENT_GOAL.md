@@ -51,6 +51,7 @@ Inference is allowed only after the exact direct user inputs are separated first
 - 维护项目结构边界：raw 归 raw，加工后的归加工，work 产物归 work，结果输出归 results，全部索引化覆盖。
 - 对不符合四层构成的材料，先查引用、归入 support/compatibility/mirrors/local/needs-review 等类别并更新索引；默认不要乱删。
 - 每次定时任务或人工迭代结束前，主动更新受影响的 README、i18n、网站、索引和发布面，并提交本轮相关改动。
+- GitHub topic/search/repository metadata 属于开源发布面：当 `agent-evolution` 话题页、GitHub search、README、Linguist 语言识别或站点 metadata 不一致时，先保存 raw evidence，再同步 README、README-EN、索引、Mermaid 和发布面，避免误判为“未被收录”。
 - 新增 `agent-swarm` / `agent-swarm evolve` 作为 multi-agent / harness 下面的内容部分：把 swarm 组织结构、角色、拓扑、共享状态、验证器、handoff 和 lineage 纳入 README、wiki、分析和网站。
 - 把 GitHub 项目价值排序从“累计 Star”升级到“2026 新增 Star / 当前增长 / 覆盖完整性”的历史数据挖掘数据库；累计 Star 只作为历史 adoption prior，star-history 数据要能沉淀为 Hugging Face dataset。
 - 核心完成 i18n：把网站、README、SEO 页面、论文页、项目入口和 metadata 的双语支持写成 AGENTS/CLOUD 级别的硬约束。
@@ -70,6 +71,7 @@ Inference is allowed only after the exact direct user inputs are separated first
 - Value LSH classification：把“谁好/谁坏/谁有价值/谁没有价值”从主观 ranking 变成可复跑 value matrix；facet 来源包括 Mom Test 访谈关注度、机制分类、证据链、语言信号、OpenAI embedding/gbrain 语义图和 TSNE/3D 聚类。
 - Bilingual i18n gates：中文 `zh-CN` 保持默认入口，英文作为同证据链镜像；public site/README/SEO metadata 变更必须同步检查 canonical/alternate 和双语缺口。
 - Public copy review gates：网页、README、README-EN、SEO/topic/blog、论文页和 metadata 变更必须经过 `3-5` 个读者/编辑 agents 与 `3` 个学术 agents 审查，分别检查 Mom Test/可读性/下一步和术语/证据/限制。
+- GitHub discovery gates：仓库 About description、homepage、20 个 topics、README 前部关键词、Linguist 语言识别、GitHub search 结果、topic rendered page 与站点 canonical/sitemap 要互相一致；API/search 与 rendered topic page 冲突时要标注缓存/同步边界，不编造 freshness。
 
 ## Operating Style
 

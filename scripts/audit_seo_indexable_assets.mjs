@@ -144,8 +144,7 @@ for (const name of fs.readdirSync(projectReportsRoot).filter((file) => file.ends
     sourcePath,
     urlPath: `/reports/projects/${slug}/`,
     requiredType: 'Article',
-    requireFrontmatter: false,
-    indexPolicy: 'noindex'
+    requireFrontmatter: false
   }));
 }
 
@@ -159,8 +158,7 @@ if (exists(surveyPublicationRoot)) {
       sourcePath,
       urlPath: `/reports/survey-publication/${slug}/`,
       requiredType: 'Article',
-      requireFrontmatter: false,
-      indexPolicy: 'noindex'
+      requireFrontmatter: false
     }));
   }
 }
@@ -169,10 +167,6 @@ for (const asset of assets) {
   if (asset.indexPolicy === 'indexable' && !sitemapUrls.has(asset.url)) {
     asset.status = 'fail';
     asset.failures.push('URL missing from sitemap');
-  }
-  if (asset.indexPolicy === 'noindex' && sitemapUrls.has(asset.url)) {
-    asset.status = 'fail';
-    asset.failures.push('review-gated URL should not appear in sitemap');
   }
 }
 

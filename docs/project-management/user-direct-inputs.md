@@ -88,6 +88,12 @@ OK，然后用户的输入你得提取出来，然后作为Agent和Claude里边�
 ```
 
 ```text
+https://github.com/topics/agent-evolution?o=desc&s=stars
+
+为什么当前的项目没有在这个话题当中？需要去修改我们核心的一些内容，来适应它能被Git 索引？？
+```
+
+```text
 增加 一部分 去做 agent-swarm
 
 增加一部分去做 agent-swarm evolve
@@ -149,6 +155,7 @@ readme
 - 可视化图谱质量要提高，网站可参考 `x.mitbunny.ai` 的交互方向。
 - 输出要分层：一句话、三句话、五句话、完整展开。
 - 自动化和人工迭代都要闭环：相关 README、网站、索引更新后主动提交；没有可提交变化也要明确说明。
+- GitHub topic / search / repository metadata 也是开源发布面：发现 topic 页、GitHub search、README、Linguist 语言识别或站点 metadata 不一致时，要用 raw evidence 记录并同步修正公开入口。
 - 增加 agent-swarm / agent-swarm evolve 部分，并把它接入分析、README、wiki 和网站。
 - 建立 GitHub star-history / new-star growth 数据库，把累计 Star 降为历史 adoption prior，重点看 2026 新增 Star、当前增长和覆盖完整性，并预留 Hugging Face dataset 发布路径。
 - 核心完成 i18n：公开网站、README、SEO 页面、论文页、项目入口和 metadata 都要有中文默认入口与英文镜像约束，并写入 AGENTS/CLOUD。
