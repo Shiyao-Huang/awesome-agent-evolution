@@ -15,7 +15,7 @@
 | `latex` | present | 9 | 2 | 0 | 53 KB |
 | `site` | present | 1693 | 502 | 0 | 53 MB |
 | `survey` | present | 94 | 4 | 0 | 3.4 MB |
-| `scripts` | present | 61 | 1 | 0 | 1.7 MB |
+| `scripts` | present | 62 | 1 | 0 | 1.7 MB |
 | `data-engine` | present | 495 | 20 | 0 | 29 MB |
 | `work/research` | present | 77 | 2 | 0 | 2.2 MB |
 | `work/wiki` | present | 81 | 6 | 0 | 570 KB |
@@ -90,6 +90,7 @@
 ### `scripts`
 
 - `scripts/analyze_github_project_data.mjs`
+- `scripts/audit_seo_indexable_assets.mjs`
 - `scripts/auto-commit-shield.sh`
 - `scripts/build_github_star_history_db.mjs`
 - `scripts/build_value_embedding_projection.mjs`
@@ -98,7 +99,6 @@
 - `scripts/enforce_raw_timestamps.py`
 - `scripts/export_survey_figures_for_paper.mjs`
 - `scripts/generate-site-knowledge-graph.mjs`
-- `scripts/generate-wiki-index.mjs`
 
 ### `data-engine`
 

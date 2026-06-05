@@ -31,11 +31,11 @@ const whatWorked = [
     detail: 'Reddit(47) + HN(36) + X/Twitter(14) 真实讨论语义分析，不是问卷调查。发现 5 个跨平台重复主题，直接反推系统设计需求。'
   },
   {
-    title: 'QA Iron Rules + CC Hooks',
+    title: '质量门禁自动化',
     verdict: '有效',
     color: '#27ae60',
-    stats: '6 条规则, 1 hook',
-    detail: 'Iron Rules 持久化后所有 Agent 遵循了禁止 git reset 规则。CC pre-tool-use hook 成功阻止所有危险 git 操作。auto-commit shield 保护 306 个文件。'
+    stats: '6 条规则, 1 自动检查',
+    detail: '把危险操作规则写入仓库后，破坏性操作显著减少；自动检查也拦截了高风险命令。经验是：质量规则必须变成可复跑的门禁，而不是只靠团队记忆。'
   },
   {
     title: '五维机制框架 (M1-M5)',
@@ -48,39 +48,39 @@ const whatWorked = [
 
 const whatFailed = [
   {
-    title: 'aha daemon 自动 git reset',
+    title: '自动化流程破坏未提交工作',
     verdict: 'P0 失败',
     color: '#e74c3c',
     stats: '~20min 周期, 41 stashes, 3 文件丢失',
-    detail: 'Supervisor 生命周期 hook 每 ~20 分钟执行 git reset HEAD，销毁所有未提交工作。这是平台代码 bug（非 Agent 行为）。通过 CC hook + auto-commit shield 缓解，但上游未修复。41 个 auto-stash 残留。'
+    detail: '周期性自动化曾清理未提交状态，导致已经写入磁盘的文件丢失。教训不是“不要自动化”，而是完成状态必须有可恢复提交、补丁或审计记录。'
   },
   {
     title: 'EN→CN 结构映射失败',
     verdict: 'P0 失败',
     color: '#e74c3c',
     stats: '7/8 章偏离, 2 CRITICAL',
-    detail: 'Iron Rule #1 要求 CN 严格映射 EN，但 8 章中 7 章偏离。Ch3 使用完全不同的分类法（EN: 推理时/训练时 vs CN: 六类机制）。Ch4 CN 是 EN 的 3 倍体积（938 vs 536 行，43 vs 0 subsubsection）。根因：没有自动化执行机制。"规则不等于执行。"'
+    detail: '中英文稿件在结构上曾明显偏离：8 章中 7 章需要复核，Ch3 分类法不同，Ch4 体量差异过大。根因不是翻译问题，而是缺少自动结构比对和逐章证据映射。'
   },
   {
-    title: 'Agent 标记 done 但文件丢失',
+    title: '完成状态缺少可恢复证据',
     verdict: 'P1 问题',
     color: '#e67e22',
     stats: '初始交付率 25%',
-    detail: 'Agent 写入了文件但未 commit，daemon reset 销毁后 Kanban 仍显示 done。真相：文件确实写入了磁盘，但被平台 reset 删除。这暴露了"完成 = 文件在磁盘上"需要加上"并且已 commit"。'
+    detail: '页面状态曾显示完成，但对应文件后来无法恢复。真相是文件确实写入过磁盘，却没有进入可恢复的版本记录。这暴露了"完成 = 文件存在"必须升级为"完成 = 有提交、索引和验证证据"。'
   },
   {
-    title: 'Agent 间协调开销大',
+    title: '多角色协作开销大',
     verdict: 'P1 问题',
     color: '#e67e22',
     stats: '18 agents, 协调 >50%',
-    detail: '团队消息日志显示大量"我在做什么""谁在做这个"的协调消息。实际编码时间 < 50%。Agent 经常不知道其他 Agent 的进度，导致重复工作或等待。18 个 Agent 的协调成本是非线性的。'
+    detail: '团队消息日志显示大量"我在做什么""谁在做这个"的协调消息。实际编码时间 < 50%。多角色协作如果没有共享状态、任务边界和完成证据，协调成本会非线性增长。'
   },
   {
     title: '上下文窗口溢出',
     verdict: 'P1 问题',
     color: '#e67e22',
     stats: '6 会话中断',
-    detail: 'Agent 在长会话中上下文溢出，丢失之前的分析结果。被迫通过 wiki 和 git log 恢复，而不是直接继续。6 个 Agent 会话因上下文耗尽而中断。'
+    detail: '长任务中上下文容易溢出，团队会丢失之前的分析结果。被迫通过持久知识库和提交历史恢复，而不是直接继续。6 个协作会话因上下文耗尽而中断。'
   },
   {
     title: 'M5 涌现行为研究严重不足',
@@ -115,7 +115,7 @@ const directions = [
     title: '修复 EN→CN 映射',
     priority: 'P0',
     color: '#e74c3c',
-    action: '方案 B：结构对齐。CN 章节标题匹配 EN，独有内容移入附录。建自动化 section 匹配验证脚本。优先修复 Ch3（分类法不同）和 Ch4（体积差 3 倍）。',
+    action: '方案 B：结构对齐。中文章节标题匹配英文主线，独有内容移入附录。建立自动化 section 匹配检查。优先修复 Ch3（分类法不同）和 Ch4（体量差过大）。',
   },
   {
     title: '改进饱和点测量',
@@ -133,7 +133,7 @@ const directions = [
     title: '小团队优先 + 流程改进',
     priority: 'P1',
     color: '#e67e22',
-    action: '下次用 6-8 个 Agent 而不是 18 个。强制 EN→CN 同步 gate。depth gate 先于 volume gate。更短会话（30 分钟）+ 更频繁 commit。质量自动化（CI 检查 frontmatter、trust chain、rank）。',
+    action: '下次使用更小的研究团队。强制中英文同步检查，深度检查先于数量检查。更短周期、更频繁地固化结果。质量自动化要覆盖 frontmatter、trust chain 和 rank。',
   },
   {
     title: '中国自进化生态深度分析',
@@ -145,7 +145,7 @@ const directions = [
 
 const dataPoints = [
   { label: '总 commits (6天)', value: '122', color: '' },
-  { label: 'Kanban done', value: '22', color: '' },
+  { label: '完成任务记录', value: '22', color: '' },
   { label: '论文分类', value: '125', color: '' },
   { label: 'GitHub 项目', value: '530', color: '' },
   { label: '原始素材', value: '3,272', color: '' },
@@ -159,15 +159,16 @@ const dataPoints = [
 
 <BaseLayout
   title="项目复盘 — 实验、教训与未来方向"
-  description="AI Self-Evolution 调查项目的 2026-05-26 历史复盘快照：18-agent 团队实验、论文分类、项目分析——什么有效、什么失败、未来怎么做。"
+  description="AI Self-Evolution 调查项目的 2026-05-26 历史方法复盘快照：知识累积、证据质量、论文分类、项目分析——什么有效、什么失败、未来怎么做。"
   publishedTime="2026-05-26T21:30:00+08:00"
   modifiedTime="2026-05-26T21:30:00+08:00"
+  noindex={true}
 >
   <section class="section">
     <div class="container">
-      <div class="eyebrow">Retrospective · 项目复盘</div>
-      <h1 class="gradient-text">复盘：实验、教训与未来方向</h1>
-      <p class="lead">这是 2026-05-26 的历史复盘快照，用来解释当时的实验规模、有效实践、失败教训和未来方向；当前全仓库计数以资料库覆盖页和 master index 为准。</p>
+      <div class="eyebrow">Retrospective · 方法附录</div>
+      <h1 class="gradient-text">复盘：研究方法、证据质量与未来方向</h1>
+      <p class="lead">这是 2026-05-26 的历史方法附录，用来解释当时的实验规模、有效实践、失败教训和未来方向；它不是站点主阅读入口。当前全仓库计数以资料库覆盖页和 master index 为准。</p>
       <div class="metrics">
         <div class="metric"><strong>125</strong><span>篇论文分类快照</span></div>
         <div class="metric"><strong>530</strong><span>个项目捕获快照</span></div>
@@ -231,18 +232,18 @@ const dataPoints = [
       <div class="section-head">
         <div>
           <div class="eyebrow">核心教训</div>
-          <h2>这个项目证明了什么</h2>
+          <h2>这个项目说明了什么</h2>
         </div>
       </div>
 
       <div class="card" style="padding: 24px; border-left: 4px solid var(--accent); margin-bottom: 16px;">
-        <h3>1. 多 Agent 可以完成系统化学术调查——但有条件</h3>
-        <p style="margin-top: 8px;">角色要清晰、产出要标准化、质量要有 gate。专业化分工（Researcher/QA/Scribe）在边界清晰时效率最高。18 个 Agent 太多，6-8 个更合适。</p>
+        <h3>1. 多角色研究可以完成系统化学术调查——但有条件</h3>
+        <p style="margin-top: 8px;">角色要清晰、产出要标准化、质量要有门禁。专业化分工在边界清晰时效率最高，但团队规模过大时协调成本会迅速上升。</p>
       </div>
 
       <div class="card" style="padding: 24px; border-left: 4px solid var(--accent); margin-bottom: 16px;">
         <h3>2. LLM Wiki Pattern 是有效的知识管理方式</h3>
-        <p style="margin-top: 8px;">比 RAG 更适合累积性知识工作。Ingest→Query→Lint 循环值得保留。三层架构（Raw 不可变 → Wiki Agent 维护 → Schema 规则）避免了重复分析。</p>
+        <p style="margin-top: 8px;">比一次性检索更适合累积性知识工作。采集、查询、校验三个步骤值得保留。三层架构（原始材料不可变、知识页持续更新、规则层约束格式）避免了重复分析。</p>
       </div>
 
       <div class="card" style="padding: 24px; border-left: 4px solid var(--accent); margin-bottom: 16px;">
@@ -252,7 +253,7 @@ const dataPoints = [
 
       <div class="card" style="padding: 24px; border-left: 4px solid #B83224;">
         <h3 style="color: #B83224;">4. "规则不等于执行"</h3>
-        <p style="margin-top: 8px;">Iron Rules 制定了 6 条，但没有自动化执行机制。7/8 章的 EN→CN 映射违规发生在 Iron Rule 制定之后。没有 gate 的规则只是建议。下次必须用 CI 检查强制执行。</p>
+        <p style="margin-top: 8px;">规则曾经写成文档，但没有自动化执行机制。7/8 章的 EN→CN 映射违规发生在规则制定之后。没有门禁的规则只是建议；下次必须用自动检查强制执行。</p>
       </div>
     </div>
   </section>

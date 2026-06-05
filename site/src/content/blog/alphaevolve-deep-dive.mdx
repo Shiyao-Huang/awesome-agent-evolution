@@ -66,11 +66,11 @@ Archive[b(p)] = p  if  f(p) > f(Archive[b(p)])
 
 | 应用 | 效果 |
 |------|------|
-| 数据中心调度 (Borg) | 恢复全球 **0.7%** 算力 |
+| 数据中心调度 (Borg) | 论文语境下报告约 **0.7%** 计算资源恢复 |
 | FlashAttention kernel | **23% 加速** |
 | LLM 训练 attention | **32% 加速** |
 
-0.7% 的全球算力听起来不多，但对于 Google 规模的数据中心来说，这等于免费获得了大量计算资源。
+0.7% 的计算资源恢复听起来不多，但在 Google/DeepMind 报告的基础设施语境里，已经是值得严肃复核的系统收益。
 
 ## 与 FunSearch 的关系
 
@@ -85,7 +85,7 @@ AlphaEvolve 建立在 FunSearch（Nature 2023）的基础之上：
 
 AlphaEvolve 本身不公开，但社区已有开源实现：
 
-**OpenEvolve**（https://github.com/algorithmicsuperintelligence/openevolve）——AlphaEvolve 概念的社区复现版本，支持 OpenAI 兼容 API，已在我们的项目索引中标记为 verified 状态。
+**OpenEvolve**（https://github.com/algorithmicsuperintelligence/openevolve）——AlphaEvolve 概念的社区复现版本，支持 OpenAI 兼容 API。当前索引记录的是来源可追踪的开源实现，不代表我们已经独立复跑其全部 benchmark。
 
 ## 局限性
 
@@ -96,7 +96,7 @@ AlphaEvolve 本身不公开，但社区已有开源实现：
 
 ## 对 Self Evolve 的启示
 
-AlphaEvolve 证明了"LLM 作为变异算子 + 自动评估器"的范式可以产生超越人类直觉的发现。在 Self Evolve 的技术地图中，它处于"进化计算 + LLM"路线的旗舰位置。
+AlphaEvolve 在若干可自动评估任务中报告了"LLM 作为变异算子 + 自动评估器"的有效性。在 Self Evolve 的技术地图中，它是"进化计算 + LLM"路线的重要工业案例，但具体结论必须绑定到任务、评估器和复现实验。
 
 这个方向正在快速发展：学术界的 ADAS/DGM 提出了 Agent 级别的代码进化，而 AlphaEvolve 展示了工业化规模的可能性。
 

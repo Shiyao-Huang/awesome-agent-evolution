@@ -1,8 +1,8 @@
 export const researchCoverage = {
-  "rawPaperFiles": 185,
-  "rawUniqueIds": 115,
+  "rawPaperFiles": 198,
+  "rawUniqueIds": 128,
   "reviewFiles": 135,
-  "reviewedUniqueIds": 86,
+  "reviewedUniqueIds": 84,
   "frontstageFeaturedPapers": 19,
   "identifiedCoverageGaps": 9,
   "coverageWarning": "Paper collection is useful but not enough: the public site must expose full-corpus reviews and track mainstream survey, benchmark, safety, and experience-learning gaps explicitly.",

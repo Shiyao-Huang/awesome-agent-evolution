@@ -1,0 +1,684 @@
+{
+  "generated_at": "2026-06-05T06:44:51.068Z",
+  "canonical_host": "https://agent-evolution.com",
+  "checked_collections": [
+    "blog",
+    "research"
+  ],
+  "global_status": "pass",
+  "counts": {
+    "assets_checked": 40,
+    "passed": 40,
+    "failed": 0,
+    "sitemap_urls": 440
+  },
+  "global_failures": [],
+  "failed_assets": [],
+  "assets": [
+    {
+      "collection": "blog",
+      "slug": "adas-to-dgm-evolution",
+      "url": "https://agent-evolution.com/blog/adas-to-dgm-evolution/",
+      "sourcePath": "site/src/content/blog/adas-to-dgm-evolution.mdx",
+      "htmlPath": "site/dist/blog/adas-to-dgm-evolution/index.html",
+      "status": "pass",
+      "failures": [],
+      "warnings": [],
+      "jsonLdTypes": [
+        "WebSite",
+        "SearchAction",
+        "Organization",
+        "BlogPosting",
+        "Organization"
+      ]
+    },
+    {
+      "collection": "blog",
+      "slug": "agent-evolution-layer",
+      "url": "https://agent-evolution.com/blog/agent-evolution-layer/",
+      "sourcePath": "site/src/content/blog/agent-evolution-layer.mdx",
+      "htmlPath": "site/dist/blog/agent-evolution-layer/index.html",
+      "status": "pass",
+      "failures": [],
+      "warnings": [],
+      "jsonLdTypes": [
+        "WebSite",
+        "SearchAction",
+        "Organization",
+        "BlogPosting",
+        "Organization"
+      ]
+    },
+    {
+      "collection": "blog",
+      "slug": "agent-frameworks-evolution-layer",
+      "url": "https://agent-evolution.com/blog/agent-frameworks-evolution-layer/",
+      "sourcePath": "site/src/content/blog/agent-frameworks-evolution-layer.mdx",
+      "htmlPath": "site/dist/blog/agent-frameworks-evolution-layer/index.html",
+      "status": "pass",
+      "failures": [],
+      "warnings": [],
+      "jsonLdTypes": [
+        "WebSite",
+        "SearchAction",
+        "Organization",
+        "BlogPosting",
+        "Organization"
+      ]
+    },
+    {
+      "collection": "blog",
+      "slug": "ai-self-evolution-from-concept-to-implementation",
+      "url": "https://agent-evolution.com/blog/ai-self-evolution-from-concept-to-implementation/",
+      "sourcePath": "site/src/content/blog/ai-self-evolution-from-concept-to-implementation.mdx",
+      "htmlPath": "site/dist/blog/ai-self-evolution-from-concept-to-implementation/index.html",
+      "status": "pass",
+      "failures": [],
+      "warnings": [],
+      "jsonLdTypes": [
+        "WebSite",
+        "SearchAction",
+        "Organization",
+        "BlogPosting",
+        "Organization"
+      ]
+    },
+    {
+      "collection": "blog",
+      "slug": "ai-self-evolution-map",
+      "url": "https://agent-evolution.com/blog/ai-self-evolution-map/",
+      "sourcePath": "site/src/content/blog/ai-self-evolution-map.mdx",
+      "htmlPath": "site/dist/blog/ai-self-evolution-map/index.html",
+      "status": "pass",
+      "failures": [],
+      "warnings": [],
+      "jsonLdTypes": [
+        "WebSite",
+        "SearchAction",
+        "Organization",
+        "BlogPosting",
+        "Organization"
+      ]
+    },
+    {
+      "collection": "blog",
+      "slug": "alphaevolve-deep-dive",
+      "url": "https://agent-evolution.com/blog/alphaevolve-deep-dive/",
+      "sourcePath": "site/src/content/blog/alphaevolve-deep-dive.mdx",
+      "htmlPath": "site/dist/blog/alphaevolve-deep-dive/index.html",
+      "status": "pass",
+      "failures": [],
+      "warnings": [],
+      "jsonLdTypes": [
+        "WebSite",
+        "SearchAction",
+        "Organization",
+        "BlogPosting",
+        "Organization"
+      ]
+    },
+    {
+      "collection": "blog",
+      "slug": "anthropic-dynamic-workflows-agent-swarm-evolve",
+      "url": "https://agent-evolution.com/blog/anthropic-dynamic-workflows-agent-swarm-evolve/",
+      "sourcePath": "site/src/content/blog/anthropic-dynamic-workflows-agent-swarm-evolve.mdx",
+      "htmlPath": "site/dist/blog/anthropic-dynamic-workflows-agent-swarm-evolve/index.html",
+      "status": "pass",
+      "failures": [],
+      "warnings": [],
+      "jsonLdTypes": [
+        "WebSite",
+        "SearchAction",
+        "Organization",
+        "BlogPosting",
+        "Organization"
+      ]
+    },
+    {
+      "collection": "blog",
+      "slug": "anthropic-may-2026-agentops-platform-shift",
+      "url": "https://agent-evolution.com/blog/anthropic-may-2026-agentops-platform-shift/",
+      "sourcePath": "site/src/content/blog/anthropic-may-2026-agentops-platform-shift.mdx",
+      "htmlPath": "site/dist/blog/anthropic-may-2026-agentops-platform-shift/index.html",
+      "status": "pass",
+      "failures": [],
+      "warnings": [],
+      "jsonLdTypes": [
+        "WebSite",
+        "SearchAction",
+        "Organization",
+        "BlogPosting",
+        "Organization"
+      ]
+    },
+    {
+      "collection": "blog",
+      "slug": "code-self-improvement-playbook",
+      "url": "https://agent-evolution.com/blog/code-self-improvement-playbook/",
+      "sourcePath": "site/src/content/blog/code-self-improvement-playbook.mdx",
+      "htmlPath": "site/dist/blog/code-self-improvement-playbook/index.html",
+      "status": "pass",
+      "failures": [],
+      "warnings": [],
+      "jsonLdTypes": [
+        "WebSite",
+        "SearchAction",
+        "Organization",
+        "BlogPosting",
+        "Organization"
+      ]
+    },
+    {
+      "collection": "blog",
+      "slug": "cross-domain-research-map",
+      "url": "https://agent-evolution.com/blog/cross-domain-research-map/",
+      "sourcePath": "site/src/content/blog/cross-domain-research-map.mdx",
+      "htmlPath": "site/dist/blog/cross-domain-research-map/index.html",
+      "status": "pass",
+      "failures": [],
+      "warnings": [],
+      "jsonLdTypes": [
+        "WebSite",
+        "SearchAction",
+        "Organization",
+        "BlogPosting",
+        "Organization"
+      ]
+    },
+    {
+      "collection": "blog",
+      "slug": "evaluation-benchmarks-for-self-evolving-agents",
+      "url": "https://agent-evolution.com/blog/evaluation-benchmarks-for-self-evolving-agents/",
+      "sourcePath": "site/src/content/blog/evaluation-benchmarks-for-self-evolving-agents.mdx",
+      "htmlPath": "site/dist/blog/evaluation-benchmarks-for-self-evolving-agents/index.html",
+      "status": "pass",
+      "failures": [],
+      "warnings": [],
+      "jsonLdTypes": [
+        "WebSite",
+        "SearchAction",
+        "Organization",
+        "BlogPosting",
+        "Organization"
+      ]
+    },
+    {
+      "collection": "blog",
+      "slug": "evolutionary-code-and-algorithm-discovery",
+      "url": "https://agent-evolution.com/blog/evolutionary-code-and-algorithm-discovery/",
+      "sourcePath": "site/src/content/blog/evolutionary-code-and-algorithm-discovery.mdx",
+      "htmlPath": "site/dist/blog/evolutionary-code-and-algorithm-discovery/index.html",
+      "status": "pass",
+      "failures": [],
+      "warnings": [],
+      "jsonLdTypes": [
+        "WebSite",
+        "SearchAction",
+        "Organization",
+        "BlogPosting",
+        "Organization"
+      ]
+    },
+    {
+      "collection": "blog",
+      "slug": "evolutionary-computation-llm-survey",
+      "url": "https://agent-evolution.com/blog/evolutionary-computation-llm-survey/",
+      "sourcePath": "site/src/content/blog/evolutionary-computation-llm-survey.mdx",
+      "htmlPath": "site/dist/blog/evolutionary-computation-llm-survey/index.html",
+      "status": "pass",
+      "failures": [],
+      "warnings": [],
+      "jsonLdTypes": [
+        "WebSite",
+        "SearchAction",
+        "Organization",
+        "BlogPosting",
+        "Organization"
+      ]
+    },
+    {
+      "collection": "blog",
+      "slug": "five-evolution-loops-for-ai-agents",
+      "url": "https://agent-evolution.com/blog/five-evolution-loops-for-ai-agents/",
+      "sourcePath": "site/src/content/blog/five-evolution-loops-for-ai-agents.mdx",
+      "htmlPath": "site/dist/blog/five-evolution-loops-for-ai-agents/index.html",
+      "status": "pass",
+      "failures": [],
+      "warnings": [],
+      "jsonLdTypes": [
+        "WebSite",
+        "SearchAction",
+        "Organization",
+        "BlogPosting",
+        "Organization"
+      ]
+    },
+    {
+      "collection": "blog",
+      "slug": "future-roadmap-for-self-evolving-ai-agents",
+      "url": "https://agent-evolution.com/blog/future-roadmap-for-self-evolving-ai-agents/",
+      "sourcePath": "site/src/content/blog/future-roadmap-for-self-evolving-ai-agents.mdx",
+      "htmlPath": "site/dist/blog/future-roadmap-for-self-evolving-ai-agents/index.html",
+      "status": "pass",
+      "failures": [],
+      "warnings": [],
+      "jsonLdTypes": [
+        "WebSite",
+        "SearchAction",
+        "Organization",
+        "BlogPosting",
+        "Organization"
+      ]
+    },
+    {
+      "collection": "blog",
+      "slug": "how-to-build-self-evolving-agent",
+      "url": "https://agent-evolution.com/blog/how-to-build-self-evolving-agent/",
+      "sourcePath": "site/src/content/blog/how-to-build-self-evolving-agent.mdx",
+      "htmlPath": "site/dist/blog/how-to-build-self-evolving-agent/index.html",
+      "status": "pass",
+      "failures": [],
+      "warnings": [],
+      "jsonLdTypes": [
+        "WebSite",
+        "SearchAction",
+        "Organization",
+        "BlogPosting",
+        "Organization"
+      ]
+    },
+    {
+      "collection": "blog",
+      "slug": "llm-as-evolutionary-optimizer",
+      "url": "https://agent-evolution.com/blog/llm-as-evolutionary-optimizer/",
+      "sourcePath": "site/src/content/blog/llm-as-evolutionary-optimizer.mdx",
+      "htmlPath": "site/dist/blog/llm-as-evolutionary-optimizer/index.html",
+      "status": "pass",
+      "failures": [],
+      "warnings": [],
+      "jsonLdTypes": [
+        "WebSite",
+        "SearchAction",
+        "Organization",
+        "BlogPosting",
+        "Organization"
+      ]
+    },
+    {
+      "collection": "blog",
+      "slug": "llm-five-self-improvement-paradigms",
+      "url": "https://agent-evolution.com/blog/llm-five-self-improvement-paradigms/",
+      "sourcePath": "site/src/content/blog/llm-five-self-improvement-paradigms.mdx",
+      "htmlPath": "site/dist/blog/llm-five-self-improvement-paradigms/index.html",
+      "status": "pass",
+      "failures": [],
+      "warnings": [],
+      "jsonLdTypes": [
+        "WebSite",
+        "SearchAction",
+        "Organization",
+        "BlogPosting",
+        "Organization"
+      ]
+    },
+    {
+      "collection": "blog",
+      "slug": "open-source-self-evolving-projects",
+      "url": "https://agent-evolution.com/blog/open-source-self-evolving-projects/",
+      "sourcePath": "site/src/content/blog/open-source-self-evolving-projects.mdx",
+      "htmlPath": "site/dist/blog/open-source-self-evolving-projects/index.html",
+      "status": "pass",
+      "failures": [],
+      "warnings": [],
+      "jsonLdTypes": [
+        "WebSite",
+        "SearchAction",
+        "Organization",
+        "BlogPosting",
+        "Organization"
+      ]
+    },
+    {
+      "collection": "blog",
+      "slug": "researcher-network",
+      "url": "https://agent-evolution.com/blog/researcher-network/",
+      "sourcePath": "site/src/content/blog/researcher-network.mdx",
+      "htmlPath": "site/dist/blog/researcher-network/index.html",
+      "status": "pass",
+      "failures": [],
+      "warnings": [],
+      "jsonLdTypes": [
+        "WebSite",
+        "SearchAction",
+        "Organization",
+        "BlogPosting",
+        "Organization"
+      ]
+    },
+    {
+      "collection": "blog",
+      "slug": "self-evolve-project-index",
+      "url": "https://agent-evolution.com/blog/self-evolve-project-index/",
+      "sourcePath": "site/src/content/blog/self-evolve-project-index.mdx",
+      "htmlPath": "site/dist/blog/self-evolve-project-index/index.html",
+      "status": "pass",
+      "failures": [],
+      "warnings": [],
+      "jsonLdTypes": [
+        "WebSite",
+        "SearchAction",
+        "Organization",
+        "BlogPosting",
+        "Organization"
+      ]
+    },
+    {
+      "collection": "blog",
+      "slug": "self-evolving-ai-introduction-static-to-evolving-agents",
+      "url": "https://agent-evolution.com/blog/self-evolving-ai-introduction-static-to-evolving-agents/",
+      "sourcePath": "site/src/content/blog/self-evolving-ai-introduction-static-to-evolving-agents.mdx",
+      "htmlPath": "site/dist/blog/self-evolving-ai-introduction-static-to-evolving-agents/index.html",
+      "status": "pass",
+      "failures": [],
+      "warnings": [],
+      "jsonLdTypes": [
+        "WebSite",
+        "SearchAction",
+        "Organization",
+        "BlogPosting",
+        "Organization"
+      ]
+    },
+    {
+      "collection": "blog",
+      "slug": "self-improvement-methods-for-llm-agents",
+      "url": "https://agent-evolution.com/blog/self-improvement-methods-for-llm-agents/",
+      "sourcePath": "site/src/content/blog/self-improvement-methods-for-llm-agents.mdx",
+      "htmlPath": "site/dist/blog/self-improvement-methods-for-llm-agents/index.html",
+      "status": "pass",
+      "failures": [],
+      "warnings": [],
+      "jsonLdTypes": [
+        "WebSite",
+        "SearchAction",
+        "Organization",
+        "BlogPosting",
+        "Organization"
+      ]
+    },
+    {
+      "collection": "blog",
+      "slug": "selfevolve-paper-deep-dive",
+      "url": "https://agent-evolution.com/blog/selfevolve-paper-deep-dive/",
+      "sourcePath": "site/src/content/blog/selfevolve-paper-deep-dive.mdx",
+      "htmlPath": "site/dist/blog/selfevolve-paper-deep-dive/index.html",
+      "status": "pass",
+      "failures": [],
+      "warnings": [],
+      "jsonLdTypes": [
+        "WebSite",
+        "SearchAction",
+        "Organization",
+        "BlogPosting",
+        "Organization"
+      ]
+    },
+    {
+      "collection": "blog",
+      "slug": "user-painpoints-production-self-evolving-agents",
+      "url": "https://agent-evolution.com/blog/user-painpoints-production-self-evolving-agents/",
+      "sourcePath": "site/src/content/blog/user-painpoints-production-self-evolving-agents.mdx",
+      "htmlPath": "site/dist/blog/user-painpoints-production-self-evolving-agents/index.html",
+      "status": "pass",
+      "failures": [],
+      "warnings": [],
+      "jsonLdTypes": [
+        "WebSite",
+        "SearchAction",
+        "Organization",
+        "BlogPosting",
+        "Organization"
+      ]
+    },
+    {
+      "collection": "research",
+      "slug": "absolute-zero",
+      "url": "https://agent-evolution.com/research/absolute-zero/",
+      "sourcePath": "site/src/content/research/absolute-zero.mdx",
+      "htmlPath": "site/dist/research/absolute-zero/index.html",
+      "status": "pass",
+      "failures": [],
+      "warnings": [],
+      "jsonLdTypes": [
+        "WebSite",
+        "SearchAction",
+        "Organization",
+        "ScholarlyArticle"
+      ]
+    },
+    {
+      "collection": "research",
+      "slug": "adas",
+      "url": "https://agent-evolution.com/research/adas/",
+      "sourcePath": "site/src/content/research/adas.mdx",
+      "htmlPath": "site/dist/research/adas/index.html",
+      "status": "pass",
+      "failures": [],
+      "warnings": [],
+      "jsonLdTypes": [
+        "WebSite",
+        "SearchAction",
+        "Organization",
+        "ScholarlyArticle"
+      ]
+    },
+    {
+      "collection": "research",
+      "slug": "agent-symbolic-learning",
+      "url": "https://agent-evolution.com/research/agent-symbolic-learning/",
+      "sourcePath": "site/src/content/research/agent-symbolic-learning.mdx",
+      "htmlPath": "site/dist/research/agent-symbolic-learning/index.html",
+      "status": "pass",
+      "failures": [],
+      "warnings": [],
+      "jsonLdTypes": [
+        "WebSite",
+        "SearchAction",
+        "Organization",
+        "ScholarlyArticle"
+      ]
+    },
+    {
+      "collection": "research",
+      "slug": "alphaevolve",
+      "url": "https://agent-evolution.com/research/alphaevolve/",
+      "sourcePath": "site/src/content/research/alphaevolve.mdx",
+      "htmlPath": "site/dist/research/alphaevolve/index.html",
+      "status": "pass",
+      "failures": [],
+      "warnings": [],
+      "jsonLdTypes": [
+        "WebSite",
+        "SearchAction",
+        "Organization",
+        "ScholarlyArticle"
+      ]
+    },
+    {
+      "collection": "research",
+      "slug": "cross-domain-map",
+      "url": "https://agent-evolution.com/research/cross-domain-map/",
+      "sourcePath": "site/src/content/research/cross-domain-map.mdx",
+      "htmlPath": "site/dist/research/cross-domain-map/index.html",
+      "status": "pass",
+      "failures": [],
+      "warnings": [],
+      "jsonLdTypes": [
+        "WebSite",
+        "SearchAction",
+        "Organization",
+        "ScholarlyArticle"
+      ]
+    },
+    {
+      "collection": "research",
+      "slug": "darwin-godel-machine",
+      "url": "https://agent-evolution.com/research/darwin-godel-machine/",
+      "sourcePath": "site/src/content/research/darwin-godel-machine.mdx",
+      "htmlPath": "site/dist/research/darwin-godel-machine/index.html",
+      "status": "pass",
+      "failures": [],
+      "warnings": [],
+      "jsonLdTypes": [
+        "WebSite",
+        "SearchAction",
+        "Organization",
+        "ScholarlyArticle"
+      ]
+    },
+    {
+      "collection": "research",
+      "slug": "godel-agent",
+      "url": "https://agent-evolution.com/research/godel-agent/",
+      "sourcePath": "site/src/content/research/godel-agent.mdx",
+      "htmlPath": "site/dist/research/godel-agent/index.html",
+      "status": "pass",
+      "failures": [],
+      "warnings": [],
+      "jsonLdTypes": [
+        "WebSite",
+        "SearchAction",
+        "Organization",
+        "ScholarlyArticle"
+      ]
+    },
+    {
+      "collection": "research",
+      "slug": "llm-optimizer-evolution",
+      "url": "https://agent-evolution.com/research/llm-optimizer-evolution/",
+      "sourcePath": "site/src/content/research/llm-optimizer-evolution.mdx",
+      "htmlPath": "site/dist/research/llm-optimizer-evolution/index.html",
+      "status": "pass",
+      "failures": [],
+      "warnings": [],
+      "jsonLdTypes": [
+        "WebSite",
+        "SearchAction",
+        "Organization",
+        "ScholarlyArticle"
+      ]
+    },
+    {
+      "collection": "research",
+      "slug": "llm-self-improvement-baselines",
+      "url": "https://agent-evolution.com/research/llm-self-improvement-baselines/",
+      "sourcePath": "site/src/content/research/llm-self-improvement-baselines.mdx",
+      "htmlPath": "site/dist/research/llm-self-improvement-baselines/index.html",
+      "status": "pass",
+      "failures": [],
+      "warnings": [],
+      "jsonLdTypes": [
+        "WebSite",
+        "SearchAction",
+        "Organization",
+        "ScholarlyArticle"
+      ]
+    },
+    {
+      "collection": "research",
+      "slug": "ragen",
+      "url": "https://agent-evolution.com/research/ragen/",
+      "sourcePath": "site/src/content/research/ragen.mdx",
+      "htmlPath": "site/dist/research/ragen/index.html",
+      "status": "pass",
+      "failures": [],
+      "warnings": [],
+      "jsonLdTypes": [
+        "WebSite",
+        "SearchAction",
+        "Organization",
+        "ScholarlyArticle"
+      ]
+    },
+    {
+      "collection": "research",
+      "slug": "reflexion",
+      "url": "https://agent-evolution.com/research/reflexion/",
+      "sourcePath": "site/src/content/research/reflexion.mdx",
+      "htmlPath": "site/dist/research/reflexion/index.html",
+      "status": "pass",
+      "failures": [],
+      "warnings": [],
+      "jsonLdTypes": [
+        "WebSite",
+        "SearchAction",
+        "Organization",
+        "ScholarlyArticle"
+      ]
+    },
+    {
+      "collection": "research",
+      "slug": "reveal",
+      "url": "https://agent-evolution.com/research/reveal/",
+      "sourcePath": "site/src/content/research/reveal.mdx",
+      "htmlPath": "site/dist/research/reveal/index.html",
+      "status": "pass",
+      "failures": [],
+      "warnings": [],
+      "jsonLdTypes": [
+        "WebSite",
+        "SearchAction",
+        "Organization",
+        "ScholarlyArticle"
+      ]
+    },
+    {
+      "collection": "research",
+      "slug": "rise",
+      "url": "https://agent-evolution.com/research/rise/",
+      "sourcePath": "site/src/content/research/rise.mdx",
+      "htmlPath": "site/dist/research/rise/index.html",
+      "status": "pass",
+      "failures": [],
+      "warnings": [],
+      "jsonLdTypes": [
+        "WebSite",
+        "SearchAction",
+        "Organization",
+        "ScholarlyArticle"
+      ]
+    },
+    {
+      "collection": "research",
+      "slug": "self-refine",
+      "url": "https://agent-evolution.com/research/self-refine/",
+      "sourcePath": "site/src/content/research/self-refine.mdx",
+      "htmlPath": "site/dist/research/self-refine/index.html",
+      "status": "pass",
+      "failures": [],
+      "warnings": [],
+      "jsonLdTypes": [
+        "WebSite",
+        "SearchAction",
+        "Organization",
+        "ScholarlyArticle"
+      ]
+    },
+    {
+      "collection": "research",
+      "slug": "selfevolve",
+      "url": "https://agent-evolution.com/research/selfevolve/",
+      "sourcePath": "site/src/content/research/selfevolve.mdx",
+      "htmlPath": "site/dist/research/selfevolve/index.html",
+      "status": "pass",
+      "failures": [],
+      "warnings": [],
+      "jsonLdTypes": [
+        "WebSite",
+        "SearchAction",
+        "Organization",
+        "ScholarlyArticle"
+      ]
+    }
+  ]
+}

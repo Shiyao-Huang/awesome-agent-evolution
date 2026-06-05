@@ -13,7 +13,8 @@ const {
   pageLang = 'zh-CN',
   alternateZh,
   alternateEn,
-  xDefault
+  xDefault,
+  noindex = false
 } = Astro.props;
 const siteRoot = site.url.endsWith('/') ? site.url : `${site.url}/`;
 const basePath = new URL(siteRoot).pathname.replace(/\/$/, '');
@@ -42,7 +43,7 @@ const jsonLd = {
   url: site.url,
   description: site.description,
   keywords: site.keywords,
-  inLanguage: pageLang === 'en' ? 'en' : ['zh-CN', 'en'],
+  inLanguage: pageLang === 'en' ? 'en' : 'zh-CN',
   potentialAction: {
     '@type': 'SearchAction',
     target: `${siteRoot}search/?q={search_term_string}`,
@@ -70,6 +71,7 @@ const orgLd = {
     <title>{title}</title>
     <meta name="description" content={description} />
     <meta name="keywords" content={keywords} />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
     <link rel="canonical" href={canonical} />
     {zhAlternate && <link rel="alternate" hreflang="zh-CN" href={zhAlternate} />}
     {enAlternate && <link rel="alternate" hreflang="en" href={enAlternate} />}

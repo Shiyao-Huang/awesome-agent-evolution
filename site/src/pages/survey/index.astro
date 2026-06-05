@@ -5,18 +5,18 @@ import { surveyStats, evolutionLoops, methodFamilies, painPoints, surveyFigurePa
 const surveyLd = {
   '@context': 'https://schema.org',
   '@type': 'ScholarlyArticle',
-  name: 'Self-Evolving AI Agents: Survey Findings & Mechanism Analysis',
-  description: 'Key findings from a comprehensive survey on AI self-evolution: five evolution loops, 196 papers, 348 projects, 97 user pain points, and 6 deep-dive case studies.',
+  name: 'Self-Evolving AI Agents: Site Survey Snapshot & Mechanism Analysis',
+  description: 'Dated site survey snapshot on AI self-evolution: five evolution loops, a 196-paper display set, GitHub project signals, public pain-point signals, and case-study notes with evidence limits.',
   author: { '@type': 'Organization', name: 'Self Evolve Research' },
   datePublished: '2026-05',
-  inLanguage: ['en', 'zh'],
+  inLanguage: 'zh-CN',
   keywords: ['AI self-evolution', 'evolution loops', 'agent improvement', 'self-modification', 'mechanism taxonomy', 'case studies'],
 };
 ---
 
 <BaseLayout
   title="Survey核心发现 — AI自进化机制分析与案例研究"
-  description="从196篇论文、348个项目、97个用户痛点中提炼的AI自进化核心发现：五大进化环、七大方法族、六大案例深度分析和实用建议。"
+  description="AI 自进化 survey 快照：从 196 篇论文展示集、GitHub 项目信号和 97 个公开痛点信号中提炼五大进化环、七大方法族、六个案例与证据边界。"
 >
   <script type="application/ld+json" set:html={JSON.stringify(surveyLd)} is:inline />
 
@@ -24,11 +24,11 @@ const surveyLd = {
     <div class="container">
       <div class="eyebrow">Survey Findings · 核心发现</div>
       <h1 class="gradient-text">AI 自进化的核心机制与证据</h1>
-      <p class="lead">从 196 篇论文、348 个开源项目、1306 篇博客和 97 个独立用户访谈中提炼的自进化机制图谱——每个结论都有证据链。</p>
+      <p class="lead">这是一个 dated survey snapshot：用 196 篇论文展示集、GitHub 项目信号、博客语料和 97 个公开讨论痛点，整理 AI 自进化的机制图谱。关键结论会说明证据类型和限制；逐 claim 的来源映射仍在补齐。</p>
       <div class="metrics">
         <div class="metric"><strong>{surveyStats.papers}</strong><span>篇论文分析</span></div>
         <div class="metric"><strong>{surveyStats.repos}</strong><span>个 GitHub 项目</span></div>
-        <div class="metric"><strong>{surveyStats.painPoints}</strong><span>个用户痛点</span></div>
+        <div class="metric"><strong>{surveyStats.painPoints}</strong><span>个公开痛点信号</span></div>
         <div class="metric"><strong>{surveyStats.evolutionLoops}</strong><span>大进化环</span></div>
       </div>
       <div class="hero-actions" style="margin-top: 24px;">
@@ -48,7 +48,7 @@ const surveyLd = {
         </div>
         <a class="text-link" href="https://github.com/Shiyao-Huang/awesome-agent-evolution/tree/main/survey/figures" target="_blank" rel="noopener">figure source →</a>
       </div>
-      <p style="margin-bottom: 24px; color: var(--muted);">这些图不是装饰图，而是把论文章节、网站页面和数据资产连起来的 reader-facing evidence map：先看图，读者才知道每章为什么存在。</p>
+      <p style="margin-bottom: 24px; color: var(--muted);">这些图不是装饰图，而是把论文章节、网站页面和数据资产连起来的读者证据地图：先看图，读者才知道每章为什么存在，以及哪些部分仍是快照。</p>
       <div class="visual-grid">
         {surveyFigureAtlas.slice(0, 6).map((figure) => (
           <figure class="visual-panel">
@@ -152,7 +152,7 @@ const surveyLd = {
         </article>
         <article class="card" style="border-left: 4px solid #e74c3c;">
           <h3>💎 AlphaEvolve (DeepMind)</h3>
-          <p>LLM + 进化算法发现超越人类直觉的新算法。</p>
+          <p>LLM + 进化算法在可自动评估任务中报告新算法发现。</p>
           <div class="pill-row">
             <span class="pill">矩阵乘法 49→47步</span>
             <span class="pill">50年记录</span>
@@ -196,7 +196,7 @@ const surveyLd = {
           <h2>来自真实用户的 97 个痛点</h2>
         </div>
       </div>
-      <p style="margin-bottom: 24px; color: var(--muted);">Mom Test 方法论：Reddit 47 条 + Hacker News 36 条 + X/Twitter 14 条独立用户访谈。</p>
+      <p style="margin-bottom: 24px; color: var(--muted);">Mom Test 方法论用于阅读公开讨论：Reddit 47 条、Hacker News 36 条、X/Twitter 14 条。这里统计的是公开语义信号，不是受控访谈样本。</p>
       <div class="grid">
         {painPoints.map((pp) => (
           <article class="card">
@@ -226,7 +226,7 @@ const surveyLd = {
       <div class="card" style="border-left: 4px solid var(--accent); padding: 32px;">
         <h2>Survey 核心论点</h2>
         <p style="font-size: 1.2rem; line-height: 1.8;">
-          <strong>自进化应当被评估为一个受控的系统过程：</strong>每一个声称的改进都必须说明——改变了什么？什么反馈证明了这次改变？什么评估器批准了它？成本多少？引入了什么风险？如何审计和回滚？
+          <strong>自进化应当被评估为一个受控的系统过程：</strong>每一个声称的改进都必须说明——改变了什么？什么反馈支持这次改变？什么评估器批准了它？成本多少？引入了什么风险？如何审计和回滚？
         </p>
       </div>
     </div>

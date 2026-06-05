@@ -957,6 +957,8 @@ a.pill:focus-visible {
   text-decoration: underline;
   text-decoration-color: rgba(255, 91, 0, .35);
   text-underline-offset: 4px;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .blog-article a:hover {
@@ -971,11 +973,19 @@ a.pill:focus-visible {
 }
 
 .blog-article pre {
+  max-width: 100%;
   overflow: auto;
   border-radius: var(--radius);
   background: #1A1A1A;
   color: #FAF7F2;
   padding: 18px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.blog-article pre code {
+  display: block;
+  min-width: 100%;
+  width: max-content;
 }
 
 .blog-article :not(pre) > code {

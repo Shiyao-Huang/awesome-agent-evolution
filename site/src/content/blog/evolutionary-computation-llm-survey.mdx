@@ -1,30 +1,30 @@
 ---
-title: "进化计算 × 大语言模型：2024-2025 前沿综述"
-description: "梳理进化计算与 LLM 融合的最新进展：从 OPRO、FunSearch 到 AlphaEvolve，从 LLaMEA 到 OpenEvolve。探索 LLM 如何成为新一代进化优化的核心引擎。"
+title: "进化计算 × 大语言模型：2024-2025 前沿导读"
+description: "导读进化计算与 LLM 融合的代表性进展：从 OPRO、FunSearch 到 AlphaEvolve，从 LLaMEA 到 OpenEvolve。本文是阅读入口，不是系统综述协议。"
 pubDate: 2026-05-22
 tags: ["进化计算", "LLM 优化器", "FunSearch", "AlphaEvolve", "AI Self Evolution"]
 author: "aha team"
 ---
 
-## 进化计算的新引擎
+## 进化计算的新候选生成器
 
 传统进化算法依赖人工设计的变异算子（如高斯扰动、交叉重组）。大语言模型的出现改变了这个范式——LLM 可以理解问题语义，生成有意义的"变异"，而不仅仅是随机扰动。
 
-Self Evolve 将这一融合称为"LLM 作为进化引擎"范式。
+Self Evolve 将这一融合称为"LLM 作为进化候选生成器"范式；它的效果取决于 evaluator、搜索空间、成本和失败保留机制。
 
 ## 里程碑：从 OPRO 到 AlphaEvolve
 
 ### OPRO：LLM 作为优化器（2023）
 
-**OPRO**（arXiv: 2309.03409）首次系统性地展示了 LLM 可以作为通用优化器：
+**OPRO**（arXiv: 2309.03409）系统性展示了 LLM 可以在自然语言表述的黑盒优化中生成候选：
 
 ```
 历史候选 + 分数 → LLM → 新候选
 ```
 
-LLM 读取过去尝试的分数，理解优化方向，提出新的候选方案。这比随机搜索高效得多，因为 LLM 能从失败中学习模式。
+LLM 读取过去尝试的分数，提出新的候选方案。在论文任务设置中，这种方式可以比若干简单搜索基线更有效，但它仍依赖历史记录、反馈质量和任务表达。
 
-### FunSearch：数学发现的突破（Nature 2023）
+### FunSearch：可评估数学任务中的发现（Nature 2023）
 
 **FunSearch** 在 Nature 上发表，用 LLM + 自动评估器发现了新的数学构造：
 
@@ -41,7 +41,7 @@ LLM 读取过去尝试的分数，理解优化方向，提出新的候选方案�
 - 双模型架构（Gemini Flash + Pro）
 - MAP-Elites 质量多样性搜索
 - 56 年来首次改进 Strassen 算法
-- Google 数据中心调度优化恢复 0.7% 全球算力
+- Google/DeepMind 报告了数据中心调度语境下约 0.7% 的计算资源恢复
 
 ## 关键技术组件
 

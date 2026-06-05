@@ -24,9 +24,25 @@ const rawFiles = readFiles(rawPaperDir, (name) => name.endsWith('.md') && name !
 const cleanTitle = (value) =>
   value
     .replace(/^#+\s*/, '')
+    .replace(/\s+-\s+\*\*(?:arXiv(?: ID)?|URL|PDF|Authors?|Year|Published|Submitted)\*\*:[\s\S]*$/i, '')
+    .replace(/\s+##\s+(?:Abstract|Full Content|gBrain Temporal Metadata)[\s\S]*$/i, '')
     .replace(/^["']|["']$/g, '')
     .replace(/\s+/g, ' ')
     .trim();
+
+const normalizeArxivId = (value) => {
+  const text = String(value || '');
+  if (/placeholder-no-arxiv/i.test(text)) return 'placeholder-no-arxiv';
+  const match = text.match(/(?:arxiv(?:\s+id)?\s*:?\s*)?(\d{4}\.\d{4,5})(?:v\d+)?/i);
+  return match?.[1] ?? '';
+};
+
+const idValueFor = (arxiv, title, fallback) => {
+  if (arxiv && arxiv !== 'placeholder-no-arxiv') return arxiv;
+  const cleaned = cleanTitle(title);
+  if (cleaned && cleaned.length <= 160 && !cleaned.includes('**')) return cleaned;
+  return fallback.replace(/^review-/, '').replace(/\.md$/, '').slice(0, 120);
+};
 
 const extractFirst = (text, patterns, fallback = '') => {
   for (const pattern of patterns) {
@@ -149,21 +165,22 @@ const clusterForTag = (tag) => {
 const papers = [];
 
 for (const { name, text } of reviewFiles) {
-  const arxiv = extractFirst(text, [/\*\*arXiv(?: ID)?\*\*:\s*([^\n]+)/i, /-\s+\*\*arXiv ID\*\*:\s*([^\n]+)/i], '');
+  const arxiv = normalizeArxivId(extractFirst(text, [/\*\*arXiv(?: ID)?\*\*:\s*([^\n]+)/i, /-\s+\*\*arXiv ID\*\*:\s*([^\n]+)/i], ''));
   const title = extractFirst(text, [/\*\*Paper\*\*:\s*([^\n]+)/i, /^#\s+Deep Review(?:\s+#\d+)?:\s*([^\n]+)/m, /^#\s+(.+)$/m], name.replace(/^review-/, '').replace(/\.md$/, ''));
   const published = extractFirst(text, [/\*\*Published\*\*:\s*([^\n]+)/i], '');
   const yearMatch = `${published} ${name}`.match(/(20\d{2})/);
   const year = yearMatch ? yearMatch[1] : 'unknown';
   const summary = extractFirst(text, [/## Summary\s+([\s\S]{0,360}?)(?:\n##|\n###|$)/i, /## 1\. Executive Summary[^\n]*\s+([\s\S]{0,360}?)(?:\n##|\n###|$)/i], '');
   const tags = inferTags(text);
-  const idValue = arxiv || title;
+  const idValue = idValueFor(arxiv, title, name);
+  const arxivUrlId = normalizeArxivId(arxiv);
   const paperId = encodeId('review', idValue);
   papers.push({ id: paperId, title, year, arxiv, file: `paper-reviews/${name}`, tags });
   addNode({
     id: paperId,
     label: title,
     type: 'paper',
-    url: arxiv && arxiv !== 'placeholder-no-arxiv' ? `https://arxiv.org/abs/${arxiv.replace(/^arXiv:/i, '').replace(/v\d+$/, '')}` : undefined,
+    url: arxivUrlId && arxivUrlId !== 'placeholder-no-arxiv' ? `https://arxiv.org/abs/${arxivUrlId}` : undefined,
     summary: summary || `Review file: paper-reviews/${name}`,
     weight: arxiv === 'placeholder-no-arxiv' ? 3 : 4
   });
@@ -172,7 +189,7 @@ for (const { name, text } of reviewFiles) {
     const conceptId = encodeId('concept', tag);
     const clusterId = encodeId('cluster', clusterForTag(tag));
     addNode({ id: conceptId, label: tag, type: 'concept', summary: `Inferred from ${name}`, weight: 4 });
-    addNode({ id: clusterId, label: clusterForTag(tag), type: 'cluster', summary: 'Generated full-corpus research cluster.', weight: 8 });
+    addNode({ id: clusterId, label: clusterForTag(tag), type: 'cluster', summary: 'Heuristic cluster inferred from local paper-review files.', weight: 8 });
     addEdge({ source: paperId, target: conceptId, type: 'uses', label: 'inferred mechanism' });
     addEdge({ source: conceptId, target: clusterId, type: 'belongs_to', label: 'belongs to generated cluster' });
   }

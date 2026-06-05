@@ -12,7 +12,13 @@ export default defineConfig({
   site: siteUrl.origin,
   base: basePath || undefined,
   output: 'static',
-  integrations: [mdx(), sitemap(), react()],
+  integrations: [
+    mdx(),
+    sitemap({
+      filter: (page) => !page.endsWith('/retrospective/')
+    }),
+    react()
+  ],
   markdown: {
     shikiConfig: { theme: 'github-dark' }
   }

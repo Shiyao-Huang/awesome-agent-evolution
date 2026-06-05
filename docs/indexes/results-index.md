@@ -10,10 +10,10 @@
 
 | Path | Status | Files | Directories | Skipped | Size |
 |---|---|---:|---:|---:|---:|
-| `reports` | present | 14 | 2 | 0 | 98 KB |
+| `reports` | present | 16 | 2 | 0 | 119 KB |
 | `output` | present | 8 | 1 | 0 | 685 KB |
 | `site/public/reports` | present | 518 | 6 | 0 | 3.7 MB |
-| `site/dist` | present | 1010 | 450 | 0 | 38 MB |
+| `site/dist` | present | 1010 | 450 | 0 | 37 MB |
 | `paper-drafts/main.pdf` | present | 1 | 0 | 0 | 1.6 MB |
 | `docs/publishing-readiness-check.md` | present | 1 | 0 | 0 | 3.5 KB |
 
@@ -27,10 +27,10 @@
 - `reports/evolve-agi-index-trend.json`
 - `reports/project-discovery-leads.md`
 - `reports/propagation-chain-evidence.md`
+- `reports/seo-indexable-assets.json`
+- `reports/seo-indexable-assets.md`
 - `reports/star-analysis-report.md`
 - `reports/survey-publication/01-field-map.md`
-- `reports/survey-publication/02-true-vs-pseudo-evolution.md`
-- `reports/survey-publication/03-evaluation-bottleneck.md`
 
 ### `output`
 
@@ -59,12 +59,12 @@
 ### `site/dist`
 
 - `site/dist/CNAME`
-- `site/dist/_astro/BaseLayout.DzpfsuEa.css`
+- `site/dist/_astro/BaseLayout.Bsw8u1pc.css`
 - `site/dist/_astro/ValueLshGraph3D.astro_astro_type_script_index_0_lang.B9u0h_ek.js`
 - `site/dist/_astro/client.BpEju3qh.js`
 - `site/dist/_astro/index.B-ztvEHt.css`
 - `site/dist/_astro/index.BPKjW9fM.css`
-- `site/dist/_astro/index.CBk-yZE3.css`
+- `site/dist/_astro/index.CD76ZKuK.css`
 - `site/dist/_astro/index.CmLyJJUK.css`
 - `site/dist/_astro/index.DmBefzs_.css`
 - `site/dist/_astro/index.RJBPLimb.css`

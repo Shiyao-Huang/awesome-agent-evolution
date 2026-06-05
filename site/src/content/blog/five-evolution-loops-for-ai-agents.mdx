@@ -17,7 +17,7 @@ author: "aha team"
 
 ## 这篇来自论文哪一章？
 
-Source: `paper-drafts/ch2-taxonomy.tex`。第二章建立论文的核心分类框架：Five Evolution Loops。
+本文改写自英文 survey 第二章的分类框架：Five Evolution Loops。它是读者入口，不是论文源文件说明。
 
 ## Loop 1：Specification-to-Execution
 
@@ -28,11 +28,11 @@ Source: `paper-drafts/ch2-taxonomy.tex`。第二章建立论文的核心分类�
 好系统会逐步学会：
 
 - 哪些用户输入需要澄清，哪些可以直接执行；
-- 哪些任务需要先读 raw，哪些先查 wiki；
+- 哪些任务需要先查原始材料，哪些可以先读已整理的知识页；
 - 哪些输出必须带证据链；
-- 哪些操作必须先跑 git status 和引用搜索。
+- 哪些高风险操作必须先检查当前状态和影响范围。
 
-这也是为什么 Self Evolve 仓库强调 AGENTS、wiki、index 和验证命令：它们都是 specification-to-execution loop 的外部骨架。
+这也是为什么可执行规格、证据库、索引和验证记录重要：它们都是 specification-to-execution loop 的外部骨架。
 
 ## Loop 2：Search
 
@@ -69,18 +69,18 @@ Reflection loop 把失败变成未来上下文。Reflexion 的核心就是：失
 但生产系统里，反思不能只是“写日记”。它需要结构化：
 
 ```yaml
-failure: tool call selected wrong file
-condition: user asked for repo-wide analysis
-fix: run rg before opening individual files
-scope: coding/research tasks
-expires: when repo index changes
+failure: retrieved too narrow a context
+condition: user asks for corpus-level analysis
+fix: search the index before reading individual files
+scope: research and coding tasks
+expires: when the corpus schema changes
 ```
 
 反思如果没有作用域和过期机制，会变成污染未来决策的旧经验。
 
 ## Loop 5：Population
 
-Population loop 来自进化计算：保留多个候选分支，而不是只保留当前最高分版本。DGM、AlphaEvolve、MAP-Elites 这类系统都说明了一个原则：短期不是最强的变体，可能是长期 stepping stone。
+Population loop 来自进化计算：保留多个候选分支，而不是只保留当前最高分版本。DGM、AlphaEvolve、MAP-Elites 这类系统都说明了一个原则：短期分数不占优的变体，也可能是长期 stepping stone。
 
 Agent 工程里也一样。一个 workflow 分支可能今天分数一般，但它提供了更好的日志、更安全的权限边界、更低的成本，未来可能成为可靠性的基础。
 
@@ -111,4 +111,3 @@ task -> specification loop
 - 每次 promote 都要有 rollback path。
 
 如果这份清单太重，说明你的系统还不适合“自我修改”。先把可观测性和评估器做出来。
-

@@ -59,7 +59,7 @@ export const featuredResearch: ResearchItem[] = [
   {
     title: 'FunSearch：LLM + 评估器的程序进化',
     year: '2023',
-    insight: '把 LLM 与自动评估器组合，进化数学和科学发现程序，是“生成器 + 验证器 + 谱系”的旗舰案例。',
+    insight: '把 LLM 与自动评估器组合，进化数学和科学发现程序，是“生成器 + 验证器 + 谱系”的重要案例。',
     tags: ['程序进化', '评估器', '科学发现'],
     url: 'https://www.nature.com/articles/s41586-023-06924-6',
     cluster: '进化计算 + LLM',

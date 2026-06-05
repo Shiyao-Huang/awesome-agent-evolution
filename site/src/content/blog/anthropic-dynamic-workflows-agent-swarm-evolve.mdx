@@ -13,7 +13,11 @@ Anthropic 的 Dynamic Workflows 热点，真正值得放进 Self Evolve 的原�
 
 ## 三句话
 
-普通多 Agent 只回答“谁做什么”，Dynamic Workflows 开始回答“一个 Agent 组织怎样把大任务拆开、并行执行、互相验证，再收束成可交付结果”。这正好对应本项目新加入的 Agent-Swarm Evolve 主题：可进化对象不只是 prompt、memory 或 code，也可以是 workflow、角色拓扑、验证队列、handoff 协议和成本策略。它仍然不是“已经证明可自我进化”的终点，因为关键证据还要看失败候选、lineage、rollback、跨任务迁移和独立评估。
+普通多 Agent 只回答“谁做什么”。Dynamic Workflows 开始回答另一个问题：一个 Agent 组织怎样把大任务拆开、并行执行、互相验证，再收束成可交付结果。
+
+这正好对应本项目新加入的 Agent-Swarm Evolve 主题：可进化对象不只是 prompt、memory 或 code，也可以是 workflow、角色拓扑、验证队列、任务交接协议和成本策略。
+
+它仍然不是“已经证明可自我进化”的终点，因为关键证据还要看失败候选、演化历史、回滚、跨任务迁移和独立评估。
 
 ## 事实层：Anthropic 这次到底发布了什么？
 
@@ -62,7 +66,7 @@ User goal
 | Reflection / Self-Refine | Reflexion、Self-Refine | 单次回答、短期轨迹、反思文本 | 低成本，但容易 echo trap。 |
 | Code self-modification | DGM、OpenEvolve、AlphaEvolve | 程序候选、算法、patch | 证据强，因为测试和 sandbox 更清楚。 |
 | Memory evolution | Mem0、LangMem、Graphiti | 长期记忆、经验、用户/项目状态 | 价值高，但污染和过期是核心风险。 |
-| Agent-Swarm Evolve | Claude Code Dynamic Workflows、CORAL、GPTSwarm、metaswarm | 角色、拓扑、并行任务、验证队列、handoff | 高潜力，但必须证明组织更新可追溯、可复现、可回滚。 |
+| Agent-Swarm Evolve | Claude Code Dynamic Workflows、CORAL、GPTSwarm、metaswarm | 角色、拓扑、并行任务、验证队列、任务交接 | 高潜力，但必须证明组织更新可追溯、可复现、可回滚。 |
 
 ## 关键词背后的真实问题
 
@@ -72,7 +76,7 @@ User goal
 
 ## 继续阅读
 
-- [Agent-Swarm Evolve 分析](https://github.com/Shiyao-Huang/awesome-agent-evolution/blob/main/analysis/agent-swarm-evolve.md)
-- [Agent-Swarm Evolve wiki](https://github.com/Shiyao-Huang/awesome-agent-evolution/blob/main/work/wiki/concepts/agent-swarm-evolve.md)
+- [Agent-Swarm Evolve 证据档案](https://github.com/Shiyao-Huang/awesome-agent-evolution/blob/main/analysis/agent-swarm-evolve.md)
+- [Agent-Swarm Evolve 知识页](https://github.com/Shiyao-Huang/awesome-agent-evolution/blob/main/work/wiki/concepts/agent-swarm-evolve.md)
 - [自进化 AI 的未来路线图](/blog/future-roadmap-for-self-evolving-ai-agents/)
 - [评估基准如何判断自进化 Agent](/blog/evaluation-benchmarks-for-self-evolving-agents/)

@@ -135,7 +135,7 @@ const audienceLabel = (rank: number) => {
           <ol>
             <li><span>Question</span><strong>先回答一个真实问题。</strong></li>
             <li><span>Evidence</span><strong>再给可追溯证据。</strong></li>
-            <li><span>English</span><strong>English summary mirrors the same claim.</strong></li>
+            <li><span>English</span><strong>English summary states the same claim boundary; full mirrors are still in progress.</strong></li>
             <li><span>Boundary</span><strong>最后说明限制和下一步。</strong></li>
           </ol>
         </aside>
@@ -197,11 +197,11 @@ const audienceLabel = (rank: number) => {
                 <div>
                   <p><strong>Survey 角色：</strong>{topic.surveyRole}</p>
                   <p><strong>证据基础：</strong>{topic.evidence}</p>
-                  <p><strong>下一步阅读：</strong>{topic.nextAsset}</p>
+                  <p><strong>下一步线索：</strong>{topic.nextAsset}</p>
                   <ul class="topic-query-list" aria-label={`${topic.title} reader questions`}>
                     <li>这页回答的问题：{topic.readerQuestion}</li>
                     <li>证据够强吗，还是只适合排队复核？</li>
-                    <li>读完下一步应该去哪里：{topic.nextAsset}</li>
+                    <li>读完下一步应该复核什么：{topic.nextAsset}</li>
                   </ul>
                 </div>
               </div>

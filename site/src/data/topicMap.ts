@@ -72,7 +72,7 @@ export const topicClusters: TopicCluster[] = [
     title: '代码自我改进与算法发现',
     titleEn: 'Code self-improvement and algorithm discovery',
     readerQuestion: '哪些系统真的会改代码、发现算法，并用 benchmark 留下证据?',
-    surveyRole: '连接 DGM、ADAS、AlphaEvolve、OpenEvolve、FunSearch 等核心系统，是论文最强证据簇之一。',
+    surveyRole: '连接 DGM、ADAS、AlphaEvolve、OpenEvolve、FunSearch 等核心系统，是论文证据最集中的簇之一。',
     readerIntent: 'benchmark / project comparison',
     evidence: '项目报告、case studies 和 evaluation 章节已经覆盖 code mutation、archive、SWE-bench、HumanEval、算法搜索。',
     discoveryQuestions: ['AI code self improvement', 'Darwin Godel Machine benchmark', 'AlphaEvolve algorithm discovery'],

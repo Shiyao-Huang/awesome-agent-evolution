@@ -47,6 +47,7 @@ const trendEnd = evolveAgiTrend[evolveAgiTrend.length - 1]?.date ?? '';
         <div class="eyebrow">Evolve-AGI worksheet</div>
         <h1>先把它当证据成熟度工作表，而不是领域指数。</h1>
         <p class="lead">{evolveAgiIndex.oneSentence}</p>
+        <p class="lead-note">这个数字只回答“证据是否足够进入下一轮复核”：benchmark 是否可复跑、闭环是否保留、迁移和治理是否说明。它不回答哪个系统更好，也不是 AGI 能力分。</p>
         <div class="hero-actions">
           {evolveAgiIndex.evidenceLinks.map((link) => (
             <a
@@ -60,8 +61,9 @@ const trendEnd = evolveAgiTrend[evolveAgiTrend.length - 1]?.date ?? '';
           ))}
         </div>
       </div>
-      <aside class="eai-score-panel" aria-label="Evolve-AGI Index current score">
+      <aside class="eai-score-panel" aria-label="Evolve-AGI worksheet current score">
         <div class="eai-score-label">2026-06-02 working snapshot</div>
+        <div class="eai-score-kicker">Worksheet score, not AGI score</div>
         <div class="eai-score-value">{evolveAgiIndex.score}</div>
         <div class="eai-score-grade">Exploratory rubric</div>
         <p>{evolveAgiIndex.thesis}</p>
@@ -87,7 +89,7 @@ const trendEnd = evolveAgiTrend[evolveAgiTrend.length - 1]?.date ?? '';
                 <span>{signal.shortLabel}</span>
                 <h3>{signal.label}</h3>
               </div>
-              <strong>{signal.score}</strong>
+              <strong>{signal.score}<span>/100</span></strong>
             </div>
             <div class="eai-bar" aria-label={`${signal.label} score ${signal.score}`}>
               <span style={`width:${signal.score}%;`} />
@@ -116,7 +118,7 @@ const trendEnd = evolveAgiTrend[evolveAgiTrend.length - 1]?.date ?? '';
         <div class="eai-chart-layout">
           <div>
             <div class="eai-chart-legend" aria-hidden="true">
-              <span><i class="legend-index"></i> Evidence worksheet score</span>
+              <span><i class="legend-index"></i> Worksheet score</span>
               <span><i class="legend-benchmark"></i> Benchmark Performance</span>
             </div>
             <div class="eai-chart-wrap">
@@ -169,7 +171,7 @@ const trendEnd = evolveAgiTrend[evolveAgiTrend.length - 1]?.date ?? '';
             <thead>
               <tr>
                 <th>Date</th>
-                <th>Index</th>
+                <th>Worksheet score</th>
                 <th>Benchmark</th>
                 <th>Strict / broad repos</th>
                 <th>Reports</th>
@@ -254,20 +256,20 @@ const trendEnd = evolveAgiTrend[evolveAgiTrend.length - 1]?.date ?? '';
         <div class="section-head eai-local-head">
           <div>
             <div class="eyebrow">Evidence examples</div>
-            <h2>闭环证据较强的代表系统</h2>
+            <h2>闭环证据较强的代表系统，不是排名</h2>
           </div>
         </div>
         <div class="eai-list">
           {evolveAgiIndex.leaders.map((leader) => (
             <article class="eai-row">
-              <div class="eai-rank">{leader.rank}</div>
+              <div class="eai-order">Queue {leader.rank}</div>
               <div>
                 <h3>{leader.name}</h3>
                 <p>{leader.summary}</p>
                 <div class="pill-row">
                   <span class="pill">Tier {leader.tier}</span>
                   <span class="pill">{leader.maturity}</span>
-                  <span class="pill">rough score {Math.round(leader.score)}</span>
+                  <span class="pill">worksheet score {Math.round(leader.score)}</span>
                 </div>
               </div>
             </article>
@@ -285,13 +287,13 @@ const trendEnd = evolveAgiTrend[evolveAgiTrend.length - 1]?.date ?? '';
         <div class="eai-list">
           {evolveAgiIndex.currentSignals.map((signal) => (
             <article class="eai-row">
-              <div class="eai-rank">{signal.rank}</div>
+              <div class="eai-order">Lead {signal.rank}</div>
               <div>
                 <h3>{signal.name}</h3>
                 <p>{signal.pattern}</p>
                 <div class="pill-row">
                   <span class="pill">{signal.category}</span>
-                  <span class="pill">priority {Math.round(signal.score)}</span>
+                  <span class="pill">triage signal {Math.round(signal.score)}</span>
                 </div>
               </div>
             </article>
@@ -331,6 +333,7 @@ const trendEnd = evolveAgiTrend[evolveAgiTrend.length - 1]?.date ?? '';
   }
 
   .eai-score-label,
+  .eai-score-kicker,
   .eai-signal-head span {
     color: var(--muted);
     font-size: 12px;
@@ -343,7 +346,7 @@ const trendEnd = evolveAgiTrend[evolveAgiTrend.length - 1]?.date ?? '';
     margin-top: 10px;
     color: var(--fg);
     font-family: var(--font-display);
-    font-size: 92px;
+    font-size: 68px;
     font-weight: 400;
     line-height: .9;
   }
@@ -353,6 +356,12 @@ const trendEnd = evolveAgiTrend[evolveAgiTrend.length - 1]?.date ?? '';
     color: var(--accent);
     font-size: 20px;
     font-weight: 800;
+  }
+
+  .lead-note {
+    margin-top: -10px;
+    color: var(--muted);
+    line-height: 1.7;
   }
 
   .eai-score-panel p {
@@ -392,6 +401,14 @@ const trendEnd = evolveAgiTrend[evolveAgiTrend.length - 1]?.date ?? '';
     font-size: 34px;
     font-weight: 400;
     line-height: 1;
+  }
+
+  .eai-signal strong span {
+    margin-left: 2px;
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--muted);
   }
 
   .eai-bar {
@@ -670,20 +687,22 @@ const trendEnd = evolveAgiTrend[evolveAgiTrend.length - 1]?.date ?? '';
 
   .eai-row {
     display: grid;
-    grid-template-columns: 42px minmax(0, 1fr);
+    grid-template-columns: 76px minmax(0, 1fr);
     gap: 14px;
     padding: 16px;
   }
 
-  .eai-rank {
+  .eai-order {
     display: grid;
-    width: 34px;
-    height: 34px;
+    min-width: 66px;
+    min-height: 34px;
     place-items: center;
     border-radius: 999px;
     background: var(--surface-2);
     color: var(--accent);
+    font-size: 12px;
     font-weight: 900;
+    text-align: center;
   }
 
   @media (max-width: 980px) {
@@ -698,7 +717,7 @@ const trendEnd = evolveAgiTrend[evolveAgiTrend.length - 1]?.date ?? '';
 
   @media (max-width: 700px) {
     .eai-score-value {
-      font-size: 72px;
+      font-size: 56px;
     }
 
     .eai-row {
