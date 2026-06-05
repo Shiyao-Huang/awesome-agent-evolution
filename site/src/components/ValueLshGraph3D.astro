@@ -276,6 +276,18 @@ const defaultNeighbors = defaultNode?.neighbors.slice(0, 6) ?? [];
       ))}
     </div>
   ) : null}
+  {variant === 'full' ? (
+    <div class="value-lsh-region-tour" aria-label="Evidence region tour">
+      <div class="value-lsh-region-tour-copy">
+        <strong>Region tour</strong>
+        <p data-region-status>1 / 3</p>
+      </div>
+      <div class="value-lsh-region-tour-actions">
+        <button type="button" data-region-prev>Prev</button>
+        <button type="button" data-region-next>Next</button>
+      </div>
+    </div>
+  ) : null}
   <div class="value-lsh-legend" aria-label="Value LSH legend">
     {(Object.keys(classLabels) as ValueClass[]).map((valueClass) => (
       <span><i style={`background:${classColors[valueClass]}`}></i>{classLabels[valueClass]} <strong>{graphSnapshot.summary.value_classes[valueClass].toLocaleString()}</strong></span>
@@ -527,6 +539,10 @@ const defaultNeighbors = defaultNode?.neighbors.slice(0, 6) ?? [];
     const regionButtons = [...root.querySelectorAll('[data-region-button]')].filter((element): element is HTMLButtonElement => element instanceof HTMLButtonElement);
     const regionVisuals = new Map<string, THREE.Group>();
     const regionMarkers = new Map<string, HTMLButtonElement>();
+    const regionPrevButton = root.querySelector('[data-region-prev]');
+    const regionNextButton = root.querySelector('[data-region-next]');
+    const regionStatus = root.querySelector('[data-region-status]');
+    let activeRegionIndex = 0;
     const mutedColor = new THREE.Color('#d8d1c7');
     const setMaterialOpacity = (material: THREE.Material | THREE.Material[], opacity: number) => {
       const materials = Array.isArray(material) ? material : [material];
@@ -587,6 +603,18 @@ const defaultNeighbors = defaultNode?.neighbors.slice(0, 6) ?? [];
           }
         });
       });
+      const currentIndex = regions.findIndex((region) => region.kind === activeId);
+      if (currentIndex >= 0) activeRegionIndex = currentIndex;
+      if (regionStatus instanceof HTMLElement && regions.length) {
+        const region = regions[activeRegionIndex];
+        regionStatus.textContent = `${activeRegionIndex + 1} / ${regions.length} · ${region?.rankingLabel ?? ''} · ${region?.clusterId ?? ''}`;
+      }
+      if (regionPrevButton instanceof HTMLButtonElement) {
+        regionPrevButton.disabled = regions.length <= 1;
+      }
+      if (regionNextButton instanceof HTMLButtonElement) {
+        regionNextButton.disabled = regions.length <= 1;
+      }
     };
 
     const createRegionVisual = (region: SceneRegion) => {
@@ -716,6 +744,13 @@ const defaultNeighbors = defaultNode?.neighbors.slice(0, 6) ?? [];
       if (targetNode) selectNode(targetNode);
     };
 
+    const selectRegionByIndex = (nextIndex: number) => {
+      if (!regions.length) return;
+      const normalizedIndex = (nextIndex + regions.length) % regions.length;
+      const region = regions[normalizedIndex];
+      if (region) selectRegion(region);
+    };
+
     const ringMaterial = new THREE.LineBasicMaterial({ color: 0x7a6b5e, transparent: true, opacity: 0.18 });
     const makeRing = (radius: number, rotation: [number, number, number]) => {
       const points = [];
@@ -792,6 +827,12 @@ const defaultNeighbors = defaultNode?.neighbors.slice(0, 6) ?? [];
         if (region) selectRegion(region);
       });
     });
+    if (regionPrevButton instanceof HTMLButtonElement) {
+      regionPrevButton.addEventListener('click', () => selectRegionByIndex(activeRegionIndex - 1));
+    }
+    if (regionNextButton instanceof HTMLButtonElement) {
+      regionNextButton.addEventListener('click', () => selectRegionByIndex(activeRegionIndex + 1));
+    }
 
     const defaultRegion = regions[0];
     if (defaultRegion) {
@@ -986,6 +1027,62 @@ const defaultNeighbors = defaultNode?.neighbors.slice(0, 6) ?? [];
 
   .value-lsh-legend strong {
     font-weight: 850;
+  }
+
+  .value-lsh-region-tour {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    grid-column: 1 / -1;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--surface-card);
+    box-shadow: var(--shadow-mockup);
+    padding: 12px 14px;
+  }
+
+  .value-lsh-region-tour-copy {
+    display: grid;
+    gap: 4px;
+    min-width: 0;
+  }
+
+  .value-lsh-region-tour-copy strong {
+    font-size: 13px;
+    font-weight: 850;
+  }
+
+  .value-lsh-region-tour-copy p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+  }
+
+  .value-lsh-region-tour-actions {
+    display: flex;
+    gap: 8px;
+    flex: 0 0 auto;
+  }
+
+  .value-lsh-region-tour-actions button {
+    appearance: none;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: var(--surface-1);
+    color: var(--fg);
+    padding: 7px 11px;
+    font-size: 12px;
+    font-weight: 850;
+    cursor: pointer;
+  }
+
+  .value-lsh-region-tour-actions button:disabled {
+    opacity: 0.5;
+    cursor: default;
   }
 
   .value-region-card {
@@ -1214,6 +1311,19 @@ const defaultNeighbors = defaultNode?.neighbors.slice(0, 6) ?? [];
     .value-lsh-three.full .value-lsh-inspector {
       grid-column: auto;
       grid-row: auto;
+    }
+
+    .value-lsh-region-tour {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .value-lsh-region-tour-actions {
+      width: 100%;
+    }
+
+    .value-lsh-region-tour-actions button {
+      flex: 1 1 0;
     }
 
     .value-lsh-stage {
