@@ -253,10 +253,10 @@ const defaultNeighbors = defaultNode?.neighbors.slice(0, 6) ?? [];
         ))}
       </svg>
     </div>
-    <div class="value-lsh-region-markers" data-region-markers aria-label="High-value region anchors"></div>
+    <div class="value-lsh-region-markers" data-region-markers aria-label="Evidence region anchors"></div>
   </div>
   {variant === 'full' ? (
-    <div class="value-lsh-region-rail" aria-label="High-value region ranking">
+    <div class="value-lsh-region-rail" aria-label="Evidence region guide">
       {valueLshRegions.map((region, index) => (
         <button type="button" class="value-region-card" data-region-button data-region-id={region.kind}>
           <div class="value-region-card-head">
@@ -472,6 +472,14 @@ const defaultNeighbors = defaultNode?.neighbors.slice(0, 6) ?? [];
 
     const nodePosition = (node: SceneNode) => new THREE.Vector3(node.x * 1.72, node.y * 1.72, node.z * 1.72);
     const regionPosition = (region: SceneRegion) => new THREE.Vector3(region.centroid.x * 1.72, region.centroid.y * 1.72, region.centroid.z * 1.72);
+    const focusRegion = (region: SceneRegion) => {
+      const focusVector = regionPosition(region).normalize();
+      const planar = Math.sqrt(focusVector.x ** 2 + focusVector.z ** 2) || 1;
+      const focusTilt = -Math.atan2(focusVector.y, planar) - 0.12;
+      const focusTurn = Math.atan2(focusVector.x, focusVector.z) - 0.08;
+      targetX = Math.max(-1.15, Math.min(1.15, focusTilt));
+      targetY = focusTurn;
+    };
 
     const renderInspector = (node: SceneNode) => {
       const title = renderLink(node.primaryUrl, node.title);
@@ -666,6 +674,7 @@ const defaultNeighbors = defaultNode?.neighbors.slice(0, 6) ?? [];
 
     const selectRegion = (region: SceneRegion) => {
       setRegionActiveState(region.kind);
+      focusRegion(region);
       const targetNode = (region.representativeId && nodeById.get(region.representativeId))
         || nodes.find((node) => node.embeddingCluster === region.clusterId)
         || nodes[0];
