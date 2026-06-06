@@ -1,0 +1,60 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { site } from '@/data/site';
+import { Content } from '../../../../../../reports/public-i18n-route-audit.md';
+
+const title = 'Public I18N Route Audit';
+const description = 'English mirror for the Self Evolve public i18n route audit: sitemap coverage, HTML language, canonical links, hreflang alternates, the core English path, and Chinese-first long-tail gaps.';
+const canonical = new URL('/en/reports/public-i18n-route-audit/', site.url).toString();
+const sourceUrl = `${site.github}/blob/main/reports/public-i18n-route-audit.md`;
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'TechArticle',
+  headline: title,
+  description,
+  inLanguage: 'en',
+  author: { '@id': `${site.url}/#organization` },
+  publisher: { '@id': `${site.url}/#organization` },
+  mainEntityOfPage: canonical,
+  isBasedOn: sourceUrl,
+  about: ['i18n SEO', 'hreflang audit', 'bilingual content parity', 'Self Evolve publication QA']
+};
+---
+<BaseLayout
+  title={`${title} | Self Evolve Reports`}
+  description={description}
+  type="article"
+  pageLang="en"
+  alternateZh="/reports/public-i18n-route-audit/"
+  alternateEn="/en/reports/public-i18n-route-audit/"
+  pageKeywords={['i18n route audit', 'hreflang SEO', 'bilingual evidence parity', 'Self Evolve SEO audit']}
+>
+  <article class="blog-article">
+    <div class="eyebrow">Publication QA / English mirror</div>
+    <h1>{title}</h1>
+    <p class="lead">{description}</p>
+    <div class="pill-row">
+      <span class="pill" style="background: #B8860B; color: white;">INCOMPLETE</span>
+      <a class="pill" href="/en/reports/">Reports guide</a>
+      <a class="pill" href="/reports/public-i18n-route-audit/">中文默认页</a>
+      <a class="pill" href="/en/reports/text-asset-indexability/">Text asset coverage</a>
+      <a class="pill" href={sourceUrl} target="_blank" rel="noopener">Markdown source</a>
+    </div>
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} is:inline />
+    <aside class="source-panel" aria-label="Public i18n route audit boundary">
+      <div>
+        <div class="eyebrow">How to read</div>
+        <h2>This is a bilingual publication gate, not a completion certificate.</h2>
+        <p>The page separates the core English reader path from the Chinese-first long tail. The long tail still needs English routes, manual same-evidence review, alternate declarations, and review status before the site can claim full i18n parity.</p>
+        <p>For readers, the important facts are the INCOMPLETE status, how many English routes exist, and how many Chinese-first pages still have no English counterpart.</p>
+        <p><strong>SEO boundary:</strong> This page reads sitemap HTML and declared hreflang/canonical fields. It does not validate content equivalence, strict HTTPS, Google crawling, or public-copy quality.</p>
+      </div>
+      <div class="source-links">
+        <a href={sourceUrl} target="_blank" rel="noopener">Open generated report</a>
+        <a href="/reports/public-i18n-route-audit/">中文默认页</a>
+        <a href="/en/reports/text-asset-indexability/">Text asset coverage</a>
+      </div>
+    </aside>
+    <Content />
+  </article>
+</BaseLayout>

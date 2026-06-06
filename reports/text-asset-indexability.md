@@ -1,6 +1,6 @@
 # 文字资产可索引覆盖审计 / Text Asset Indexability Audit
 
-Generated: 2026-06-05T17:48:31.361Z
+Generated: 2026-06-05T19:06:50.151Z
 
 Canonical host: https://agent-evolution.com
 
@@ -14,8 +14,8 @@ Generated sitemap routes are indexable, but repository-wide text coverage is inc
 
 ## 三句话证据 / Three-Sentence Evidence
 
-1. 本地构建观察到 983 条 sitemap URL，其中 route-level Google indexability 审计已经覆盖生成页面；这只证明“已生成页面具备本地可索引资格”，不证明线上 HTTPS 可达或 Google 已抓取。 / The local build exposes 983 sitemap URLs, and the route-level audit checks generated pages; this supports local indexability eligibility only, not live HTTPS reachability or confirmed Google crawling.
-2. 全仓库共有 18131 个文本文件，剔除 raw 和外部镜像后仍有 2154 个自有文字资产；其中只有 567 个被映射到公开 HTML/source route。 / The repository has 18131 text files and 2154 owned non-raw, non-mirror assets; only 567 are mapped to public HTML/source routes.
+1. 本地构建观察到 985 条 sitemap URL，其中 route-level Google indexability 审计已经覆盖生成页面；这只证明“已生成页面具备本地可索引资格”，不证明线上 HTTPS 可达或 Google 已抓取。 / The local build exposes 985 sitemap URLs, and the route-level audit checks generated pages; this supports local indexability eligibility only, not live HTTPS reachability or confirmed Google crawling.
+2. 全仓库共有 18132 个文本文件，剔除 raw 和外部镜像后仍有 2155 个自有文字资产；其中只有 568 个被映射到公开 HTML/source route。 / The repository has 18132 text files and 2155 owned non-raw, non-mirror assets; only 568 are mapped to public HTML/source routes.
 3. 因此当前 blocker 不是单个页面缺少 title/description，而是 processed 分析、项目卡、论文 review、draft 和部分 reports 还没有经过公开页面包装、双语摘要和文案/证据审查。 / The blocker is not a single missing title or description. Many processed analyses, project cards, paper reviews, drafts, and reports still need public wrappers, bilingual summaries, and copy/evidence review.
 
 In English: generated sitemap pages are locally indexable, but repository-wide text coverage remains incomplete because many owned Markdown/MDX/TeX assets are still processed material, drafts, reviews, or reports without reviewed public HTML routes.
@@ -47,12 +47,12 @@ The route-level SEO audits prove that generated sitemap pages have indexable met
 
 | Metric | Count |
 |---|---:|
-| Text files total | 18131 |
-| Owned text files excluding raw and external mirrors | 2154 |
-| Public Google-indexable source files | 567 |
+| Text files total | 18132 |
+| Owned text files excluding raw and external mirrors | 2155 |
+| Public Google-indexable source files | 568 |
 | GitHub root/README assets | 4 |
 | Unpublished candidate files shown in queue | 80 |
-| Sitemap URLs observed | 983 |
+| Sitemap URLs observed | 985 |
 
 ## 状态计数 / Status Counts
 
@@ -67,12 +67,12 @@ The route-level SEO audits prove that generated sitemap pages have indexable met
 | paper-review-unmapped | 171 |
 | processed-analysis-unmapped | 161 |
 | processed-project-card-unmapped | 857 |
-| public-google-indexable-source | 567 |
+| public-google-indexable-source | 568 |
 | public-report-source-unmapped | 1 |
 | raw-source-do-not-publish-directly | 2435 |
-| results-report-unmapped | 11 |
+| results-report-unmapped | 10 |
 | unclassified-text | 29 |
-| work-internal | 165 |
+| work-internal | 166 |
 
 ## 最高优先级待发布队列 / Highest-Priority Unpublished Candidates
 
@@ -82,7 +82,6 @@ Public-reader meaning: these files are not failures by themselves. They are the 
 |---|---|---:|---:|---|
 | reports/cross-validation-report.md | results-report-unmapped | 3841 | 105 | Cross-Validation Report: Academic Paper Claims vs. Community Reality |
 | reports/propagation-chain-evidence.md | results-report-unmapped | 2475 | 105 | 传播链深度追踪：跨平台证据汇编 |
-| reports/public-i18n-route-audit.md | results-report-unmapped | 1398 | 105 | Public I18N Route Audit |
 | research/repo-classification.md | processed-analysis-unmapped | 26938 | 90 | Repo 自动分类与技术栈分析（raw-github 681） |
 | analysis/github-project-data-analysis.md | processed-analysis-unmapped | 18837 | 90 | GitHub Project Data Analysis |
 | research/agent-self-evolution-papers-detailed.md | processed-analysis-unmapped | 6461 | 90 | Agent Self-Evolution / Auto-Improvement: Detailed Paper Reference (108 Papers) |
@@ -120,6 +119,7 @@ Public-reader meaning: these files are not failures by themselves. They are the 
 | analysis/frontier-projects/synaptent-aragora-dual-chain.md | processed-analysis-unmapped | 1421 | 90 | synaptent/aragora Dual-Chain Deep Dive |
 | analysis/value-evidence-repair-queue.md | processed-analysis-unmapped | 1413 | 90 | Value Evidence Repair Queue |
 | analysis/frontier-projects/jarvis-xs-se-agent-dual-chain.md | processed-analysis-unmapped | 1396 | 90 | JARVIS-Xs/SE-Agent Dual-Chain Deep Dive |
+| research/hotspot-capture-guide.md | processed-analysis-unmapped | 1262 | 90 | 热点捕获方法论指南 |
 
 ## 读者下一步 / Reader Next Steps
 

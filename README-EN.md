@@ -184,6 +184,7 @@ flowchart TB
 - [KNOWN] Survey chapters and the paper draft come from [paper-drafts/main.tex](paper-drafts/main.tex) and [survey/latex/main.tex](survey/latex/main.tex).
 - [KNOWN] GitHub topic discovery status comes from [reports/github-topic-indexing-readiness.md](reports/github-topic-indexing-readiness.md): the remote `agent-evolution` topic, repository description/homepage, GitHub Search, and rendered topic page are verified; topic-page display lag is not the same as missing metadata.
 - [KNOWN] Repository-wide text asset coverage is audited by [reports/text-asset-indexability.md](reports/text-asset-indexability.md); it separates public HTML assets, GitHub README assets, processed-but-unrouted files, raw-do-not-publish sources, and external mirrors.
+- [KNOWN] Public i18n route status is audited by [reports/public-i18n-route-audit.md](reports/public-i18n-route-audit.md); it separates the core English reader path from Chinese-first long-tail pages that still lack English alternates.
 - [KNOWN] Google/SEO publication status must combine local sitemap/meta audits with live crawl prerequisites; [reports/live-publication-readiness.md](reports/live-publication-readiness.md) separates "generated site is indexable" from "the custom domain is reachable over strict HTTPS."
 - [INFERRED] The "core insight" is a synthesis over those sources: upgrading the Awesome repository into a survey + index + evidence graph for controlled self-evolution, not a simple link site.
 

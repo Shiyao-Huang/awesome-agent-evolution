@@ -1,6 +1,6 @@
 # Live Publication Readiness Audit
 
-Generated: 2026-06-05T17:46:28.849Z
+Generated: 2026-06-05T18:55:14.703Z
 
 Canonical host: https://agent-evolution.com
 

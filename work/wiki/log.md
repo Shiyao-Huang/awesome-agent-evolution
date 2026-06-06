@@ -673,3 +673,12 @@
 - Preserved raw/mirror boundaries: raw sources and external repo mirrors are not automatically public article candidates.
 - Added `/reports/text-asset-indexability/` as the public QA surface and linked it from README and reports indexes.
 **产出:** `scripts/audit_text_asset_indexability.mjs`, `reports/text-asset-indexability.md`, `work/wiki/synthesis/text-asset-indexability-coverage.md`
+
+## [2026-06-06 01:52] synthesis+publication | Public I18N Route Audit Publication
+
+**操作:** Promoted the public i18n route audit from an unrouted Markdown report into a bilingual public QA surface for the active Google-indexable text asset goal.
+**详情:**
+- Added Chinese default and English mirror report pages for `/reports/public-i18n-route-audit/`.
+- Updated the text asset audit route mapping so `reports/public-i18n-route-audit.md` is counted as a public Google-indexable source after build/audit regeneration.
+- Preserved the blocker: core English reader paths exist, but long-tail Chinese-first routes still need same-evidence English alternates before i18n can be called complete.
+**产出:** `site/src/pages/reports/public-i18n-route-audit.astro`, `site/src/pages/en/reports/public-i18n-route-audit/index.astro`, `work/wiki/synthesis/public-i18n-route-audit.md`

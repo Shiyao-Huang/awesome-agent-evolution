@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-06-05T17:46:22.620Z",
+  "generated_at": "2026-06-05T19:06:43.515Z",
   "canonical_host": "https://agent-evolution.com",
   "global_status": "incomplete",
-  "verdict": "Batch B bilingual route audit is not passed: only the core English path has paired routes; most indexable pages are still Chinese-first without English same-evidence mirrors.",
+  "verdict": "The public site is not fully bilingual yet: the core English path exists, but most sitemap-listed pages are still Chinese-first and do not declare an English alternate route.",
   "counts": {
-    "sitemap_urls": 983,
-    "html_routes_checked": 983,
+    "sitemap_urls": 985,
+    "html_routes_checked": 985,
     "missing_html": 0,
-    "english_routes": 24,
-    "zh_routes": 959,
-    "zh_routes_with_en_alternate": 17,
-    "en_routes_with_zh_alternate": 17,
+    "english_routes": 25,
+    "zh_routes": 960,
+    "zh_routes_with_en_alternate": 18,
+    "en_routes_with_zh_alternate": 18,
     "zh_first_without_en_alternate": 942,
     "noindex_in_sitemap": 0
   },
@@ -19,9 +19,9 @@
     "site-page": 16,
     "blog": 26,
     "blog-tag": 79,
-    "english": 17,
+    "english": 18,
     "project-card": 293,
-    "report-index-or-audit": 528,
+    "report-index-or-audit": 529,
     "research": 16,
     "survey": 3,
     "topic": 4
@@ -183,6 +183,11 @@
       "pathname": "/en/reports/",
       "title": "Self Evolve Reports — what is reviewed, what is still gated",
       "zh_alternate": "/reports/"
+    },
+    {
+      "pathname": "/en/reports/public-i18n-route-audit/",
+      "title": "Public I18N Route Audit | Self Evolve Reports",
+      "zh_alternate": "/reports/public-i18n-route-audit/"
     },
     {
       "pathname": "/en/reports/text-asset-indexability/",

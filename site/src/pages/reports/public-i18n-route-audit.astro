@@ -1,0 +1,60 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { site } from '@/data/site';
+import { Content } from '../../../../reports/public-i18n-route-audit.md';
+
+const title = '公开 I18N 路由审计';
+const description = 'Self Evolve 公开站点 I18N 路由审计：检查 sitemap、HTML lang、canonical、hreflang alternate、英文核心路径和中文优先长尾缺口。';
+const canonical = new URL('/reports/public-i18n-route-audit/', site.url).toString();
+const sourceUrl = `${site.github}/blob/main/reports/public-i18n-route-audit.md`;
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'TechArticle',
+  headline: title,
+  description,
+  inLanguage: 'zh-CN',
+  author: { '@id': `${site.url}/#organization` },
+  publisher: { '@id': `${site.url}/#organization` },
+  mainEntityOfPage: canonical,
+  isBasedOn: sourceUrl,
+  about: ['i18n SEO', 'hreflang audit', 'bilingual content parity', 'Self Evolve publication QA']
+};
+---
+<BaseLayout
+  title={`${title} | Self Evolve Reports`}
+  description={description}
+  type="article"
+  pageLang="zh-CN"
+  alternateZh="/reports/public-i18n-route-audit/"
+  alternateEn="/en/reports/public-i18n-route-audit/"
+  pageKeywords={['I18N 路由审计', 'hreflang SEO', '双语同证据链', 'Self Evolve SEO audit']}
+>
+  <article class="blog-article">
+    <div class="eyebrow">Publication QA / i18n route coverage</div>
+    <h1>{title}</h1>
+    <p class="lead">{description}</p>
+    <div class="pill-row">
+      <span class="pill" style="background: #B8860B; color: white;">INCOMPLETE</span>
+      <a class="pill" href="/reports/">报告索引</a>
+      <a class="pill" href="/en/reports/public-i18n-route-audit/">English mirror</a>
+      <a class="pill" href="/reports/text-asset-indexability/">文字资产覆盖</a>
+      <a class="pill" href={sourceUrl} target="_blank" rel="noopener">Markdown 源文件</a>
+    </div>
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} is:inline />
+    <aside class="source-panel" aria-label="Public i18n route audit boundary">
+      <div>
+        <div class="eyebrow">如何阅读</div>
+        <h2>这是双语发布门禁，不是翻译完成证明。</h2>
+        <p>本页把核心英文路径和长尾中文优先路由分开：前者服务全球读者的主要判断路径，后者仍需要英文 route、人工同证据链审查、alternate 声明和审查状态。</p>
+        <p>普通读者只需要看三件事：状态是否仍是 INCOMPLETE、英文入口覆盖多少条、还有多少中文页面没有英文对应页。</p>
+        <p><strong>SEO 边界:</strong> 本页只读取 sitemap 中的 HTML 和页面声明的 hreflang/canonical 字段；它不验证内容等价、严格 HTTPS、Google 抓取或文案质量。</p>
+      </div>
+      <div class="source-links">
+        <a href={sourceUrl} target="_blank" rel="noopener">打开生成报告</a>
+        <a href="/en/reports/public-i18n-route-audit/">English mirror</a>
+        <a href="/reports/text-asset-indexability/">文字资产覆盖</a>
+      </div>
+    </aside>
+    <Content />
+  </article>
+</BaseLayout>

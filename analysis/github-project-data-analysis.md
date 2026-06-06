@@ -1,6 +1,6 @@
 # GitHub Project Data Analysis
 
-Generated: 2026-06-05T17:48:44.699Z
+Generated: 2026-06-05T18:54:23.135Z
 
 ## One-Sentence Compression
 
@@ -440,11 +440,11 @@ Formula: `current_value = 0.50*time + 0.20*mechanism + 0.15*evidence + 0.10*adop
 |---:|---|---:|---:|---:|---:|---:|---|---|---|
 | 1 | [modelscope/AgentEvolver](https://github.com/modelscope/AgentEvolver) | 82.92 | 75.04 | 100 | 100 | 59.98 | 2025-11 | 2026-04 | - |
 | 2 | [ZJU-LLM-Safety/DARWIN](https://github.com/ZJU-LLM-Safety/DARWIN) | 76.49 | 92.92 | 75 | 62 | 30.83 | 2026-04 | 2026-05 | - |
-| 3 | [OPPO-Mente-Lab/LLM-Self-Judge](https://github.com/OPPO-Mente-Lab/LLM-Self-Judge) | 75.45 | 85.77 | 85 | 62 | 31.21 | 2026-03 | 2026-03 | - |
-| 4 | [algorithmicsuperintelligence/openevolve](https://github.com/algorithmicsuperintelligence/openevolve) | 70.67 | 56.48 | 79 | 100 | 72.25 | 2025-05 | 2026-03 | - |
-| 5 | [JarvisPei/SCOPE](https://github.com/JarvisPei/SCOPE) | 67.87 | 77.86 | 67 | 62 | 35.93 | 2025-12 | 2026-03 | - |
-| 6 | [inter-co/science-codeevolve](https://github.com/inter-co/science-codeevolve) | 65.34 | 72.8 | 59 | 68 | 37.9 | 2025-10 | 2026-04 | - |
-| 7 | [JARVIS-Xs/SE-Agent](https://github.com/JARVIS-Xs/SE-Agent) | 63.16 | 47.45 | 77 | 100 | 46.32 | 2025-07 | 2025-09 | - |
+| 3 | [OPPO-Mente-Lab/LLM-Self-Judge](https://github.com/OPPO-Mente-Lab/LLM-Self-Judge) | 75.45 | 85.76 | 85 | 62 | 31.21 | 2026-03 | 2026-03 | - |
+| 4 | [algorithmicsuperintelligence/openevolve](https://github.com/algorithmicsuperintelligence/openevolve) | 70.66 | 56.47 | 79 | 100 | 72.25 | 2025-05 | 2026-03 | - |
+| 5 | [JarvisPei/SCOPE](https://github.com/JarvisPei/SCOPE) | 67.87 | 77.85 | 67 | 62 | 35.93 | 2025-12 | 2026-03 | - |
+| 6 | [inter-co/science-codeevolve](https://github.com/inter-co/science-codeevolve) | 65.34 | 72.79 | 59 | 68 | 37.9 | 2025-10 | 2026-04 | - |
+| 7 | [JARVIS-Xs/SE-Agent](https://github.com/JARVIS-Xs/SE-Agent) | 63.15 | 47.44 | 77 | 100 | 46.32 | 2025-07 | 2025-09 | - |
 | 8 | [EvoMap/evolver](https://github.com/EvoMap/evolver) | 61.77 | 45 | 93 | 62 | 73.7 | unknown | 2026-05 | created_at unavailable; time score capped and based on activity/observation only |
 | 9 | [microsoft/agent-lightning](https://github.com/microsoft/agent-lightning) | 61.45 | 45 | 95 | 56 | 80.48 | unknown | 2026-05 | created_at unavailable; time score capped and based on activity/observation only |
 | 10 | [NousResearch/hermes-agent-self-evolution](https://github.com/NousResearch/hermes-agent-self-evolution) | 60.83 | 45 | 100 | 62 | 67.76 | unknown | 2026-05 | created_at unavailable; time score capped and based on activity/observation only |
@@ -453,7 +453,7 @@ Formula: `current_value = 0.50*time + 0.20*mechanism + 0.15*evidence + 0.10*adop
 | 13 | [microsoft/SkillOpt](https://github.com/microsoft/SkillOpt) | 60.34 | 45 | 93 | 56 | 68.4 | unknown | 2026-05 | created_at unavailable; time score capped and based on activity/observation only |
 | 14 | [manthanguptaa/water](https://github.com/manthanguptaa/water) | 58.97 | 45 | 97 | 56 | 46.73 | unknown | 2026-06 | created_at unavailable; time score capped and based on activity/observation only |
 | 15 | [longmans/self-evolve](https://github.com/longmans/self-evolve) | 58.67 | 45 | 100 | 56 | 37.73 | unknown | 2026-06 | created_at unavailable; time score capped and based on activity/observation only |
-| 16 | [EvoAgentX/EvoAgentX](https://github.com/EvoAgentX/EvoAgentX) | 58.32 | 28.68 | 97 | 86 | 72.78 | unknown | 2026-01 | created_at unavailable; time score capped and based on activity/observation only |
+| 16 | [EvoAgentX/EvoAgentX](https://github.com/EvoAgentX/EvoAgentX) | 58.31 | 28.67 | 97 | 86 | 72.78 | unknown | 2026-01 | created_at unavailable; time score capped and based on activity/observation only |
 | 17 | [stanford-iris-lab/meta-harness](https://github.com/stanford-iris-lab/meta-harness) | 57.96 | 45 | 87 | 56 | 56.63 | unknown | 2026-05 | created_at unavailable; time score capped and based on activity/observation only |
 | 18 | [zhang677/accelopt](https://github.com/zhang677/AccelOpt) | 57.66 | 45 | 100 | 56 | 32.59 | unknown | 2026-06 | created_at unavailable; time score capped and based on activity/observation only |
 | 19 | [clawland-ai/geneclaw](https://github.com/Clawland-AI/Geneclaw) | 57.28 | 45 | 97 | 56 | 29.78 | unknown | 2026-06 | created_at unavailable; time score capped and based on activity/observation only |
@@ -475,7 +475,7 @@ Formula: `current_value = 0.50*time + 0.20*mechanism + 0.15*evidence + 0.10*adop
 | 35 | [hyperspell/hyperspell-openclaw](https://github.com/hyperspell/hyperspell-openclaw) | 52.09 | 45 | 67 | 56 | 42.92 | unknown | 2026-06 | created_at unavailable; time score capped and based on activity/observation only |
 | 36 | [wazionapps/nexo](https://github.com/wazionapps/nexo) | 51.69 | 45 | 71 | 56 | 25.86 | unknown | 2026-05 | created_at unavailable; time score capped and based on activity/observation only |
 | 37 | [pinchbench/skill](https://github.com/pinchbench/skill) | 51.65 | 45 | 50 | 62 | 58.48 | unknown | 2026-05 | created_at unavailable; time score capped and based on activity/observation only |
-| 38 | [EverMind-AI/EverOS](https://github.com/EverMind-AI/EverOS) | 51.04 | 28.68 | 71 | 86 | 56.98 | unknown | 2026-01 | created_at unavailable; time score capped and based on activity/observation only |
+| 38 | [EverMind-AI/EverOS](https://github.com/EverMind-AI/EverOS) | 51.03 | 28.67 | 71 | 86 | 56.98 | unknown | 2026-01 | created_at unavailable; time score capped and based on activity/observation only |
 | 39 | [Orchestra-Research/AI-research-SKILLs](https://github.com/Orchestra-Research/AI-research-SKILLs) | 50.8 | 45 | 42 | 56 | 75 | unknown | 2026-05 | created_at unavailable; time score capped and based on activity/observation only |
 | 40 | [SuperagenticAI/metaharness](https://github.com/SuperagenticAI/metaharness) | 50.52 | 45 | 59 | 56 | 38.22 | unknown | 2026-05 | created_at unavailable; time score capped and based on activity/observation only |
 

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-05T22:00:00+08:00",
+  "generated_at": "2026-06-06T01:52:00+08:00",
   "truth_source": ".mermaid/current/graph.json",
   "nodes": [
     {
@@ -57,6 +57,19 @@
         "scripts/audit_text_asset_indexability.mjs",
         "site/src/pages/reports/text-asset-indexability.astro",
         "work/wiki/synthesis/text-asset-indexability-coverage.md"
+      ]
+    },
+    {
+      "id": "results.public-i18n-route-audit",
+      "title": "Public i18n route audit",
+      "layer": "results",
+      "status": "incomplete",
+      "paths": [
+        "reports/public-i18n-route-audit.md",
+        "scripts/audit_public_i18n_routes.mjs",
+        "site/src/pages/reports/public-i18n-route-audit.astro",
+        "site/src/pages/en/reports/public-i18n-route-audit/index.astro",
+        "work/wiki/synthesis/public-i18n-route-audit.md"
       ]
     },
     {
@@ -123,6 +136,11 @@
       "measures-text-coverage"
     ],
     [
+      "results.public-i18n-route-audit",
+      "results.public-site",
+      "measures-bilingual-route-parity"
+    ],
+    [
       "processed.github-classification",
       "results.public-site",
       "publishes"
@@ -186,7 +204,7 @@
     "blockers": [
       "Custom-domain strict HTTPS remains blocked because GitHub Pages has not issued a certificate covering agent-evolution.com",
       "Repository-wide text asset coverage remains incomplete: route-level SEO passes, but many processed assets are not yet public HTML",
-      "Long-tail i18n route parity remains incomplete",
+      "Long-tail i18n route parity remains incomplete and is now public at /reports/public-i18n-route-audit/",
       "GitNexus symbol impact returned UNKNOWN for public report page targets; final scope is checked with detect-changes"
     ],
     "working_principle": "repository text inventory -> route/sitemap mapping -> coverage audit -> reports + wiki synthesis -> README/site report surfaces -> indexes + analysis + site build"

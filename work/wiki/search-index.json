@@ -1,8 +1,8 @@
 {
-  "generated": "2026-06-05T17:18:43.045Z",
+  "generated": "2026-06-05T18:54:23.141Z",
   "stats": {
-    "pages": 79,
-    "keywords": 953
+    "pages": 80,
+    "keywords": 958
   },
   "catalog": [
     {
@@ -769,6 +769,18 @@
         "self-evolution",
         "code-scan",
         "github-issues"
+      ]
+    },
+    {
+      "path": "synthesis/public-i18n-route-audit.md",
+      "title": "Public I18N Route Audit",
+      "rank": "A",
+      "type": "synthesis",
+      "tags": [
+        "i18n",
+        "seo",
+        "publication",
+        "reports"
       ]
     },
     {
@@ -3625,6 +3637,7 @@
       "synthesis/code-evolution-benchmark-matrix.md",
       "synthesis/five-evolution-loops-topic.md",
       "synthesis/google-indexing-custom-domain-triage.md",
+      "synthesis/public-i18n-route-audit.md",
       "synthesis/survey-seo-topic-map.md",
       "synthesis/text-asset-indexability-coverage.md"
     ],
@@ -4018,6 +4031,21 @@
     ],
     "github-issues": [
       "synthesis/modelscope-agentevolver-frontier-deep-dive.md"
+    ],
+    "public i18n route audit": [
+      "synthesis/public-i18n-route-audit.md"
+    ],
+    "i18n": [
+      "synthesis/public-i18n-route-audit.md"
+    ],
+    "publication": [
+      "synthesis/public-i18n-route-audit.md"
+    ],
+    "reports": [
+      "synthesis/public-i18n-route-audit.md"
+    ],
+    "working rule": [
+      "synthesis/public-i18n-route-audit.md"
     ],
     "resource library coverage audit": [
       "synthesis/resource-library-coverage-audit.md"

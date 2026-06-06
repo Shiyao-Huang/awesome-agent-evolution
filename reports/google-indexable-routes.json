@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-06-05T17:46:22.357Z",
+  "generated_at": "2026-06-05T19:06:50.407Z",
   "canonical_host": "https://agent-evolution.com",
   "audit_boundary": "Generated-site audit only. PASS means sitemap-listed HTML routes have indexable metadata in the local build; it does not prove Google has crawled, indexed, or can reach the custom domain over trusted HTTPS.",
   "global_status": "pass",
   "counts": {
-    "sitemap_urls": 983,
-    "routes_checked": 983,
-    "passed": 983,
+    "sitemap_urls": 985,
+    "routes_checked": 985,
+    "passed": 985,
     "failed": 0
   },
   "route_kind_counts": {
@@ -14,9 +14,9 @@
     "site-page": 16,
     "blog": 26,
     "blog-tag": 79,
-    "english": 17,
+    "english": 18,
     "project-card": 293,
-    "report-index-or-audit": 4,
+    "report-index-or-audit": 5,
     "paper-cross-domain-report": 2,
     "project-report": 489,
     "legacy-research-project-report": 28,
@@ -1392,6 +1392,18 @@
       "description": "English guide to Self Evolve reports: project evidence pages, legacy research wrappers, survey publication slices, paper maps, review-gated policy, and citation boundaries.",
       "lang": "en",
       "canonical": "https://agent-evolution.com/en/reports/",
+      "status": "pass",
+      "failures": []
+    },
+    {
+      "url": "https://agent-evolution.com/en/reports/public-i18n-route-audit/",
+      "pathname": "/en/reports/public-i18n-route-audit/",
+      "kind": "english",
+      "htmlPath": "site/dist/en/reports/public-i18n-route-audit/index.html",
+      "title": "Public I18N Route Audit | Self Evolve Reports",
+      "description": "English mirror for the Self Evolve public i18n route audit: sitemap coverage, HTML language, canonical links, hreflang alternates, the core English path, and Chinese-first long-tail gaps.",
+      "lang": "en",
+      "canonical": "https://agent-evolution.com/en/reports/public-i18n-route-audit/",
       "status": "pass",
       "failures": []
     },
@@ -11052,6 +11064,18 @@
       "description": "DARWIN 的 Self Evolve 项目报告证据页：帮助读者检查 GitHub 可见信号、站内归类、机制线索和未复现限制；不是项目质量排名。",
       "lang": "zh-CN",
       "canonical": "https://agent-evolution.com/reports/projects/zju_llm_safety__darwin/",
+      "status": "pass",
+      "failures": []
+    },
+    {
+      "url": "https://agent-evolution.com/reports/public-i18n-route-audit/",
+      "pathname": "/reports/public-i18n-route-audit/",
+      "kind": "report-index-or-audit",
+      "htmlPath": "site/dist/reports/public-i18n-route-audit/index.html",
+      "title": "公开 I18N 路由审计 | Self Evolve Reports",
+      "description": "Self Evolve 公开站点 I18N 路由审计：检查 sitemap、HTML lang、canonical、hreflang alternate、英文核心路径和中文优先长尾缺口。",
+      "lang": "zh-CN",
+      "canonical": "https://agent-evolution.com/reports/public-i18n-route-audit/",
       "status": "pass",
       "failures": []
     },

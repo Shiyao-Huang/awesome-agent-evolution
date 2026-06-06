@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-05T17:48:44.699Z",
+  "generated_at": "2026-06-05T18:54:23.135Z",
   "counts": {
     "raw_captures": 684,
     "raw_files_on_disk": 684,
@@ -63520,7 +63520,7 @@
   },
   "ranking_method": {
     "name": "recency_weighted_current_value",
-    "reference_date": "2026-06-05T17:48:44.699Z",
+    "reference_date": "2026-06-05T18:54:23.135Z",
     "weights": {
       "time": 0.5,
       "mechanism": 0.2,
@@ -63618,7 +63618,7 @@
       "report": "projects/oppo_mente_lab__llm_self_judge.md",
       "scores": {
         "current_value": 75.45,
-        "time": 85.77,
+        "time": 85.76,
         "mechanism": 85,
         "evidence": 62,
         "adoption": 31.21,
@@ -63645,8 +63645,8 @@
       "stars": 6377,
       "report": "projects/algorithmicsuperintelligence__openevolve.md",
       "scores": {
-        "current_value": 70.67,
-        "time": 56.48,
+        "current_value": 70.66,
+        "time": 56.47,
         "mechanism": 79,
         "evidence": 100,
         "adoption": 72.25,
@@ -63673,7 +63673,7 @@
       "report": "projects/jarvispei__scope.md",
       "scores": {
         "current_value": 67.87,
-        "time": 77.86,
+        "time": 77.85,
         "mechanism": 67,
         "evidence": 62,
         "adoption": 35.93,
@@ -63701,7 +63701,7 @@
       "report": "projects/inter_co__science_codeevolve.md",
       "scores": {
         "current_value": 65.34,
-        "time": 72.8,
+        "time": 72.79,
         "mechanism": 59,
         "evidence": 68,
         "adoption": 37.9,
@@ -63729,8 +63729,8 @@
       "stars": 274,
       "report": "projects/jarvis_xs__se_agent.md",
       "scores": {
-        "current_value": 63.16,
-        "time": 47.45,
+        "current_value": 63.15,
+        "time": 47.44,
         "mechanism": 77,
         "evidence": 100,
         "adoption": 46.32,
@@ -64008,8 +64008,8 @@
       "stars": 6800,
       "report": "projects/22-evoagentx-agent-evolution-framework.md",
       "scores": {
-        "current_value": 58.32,
-        "time": 28.68,
+        "current_value": 58.31,
+        "time": 28.67,
         "mechanism": 97,
         "evidence": 86,
         "adoption": 72.78,
@@ -64686,8 +64686,8 @@
       "stars": 1000,
       "report": "projects/23-everos-self-evolving-agents.md",
       "scores": {
-        "current_value": 51.04,
-        "time": 28.68,
+        "current_value": 51.03,
+        "time": 28.67,
         "mechanism": 71,
         "evidence": 86,
         "adoption": 56.98,
@@ -64963,8 +64963,8 @@
       "stars": 3800,
       "report": "research/projects/44-xmu-self-evolving-agents.md",
       "scores": {
-        "current_value": 48.6,
-        "time": 30.6,
+        "current_value": 48.59,
+        "time": 30.59,
         "mechanism": 69,
         "evidence": 68,
         "adoption": 67.98,
@@ -65424,7 +65424,7 @@
       "report": "projects/33-self-improvement-llm.md",
       "scores": {
         "current_value": 47.06,
-        "time": 28.68,
+        "time": 28.67,
         "mechanism": 69,
         "evidence": 86,
         "adoption": 43.74,
@@ -65515,7 +65515,7 @@
       "report": "projects/05-automl-agent-multi-agent.md",
       "scores": {
         "current_value": 46.85,
-        "time": 35.29,
+        "time": 35.28,
         "mechanism": 59,
         "evidence": 68,
         "adoption": 40.58,
@@ -66313,7 +66313,7 @@
       "report": "projects/311-openai-swarm-multi-agent-orchestration.md",
       "scores": {
         "current_value": 45.19,
-        "time": 42.92,
+        "time": 42.91,
         "mechanism": 18,
         "evidence": 56,
         "adoption": 82.31,
@@ -66710,8 +66710,8 @@
       "stars": 2800,
       "report": "research/projects/60-swe-bench-evaluation.md",
       "scores": {
-        "current_value": 44.75,
-        "time": 41,
+        "current_value": 44.74,
+        "time": 40.99,
         "mechanism": 20,
         "evidence": 68,
         "adoption": 65.46,
@@ -66904,35 +66904,6 @@
     },
     {
       "rank": 111,
-      "repo": "crewAIInc/crewAI",
-      "name": "CrewAI",
-      "url": "https://github.com/crewAIInc/crewAI",
-      "category": "多 Agent 协作框架",
-      "pattern": "智能体编排",
-      "tags": [
-        "智能体编排",
-        "Crew+Flow",
-        "零依赖"
-      ],
-      "status": "verified",
-      "created_at": "2023-10-27T03:26:59Z",
-      "created_at_source": "github_api",
-      "first_observed_at": null,
-      "activity_at": "2026-05-23T20:10:54Z",
-      "stars": 52041,
-      "report": "projects/09-crewai-multi-agent-framework.md",
-      "scores": {
-        "current_value": 44.33,
-        "time": 28.94,
-        "mechanism": 10,
-        "evidence": 100,
-        "adoption": 89.56,
-        "usefulness": 78
-      },
-      "caveat": ""
-    },
-    {
-      "rank": 112,
       "repo": "composio-community/awesome-openclaw-plugins",
       "name": "Awesome OpenClaw Plugins (Composio Community)",
       "url": "https://github.com/composio-community/awesome-openclaw-plugins",
@@ -66961,6 +66932,35 @@
         "usefulness": 50
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
+    },
+    {
+      "rank": 112,
+      "repo": "crewAIInc/crewAI",
+      "name": "CrewAI",
+      "url": "https://github.com/crewAIInc/crewAI",
+      "category": "多 Agent 协作框架",
+      "pattern": "智能体编排",
+      "tags": [
+        "智能体编排",
+        "Crew+Flow",
+        "零依赖"
+      ],
+      "status": "verified",
+      "created_at": "2023-10-27T03:26:59Z",
+      "created_at_source": "github_api",
+      "first_observed_at": null,
+      "activity_at": "2026-05-23T20:10:54Z",
+      "stars": 52041,
+      "report": "projects/09-crewai-multi-agent-framework.md",
+      "scores": {
+        "current_value": 44.32,
+        "time": 28.94,
+        "mechanism": 10,
+        "evidence": 100,
+        "adoption": 89.56,
+        "usefulness": 78
+      },
+      "caveat": ""
     },
     {
       "rank": 113,
@@ -68179,7 +68179,7 @@
       "report": "projects/13-langgraph-agent-workflows.md",
       "scores": {
         "current_value": 42.7,
-        "time": 28.96,
+        "time": 28.95,
         "mechanism": 10,
         "evidence": 100,
         "adoption": 85.75,
@@ -68919,7 +68919,7 @@
       "report": "projects/24-opentreesearch-llm-code-evolution.md",
       "scores": {
         "current_value": 41.76,
-        "time": 28.68,
+        "time": 28.67,
         "mechanism": 59,
         "evidence": 54,
         "adoption": 43.74,
@@ -69592,7 +69592,7 @@
       "report": "projects/41-opendevin-ai-software.md",
       "scores": {
         "current_value": 41.01,
-        "time": 28.68,
+        "time": 28.67,
         "mechanism": 35,
         "evidence": 54,
         "adoption": 89.23,
@@ -70073,8 +70073,8 @@
       "stars": 500,
       "report": "projects/36-llm-agent-optimization.md",
       "scores": {
-        "current_value": 40.22,
-        "time": 28.68,
+        "current_value": 40.21,
+        "time": 28.67,
         "mechanism": 31,
         "evidence": 86,
         "adoption": 51.27,
@@ -70350,7 +70350,7 @@
       "report": "projects/07-metagpt-multi-agent-framework.md",
       "scores": {
         "current_value": 39.72,
-        "time": 18.89,
+        "time": 18.88,
         "mechanism": 35,
         "evidence": 68,
         "adoption": 91.8,
@@ -71143,7 +71143,7 @@
       "stars": 58330,
       "report": "projects/11-autogen-multi-agent-conversation.md",
       "scores": {
-        "current_value": 38.05,
+        "current_value": 38.04,
         "time": 25.79,
         "mechanism": 10,
         "evidence": 68,
@@ -71265,8 +71265,8 @@
       "stars": 500,
       "report": "projects/40-awesome-fm4co.md",
       "scores": {
-        "current_value": 37.42,
-        "time": 28.68,
+        "current_value": 37.41,
+        "time": 28.67,
         "mechanism": 17,
         "evidence": 86,
         "adoption": 51.27,
@@ -71356,8 +71356,8 @@
       "stars": 2200,
       "report": "research/projects/61-osworld-agent-evaluation.md",
       "scores": {
-        "current_value": 36.97,
-        "time": 24.44,
+        "current_value": 36.96,
+        "time": 24.43,
         "mechanism": 28,
         "evidence": 62,
         "adoption": 63.48,
@@ -71475,8 +71475,8 @@
       "stars": 1200,
       "report": "research/projects/59-awesome-agent-papers.md",
       "scores": {
-        "current_value": 35.68,
-        "time": 36.76,
+        "current_value": 35.67,
+        "time": 36.75,
         "mechanism": 0,
         "evidence": 68,
         "adoption": 58.48,
@@ -71532,7 +71532,7 @@
       "report": "projects/37-awesome-code-llm.md",
       "scores": {
         "current_value": 34.46,
-        "time": 28.68,
+        "time": 28.67,
         "mechanism": 25,
         "evidence": 48,
         "adoption": 62.69,
@@ -71561,7 +71561,7 @@
       "report": "projects/03-adas-automated-design-agentic-systems.md",
       "scores": {
         "current_value": 33.93,
-        "time": 5.41,
+        "time": 5.4,
         "mechanism": 59,
         "evidence": 68,
         "adoption": 60.75,
@@ -72121,7 +72121,7 @@
       "report": "research/projects/62-webarena-web-evaluation.md",
       "scores": {
         "current_value": 25.49,
-        "time": 16.09,
+        "time": 16.08,
         "mechanism": 10,
         "evidence": 36,
         "adoption": 65.46,
@@ -72295,7 +72295,7 @@
       "report": "research/projects/52-agentgpt-autonomous.md",
       "scores": {
         "current_value": 22.1,
-        "time": 7.74,
+        "time": 7.73,
         "mechanism": 10,
         "evidence": 36,
         "adoption": 85.81,
@@ -72353,7 +72353,7 @@
       "report": "research/projects/47-openagents-platform.md",
       "scores": {
         "current_value": 20.4,
-        "time": 7.74,
+        "time": 7.73,
         "mechanism": 10,
         "evidence": 36,
         "adoption": 68.81,

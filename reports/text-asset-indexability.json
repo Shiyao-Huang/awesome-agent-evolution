@@ -1,20 +1,20 @@
 {
-  "generated_at": "2026-06-05T17:48:31.361Z",
+  "generated_at": "2026-06-05T19:06:50.151Z",
   "canonical_host": "https://agent-evolution.com",
   "global_status": "incomplete",
   "verdict": "Generated sitemap routes are indexable, but repository-wide text coverage is incomplete: many processed analyses, project cards, paper reviews, drafts, and reports are not yet mapped to public Google-indexable HTML.",
   "boundary": "This audit classifies text assets. It does not mean raw sources or external mirrors should be published directly; raw stays raw and mirrors stay mirrors. It also does not clear the live custom-domain HTTPS blocker.",
   "counts": {
-    "text_files_total": 18131,
-    "owned_text_files_excluding_raw_and_external_mirrors": 2154,
-    "public_google_indexable_sources": 567,
+    "text_files_total": 18132,
+    "owned_text_files_excluding_raw_and_external_mirrors": 2155,
+    "public_google_indexable_sources": 568,
     "github_root_or_readme_assets": 4,
     "unpublished_candidate_files": 80,
-    "sitemap_urls_observed": 983
+    "sitemap_urls_observed": 985
   },
   "status_counts": {
     "unclassified-text": 29,
-    "work-internal": 165,
+    "work-internal": 166,
     "ops-or-docs": 89,
     "processed-analysis-unmapped": 161,
     "github-root-indexable": 1,
@@ -25,8 +25,8 @@
     "external-mirror": 13542,
     "raw-source-do-not-publish-directly": 2435,
     "github-readme-indexable": 3,
-    "results-report-unmapped": 11,
-    "public-google-indexable-source": 567,
+    "results-report-unmapped": 10,
+    "public-google-indexable-source": 568,
     "public-report-source-unmapped": 1
   },
   "unpublished_candidates": [
@@ -47,18 +47,6 @@
       "extension": ".md",
       "words": 2475,
       "title": "传播链深度追踪：跨平台证据汇编",
-      "route": "",
-      "url": "",
-      "route_in_sitemap": false,
-      "route_status": "",
-      "status": "results-report-unmapped",
-      "priority_score": 105
-    },
-    {
-      "path": "reports/public-i18n-route-audit.md",
-      "extension": ".md",
-      "words": 1398,
-      "title": "Public I18N Route Audit",
       "route": "",
       "url": "",
       "route_in_sitemap": false,
@@ -989,6 +977,18 @@
       "route_status": "",
       "status": "paper-review-unmapped",
       "priority_score": 80
+    },
+    {
+      "path": "paper-reviews/review-2509.22502-infiagent.md",
+      "extension": ".md",
+      "words": 1678,
+      "title": "Paper Review: InfiAgent: Self-Evolving Pyramid Agent Framework for Infinite Scenarios",
+      "route": "",
+      "url": "",
+      "route_in_sitemap": false,
+      "route_status": "",
+      "status": "paper-review-unmapped",
+      "priority_score": 80
     }
   ],
   "assets": [
@@ -1103,7 +1103,7 @@
     {
       "path": ".mermaid/current/graph.md",
       "extension": ".md",
-      "words": 282,
+      "words": 322,
       "title": "Current Mermaid Object Graph",
       "route": "",
       "url": "",
@@ -65795,7 +65795,7 @@
     {
       "path": "README-EN.md",
       "extension": ".md",
-      "words": 2778,
+      "words": 2804,
       "title": "Awesome Self-Evolving AI Agents",
       "route": "",
       "url": "",
@@ -65819,7 +65819,7 @@
     {
       "path": "README.md",
       "extension": ".md",
-      "words": 1331,
+      "words": 1340,
       "title": "Awesome Self-Evolving AI Agents",
       "route": "",
       "url": "",
@@ -65927,14 +65927,14 @@
     {
       "path": "reports/public-i18n-route-audit.md",
       "extension": ".md",
-      "words": 1398,
-      "title": "Public I18N Route Audit",
-      "route": "",
-      "url": "",
-      "route_in_sitemap": false,
-      "route_status": "",
-      "status": "results-report-unmapped",
-      "priority_score": 105
+      "words": 1789,
+      "title": "公开 I18N 路由审计 / Public I18N Route Audit",
+      "route": "/reports/public-i18n-route-audit/",
+      "url": "https://agent-evolution.com/reports/public-i18n-route-audit/",
+      "route_in_sitemap": true,
+      "route_status": "pass",
+      "status": "public-google-indexable-source",
+      "priority_score": 15
     },
     {
       "path": "reports/seo-indexable-assets.md",
@@ -66047,7 +66047,7 @@
     {
       "path": "reports/text-asset-indexability.md",
       "extension": ".md",
-      "words": 1505,
+      "words": 1502,
       "title": "文字资产可索引覆盖审计 / Text Asset Indexability Audit",
       "route": "/reports/text-asset-indexability/",
       "url": "https://agent-evolution.com/reports/text-asset-indexability/",
@@ -217799,7 +217799,7 @@
     {
       "path": "work/wiki/index.md",
       "extension": ".md",
-      "words": 1502,
+      "words": 1520,
       "title": "LLM Wiki Index",
       "route": "",
       "url": "",
@@ -217811,7 +217811,7 @@
     {
       "path": "work/wiki/log.md",
       "extension": ".md",
-      "words": 5659,
+      "words": 5754,
       "title": "Wiki Log",
       "route": "",
       "url": "",
@@ -218401,6 +218401,18 @@
       "extension": ".md",
       "words": 277,
       "title": "modelscope AgentEvolver Frontier Deep Dive",
+      "route": "",
+      "url": "",
+      "route_in_sitemap": false,
+      "route_status": "",
+      "status": "work-internal",
+      "priority_score": 0
+    },
+    {
+      "path": "work/wiki/synthesis/public-i18n-route-audit.md",
+      "extension": ".md",
+      "words": 174,
+      "title": "Public I18N Route Audit",
       "route": "",
       "url": "",
       "route_in_sitemap": false,

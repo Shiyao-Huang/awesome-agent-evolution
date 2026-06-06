@@ -105,6 +105,7 @@ _Cross-cutting analyses, comparisons, evolving theses_
 - [Google Indexing Custom Domain Triage](synthesis/google-indexing-custom-domain-triage.md) — `agent-evolution.com` 是公开 canonical 域；sitemap 有 URL，当前阻断点是 GitHub Pages 自定义域名 HTTPS 证书 | Rank: B | 2026-06-01
 - [GitHub Topic Indexing Readiness](synthesis/github-topic-indexing-readiness.md) — 区分 GitHub repository topics/Search/API 与 rendered topic 页面；当前 `agent-evolution` topic 收录、Search 和页面渲染均通过 | Rank: A | 2026-06-05
 - [Text Asset Indexability Coverage](synthesis/text-asset-indexability-coverage.md) — 区分 route-level SEO PASS 与全仓库文字资产覆盖；当前 processed analyses/project cards/reports 仍有未公开 HTML 队列 | Rank: A | 2026-06-05
+- [Public I18N Route Audit](synthesis/public-i18n-route-audit.md) — 区分核心英文路线与缺少英文 alternate 的中文优先长尾页面；公开 i18n 仍是 SEO 发布门禁 | Rank: A | 2026-06-06
 
 ---
 
