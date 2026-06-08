@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-06T01:52:00+08:00",
+  "generated_at": "2026-06-08T12:26:00+08:00",
   "truth_source": ".mermaid/current/graph.json",
   "nodes": [
     {
@@ -18,12 +18,8 @@
       "layer": "raw",
       "status": "updated",
       "paths": [
-        "raw-github/composiohq_agent-orchestrator.md",
-        "raw-github/aq-medai_medmemorybench.md",
-        "raw-github/desplega-ai_agent-swarm.md",
-        "raw-github/vrsen_agency-swarm.md",
-        "raw-github/xskill-agent_xskill.md",
-        "raw-github/wanxingai_lightagent.md"
+        "raw-github/openai_openai-agents-python.md",
+        "raw-github/openai_openai-agents-js.md"
       ]
     },
     {
@@ -80,8 +76,8 @@
       "paths": [
         "research/repo-classification.json",
         "analysis/github-project-data-analysis.md",
-        "projects/406-composio-agent-orchestrator-coding-swarm.md",
-        "projects/407-medmemorybench-agent-memory-benchmark.md"
+        "projects/408-openai-agents-python-official-sdk.md",
+        "projects/409-openai-agents-js-official-sdk.md"
       ]
     },
     {
@@ -91,11 +87,11 @@
       "status": "updated",
       "paths": [
         "site/src/data/projects.ts",
-        "site/public/reports/projects/406-composio-agent-orchestrator-coding-swarm.md",
-        "site/public/reports/projects/407-medmemorybench-agent-memory-benchmark.md",
+        "site/public/reports/projects/408-openai-agents-python-official-sdk.md",
+        "site/public/reports/projects/409-openai-agents-js-official-sdk.md",
         "README.md",
-        "README-EN.md",
         "README-ZH.md",
+        "README-EN.md",
         "CONTENT_INDEX.md"
       ]
     },
@@ -105,7 +101,7 @@
       "layer": "work",
       "status": "updated",
       "paths": [
-        "work/research/hourly-public-metadata-update-2026-06-05-2200.md"
+        "work/research/hourly-public-metadata-update-2026-06-08-1226.md"
       ]
     }
   ],
@@ -159,54 +155,36 @@
   "current_run": {
     "repos": [
       {
-        "repo": "ComposioHQ/agent-orchestrator",
-        "raw_capture": "raw-github/composiohq_agent-orchestrator.md",
-        "report": "projects/406-composio-agent-orchestrator-coding-swarm.md",
-        "site_report": "site/public/reports/projects/406-composio-agent-orchestrator-coding-swarm.md",
-        "stars": 7400,
-        "forks": 1000,
-        "commits": 1276,
-        "last_visible_commit_date": "2026-06-01",
+        "repo": "openai/openai-agents-python",
+        "raw_capture": "raw-github/openai_openai-agents-python.md",
+        "report": "projects/408-openai-agents-python-official-sdk.md",
+        "site_report": "site/public/reports/projects/408-openai-agents-python-official-sdk.md",
+        "stars": 26705,
+        "forks": 4110,
+        "issues": 45,
+        "pull_requests": 68,
+        "last_visible_commit_date": "2026-05-26",
         "theme": "harness"
       },
       {
-        "repo": "AQ-MedAI/MedMemoryBench",
-        "raw_capture": "raw-github/aq-medai_medmemorybench.md",
-        "report": "projects/407-medmemorybench-agent-memory-benchmark.md",
-        "site_report": "site/public/reports/projects/407-medmemorybench-agent-memory-benchmark.md",
-        "stars": 95,
-        "forks": 8,
-        "commits": 44,
-        "last_visible_commit_date": "2026-05-01",
-        "theme": "memory"
-      },
-      {
-        "repo": "desplega-ai/agent-swarm",
-        "raw_capture": "raw-github/desplega-ai_agent-swarm.md",
-        "theme": "framework"
-      },
-      {
-        "repo": "VRSEN/agency-swarm",
-        "raw_capture": "raw-github/vrsen_agency-swarm.md",
-        "theme": "framework"
-      },
-      {
-        "repo": "XSkill-Agent/XSkill",
-        "raw_capture": "raw-github/xskill-agent_xskill.md",
-        "theme": "skill"
-      },
-      {
-        "repo": "wanxingai/LightAgent",
-        "raw_capture": "raw-github/wanxingai_lightagent.md",
-        "theme": "framework"
+        "repo": "openai/openai-agents-js",
+        "raw_capture": "raw-github/openai_openai-agents-js.md",
+        "report": "projects/409-openai-agents-js-official-sdk.md",
+        "site_report": "site/public/reports/projects/409-openai-agents-js-official-sdk.md",
+        "stars": 3132,
+        "forks": 788,
+        "issues": 34,
+        "pull_requests": 21,
+        "last_visible_commit_date": "2026-05-26",
+        "theme": "harness"
       }
     ],
     "blockers": [
-      "Custom-domain strict HTTPS remains blocked because GitHub Pages has not issued a certificate covering agent-evolution.com",
-      "Repository-wide text asset coverage remains incomplete: route-level SEO passes, but many processed assets are not yet public HTML",
-      "Long-tail i18n route parity remains incomplete and is now public at /reports/public-i18n-route-audit/",
-      "GitNexus symbol impact returned UNKNOWN for public report page targets; final scope is checked with detect-changes"
+      "Shell curl to api.github.com fails with DNS resolution in this workspace, so GitHub API freshness is unavailable.",
+      "gh auth status reports the default github.com token for Shiyao-Huang is invalid.",
+      "GitNexus MCP tools are not exposed in this session; local gitnexus CLI works, but npx gitnexus status timed out while the direct binary succeeded.",
+      "Public copy review gate still lacks actual 3-5 reader/editor agents plus 3 academic agents, so README/site copy quality remains a declared gap rather than a completed gate."
     ],
-    "working_principle": "repository text inventory -> route/sitemap mapping -> coverage audit -> reports + wiki synthesis -> README/site report surfaces -> indexes + analysis + site build"
+    "working_principle": "public GitHub repo pages -> raw-github captures -> research/repo-classification -> output/raw-github-timestamp-index -> analysis/github-project-data-analysis -> README/i18n + site/src/data/projects.ts + public reports -> paper/site build"
   }
 }

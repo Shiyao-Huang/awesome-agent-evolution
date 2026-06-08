@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-06-06T00:00:00+08:00",
-  "total": 684,
-  "updated_files": 684,
+  "generated_at": "2026-06-08T00:00:00+08:00",
+  "total": 686,
+  "updated_files": 686,
   "unknown_content_timestamp": 100,
   "records": [
     {
@@ -3693,6 +3693,24 @@
       "collected_at": "2026-05-25T23:35:00+08:00",
       "time_slice": "2026-05",
       "timestamp_source": "web_observed_search_and_public_github_page_2026_05_25"
+    },
+    {
+      "repo": "openai/openai-agents-js",
+      "url": "https://github.com/openai/openai-agents-js",
+      "file": "raw-github/openai_openai-agents-js.md",
+      "content_timestamp": "2026-05-26",
+      "collected_at": "2026-06-08T12:02:00+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_06_08"
+    },
+    {
+      "repo": "openai/openai-agents-python",
+      "url": "https://github.com/openai/openai-agents-python",
+      "file": "raw-github/openai_openai-agents-python.md",
+      "content_timestamp": "2026-05-26",
+      "collected_at": "2026-06-08T12:02:00+08:00",
+      "time_slice": "2026-05",
+      "timestamp_source": "web_observed_public_github_page_2026_06_08"
     },
     {
       "repo": "openai/skills",

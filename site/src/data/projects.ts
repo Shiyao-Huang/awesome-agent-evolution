@@ -8088,6 +8088,66 @@ export const projects: Project[] = [
             "workflow"
         ],
         "localPath": "raw-github/wanxingai_lightagent.md"
+    },
+    {
+        "name": "OpenAI Agents SDK (Python)",
+        "repo": "openai/openai-agents-python",
+        "url": "https://github.com/openai/openai-agents-python",
+        "description": "OpenAI Agents SDK (Python) is the official Python baseline for multi-agent orchestration with handoffs, tool calls, guardrails, tracing, and session state.",
+        "stack": [
+            "Python",
+            "OpenAI Agents SDK",
+            "Tracing",
+            "Guardrails",
+            "Handoffs"
+        ],
+        "category": "Official OpenAI Agents SDK Runtime Baseline",
+        "status": "candidate",
+        "stars": 26705,
+        "forks": 4110,
+        "lastPushed": "2026-05-26T00:00:00Z",
+        "language": "Python",
+        "license": "MIT",
+        "report": "projects/408-openai-agents-python-official-sdk.md",
+        "pattern": "define agents plus tools and handoffs -> trace runs and guardrails -> keep session state and memory-like context inside SDK workflows -> reuse the official runtime as the canonical orchestration baseline for third-party swarm and harness claims",
+        "tags": [
+            "openai-agents-sdk",
+            "official-sdk",
+            "python",
+            "orchestration",
+            "guardrails"
+        ],
+        "localPath": "raw-github/openai_openai-agents-python.md"
+    },
+    {
+        "name": "OpenAI Agents SDK (JS)",
+        "repo": "openai/openai-agents-js",
+        "url": "https://github.com/openai/openai-agents-js",
+        "description": "OpenAI Agents SDK (JS) is the official TypeScript baseline for building agent orchestration loops with tools, handoffs, guardrails, realtime hooks, and tracing.",
+        "stack": [
+            "TypeScript",
+            "OpenAI Agents SDK",
+            "Tracing",
+            "Guardrails",
+            "Handoffs"
+        ],
+        "category": "Official OpenAI Agents SDK TypeScript Baseline",
+        "status": "candidate",
+        "stars": 3132,
+        "forks": 788,
+        "lastPushed": "2026-05-26T00:00:00Z",
+        "language": "TypeScript",
+        "license": "MIT",
+        "report": "projects/409-openai-agents-js-official-sdk.md",
+        "pattern": "compose agents in TypeScript -> attach tools, handoffs, and realtime transport -> trace execution and guardrails -> use the official JS runtime as the canonical baseline for browser, frontend, and full-stack swarm orchestration claims",
+        "tags": [
+            "openai-agents-sdk",
+            "official-sdk",
+            "typescript",
+            "realtime",
+            "orchestration"
+        ],
+        "localPath": "raw-github/openai_openai-agents-js.md"
     }
 ];
 

@@ -37,12 +37,14 @@ GitHub topic 收录状态（2026-06-05）：GitHub API 和 `gh search repos 'top
 | 产品/投资/行业读者 | 区分真实能力积累、刷榜、演示热度和治理成熟度。 |
 | 内容创作者 | 获得带证据入口的选题地图：项目、论文、趋势、痛点、图谱和长尾 SEO 页面。 |
 
-## 本轮 GitHub Metadata 修复包（2026-06-05）
+## 本轮 GitHub Metadata 修复包（2026-06-08）
 
 | 仓库 | 这轮补了什么 | 为什么重要 |
 |---|---|---|
 | [desplega-ai/agent-swarm](https://github.com/desplega-ai/agent-swarm) | 新增 raw capture、project card、site public report 与分类元数据，统一到 2026-06-05 的公开 GitHub 页面与 release/README dated signal 证据。 | 它把 agent-swarm 从“多角色编排”推进到带 Docker worker、persistent identity、compounding memory 和 HITL workflow gate 的生产执行面。 |
 | [VRSEN/agency-swarm](https://github.com/VRSEN/agency-swarm) | 把旧的静态项目说明升级成 current public model card，并补入 site public report 与项目注册表。 | 它回答的是 production multi-agent 编排在 2026 年已经如何从 Assistants API 迁移到 Agents SDK，并保留通信流、工具和状态持久化。 |
+| [openai/openai-agents-python](https://github.com/openai/openai-agents-python) | 新增 official Python SDK raw capture、project card、site public report 与分类元数据，作为 canonical upstream runtime baseline。 | 它让第三方 swarm、harness、memory 和 skill 系统都能回到同一套官方 handoffs、tools、guardrails、tracing 语义上比较。 |
+| [openai/openai-agents-js](https://github.com/openai/openai-agents-js) | 新增 official TypeScript SDK raw capture、project card、site public report 与分类元数据，补齐前端/全栈 agent 编排的上游基线。 | 它帮助我们区分“SDK 原生能力”与“框架自行增加的 memory、workflow、realtime 包装”。 |
 | [XSkill-Agent/XSkill](https://github.com/XSkill-Agent/XSkill) | 新增 raw capture、paper-code model card 与 site public report，并把 continual-learning 证据接回 benchmark/eval 面。 | 它补的是“skills 和 experiences 如何被积累、存储、检索并在 benchmark 上复用”这一层，而不是只给一个 continual-learning 口号。 |
 | [wanxingai/LightAgent](https://github.com/wanxingai/LightAgent) | 刷新 raw capture、project card、site public report 与分类元数据，统一到 2026-06-02 的 release/README dated signal。 | 它把轻量 agent runtime 这条线补到 LightFlow、native skills、persistent memory 和 trace observability 的最新公开证据。 |
 

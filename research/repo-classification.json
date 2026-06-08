@@ -1,21 +1,6 @@
 {
-  "generated_at": "2026-06-05T19:15:00+08:00",
+  "generated_at": "2026-06-08T12:26:00+08:00",
   "rows": [
-    {
-      "repo": "AQ-MedAI/MedMemoryBench",
-      "url": "https://github.com/AQ-MedAI/MedMemoryBench",
-      "stars": "95",
-      "prior_category": "-",
-      "prior_unclassified": "true",
-      "final_category": "评测/evaluation",
-      "function_tag": "benchmark-eval",
-      "base_theme": "memory",
-      "stack": "Python/Healthcare Memory Benchmark",
-      "time_slice": "2026-05",
-      "content_timestamp": "2026-05-01",
-      "evidence": "web-observed GitHub page showed 95 stars, 8 forks, 44 commits, MIT license, and a visible [2026.05] update marker; README positions MedMemoryBench as a personalized-healthcare benchmark for longitudinal agent memory quality rather than generic retrieval recall",
-      "description": "MedMemoryBench 是面向 personalized healthcare agents 的记忆 benchmark，用长期患者画像、时间线推理和任务成功率检验 memory 是否真正提升高风险场景下的 agent 决策。"
-    },
     {
       "repo": "01-ai/langcrew",
       "url": "https://github.com/01-ai/langcrew",
@@ -900,6 +885,21 @@
       "content_timestamp": "2026-06-02",
       "evidence": "web-observed GitHub page showed 2.1k stars, 228 forks, 152 commits, Apache-2.0 license, and explicit reusable coding-agent skills positioning.",
       "description": "apify/agent-skills curates reusable skills for coding agents to improve execution quality across software and automation tasks."
+    },
+    {
+      "repo": "AQ-MedAI/MedMemoryBench",
+      "url": "https://github.com/AQ-MedAI/MedMemoryBench",
+      "stars": "95",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "评测/evaluation",
+      "function_tag": "benchmark-eval",
+      "base_theme": "memory",
+      "stack": "Python/Healthcare Memory Benchmark",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-01",
+      "evidence": "web-observed GitHub page showed 95 stars, 8 forks, 44 commits, MIT license, and a visible [2026.05] update marker; README positions MedMemoryBench as a personalized-healthcare benchmark for longitudinal agent memory quality rather than generic retrieval recall",
+      "description": "MedMemoryBench 是面向 personalized healthcare agents 的记忆 benchmark，用长期患者画像、时间线推理和任务成功率检验 memory 是否真正提升高风险场景下的 agent 决策。"
     },
     {
       "repo": "Arc-Computer/CL-Bench",
@@ -1817,21 +1817,6 @@
       "description": "Archon is an open-source harness builder for AI coding that turns development processes into deterministic, reusable workflows."
     },
     {
-      "repo": "ComposioHQ/agent-orchestrator",
-      "url": "https://github.com/ComposioHQ/agent-orchestrator",
-      "stars": "7400",
-      "prior_category": "-",
-      "prior_unclassified": "true",
-      "final_category": "框架/framework",
-      "function_tag": "framework-runtime",
-      "base_theme": "harness",
-      "stack": "TypeScript/Git Worktrees/MCP/Coding-Agent Swarm",
-      "time_slice": "2026-06",
-      "content_timestamp": "2026-06-01",
-      "evidence": "web-observed GitHub page showed 7.4k stars, 1k forks, 1,276 commits, MIT license, TypeScript-heavy implementation, and a latest visible 2026-06-01 commit on commits/main; public README/about position it as a production coding-agent orchestrator with swarms, worktrees, skills, memory, and MCP tools",
-      "description": "Composio Agent Orchestrator 是 production coding-agent swarm harness，把 spec、build、test、review、merge 流程拆给专门化 agents，并用 Git worktrees、skills、memory 和 MCP 执行面串成可审计的工程闭环。"
-    },
-    {
       "repo": "composio-community/awesome-openclaw-plugins",
       "url": "https://github.com/composio-community/awesome-openclaw-plugins",
       "stars": "43",
@@ -1845,6 +1830,21 @@
       "content_timestamp": "2026-06-01",
       "evidence": "web-observed GitHub page showed 43 stars, 10 forks, 6 commits, CC0-1.0 license, and TypeScript-based plugin resource structure.",
       "description": "composio-community/awesome-openclaw-plugins curates OpenClaw plugin assets and operational playbooks into a structured ecosystem index."
+    },
+    {
+      "repo": "ComposioHQ/agent-orchestrator",
+      "url": "https://github.com/ComposioHQ/agent-orchestrator",
+      "stars": "7400",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "framework-runtime",
+      "base_theme": "harness",
+      "stack": "TypeScript/Git Worktrees/MCP/Coding-Agent Swarm",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-01",
+      "evidence": "web-observed GitHub page showed 7.4k stars, 1k forks, 1,276 commits, MIT license, TypeScript-heavy implementation, and a latest visible 2026-06-01 commit on commits/main; public README/about position it as a production coding-agent orchestrator with swarms, worktrees, skills, memory, and MCP tools",
+      "description": "Composio Agent Orchestrator 是 production coding-agent swarm harness，把 spec、build、test、review、merge 流程拆给专门化 agents，并用 Git worktrees、skills、memory 和 MCP 执行面串成可审计的工程闭环。"
     },
     {
       "repo": "ComposioHQ/awesome-agent-clis",
@@ -6152,6 +6152,36 @@
       "description": "Gitagent treats an agent as a Git repository: identity, rules, memory, tools, skills, hooks, plugins and audit state all live in version-controlled files."
     },
     {
+      "repo": "openai/openai-agents-js",
+      "url": "https://github.com/openai/openai-agents-js",
+      "stars": "3132",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "framework-runtime",
+      "base_theme": "harness",
+      "stack": "TypeScript/OpenAI Agents SDK/Tracing/Guardrails/Handoffs",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-26",
+      "evidence": "web-observed GitHub repo page showed 3,132 stars, 788 forks, 34 issues, 21 pull requests, MIT license, and latest visible update on 2026-05-26; README navigation exposed agents, tools, handoffs, guardrails, realtime, voice, tracing, sessions, MCP, and advanced usage docs.",
+      "description": "OpenAI Agents SDK (JS) 是官方 TypeScript orchestration baseline：把 tools、handoffs、guardrails、realtime、tracing 和 sessions 作为前端/全栈 agent runtime 的上游标准面。"
+    },
+    {
+      "repo": "openai/openai-agents-python",
+      "url": "https://github.com/openai/openai-agents-python",
+      "stars": "26705",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "framework-runtime",
+      "base_theme": "harness",
+      "stack": "Python/OpenAI Agents SDK/Tracing/Guardrails/Handoffs",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-26",
+      "evidence": "web-observed GitHub repo page showed 26,705 stars, 4,110 forks, 45 issues, 68 pull requests, MIT license, and latest visible update on 2026-05-26; README navigation exposed models, tools, handoffs, guardrails, tracing, MCP, voice, sessions, agents-as-tools, and context-management docs.",
+      "description": "OpenAI Agents SDK (Python) 是官方 Python orchestration baseline：把 handoffs、tools、guardrails、tracing 和 sessions 作为上游标准面，供 downstream swarm/harness/self-improvement 系统对照。"
+    },
+    {
       "repo": "openai/skills",
       "url": "https://github.com/openai/skills",
       "stars": "20100",
@@ -7950,6 +7980,21 @@
       "content_timestamp": "2026-05-21",
       "evidence": "tool/module/memory/prompt/coding signal",
       "description": "Github repository for \"Internalizing World Models via Self-Play Finetuning for Agentic RL\""
+    },
+    {
+      "repo": "shiyao-huang/awesome-agent-evolution",
+      "url": "https://github.com/Shiyao-Huang/awesome-agent-evolution",
+      "stars": "136",
+      "prior_category": "教程",
+      "prior_unclassified": "false",
+      "final_category": "教程/tutorial",
+      "function_tag": "resource-index",
+      "base_theme": "tutorial",
+      "stack": "Markdown",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-05",
+      "evidence": "GitHub API/search topic capture + README verified",
+      "description": "Open survey and evidence map for AI agent evolution, self-evolving agents, memory, skills, harnesses, benchmarks, and agent-swarm systems."
     },
     {
       "repo": "sibyl-research-team/sibyl-research-system",
@@ -10245,21 +10290,6 @@
       "content_timestamp": "unknown",
       "evidence": "awesome/list/tutorial/survey resource signal",
       "description": "[ACM Computing Surveys 2025] This repository collects awesome survey, resource, and paper for Lifelong Learning with Large Language Models. (Updated Regularly)"
-    },
-    {
-      "repo": "shiyao-huang/awesome-agent-evolution",
-      "url": "https://github.com/Shiyao-Huang/awesome-agent-evolution",
-      "stars": "136",
-      "prior_category": "教程",
-      "prior_unclassified": "false",
-      "final_category": "教程/tutorial",
-      "function_tag": "resource-index",
-      "base_theme": "tutorial",
-      "stack": "Markdown",
-      "time_slice": "2026-06",
-      "content_timestamp": "2026-06-05",
-      "evidence": "GitHub API/search topic capture + README verified",
-      "description": "Open survey and evidence map for AI agent evolution, self-evolving agents, memory, skills, harnesses, benchmarks, and agent-swarm systems."
     }
   ]
 }

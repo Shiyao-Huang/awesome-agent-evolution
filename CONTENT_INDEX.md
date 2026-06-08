@@ -59,7 +59,7 @@
 | 用户输入记忆 | local-only, ignored | 本地保留，不发布、不提交；公开仓库只保留抽象操作原则 |
 | 读者/Agent 边界规则 | [docs/ops/audience-boundary-workflow.md](docs/ops/audience-boundary-workflow.md) | ops guide：区分公开读者页面、证据索引和内部 workflow，防止 README/site 混入 agent 操作手册 |
 | 非标准材料清理 | [docs/project-management/noncanonical-cleanup-policy.md](docs/project-management/noncanonical-cleanup-policy.md) | 不乱删，先归类再迁移 |
-| GitHub 数据分析 | [analysis/github-project-data-analysis.md](analysis/github-project-data-analysis.md) | 覆盖 684 个 raw GitHub captures、分类、进化相关、时间序列 |
+| GitHub 数据分析 | [analysis/github-project-data-analysis.md](analysis/github-project-data-analysis.md) | 覆盖 686 个 raw GitHub captures、分类、进化相关、时间序列 |
 | GitHub 数据 JSON | [analysis/github-project-data-analysis.json](analysis/github-project-data-analysis.json) | 脚本生成，可复跑 |
 | GitHub Star 增长数据库计划 | [analysis/github-star-growth-database-plan.md](analysis/github-star-growth-database-plan.md) | processed plan：把累计 Star 降为历史 adoption prior，改用 2026 新增 Star、recent velocity 和覆盖完整性做当前阶段排名 |
 | GitHub Star 增长排名 | [analysis/github-star-growth-ranking.md](analysis/github-star-growth-ranking.md) | processed aggregate：由 `data-engine/github-star-history/` 生成的 year-specific new-star ranking，未抓取项目标为 `not_fetched` |

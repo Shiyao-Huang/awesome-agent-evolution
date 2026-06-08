@@ -60,15 +60,17 @@ flowchart LR
   SURVEY --> SITE["site + graph + reports"]
 ```
 
-## Recent Evidence Updates (2026-06-05)
+## Recent Evidence Updates (2026-06-08)
 
-This update is not just a metadata refresh. It pulls a production swarm, a coding-agent harness, a safety-sensitive memory benchmark, an OpenAI Agents SDK orchestrator, continual skill-memory paper code, and a lightweight memory/MCP/skill runtime back onto one evidence chain.
+This update is not just a metadata refresh. It pulls a production swarm, a coding-agent harness, a safety-sensitive memory benchmark, an OpenAI Agents SDK orchestrator, the official OpenAI Agents SDK Python/JS baselines, continual skill-memory paper code, and a lightweight memory/MCP/skill runtime back onto one evidence chain.
 
 | Repository | Evidence gap filled | Why it matters | Evidence state |
 |---|---|---|---|
 | [desplega-ai/agent-swarm](https://github.com/desplega-ai/agent-swarm) | Production lead-worker swarm runtime | It turns agent-swarm from a "many roles" idea into a Docker-worker execution plane with persistent identity, compounding memory, and HITL workflow gates. | [KNOWN] GitHub source-scoped; no independent production audit here. |
 | [ComposioHQ/agent-orchestrator](https://github.com/ComposioHQ/agent-orchestrator) | Coding-agent swarm harness with worktree isolation | It shows how coding-agent orchestration becomes an engineering control plane with parallel worktrees, reusable skills, memory, and review gates instead of a single-thread agent demo. | [KNOWN] GitHub source-scoped; engineering-control wording needs runs/tests/log reviews. |
 | [VRSEN/agency-swarm](https://github.com/VRSEN/agency-swarm) | OpenAI Agents SDK orchestration baseline | It shows how a 2026 production multi-agent orchestrator has already moved from Assistants-era framing to Agents SDK-era communication, tools, and persistence. | [KNOWN] public-repo/source-scoped; SDK migration wording needs upstream rechecks. |
+| [openai/openai-agents-python](https://github.com/openai/openai-agents-python) | Official Python Agents SDK baseline | It restores the official upstream runtime layer so third-party swarms, harnesses, memory layers, and skill systems can be compared against one canonical set of handoffs, tools, guardrails, and tracing semantics. | [KNOWN] official-repo/source-scoped; upstream SDK conclusions need release-by-release rechecks. |
+| [openai/openai-agents-js](https://github.com/openai/openai-agents-js) | Official TypeScript Agents SDK baseline | It fills the canonical frontend/full-stack orchestration baseline, helping separate what comes from the SDK itself versus what downstream frameworks add around memory, workflow, or realtime wrappers. | [KNOWN] official-repo/source-scoped; JS/runtime capability still needs runs/examples review. |
 | [XSkill-Agent/XSkill](https://github.com/XSkill-Agent/XSkill) | Continual skill-memory benchmarked paper code | It fills the layer where skills and experiences are accumulated, stored, retrieved, and reused on benchmarks instead of being described only as a continual-learning idea. | [KNOWN] paper-code/source-scoped; benchmark claims are not reproduced by this site. |
 | [AQ-MedAI/MedMemoryBench](https://github.com/AQ-MedAI/MedMemoryBench) | Safety-sensitive longitudinal memory benchmark | It moves memory evaluation from generic recall toward personalized healthcare settings where remembering the right longitudinal context matters more than simply remembering more. | [KNOWN] benchmark-repo/source-scoped; medical setting claims need safety/evaluation review. |
 | [wanxingai/LightAgent](https://github.com/wanxingai/LightAgent) | Lightweight memory/MCP/skill runtime refresh | It refreshes the lightweight runtime line with current public evidence for LightFlow, native skills, persistent memory, and trace observability. | [KNOWN] repo snapshot/source-scoped; runtime claims still need tests/logs review. |
