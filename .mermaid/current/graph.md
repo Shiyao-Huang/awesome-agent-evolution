@@ -2,7 +2,7 @@
 
 Truth source: `.mermaid/current/graph.json`
 
-Generated: 2026-06-08T23:45:58+08:00
+Generated: 2026-06-09T06:23:00+08:00
 
 ## Current Run Repositories
 
@@ -23,5 +23,5 @@ GitHub public repo pages -> raw captures -> classification -> timestamp index ->
 
 - Shell GitHub API access is blocked by DNS resolution failure.
 - Local `gh` auth is invalid, so no authenticated freshness claims were made.
-- Local `gitnexus status` succeeds but reports a stale index; `npx gitnexus status` timed out in this workspace.
+- Local `gitnexus status` succeeds but reports a stale index (`Indexed commit: 326b47d`, `Current commit: 90bda54`).
 - Public copy review gate is still incomplete; this run updates evidence surfaces but does not claim review-complete copy quality.

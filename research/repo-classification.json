@@ -889,7 +889,7 @@
     {
       "repo": "AQ-MedAI/MedMemoryBench",
       "url": "https://github.com/AQ-MedAI/MedMemoryBench",
-      "stars": "59",
+      "stars": "60",
       "prior_category": "-",
       "prior_unclassified": "true",
       "final_category": "评测/evaluation",
@@ -897,8 +897,8 @@
       "base_theme": "memory",
       "stack": "Python/Healthcare Memory Benchmark/Longitudinal Clinical Memory Eval",
       "time_slice": "2026-06",
-      "content_timestamp": "2026-06-06",
-      "evidence": "web-observed GitHub page showed 59 stars, 1 fork, 14 commits, Apache-2.0 license, 0 issues, 0 pull requests, and a latest v1.0 release dated 2026-06-06; README positions MedMemoryBench as a personalized-healthcare benchmark for longitudinal agent memory quality rather than generic retrieval recall",
+      "content_timestamp": "2026-06-09",
+      "evidence": "web-observed GitHub page on 2026-06-09 showed 60 stars, 1 fork, 14 commits, Apache-2.0 license, 0 issues, 0 pull requests, and a latest v1.0 release dated 2026-06-06; README positions MedMemoryBench as a personalized-healthcare benchmark for longitudinal agent memory quality rather than generic retrieval recall",
       "description": "MedMemoryBench 是面向 personalized healthcare agents 的记忆 benchmark，用长期患者画像、时间线推理和任务成功率检验 memory 是否真正提升高风险场景下的 agent 决策。"
     },
     {
@@ -1834,7 +1834,7 @@
     {
       "repo": "AgentWrapper/agent-orchestrator",
       "url": "https://github.com/AgentWrapper/agent-orchestrator",
-      "stars": "7700",
+      "stars": "7500",
       "prior_category": "-",
       "prior_unclassified": "true",
       "final_category": "框架/framework",
@@ -1842,8 +1842,8 @@
       "base_theme": "harness",
       "stack": "TypeScript/Git Worktrees/MCP/Coding-Agent Swarm",
       "time_slice": "2026-06",
-      "content_timestamp": "2026-06-08",
-      "evidence": "web-observed GitHub page on 2026-06-08 redirected the legacy ComposioHQ URL to AgentWrapper/agent-orchestrator, then showed 7.7k stars, 1.1k forks, 1,264 commits, MIT license, 46 issues, 7 pull requests, and a repository-page Updated Jun 8 2026 signal; public README/about position it as a production coding-agent orchestrator with swarms, worktrees, skills, memory, and MCP tools",
+      "content_timestamp": "2026-06-09",
+      "evidence": "web-observed GitHub page on 2026-06-09 still redirected the legacy ComposioHQ URL to AgentWrapper/agent-orchestrator, then showed 7.5k stars, 1k forks, 1,277 commits, MIT license, 476 issues, and 468 pull requests; public README/about position it as a production coding-agent orchestrator with swarms, worktrees, skills, memory, and MCP tools",
       "description": "Agent Orchestrator 是 production coding-agent swarm harness，把 spec、build、test、review、merge 流程拆给专门化 agents，并用 Git worktrees、skills、memory 和 MCP 执行面串成可审计的工程闭环。"
     },
     {
@@ -2134,7 +2134,7 @@
     {
       "repo": "desplega-ai/agent-swarm",
       "url": "https://github.com/desplega-ai/agent-swarm",
-      "stars": "513",
+      "stars": "511",
       "prior_category": "-",
       "prior_unclassified": "true",
       "final_category": "框架/framework",
@@ -2142,8 +2142,8 @@
       "base_theme": "framework",
       "stack": "TypeScript/Docker/MCP/Lead-Worker Swarm",
       "time_slice": "2026-06",
-      "content_timestamp": "2026-06-08",
-      "evidence": "web-observed GitHub repo page showed 513 stars, 58 forks, 1 issue, 2 pull requests, 1,568 commits, MIT license, 117 releases with v1.93.0 marked latest, and a repository-page Updated Jun 8 2026 signal, with lead/worker Docker orchestration, MCP API, compounding memory, HITL workflow gates, and skills-based swarm operations still visible.",
+      "content_timestamp": "2026-06-09",
+      "evidence": "web-observed GitHub repo page on 2026-06-09 showed 511 stars, 56 forks, 1 issue, 2 pull requests, 1,568 commits, MIT license, and 91 releases with v1.92.1 marked latest on 2026-06-07, with lead/worker Docker orchestration, MCP API, compounding memory, HITL workflow gates, and skills-based swarm operations still visible.",
       "description": "Agent Swarm is a production-oriented lead-worker runtime that routes work from Slack/GitHub/Email/API into Dockerized agent workers, persists memory and identity, and exposes MCP, workflows, pages, and recurring task patterns as reusable swarm infrastructure."
     },
     {
@@ -6162,14 +6162,14 @@
       "base_theme": "harness",
       "stack": "TypeScript/OpenAI Agents SDK/Tracing/Guardrails/Handoffs",
       "time_slice": "2026-06",
-      "content_timestamp": "2026-06-08",
-      "evidence": "web-observed GitHub repo page showed 3.2k stars, 796 forks, 34 issues, 20 pull requests, MIT license, and a repository-page Updated Jun 8 2026 signal; README navigation exposed agents, tools, handoffs, guardrails, realtime, voice, tracing, sessions, MCP, and advanced usage docs.",
+      "content_timestamp": "2026-06-09",
+      "evidence": "web-observed GitHub repo page on 2026-06-09 showed 3.2k stars, 803 forks, 931 commits, 35 issues, and 25 pull requests; README navigation exposed agents, tools, handoffs, guardrails, realtime, voice, tracing, sessions, MCP, and advanced usage docs.",
       "description": "OpenAI Agents SDK (JS) 是官方 TypeScript orchestration baseline：把 tools、handoffs、guardrails、realtime、tracing 和 sessions 作为前端/全栈 agent runtime 的上游标准面。"
     },
     {
       "repo": "openai/openai-agents-python",
       "url": "https://github.com/openai/openai-agents-python",
-      "stars": "26800",
+      "stars": "27000",
       "prior_category": "-",
       "prior_unclassified": "true",
       "final_category": "框架/framework",
@@ -6177,8 +6177,8 @@
       "base_theme": "harness",
       "stack": "Python/OpenAI Agents SDK/Tracing/Guardrails/Handoffs",
       "time_slice": "2026-06",
-      "content_timestamp": "2026-06-08",
-      "evidence": "web-observed GitHub repo page showed 26.8k stars, 4.2k forks, 45 issues, 68 pull requests, MIT license, and a repository-page Updated Jun 8 2026 signal; README navigation exposed models, tools, handoffs, guardrails, tracing, MCP, voice, sessions, agents-as-tools, and context-management docs.",
+      "content_timestamp": "2026-06-09",
+      "evidence": "web-observed GitHub repo page on 2026-06-09 showed 27k stars, 4.2k forks, 1,598 commits, 43 issues, and 89 pull requests; README navigation exposed models, tools, handoffs, guardrails, tracing, MCP, voice, sessions, agents-as-tools, and context-management docs.",
       "description": "OpenAI Agents SDK (Python) 是官方 Python orchestration baseline：把 handoffs、tools、guardrails、tracing 和 sessions 作为上游标准面，供 downstream swarm/harness/self-improvement 系统对照。"
     },
     {

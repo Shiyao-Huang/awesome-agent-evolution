@@ -4,13 +4,13 @@
 |---|---|
 | Repository | [desplega-ai/agent-swarm](https://github.com/desplega-ai/agent-swarm) |
 | Category | Compounding Lead-Worker Agent Runtime |
-| Stars / forks snapshot | 513 / 58 |
+| Stars / forks snapshot | 511 / 56 |
 | Commits / issues / PRs snapshot | 1568 / 1 / 2 |
 | Language | TypeScript |
 | License | MIT |
-| Latest visible dated signal | 2026-06-08 |
+| Latest visible dated signal | v1.92.1 latest on 2026-06-07 |
 | Raw capture | raw-github/desplega-ai_agent-swarm.md |
-| Updated by | hourly public metadata update, 2026-06-08 23:45 +0800 |
+| Updated by | hourly public metadata update, 2026-06-09 10:20 +0800 |
 
 ## 1. Role in Self Evolve
 
@@ -22,7 +22,7 @@ ingest tasks from external channels -> lead agent plans and delegates -> workers
 
 ## 3. Evidence Path
 
-web-observed GitHub repo page showed 513 stars, 58 forks, 1 issue, 2 pull requests, 1,568 commits, MIT license, 117 releases with v1.93.0 marked latest, and a repository-page "Updated Jun 8, 2026" signal, plus lead/worker Docker orchestration, MCP API, compounding memory, HITL workflow gates, and skills-based swarm operations.
+web-observed GitHub repo page showed 511 stars, 56 forks, 1 issue, 2 pull requests, 1,568 commits, MIT license, and 91 releases with `v1.92.1` marked latest on 2026-06-07, plus lead/worker Docker orchestration, MCP API, compounding memory, HITL workflow gates, and skills-based swarm operations.
 
 ## 4. Teaching Use
 

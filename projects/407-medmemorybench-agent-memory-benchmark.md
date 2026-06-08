@@ -4,13 +4,13 @@
 |---|---|
 | Repository | [AQ-MedAI/MedMemoryBench](https://github.com/AQ-MedAI/MedMemoryBench) |
 | Category | Personalized Healthcare Agent Memory Benchmark |
-| Stars / forks snapshot | 59 / 1 |
+| Stars / forks snapshot | 60 / 1 |
 | Commits / issues / PRs snapshot | 14 / 0 / 0 |
 | Language | Python |
 | License | Apache-2.0 |
 | Latest visible dated signal | 2026-06-06 |
 | Raw capture | raw-github/aq-medai_medmemorybench.md |
-| Updated by | hourly public metadata update, 2026-06-08 17:47 +0800 |
+| Updated by | hourly public metadata update, 2026-06-09 10:20 +0800 |
 
 ## 1. Role in Self Evolve
 
@@ -22,7 +22,7 @@ construct longitudinal healthcare episodes -> require agents to recall and apply
 
 ## 3. Evidence Path
 
-web-observed GitHub repo pages showed 59 stars, 1 fork, 14 commits, Apache-2.0 license, 0 issues, 0 pull requests, and one release with `v1.0` latest on 2026-06-06, plus README framing around personalized healthcare memory evaluation. This run keeps freshness honest because shell GitHub API access remained blocked and no local benchmark execution was performed.
+web-observed GitHub repo pages showed 60 stars, 1 fork, 14 commits, Apache-2.0 license, 0 issues, 0 pull requests, and one release with `v1.0` latest on 2026-06-06, plus README framing around personalized healthcare memory evaluation. This run keeps freshness honest because shell GitHub API access remained blocked and no local benchmark execution was performed.
 
 ## 4. Teaching Use
 

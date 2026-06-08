@@ -60,9 +60,9 @@ flowchart LR
   SURVEY --> SITE["网站 + 图谱 + 报告"]
 ```
 
-## 近期证据更新（2026-06-08）
+## 近期证据更新（2026-06-09）
 
-本轮不是简单“刷新元数据”，而是把 production swarm、coding-agent harness、memory benchmark、OpenAI Agents SDK orchestrator、official OpenAI Agents SDK Python/JS baseline、continual skill-memory paper code 和轻量 memory/MCP/skill runtime 一起拉回同一条证据链。下面每个仓库都只回答一个问题：它补上了哪类判断证据。
+本轮不是新增一批条目，而是把 production swarm、coding-agent harness、memory benchmark、OpenAI Agents SDK orchestrator、official OpenAI Agents SDK Python/JS baseline、continual skill-memory paper code 和轻量 memory/MCP/skill runtime 的公开数字面重新校正到 `2026-06-09` 可见证据。下面每个仓库都只回答一个问题：它补上了哪类判断证据，以及这轮是否发生了需要同步到公开面的计数修正。
 
 | 仓库 | 补上的证据缺口 | 对读者的意义 | 证据状态 |
 |---|---|---|---|

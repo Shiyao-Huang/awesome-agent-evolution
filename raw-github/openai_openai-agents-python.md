@@ -1,10 +1,10 @@
 ---
 repo: openai/openai-agents-python
 url: https://github.com/openai/openai-agents-python
-content_timestamp: 2026-06-08
+content_timestamp: 2026-06-09
 time_slice: 2026-06
-timestamp_source: web_observed_public_github_page_2026_06_08
-collected_at: 2026-06-08T23:45:58+08:00
+timestamp_source: web_observed_public_github_page_2026_06_09
+collected_at: 2026-06-09T10:20:00+08:00
 source: github
 ---
 
@@ -22,20 +22,21 @@ This raw-style public GitHub page capture was refreshed by the hourly public met
 
 - Repository: openai/openai-agents-python
 - URL: https://github.com/openai/openai-agents-python
-- Stars: 26800
+- Stars: 27000
 - Forks: 4200
-- Issues: 45
-- Pull requests: 68
+- Commits: 1598
+- Issues: 43
+- Pull requests: 89
 - License: MIT
 - Primary language / stack signal: Python/OpenAI Agents SDK/Tracing/Guardrails/Handoffs
-- Latest visible dated signal: 2026-06-08
-- Collection timestamp: 2026-06-08T23:45:58+08:00
+- Latest visible dated signal: 2026-06-09 web-observed public GitHub page snapshot
+- Collection timestamp: 2026-06-09T10:20:00+08:00
 
 ## Visible README / page excerpts
 
 - The public repo page described a lightweight yet powerful framework for multi-agent workflows and linked official docs.
 - Visible top-level navigation exposed guides for models, tools, handoffs, guardrails, tracing, voice, sessions, MCP, context management, and orchestrating via code.
-- The public repository page showed 26.8k stars, 4.2k forks, 45 issues, 68 pull requests, and "Updated Jun 8, 2026".
+- The public repository page showed 27k stars, 4.2k forks, 1,598 commits, 43 issues, and 89 pull requests.
 - The repo therefore serves as the canonical upstream runtime baseline when comparing third-party swarm, harness, and skill systems built around the OpenAI Agents SDK.
 - Freshness remains web-observed rather than GitHub-API verified because shell API access and local gh auth are blocked in this workspace.
 

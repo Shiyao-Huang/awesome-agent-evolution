@@ -4,13 +4,13 @@
 |---|---|
 | Repository | [openai/openai-agents-js](https://github.com/openai/openai-agents-js) |
 | Category | Official OpenAI Agents SDK TypeScript Baseline |
-| Stars / forks snapshot | 3200 / 796 |
-| Issues / PRs snapshot | 34 / 20 |
+| Stars / forks snapshot | 3200 / 803 |
+| Issues / PRs snapshot | 35 / 25 |
 | Language | TypeScript |
 | License | MIT |
-| Latest visible dated signal | 2026-06-08 |
+| Latest visible dated signal | 2026-06-09 web-observed snapshot |
 | Raw capture | raw-github/openai_openai-agents-js.md |
-| Updated by | hourly public metadata update, 2026-06-08 23:45 +0800 |
+| Updated by | hourly public metadata update, 2026-06-09 10:20 +0800 |
 
 ## 1. Role in Self Evolve
 
@@ -22,7 +22,7 @@ compose agents in TypeScript -> attach tools, handoffs, and realtime transport -
 
 ## 3. Evidence Path
 
-web-observed GitHub repo page showed 3.2k stars, 796 forks, 34 issues, 20 pull requests, MIT license, and a repository-page "Updated Jun 8, 2026" signal; README navigation exposed agents, tools, handoffs, guardrails, realtime, voice, tracing, sessions, MCP, and advanced usage docs. This iteration keeps freshness honest: the snapshot comes from the public GitHub page observed on 2026-06-08, while shell GitHub API access remained blocked in this workspace.
+web-observed GitHub repo page showed 3.2k stars, 803 forks, 931 commits, 35 issues, and 25 pull requests, while README navigation exposed agents, tools, handoffs, guardrails, realtime, voice, tracing, sessions, MCP, and advanced usage docs. This iteration keeps freshness honest: the snapshot comes from the public GitHub page observed on 2026-06-09, while shell GitHub API access remained blocked in this workspace.
 
 ## 4. Teaching Use
 
