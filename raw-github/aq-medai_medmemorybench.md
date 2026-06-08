@@ -1,10 +1,11 @@
 ---
 repo: AQ-MedAI/MedMemoryBench
 url: https://github.com/AQ-MedAI/MedMemoryBench
-content_timestamp: 2026-05-01
+content_timestamp: 2026-06-06
 time_slice: 2026-05
-timestamp_source: web_observed_public_github_page_2026_06_05_2115_with_visible_release_month_2026_05
-collected_at: 2026-06-05T21:15:00+08:00
+time_slice: 2026-06
+timestamp_source: web_observed_public_github_page_2026_06_08_with_latest_release_2026_06_06
+collected_at: 2026-06-08T17:47:34+08:00
 source: github
 ---
 
@@ -22,22 +23,22 @@ This raw-style public GitHub page capture was refreshed by the hourly public met
 
 - Repository: AQ-MedAI/MedMemoryBench
 - URL: https://github.com/AQ-MedAI/MedMemoryBench
-- Stars: 95
-- Forks: 8
-- Commits: 44
+- Stars: 59
+- Forks: 1
+- Commits: 14
 - Issues: 0
-- Pull requests: 1
-- License: MIT
+- Pull requests: 0
+- License: Apache-2.0
 - Primary language / stack signal: Python/Healthcare Memory Benchmark/Longitudinal Patient Context
-- Latest visible dated signal: public page release note `[2026.05]`
-- Collection timestamp: 2026-06-05T21:15:00+08:00
+- Latest visible dated signal: 2026-06-06
+- Collection timestamp: 2026-06-08T17:47:34+08:00
 
 ## Visible README / page excerpts
 
-- The public GitHub page showed 95 stars, 8 forks, 44 commits, MIT license, 0 issues, and 1 pull request.
+- The public GitHub page showed 59 stars, 1 fork, 14 commits, Apache-2.0 license, 0 issues, and 0 pull requests.
 - The README frames MedMemoryBench as a benchmark for personalized healthcare agents where memory quality matters because patient state accumulates over time.
 - Visible evaluation scope includes episodic recall, temporal reasoning, longitudinal profile retention, and task success under medical-context constraints rather than generic short-horizon chat memory.
-- The public page carried a visible `[2026.05]` release/update marker, which is the freshest dated signal captured in this run.
+- The public page exposed one release, with `v1.0` marked latest on 2026-06-06.
 
 ## Raw capture boundary
 

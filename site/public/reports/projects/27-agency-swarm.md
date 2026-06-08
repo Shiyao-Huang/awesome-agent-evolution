@@ -4,13 +4,13 @@
 |---|---|
 | Repository | [VRSEN/agency-swarm](https://github.com/VRSEN/agency-swarm) |
 | Category | OpenAI Agents SDK Swarm Orchestrator |
-| Stars / forks snapshot | 4400 / 1100 |
-| Commits / issues / PRs snapshot | 2491 / 1 / 6 |
+| Stars / forks snapshot | 4400 / 1200 |
+| Commits / issues / PRs snapshot | 2526 / 1 / 3 |
 | Language | Python |
 | License | MIT |
-| Latest visible dated signal | 2026-05-24 |
+| Latest visible dated signal | 2026-06-04 |
 | Raw capture | raw-github/vrsen_agency-swarm.md |
-| Updated by | hourly public metadata update, 2026-06-05 15:43 +0800 |
+| Updated by | hourly public metadata update, 2026-06-08 17:47 +0800 |
 
 ## 1. Role in Self Evolve
 
@@ -22,7 +22,7 @@ define agents and directional communication flows -> attach function tools and p
 
 ## 3. Evidence Path
 
-web-observed GitHub repo page showed 4.4k stars, 1.1k forks, 1 issue, 6 pull requests, 2,491 commits, MIT license, 62 releases with v1.9.9 latest on 2026-05-24, and explicit positioning as a structured orchestration layer built on the OpenAI Agents SDK with communication flows and state persistence callbacks. This iteration keeps freshness honest: the snapshot comes from the public GitHub page observed on 2026-05-24, while shell GitHub API access remained blocked in this workspace.
+web-observed GitHub repo page showed 4.4k stars, 1.2k forks, 1 issue, 3 pull requests, 2,526 commits, MIT license, 67 releases with v1.10.3 latest on 2026-06-04, and explicit positioning as a structured orchestration layer built on the OpenAI Agents SDK with communication flows and state persistence callbacks. This iteration keeps freshness honest: the snapshot comes from the public GitHub page observed on 2026-06-08, while shell GitHub API access remained blocked in this workspace.
 
 ## 4. Teaching Use
 

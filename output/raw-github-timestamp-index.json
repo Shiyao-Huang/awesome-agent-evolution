@@ -539,10 +539,10 @@
       "repo": "AQ-MedAI/MedMemoryBench",
       "url": "https://github.com/AQ-MedAI/MedMemoryBench",
       "file": "raw-github/aq-medai_medmemorybench.md",
-      "content_timestamp": "2026-05-01",
-      "collected_at": "2026-06-05T21:15:00+08:00",
-      "time_slice": "2026-05",
-      "timestamp_source": "web_observed_public_github_page_2026_06_05_2115_with_visible_release_month_2026_05"
+      "content_timestamp": "2026-06-06",
+      "collected_at": "2026-06-08T17:47:34+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "web_observed_public_github_page_2026_06_08_with_latest_release_2026_06_06"
     },
     {
       "repo": "Arc-Computer/CL-Bench",
@@ -1103,13 +1103,13 @@
       "timestamp_source": "web_observed_public_github_page_2026_06_01"
     },
     {
-      "repo": "ComposioHQ/agent-orchestrator",
-      "url": "https://github.com/ComposioHQ/agent-orchestrator",
+      "repo": "AgentWrapper/agent-orchestrator",
+      "url": "https://github.com/AgentWrapper/agent-orchestrator",
       "file": "raw-github/composiohq_agent-orchestrator.md",
       "content_timestamp": "2026-06-01",
-      "collected_at": "2026-06-05T21:10:00+08:00",
+      "collected_at": "2026-06-08T17:47:34+08:00",
       "time_slice": "2026-06",
-      "timestamp_source": "web_observed_public_github_page_2026_06_05_2110_plus_commits_main_2026_06_01"
+      "timestamp_source": "web_observed_public_github_page_2026_06_08_with_redirect_to_agentwrapper_and_prior_commits_main_2026_06_01"
     },
     {
       "repo": "ComposioHQ/awesome-agent-clis",
@@ -1286,10 +1286,10 @@
       "repo": "desplega-ai/agent-swarm",
       "url": "https://github.com/desplega-ai/agent-swarm",
       "file": "raw-github/desplega-ai_agent-swarm.md",
-      "content_timestamp": "2026-06-04",
-      "collected_at": "2026-06-05T15:43:00+08:00",
+      "content_timestamp": "2026-06-05",
+      "collected_at": "2026-06-08T17:47:34+08:00",
       "time_slice": "2026-06",
-      "timestamp_source": "web_observed_public_github_page_2026_06_05_1543"
+      "timestamp_source": "web_observed_public_github_page_2026_06_08_with_latest_release_relative_3_days_ago"
     },
     {
       "repo": "developzir/gepa-mcp",
@@ -3699,7 +3699,7 @@
       "url": "https://github.com/openai/openai-agents-js",
       "file": "raw-github/openai_openai-agents-js.md",
       "content_timestamp": "2026-05-26",
-      "collected_at": "2026-06-08T12:02:00+08:00",
+      "collected_at": "2026-06-08T12:26:00+08:00",
       "time_slice": "2026-05",
       "timestamp_source": "web_observed_public_github_page_2026_06_08"
     },
@@ -3708,7 +3708,7 @@
       "url": "https://github.com/openai/openai-agents-python",
       "file": "raw-github/openai_openai-agents-python.md",
       "content_timestamp": "2026-05-26",
-      "collected_at": "2026-06-08T12:02:00+08:00",
+      "collected_at": "2026-06-08T12:26:00+08:00",
       "time_slice": "2026-05",
       "timestamp_source": "web_observed_public_github_page_2026_06_08"
     },
@@ -5615,10 +5615,10 @@
       "repo": "VRSEN/agency-swarm",
       "url": "https://github.com/VRSEN/agency-swarm",
       "file": "raw-github/vrsen_agency-swarm.md",
-      "content_timestamp": "2026-05-24",
-      "collected_at": "2026-06-05T15:43:00+08:00",
-      "time_slice": "2026-05",
-      "timestamp_source": "web_observed_public_github_page_2026_06_05_1543"
+      "content_timestamp": "2026-06-04",
+      "collected_at": "2026-06-08T17:47:34+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "web_observed_public_github_page_2026_06_08_with_latest_release_2026_06_04"
     },
     {
       "repo": "vsonicv/es-fine-tuning-paper",
@@ -5633,10 +5633,10 @@
       "repo": "wanxingai/LightAgent",
       "url": "https://github.com/wanxingai/LightAgent",
       "file": "raw-github/wanxingai_lightagent.md",
-      "content_timestamp": "2026-06-02",
-      "collected_at": "2026-06-05T15:43:00+08:00",
+      "content_timestamp": "2026-06-04",
+      "collected_at": "2026-06-08T17:47:34+08:00",
       "time_slice": "2026-06",
-      "timestamp_source": "web_observed_public_github_page_2026_06_05_1543"
+      "timestamp_source": "web_observed_public_github_page_2026_06_08_with_latest_release_2026_06_04"
     },
     {
       "repo": "wazionapps/nexo",

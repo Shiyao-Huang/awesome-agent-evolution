@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-08T12:26:00+08:00",
+  "generated_at": "2026-06-08T17:47:34+08:00",
   "truth_source": ".mermaid/current/graph.json",
   "nodes": [
     {
@@ -18,8 +18,11 @@
       "layer": "raw",
       "status": "updated",
       "paths": [
-        "raw-github/openai_openai-agents-python.md",
-        "raw-github/openai_openai-agents-js.md"
+        "raw-github/composiohq_agent-orchestrator.md",
+        "raw-github/desplega-ai_agent-swarm.md",
+        "raw-github/vrsen_agency-swarm.md",
+        "raw-github/aq-medai_medmemorybench.md",
+        "raw-github/wanxingai_lightagent.md"
       ]
     },
     {
@@ -76,8 +79,11 @@
       "paths": [
         "research/repo-classification.json",
         "analysis/github-project-data-analysis.md",
-        "projects/408-openai-agents-python-official-sdk.md",
-        "projects/409-openai-agents-js-official-sdk.md"
+        "projects/406-composio-agent-orchestrator-coding-swarm.md",
+        "projects/405-agent-swarm-compounding-lead-worker-runtime.md",
+        "projects/27-agency-swarm.md",
+        "projects/407-medmemorybench-agent-memory-benchmark.md",
+        "projects/139-lightagent-memory-mcp-skills.md"
       ]
     },
     {
@@ -87,8 +93,11 @@
       "status": "updated",
       "paths": [
         "site/src/data/projects.ts",
-        "site/public/reports/projects/408-openai-agents-python-official-sdk.md",
-        "site/public/reports/projects/409-openai-agents-js-official-sdk.md",
+        "site/public/reports/projects/406-composio-agent-orchestrator-coding-swarm.md",
+        "site/public/reports/projects/405-agent-swarm-compounding-lead-worker-runtime.md",
+        "site/public/reports/projects/27-agency-swarm.md",
+        "site/public/reports/projects/407-medmemorybench-agent-memory-benchmark.md",
+        "site/public/reports/projects/139-lightagent-memory-mcp-skills.md",
         "README.md",
         "README-ZH.md",
         "README-EN.md",
@@ -101,7 +110,7 @@
       "layer": "work",
       "status": "updated",
       "paths": [
-        "work/research/hourly-public-metadata-update-2026-06-08-1226.md"
+        "work/research/hourly-public-metadata-update-2026-06-08-1747.md"
       ]
     }
   ],
@@ -155,34 +164,70 @@
   "current_run": {
     "repos": [
       {
-        "repo": "openai/openai-agents-python",
-        "raw_capture": "raw-github/openai_openai-agents-python.md",
-        "report": "projects/408-openai-agents-python-official-sdk.md",
-        "site_report": "site/public/reports/projects/408-openai-agents-python-official-sdk.md",
-        "stars": 26705,
-        "forks": 4110,
-        "issues": 45,
-        "pull_requests": 68,
-        "last_visible_commit_date": "2026-05-26",
+        "repo": "AgentWrapper/agent-orchestrator",
+        "raw_capture": "raw-github/composiohq_agent-orchestrator.md",
+        "report": "projects/406-composio-agent-orchestrator-coding-swarm.md",
+        "site_report": "site/public/reports/projects/406-composio-agent-orchestrator-coding-swarm.md",
+        "stars": 7700,
+        "forks": 1100,
+        "issues": 56,
+        "pull_requests": 14,
+        "last_visible_commit_date": "2026-06-01",
         "theme": "harness"
       },
       {
-        "repo": "openai/openai-agents-js",
-        "raw_capture": "raw-github/openai_openai-agents-js.md",
-        "report": "projects/409-openai-agents-js-official-sdk.md",
-        "site_report": "site/public/reports/projects/409-openai-agents-js-official-sdk.md",
-        "stars": 3132,
-        "forks": 788,
-        "issues": 34,
-        "pull_requests": 21,
-        "last_visible_commit_date": "2026-05-26",
-        "theme": "harness"
+        "repo": "desplega-ai/agent-swarm",
+        "raw_capture": "raw-github/desplega-ai_agent-swarm.md",
+        "report": "projects/405-agent-swarm-compounding-lead-worker-runtime.md",
+        "site_report": "site/public/reports/projects/405-agent-swarm-compounding-lead-worker-runtime.md",
+        "stars": 508,
+        "forks": 56,
+        "issues": 1,
+        "pull_requests": 9,
+        "last_visible_commit_date": "2026-06-05",
+        "theme": "framework"
+      },
+      {
+        "repo": "VRSEN/agency-swarm",
+        "raw_capture": "raw-github/vrsen_agency-swarm.md",
+        "report": "projects/27-agency-swarm.md",
+        "site_report": "site/public/reports/projects/27-agency-swarm.md",
+        "stars": 4400,
+        "forks": 1200,
+        "issues": 1,
+        "pull_requests": 3,
+        "last_visible_commit_date": "2026-06-04",
+        "theme": "framework"
+      },
+      {
+        "repo": "AQ-MedAI/MedMemoryBench",
+        "raw_capture": "raw-github/aq-medai_medmemorybench.md",
+        "report": "projects/407-medmemorybench-agent-memory-benchmark.md",
+        "site_report": "site/public/reports/projects/407-medmemorybench-agent-memory-benchmark.md",
+        "stars": 59,
+        "forks": 1,
+        "issues": 0,
+        "pull_requests": 0,
+        "last_visible_commit_date": "2026-06-06",
+        "theme": "memory"
+      },
+      {
+        "repo": "wanxingai/LightAgent",
+        "raw_capture": "raw-github/wanxingai_lightagent.md",
+        "report": "projects/139-lightagent-memory-mcp-skills.md",
+        "site_report": "site/public/reports/projects/139-lightagent-memory-mcp-skills.md",
+        "stars": 1100,
+        "forks": 141,
+        "issues": 8,
+        "pull_requests": 0,
+        "last_visible_commit_date": "2026-06-04",
+        "theme": "memory"
       }
     ],
     "blockers": [
       "Shell curl to api.github.com fails with DNS resolution in this workspace, so GitHub API freshness is unavailable.",
       "gh auth status reports the default github.com token for Shiyao-Huang is invalid.",
-      "GitNexus MCP tools are not exposed in this session; local gitnexus CLI works, but npx gitnexus status timed out while the direct binary succeeded.",
+      "GitNexus MCP tools are not exposed in this session; local gitnexus CLI works but reports the index as stale, and npx gitnexus status timed out while the direct binary succeeded.",
       "Public copy review gate still lacks actual 3-5 reader/editor agents plus 3 academic agents, so README/site copy quality remains a declared gap rather than a completed gate."
     ],
     "working_principle": "public GitHub repo pages -> raw-github captures -> research/repo-classification -> output/raw-github-timestamp-index -> analysis/github-project-data-analysis -> README/i18n + site/src/data/projects.ts + public reports -> paper/site build"

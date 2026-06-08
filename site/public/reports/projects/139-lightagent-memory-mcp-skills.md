@@ -5,12 +5,12 @@
 | Repository | [wanxingai/LightAgent](https://github.com/wanxingai/LightAgent) |
 | Category | Memory/MCP Skill Agent Framework |
 | Stars / forks snapshot | 1100 / 141 |
-| Commits / issues / PRs snapshot | 104 / 7 / 1 |
+| Commits / issues / PRs snapshot | 107 / 8 / 0 |
 | Language | Python |
 | License | Apache-2.0 |
-| Latest visible dated signal | 2026-06-02 |
+| Latest visible dated signal | 2026-06-04 |
 | Raw capture | raw-github/wanxingai_lightagent.md |
-| Updated by | hourly public metadata update, 2026-06-05 15:43 +0800 |
+| Updated by | hourly public metadata update, 2026-06-08 17:47 +0800 |
 
 ## 1. Role in Self Evolve
 
@@ -22,7 +22,7 @@ compose lightweight agents with tools, MCP, and memory -> add native skills and 
 
 ## 3. Evidence Path
 
-web-observed GitHub repo page showed 1.1k stars, 141 forks, 7 issues, 1 pull request, 104 commits, Apache-2.0 license, 20 releases with v0.7.5 latest on 2026-06-01, and README news dated 2026-06-02 for LightFlow workflow orchestration plus persistent memory, MCP, native skills, trace observability, and self-learning agent claims. This iteration keeps freshness honest: the snapshot comes from the public GitHub page observed on 2026-06-02, while shell GitHub API access remained blocked in this workspace.
+web-observed GitHub repo page showed 1.1k stars, 141 forks, 8 issues, 0 pull requests, 107 commits, Apache-2.0 license, 21 releases with v0.8.0 latest on 2026-06-04, and continued LightFlow workflow orchestration plus persistent memory, MCP, native skills, trace observability, and self-learning agent claims. This iteration keeps freshness honest: the snapshot comes from the public GitHub page observed on 2026-06-08, while shell GitHub API access remained blocked in this workspace.
 
 ## 4. Teaching Use
 

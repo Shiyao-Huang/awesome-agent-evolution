@@ -889,16 +889,16 @@
     {
       "repo": "AQ-MedAI/MedMemoryBench",
       "url": "https://github.com/AQ-MedAI/MedMemoryBench",
-      "stars": "95",
+      "stars": "59",
       "prior_category": "-",
       "prior_unclassified": "true",
       "final_category": "评测/evaluation",
       "function_tag": "benchmark-eval",
       "base_theme": "memory",
-      "stack": "Python/Healthcare Memory Benchmark",
-      "time_slice": "2026-05",
-      "content_timestamp": "2026-05-01",
-      "evidence": "web-observed GitHub page showed 95 stars, 8 forks, 44 commits, MIT license, and a visible [2026.05] update marker; README positions MedMemoryBench as a personalized-healthcare benchmark for longitudinal agent memory quality rather than generic retrieval recall",
+      "stack": "Python/Healthcare Memory Benchmark/Longitudinal Clinical Memory Eval",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-06",
+      "evidence": "web-observed GitHub page showed 59 stars, 1 fork, 14 commits, Apache-2.0 license, 0 issues, 0 pull requests, and a latest v1.0 release dated 2026-06-06; README positions MedMemoryBench as a personalized-healthcare benchmark for longitudinal agent memory quality rather than generic retrieval recall",
       "description": "MedMemoryBench 是面向 personalized healthcare agents 的记忆 benchmark，用长期患者画像、时间线推理和任务成功率检验 memory 是否真正提升高风险场景下的 agent 决策。"
     },
     {
@@ -1832,9 +1832,9 @@
       "description": "composio-community/awesome-openclaw-plugins curates OpenClaw plugin assets and operational playbooks into a structured ecosystem index."
     },
     {
-      "repo": "ComposioHQ/agent-orchestrator",
-      "url": "https://github.com/ComposioHQ/agent-orchestrator",
-      "stars": "7400",
+      "repo": "AgentWrapper/agent-orchestrator",
+      "url": "https://github.com/AgentWrapper/agent-orchestrator",
+      "stars": "7700",
       "prior_category": "-",
       "prior_unclassified": "true",
       "final_category": "框架/framework",
@@ -1843,8 +1843,8 @@
       "stack": "TypeScript/Git Worktrees/MCP/Coding-Agent Swarm",
       "time_slice": "2026-06",
       "content_timestamp": "2026-06-01",
-      "evidence": "web-observed GitHub page showed 7.4k stars, 1k forks, 1,276 commits, MIT license, TypeScript-heavy implementation, and a latest visible 2026-06-01 commit on commits/main; public README/about position it as a production coding-agent orchestrator with swarms, worktrees, skills, memory, and MCP tools",
-      "description": "Composio Agent Orchestrator 是 production coding-agent swarm harness，把 spec、build、test、review、merge 流程拆给专门化 agents，并用 Git worktrees、skills、memory 和 MCP 执行面串成可审计的工程闭环。"
+      "evidence": "web-observed GitHub page on 2026-06-08 redirected the legacy ComposioHQ URL to AgentWrapper/agent-orchestrator, then showed 7.7k stars, 1.1k forks, 1,260 commits, MIT license, 56 issues, 14 pull requests, and prior commits/main evidence with a 2026-06-01 latest visible commit; public README/about position it as a production coding-agent orchestrator with swarms, worktrees, skills, memory, and MCP tools",
+      "description": "Agent Orchestrator 是 production coding-agent swarm harness，把 spec、build、test、review、merge 流程拆给专门化 agents，并用 Git worktrees、skills、memory 和 MCP 执行面串成可审计的工程闭环。"
     },
     {
       "repo": "ComposioHQ/awesome-agent-clis",
@@ -2134,7 +2134,7 @@
     {
       "repo": "desplega-ai/agent-swarm",
       "url": "https://github.com/desplega-ai/agent-swarm",
-      "stars": "505",
+      "stars": "508",
       "prior_category": "-",
       "prior_unclassified": "true",
       "final_category": "框架/framework",
@@ -2142,8 +2142,8 @@
       "base_theme": "framework",
       "stack": "TypeScript/Docker/MCP/Lead-Worker Swarm",
       "time_slice": "2026-06",
-      "content_timestamp": "2026-06-04",
-      "evidence": "web-observed GitHub repo page showed 505 stars, 56 forks, 1 issue, 5 pull requests, 1,542 commits, MIT license, 89 releases with v1.91.0 latest on 2026-06-04, plus lead/worker Docker orchestration, MCP API, compounding memory, HITL workflow gates, and skills-based swarm operations.",
+      "content_timestamp": "2026-06-05",
+      "evidence": "web-observed GitHub repo page showed 508 stars, 56 forks, 1 issue, 9 pull requests, 1,561 commits, MIT license, and 117 releases with v1.93.0 marked latest; the release badge was relative-only on the 2026-06-08 page view, so the freshest dated signal is conservatively mapped to 2026-06-05, with lead/worker Docker orchestration, MCP API, compounding memory, HITL workflow gates, and skills-based swarm operations still visible.",
       "description": "Agent Swarm is a production-oriented lead-worker runtime that routes work from Slack/GitHub/Email/API into Dockerized agent workers, persists memory and identity, and exposes MCP, workflows, pages, and recurring task patterns as reusable swarm infrastructure."
     },
     {
@@ -9356,9 +9356,9 @@
       "function_tag": "framework-runtime",
       "base_theme": "framework",
       "stack": "Python/OpenAI Agents SDK/Agency CLI/State Persistence",
-      "time_slice": "2026-05",
-      "content_timestamp": "2026-05-24",
-      "evidence": "web-observed GitHub repo page showed 4.4k stars, 1.1k forks, 1 issue, 6 pull requests, 2,491 commits, MIT license, 62 releases with v1.9.9 latest on 2026-05-24, and explicit positioning as a structured orchestration layer built on the OpenAI Agents SDK with communication flows and state persistence callbacks.",
+      "time_slice": "2026-06",
+      "content_timestamp": "2026-06-04",
+      "evidence": "web-observed GitHub repo page showed 4.4k stars, 1.2k forks, 1 issue, 3 pull requests, 2,526 commits, MIT license, 67 releases with v1.10.3 latest on 2026-06-04, and explicit positioning as a structured orchestration layer built on the OpenAI Agents SDK with communication flows and state persistence callbacks.",
       "description": "Agency Swarm is a mature Python orchestration framework that layers role-aware communication flows, type-safe tools, thread persistence, and terminal/web demos on top of the OpenAI Agents SDK."
     },
     {
@@ -9387,8 +9387,8 @@
       "base_theme": "framework",
       "stack": "Python/MCP/mem0/Agent Skills/LightFlow",
       "time_slice": "2026-06",
-      "content_timestamp": "2026-06-02",
-      "evidence": "web-observed GitHub repo page showed 1.1k stars, 141 forks, 7 issues, 1 pull request, 104 commits, Apache-2.0 license, 20 releases with v0.7.5 latest on 2026-06-01, and README news dated 2026-06-02 for LightFlow workflow orchestration plus persistent memory, MCP, native skills, trace observability, and self-learning agent claims.",
+      "content_timestamp": "2026-06-04",
+      "evidence": "web-observed GitHub repo page showed 1.1k stars, 141 forks, 8 issues, 0 pull requests, 107 commits, Apache-2.0 license, 21 releases with v0.8.0 latest on 2026-06-04, and continued LightFlow workflow orchestration plus persistent memory, MCP, native skills, trace observability, and self-learning agent claims.",
       "description": "LightAgent is a lightweight Python agent framework that combines persistent memory, MCP integration, native skills, LightSwarm collaboration, and newly surfaced LightFlow workflow orchestration into a small-footprint self-learning runtime."
     },
     {

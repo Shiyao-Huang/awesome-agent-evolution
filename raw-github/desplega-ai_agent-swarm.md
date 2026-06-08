@@ -1,10 +1,10 @@
 ---
 repo: desplega-ai/agent-swarm
 url: https://github.com/desplega-ai/agent-swarm
-content_timestamp: 2026-06-04
+content_timestamp: 2026-06-05
 time_slice: 2026-06
-timestamp_source: web_observed_public_github_page_2026_06_05_1543
-collected_at: 2026-06-05T15:43:00+08:00
+timestamp_source: web_observed_public_github_page_2026_06_08_with_latest_release_relative_3_days_ago
+collected_at: 2026-06-08T17:47:34+08:00
 source: github
 ---
 
@@ -22,19 +22,19 @@ This raw-style public GitHub page capture was refreshed by the hourly public met
 
 - Repository: desplega-ai/agent-swarm
 - URL: https://github.com/desplega-ai/agent-swarm
-- Stars: 505
+- Stars: 508
 - Forks: 56
-- Commits: 1542
+- Commits: 1561
 - Issues: 1
-- Pull requests: 5
+- Pull requests: 9
 - License: MIT
 - Primary language / stack signal: TypeScript/Docker/MCP/Lead-Worker Swarm
-- Latest visible dated signal: 2026-06-04
-- Collection timestamp: 2026-06-05T15:43:00+08:00
+- Latest visible dated signal: release badge showed "3 days ago" on 2026-06-08 page view (mapped conservatively to 2026-06-05)
+- Collection timestamp: 2026-06-08T17:47:34+08:00
 
 ## Visible README / page excerpts
 
-- The public GitHub page showed 505 stars, 56 forks, 1 issue, 5 pull requests, 1,542 commits, and 89 releases with v1.91.0 latest on 2026-06-04.
+- The public GitHub page showed 508 stars, 56 forks, 1 issue, 9 pull requests, 1,561 commits, and 117 releases with v1.93.0 marked latest.
 - The README frames Agent Swarm as a lead-worker system that turns Slack, GitHub, GitLab, Linear, Jira, email, and API inputs into autonomous multi-agent work.
 - Visible highlights include compounding memory, persistent identity, HITL workflow gates, Docker worker isolation, MCP tools, pages, dashboards, and recurring tasks.
 - The documentation links expose playbooks, architecture notes, deployment guides, and CLI flows rather than a single prompt demo.
