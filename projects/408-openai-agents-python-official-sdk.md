@@ -4,13 +4,13 @@
 |---|---|
 | Repository | [openai/openai-agents-python](https://github.com/openai/openai-agents-python) |
 | Category | Official OpenAI Agents SDK Runtime Baseline |
-| Stars / forks snapshot | 26705 / 4110 |
+| Stars / forks snapshot | 26800 / 4200 |
 | Issues / PRs snapshot | 45 / 68 |
 | Language | Python |
 | License | MIT |
-| Latest visible dated signal | 2026-05-26 |
+| Latest visible dated signal | 2026-06-08 |
 | Raw capture | raw-github/openai_openai-agents-python.md |
-| Updated by | hourly public metadata update, 2026-06-08 12:26 +0800 |
+| Updated by | hourly public metadata update, 2026-06-08 23:45 +0800 |
 
 ## 1. Role in Self Evolve
 
@@ -22,7 +22,7 @@ define agents plus tools and handoffs -> trace runs and guardrails -> keep sessi
 
 ## 3. Evidence Path
 
-web-observed GitHub repo page showed 26,705 stars, 4,110 forks, 45 issues, 68 pull requests, MIT license, and latest visible update on 2026-05-26; README navigation exposed models, tools, handoffs, guardrails, tracing, MCP, voice, sessions, agents-as-tools, and context-management docs. This iteration keeps freshness honest: the snapshot comes from the public GitHub page observed on 2026-05-26, while shell GitHub API access remained blocked in this workspace.
+web-observed GitHub repo page showed 26.8k stars, 4.2k forks, 45 issues, 68 pull requests, MIT license, and a repository-page "Updated Jun 8, 2026" signal; README navigation exposed models, tools, handoffs, guardrails, tracing, MCP, voice, sessions, agents-as-tools, and context-management docs. This iteration keeps freshness honest: the snapshot comes from the public GitHub page observed on 2026-06-08, while shell GitHub API access remained blocked in this workspace.
 
 ## 4. Teaching Use
 

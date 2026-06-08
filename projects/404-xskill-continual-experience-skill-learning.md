@@ -4,13 +4,13 @@
 |---|---|
 | Repository | [XSkill-Agent/XSkill](https://github.com/XSkill-Agent/XSkill) |
 | Category | Continual Experience and Skill Learning Paper Code |
-| Stars / forks snapshot | 216 / 27 |
+| Stars / forks snapshot | 218 / 27 |
 | Commits / issues / PRs snapshot | 16 / 1 / 0 |
 | Language | Python |
 | License | MIT |
-| Latest visible dated signal | 2026-05-01 |
+| Latest visible dated signal | 2026-06-08 |
 | Raw capture | raw-github/xskill-agent_xskill.md |
-| Updated by | hourly public metadata update, 2026-06-05 15:43 +0800 |
+| Updated by | hourly public metadata update, 2026-06-08 23:45 +0800 |
 
 ## 1. Role in Self Evolve
 
@@ -22,7 +22,7 @@ collect multimodal trajectories -> summarize and critique experiences -> consoli
 
 ## 3. Evidence Path
 
-web-observed GitHub repo page showed 216 stars, 27 forks, 1 issue, 0 pull requests, 16 commits, MIT license, no releases, ICML 2026 acceptance news dated 2026-05-01, and a runtime-generated memory_bank plus benchmark/eval folders covering VisualToolBench, TIR-Bench, MMSearch-Plus, AgentVista, and MMBrowseComp. This iteration keeps freshness honest: the snapshot comes from the public GitHub page observed on 2026-05-01, while shell GitHub API access remained blocked in this workspace.
+web-observed GitHub repo page showed 218 stars, 27 forks, 1 issue, 0 pull requests, 16 commits, MIT license, no releases, and a repository-page "Updated Jun 8, 2026" signal, plus a runtime-generated memory_bank and benchmark/eval folders covering VisualToolBench, TIR-Bench, MMSearch-Plus, AgentVista, and MMBrowseComp. This iteration keeps freshness honest: the snapshot comes from the public GitHub page observed on 2026-06-08, while shell GitHub API access remained blocked in this workspace.
 
 ## 4. Teaching Use
 

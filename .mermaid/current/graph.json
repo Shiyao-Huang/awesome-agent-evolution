@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-08T17:47:34+08:00",
+  "generated_at": "2026-06-08T23:45:58+08:00",
   "truth_source": ".mermaid/current/graph.json",
   "nodes": [
     {
@@ -22,7 +22,10 @@
         "raw-github/desplega-ai_agent-swarm.md",
         "raw-github/vrsen_agency-swarm.md",
         "raw-github/aq-medai_medmemorybench.md",
-        "raw-github/wanxingai_lightagent.md"
+        "raw-github/wanxingai_lightagent.md",
+        "raw-github/openai_openai-agents-python.md",
+        "raw-github/openai_openai-agents-js.md",
+        "raw-github/xskill-agent_xskill.md"
       ]
     },
     {
@@ -83,7 +86,10 @@
         "projects/405-agent-swarm-compounding-lead-worker-runtime.md",
         "projects/27-agency-swarm.md",
         "projects/407-medmemorybench-agent-memory-benchmark.md",
-        "projects/139-lightagent-memory-mcp-skills.md"
+        "projects/139-lightagent-memory-mcp-skills.md",
+        "projects/408-openai-agents-python-official-sdk.md",
+        "projects/409-openai-agents-js-official-sdk.md",
+        "projects/404-xskill-continual-experience-skill-learning.md"
       ]
     },
     {
@@ -98,6 +104,9 @@
         "site/public/reports/projects/27-agency-swarm.md",
         "site/public/reports/projects/407-medmemorybench-agent-memory-benchmark.md",
         "site/public/reports/projects/139-lightagent-memory-mcp-skills.md",
+        "site/public/reports/projects/408-openai-agents-python-official-sdk.md",
+        "site/public/reports/projects/409-openai-agents-js-official-sdk.md",
+        "site/public/reports/projects/404-xskill-continual-experience-skill-learning.md",
         "README.md",
         "README-ZH.md",
         "README-EN.md",
@@ -110,7 +119,7 @@
       "layer": "work",
       "status": "updated",
       "paths": [
-        "work/research/hourly-public-metadata-update-2026-06-08-1747.md"
+        "work/research/hourly-public-metadata-update-2026-06-08-2345.md"
       ]
     }
   ],
@@ -170,9 +179,9 @@
         "site_report": "site/public/reports/projects/406-composio-agent-orchestrator-coding-swarm.md",
         "stars": 7700,
         "forks": 1100,
-        "issues": 56,
-        "pull_requests": 14,
-        "last_visible_commit_date": "2026-06-01",
+        "issues": 46,
+        "pull_requests": 7,
+        "last_visible_commit_date": "2026-06-08",
         "theme": "harness"
       },
       {
@@ -180,11 +189,11 @@
         "raw_capture": "raw-github/desplega-ai_agent-swarm.md",
         "report": "projects/405-agent-swarm-compounding-lead-worker-runtime.md",
         "site_report": "site/public/reports/projects/405-agent-swarm-compounding-lead-worker-runtime.md",
-        "stars": 508,
-        "forks": 56,
+        "stars": 513,
+        "forks": 58,
         "issues": 1,
-        "pull_requests": 9,
-        "last_visible_commit_date": "2026-06-05",
+        "pull_requests": 2,
+        "last_visible_commit_date": "2026-06-08",
         "theme": "framework"
       },
       {
@@ -222,6 +231,42 @@
         "pull_requests": 0,
         "last_visible_commit_date": "2026-06-04",
         "theme": "memory"
+      },
+      {
+        "repo": "openai/openai-agents-python",
+        "raw_capture": "raw-github/openai_openai-agents-python.md",
+        "report": "projects/408-openai-agents-python-official-sdk.md",
+        "site_report": "site/public/reports/projects/408-openai-agents-python-official-sdk.md",
+        "stars": 26800,
+        "forks": 4200,
+        "issues": 45,
+        "pull_requests": 68,
+        "last_visible_commit_date": "2026-06-08",
+        "theme": "harness"
+      },
+      {
+        "repo": "openai/openai-agents-js",
+        "raw_capture": "raw-github/openai_openai-agents-js.md",
+        "report": "projects/409-openai-agents-js-official-sdk.md",
+        "site_report": "site/public/reports/projects/409-openai-agents-js-official-sdk.md",
+        "stars": 3200,
+        "forks": 796,
+        "issues": 34,
+        "pull_requests": 20,
+        "last_visible_commit_date": "2026-06-08",
+        "theme": "harness"
+      },
+      {
+        "repo": "XSkill-Agent/XSkill",
+        "raw_capture": "raw-github/xskill-agent_xskill.md",
+        "report": "projects/404-xskill-continual-experience-skill-learning.md",
+        "site_report": "site/public/reports/projects/404-xskill-continual-experience-skill-learning.md",
+        "stars": 218,
+        "forks": 27,
+        "issues": 1,
+        "pull_requests": 0,
+        "last_visible_commit_date": "2026-06-08",
+        "theme": "skill"
       }
     ],
     "blockers": [

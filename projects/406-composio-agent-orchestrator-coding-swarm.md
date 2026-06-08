@@ -5,12 +5,12 @@
 | Repository | [AgentWrapper/agent-orchestrator](https://github.com/AgentWrapper/agent-orchestrator) |
 | Category | Production Coding-Agent Swarm Orchestrator |
 | Stars / forks snapshot | 7700 / 1100 |
-| Commits / issues / PRs snapshot | 1260 / 56 / 14 |
+| Commits / issues / PRs snapshot | 1264 / 46 / 7 |
 | Language | TypeScript |
 | License | MIT |
-| Latest visible dated signal | 2026-06-01 |
+| Latest visible dated signal | 2026-06-08 |
 | Raw capture | raw-github/composiohq_agent-orchestrator.md |
-| Updated by | hourly public metadata update, 2026-06-08 17:47 +0800 |
+| Updated by | hourly public metadata update, 2026-06-08 23:45 +0800 |
 
 ## 1. Role in Self Evolve
 
@@ -22,7 +22,7 @@ route coding tasks into specialized agents -> isolate changes in Git worktrees -
 
 ## 3. Evidence Path
 
-The public GitHub page on 2026-06-08 redirected the legacy `ComposioHQ/agent-orchestrator` URL to `AgentWrapper/agent-orchestrator`, then showed 7.7k stars, 1.1k forks, 1,260 commits, MIT license, 56 issues, and 14 pull requests. The public page still positions the project as a production orchestrator for agent swarms rather than a single demo loop, and this run keeps freshness honest because shell GitHub API access remained blocked.
+The public GitHub page on 2026-06-08 redirected the legacy `ComposioHQ/agent-orchestrator` URL to `AgentWrapper/agent-orchestrator`, then showed 7.7k stars, 1.1k forks, 1,264 commits, MIT license, 46 issues, 7 pull requests, and a repository-page "Updated Jun 8, 2026" signal. The public page still positions the project as a production orchestrator for agent swarms rather than a single demo loop, and this run keeps freshness honest because shell GitHub API access remained blocked.
 
 ## 4. Teaching Use
 

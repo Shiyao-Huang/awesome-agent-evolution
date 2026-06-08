@@ -4,13 +4,13 @@
 |---|---|
 | Repository | [desplega-ai/agent-swarm](https://github.com/desplega-ai/agent-swarm) |
 | Category | Compounding Lead-Worker Agent Runtime |
-| Stars / forks snapshot | 508 / 56 |
-| Commits / issues / PRs snapshot | 1561 / 1 / 9 |
+| Stars / forks snapshot | 513 / 58 |
+| Commits / issues / PRs snapshot | 1568 / 1 / 2 |
 | Language | TypeScript |
 | License | MIT |
-| Latest visible dated signal | 2026-06-05 (derived from "3 days ago" release badge on 2026-06-08 page view) |
+| Latest visible dated signal | 2026-06-08 |
 | Raw capture | raw-github/desplega-ai_agent-swarm.md |
-| Updated by | hourly public metadata update, 2026-06-08 17:47 +0800 |
+| Updated by | hourly public metadata update, 2026-06-08 23:45 +0800 |
 
 ## 1. Role in Self Evolve
 
@@ -22,7 +22,7 @@ ingest tasks from external channels -> lead agent plans and delegates -> workers
 
 ## 3. Evidence Path
 
-web-observed GitHub repo page showed 508 stars, 56 forks, 1 issue, 9 pull requests, 1,561 commits, MIT license, and 117 releases with v1.93.0 marked latest, plus lead/worker Docker orchestration, MCP API, compounding memory, HITL workflow gates, and skills-based swarm operations. The release badge was relative-only ("3 days ago") on the 2026-06-08 page view, so the dated signal is recorded conservatively rather than claimed as API-verified.
+web-observed GitHub repo page showed 513 stars, 58 forks, 1 issue, 2 pull requests, 1,568 commits, MIT license, 117 releases with v1.93.0 marked latest, and a repository-page "Updated Jun 8, 2026" signal, plus lead/worker Docker orchestration, MCP API, compounding memory, HITL workflow gates, and skills-based swarm operations.
 
 ## 4. Teaching Use
 

@@ -1,10 +1,10 @@
 ---
 repo: XSkill-Agent/XSkill
 url: https://github.com/XSkill-Agent/XSkill
-content_timestamp: 2026-05-01
-time_slice: 2026-05
-timestamp_source: web_observed_public_github_page_2026_06_05_1543
-collected_at: 2026-06-05T15:43:00+08:00
+content_timestamp: 2026-06-08
+time_slice: 2026-06
+timestamp_source: web_observed_public_github_page_2026_06_08
+collected_at: 2026-06-08T23:45:58+08:00
 source: github
 ---
 
@@ -22,19 +22,19 @@ This raw-style public GitHub page capture was refreshed by the hourly public met
 
 - Repository: XSkill-Agent/XSkill
 - URL: https://github.com/XSkill-Agent/XSkill
-- Stars: 216
+- Stars: 218
 - Forks: 27
 - Commits: 16
 - Issues: 1
 - Pull requests: 0
 - License: MIT
 - Primary language / stack signal: Python/Multimodal Agent/Memory Bank/Benchmark Eval
-- Latest visible dated signal: 2026-05-01
-- Collection timestamp: 2026-06-05T15:43:00+08:00
+- Latest visible dated signal: 2026-06-08
+- Collection timestamp: 2026-06-08T23:45:58+08:00
 
 ## Visible README / page excerpts
 
-- The public GitHub page showed 216 stars, 27 forks, 1 issue, 16 commits, no releases, and explicit ICML 2026 acceptance news dated 2026-05-01.
+- The public GitHub page showed 218 stars, 27 forks, 1 issue, 16 commits, no releases, and an "Updated Jun 8, 2026" signal on the repository page.
 - Visible repository structure includes benchmark, eval, exskill, memory_bank, output, and logs folders rather than only a paper PDF pointer.
 - The README describes a two-phase loop: accumulation of skills and experiences from trajectories, then retrieval and injection during inference.
 - The overview names five benchmark suites and claims stronger zero-shot cross-task transferability over baselines.

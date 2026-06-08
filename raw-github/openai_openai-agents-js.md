@@ -1,10 +1,10 @@
 ---
 repo: openai/openai-agents-js
 url: https://github.com/openai/openai-agents-js
-content_timestamp: 2026-05-26
-time_slice: 2026-05
+content_timestamp: 2026-06-08
+time_slice: 2026-06
 timestamp_source: web_observed_public_github_page_2026_06_08
-collected_at: 2026-06-08T12:26:00+08:00
+collected_at: 2026-06-08T23:45:58+08:00
 source: github
 ---
 
@@ -22,19 +22,20 @@ This raw-style public GitHub page capture was refreshed by the hourly public met
 
 - Repository: openai/openai-agents-js
 - URL: https://github.com/openai/openai-agents-js
-- Stars: 3132
-- Forks: 788
+- Stars: 3200
+- Forks: 796
 - Issues: 34
-- Pull requests: 21
+- Pull requests: 20
 - License: MIT
 - Primary language / stack signal: TypeScript/OpenAI Agents SDK/Tracing/Guardrails/Handoffs
-- Latest visible dated signal: 2026-05-26
-- Collection timestamp: 2026-06-08T12:26:00+08:00
+- Latest visible dated signal: 2026-06-08
+- Collection timestamp: 2026-06-08T23:45:58+08:00
 
 ## Visible README / page excerpts
 
 - The public repo page described a framework for building agentic AI apps in TypeScript and JavaScript with the OpenAI Responses API and Chat Completions.
 - Visible docs tabs exposed tools, handoffs, guardrails, agents-as-tools, sessions, tracing, MCP, realtime, voice, and React integrations.
+- The public repository page showed 3.2k stars, 796 forks, 34 issues, 20 pull requests, and "Updated Jun 8, 2026".
 - This makes the JS package the canonical upstream baseline for frontend-adjacent or full-stack agent orchestrators that claim OpenAI Agents SDK compatibility.
 - Freshness remains web-observed rather than GitHub-API verified because shell API access and local gh auth are blocked in this workspace.
 

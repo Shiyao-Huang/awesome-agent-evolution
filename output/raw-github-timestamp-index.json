@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-08T00:00:00+08:00",
+  "generated_at": "2026-06-09T00:00:00+08:00",
   "total": 686,
   "updated_files": 686,
   "unknown_content_timestamp": 100,
@@ -1106,10 +1106,10 @@
       "repo": "AgentWrapper/agent-orchestrator",
       "url": "https://github.com/AgentWrapper/agent-orchestrator",
       "file": "raw-github/composiohq_agent-orchestrator.md",
-      "content_timestamp": "2026-06-01",
-      "collected_at": "2026-06-08T17:47:34+08:00",
+      "content_timestamp": "2026-06-08",
+      "collected_at": "2026-06-08T23:45:58+08:00",
       "time_slice": "2026-06",
-      "timestamp_source": "web_observed_public_github_page_2026_06_08_with_redirect_to_agentwrapper_and_prior_commits_main_2026_06_01"
+      "timestamp_source": "web_observed_public_github_page_2026_06_08_redirected_agentwrapper_repo"
     },
     {
       "repo": "ComposioHQ/awesome-agent-clis",
@@ -1286,10 +1286,10 @@
       "repo": "desplega-ai/agent-swarm",
       "url": "https://github.com/desplega-ai/agent-swarm",
       "file": "raw-github/desplega-ai_agent-swarm.md",
-      "content_timestamp": "2026-06-05",
-      "collected_at": "2026-06-08T17:47:34+08:00",
+      "content_timestamp": "2026-06-08",
+      "collected_at": "2026-06-08T23:45:58+08:00",
       "time_slice": "2026-06",
-      "timestamp_source": "web_observed_public_github_page_2026_06_08_with_latest_release_relative_3_days_ago"
+      "timestamp_source": "web_observed_public_github_page_2026_06_08"
     },
     {
       "repo": "developzir/gepa-mcp",
@@ -3698,18 +3698,18 @@
       "repo": "openai/openai-agents-js",
       "url": "https://github.com/openai/openai-agents-js",
       "file": "raw-github/openai_openai-agents-js.md",
-      "content_timestamp": "2026-05-26",
-      "collected_at": "2026-06-08T12:26:00+08:00",
-      "time_slice": "2026-05",
+      "content_timestamp": "2026-06-08",
+      "collected_at": "2026-06-08T23:45:58+08:00",
+      "time_slice": "2026-06",
       "timestamp_source": "web_observed_public_github_page_2026_06_08"
     },
     {
       "repo": "openai/openai-agents-python",
       "url": "https://github.com/openai/openai-agents-python",
       "file": "raw-github/openai_openai-agents-python.md",
-      "content_timestamp": "2026-05-26",
-      "collected_at": "2026-06-08T12:26:00+08:00",
-      "time_slice": "2026-05",
+      "content_timestamp": "2026-06-08",
+      "collected_at": "2026-06-08T23:45:58+08:00",
+      "time_slice": "2026-06",
       "timestamp_source": "web_observed_public_github_page_2026_06_08"
     },
     {
@@ -5795,10 +5795,10 @@
       "repo": "XSkill-Agent/XSkill",
       "url": "https://github.com/XSkill-Agent/XSkill",
       "file": "raw-github/xskill-agent_xskill.md",
-      "content_timestamp": "2026-05-01",
-      "collected_at": "2026-06-05T15:43:00+08:00",
-      "time_slice": "2026-05",
-      "timestamp_source": "web_observed_public_github_page_2026_06_05_1543"
+      "content_timestamp": "2026-06-08",
+      "collected_at": "2026-06-08T23:45:58+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "web_observed_public_github_page_2026_06_08"
     },
     {
       "repo": "xuchen-li/llm-arxiv-daily",

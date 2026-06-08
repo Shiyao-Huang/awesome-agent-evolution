@@ -2,7 +2,6 @@
 repo: AQ-MedAI/MedMemoryBench
 url: https://github.com/AQ-MedAI/MedMemoryBench
 content_timestamp: 2026-06-06
-time_slice: 2026-05
 time_slice: 2026-06
 timestamp_source: web_observed_public_github_page_2026_06_08_with_latest_release_2026_06_06
 collected_at: 2026-06-08T17:47:34+08:00
