@@ -4,13 +4,13 @@
 |---|---|
 | Repository | [openai/openai-agents-python](https://github.com/openai/openai-agents-python) |
 | Category | Official OpenAI Agents SDK Runtime Baseline |
-| Stars / forks snapshot | 27000 / 4200 |
-| Issues / PRs snapshot | 43 / 89 |
+| Stars / forks snapshot | 27,111 / 4,185 |
+| Commits / issues / PRs snapshot | 1,603 / 45 / 99 |
 | Language | Python |
 | License | MIT |
-| Latest visible dated signal | 2026-06-09 web-observed snapshot |
+| Latest visible dated signal | 2026-06-11 GitHub API snapshot |
 | Raw capture | raw-github/openai_openai-agents-python.md |
-| Updated by | hourly public metadata update, 2026-06-09 10:20 +0800 |
+| Updated by | hourly public metadata update, 2026-06-13 02:15 +0800 |
 
 ## 1. Role in Self Evolve
 
@@ -22,7 +22,7 @@ define agents plus tools and handoffs -> trace runs and guardrails -> keep sessi
 
 ## 3. Evidence Path
 
-web-observed GitHub repo page showed 27k stars, 4.2k forks, 1,598 commits, 43 issues, and 89 pull requests, while README navigation exposed models, tools, handoffs, guardrails, tracing, MCP, voice, sessions, agents-as-tools, and context-management docs. This iteration keeps freshness honest: the snapshot comes from the public GitHub page observed on 2026-06-09, while shell GitHub API access remained blocked in this workspace.
+GitHub GraphQL/API snapshot captured via authenticated `gh` on 2026-06-13 showed 27,111 stars, 4,185 forks, 45 open issues, 99 open pull requests, 1,603 commits on `main`, latest push at 2026-06-11T04:10:37Z, MIT license, and latest release `v0.17.5` published on 2026-06-11. The snapshot also showed 102 releases with v0.17.5 latest on 2026-06-11. This run keeps freshness honest because it uses authenticated GitHub API data rather than stale local summaries.
 
 ## 4. Teaching Use
 
@@ -30,4 +30,4 @@ Use this card to explain Official OpenAI Agents SDK Runtime Baseline: it gives t
 
 ## 5. Limits
 
-The repository was not cloned or executed in this iteration; no SDK example, agent loop, benchmark, or realtime flow was run locally. Counts and claims are visible public-page signals unless independently revalidated later.
+The repository was not cloned or executed in this iteration; no SDK example, agent loop, benchmark, or realtime flow was run locally. Counts and claims are GitHub API snapshot signals unless independently revalidated later.

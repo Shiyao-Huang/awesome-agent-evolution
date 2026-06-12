@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-12T20:16:23+08:00",
+  "generated_at": "2026-06-13T02:15:12+08:00",
   "rows": [
     {
       "repo": "01-ai/langcrew",
@@ -894,12 +894,12 @@
       "prior_unclassified": "true",
       "final_category": "评测/evaluation",
       "function_tag": "benchmark-eval",
-      "base_theme": "memory",
-      "stack": "Python/Healthcare Memory Benchmark/Longitudinal Clinical Memory Eval",
+      "base_theme": "benchmark",
+      "stack": "Python/Healthcare Memory Benchmark/Longitudinal Evaluation",
       "time_slice": "2026-06",
-      "content_timestamp": "2026-06-09",
-      "evidence": "web-observed GitHub page on 2026-06-09 showed 60 stars, 1 fork, 14 commits, Apache-2.0 license, 0 issues, 0 pull requests, and a latest v1.0 release dated 2026-06-06; README positions MedMemoryBench as a personalized-healthcare benchmark for longitudinal agent memory quality rather than generic retrieval recall",
-      "description": "MedMemoryBench 是面向 personalized healthcare agents 的记忆 benchmark，用长期患者画像、时间线推理和任务成功率检验 memory 是否真正提升高风险场景下的 agent 决策。"
+      "content_timestamp": "2026-06-13",
+      "evidence": "GitHub GraphQL/API snapshot captured via authenticated `gh` on 2026-06-13 showed 60 stars, 1 fork, 0 open issues, 0 open pull requests, 14 commits on `main`, latest push at 2026-05-13T13:26:05Z, Apache-2.0 license, and no GitHub releases.",
+      "description": "MedMemoryBench is a benchmark for agent memory in personalized healthcare, testing whether clinical agents retain, retrieve, and use longitudinal patient context safely and accurately."
     },
     {
       "repo": "Arc-Computer/CL-Bench",
@@ -1834,17 +1834,17 @@
     {
       "repo": "AgentWrapper/agent-orchestrator",
       "url": "https://github.com/AgentWrapper/agent-orchestrator",
-      "stars": "7500",
+      "stars": "7514",
       "prior_category": "-",
       "prior_unclassified": "true",
       "final_category": "框架/framework",
       "function_tag": "framework-runtime",
       "base_theme": "harness",
-      "stack": "TypeScript/Git Worktrees/MCP/Coding-Agent Swarm",
+      "stack": "TypeScript/Swarm Harness/Worktrees/Skills/Memory",
       "time_slice": "2026-06",
-      "content_timestamp": "2026-06-09",
-      "evidence": "web-observed GitHub page on 2026-06-09 still redirected the legacy ComposioHQ URL to AgentWrapper/agent-orchestrator, then showed 7.5k stars, 1k forks, 1,277 commits, MIT license, 476 issues, and 468 pull requests; public README/about position it as a production coding-agent orchestrator with swarms, worktrees, skills, memory, and MCP tools",
-      "description": "Agent Orchestrator 是 production coding-agent swarm harness，把 spec、build、test、review、merge 流程拆给专门化 agents，并用 Git worktrees、skills、memory 和 MCP 执行面串成可审计的工程闭环。"
+      "content_timestamp": "2026-06-13",
+      "evidence": "GitHub GraphQL/API snapshot captured via authenticated `gh` on 2026-06-13 showed the canonical redirected repository `AgentWrapper/agent-orchestrator` at 7,514 stars, 1,025 forks, 478 open issues, 474 open pull requests, 1,277 commits on `main`, latest push at 2026-06-09T00:56:58Z, MIT license, and latest nightly release published on 2026-06-08.",
+      "description": "Agent Orchestrator is a production coding-agent swarm that runs spec, build, test, review, and merge flows through Git worktrees, skills, memory, and MCP-connected execution."
     },
     {
       "repo": "ComposioHQ/awesome-agent-clis",
@@ -2142,8 +2142,8 @@
       "base_theme": "framework",
       "stack": "TypeScript/Docker/MCP/Lead-Worker Swarm",
       "time_slice": "2026-06",
-      "content_timestamp": "2026-06-12",
-      "evidence": "web-observed GitHub page on 2026-06-12 showed 520 stars, 57 forks, 1 issue, 2 pull requests, 1,619 commits, MIT license, and the same lead/worker Docker orchestration, MCP API, compounding memory, HITL workflow gates, and skills-based swarm operations described in the 2026-06-09 packet.",
+      "content_timestamp": "2026-06-13",
+      "evidence": "GitHub GraphQL/API snapshot captured via authenticated `gh` on 2026-06-13 showed 520 stars, 57 forks, 1 open issue, 2 open pull requests, 1,624 commits on `main`, latest push at 2026-06-12T17:54:36Z, MIT license, and latest release `v1.97.0` published on 2026-06-12.",
       "description": "Agent Swarm is a production-oriented lead-worker runtime that routes work from Slack/GitHub/Email/API into Dockerized agent workers, persists memory and identity, and exposes MCP, workflows, pages, and recurring task patterns as reusable swarm infrastructure."
     },
     {
@@ -6154,32 +6154,32 @@
     {
       "repo": "openai/openai-agents-js",
       "url": "https://github.com/openai/openai-agents-js",
-      "stars": "3200",
+      "stars": "3203",
       "prior_category": "-",
       "prior_unclassified": "true",
       "final_category": "框架/framework",
       "function_tag": "framework-runtime",
-      "base_theme": "harness",
+      "base_theme": "framework",
       "stack": "TypeScript/OpenAI Agents SDK/Tracing/Guardrails/Handoffs",
       "time_slice": "2026-06",
-      "content_timestamp": "2026-06-09",
-      "evidence": "web-observed GitHub repo page on 2026-06-09 showed 3.2k stars, 803 forks, 931 commits, 35 issues, and 25 pull requests; README navigation exposed agents, tools, handoffs, guardrails, realtime, voice, tracing, sessions, MCP, and advanced usage docs.",
-      "description": "OpenAI Agents SDK (JS) 是官方 TypeScript orchestration baseline：把 tools、handoffs、guardrails、realtime、tracing 和 sessions 作为前端/全栈 agent runtime 的上游标准面。"
+      "content_timestamp": "2026-06-13",
+      "evidence": "GitHub GraphQL/API snapshot captured via authenticated `gh` on 2026-06-13 showed 3,203 stars, 809 forks, 35 open issues, 29 open pull requests, 933 commits on `main`, latest push at 2026-06-12T08:33:10Z, MIT license, and latest release `v0.11.6` published on 2026-05-29.",
+      "description": "OpenAI Agents SDK (JS) is the official TypeScript baseline for building agent orchestration loops with tools, handoffs, guardrails, realtime hooks, and tracing."
     },
     {
       "repo": "openai/openai-agents-python",
       "url": "https://github.com/openai/openai-agents-python",
-      "stars": "27000",
+      "stars": "27111",
       "prior_category": "-",
       "prior_unclassified": "true",
       "final_category": "框架/framework",
       "function_tag": "framework-runtime",
-      "base_theme": "harness",
+      "base_theme": "framework",
       "stack": "Python/OpenAI Agents SDK/Tracing/Guardrails/Handoffs",
       "time_slice": "2026-06",
-      "content_timestamp": "2026-06-09",
-      "evidence": "web-observed GitHub repo page on 2026-06-09 showed 27k stars, 4.2k forks, 1,598 commits, 43 issues, and 89 pull requests; README navigation exposed models, tools, handoffs, guardrails, tracing, MCP, voice, sessions, agents-as-tools, and context-management docs.",
-      "description": "OpenAI Agents SDK (Python) 是官方 Python orchestration baseline：把 handoffs、tools、guardrails、tracing 和 sessions 作为上游标准面，供 downstream swarm/harness/self-improvement 系统对照。"
+      "content_timestamp": "2026-06-13",
+      "evidence": "GitHub GraphQL/API snapshot captured via authenticated `gh` on 2026-06-13 showed 27,111 stars, 4,185 forks, 45 open issues, 99 open pull requests, 1,603 commits on `main`, latest push at 2026-06-11T04:10:37Z, MIT license, and latest release `v0.17.5` published on 2026-06-11.",
+      "description": "OpenAI Agents SDK (Python) is the official Python baseline for multi-agent orchestration with handoffs, tool calls, guardrails, tracing, and session state."
     },
     {
       "repo": "openai/skills",
@@ -9349,7 +9349,7 @@
     {
       "repo": "VRSEN/agency-swarm",
       "url": "https://github.com/VRSEN/agency-swarm",
-      "stars": "4400",
+      "stars": "4445",
       "prior_category": "-",
       "prior_unclassified": "true",
       "final_category": "框架/framework",
@@ -9357,8 +9357,8 @@
       "base_theme": "framework",
       "stack": "Python/OpenAI Agents SDK/Agency CLI/State Persistence",
       "time_slice": "2026-06",
-      "content_timestamp": "2026-06-04",
-      "evidence": "web-observed GitHub repo page showed 4.4k stars, 1.2k forks, 1 issue, 3 pull requests, 2,526 commits, MIT license, 67 releases with v1.10.3 latest on 2026-06-04, and explicit positioning as a structured orchestration layer built on the OpenAI Agents SDK with communication flows and state persistence callbacks.",
+      "content_timestamp": "2026-06-13",
+      "evidence": "GitHub GraphQL/API snapshot captured via authenticated `gh` on 2026-06-13 showed 4,445 stars, 1,058 forks, 0 open issues, 6 open pull requests, 2,545 commits on `main`, latest push at 2026-06-12T00:13:04Z, MIT license, and latest release `v1.10.1` published on 2026-06-11.",
       "description": "Agency Swarm is a mature Python orchestration framework that layers role-aware communication flows, type-safe tools, thread persistence, and terminal/web demos on top of the OpenAI Agents SDK."
     },
     {
@@ -9379,16 +9379,16 @@
     {
       "repo": "wanxingai/LightAgent",
       "url": "https://github.com/wanxingai/LightAgent",
-      "stars": "1100",
+      "stars": "1132",
       "prior_category": "-",
       "prior_unclassified": "true",
       "final_category": "框架/framework",
       "function_tag": "framework-runtime",
-      "base_theme": "framework",
+      "base_theme": "memory",
       "stack": "Python/MCP/mem0/Agent Skills/LightFlow",
       "time_slice": "2026-06",
-      "content_timestamp": "2026-06-04",
-      "evidence": "web-observed GitHub repo page showed 1.1k stars, 141 forks, 8 issues, 0 pull requests, 107 commits, Apache-2.0 license, 21 releases with v0.8.0 latest on 2026-06-04, and continued LightFlow workflow orchestration plus persistent memory, MCP, native skills, trace observability, and self-learning agent claims.",
+      "content_timestamp": "2026-06-13",
+      "evidence": "GitHub GraphQL/API snapshot captured via authenticated `gh` on 2026-06-13 showed 1,132 stars, 143 forks, 8 open issues, 0 open pull requests, 107 commits on `main`, latest push at 2026-06-05T15:00:09Z, Apache-2.0 license, and latest release `LightAgent v0.8.0` published on 2026-06-05.",
       "description": "LightAgent is a lightweight Python agent framework that combines persistent memory, MCP integration, native skills, LightSwarm collaboration, and newly surfaced LightFlow workflow orchestration into a small-footprint self-learning runtime."
     },
     {
@@ -9649,16 +9649,16 @@
     {
       "repo": "XSkill-Agent/XSkill",
       "url": "https://github.com/XSkill-Agent/XSkill",
-      "stars": "218",
+      "stars": "221",
       "prior_category": "-",
       "prior_unclassified": "true",
       "final_category": "论文代码/paper-code",
-      "function_tag": "benchmark-eval",
+      "function_tag": "paper-code",
       "base_theme": "skill",
       "stack": "Python/Multimodal Agent/Memory Bank/Benchmark Eval",
       "time_slice": "2026-06",
-      "content_timestamp": "2026-06-08",
-      "evidence": "web-observed GitHub repo page showed 218 stars, 27 forks, 1 issue, 0 pull requests, 16 commits, MIT license, no releases, and a repository-page Updated Jun 8 2026 signal, plus a runtime-generated memory_bank and benchmark/eval folders covering VisualToolBench, TIR-Bench, MMSearch-Plus, AgentVista, and MMBrowseComp.",
+      "content_timestamp": "2026-06-13",
+      "evidence": "GitHub GraphQL/API snapshot captured via authenticated `gh` on 2026-06-13 showed 221 stars, 27 forks, 1 open issue, 0 open pull requests, 16 commits on `main`, latest push at 2026-05-13T03:56:12Z, no GitHub releases, and no SPDX license value returned by the API.",
       "description": "XSkill is a multimodal continual-learning paper implementation that extracts task-level skills and action-level experiences from agent trajectories, stores them in a memory bank, and re-injects them during inference across benchmark suites."
     },
     {

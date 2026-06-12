@@ -4,13 +4,13 @@
 |---|---|
 | Repository | [VRSEN/agency-swarm](https://github.com/VRSEN/agency-swarm) |
 | Category | OpenAI Agents SDK Swarm Orchestrator |
-| Stars / forks snapshot | 4400 / 1200 |
-| Commits / issues / PRs snapshot | 2526 / 1 / 3 |
+| Stars / forks snapshot | 4,445 / 1,058 |
+| Commits / issues / PRs snapshot | 2,545 / 0 / 6 |
 | Language | Python |
 | License | MIT |
-| Latest visible dated signal | 2026-06-04 |
+| Latest visible dated signal | 2026-06-12 GitHub API snapshot |
 | Raw capture | raw-github/vrsen_agency-swarm.md |
-| Updated by | hourly public metadata update, 2026-06-08 17:47 +0800 |
+| Updated by | hourly public metadata update, 2026-06-13 02:15 +0800 |
 
 ## 1. Role in Self Evolve
 
@@ -22,7 +22,7 @@ define agents and directional communication flows -> attach function tools and p
 
 ## 3. Evidence Path
 
-web-observed GitHub repo page showed 4.4k stars, 1.2k forks, 1 issue, 3 pull requests, 2,526 commits, MIT license, 67 releases with v1.10.3 latest on 2026-06-04, and explicit positioning as a structured orchestration layer built on the OpenAI Agents SDK with communication flows and state persistence callbacks. This iteration keeps freshness honest: the snapshot comes from the public GitHub page observed on 2026-06-08, while shell GitHub API access remained blocked in this workspace.
+GitHub GraphQL/API snapshot captured via authenticated `gh` on 2026-06-13 showed 4,445 stars, 1,058 forks, 0 open issues, 6 open pull requests, 2,545 commits on `main`, latest push at 2026-06-12T00:13:04Z, MIT license, and latest release `v1.10.1` published on 2026-06-11. The snapshot also showed 64 releases with v1.10.1 latest on 2026-06-11. This run keeps freshness honest because it uses authenticated GitHub API data rather than stale local summaries.
 
 ## 4. Teaching Use
 
@@ -30,4 +30,4 @@ Use this card to explain OpenAI Agents SDK Swarm Orchestrator: it shows how swar
 
 ## 5. Limits
 
-The repository was not cloned in this iteration; no benchmark run, workflow execution, or agent loop experiment was executed. Counts and claims are visible public-page signals unless independently revalidated later.
+The repository was not cloned in this iteration; no benchmark run, workflow execution, or agent loop experiment was executed. Counts and claims are GitHub API snapshot signals unless independently revalidated later.

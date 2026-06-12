@@ -60,9 +60,9 @@ flowchart LR
   SURVEY --> SITE["site + graph + reports"]
 ```
 
-## Recent Evidence Updates (2026-06-12)
+## Recent Evidence Updates (2026-06-13)
 
-This update is not about adding a new batch of repositories. It recalibrates the public number surface for the production swarm, coding-agent harness, safety-sensitive memory benchmark, OpenAI Agents SDK orchestrator, official OpenAI Agents SDK Python/JS baselines, continual skill-memory paper code, and lightweight memory/MCP/skill runtime against GitHub pages observed on 2026-06-12.
+This update is not about adding a new batch of repositories. It recalibrates the public number surface for the production swarm, coding-agent harness, safety-sensitive memory benchmark, OpenAI Agents SDK orchestrator, official OpenAI Agents SDK Python/JS baselines, continual skill-memory paper code, and lightweight memory/MCP/skill runtime against authenticated GitHub API snapshots captured on 2026-06-13.
 
 | Repository | Evidence gap filled | Why it matters | Evidence state |
 |---|---|---|---|
@@ -73,7 +73,7 @@ This update is not about adding a new batch of repositories. It recalibrates the
 | [openai/openai-agents-js](https://github.com/openai/openai-agents-js) | Official TypeScript Agents SDK baseline | It fills the canonical frontend/full-stack orchestration baseline, helping separate what comes from the SDK itself versus what downstream frameworks add around memory, workflow, or realtime wrappers. | [KNOWN] official-repo/source-scoped; JS/runtime capability still needs runs/examples review. |
 | [XSkill-Agent/XSkill](https://github.com/XSkill-Agent/XSkill) | Continual skill-memory benchmarked paper code | It fills the layer where skills and experiences are accumulated, stored, retrieved, and reused on benchmarks instead of being described only as a continual-learning idea. | [KNOWN] paper-code/source-scoped; benchmark claims are not reproduced by this site. |
 | [AQ-MedAI/MedMemoryBench](https://github.com/AQ-MedAI/MedMemoryBench) | Safety-sensitive longitudinal memory benchmark | It moves memory evaluation from generic recall toward personalized healthcare settings where remembering the right longitudinal context matters more than simply remembering more. | [KNOWN] benchmark-repo/source-scoped; medical setting claims need safety/evaluation review. |
-| [wanxingai/LightAgent](https://github.com/wanxingai/LightAgent) | Lightweight memory/MCP/skill runtime refresh | It refreshes the lightweight runtime line with current public evidence for LightFlow, native skills, persistent memory, and trace observability. | [KNOWN] repo snapshot/source-scoped; runtime claims still need tests/logs review. |
+| [wanxingai/LightAgent](https://github.com/wanxingai/LightAgent) | Lightweight memory/MCP/skill runtime refresh | It refreshes the lightweight runtime line with the 2026-06-05 public release/API evidence for LightFlow, native skills, persistent memory, and trace observability. | [KNOWN] repo snapshot/source-scoped; runtime claims still need tests/logs review. |
 
 ## Core Insight
 

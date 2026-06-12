@@ -8,9 +8,9 @@
 | Commits / issues / PRs snapshot | 14 / 0 / 0 |
 | Language | Python |
 | License | Apache-2.0 |
-| Latest visible dated signal | 2026-06-06 |
+| Latest visible dated signal | 2026-05-13 GitHub API snapshot |
 | Raw capture | raw-github/aq-medai_medmemorybench.md |
-| Updated by | hourly public metadata update, 2026-06-09 10:20 +0800 |
+| Updated by | hourly public metadata update, 2026-06-13 02:15 +0800 |
 
 ## 1. Role in Self Evolve
 
@@ -22,7 +22,7 @@ construct longitudinal healthcare episodes -> require agents to recall and apply
 
 ## 3. Evidence Path
 
-web-observed GitHub repo pages showed 60 stars, 1 fork, 14 commits, Apache-2.0 license, 0 issues, 0 pull requests, and one release with `v1.0` latest on 2026-06-06, plus README framing around personalized healthcare memory evaluation. This run keeps freshness honest because shell GitHub API access remained blocked and no local benchmark execution was performed.
+GitHub GraphQL/API snapshot captured via authenticated `gh` on 2026-06-13 showed 60 stars, 1 fork, 0 open issues, 0 open pull requests, 14 commits on `main`, latest push at 2026-05-13T13:26:05Z, Apache-2.0 license, and no GitHub releases. The snapshot also showed no GitHub releases visible in the API snapshot. This run keeps freshness honest because it uses authenticated GitHub API data rather than stale local summaries.
 
 ## 4. Teaching Use
 
@@ -30,4 +30,4 @@ Use this card to explain Personalized Healthcare Agent Memory Benchmark: it show
 
 ## 5. Limits
 
-The repository was not cloned or executed in this iteration; no dataset, patient simulation, or benchmark pipeline was run locally. Counts and claims are visible public-page signals unless independently revalidated later.
+The repository was not cloned or executed in this iteration; no dataset, patient simulation, or benchmark pipeline was run locally. Counts and claims are GitHub API snapshot signals unless independently revalidated later.

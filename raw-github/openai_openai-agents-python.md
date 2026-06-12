@@ -1,11 +1,12 @@
 ---
 repo: openai/openai-agents-python
 url: https://github.com/openai/openai-agents-python
-content_timestamp: 2026-06-09
+content_timestamp: 2026-06-13
 time_slice: 2026-06
-timestamp_source: web_observed_public_github_page_2026_06_09
-collected_at: 2026-06-09T10:20:00+08:00
+timestamp_source: github_graphql_api_observed_2026_06_13
+collected_at: 2026-06-13T02:15:12+08:00
 source: github
+source_tool: gh.api.graphql
 ---
 
 ## GitHub - openai/openai-agents-python: OpenAI Agents SDK (Python) is the official Python baseline for multi-agent orchestration with handoffs, tool calls, guardrails, tracing, and session state.
@@ -14,32 +15,33 @@ source: github
 
 ---
 
-# Raw public page capture notes
+# Raw public metadata capture notes
 
-This raw-style public GitHub page capture was refreshed by the hourly public metadata update. Shell GitHub API access remained blocked in this workspace, so freshness is web-observed rather than API-verified.
+This raw-style GitHub capture was refreshed by the hourly public metadata update using authenticated GitHub GraphQL/API access through `gh` on 2026-06-13. Counts are current public API snapshot values, not local summaries.
 
 ## Visible repository metadata
 
 - Repository: openai/openai-agents-python
 - URL: https://github.com/openai/openai-agents-python
-- Stars: 27000
-- Forks: 4200
-- Commits: 1598
-- Issues: 43
-- Pull requests: 89
+- Stars: 27111
+- Forks: 4185
+- Commits: 1603
+- Open issues: 45
+- Open pull requests: 99
 - License: MIT
 - Primary language / stack signal: Python/OpenAI Agents SDK/Tracing/Guardrails/Handoffs
-- Latest visible dated signal: 2026-06-09 web-observed public GitHub page snapshot
-- Collection timestamp: 2026-06-09T10:20:00+08:00
+- Latest push: 2026-06-11T04:10:37Z
+- Latest default-branch commit: 2026-06-11T04:10:23Z
+- Latest release: v0.17.5 (2026-06-11T04:11:51Z)
+- Collection timestamp: 2026-06-13T02:15:12+08:00
 
 ## Visible README / page excerpts
 
-- The public repo page described a lightweight yet powerful framework for multi-agent workflows and linked official docs.
-- Visible top-level navigation exposed guides for models, tools, handoffs, guardrails, tracing, voice, sessions, MCP, context management, and orchestrating via code.
-- The public repository page showed 27k stars, 4.2k forks, 1,598 commits, 43 issues, and 89 pull requests.
-- The repo therefore serves as the canonical upstream runtime baseline when comparing third-party swarm, harness, and skill systems built around the OpenAI Agents SDK.
-- Freshness remains web-observed rather than GitHub-API verified because shell API access and local gh auth are blocked in this workspace.
+- Authenticated GitHub GraphQL/API snapshot captured on 2026-06-13 showed 27,111 stars, 4,185 forks, 45 open issues, 99 open pull requests, and 1,603 commits on `main`.
+- Latest push time is 2026-06-11T04:10:37Z and the latest default-branch commit is 2026-06-11T04:10:23Z.
+- Latest release is `v0.17.5`, published on 2026-06-11T04:11:51Z.
+- The repository still exposes the canonical upstream runtime surface for handoffs, tools, guardrails, tracing, sessions, and multi-agent workflows.
 
 ## Raw capture boundary
 
-No benchmark was run, no source clone was modified, and no private or authenticated metadata was used. This file preserves public page evidence for downstream classification, model-card analysis, public reports, and the site index.
+No benchmark was run, no source clone was modified, and no private repository metadata was used. This file preserves public GitHub API evidence for downstream classification, model-card analysis, public reports, and the site index.

@@ -4,13 +4,13 @@
 |---|---|
 | Repository | [openai/openai-agents-js](https://github.com/openai/openai-agents-js) |
 | Category | Official OpenAI Agents SDK TypeScript Baseline |
-| Stars / forks snapshot | 3200 / 803 |
-| Issues / PRs snapshot | 35 / 25 |
+| Stars / forks snapshot | 3,203 / 809 |
+| Commits / issues / PRs snapshot | 933 / 35 / 29 |
 | Language | TypeScript |
 | License | MIT |
-| Latest visible dated signal | 2026-06-09 web-observed snapshot |
+| Latest visible dated signal | 2026-06-12 GitHub API snapshot |
 | Raw capture | raw-github/openai_openai-agents-js.md |
-| Updated by | hourly public metadata update, 2026-06-09 10:20 +0800 |
+| Updated by | hourly public metadata update, 2026-06-13 02:15 +0800 |
 
 ## 1. Role in Self Evolve
 
@@ -22,7 +22,7 @@ compose agents in TypeScript -> attach tools, handoffs, and realtime transport -
 
 ## 3. Evidence Path
 
-web-observed GitHub repo page showed 3.2k stars, 803 forks, 931 commits, 35 issues, and 25 pull requests, while README navigation exposed agents, tools, handoffs, guardrails, realtime, voice, tracing, sessions, MCP, and advanced usage docs. This iteration keeps freshness honest: the snapshot comes from the public GitHub page observed on 2026-06-09, while shell GitHub API access remained blocked in this workspace.
+GitHub GraphQL/API snapshot captured via authenticated `gh` on 2026-06-13 showed 3,203 stars, 809 forks, 35 open issues, 29 open pull requests, 933 commits on `main`, latest push at 2026-06-12T08:33:10Z, MIT license, and latest release `v0.11.6` published on 2026-05-29. The snapshot also showed 56 releases with v0.11.6 latest on 2026-05-29. This run keeps freshness honest because it uses authenticated GitHub API data rather than stale local summaries.
 
 ## 4. Teaching Use
 
@@ -30,4 +30,4 @@ Use this card to explain Official OpenAI Agents SDK TypeScript Baseline: it give
 
 ## 5. Limits
 
-The repository was not cloned or executed in this iteration; no SDK example, agent loop, benchmark, or realtime flow was run locally. Counts and claims are visible public-page signals unless independently revalidated later.
+The repository was not cloned or executed in this iteration; no SDK example, agent loop, benchmark, or realtime flow was run locally. Counts and claims are GitHub API snapshot signals unless independently revalidated later.

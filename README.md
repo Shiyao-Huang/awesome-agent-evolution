@@ -60,9 +60,9 @@ flowchart LR
   SURVEY --> SITE["网站 + 图谱 + 报告"]
 ```
 
-## 近期证据更新（2026-06-12）
+## 近期证据更新（2026-06-13）
 
-本轮不是新增一批条目，而是把 production swarm、coding-agent harness、memory benchmark、OpenAI Agents SDK orchestrator、official OpenAI Agents SDK Python/JS baseline、continual skill-memory paper code 和轻量 memory/MCP/skill runtime 的公开数字面重新校正到 `2026-06-12` 可见证据。下面每个仓库都只回答一个问题：它补上了哪类判断证据，以及这轮是否发生了需要同步到公开面的计数修正。
+本轮不是新增一批条目，而是把 production swarm、coding-agent harness、memory benchmark、OpenAI Agents SDK orchestrator、official OpenAI Agents SDK Python/JS baseline、continual skill-memory paper code 和轻量 memory/MCP/skill runtime 的公开数字面重新校正到 `2026-06-13` GitHub API 快照。下面每个仓库都只回答一个问题：它补上了哪类判断证据，以及这轮是否发生了需要同步到公开面的计数修正。
 
 | 仓库 | 补上的证据缺口 | 对读者的意义 | 证据状态 |
 |---|---|---|---|
@@ -73,7 +73,7 @@ flowchart LR
 | [openai/openai-agents-js](https://github.com/openai/openai-agents-js) | official TypeScript Agents SDK baseline | 它把前端/全栈 agent 编排的 canonical baseline 补齐，帮助我们区分“SDK 原生能力”与“框架自行增加的 memory、workflow、realtime 包装”。 | [KNOWN] official repo/source-scoped；JS/runtime capability 仍需 runs/examples 复核。 |
 | [XSkill-Agent/XSkill](https://github.com/XSkill-Agent/XSkill) | continual skill-memory benchmarked paper code | 它补的是“skills 和 experiences 如何被积累、存储、检索并在 benchmark 上复用”这一层，而不是只给一个概念性 continual-learning 口号。 | [KNOWN] paper-code source-scoped；benchmark claim 不等于本站复现。 |
 | [AQ-MedAI/MedMemoryBench](https://github.com/AQ-MedAI/MedMemoryBench) | safety-sensitive longitudinal memory benchmark | 它把 memory 评估从通用 recall 推进到 personalized healthcare 的长时程、高风险场景，帮助读者区分“记住了”与“记对了并用对了”。 | [KNOWN] benchmark repo source-scoped；医疗场景结论需安全/评估复核。 |
-| [wanxingai/LightAgent](https://github.com/wanxingai/LightAgent) | lightweight memory/MCP/skill runtime refresh | 它把轻量 agent runtime 这条线补到 2026-06-04 的 LightFlow、native skills、persistent memory 和 trace observability 证据。 | [KNOWN] repo snapshot source-scoped；运行时能力需继续以 tests/logs 复核。 |
+| [wanxingai/LightAgent](https://github.com/wanxingai/LightAgent) | lightweight memory/MCP/skill runtime refresh | 它把轻量 agent runtime 这条线补到 2026-06-05 的 LightFlow、native skills、persistent memory 和 trace observability 证据。 | [KNOWN] repo snapshot source-scoped；运行时能力需继续以 tests/logs 复核。 |
 
 ## 核心洞察
 

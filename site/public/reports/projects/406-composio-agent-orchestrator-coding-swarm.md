@@ -4,13 +4,13 @@
 |---|---|
 | Repository | [AgentWrapper/agent-orchestrator](https://github.com/AgentWrapper/agent-orchestrator) |
 | Category | Production Coding-Agent Swarm Orchestrator |
-| Stars / forks snapshot | 7500 / 1000 |
-| Commits / issues / PRs snapshot | 1277 / 476 / 468 |
+| Stars / forks snapshot | 7,514 / 1,025 |
+| Commits / issues / PRs snapshot | 1,277 / 478 / 474 |
 | Language | TypeScript |
 | License | MIT |
-| Latest visible dated signal | 2026-06-09 web-observed snapshot |
+| Latest visible dated signal | 2026-06-09 GitHub API snapshot |
 | Raw capture | raw-github/composiohq_agent-orchestrator.md |
-| Updated by | hourly public metadata update, 2026-06-09 10:20 +0800 |
+| Updated by | hourly public metadata update, 2026-06-13 02:15 +0800 |
 
 ## 1. Role in Self Evolve
 
@@ -22,7 +22,7 @@ route coding tasks into specialized agents -> isolate changes in Git worktrees -
 
 ## 3. Evidence Path
 
-The public GitHub page on 2026-06-09 still redirected the legacy `ComposioHQ/agent-orchestrator` URL to `AgentWrapper/agent-orchestrator`, then showed 7.5k stars, 1k forks, 1,277 commits, MIT license, 476 issues, and 468 pull requests. The public page still positions the project as a production orchestrator for coding-agent swarms rather than a single demo loop, and this run keeps freshness honest because shell GitHub API access remained blocked.
+GitHub GraphQL/API snapshot captured via authenticated `gh` on 2026-06-13 showed the canonical redirected repository `AgentWrapper/agent-orchestrator` at 7,514 stars, 1,025 forks, 478 open issues, 474 open pull requests, 1,277 commits on `main`, latest push at 2026-06-09T00:56:58Z, MIT license, and latest nightly release published on 2026-06-08. The snapshot also showed 51 releases with v0.9.3-nightly-5897b4e8d8cefc33f681ab73bf0e3ebc0b17b517 latest on 2026-06-08. This run keeps freshness honest because it uses authenticated GitHub API data rather than stale local summaries.
 
 ## 4. Teaching Use
 
@@ -30,4 +30,4 @@ Use this card to explain Production Coding-Agent Swarm Orchestrator: it shows ho
 
 ## 5. Limits
 
-The repository was not cloned in this iteration; no coding workflow, benchmark, or merge policy was executed locally. Counts and claims are visible public-page signals unless independently revalidated later.
+The repository was not cloned in this iteration; no coding workflow, benchmark, or merge policy was executed locally. Counts and claims are GitHub API snapshot signals unless independently revalidated later.

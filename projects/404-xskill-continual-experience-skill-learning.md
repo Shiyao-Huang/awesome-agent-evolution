@@ -4,13 +4,13 @@
 |---|---|
 | Repository | [XSkill-Agent/XSkill](https://github.com/XSkill-Agent/XSkill) |
 | Category | Continual Experience and Skill Learning Paper Code |
-| Stars / forks snapshot | 218 / 27 |
+| Stars / forks snapshot | 221 / 27 |
 | Commits / issues / PRs snapshot | 16 / 1 / 0 |
 | Language | Python |
-| License | MIT |
-| Latest visible dated signal | 2026-06-08 |
+| License | NOASSERTION |
+| Latest visible dated signal | 2026-05-13 GitHub API snapshot |
 | Raw capture | raw-github/xskill-agent_xskill.md |
-| Updated by | hourly public metadata update, 2026-06-08 23:45 +0800 |
+| Updated by | hourly public metadata update, 2026-06-13 02:15 +0800 |
 
 ## 1. Role in Self Evolve
 
@@ -22,12 +22,12 @@ collect multimodal trajectories -> summarize and critique experiences -> consoli
 
 ## 3. Evidence Path
 
-web-observed GitHub repo page showed 218 stars, 27 forks, 1 issue, 0 pull requests, 16 commits, MIT license, no releases, and a repository-page "Updated Jun 8, 2026" signal, plus a runtime-generated memory_bank and benchmark/eval folders covering VisualToolBench, TIR-Bench, MMSearch-Plus, AgentVista, and MMBrowseComp. This iteration keeps freshness honest: the snapshot comes from the public GitHub page observed on 2026-06-08, while shell GitHub API access remained blocked in this workspace.
+GitHub GraphQL/API snapshot captured via authenticated `gh` on 2026-06-13 showed 221 stars, 27 forks, 1 open issue, 0 open pull requests, 16 commits on `main`, latest push at 2026-05-13T03:56:12Z, no GitHub releases, and no SPDX license value returned by the API. The snapshot also showed no GitHub releases visible in the API snapshot. This run keeps freshness honest because it uses authenticated GitHub API data rather than stale local summaries.
 
 ## 4. Teaching Use
 
-Use this card to explain Continual Experience and Skill Learning Paper Code: it shows how swarm runtimes, skill optimizers, benchmark suites, browser harnesses, and memory middleware fit into the broader self-evolving-agent pipeline.
+Use this card to explain Continual Experience and Skill Learning Paper Code: it shows how paper-code systems accumulate trajectories, distill reusable skills, and test transfer instead of only claiming continual learning in prose.
 
 ## 5. Limits
 
-The repository was not cloned in this iteration; no benchmark run, workflow execution, or agent loop experiment was executed. Counts and claims are visible public-page signals unless independently revalidated later.
+The repository was not cloned in this iteration; no benchmark run, workflow execution, or agent loop experiment was executed. Counts and claims are GitHub API snapshot signals unless independently revalidated later.

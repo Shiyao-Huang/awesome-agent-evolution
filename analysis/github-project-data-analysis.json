@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-12T12:23:11.796Z",
+  "generated_at": "2026-06-12T18:21:33.253Z",
   "counts": {
     "raw_captures": 686,
     "raw_files_on_disk": 686,
@@ -17,7 +17,7 @@
     "analyzed_with_local_git_tags_24m": 5,
     "analyzed_with_public_report": 299,
     "raw_core_evolution": 97,
-    "raw_broad_evolution": 205,
+    "raw_broad_evolution": 204,
     "raw_unknown_time_slice": 100
   },
   "raw_category_counts": [
@@ -69,7 +69,7 @@
     },
     {
       "key": "framework",
-      "count": 72
+      "count": 73
     },
     {
       "key": "education-list",
@@ -89,7 +89,7 @@
     },
     {
       "key": "harness",
-      "count": 12
+      "count": 10
     },
     {
       "key": "workflow-automation",
@@ -97,7 +97,7 @@
     },
     {
       "key": "benchmark",
-      "count": 3
+      "count": 4
     },
     {
       "key": "safety",
@@ -582,7 +582,7 @@
       "count": 1
     },
     {
-      "key": "Python/Healthcare Memory Benchmark/Longitudinal Clinical Memory Eval",
+      "key": "Python/Healthcare Memory Benchmark/Longitudinal Evaluation",
       "count": 1
     },
     {
@@ -970,10 +970,6 @@
       "count": 1
     },
     {
-      "key": "TypeScript/Git Worktrees/MCP/Coding-Agent Swarm",
-      "count": 1
-    },
-    {
       "key": "TypeScript/Git-native agent runtime",
       "count": 1
     },
@@ -1158,6 +1154,10 @@
       "count": 1
     },
     {
+      "key": "TypeScript/Swarm Harness/Worktrees/Skills/Memory",
+      "count": 1
+    },
+    {
       "key": "TypeScript/Swift/Kotlin/OpenClaw Fork with Soul Memory",
       "count": 1
     },
@@ -1275,11 +1275,15 @@
     },
     {
       "key": "framework",
-      "count": 29
+      "count": 30
     },
     {
       "key": "harness",
-      "count": 12
+      "count": 10
+    },
+    {
+      "key": "benchmark",
+      "count": 4
     },
     {
       "key": "education-list",
@@ -1288,10 +1292,6 @@
     {
       "key": "workflow-automation",
       "count": 4
-    },
-    {
-      "key": "benchmark",
-      "count": 3
     },
     {
       "key": "prompt-optimization",
@@ -1803,21 +1803,6 @@
       "content_timestamp": "2026-05-25",
       "evidence": "web-observed GitHub page showed Apache-2.0 license, 105k stars, 13.9k forks, 6,224 commits, memory-tests/evals directories, v0.43.0 latest release on 2026-05-22, and README claims for an open-source terminal AI agent; Auto Memory docs say it mines past sessions for durable memory and reusable Agent Skills, drafts patches or SKILL.md files, and never applies them without approval.",
       "description": "Gemini CLI is a major open-source terminal agent; its Auto Memory docs add a mainstream implementation path for mining past sessions into reviewable durable memory and reusable Agent Skills."
-    },
-    {
-      "repo": "openai/openai-agents-python",
-      "url": "https://github.com/openai/openai-agents-python",
-      "stars": "27000",
-      "prior_category": "-",
-      "prior_unclassified": "true",
-      "final_category": "框架/framework",
-      "function_tag": "framework-runtime",
-      "base_theme": "harness",
-      "stack": "Python/OpenAI Agents SDK/Tracing/Guardrails/Handoffs",
-      "time_slice": "2026-06",
-      "content_timestamp": "2026-06-09",
-      "evidence": "web-observed GitHub repo page on 2026-06-09 showed 27k stars, 4.2k forks, 1,598 commits, 43 issues, and 89 pull requests; README navigation exposed models, tools, handoffs, guardrails, tracing, MCP, voice, sessions, agents-as-tools, and context-management docs.",
-      "description": "OpenAI Agents SDK (Python) 是官方 Python orchestration baseline：把 handoffs、tools、guardrails、tracing 和 sessions 作为上游标准面，供 downstream swarm/harness/self-improvement 系统对照。"
     },
     {
       "repo": "microsoft/agent-lightning",
@@ -2523,6 +2508,21 @@
       "content_timestamp": "2025-10-27",
       "evidence": "paper/artifact/research-code signal",
       "description": "This repo contains the source code for the paper \"Evolution Strategies at Scale: LLM Fine-Tuning Beyond Reinforcement Learning\""
+    },
+    {
+      "repo": "clawdotnet/openclaw.net",
+      "url": "https://github.com/clawdotnet/openclaw.net",
+      "stars": "345",
+      "prior_category": "-",
+      "prior_unclassified": "true",
+      "final_category": "框架/framework",
+      "function_tag": "framework-runtime",
+      "base_theme": "framework",
+      "stack": "C#",
+      "time_slice": "2026-05",
+      "content_timestamp": "2026-05-24",
+      "evidence": "web GitHub page observed 375 commits, MIT license, C#/.NET runtime folders, self-hosted OpenClaw gateway description, self-evolving/agent-harness topics, 345 stars and 66 forks",
+      "description": "OpenClaw.NET 是 self-hosted OpenClaw gateway 和 .NET agent runtime，强调 NativeAOT-friendly、OpenAI-compatible API、MCP、memory、tool execution 和 Microsoft Agent Framework 互操作。"
     }
   ],
   "raw_classified_repositories": [
@@ -3419,12 +3419,12 @@
       "prior_unclassified": "true",
       "final_category": "评测/evaluation",
       "function_tag": "benchmark-eval",
-      "base_theme": "memory",
-      "stack": "Python/Healthcare Memory Benchmark/Longitudinal Clinical Memory Eval",
+      "base_theme": "benchmark",
+      "stack": "Python/Healthcare Memory Benchmark/Longitudinal Evaluation",
       "time_slice": "2026-06",
-      "content_timestamp": "2026-06-09",
-      "evidence": "web-observed GitHub page on 2026-06-09 showed 60 stars, 1 fork, 14 commits, Apache-2.0 license, 0 issues, 0 pull requests, and a latest v1.0 release dated 2026-06-06; README positions MedMemoryBench as a personalized-healthcare benchmark for longitudinal agent memory quality rather than generic retrieval recall",
-      "description": "MedMemoryBench 是面向 personalized healthcare agents 的记忆 benchmark，用长期患者画像、时间线推理和任务成功率检验 memory 是否真正提升高风险场景下的 agent 决策。"
+      "content_timestamp": "2026-06-13",
+      "evidence": "GitHub GraphQL/API snapshot captured via authenticated `gh` on 2026-06-13 showed 60 stars, 1 fork, 0 open issues, 0 open pull requests, 14 commits on `main`, latest push at 2026-05-13T13:26:05Z, Apache-2.0 license, and no GitHub releases.",
+      "description": "MedMemoryBench is a benchmark for agent memory in personalized healthcare, testing whether clinical agents retain, retrieve, and use longitudinal patient context safely and accurately."
     },
     {
       "repo": "Arc-Computer/CL-Bench",
@@ -4359,17 +4359,17 @@
     {
       "repo": "AgentWrapper/agent-orchestrator",
       "url": "https://github.com/AgentWrapper/agent-orchestrator",
-      "stars": "7500",
+      "stars": "7514",
       "prior_category": "-",
       "prior_unclassified": "true",
       "final_category": "框架/framework",
       "function_tag": "framework-runtime",
       "base_theme": "harness",
-      "stack": "TypeScript/Git Worktrees/MCP/Coding-Agent Swarm",
+      "stack": "TypeScript/Swarm Harness/Worktrees/Skills/Memory",
       "time_slice": "2026-06",
-      "content_timestamp": "2026-06-09",
-      "evidence": "web-observed GitHub page on 2026-06-09 still redirected the legacy ComposioHQ URL to AgentWrapper/agent-orchestrator, then showed 7.5k stars, 1k forks, 1,277 commits, MIT license, 476 issues, and 468 pull requests; public README/about position it as a production coding-agent orchestrator with swarms, worktrees, skills, memory, and MCP tools",
-      "description": "Agent Orchestrator 是 production coding-agent swarm harness，把 spec、build、test、review、merge 流程拆给专门化 agents，并用 Git worktrees、skills、memory 和 MCP 执行面串成可审计的工程闭环。"
+      "content_timestamp": "2026-06-13",
+      "evidence": "GitHub GraphQL/API snapshot captured via authenticated `gh` on 2026-06-13 showed the canonical redirected repository `AgentWrapper/agent-orchestrator` at 7,514 stars, 1,025 forks, 478 open issues, 474 open pull requests, 1,277 commits on `main`, latest push at 2026-06-09T00:56:58Z, MIT license, and latest nightly release published on 2026-06-08.",
+      "description": "Agent Orchestrator is a production coding-agent swarm that runs spec, build, test, review, and merge flows through Git worktrees, skills, memory, and MCP-connected execution."
     },
     {
       "repo": "ComposioHQ/awesome-agent-clis",
@@ -4667,8 +4667,8 @@
       "base_theme": "framework",
       "stack": "TypeScript/Docker/MCP/Lead-Worker Swarm",
       "time_slice": "2026-06",
-      "content_timestamp": "2026-06-12",
-      "evidence": "web-observed GitHub page on 2026-06-12 showed 520 stars, 57 forks, 1 issue, 2 pull requests, 1,619 commits, MIT license, and the same lead/worker Docker orchestration, MCP API, compounding memory, HITL workflow gates, and skills-based swarm operations described in the 2026-06-09 packet.",
+      "content_timestamp": "2026-06-13",
+      "evidence": "GitHub GraphQL/API snapshot captured via authenticated `gh` on 2026-06-13 showed 520 stars, 57 forks, 1 open issue, 2 open pull requests, 1,624 commits on `main`, latest push at 2026-06-12T17:54:36Z, MIT license, and latest release `v1.97.0` published on 2026-06-12.",
       "description": "Agent Swarm is a production-oriented lead-worker runtime that routes work from Slack/GitHub/Email/API into Dockerized agent workers, persists memory and identity, and exposes MCP, workflows, pages, and recurring task patterns as reusable swarm infrastructure."
     },
     {
@@ -8679,32 +8679,32 @@
     {
       "repo": "openai/openai-agents-js",
       "url": "https://github.com/openai/openai-agents-js",
-      "stars": "3200",
+      "stars": "3203",
       "prior_category": "-",
       "prior_unclassified": "true",
       "final_category": "框架/framework",
       "function_tag": "framework-runtime",
-      "base_theme": "harness",
+      "base_theme": "framework",
       "stack": "TypeScript/OpenAI Agents SDK/Tracing/Guardrails/Handoffs",
       "time_slice": "2026-06",
-      "content_timestamp": "2026-06-09",
-      "evidence": "web-observed GitHub repo page on 2026-06-09 showed 3.2k stars, 803 forks, 931 commits, 35 issues, and 25 pull requests; README navigation exposed agents, tools, handoffs, guardrails, realtime, voice, tracing, sessions, MCP, and advanced usage docs.",
-      "description": "OpenAI Agents SDK (JS) 是官方 TypeScript orchestration baseline：把 tools、handoffs、guardrails、realtime、tracing 和 sessions 作为前端/全栈 agent runtime 的上游标准面。"
+      "content_timestamp": "2026-06-13",
+      "evidence": "GitHub GraphQL/API snapshot captured via authenticated `gh` on 2026-06-13 showed 3,203 stars, 809 forks, 35 open issues, 29 open pull requests, 933 commits on `main`, latest push at 2026-06-12T08:33:10Z, MIT license, and latest release `v0.11.6` published on 2026-05-29.",
+      "description": "OpenAI Agents SDK (JS) is the official TypeScript baseline for building agent orchestration loops with tools, handoffs, guardrails, realtime hooks, and tracing."
     },
     {
       "repo": "openai/openai-agents-python",
       "url": "https://github.com/openai/openai-agents-python",
-      "stars": "27000",
+      "stars": "27111",
       "prior_category": "-",
       "prior_unclassified": "true",
       "final_category": "框架/framework",
       "function_tag": "framework-runtime",
-      "base_theme": "harness",
+      "base_theme": "framework",
       "stack": "Python/OpenAI Agents SDK/Tracing/Guardrails/Handoffs",
       "time_slice": "2026-06",
-      "content_timestamp": "2026-06-09",
-      "evidence": "web-observed GitHub repo page on 2026-06-09 showed 27k stars, 4.2k forks, 1,598 commits, 43 issues, and 89 pull requests; README navigation exposed models, tools, handoffs, guardrails, tracing, MCP, voice, sessions, agents-as-tools, and context-management docs.",
-      "description": "OpenAI Agents SDK (Python) 是官方 Python orchestration baseline：把 handoffs、tools、guardrails、tracing 和 sessions 作为上游标准面，供 downstream swarm/harness/self-improvement 系统对照。"
+      "content_timestamp": "2026-06-13",
+      "evidence": "GitHub GraphQL/API snapshot captured via authenticated `gh` on 2026-06-13 showed 27,111 stars, 4,185 forks, 45 open issues, 99 open pull requests, 1,603 commits on `main`, latest push at 2026-06-11T04:10:37Z, MIT license, and latest release `v0.17.5` published on 2026-06-11.",
+      "description": "OpenAI Agents SDK (Python) is the official Python baseline for multi-agent orchestration with handoffs, tool calls, guardrails, tracing, and session state."
     },
     {
       "repo": "openai/skills",
@@ -11874,7 +11874,7 @@
     {
       "repo": "VRSEN/agency-swarm",
       "url": "https://github.com/VRSEN/agency-swarm",
-      "stars": "4400",
+      "stars": "4445",
       "prior_category": "-",
       "prior_unclassified": "true",
       "final_category": "框架/framework",
@@ -11882,8 +11882,8 @@
       "base_theme": "framework",
       "stack": "Python/OpenAI Agents SDK/Agency CLI/State Persistence",
       "time_slice": "2026-06",
-      "content_timestamp": "2026-06-04",
-      "evidence": "web-observed GitHub repo page showed 4.4k stars, 1.2k forks, 1 issue, 3 pull requests, 2,526 commits, MIT license, 67 releases with v1.10.3 latest on 2026-06-04, and explicit positioning as a structured orchestration layer built on the OpenAI Agents SDK with communication flows and state persistence callbacks.",
+      "content_timestamp": "2026-06-13",
+      "evidence": "GitHub GraphQL/API snapshot captured via authenticated `gh` on 2026-06-13 showed 4,445 stars, 1,058 forks, 0 open issues, 6 open pull requests, 2,545 commits on `main`, latest push at 2026-06-12T00:13:04Z, MIT license, and latest release `v1.10.1` published on 2026-06-11.",
       "description": "Agency Swarm is a mature Python orchestration framework that layers role-aware communication flows, type-safe tools, thread persistence, and terminal/web demos on top of the OpenAI Agents SDK."
     },
     {
@@ -11904,16 +11904,16 @@
     {
       "repo": "wanxingai/LightAgent",
       "url": "https://github.com/wanxingai/LightAgent",
-      "stars": "1100",
+      "stars": "1132",
       "prior_category": "-",
       "prior_unclassified": "true",
       "final_category": "框架/framework",
       "function_tag": "framework-runtime",
-      "base_theme": "framework",
+      "base_theme": "memory",
       "stack": "Python/MCP/mem0/Agent Skills/LightFlow",
       "time_slice": "2026-06",
-      "content_timestamp": "2026-06-04",
-      "evidence": "web-observed GitHub repo page showed 1.1k stars, 141 forks, 8 issues, 0 pull requests, 107 commits, Apache-2.0 license, 21 releases with v0.8.0 latest on 2026-06-04, and continued LightFlow workflow orchestration plus persistent memory, MCP, native skills, trace observability, and self-learning agent claims.",
+      "content_timestamp": "2026-06-13",
+      "evidence": "GitHub GraphQL/API snapshot captured via authenticated `gh` on 2026-06-13 showed 1,132 stars, 143 forks, 8 open issues, 0 open pull requests, 107 commits on `main`, latest push at 2026-06-05T15:00:09Z, Apache-2.0 license, and latest release `LightAgent v0.8.0` published on 2026-06-05.",
       "description": "LightAgent is a lightweight Python agent framework that combines persistent memory, MCP integration, native skills, LightSwarm collaboration, and newly surfaced LightFlow workflow orchestration into a small-footprint self-learning runtime."
     },
     {
@@ -12174,16 +12174,16 @@
     {
       "repo": "XSkill-Agent/XSkill",
       "url": "https://github.com/XSkill-Agent/XSkill",
-      "stars": "218",
+      "stars": "221",
       "prior_category": "-",
       "prior_unclassified": "true",
       "final_category": "论文代码/paper-code",
-      "function_tag": "benchmark-eval",
+      "function_tag": "paper-code",
       "base_theme": "skill",
       "stack": "Python/Multimodal Agent/Memory Bank/Benchmark Eval",
       "time_slice": "2026-06",
-      "content_timestamp": "2026-06-08",
-      "evidence": "web-observed GitHub repo page showed 218 stars, 27 forks, 1 issue, 0 pull requests, 16 commits, MIT license, no releases, and a repository-page Updated Jun 8 2026 signal, plus a runtime-generated memory_bank and benchmark/eval folders covering VisualToolBench, TIR-Bench, MMSearch-Plus, AgentVista, and MMBrowseComp.",
+      "content_timestamp": "2026-06-13",
+      "evidence": "GitHub GraphQL/API snapshot captured via authenticated `gh` on 2026-06-13 showed 221 stars, 27 forks, 1 open issue, 0 open pull requests, 16 commits on `main`, latest push at 2026-05-13T03:56:12Z, no GitHub releases, and no SPDX license value returned by the API.",
       "description": "XSkill is a multimodal continual-learning paper implementation that extracts task-level skills and action-level experiences from agent trajectories, stores them in a memory bank, and re-injects them during inference across benchmark suites."
     },
     {
@@ -16299,21 +16299,6 @@
       "content_timestamp": "2025-05-03",
       "evidence": "kept prior human/analysis category + README verified",
       "description": "A lightweight Python library that allows any LLM agent to self-improve through feedback, without retraining models."
-    },
-    {
-      "repo": "openai/openai-agents-python",
-      "url": "https://github.com/openai/openai-agents-python",
-      "stars": "27000",
-      "prior_category": "-",
-      "prior_unclassified": "true",
-      "final_category": "框架/framework",
-      "function_tag": "framework-runtime",
-      "base_theme": "harness",
-      "stack": "Python/OpenAI Agents SDK/Tracing/Guardrails/Handoffs",
-      "time_slice": "2026-06",
-      "content_timestamp": "2026-06-09",
-      "evidence": "web-observed GitHub repo page on 2026-06-09 showed 27k stars, 4.2k forks, 1,598 commits, 43 issues, and 89 pull requests; README navigation exposed models, tools, handoffs, guardrails, tracing, MCP, voice, sessions, agents-as-tools, and context-management docs.",
-      "description": "OpenAI Agents SDK (Python) 是官方 Python orchestration baseline：把 handoffs、tools、guardrails、tracing 和 sessions 作为上游标准面，供 downstream swarm/harness/self-improvement 系统对照。"
     },
     {
       "repo": "openautocoder/live-swe-agent",
@@ -32286,10 +32271,10 @@
         "worktree",
         "mcp"
       ],
-      "site_stars": 7500,
-      "site_forks": 1000,
+      "site_stars": 7514,
+      "site_forks": 1025,
       "license": "MIT",
-      "lastPushed": "2026-06-09T00:00:00Z",
+      "lastPushed": "2026-06-09T00:56:58Z",
       "localPath": "raw-github/composiohq_agent-orchestrator.md",
       "local_git": null,
       "local_git_history_24m": null,
@@ -32315,7 +32300,7 @@
       "in_classification": true,
       "classification_category": "框架/framework",
       "classification_function_tag": "framework-runtime",
-      "classification_evidence": "web-observed GitHub page on 2026-06-09 still redirected the legacy ComposioHQ URL to AgentWrapper/agent-orchestrator, then showed 7.5k stars, 1k forks, 1,277 commits, MIT license, 476 issues, and 468 pull requests; public README/about position it as a production coding-agent orchestrator with swarms, worktrees, skills, memory, and MCP tools",
+      "classification_evidence": "GitHub GraphQL/API snapshot captured via authenticated `gh` on 2026-06-13 showed the canonical redirected repository `AgentWrapper/agent-orchestrator` at 7,514 stars, 1,025 forks, 478 open issues, 474 open pull requests, 1,277 commits on `main`, latest push at 2026-06-09T00:56:58Z, MIT license, and latest nightly release published on 2026-06-08.",
       "raw_time_slice": "2026-06",
       "classified_theme": "harness",
       "evolution_focused": false
@@ -32336,7 +32321,7 @@
       "site_stars": 60,
       "site_forks": 1,
       "license": "Apache-2.0",
-      "lastPushed": "2026-06-06T00:00:00Z",
+      "lastPushed": "2026-05-13T13:26:05Z",
       "localPath": "raw-github/aq-medai_medmemorybench.md",
       "local_git": null,
       "local_git_history_24m": null,
@@ -32362,9 +32347,9 @@
       "in_classification": true,
       "classification_category": "评测/evaluation",
       "classification_function_tag": "benchmark-eval",
-      "classification_evidence": "web-observed GitHub page on 2026-06-09 showed 60 stars, 1 fork, 14 commits, Apache-2.0 license, 0 issues, 0 pull requests, and a latest v1.0 release dated 2026-06-06; README positions MedMemoryBench as a personalized-healthcare benchmark for longitudinal agent memory quality rather than generic retrieval recall",
+      "classification_evidence": "GitHub GraphQL/API snapshot captured via authenticated `gh` on 2026-06-13 showed 60 stars, 1 fork, 0 open issues, 0 open pull requests, 14 commits on `main`, latest push at 2026-05-13T13:26:05Z, Apache-2.0 license, and no GitHub releases.",
       "raw_time_slice": "2026-06",
-      "classified_theme": "memory",
+      "classified_theme": "benchmark",
       "evolution_focused": false
     },
     {
@@ -32384,7 +32369,7 @@
       "site_stars": 520,
       "site_forks": 57,
       "license": "MIT",
-      "lastPushed": "2026-06-07T00:00:00Z",
+      "lastPushed": "2026-06-12T17:54:36Z",
       "localPath": "raw-github/desplega-ai_agent-swarm.md",
       "local_git": null,
       "local_git_history_24m": null,
@@ -32410,7 +32395,7 @@
       "in_classification": true,
       "classification_category": "框架/framework",
       "classification_function_tag": "framework-runtime",
-      "classification_evidence": "web-observed GitHub page on 2026-06-12 showed 520 stars, 57 forks, 1 issue, 2 pull requests, 1,619 commits, MIT license, and the same lead/worker Docker orchestration, MCP API, compounding memory, HITL workflow gates, and skills-based swarm operations described in the 2026-06-09 packet.",
+      "classification_evidence": "GitHub GraphQL/API snapshot captured via authenticated `gh` on 2026-06-13 showed 520 stars, 57 forks, 1 open issue, 2 open pull requests, 1,624 commits on `main`, latest push at 2026-06-12T17:54:36Z, MIT license, and latest release `v1.97.0` published on 2026-06-12.",
       "raw_time_slice": "2026-06",
       "classified_theme": "framework",
       "evolution_focused": false
@@ -32429,10 +32414,10 @@
         "state-persistence",
         "cli"
       ],
-      "site_stars": 4400,
-      "site_forks": 1200,
+      "site_stars": 4445,
+      "site_forks": 1058,
       "license": "MIT",
-      "lastPushed": "2026-06-04T00:00:00Z",
+      "lastPushed": "2026-06-12T00:13:04Z",
       "localPath": "raw-github/vrsen_agency-swarm.md",
       "local_git": null,
       "local_git_history_24m": null,
@@ -32458,7 +32443,7 @@
       "in_classification": true,
       "classification_category": "框架/framework",
       "classification_function_tag": "framework-runtime",
-      "classification_evidence": "web-observed GitHub repo page showed 4.4k stars, 1.2k forks, 1 issue, 3 pull requests, 2,526 commits, MIT license, 67 releases with v1.10.3 latest on 2026-06-04, and explicit positioning as a structured orchestration layer built on the OpenAI Agents SDK with communication flows and state persistence callbacks.",
+      "classification_evidence": "GitHub GraphQL/API snapshot captured via authenticated `gh` on 2026-06-13 showed 4,445 stars, 1,058 forks, 0 open issues, 6 open pull requests, 2,545 commits on `main`, latest push at 2026-06-12T00:13:04Z, MIT license, and latest release `v1.10.1` published on 2026-06-11.",
       "raw_time_slice": "2026-06",
       "classified_theme": "framework",
       "evolution_focused": false
@@ -32477,10 +32462,10 @@
         "skills",
         "benchmark"
       ],
-      "site_stars": 218,
+      "site_stars": 221,
       "site_forks": 27,
-      "license": "MIT",
-      "lastPushed": "2026-06-08T00:00:00Z",
+      "license": "NOASSERTION",
+      "lastPushed": "2026-05-13T03:56:12Z",
       "localPath": "raw-github/xskill-agent_xskill.md",
       "local_git": null,
       "local_git_history_24m": null,
@@ -32505,8 +32490,8 @@
       "raw_timestamp_source": "web_observed_public_github_page_2026_06_08",
       "in_classification": true,
       "classification_category": "论文代码/paper-code",
-      "classification_function_tag": "benchmark-eval",
-      "classification_evidence": "web-observed GitHub repo page showed 218 stars, 27 forks, 1 issue, 0 pull requests, 16 commits, MIT license, no releases, and a repository-page Updated Jun 8 2026 signal, plus a runtime-generated memory_bank and benchmark/eval folders covering VisualToolBench, TIR-Bench, MMSearch-Plus, AgentVista, and MMBrowseComp.",
+      "classification_function_tag": "paper-code",
+      "classification_evidence": "GitHub GraphQL/API snapshot captured via authenticated `gh` on 2026-06-13 showed 221 stars, 27 forks, 1 open issue, 0 open pull requests, 16 commits on `main`, latest push at 2026-05-13T03:56:12Z, no GitHub releases, and no SPDX license value returned by the API.",
       "raw_time_slice": "2026-06",
       "classified_theme": "skill",
       "evolution_focused": false
@@ -32525,10 +32510,10 @@
         "skills",
         "workflow"
       ],
-      "site_stars": 1100,
-      "site_forks": 141,
+      "site_stars": 1132,
+      "site_forks": 143,
       "license": "Apache-2.0",
-      "lastPushed": "2026-06-04T00:00:00Z",
+      "lastPushed": "2026-06-05T15:00:09Z",
       "localPath": "raw-github/wanxingai_lightagent.md",
       "local_git": null,
       "local_git_history_24m": null,
@@ -32554,9 +32539,9 @@
       "in_classification": true,
       "classification_category": "框架/framework",
       "classification_function_tag": "framework-runtime",
-      "classification_evidence": "web-observed GitHub repo page showed 1.1k stars, 141 forks, 8 issues, 0 pull requests, 107 commits, Apache-2.0 license, 21 releases with v0.8.0 latest on 2026-06-04, and continued LightFlow workflow orchestration plus persistent memory, MCP, native skills, trace observability, and self-learning agent claims.",
+      "classification_evidence": "GitHub GraphQL/API snapshot captured via authenticated `gh` on 2026-06-13 showed 1,132 stars, 143 forks, 8 open issues, 0 open pull requests, 107 commits on `main`, latest push at 2026-06-05T15:00:09Z, Apache-2.0 license, and latest release `LightAgent v0.8.0` published on 2026-06-05.",
       "raw_time_slice": "2026-06",
-      "classified_theme": "framework",
+      "classified_theme": "memory",
       "evolution_focused": false
     },
     {
@@ -32573,10 +32558,10 @@
         "orchestration",
         "guardrails"
       ],
-      "site_stars": 27000,
-      "site_forks": 4200,
+      "site_stars": 27111,
+      "site_forks": 4185,
       "license": "MIT",
-      "lastPushed": "2026-06-09T00:00:00Z",
+      "lastPushed": "2026-06-11T04:10:37Z",
       "localPath": "raw-github/openai_openai-agents-python.md",
       "local_git": null,
       "local_git_history_24m": null,
@@ -32602,9 +32587,9 @@
       "in_classification": true,
       "classification_category": "框架/framework",
       "classification_function_tag": "framework-runtime",
-      "classification_evidence": "web-observed GitHub repo page on 2026-06-09 showed 27k stars, 4.2k forks, 1,598 commits, 43 issues, and 89 pull requests; README navigation exposed models, tools, handoffs, guardrails, tracing, MCP, voice, sessions, agents-as-tools, and context-management docs.",
+      "classification_evidence": "GitHub GraphQL/API snapshot captured via authenticated `gh` on 2026-06-13 showed 27,111 stars, 4,185 forks, 45 open issues, 99 open pull requests, 1,603 commits on `main`, latest push at 2026-06-11T04:10:37Z, MIT license, and latest release `v0.17.5` published on 2026-06-11.",
       "raw_time_slice": "2026-06",
-      "classified_theme": "harness",
+      "classified_theme": "framework",
       "evolution_focused": false
     },
     {
@@ -32618,13 +32603,13 @@
         "openai-agents-sdk",
         "official-sdk",
         "typescript",
-        "realtime",
-        "orchestration"
+        "orchestration",
+        "realtime"
       ],
-      "site_stars": 3200,
-      "site_forks": 803,
+      "site_stars": 3203,
+      "site_forks": 809,
       "license": "MIT",
-      "lastPushed": "2026-06-09T00:00:00Z",
+      "lastPushed": "2026-06-12T08:33:10Z",
       "localPath": "raw-github/openai_openai-agents-js.md",
       "local_git": null,
       "local_git_history_24m": null,
@@ -32650,9 +32635,9 @@
       "in_classification": true,
       "classification_category": "框架/framework",
       "classification_function_tag": "framework-runtime",
-      "classification_evidence": "web-observed GitHub repo page on 2026-06-09 showed 3.2k stars, 803 forks, 931 commits, 35 issues, and 25 pull requests; README navigation exposed agents, tools, handoffs, guardrails, realtime, voice, tracing, sessions, MCP, and advanced usage docs.",
+      "classification_evidence": "GitHub GraphQL/API snapshot captured via authenticated `gh` on 2026-06-13 showed 3,203 stars, 809 forks, 35 open issues, 29 open pull requests, 933 commits on `main`, latest push at 2026-06-12T08:33:10Z, MIT license, and latest release `v0.11.6` published on 2026-05-29.",
       "raw_time_slice": "2026-06",
-      "classified_theme": "harness",
+      "classified_theme": "framework",
       "evolution_focused": false
     },
     {
@@ -34219,10 +34204,10 @@
         "orchestration",
         "guardrails"
       ],
-      "site_stars": 27000,
-      "site_forks": 4200,
+      "site_stars": 27111,
+      "site_forks": 4185,
       "license": "MIT",
-      "lastPushed": "2026-06-09T00:00:00Z",
+      "lastPushed": "2026-06-11T04:10:37Z",
       "localPath": "raw-github/openai_openai-agents-python.md",
       "local_git": null,
       "local_git_history_24m": null,
@@ -34248,9 +34233,9 @@
       "in_classification": true,
       "classification_category": "框架/framework",
       "classification_function_tag": "framework-runtime",
-      "classification_evidence": "web-observed GitHub repo page on 2026-06-09 showed 27k stars, 4.2k forks, 1,598 commits, 43 issues, and 89 pull requests; README navigation exposed models, tools, handoffs, guardrails, tracing, MCP, voice, sessions, agents-as-tools, and context-management docs.",
+      "classification_evidence": "GitHub GraphQL/API snapshot captured via authenticated `gh` on 2026-06-13 showed 27,111 stars, 4,185 forks, 45 open issues, 99 open pull requests, 1,603 commits on `main`, latest push at 2026-06-11T04:10:37Z, MIT license, and latest release `v0.17.5` published on 2026-06-11.",
       "raw_time_slice": "2026-06",
-      "classified_theme": "harness",
+      "classified_theme": "framework",
       "evolution_focused": false
     },
     {
@@ -35820,10 +35805,10 @@
         "worktree",
         "mcp"
       ],
-      "site_stars": 7500,
-      "site_forks": 1000,
+      "site_stars": 7514,
+      "site_forks": 1025,
       "license": "MIT",
-      "lastPushed": "2026-06-09T00:00:00Z",
+      "lastPushed": "2026-06-09T00:56:58Z",
       "localPath": "raw-github/composiohq_agent-orchestrator.md",
       "local_git": null,
       "local_git_history_24m": null,
@@ -35849,7 +35834,7 @@
       "in_classification": true,
       "classification_category": "框架/framework",
       "classification_function_tag": "framework-runtime",
-      "classification_evidence": "web-observed GitHub page on 2026-06-09 still redirected the legacy ComposioHQ URL to AgentWrapper/agent-orchestrator, then showed 7.5k stars, 1k forks, 1,277 commits, MIT license, 476 issues, and 468 pull requests; public README/about position it as a production coding-agent orchestrator with swarms, worktrees, skills, memory, and MCP tools",
+      "classification_evidence": "GitHub GraphQL/API snapshot captured via authenticated `gh` on 2026-06-13 showed the canonical redirected repository `AgentWrapper/agent-orchestrator` at 7,514 stars, 1,025 forks, 478 open issues, 474 open pull requests, 1,277 commits on `main`, latest push at 2026-06-09T00:56:58Z, MIT license, and latest nightly release published on 2026-06-08.",
       "raw_time_slice": "2026-06",
       "classified_theme": "harness",
       "evolution_focused": false
@@ -36579,6 +36564,54 @@
       "evolution_focused": false
     },
     {
+      "name": "Agency Swarm",
+      "repo": "VRSEN/agency-swarm",
+      "normalized_repo": "vrsen/agency-swarm",
+      "url": "https://github.com/VRSEN/agency-swarm",
+      "category": "OpenAI Agents SDK Swarm Orchestrator",
+      "pattern": "define agents and directional communication flows -> attach function tools and persistence callbacks -> route work through agency-level orchestration -> reuse terminal/web demos and docs as reproducible multi-agent operating patterns",
+      "tags": [
+        "agency-swarm",
+        "openai-agents-sdk",
+        "multi-agent",
+        "state-persistence",
+        "cli"
+      ],
+      "site_stars": 4445,
+      "site_forks": 1058,
+      "license": "MIT",
+      "lastPushed": "2026-06-12T00:13:04Z",
+      "localPath": "raw-github/vrsen_agency-swarm.md",
+      "local_git": null,
+      "local_git_history_24m": null,
+      "report": "projects/27-agency-swarm.md",
+      "public_report": "site/public/reports/projects/27-agency-swarm.md",
+      "public_report_exists": true,
+      "status": "candidate",
+      "description": "Agency Swarm is a mature Python orchestration framework that layers role-aware communication flows, type-safe tools, thread persistence, and terminal/web demos on top of the OpenAI Agents SDK.",
+      "created_at": null,
+      "created_at_source": "unknown",
+      "first_observed_at": null,
+      "first_observed_source": null,
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/vrsen_agency-swarm.md",
+      "raw_collected_at": "2026-06-08T17:47:34+08:00",
+      "raw_content_timestamp": "2026-06-04",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_06_08_with_latest_release_2026_06_04",
+      "in_classification": true,
+      "classification_category": "框架/framework",
+      "classification_function_tag": "framework-runtime",
+      "classification_evidence": "GitHub GraphQL/API snapshot captured via authenticated `gh` on 2026-06-13 showed 4,445 stars, 1,058 forks, 0 open issues, 6 open pull requests, 2,545 commits on `main`, latest push at 2026-06-12T00:13:04Z, MIT license, and latest release `v1.10.1` published on 2026-06-11.",
+      "raw_time_slice": "2026-06",
+      "classified_theme": "framework",
+      "evolution_focused": false
+    },
+    {
       "name": "memory-lancedb-pro",
       "repo": "CortexReach/memory-lancedb-pro",
       "normalized_repo": "cortexreach/memory-lancedb-pro",
@@ -36624,54 +36657,6 @@
       "classification_evidence": "web-observed GitHub page showed 4.4k stars, 725 forks, 459 commits, MIT license signal, and README notes for OpenClaw memory assistant behavior with hybrid retrieval and plugin lifecycle tooling.",
       "raw_time_slice": "2026-05",
       "classified_theme": "memory",
-      "evolution_focused": false
-    },
-    {
-      "name": "Agency Swarm",
-      "repo": "VRSEN/agency-swarm",
-      "normalized_repo": "vrsen/agency-swarm",
-      "url": "https://github.com/VRSEN/agency-swarm",
-      "category": "OpenAI Agents SDK Swarm Orchestrator",
-      "pattern": "define agents and directional communication flows -> attach function tools and persistence callbacks -> route work through agency-level orchestration -> reuse terminal/web demos and docs as reproducible multi-agent operating patterns",
-      "tags": [
-        "agency-swarm",
-        "openai-agents-sdk",
-        "multi-agent",
-        "state-persistence",
-        "cli"
-      ],
-      "site_stars": 4400,
-      "site_forks": 1200,
-      "license": "MIT",
-      "lastPushed": "2026-06-04T00:00:00Z",
-      "localPath": "raw-github/vrsen_agency-swarm.md",
-      "local_git": null,
-      "local_git_history_24m": null,
-      "report": "projects/27-agency-swarm.md",
-      "public_report": "site/public/reports/projects/27-agency-swarm.md",
-      "public_report_exists": true,
-      "status": "candidate",
-      "description": "Agency Swarm is a mature Python orchestration framework that layers role-aware communication flows, type-safe tools, thread persistence, and terminal/web demos on top of the OpenAI Agents SDK.",
-      "created_at": null,
-      "created_at_source": "unknown",
-      "first_observed_at": null,
-      "first_observed_source": null,
-      "github_source": "github_api_fetch_error",
-      "github_api_stars": null,
-      "github_api_forks": null,
-      "github_pushed_at": null,
-      "github_error": "fetch failed",
-      "in_raw_timestamp_index": true,
-      "raw_file": "raw-github/vrsen_agency-swarm.md",
-      "raw_collected_at": "2026-06-08T17:47:34+08:00",
-      "raw_content_timestamp": "2026-06-04",
-      "raw_timestamp_source": "web_observed_public_github_page_2026_06_08_with_latest_release_2026_06_04",
-      "in_classification": true,
-      "classification_category": "框架/framework",
-      "classification_function_tag": "framework-runtime",
-      "classification_evidence": "web-observed GitHub repo page showed 4.4k stars, 1.2k forks, 1 issue, 3 pull requests, 2,526 commits, MIT license, 67 releases with v1.10.3 latest on 2026-06-04, and explicit positioning as a structured orchestration layer built on the OpenAI Agents SDK with communication flows and state persistence callbacks.",
-      "raw_time_slice": "2026-06",
-      "classified_theme": "framework",
       "evolution_focused": false
     },
     {
@@ -37056,6 +37041,54 @@
       "evolution_focused": false
     },
     {
+      "name": "OpenAI Agents SDK (JS)",
+      "repo": "openai/openai-agents-js",
+      "normalized_repo": "openai/openai-agents-js",
+      "url": "https://github.com/openai/openai-agents-js",
+      "category": "Official OpenAI Agents SDK TypeScript Baseline",
+      "pattern": "compose agents in TypeScript -> attach tools, handoffs, and realtime transport -> trace execution and guardrails -> use the official JS runtime as the canonical baseline for browser, frontend, and full-stack swarm orchestration claims",
+      "tags": [
+        "openai-agents-sdk",
+        "official-sdk",
+        "typescript",
+        "orchestration",
+        "realtime"
+      ],
+      "site_stars": 3203,
+      "site_forks": 809,
+      "license": "MIT",
+      "lastPushed": "2026-06-12T08:33:10Z",
+      "localPath": "raw-github/openai_openai-agents-js.md",
+      "local_git": null,
+      "local_git_history_24m": null,
+      "report": "projects/409-openai-agents-js-official-sdk.md",
+      "public_report": "site/public/reports/projects/409-openai-agents-js-official-sdk.md",
+      "public_report_exists": true,
+      "status": "candidate",
+      "description": "OpenAI Agents SDK (JS) is the official TypeScript baseline for building agent orchestration loops with tools, handoffs, guardrails, realtime hooks, and tracing.",
+      "created_at": null,
+      "created_at_source": "unknown",
+      "first_observed_at": null,
+      "first_observed_source": null,
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/openai_openai-agents-js.md",
+      "raw_collected_at": "2026-06-09T10:20:00+08:00",
+      "raw_content_timestamp": "2026-06-09",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_06_09",
+      "in_classification": true,
+      "classification_category": "框架/framework",
+      "classification_function_tag": "framework-runtime",
+      "classification_evidence": "GitHub GraphQL/API snapshot captured via authenticated `gh` on 2026-06-13 showed 3,203 stars, 809 forks, 35 open issues, 29 open pull requests, 933 commits on `main`, latest push at 2026-06-12T08:33:10Z, MIT license, and latest release `v0.11.6` published on 2026-05-29.",
+      "raw_time_slice": "2026-06",
+      "classified_theme": "framework",
+      "evolution_focused": false
+    },
+    {
       "name": "cheshire-cat",
       "repo": "cheshire-cat-ai/core",
       "normalized_repo": "cheshire-cat-ai/core",
@@ -37223,54 +37256,6 @@
       "classification_evidence": "web-observed GitHub page showed 3.2k stars, 443 forks, 903 commits, Apache-2.0 license, and project messaging around an open-source AI Agent platform.",
       "raw_time_slice": "2026-05",
       "classified_theme": "skill",
-      "evolution_focused": false
-    },
-    {
-      "name": "OpenAI Agents SDK (JS)",
-      "repo": "openai/openai-agents-js",
-      "normalized_repo": "openai/openai-agents-js",
-      "url": "https://github.com/openai/openai-agents-js",
-      "category": "Official OpenAI Agents SDK TypeScript Baseline",
-      "pattern": "compose agents in TypeScript -> attach tools, handoffs, and realtime transport -> trace execution and guardrails -> use the official JS runtime as the canonical baseline for browser, frontend, and full-stack swarm orchestration claims",
-      "tags": [
-        "openai-agents-sdk",
-        "official-sdk",
-        "typescript",
-        "realtime",
-        "orchestration"
-      ],
-      "site_stars": 3200,
-      "site_forks": 803,
-      "license": "MIT",
-      "lastPushed": "2026-06-09T00:00:00Z",
-      "localPath": "raw-github/openai_openai-agents-js.md",
-      "local_git": null,
-      "local_git_history_24m": null,
-      "report": "projects/409-openai-agents-js-official-sdk.md",
-      "public_report": "site/public/reports/projects/409-openai-agents-js-official-sdk.md",
-      "public_report_exists": true,
-      "status": "candidate",
-      "description": "OpenAI Agents SDK (JS) is the official TypeScript baseline for building agent orchestration loops with tools, handoffs, guardrails, realtime hooks, and tracing.",
-      "created_at": null,
-      "created_at_source": "unknown",
-      "first_observed_at": null,
-      "first_observed_source": null,
-      "github_source": "github_api_fetch_error",
-      "github_api_stars": null,
-      "github_api_forks": null,
-      "github_pushed_at": null,
-      "github_error": "fetch failed",
-      "in_raw_timestamp_index": true,
-      "raw_file": "raw-github/openai_openai-agents-js.md",
-      "raw_collected_at": "2026-06-09T10:20:00+08:00",
-      "raw_content_timestamp": "2026-06-09",
-      "raw_timestamp_source": "web_observed_public_github_page_2026_06_09",
-      "in_classification": true,
-      "classification_category": "框架/framework",
-      "classification_function_tag": "framework-runtime",
-      "classification_evidence": "web-observed GitHub repo page on 2026-06-09 showed 3.2k stars, 803 forks, 931 commits, 35 issues, and 25 pull requests; README navigation exposed agents, tools, handoffs, guardrails, realtime, voice, tracing, sessions, MCP, and advanced usage docs.",
-      "raw_time_slice": "2026-06",
-      "classified_theme": "harness",
       "evolution_focused": false
     },
     {
@@ -38677,6 +38662,54 @@
       "evolution_focused": true
     },
     {
+      "name": "LightAgent",
+      "repo": "wanxingai/LightAgent",
+      "normalized_repo": "wanxingai/lightagent",
+      "url": "https://github.com/wanxingai/LightAgent",
+      "category": "Memory/MCP Skill Agent Framework",
+      "pattern": "compose lightweight agents with tools, MCP, and memory -> add native skills and optional trace observability -> delegate via LightSwarm -> chain deterministic multi-step flows with LightFlow -> keep self-learning behavior grounded in runtime memory and reusable tool plans",
+      "tags": [
+        "lightagent",
+        "memory",
+        "mcp",
+        "skills",
+        "workflow"
+      ],
+      "site_stars": 1132,
+      "site_forks": 143,
+      "license": "Apache-2.0",
+      "lastPushed": "2026-06-05T15:00:09Z",
+      "localPath": "raw-github/wanxingai_lightagent.md",
+      "local_git": null,
+      "local_git_history_24m": null,
+      "report": "projects/139-lightagent-memory-mcp-skills.md",
+      "public_report": "site/public/reports/projects/139-lightagent-memory-mcp-skills.md",
+      "public_report_exists": true,
+      "status": "candidate",
+      "description": "LightAgent is a lightweight Python agent framework that combines persistent memory, MCP integration, native skills, LightSwarm collaboration, and newly surfaced LightFlow workflow orchestration into a small-footprint self-learning runtime.",
+      "created_at": null,
+      "created_at_source": "unknown",
+      "first_observed_at": null,
+      "first_observed_source": null,
+      "github_source": "github_api_fetch_error",
+      "github_api_stars": null,
+      "github_api_forks": null,
+      "github_pushed_at": null,
+      "github_error": "fetch failed",
+      "in_raw_timestamp_index": true,
+      "raw_file": "raw-github/wanxingai_lightagent.md",
+      "raw_collected_at": "2026-06-08T17:47:34+08:00",
+      "raw_content_timestamp": "2026-06-04",
+      "raw_timestamp_source": "web_observed_public_github_page_2026_06_08_with_latest_release_2026_06_04",
+      "in_classification": true,
+      "classification_category": "框架/framework",
+      "classification_function_tag": "framework-runtime",
+      "classification_evidence": "GitHub GraphQL/API snapshot captured via authenticated `gh` on 2026-06-13 showed 1,132 stars, 143 forks, 8 open issues, 0 open pull requests, 107 commits on `main`, latest push at 2026-06-05T15:00:09Z, Apache-2.0 license, and latest release `LightAgent v0.8.0` published on 2026-06-05.",
+      "raw_time_slice": "2026-06",
+      "classified_theme": "memory",
+      "evolution_focused": false
+    },
+    {
       "name": "mem9",
       "repo": "mem9-ai/mem9",
       "normalized_repo": "mem9-ai/mem9",
@@ -38722,54 +38755,6 @@
       "classification_evidence": "web-observed GitHub page showed 1.1k stars, 111 forks, 433 commits, Apache-2.0 license, and README claims for OpenClaw/Hermes/Claude Code/OpenCode/Codex/Dify integrations with shared API-driven memory.",
       "raw_time_slice": "2026-05",
       "classified_theme": "memory",
-      "evolution_focused": false
-    },
-    {
-      "name": "LightAgent",
-      "repo": "wanxingai/LightAgent",
-      "normalized_repo": "wanxingai/lightagent",
-      "url": "https://github.com/wanxingai/LightAgent",
-      "category": "Memory/MCP Skill Agent Framework",
-      "pattern": "compose lightweight agents with tools, MCP, and memory -> add native skills and optional trace observability -> delegate via LightSwarm -> chain deterministic multi-step flows with LightFlow -> keep self-learning behavior grounded in runtime memory and reusable tool plans",
-      "tags": [
-        "lightagent",
-        "memory",
-        "mcp",
-        "skills",
-        "workflow"
-      ],
-      "site_stars": 1100,
-      "site_forks": 141,
-      "license": "Apache-2.0",
-      "lastPushed": "2026-06-04T00:00:00Z",
-      "localPath": "raw-github/wanxingai_lightagent.md",
-      "local_git": null,
-      "local_git_history_24m": null,
-      "report": "projects/139-lightagent-memory-mcp-skills.md",
-      "public_report": "site/public/reports/projects/139-lightagent-memory-mcp-skills.md",
-      "public_report_exists": true,
-      "status": "candidate",
-      "description": "LightAgent is a lightweight Python agent framework that combines persistent memory, MCP integration, native skills, LightSwarm collaboration, and newly surfaced LightFlow workflow orchestration into a small-footprint self-learning runtime.",
-      "created_at": null,
-      "created_at_source": "unknown",
-      "first_observed_at": null,
-      "first_observed_source": null,
-      "github_source": "github_api_fetch_error",
-      "github_api_stars": null,
-      "github_api_forks": null,
-      "github_pushed_at": null,
-      "github_error": "fetch failed",
-      "in_raw_timestamp_index": true,
-      "raw_file": "raw-github/wanxingai_lightagent.md",
-      "raw_collected_at": "2026-06-08T17:47:34+08:00",
-      "raw_content_timestamp": "2026-06-04",
-      "raw_timestamp_source": "web_observed_public_github_page_2026_06_08_with_latest_release_2026_06_04",
-      "in_classification": true,
-      "classification_category": "框架/framework",
-      "classification_function_tag": "framework-runtime",
-      "classification_evidence": "web-observed GitHub repo page showed 1.1k stars, 141 forks, 8 issues, 0 pull requests, 107 commits, Apache-2.0 license, 21 releases with v0.8.0 latest on 2026-06-04, and continued LightFlow workflow orchestration plus persistent memory, MCP, native skills, trace observability, and self-learning agent claims.",
-      "raw_time_slice": "2026-06",
-      "classified_theme": "framework",
       "evolution_focused": false
     },
     {
@@ -40388,7 +40373,7 @@
       "site_stars": 520,
       "site_forks": 57,
       "license": "MIT",
-      "lastPushed": "2026-06-07T00:00:00Z",
+      "lastPushed": "2026-06-12T17:54:36Z",
       "localPath": "raw-github/desplega-ai_agent-swarm.md",
       "local_git": null,
       "local_git_history_24m": null,
@@ -40414,7 +40399,7 @@
       "in_classification": true,
       "classification_category": "框架/framework",
       "classification_function_tag": "framework-runtime",
-      "classification_evidence": "web-observed GitHub page on 2026-06-12 showed 520 stars, 57 forks, 1 issue, 2 pull requests, 1,619 commits, MIT license, and the same lead/worker Docker orchestration, MCP API, compounding memory, HITL workflow gates, and skills-based swarm operations described in the 2026-06-09 packet.",
+      "classification_evidence": "GitHub GraphQL/API snapshot captured via authenticated `gh` on 2026-06-13 showed 520 stars, 57 forks, 1 open issue, 2 open pull requests, 1,624 commits on `main`, latest push at 2026-06-12T17:54:36Z, MIT license, and latest release `v1.97.0` published on 2026-06-12.",
       "raw_time_slice": "2026-06",
       "classified_theme": "framework",
       "evolution_focused": false
@@ -42462,10 +42447,10 @@
         "skills",
         "benchmark"
       ],
-      "site_stars": 218,
+      "site_stars": 221,
       "site_forks": 27,
-      "license": "MIT",
-      "lastPushed": "2026-06-08T00:00:00Z",
+      "license": "NOASSERTION",
+      "lastPushed": "2026-05-13T03:56:12Z",
       "localPath": "raw-github/xskill-agent_xskill.md",
       "local_git": null,
       "local_git_history_24m": null,
@@ -42490,8 +42475,8 @@
       "raw_timestamp_source": "web_observed_public_github_page_2026_06_08",
       "in_classification": true,
       "classification_category": "论文代码/paper-code",
-      "classification_function_tag": "benchmark-eval",
-      "classification_evidence": "web-observed GitHub repo page showed 218 stars, 27 forks, 1 issue, 0 pull requests, 16 commits, MIT license, no releases, and a repository-page Updated Jun 8 2026 signal, plus a runtime-generated memory_bank and benchmark/eval folders covering VisualToolBench, TIR-Bench, MMSearch-Plus, AgentVista, and MMBrowseComp.",
+      "classification_function_tag": "paper-code",
+      "classification_evidence": "GitHub GraphQL/API snapshot captured via authenticated `gh` on 2026-06-13 showed 221 stars, 27 forks, 1 open issue, 0 open pull requests, 16 commits on `main`, latest push at 2026-05-13T03:56:12Z, no GitHub releases, and no SPDX license value returned by the API.",
       "raw_time_slice": "2026-06",
       "classified_theme": "skill",
       "evolution_focused": false
@@ -44863,7 +44848,7 @@
       "site_stars": 60,
       "site_forks": 1,
       "license": "Apache-2.0",
-      "lastPushed": "2026-06-06T00:00:00Z",
+      "lastPushed": "2026-05-13T13:26:05Z",
       "localPath": "raw-github/aq-medai_medmemorybench.md",
       "local_git": null,
       "local_git_history_24m": null,
@@ -44889,9 +44874,9 @@
       "in_classification": true,
       "classification_category": "评测/evaluation",
       "classification_function_tag": "benchmark-eval",
-      "classification_evidence": "web-observed GitHub page on 2026-06-09 showed 60 stars, 1 fork, 14 commits, Apache-2.0 license, 0 issues, 0 pull requests, and a latest v1.0 release dated 2026-06-06; README positions MedMemoryBench as a personalized-healthcare benchmark for longitudinal agent memory quality rather than generic retrieval recall",
+      "classification_evidence": "GitHub GraphQL/API snapshot captured via authenticated `gh` on 2026-06-13 showed 60 stars, 1 fork, 0 open issues, 0 open pull requests, 14 commits on `main`, latest push at 2026-05-13T13:26:05Z, Apache-2.0 license, and no GitHub releases.",
       "raw_time_slice": "2026-06",
-      "classified_theme": "memory",
+      "classified_theme": "benchmark",
       "evolution_focused": false
     },
     {
@@ -50493,10 +50478,10 @@
         "worktree",
         "mcp"
       ],
-      "site_stars": 7500,
-      "site_forks": 1000,
+      "site_stars": 7514,
+      "site_forks": 1025,
       "license": "MIT",
-      "lastPushed": "2026-06-09T00:00:00Z",
+      "lastPushed": "2026-06-09T00:56:58Z",
       "localPath": "raw-github/composiohq_agent-orchestrator.md",
       "local_git": null,
       "local_git_history_24m": null,
@@ -50522,7 +50507,7 @@
       "in_classification": true,
       "classification_category": "框架/framework",
       "classification_function_tag": "framework-runtime",
-      "classification_evidence": "web-observed GitHub page on 2026-06-09 still redirected the legacy ComposioHQ URL to AgentWrapper/agent-orchestrator, then showed 7.5k stars, 1k forks, 1,277 commits, MIT license, 476 issues, and 468 pull requests; public README/about position it as a production coding-agent orchestrator with swarms, worktrees, skills, memory, and MCP tools",
+      "classification_evidence": "GitHub GraphQL/API snapshot captured via authenticated `gh` on 2026-06-13 showed the canonical redirected repository `AgentWrapper/agent-orchestrator` at 7,514 stars, 1,025 forks, 478 open issues, 474 open pull requests, 1,277 commits on `main`, latest push at 2026-06-09T00:56:58Z, MIT license, and latest nightly release published on 2026-06-08.",
       "raw_time_slice": "2026-06",
       "classified_theme": "harness",
       "evolution_focused": false
@@ -51225,7 +51210,7 @@
       "site_stars": 60,
       "site_forks": 1,
       "license": "Apache-2.0",
-      "lastPushed": "2026-06-06T00:00:00Z",
+      "lastPushed": "2026-05-13T13:26:05Z",
       "localPath": "raw-github/aq-medai_medmemorybench.md",
       "local_git": null,
       "local_git_history_24m": null,
@@ -51251,9 +51236,9 @@
       "in_classification": true,
       "classification_category": "评测/evaluation",
       "classification_function_tag": "benchmark-eval",
-      "classification_evidence": "web-observed GitHub page on 2026-06-09 showed 60 stars, 1 fork, 14 commits, Apache-2.0 license, 0 issues, 0 pull requests, and a latest v1.0 release dated 2026-06-06; README positions MedMemoryBench as a personalized-healthcare benchmark for longitudinal agent memory quality rather than generic retrieval recall",
+      "classification_evidence": "GitHub GraphQL/API snapshot captured via authenticated `gh` on 2026-06-13 showed 60 stars, 1 fork, 0 open issues, 0 open pull requests, 14 commits on `main`, latest push at 2026-05-13T13:26:05Z, Apache-2.0 license, and no GitHub releases.",
       "raw_time_slice": "2026-06",
-      "classified_theme": "memory",
+      "classified_theme": "benchmark",
       "evolution_focused": false
     },
     {
@@ -53331,7 +53316,7 @@
       "site_stars": 520,
       "site_forks": 57,
       "license": "MIT",
-      "lastPushed": "2026-06-07T00:00:00Z",
+      "lastPushed": "2026-06-12T17:54:36Z",
       "localPath": "raw-github/desplega-ai_agent-swarm.md",
       "local_git": null,
       "local_git_history_24m": null,
@@ -53357,7 +53342,7 @@
       "in_classification": true,
       "classification_category": "框架/framework",
       "classification_function_tag": "framework-runtime",
-      "classification_evidence": "web-observed GitHub page on 2026-06-12 showed 520 stars, 57 forks, 1 issue, 2 pull requests, 1,619 commits, MIT license, and the same lead/worker Docker orchestration, MCP API, compounding memory, HITL workflow gates, and skills-based swarm operations described in the 2026-06-09 packet.",
+      "classification_evidence": "GitHub GraphQL/API snapshot captured via authenticated `gh` on 2026-06-13 showed 520 stars, 57 forks, 1 open issue, 2 open pull requests, 1,624 commits on `main`, latest push at 2026-06-12T17:54:36Z, MIT license, and latest release `v1.97.0` published on 2026-06-12.",
       "raw_time_slice": "2026-06",
       "classified_theme": "framework",
       "evolution_focused": false
@@ -58241,13 +58226,13 @@
         "openai-agents-sdk",
         "official-sdk",
         "typescript",
-        "realtime",
-        "orchestration"
+        "orchestration",
+        "realtime"
       ],
-      "site_stars": 3200,
-      "site_forks": 803,
+      "site_stars": 3203,
+      "site_forks": 809,
       "license": "MIT",
-      "lastPushed": "2026-06-09T00:00:00Z",
+      "lastPushed": "2026-06-12T08:33:10Z",
       "localPath": "raw-github/openai_openai-agents-js.md",
       "local_git": null,
       "local_git_history_24m": null,
@@ -58273,9 +58258,9 @@
       "in_classification": true,
       "classification_category": "框架/framework",
       "classification_function_tag": "framework-runtime",
-      "classification_evidence": "web-observed GitHub repo page on 2026-06-09 showed 3.2k stars, 803 forks, 931 commits, 35 issues, and 25 pull requests; README navigation exposed agents, tools, handoffs, guardrails, realtime, voice, tracing, sessions, MCP, and advanced usage docs.",
+      "classification_evidence": "GitHub GraphQL/API snapshot captured via authenticated `gh` on 2026-06-13 showed 3,203 stars, 809 forks, 35 open issues, 29 open pull requests, 933 commits on `main`, latest push at 2026-06-12T08:33:10Z, MIT license, and latest release `v0.11.6` published on 2026-05-29.",
       "raw_time_slice": "2026-06",
-      "classified_theme": "harness",
+      "classified_theme": "framework",
       "evolution_focused": false
     },
     {
@@ -58292,10 +58277,10 @@
         "orchestration",
         "guardrails"
       ],
-      "site_stars": 27000,
-      "site_forks": 4200,
+      "site_stars": 27111,
+      "site_forks": 4185,
       "license": "MIT",
-      "lastPushed": "2026-06-09T00:00:00Z",
+      "lastPushed": "2026-06-11T04:10:37Z",
       "localPath": "raw-github/openai_openai-agents-python.md",
       "local_git": null,
       "local_git_history_24m": null,
@@ -58321,9 +58306,9 @@
       "in_classification": true,
       "classification_category": "框架/framework",
       "classification_function_tag": "framework-runtime",
-      "classification_evidence": "web-observed GitHub repo page on 2026-06-09 showed 27k stars, 4.2k forks, 1,598 commits, 43 issues, and 89 pull requests; README navigation exposed models, tools, handoffs, guardrails, tracing, MCP, voice, sessions, agents-as-tools, and context-management docs.",
+      "classification_evidence": "GitHub GraphQL/API snapshot captured via authenticated `gh` on 2026-06-13 showed 27,111 stars, 4,185 forks, 45 open issues, 99 open pull requests, 1,603 commits on `main`, latest push at 2026-06-11T04:10:37Z, MIT license, and latest release `v0.17.5` published on 2026-06-11.",
       "raw_time_slice": "2026-06",
-      "classified_theme": "harness",
+      "classified_theme": "framework",
       "evolution_focused": false
     },
     {
@@ -62377,10 +62362,10 @@
         "state-persistence",
         "cli"
       ],
-      "site_stars": 4400,
-      "site_forks": 1200,
+      "site_stars": 4445,
+      "site_forks": 1058,
       "license": "MIT",
-      "lastPushed": "2026-06-04T00:00:00Z",
+      "lastPushed": "2026-06-12T00:13:04Z",
       "localPath": "raw-github/vrsen_agency-swarm.md",
       "local_git": null,
       "local_git_history_24m": null,
@@ -62406,7 +62391,7 @@
       "in_classification": true,
       "classification_category": "框架/framework",
       "classification_function_tag": "framework-runtime",
-      "classification_evidence": "web-observed GitHub repo page showed 4.4k stars, 1.2k forks, 1 issue, 3 pull requests, 2,526 commits, MIT license, 67 releases with v1.10.3 latest on 2026-06-04, and explicit positioning as a structured orchestration layer built on the OpenAI Agents SDK with communication flows and state persistence callbacks.",
+      "classification_evidence": "GitHub GraphQL/API snapshot captured via authenticated `gh` on 2026-06-13 showed 4,445 stars, 1,058 forks, 0 open issues, 6 open pull requests, 2,545 commits on `main`, latest push at 2026-06-12T00:13:04Z, MIT license, and latest release `v1.10.1` published on 2026-06-11.",
       "raw_time_slice": "2026-06",
       "classified_theme": "framework",
       "evolution_focused": false
@@ -62425,10 +62410,10 @@
         "skills",
         "workflow"
       ],
-      "site_stars": 1100,
-      "site_forks": 141,
+      "site_stars": 1132,
+      "site_forks": 143,
       "license": "Apache-2.0",
-      "lastPushed": "2026-06-04T00:00:00Z",
+      "lastPushed": "2026-06-05T15:00:09Z",
       "localPath": "raw-github/wanxingai_lightagent.md",
       "local_git": null,
       "local_git_history_24m": null,
@@ -62454,9 +62439,9 @@
       "in_classification": true,
       "classification_category": "框架/framework",
       "classification_function_tag": "framework-runtime",
-      "classification_evidence": "web-observed GitHub repo page showed 1.1k stars, 141 forks, 8 issues, 0 pull requests, 107 commits, Apache-2.0 license, 21 releases with v0.8.0 latest on 2026-06-04, and continued LightFlow workflow orchestration plus persistent memory, MCP, native skills, trace observability, and self-learning agent claims.",
+      "classification_evidence": "GitHub GraphQL/API snapshot captured via authenticated `gh` on 2026-06-13 showed 1,132 stars, 143 forks, 8 open issues, 0 open pull requests, 107 commits on `main`, latest push at 2026-06-05T15:00:09Z, Apache-2.0 license, and latest release `LightAgent v0.8.0` published on 2026-06-05.",
       "raw_time_slice": "2026-06",
-      "classified_theme": "framework",
+      "classified_theme": "memory",
       "evolution_focused": false
     },
     {
@@ -63110,10 +63095,10 @@
         "skills",
         "benchmark"
       ],
-      "site_stars": 218,
+      "site_stars": 221,
       "site_forks": 27,
-      "license": "MIT",
-      "lastPushed": "2026-06-08T00:00:00Z",
+      "license": "NOASSERTION",
+      "lastPushed": "2026-05-13T03:56:12Z",
       "localPath": "raw-github/xskill-agent_xskill.md",
       "local_git": null,
       "local_git_history_24m": null,
@@ -63138,8 +63123,8 @@
       "raw_timestamp_source": "web_observed_public_github_page_2026_06_08",
       "in_classification": true,
       "classification_category": "论文代码/paper-code",
-      "classification_function_tag": "benchmark-eval",
-      "classification_evidence": "web-observed GitHub repo page showed 218 stars, 27 forks, 1 issue, 0 pull requests, 16 commits, MIT license, no releases, and a repository-page Updated Jun 8 2026 signal, plus a runtime-generated memory_bank and benchmark/eval folders covering VisualToolBench, TIR-Bench, MMSearch-Plus, AgentVista, and MMBrowseComp.",
+      "classification_function_tag": "paper-code",
+      "classification_evidence": "GitHub GraphQL/API snapshot captured via authenticated `gh` on 2026-06-13 showed 221 stars, 27 forks, 1 open issue, 0 open pull requests, 16 commits on `main`, latest push at 2026-05-13T03:56:12Z, no GitHub releases, and no SPDX license value returned by the API.",
       "raw_time_slice": "2026-06",
       "classified_theme": "skill",
       "evolution_focused": false
@@ -64232,24 +64217,24 @@
       },
       {
         "month": "2026-05",
-        "total": 166,
+        "total": 168,
         "source_counts": {
           "github_created_at": 0,
           "local_first_observed": 26,
           "github_pushed_at": 0,
-          "site_last_pushed": 140,
+          "site_last_pushed": 142,
           "raw_content_timestamp": 0,
           "raw_collected_at": 0
         }
       },
       {
         "month": "2026-06",
-        "total": 75,
+        "total": 73,
         "source_counts": {
           "github_created_at": 0,
           "local_first_observed": 0,
           "github_pushed_at": 0,
-          "site_last_pushed": 75,
+          "site_last_pushed": 73,
           "raw_content_timestamp": 0,
           "raw_collected_at": 0
         }
@@ -64504,7 +64489,7 @@
   },
   "ranking_method": {
     "name": "recency_weighted_current_value",
-    "reference_date": "2026-06-12T12:23:11.796Z",
+    "reference_date": "2026-06-12T18:21:33.253Z",
     "weights": {
       "time": 0.5,
       "mechanism": 0.2,
@@ -64543,8 +64528,8 @@
       "stars": 1440,
       "report": "projects/modelscope__agentevolver.md",
       "scores": {
-        "current_value": 81.98,
-        "time": 73.84,
+        "current_value": 81.96,
+        "time": 73.79,
         "mechanism": 100,
         "evidence": 100,
         "adoption": 56.63,
@@ -64571,8 +64556,8 @@
       "stars": 41,
       "report": "projects/zju_llm_safety__darwin.md",
       "scores": {
-        "current_value": 75.72,
-        "time": 91.72,
+        "current_value": 75.7,
+        "time": 91.67,
         "mechanism": 75,
         "evidence": 62,
         "adoption": 29.1,
@@ -64601,8 +64586,8 @@
       "stars": 43,
       "report": "projects/oppo_mente_lab__llm_self_judge.md",
       "scores": {
-        "current_value": 74.68,
-        "time": 84.56,
+        "current_value": 74.65,
+        "time": 84.52,
         "mechanism": 85,
         "evidence": 62,
         "adoption": 29.46,
@@ -64629,8 +64614,8 @@
       "stars": 6377,
       "report": "projects/algorithmicsuperintelligence__openevolve.md",
       "scores": {
-        "current_value": 69.66,
-        "time": 55.27,
+        "current_value": 69.64,
+        "time": 55.23,
         "mechanism": 79,
         "evidence": 100,
         "adoption": 68.21,
@@ -64656,8 +64641,8 @@
       "stars": 77,
       "report": "projects/jarvispei__scope.md",
       "scores": {
-        "current_value": 67.07,
-        "time": 76.66,
+        "current_value": 67.05,
+        "time": 76.61,
         "mechanism": 67,
         "evidence": 62,
         "adoption": 33.92,
@@ -64684,8 +64669,8 @@
       "stars": 98,
       "report": "projects/inter_co__science_codeevolve.md",
       "scores": {
-        "current_value": 64.52,
-        "time": 71.59,
+        "current_value": 64.5,
+        "time": 71.55,
         "mechanism": 59,
         "evidence": 68,
         "adoption": 35.78,
@@ -64713,8 +64698,8 @@
       "stars": 274,
       "report": "projects/jarvis_xs__se_agent.md",
       "scores": {
-        "current_value": 62.3,
-        "time": 46.24,
+        "current_value": 62.27,
+        "time": 46.2,
         "mechanism": 77,
         "evidence": 100,
         "adoption": 43.73,
@@ -65085,8 +65070,8 @@
       "stars": 6800,
       "report": "projects/22-evoagentx-agent-evolution-framework.md",
       "scores": {
-        "current_value": 57.45,
-        "time": 27.75,
+        "current_value": 57.43,
+        "time": 27.72,
         "mechanism": 97,
         "evidence": 86,
         "adoption": 68.71,
@@ -65549,8 +65534,8 @@
       "stars": 426,
       "report": "projects/228-yunjue-agent-in-situ-self-evolving-agent.md",
       "scores": {
-        "current_value": 53.2,
-        "time": 33.37,
+        "current_value": 53.18,
+        "time": 33.33,
         "mechanism": 97,
         "evidence": 56,
         "adoption": 47.16,
@@ -65579,8 +65564,8 @@
       "stars": 34604,
       "report": "projects/10-dspy-declarative-llm-programming.md",
       "scores": {
-        "current_value": 52.28,
-        "time": 28.39,
+        "current_value": 52.27,
+        "time": 28.37,
         "mechanism": 59,
         "evidence": 100,
         "adoption": 81.38,
@@ -65671,8 +65656,8 @@
       "stars": 1227,
       "report": "projects/51-pinchbench-skill.md",
       "scores": {
-        "current_value": 51.27,
-        "time": 44.86,
+        "current_value": 51.25,
+        "time": 44.83,
         "mechanism": 50,
         "evidence": 62,
         "adoption": 55.38,
@@ -65825,8 +65810,8 @@
       "stars": 1000,
       "report": "projects/23-everos-self-evolving-agents.md",
       "scores": {
-        "current_value": 50.26,
-        "time": 27.75,
+        "current_value": 50.24,
+        "time": 27.72,
         "mechanism": 71,
         "evidence": 86,
         "adoption": 53.79,
@@ -66177,35 +66162,6 @@
     },
     {
       "rank": 55,
-      "repo": "XMUDeepLIT/Awesome-Self-Evolving-Agents",
-      "name": "awesome-self-evolving-agents",
-      "url": "https://github.com/XMUDeepLIT/Awesome-Self-Evolving-Agents",
-      "category": "自进化 Agent 综述",
-      "pattern": "综述索引 → 自进化 Agent 论文集合",
-      "tags": [
-        "综述",
-        "自进化",
-        "论文索引"
-      ],
-      "status": "candidate",
-      "created_at": null,
-      "created_at_source": "unknown",
-      "first_observed_at": "2026-05-02T15:43:50+08:00",
-      "activity_at": "2026-01-15T00:00:00Z",
-      "stars": 3800,
-      "report": "research/projects/44-xmu-self-evolving-agents.md",
-      "scores": {
-        "current_value": 47.75,
-        "time": 29.67,
-        "mechanism": 69,
-        "evidence": 68,
-        "adoption": 64.18,
-        "usefulness": 50
-      },
-      "caveat": "created_at unavailable; time score capped and based on activity/observation only"
-    },
-    {
-      "rank": 56,
       "repo": "hwfengcs/dm-code-agent",
       "name": "DM-Code-Agent",
       "url": "https://github.com/hwfengcs/DM-Code-Agent",
@@ -66232,6 +66188,35 @@
         "evidence": 56,
         "adoption": 38.42,
         "usefulness": 80
+      },
+      "caveat": "created_at unavailable; time score capped and based on activity/observation only"
+    },
+    {
+      "rank": 56,
+      "repo": "XMUDeepLIT/Awesome-Self-Evolving-Agents",
+      "name": "awesome-self-evolving-agents",
+      "url": "https://github.com/XMUDeepLIT/Awesome-Self-Evolving-Agents",
+      "category": "自进化 Agent 综述",
+      "pattern": "综述索引 → 自进化 Agent 论文集合",
+      "tags": [
+        "综述",
+        "自进化",
+        "论文索引"
+      ],
+      "status": "candidate",
+      "created_at": null,
+      "created_at_source": "unknown",
+      "first_observed_at": "2026-05-02T15:43:50+08:00",
+      "activity_at": "2026-01-15T00:00:00Z",
+      "stars": 3800,
+      "report": "research/projects/44-xmu-self-evolving-agents.md",
+      "scores": {
+        "current_value": 47.74,
+        "time": 29.64,
+        "mechanism": 69,
+        "evidence": 68,
+        "adoption": 64.18,
+        "usefulness": 50
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
@@ -66699,35 +66684,6 @@
     },
     {
       "rank": 72,
-      "repo": "Zesearch/self-improvement-llm",
-      "name": "self-improvement-llm",
-      "url": "https://github.com/Zesearch/self-improvement-llm",
-      "category": "LLM 自改进综述",
-      "pattern": "文献综述",
-      "tags": [
-        "文献综述",
-        "自改进",
-        "LLM优化"
-      ],
-      "status": "verified",
-      "created_at": null,
-      "created_at_source": "unknown",
-      "first_observed_at": "2026-03-31T22:45:19-04:00",
-      "activity_at": "2026-01-01T00:00:00Z",
-      "stars": 200,
-      "report": "projects/33-self-improvement-llm.md",
-      "scores": {
-        "current_value": 46.36,
-        "time": 27.75,
-        "mechanism": 69,
-        "evidence": 86,
-        "adoption": 41.29,
-        "usefulness": 33
-      },
-      "caveat": "created_at unavailable; time score capped and based on activity/observation only"
-    },
-    {
-      "rank": 73,
       "repo": "langchain-ai/memory-agent",
       "name": "LangChain Memory Agent",
       "url": "https://github.com/langchain-ai/memory-agent",
@@ -66754,6 +66710,35 @@
         "evidence": 56,
         "adoption": 58.36,
         "usefulness": 80
+      },
+      "caveat": "created_at unavailable; time score capped and based on activity/observation only"
+    },
+    {
+      "rank": 73,
+      "repo": "Zesearch/self-improvement-llm",
+      "name": "self-improvement-llm",
+      "url": "https://github.com/Zesearch/self-improvement-llm",
+      "category": "LLM 自改进综述",
+      "pattern": "文献综述",
+      "tags": [
+        "文献综述",
+        "自改进",
+        "LLM优化"
+      ],
+      "status": "verified",
+      "created_at": null,
+      "created_at_source": "unknown",
+      "first_observed_at": "2026-03-31T22:45:19-04:00",
+      "activity_at": "2026-01-01T00:00:00Z",
+      "stars": 200,
+      "report": "projects/33-self-improvement-llm.md",
+      "scores": {
+        "current_value": 46.34,
+        "time": 27.72,
+        "mechanism": 69,
+        "evidence": 86,
+        "adoption": 41.29,
+        "usefulness": 33
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
@@ -66945,35 +66930,6 @@
     },
     {
       "rank": 80,
-      "repo": "DeepAuto-AI/automl-agent",
-      "name": "AutoML-Agent",
-      "url": "https://github.com/DeepAuto-AI/automl-agent",
-      "category": "多 Agent AutoML",
-      "pattern": "智能体编排 → 进化/搜索循环 → 评估器/打分器",
-      "tags": [
-        "智能体编排",
-        "Evol-Instruct",
-        "AutoML"
-      ],
-      "status": "verified",
-      "created_at": "2025-05-08T08:36:54Z",
-      "created_at_source": "github_api",
-      "first_observed_at": null,
-      "activity_at": "2025-07-11T19:39:49Z",
-      "stars": 136,
-      "report": "projects/05-automl-agent-multi-agent.md",
-      "scores": {
-        "current_value": 46.02,
-        "time": 34.08,
-        "mechanism": 59,
-        "evidence": 68,
-        "adoption": 38.31,
-        "usefulness": 63
-      },
-      "caveat": ""
-    },
-    {
-      "rank": 81,
       "repo": "openclaw/clownfish",
       "name": "Clownfish",
       "url": "https://github.com/openclaw/clownfish",
@@ -67004,6 +66960,35 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
+      "rank": 81,
+      "repo": "DeepAuto-AI/automl-agent",
+      "name": "AutoML-Agent",
+      "url": "https://github.com/DeepAuto-AI/automl-agent",
+      "category": "多 Agent AutoML",
+      "pattern": "智能体编排 → 进化/搜索循环 → 评估器/打分器",
+      "tags": [
+        "智能体编排",
+        "Evol-Instruct",
+        "AutoML"
+      ],
+      "status": "verified",
+      "created_at": "2025-05-08T08:36:54Z",
+      "created_at_source": "github_api",
+      "first_observed_at": null,
+      "activity_at": "2025-07-11T19:39:49Z",
+      "stars": 136,
+      "report": "projects/05-automl-agent-multi-agent.md",
+      "scores": {
+        "current_value": 46,
+        "time": 34.04,
+        "mechanism": 59,
+        "evidence": 68,
+        "adoption": 38.31,
+        "usefulness": 63
+      },
+      "caveat": ""
+    },
+    {
       "rank": 82,
       "repo": "openai/openai-agents-python",
       "name": "OpenAI Agents SDK (Python)",
@@ -67021,15 +67006,15 @@
       "created_at": null,
       "created_at_source": "unknown",
       "first_observed_at": null,
-      "activity_at": "2026-06-09T00:00:00Z",
-      "stars": 27000,
+      "activity_at": "2026-06-11T04:10:37Z",
+      "stars": 27111,
       "report": "projects/408-openai-agents-python-official-sdk.md",
       "scores": {
-        "current_value": 45.94,
+        "current_value": 45.95,
         "time": 45,
         "mechanism": 18,
         "evidence": 56,
-        "adoption": 79.45,
+        "adoption": 79.48,
         "usefulness": 70
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
@@ -67278,6 +67263,37 @@
     },
     {
       "rank": 91,
+      "repo": "wanxingai/LightAgent",
+      "name": "LightAgent",
+      "url": "https://github.com/wanxingai/LightAgent",
+      "category": "Memory/MCP Skill Agent Framework",
+      "pattern": "compose lightweight agents with tools, MCP, and memory -> add native skills and optional trace observability -> delegate via LightSwarm -> chain deterministic multi-step flows with LightFlow -> keep self-learning behavior grounded in runtime memory and reusable tool plans",
+      "tags": [
+        "lightagent",
+        "memory",
+        "mcp",
+        "skills",
+        "workflow"
+      ],
+      "status": "candidate",
+      "created_at": null,
+      "created_at_source": "unknown",
+      "first_observed_at": null,
+      "activity_at": "2026-06-05T15:00:09Z",
+      "stars": 1132,
+      "report": "projects/139-lightagent-memory-mcp-skills.md",
+      "scores": {
+        "current_value": 45.08,
+        "time": 45,
+        "mechanism": 26,
+        "evidence": 56,
+        "adoption": 54.76,
+        "usefulness": 70
+      },
+      "caveat": "created_at unavailable; time score capped and based on activity/observation only"
+    },
+    {
+      "rank": 92,
       "repo": "openclaw/clawhub",
       "name": "OpenClaw ClawHub",
       "url": "https://github.com/openclaw/clawhub",
@@ -67308,7 +67324,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 92,
+      "rank": 93,
       "repo": "ThisIsJeron/awesome-openclaw-plugins",
       "name": "Awesome OpenClaw Plugins (ThisIsJeron)",
       "url": "https://github.com/ThisIsJeron/awesome-openclaw-plugins",
@@ -67334,37 +67350,6 @@
         "mechanism": 43,
         "evidence": 56,
         "adoption": 20.55,
-        "usefulness": 70
-      },
-      "caveat": "created_at unavailable; time score capped and based on activity/observation only"
-    },
-    {
-      "rank": 93,
-      "repo": "wanxingai/LightAgent",
-      "name": "LightAgent",
-      "url": "https://github.com/wanxingai/LightAgent",
-      "category": "Memory/MCP Skill Agent Framework",
-      "pattern": "compose lightweight agents with tools, MCP, and memory -> add native skills and optional trace observability -> delegate via LightSwarm -> chain deterministic multi-step flows with LightFlow -> keep self-learning behavior grounded in runtime memory and reusable tool plans",
-      "tags": [
-        "lightagent",
-        "memory",
-        "mcp",
-        "skills",
-        "workflow"
-      ],
-      "status": "candidate",
-      "created_at": null,
-      "created_at_source": "unknown",
-      "first_observed_at": null,
-      "activity_at": "2026-06-04T00:00:00Z",
-      "stars": 1100,
-      "report": "projects/139-lightagent-memory-mcp-skills.md",
-      "scores": {
-        "current_value": 45.05,
-        "time": 45,
-        "mechanism": 26,
-        "evidence": 56,
-        "adoption": 54.53,
         "usefulness": 70
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
@@ -67418,15 +67403,15 @@
       "created_at": null,
       "created_at_source": "unknown",
       "first_observed_at": null,
-      "activity_at": "2026-06-09T00:00:00Z",
-      "stars": 7500,
+      "activity_at": "2026-06-09T00:56:58Z",
+      "stars": 7514,
       "report": "projects/406-composio-agent-orchestrator-coding-swarm.md",
       "scores": {
         "current_value": 44.95,
         "time": 45,
         "mechanism": 18,
         "evidence": 56,
-        "adoption": 69.47,
+        "adoption": 69.49,
         "usefulness": 70
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
@@ -67602,15 +67587,15 @@
       "created_at": null,
       "created_at_source": "unknown",
       "first_observed_at": null,
-      "activity_at": "2026-06-08T00:00:00Z",
-      "stars": 218,
+      "activity_at": "2026-05-13T03:56:12Z",
+      "stars": 221,
       "report": "projects/404-xskill-continual-experience-skill-learning.md",
       "scores": {
-        "current_value": 44.7,
+        "current_value": 44.71,
         "time": 45,
         "mechanism": 28,
         "evidence": 56,
-        "adoption": 41.96,
+        "adoption": 42.07,
         "usefulness": 80
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
@@ -67884,8 +67869,8 @@
       "stars": 21600,
       "report": "projects/311-openai-swarm-multi-agent-orchestration.md",
       "scores": {
-        "current_value": 44.27,
-        "time": 41.99,
+        "current_value": 44.25,
+        "time": 41.96,
         "mechanism": 18,
         "evidence": 56,
         "adoption": 77.71,
@@ -68034,8 +68019,8 @@
       "stars": 19280,
       "report": "projects/14-swe-agent-software-engineering.md",
       "scores": {
-        "current_value": 44.02,
-        "time": 27.99,
+        "current_value": 44.01,
+        "time": 27.96,
         "mechanism": 45,
         "evidence": 68,
         "adoption": 76.82,
@@ -68216,8 +68201,8 @@
       "stars": 2800,
       "report": "research/projects/60-swe-bench-evaluation.md",
       "scores": {
-        "current_value": 43.92,
-        "time": 40.07,
+        "current_value": 43.9,
+        "time": 40.04,
         "mechanism": 20,
         "evidence": 68,
         "adoption": 61.8,
@@ -68397,7 +68382,7 @@
       "created_at": null,
       "created_at_source": "unknown",
       "first_observed_at": null,
-      "activity_at": "2026-06-06T00:00:00Z",
+      "activity_at": "2026-05-13T13:26:05Z",
       "stars": 60,
       "report": "projects/407-medmemorybench-agent-memory-benchmark.md",
       "scores": {
@@ -68523,8 +68508,8 @@
       "stars": 52041,
       "report": "projects/09-crewai-multi-agent-framework.md",
       "scores": {
-        "current_value": 43.55,
-        "time": 28.38,
+        "current_value": 43.54,
+        "time": 28.36,
         "mechanism": 10,
         "evidence": 100,
         "adoption": 84.55,
@@ -68739,8 +68724,8 @@
       "stars": 184482,
       "report": "projects/08-autogpt-autonomous-agent.md",
       "scores": {
-        "current_value": 43.29,
-        "time": 28.41,
+        "current_value": 43.28,
+        "time": 28.39,
         "mechanism": 10,
         "evidence": 100,
         "adoption": 94.41,
@@ -68978,7 +68963,7 @@
       "created_at": null,
       "created_at_source": "unknown",
       "first_observed_at": null,
-      "activity_at": "2026-06-07T00:00:00Z",
+      "activity_at": "2026-06-12T17:54:36Z",
       "stars": 520,
       "report": "projects/405-agent-swarm-compounding-lead-worker-runtime.md",
       "scores": {
@@ -69149,6 +69134,37 @@
     },
     {
       "rank": 152,
+      "repo": "openai/openai-agents-js",
+      "name": "OpenAI Agents SDK (JS)",
+      "url": "https://github.com/openai/openai-agents-js",
+      "category": "Official OpenAI Agents SDK TypeScript Baseline",
+      "pattern": "compose agents in TypeScript -> attach tools, handoffs, and realtime transport -> trace execution and guardrails -> use the official JS runtime as the canonical baseline for browser, frontend, and full-stack swarm orchestration claims",
+      "tags": [
+        "openai-agents-sdk",
+        "official-sdk",
+        "typescript",
+        "orchestration",
+        "realtime"
+      ],
+      "status": "candidate",
+      "created_at": null,
+      "created_at_source": "unknown",
+      "first_observed_at": null,
+      "activity_at": "2026-06-12T08:33:10Z",
+      "stars": 3203,
+      "report": "projects/409-openai-agents-js-official-sdk.md",
+      "scores": {
+        "current_value": 42.69,
+        "time": 45,
+        "mechanism": 10,
+        "evidence": 56,
+        "adoption": 62.85,
+        "usefulness": 70
+      },
+      "caveat": "created_at unavailable; time score capped and based on activity/observation only"
+    },
+    {
+      "rank": 153,
       "repo": "camel-ai/camel",
       "name": "CAMEL-AI",
       "url": "https://github.com/camel-ai/camel",
@@ -69167,45 +69183,14 @@
       "stars": 17025,
       "report": "projects/12-camel-ai-communicative-agents.md",
       "scores": {
-        "current_value": 42.7,
-        "time": 28.02,
+        "current_value": 42.69,
+        "time": 28,
         "mechanism": 35,
         "evidence": 68,
         "adoption": 75.86,
         "usefulness": 78
       },
       "caveat": ""
-    },
-    {
-      "rank": 153,
-      "repo": "openai/openai-agents-js",
-      "name": "OpenAI Agents SDK (JS)",
-      "url": "https://github.com/openai/openai-agents-js",
-      "category": "Official OpenAI Agents SDK TypeScript Baseline",
-      "pattern": "compose agents in TypeScript -> attach tools, handoffs, and realtime transport -> trace execution and guardrails -> use the official JS runtime as the canonical baseline for browser, frontend, and full-stack swarm orchestration claims",
-      "tags": [
-        "openai-agents-sdk",
-        "official-sdk",
-        "typescript",
-        "realtime",
-        "orchestration"
-      ],
-      "status": "candidate",
-      "created_at": null,
-      "created_at_source": "unknown",
-      "first_observed_at": null,
-      "activity_at": "2026-06-09T00:00:00Z",
-      "stars": 3200,
-      "report": "projects/409-openai-agents-js-official-sdk.md",
-      "scores": {
-        "current_value": 42.68,
-        "time": 45,
-        "mechanism": 10,
-        "evidence": 56,
-        "adoption": 62.84,
-        "usefulness": 70
-      },
-      "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
       "rank": 154,
@@ -69609,35 +69594,6 @@
     },
     {
       "rank": 167,
-      "repo": "langchain-ai/langgraph",
-      "name": "LangGraph",
-      "url": "https://github.com/langchain-ai/langgraph",
-      "category": "图式 Agent 编排",
-      "pattern": "智能体编排",
-      "tags": [
-        "智能体编排",
-        "有向图",
-        "Pregel引擎"
-      ],
-      "status": "verified",
-      "created_at": "2023-08-09T18:33:12Z",
-      "created_at_source": "github_api",
-      "first_observed_at": null,
-      "activity_at": "2026-05-24T01:11:15Z",
-      "stars": 32784,
-      "report": "projects/13-langgraph-agent-workflows.md",
-      "scores": {
-        "current_value": 41.95,
-        "time": 28.4,
-        "mechanism": 10,
-        "evidence": 100,
-        "adoption": 80.96,
-        "usefulness": 53
-      },
-      "caveat": ""
-    },
-    {
-      "rank": 168,
       "repo": "sd0xdev/sd0x-dev-flow",
       "name": "sd0x-dev-flow",
       "url": "https://github.com/sd0xdev/sd0x-dev-flow",
@@ -69666,6 +69622,35 @@
         "usefulness": 70
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
+    },
+    {
+      "rank": 168,
+      "repo": "langchain-ai/langgraph",
+      "name": "LangGraph",
+      "url": "https://github.com/langchain-ai/langgraph",
+      "category": "图式 Agent 编排",
+      "pattern": "智能体编排",
+      "tags": [
+        "智能体编排",
+        "有向图",
+        "Pregel引擎"
+      ],
+      "status": "verified",
+      "created_at": "2023-08-09T18:33:12Z",
+      "created_at_source": "github_api",
+      "first_observed_at": null,
+      "activity_at": "2026-05-24T01:11:15Z",
+      "stars": 32784,
+      "report": "projects/13-langgraph-agent-workflows.md",
+      "scores": {
+        "current_value": 41.94,
+        "time": 28.38,
+        "mechanism": 10,
+        "evidence": 100,
+        "adoption": 80.96,
+        "usefulness": 53
+      },
+      "caveat": ""
     },
     {
       "rank": 169,
@@ -69871,15 +69856,15 @@
       "created_at": null,
       "created_at_source": "unknown",
       "first_observed_at": null,
-      "activity_at": "2026-06-04T00:00:00Z",
-      "stars": 4400,
+      "activity_at": "2026-06-12T00:13:04Z",
+      "stars": 4445,
       "report": "projects/27-agency-swarm.md",
       "scores": {
-        "current_value": 41.68,
+        "current_value": 41.69,
         "time": 45,
         "mechanism": 10,
         "evidence": 56,
-        "adoption": 65.32,
+        "adoption": 65.4,
         "usefulness": 45
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
@@ -70530,36 +70515,6 @@
     },
     {
       "rank": 197,
-      "repo": "Genentech/OpenTreeSearch",
-      "name": "OpenTreeSearch",
-      "url": "https://github.com/Genentech/opentreesearch",
-      "category": "LLM 引导代码进化",
-      "pattern": "进化/搜索循环 → 评估器/打分器",
-      "tags": [
-        "进化/搜索循环",
-        "评估器/打分器",
-        "树搜索",
-        "代码进化"
-      ],
-      "status": "verified",
-      "created_at": null,
-      "created_at_source": "unknown",
-      "first_observed_at": "2026-05-19T09:51:47-04:00",
-      "activity_at": "2026-01-01T00:00:00Z",
-      "stars": 200,
-      "report": "projects/24-opentreesearch-llm-code-evolution.md",
-      "scores": {
-        "current_value": 41.06,
-        "time": 27.75,
-        "mechanism": 59,
-        "evidence": 54,
-        "adoption": 41.29,
-        "usefulness": 63
-      },
-      "caveat": "created_at unavailable; time score capped and based on activity/observation only"
-    },
-    {
-      "rank": 198,
       "repo": "razroo/state-trace",
       "name": "state-trace",
       "url": "https://github.com/razroo/state-trace",
@@ -70584,6 +70539,36 @@
         "evidence": 56,
         "adoption": 5.4,
         "usefulness": 80
+      },
+      "caveat": "created_at unavailable; time score capped and based on activity/observation only"
+    },
+    {
+      "rank": 198,
+      "repo": "Genentech/OpenTreeSearch",
+      "name": "OpenTreeSearch",
+      "url": "https://github.com/Genentech/opentreesearch",
+      "category": "LLM 引导代码进化",
+      "pattern": "进化/搜索循环 → 评估器/打分器",
+      "tags": [
+        "进化/搜索循环",
+        "评估器/打分器",
+        "树搜索",
+        "代码进化"
+      ],
+      "status": "verified",
+      "created_at": null,
+      "created_at_source": "unknown",
+      "first_observed_at": "2026-05-19T09:51:47-04:00",
+      "activity_at": "2026-01-01T00:00:00Z",
+      "stars": 200,
+      "report": "projects/24-opentreesearch-llm-code-evolution.md",
+      "scores": {
+        "current_value": 41.04,
+        "time": 27.72,
+        "mechanism": 59,
+        "evidence": 54,
+        "adoption": 41.29,
+        "usefulness": 63
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
@@ -70640,8 +70625,8 @@
       "stars": 266,
       "report": "projects/281-redis-agent-memory-server-runtime.md",
       "scores": {
-        "current_value": 40.91,
-        "time": 42.13,
+        "current_value": 40.9,
+        "time": 42.09,
         "mechanism": 18,
         "evidence": 56,
         "adoption": 43.5,
@@ -71217,8 +71202,8 @@
       "stars": 50000,
       "report": "projects/41-opendevin-ai-software.md",
       "scores": {
-        "current_value": 40.05,
-        "time": 27.75,
+        "current_value": 40.03,
+        "time": 27.72,
         "mechanism": 35,
         "evidence": 54,
         "adoption": 84.24,
@@ -71430,8 +71415,8 @@
       "stars": 26000,
       "report": "research/projects/46-chatdev-multi-agent-platform.md",
       "scores": {
-        "current_value": 39.7,
-        "time": 28.57,
+        "current_value": 39.69,
+        "time": 28.54,
         "mechanism": 43,
         "evidence": 36,
         "adoption": 79.15,
@@ -71551,8 +71536,8 @@
       "stars": 500,
       "report": "projects/36-llm-agent-optimization.md",
       "scores": {
-        "current_value": 39.47,
-        "time": 27.75,
+        "current_value": 39.45,
+        "time": 27.72,
         "mechanism": 31,
         "evidence": 86,
         "adoption": 48.4,
@@ -71992,36 +71977,6 @@
     },
     {
       "rank": 245,
-      "repo": "FoundationAgents/MetaGPT",
-      "name": "MetaGPT",
-      "url": "https://github.com/FoundationAgents/MetaGPT",
-      "category": "多 Agent 协作框架",
-      "pattern": "智能体编排 → 反馈-精炼",
-      "tags": [
-        "智能体编排",
-        "SOP(Team)",
-        "SELA",
-        "AFlow"
-      ],
-      "status": "verified",
-      "created_at": "2023-06-30T09:04:55Z",
-      "created_at_source": "github_api",
-      "first_observed_at": null,
-      "activity_at": "2026-01-21T10:12:33Z",
-      "stars": 68239,
-      "report": "projects/07-metagpt-multi-agent-framework.md",
-      "scores": {
-        "current_value": 38.93,
-        "time": 18.33,
-        "mechanism": 35,
-        "evidence": 68,
-        "adoption": 86.66,
-        "usefulness": 78
-      },
-      "caveat": ""
-    },
-    {
-      "rank": 246,
       "repo": "yennning/awesome-code-as-agent-harness-papers",
       "name": "Awesome Code as Agent Harness Papers",
       "url": "https://github.com/YennNing/Awesome-Code-as-Agent-Harness-Papers",
@@ -72050,6 +72005,36 @@
         "usefulness": 70
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
+    },
+    {
+      "rank": 246,
+      "repo": "FoundationAgents/MetaGPT",
+      "name": "MetaGPT",
+      "url": "https://github.com/FoundationAgents/MetaGPT",
+      "category": "多 Agent 协作框架",
+      "pattern": "智能体编排 → 反馈-精炼",
+      "tags": [
+        "智能体编排",
+        "SOP(Team)",
+        "SELA",
+        "AFlow"
+      ],
+      "status": "verified",
+      "created_at": "2023-06-30T09:04:55Z",
+      "created_at_source": "github_api",
+      "first_observed_at": null,
+      "activity_at": "2026-01-21T10:12:33Z",
+      "stars": 68239,
+      "report": "projects/07-metagpt-multi-agent-framework.md",
+      "scores": {
+        "current_value": 38.92,
+        "time": 18.31,
+        "mechanism": 35,
+        "evidence": 68,
+        "adoption": 86.66,
+        "usefulness": 78
+      },
+      "caveat": ""
     },
     {
       "rank": 247,
@@ -72346,8 +72331,8 @@
       "stars": 74662,
       "report": "projects/15-openhands-ai-software-dev.md",
       "scores": {
-        "current_value": 37.79,
-        "time": 28.4,
+        "current_value": 37.78,
+        "time": 28.38,
         "mechanism": 10,
         "evidence": 68,
         "adoption": 87.36,
@@ -72437,8 +72422,8 @@
       "stars": 58330,
       "report": "projects/11-autogen-multi-agent-conversation.md",
       "scores": {
-        "current_value": 37.26,
-        "time": 25.23,
+        "current_value": 37.25,
+        "time": 25.21,
         "mechanism": 10,
         "evidence": 68,
         "adoption": 85.44,
@@ -72590,8 +72575,8 @@
       "stars": 500,
       "report": "projects/40-awesome-fm4co.md",
       "scores": {
-        "current_value": 36.67,
-        "time": 27.75,
+        "current_value": 36.65,
+        "time": 27.72,
         "mechanism": 17,
         "evidence": 86,
         "adoption": 48.4,
@@ -72619,8 +72604,8 @@
       "stars": 2200,
       "report": "research/projects/61-osworld-agent-evaluation.md",
       "scores": {
-        "current_value": 36.15,
-        "time": 23.51,
+        "current_value": 36.13,
+        "time": 23.48,
         "mechanism": 28,
         "evidence": 62,
         "adoption": 59.93,
@@ -72676,8 +72661,8 @@
       "stars": 1200,
       "report": "research/projects/59-awesome-agent-papers.md",
       "scores": {
-        "current_value": 34.89,
-        "time": 35.83,
+        "current_value": 34.87,
+        "time": 35.8,
         "mechanism": 0,
         "evidence": 68,
         "adoption": 55.21,
@@ -72732,8 +72717,8 @@
       "stars": 2000,
       "report": "projects/37-awesome-code-llm.md",
       "scores": {
-        "current_value": 33.64,
-        "time": 27.75,
+        "current_value": 33.63,
+        "time": 27.72,
         "mechanism": 25,
         "evidence": 48,
         "adoption": 59.18,
@@ -72791,8 +72776,8 @@
       "stars": 1581,
       "report": "projects/03-adas-automated-design-agentic-systems.md",
       "scores": {
-        "current_value": 33.26,
-        "time": 4.76,
+        "current_value": 33.25,
+        "time": 4.73,
         "mechanism": 59,
         "evidence": 68,
         "adoption": 57.36,
@@ -73350,8 +73335,8 @@
       "stars": 2800,
       "report": "research/projects/62-webarena-web-evaluation.md",
       "scores": {
-        "current_value": 24.66,
-        "time": 15.16,
+        "current_value": 24.64,
+        "time": 15.12,
         "mechanism": 10,
         "evidence": 36,
         "adoption": 61.8,
@@ -73495,8 +73480,8 @@
       "stars": 33000,
       "report": "research/projects/52-agentgpt-autonomous.md",
       "scores": {
-        "current_value": 21.15,
-        "time": 6.81,
+        "current_value": 21.14,
+        "time": 6.77,
         "mechanism": 10,
         "evidence": 36,
         "adoption": 81.01,
@@ -73553,8 +73538,8 @@
       "stars": 4200,
       "report": "research/projects/47-openagents-platform.md",
       "scores": {
-        "current_value": 19.55,
-        "time": 6.81,
+        "current_value": 19.53,
+        "time": 6.77,
         "mechanism": 10,
         "evidence": 36,
         "adoption": 64.96,

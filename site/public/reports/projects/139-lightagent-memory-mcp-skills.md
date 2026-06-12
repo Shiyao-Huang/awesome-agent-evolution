@@ -4,13 +4,13 @@
 |---|---|
 | Repository | [wanxingai/LightAgent](https://github.com/wanxingai/LightAgent) |
 | Category | Memory/MCP Skill Agent Framework |
-| Stars / forks snapshot | 1100 / 141 |
+| Stars / forks snapshot | 1,132 / 143 |
 | Commits / issues / PRs snapshot | 107 / 8 / 0 |
 | Language | Python |
 | License | Apache-2.0 |
-| Latest visible dated signal | 2026-06-04 |
+| Latest visible dated signal | 2026-06-05 GitHub API snapshot |
 | Raw capture | raw-github/wanxingai_lightagent.md |
-| Updated by | hourly public metadata update, 2026-06-08 17:47 +0800 |
+| Updated by | hourly public metadata update, 2026-06-13 02:15 +0800 |
 
 ## 1. Role in Self Evolve
 
@@ -22,12 +22,12 @@ compose lightweight agents with tools, MCP, and memory -> add native skills and 
 
 ## 3. Evidence Path
 
-web-observed GitHub repo page showed 1.1k stars, 141 forks, 8 issues, 0 pull requests, 107 commits, Apache-2.0 license, 21 releases with v0.8.0 latest on 2026-06-04, and continued LightFlow workflow orchestration plus persistent memory, MCP, native skills, trace observability, and self-learning agent claims. This iteration keeps freshness honest: the snapshot comes from the public GitHub page observed on 2026-06-08, while shell GitHub API access remained blocked in this workspace.
+GitHub GraphQL/API snapshot captured via authenticated `gh` on 2026-06-13 showed 1,132 stars, 143 forks, 8 open issues, 0 open pull requests, 107 commits on `main`, latest push at 2026-06-05T15:00:09Z, Apache-2.0 license, and latest release `LightAgent v0.8.0` published on 2026-06-05. The snapshot also showed 21 releases with LightAgent v0.8.0 latest on 2026-06-05. This run keeps freshness honest because it uses authenticated GitHub API data rather than stale local summaries.
 
 ## 4. Teaching Use
 
-Use this card to explain Memory/MCP Skill Agent Framework: it shows how swarm runtimes, skill optimizers, benchmark suites, browser harnesses, and memory middleware fit into the broader self-evolving-agent pipeline.
+Use this card to explain Memory/MCP Skill Agent Framework: it shows how lightweight runtimes attach memory, MCP, skills, and workflow layers without becoming a monolithic product stack.
 
 ## 5. Limits
 
-The repository was not cloned in this iteration; no benchmark run, workflow execution, or agent loop experiment was executed. Counts and claims are visible public-page signals unless independently revalidated later.
+The repository was not cloned in this iteration; no benchmark run, workflow execution, or agent loop experiment was executed. Counts and claims are GitHub API snapshot signals unless independently revalidated later.

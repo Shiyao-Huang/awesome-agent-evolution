@@ -37,9 +37,9 @@ GitHub topic 收录状态（2026-06-05）：GitHub API 和 `gh search repos 'top
 | 产品/投资/行业读者 | 区分真实能力积累、刷榜、演示热度和治理成熟度。 |
 | 内容创作者 | 获得带证据入口的选题地图：项目、论文、趋势、痛点、图谱和长尾 SEO 页面。 |
 
-## 本轮 GitHub Metadata 修复包（2026-06-12）
+## 本轮 GitHub Metadata 修复包（2026-06-13）
 
-这轮重点不是新增条目，而是把 production swarm、coding-agent harness、memory benchmark 和 OpenAI Agents SDK baseline 的公开数字面校正到 `2026-06-12` 的可见 GitHub 证据，并同步 raw、分类、project card、site report 和 README 前台说明。
+这轮重点不是新增条目，而是把 production swarm、coding-agent harness、memory benchmark 和 OpenAI Agents SDK baseline 的公开数字面校正到 `2026-06-13` 的 GitHub API 快照，并同步 raw、分类、project card、site report 和 README 前台说明。
 
 | 仓库 | 这轮补了什么 | 为什么重要 |
 |---|---|---|
@@ -50,7 +50,7 @@ GitHub topic 收录状态（2026-06-05）：GitHub API 和 `gh search repos 'top
 | [openai/openai-agents-js](https://github.com/openai/openai-agents-js) | 刷新 official TypeScript SDK raw capture、project card、site public report 与分类元数据，补齐前端/全栈 agent 编排的上游基线。 | 它帮助我们区分“SDK 原生能力”与“框架自行增加的 memory、workflow、realtime 包装”。 |
 | [XSkill-Agent/XSkill](https://github.com/XSkill-Agent/XSkill) | 刷新 raw capture、paper-code model card 与 site public report，并把 continual-learning 证据接回 benchmark/eval 面。 | 它补的是“skills 和 experiences 如何被积累、存储、检索并在 benchmark 上复用”这一层，而不是只给一个 continual-learning 口号。 |
 | [AQ-MedAI/MedMemoryBench](https://github.com/AQ-MedAI/MedMemoryBench) | 校正 benchmark 项目的 stars 快照并把 healthcare memory evidence 同步到 raw、project card 和 site report。 | 它把 memory 评估从通用 recall 推进到 personalized healthcare 的长时程、高风险场景，帮助读者区分“记住了”与“记对了并用对了”。 |
-| [wanxingai/LightAgent](https://github.com/wanxingai/LightAgent) | 刷新 raw capture、project card、site public report 与分类元数据，统一到 2026-06-04 的 release/README dated signal。 | 它把轻量 agent runtime 这条线补到 LightFlow、native skills、persistent memory 和 trace observability 的最新公开证据。 |
+| [wanxingai/LightAgent](https://github.com/wanxingai/LightAgent) | 刷新 raw capture、project card、site public report 与分类元数据，统一到 2026-06-05 的 release/API dated signal。 | 它把轻量 agent runtime 这条线补到 LightFlow、native skills、persistent memory 和 trace observability 的最新公开证据。 |
 
 ## 核心洞察
 
