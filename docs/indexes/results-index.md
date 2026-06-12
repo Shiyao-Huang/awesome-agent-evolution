@@ -1,6 +1,6 @@
 # Results / 结果输出 Index
 
-> Generated: 2026-06-06
+> Generated: 2026-06-12
 
 ## Rule
 
@@ -10,10 +10,10 @@
 
 | Path | Status | Files | Directories | Skipped | Size |
 |---|---|---:|---:|---:|---:|
-| `reports` | present | 26 | 2 | 0 | 7.5 MB |
-| `output` | present | 8 | 1 | 0 | 691 KB |
-| `site/public/reports` | present | 523 | 6 | 0 | 3.7 MB |
-| `site/dist` | present | 1562 | 998 | 0 | 46 MB |
+| `reports` | present | 28 | 2 | 0 | 7.6 MB |
+| `output` | present | 8 | 1 | 0 | 692 KB |
+| `site/public/reports` | present | 525 | 6 | 0 | 3.7 MB |
+| `site/dist` | present | 1570 | 1004 | 0 | 47 MB |
 | `paper-drafts/main.pdf` | present | 1 | 0 | 0 | 1.6 MB |
 | `docs/publishing-readiness-check.md` | present | 1 | 0 | 0 | 3.5 KB |
 
@@ -29,8 +29,8 @@
 - `reports/github-topic-indexing-readiness.md`
 - `reports/google-indexable-routes.json`
 - `reports/google-indexable-routes.md`
-- `reports/live-publication-readiness.json`
-- `reports/live-publication-readiness.md`
+- `reports/google-redirect-indexability.json`
+- `reports/google-redirect-indexability.md`
 
 ### `output`
 
@@ -59,7 +59,7 @@
 ### `site/dist`
 
 - `site/dist/CNAME`
-- `site/dist/_astro/BaseLayout.Bsw8u1pc.css`
+- `site/dist/_astro/BaseLayout.CsUwhOi7.css`
 - `site/dist/_astro/ValueLshGraph3D.OrOj6lT9.css`
 - `site/dist/_astro/ValueLshGraph3D.astro_astro_type_script_index_0_lang.4jc1tJID.js`
 - `site/dist/_astro/client.BpEju3qh.js`

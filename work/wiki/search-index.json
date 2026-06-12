@@ -1,8 +1,8 @@
 {
-  "generated": "2026-06-05T18:54:23.141Z",
+  "generated": "2026-06-06T06:27:39.578Z",
   "stats": {
-    "pages": 80,
-    "keywords": 958
+    "pages": 81,
+    "keywords": 962
   },
   "catalog": [
     {
@@ -675,6 +675,19 @@
       ]
     },
     {
+      "path": "synthesis/google-redirect-indexability-triage.md",
+      "title": "Google Redirect Indexability Triage",
+      "rank": "A",
+      "type": "synthesis",
+      "tags": [
+        "seo",
+        "google-search-console",
+        "redirects",
+        "canonical",
+        "github-pages"
+      ]
+    },
+    {
       "path": "synthesis/inclusionai-aworld-rl-frontier-deep-dive.md",
       "title": "inclusionAI AWorld-RL Frontier Deep Dive",
       "rank": "A",
@@ -1052,6 +1065,7 @@
       "synthesis/github-star-growth-database.md",
       "synthesis/github-topic-indexing-readiness.md",
       "synthesis/google-indexing-custom-domain-triage.md",
+      "synthesis/google-redirect-indexability-triage.md",
       "synthesis/jarvis-xs-se-agent-frontier-deep-dive.md",
       "synthesis/mechanism-framework.md",
       "synthesis/modelscope-agentevolver-frontier-deep-dive.md",
@@ -3637,6 +3651,7 @@
       "synthesis/code-evolution-benchmark-matrix.md",
       "synthesis/five-evolution-loops-topic.md",
       "synthesis/google-indexing-custom-domain-triage.md",
+      "synthesis/google-redirect-indexability-triage.md",
       "synthesis/public-i18n-route-audit.md",
       "synthesis/survey-seo-topic-map.md",
       "synthesis/text-asset-indexability-coverage.md"
@@ -3857,6 +3872,7 @@
     ],
     "google-indexing-custom-domain-triage": [
       "synthesis/github-topic-indexing-readiness.md",
+      "synthesis/google-redirect-indexability-triage.md",
       "synthesis/text-asset-indexability-coverage.md"
     ],
     "survey-seo-topic-map": [
@@ -3873,16 +3889,35 @@
       "synthesis/google-indexing-custom-domain-triage.md"
     ],
     "google-search-console": [
-      "synthesis/google-indexing-custom-domain-triage.md"
+      "synthesis/google-indexing-custom-domain-triage.md",
+      "synthesis/google-redirect-indexability-triage.md"
     ],
     "github-pages": [
-      "synthesis/google-indexing-custom-domain-triage.md"
+      "synthesis/google-indexing-custom-domain-triage.md",
+      "synthesis/google-redirect-indexability-triage.md"
     ],
     "canonical": [
-      "synthesis/google-indexing-custom-domain-triage.md"
+      "synthesis/google-indexing-custom-domain-triage.md",
+      "synthesis/google-redirect-indexability-triage.md"
     ],
     "claims": [
       "synthesis/google-indexing-custom-domain-triage.md"
+    ],
+    "google redirect indexability triage": [
+      "synthesis/google-redirect-indexability-triage.md"
+    ],
+    "redirects": [
+      "synthesis/google-redirect-indexability-triage.md"
+    ],
+    "working rule": [
+      "synthesis/google-redirect-indexability-triage.md",
+      "synthesis/public-i18n-route-audit.md"
+    ],
+    "text-asset-indexability-coverage": [
+      "synthesis/google-redirect-indexability-triage.md"
+    ],
+    "public-i18n-route-audit": [
+      "synthesis/google-redirect-indexability-triage.md"
     ],
     "inclusionai aworld-rl frontier deep dive": [
       "synthesis/inclusionai-aworld-rl-frontier-deep-dive.md"
@@ -4042,9 +4077,6 @@
       "synthesis/public-i18n-route-audit.md"
     ],
     "reports": [
-      "synthesis/public-i18n-route-audit.md"
-    ],
-    "working rule": [
       "synthesis/public-i18n-route-audit.md"
     ],
     "resource library coverage audit": [

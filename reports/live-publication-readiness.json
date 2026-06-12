@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-05T18:55:14.703Z",
+  "generated_at": "2026-06-06T06:24:38.627Z",
   "canonical_host": "https://agent-evolution.com",
   "global_status": "fail",
   "boundary": "Live publication readiness checks external crawl prerequisites. It complements local sitemap/metadata audits and can fail even when the generated site build is valid.",
@@ -19,7 +19,10 @@
   },
   "dns": {
     "apex_a": [
-      "198.18.0.151"
+      "185.199.109.153",
+      "185.199.108.153",
+      "185.199.111.153",
+      "185.199.110.153"
     ],
     "apex_aaaa": {
       "error": "queryAaaa ENODATA agent-evolution.com",
@@ -29,7 +32,10 @@
       "shiyao-huang.github.io"
     ],
     "www_a": [
-      "198.18.0.155"
+      "185.199.108.153",
+      "185.199.109.153",
+      "185.199.111.153",
+      "185.199.110.153"
     ]
   },
   "tls_certificate": {

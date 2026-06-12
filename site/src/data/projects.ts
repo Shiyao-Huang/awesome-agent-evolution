@@ -7531,8 +7531,8 @@ export const projects: Project[] = [
         "name": "EvoMap Awesome Agent Evolution",
         "repo": "EvoMap/awesome-agent-evolution",
         "url": "https://github.com/EvoMap/awesome-agent-evolution",
-        "stars": 130,
-        "forks": 17,
+        "stars": 137,
+        "forks": 20,
         "language": "JavaScript",
         "license": "View license on GitHub",
         "report": "projects/394-evomap-awesome-agent-evolution.md",
@@ -7544,7 +7544,7 @@ export const projects: Project[] = [
             "Awesome List Pipeline"
         ],
         "category": "External Awesome List and Taxonomy Comparator",
-        "lastPushed": "2026-05-21T00:00:00Z",
+        "lastPushed": "2026-06-09T00:00:00Z",
         "localPath": "raw-github/evomap_awesome-agent-evolution.md",
         "status": "candidate",
         "tags": [
@@ -8148,6 +8148,151 @@ export const projects: Project[] = [
             "orchestration"
         ],
         "localPath": "raw-github/openai_openai-agents-js.md"
+    },
+    {
+        "name": "Agentic Harness Engineering",
+        "repo": "china-qijizhifeng/agentic-Harness-engineering",
+        "url": "https://github.com/china-qijizhifeng/agentic-Harness-engineering",
+        "description": "Agentic Harness Engineering names the layer where prompts, tools, middleware, skills, memory, subagents, and evaluators become editable agent infrastructure rather than fixed wrappers around a base model.",
+        "stack": [
+            "TypeScript",
+            "Harness Evolution",
+            "Coding-Agent Workflow"
+        ],
+        "category": "Harness Evolution Engineering",
+        "status": "candidate",
+        "stars": 542,
+        "forks": 62,
+        "lastPushed": "2026-06-09T00:00:00Z",
+        "language": "TypeScript",
+        "license": "MIT",
+        "report": "projects/43-agentic-harness-engineering.md",
+        "pattern": "editable prompts/tools/middleware/skills/memory/subagents -> evaluator pressure -> harness mutation -> regression verification",
+        "tags": [
+            "harness",
+            "skills",
+            "memory",
+            "evaluation",
+            "coding-agent"
+        ],
+        "localPath": "raw-github/china-qijizhifeng_agentic-harness-engineering.md"
+    },
+    {
+        "name": "Hermes Agent",
+        "repo": "NousResearch/hermes-agent",
+        "url": "https://github.com/NousResearch/hermes-agent",
+        "description": "Hermes Agent is a self-improving personal-agent runtime that combines memory, skill creation, session search, user modeling, messaging gateways, and scheduled automations in one user-facing system.",
+        "stack": [
+            "Python",
+            "TypeScript",
+            "Memory",
+            "Skills",
+            "Messaging Runtime"
+        ],
+        "category": "Self-Improving Personal Agent Runtime",
+        "status": "candidate",
+        "stars": 191000,
+        "forks": 33200,
+        "lastPushed": "2026-06-09T00:00:00Z",
+        "language": "Python",
+        "license": "MIT",
+        "report": "projects/44-hermes-agent.md",
+        "pattern": "persistent knowledge -> skill creation/improvement -> session search -> user modeling -> messaging and scheduled automation runtime",
+        "tags": [
+            "personal-agent",
+            "memory",
+            "skills",
+            "messaging",
+            "automation"
+        ],
+        "localPath": "raw-github/nousresearch_hermes-agent.md"
+    },
+    {
+        "name": "OpenClaw",
+        "repo": "openclaw/openclaw",
+        "url": "https://github.com/openclaw/openclaw",
+        "description": "OpenClaw is a local-first personal agent runtime whose product surface includes channels, sessions, tools, skills, and companion apps rather than only a benchmark-facing demo loop.",
+        "stack": [
+            "TypeScript",
+            "Local-First Runtime",
+            "Channels",
+            "Skills",
+            "Sessions"
+        ],
+        "category": "Personal Agent Product Runtime",
+        "status": "candidate",
+        "stars": 378000,
+        "forks": 79100,
+        "lastPushed": "2026-06-09T00:00:00Z",
+        "language": "TypeScript",
+        "license": "AGPL-3.0",
+        "report": "projects/48-openclaw.md",
+        "pattern": "local-first assistant runtime -> multi-channel gateway -> sessions/tools/skills -> companion apps and durable operating surface",
+        "tags": [
+            "personal-agent",
+            "local-first",
+            "channels",
+            "skills",
+            "runtime"
+        ],
+        "localPath": "raw-github/openclaw_openclaw.md"
+    },
+    {
+        "name": "Superpowers",
+        "repo": "obra/superpowers",
+        "url": "https://github.com/obra/superpowers",
+        "description": "Superpowers packages reusable development skills and operating procedures for coding agents, turning engineering workflow habits into cross-agent runtime policy.",
+        "stack": [
+            "Shell",
+            "JavaScript",
+            "Skills Methodology"
+        ],
+        "category": "Agentic Skills Methodology",
+        "status": "candidate",
+        "stars": 225000,
+        "forks": 20000,
+        "lastPushed": "2026-06-09T00:00:00Z",
+        "language": "Shell",
+        "license": "MIT",
+        "report": "projects/49-superpowers.md",
+        "pattern": "reusable skills -> disciplined workflow policy -> worktrees/plans/TDD/review -> cross-agent execution",
+        "tags": [
+            "skills",
+            "coding-agent",
+            "workflow",
+            "methodology",
+            "worktrees"
+        ],
+        "localPath": "raw-github/obra_superpowers.md"
+    },
+    {
+        "name": "agentmemory",
+        "repo": "rohitg00/agentmemory",
+        "url": "https://github.com/rohitg00/agentmemory",
+        "description": "agentmemory is a cross-harness persistent memory layer for coding agents and MCP clients, with wiki-style knowledge capture, retrieval, and continuity signals.",
+        "stack": [
+            "TypeScript",
+            "MCP",
+            "Knowledge Graph",
+            "Hybrid Search"
+        ],
+        "category": "Agent Persistent Memory Layer",
+        "status": "candidate",
+        "stars": 22400,
+        "forks": 1800,
+        "lastPushed": "2026-06-09T00:00:00Z",
+        "language": "TypeScript",
+        "license": "Apache-2.0",
+        "report": "projects/50-agentmemory.md",
+        "pattern": "persistent memory -> wiki-style knowledge capture -> graph/hybrid retrieval -> cross-harness continuity",
+        "tags": [
+            "memory",
+            "mcp",
+            "coding-agent",
+            "knowledge-graph",
+            "continuity"
+        ],
+        "localPath": "raw-github/rohitg00_agentmemory.md"
     }
 ];
 

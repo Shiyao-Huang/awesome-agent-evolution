@@ -1,6 +1,6 @@
 # Live Publication Readiness Audit
 
-Generated: 2026-06-05T18:55:14.703Z
+Generated: 2026-06-06T06:24:38.627Z
 
 Canonical host: https://agent-evolution.com
 
@@ -73,7 +73,10 @@ DNS values are recorded as observed from the current runner. The decisive blocke
 ```json
 {
   "apex_a": [
-    "198.18.0.151"
+    "185.199.109.153",
+    "185.199.108.153",
+    "185.199.111.153",
+    "185.199.110.153"
   ],
   "apex_aaaa": {
     "error": "queryAaaa ENODATA agent-evolution.com",
@@ -83,7 +86,10 @@ DNS values are recorded as observed from the current runner. The decisive blocke
     "shiyao-huang.github.io"
   ],
   "www_a": [
-    "198.18.0.155"
+    "185.199.108.153",
+    "185.199.109.153",
+    "185.199.111.153",
+    "185.199.110.153"
   ]
 }
 ```

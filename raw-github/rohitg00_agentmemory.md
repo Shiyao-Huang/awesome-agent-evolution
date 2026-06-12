@@ -1,40 +1,45 @@
 ---
 repo: rohitg00/agentmemory
 url: https://github.com/rohitg00/agentmemory
-content_timestamp: 2026-05-18
-time_slice: 2026-05
-timestamp_confidence: explicit
-timestamp_source: AnySearch GitHub result: last push 2026-05-18; latest release v0.9.20 on 2026-05-18
-collected_at: 2026-05-22T13:00:00+08:00
+content_timestamp: 2026-06-12
+time_slice: 2026-06
+timestamp_source: web_observed_public_github_page_2026_06_12
+collected_at: 2026-06-12T14:14:31+08:00
 source: github
-source_tool: anysearch
+source_tool: web.open
 ---
 
 ## GitHub - rohitg00/agentmemory: Persistent memory for AI coding agents
 
 **Source**: https://github.com/rohitg00/agentmemory
 
-## AnySearch Evidence
+---
 
-- Stars: 16k in extracted GitHub page; 13,460 in search result snapshot.
-- Forks: 1.3k in extracted GitHub page; 1,140 in search result snapshot.
-- Primary language: TypeScript.
-- Language mix from AnySearch search result: TypeScript 81.4%, JavaScript 7.9%, HTML 7.8%, CSS 1.6%, Python 0.6%, Shell 0.5%, Dockerfile 0.2%.
-- License: Apache-2.0.
-- Created: 2026-02-25T07:32:52Z.
-- Latest release: v0.9.20, 2026-05-18.
-- Homepage: https://agent-memory.dev
-- Topics: agentmemory, agents, ai, claude, claudecode, codex, copilot, cursor, genai, harness, hermes, memory, openclaw.
+# Raw public page capture notes
 
-## Raw Content Summary
+This raw-style public GitHub page capture was refreshed by the hourly public metadata update. Shell GitHub API access remained blocked in this workspace, so freshness is web-observed rather than API-verified.
 
-The project presents itself as persistent memory for Claude Code, Cursor, Gemini CLI, Codex CLI, Hermes, OpenClaw, OpenCode, and MCP clients. The extracted README links the design to Karpathy-style LLM wiki patterns with confidence scoring, lifecycle, knowledge graphs, and hybrid search.
+## Visible repository metadata
 
-This fills a missing Evolver signal: a hot practitioner memory layer explicitly targeting coding-agent harnesses and cross-agent durable recall.
+- Repository: rohitg00/agentmemory
+- URL: https://github.com/rohitg00/agentmemory
+- Stars: 22400
+- Forks: 1800
+- Commits: 462
+- Issues: 137
+- Pull requests: 149
+- License: Apache-2.0
+- Primary language / stack signal: TypeScript/MCP/Coding-Agent Memory/Wiki Index
+- Latest visible dated signal: 2026-06-12 web-observed public GitHub page snapshot
+- Collection timestamp: 2026-06-12T14:14:31+08:00
 
-## Classification Notes
+## Visible README / page excerpts
 
-- Suggested category: `工具/tool`.
-- Function tag: `tool-module`.
-- Primary theme: `memory`.
-- Evidence status: AnySearch search + extract.
+- The public GitHub page on 2026-06-12 showed 22.4k stars, 1.8k forks, 462 commits, 137 issues, 149 pull requests, and Apache-2.0 license metadata.
+- The project still presents itself as persistent memory for Claude Code, Cursor, Gemini CLI, Codex CLI, Hermes, OpenClaw, OpenCode, and MCP clients rather than a product-specific plugin.
+- The public README continues to connect the design to a wiki-pattern memory layer with confidence, lifecycle, knowledge-graph, and hybrid-search signals that support long-horizon coding-agent continuity.
+- This refresh upgrades agentmemory from an older AnySearch snapshot into a live GitHub page capture while keeping the cross-harness memory-layer interpretation unchanged.
+
+## Raw capture boundary
+
+No benchmark was run, no source clone was modified, and no private or authenticated metadata was used. This file preserves public page evidence for downstream classification, model-card analysis, public reports, and the site index.

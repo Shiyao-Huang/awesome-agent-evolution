@@ -1,10 +1,10 @@
 ---
 repo: evomap/awesome-agent-evolution
 url: https://github.com/evomap/awesome-agent-evolution
-content_timestamp: 2026-06-02
+content_timestamp: 2026-06-12
 time_slice: 2026-06
-timestamp_source: web_github_page_open_2026-06-02
-collected_at: 2026-06-02T19:52:08+08:00
+timestamp_source: web_observed_public_github_page_2026_06_12
+collected_at: 2026-06-12T14:14:31+08:00
 source: github_web
 source_tool: web.open
 ---
@@ -20,9 +20,9 @@ Captured from the public GitHub repository page because shell GitHub API access 
 ## Public metadata snapshot
 
 - Repository: `EvoMap/awesome-agent-evolution`
-- Stars observed: 130
-- Forks observed: 17
-- Commit history observed: 57 commits
+- Stars observed: 137
+- Forks observed: 20
+- Commit history observed: 60 commits
 - Releases observed: none published
 - Primary languages observed: JavaScript 68.6%, Shell 31.4%
 - Topics observed: `awesome`, `skills`, `mcp`, `multi-agent`, `self-improvement`, `a2a`, `agent-framework`, `memory-system`, `skill-library`, `agent-evolution`

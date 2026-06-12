@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-09T00:00:00+08:00",
+  "generated_at": "2026-06-12T00:00:00+08:00",
   "total": 686,
   "updated_files": 686,
   "unknown_content_timestamp": 100,
@@ -908,10 +908,10 @@
       "repo": "china-qijizhifeng/agentic-Harness-engineering",
       "url": "https://github.com/china-qijizhifeng/agentic-Harness-engineering",
       "file": "raw-github/china-qijizhifeng_agentic-harness-engineering.md",
-      "content_timestamp": "2026-05-22",
-      "collected_at": "2026-05-24T13:12:00+08:00",
-      "time_slice": "2026-05",
-      "timestamp_source": "user-reported GitHub URL plus existing legacy README/search supplement evidence"
+      "content_timestamp": "2026-06-12",
+      "collected_at": "2026-06-12T14:14:31+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "web_observed_public_github_page_2026_06_12"
     },
     {
       "repo": "Chorus-AIDLC/Chorus",
@@ -1547,10 +1547,10 @@
       "repo": "evomap/awesome-agent-evolution",
       "url": "https://github.com/evomap/awesome-agent-evolution",
       "file": "raw-github/evomap_awesome-agent-evolution.md",
-      "content_timestamp": "2026-06-02",
-      "collected_at": "2026-06-02T19:52:08+08:00",
+      "content_timestamp": "2026-06-12",
+      "collected_at": "2026-06-12T14:14:31+08:00",
       "time_slice": "2026-06",
-      "timestamp_source": "web_github_page_open_2026-06-02"
+      "timestamp_source": "web_observed_public_github_page_2026_06_12"
     },
     {
       "repo": "EvoMap/evolver",
@@ -3590,10 +3590,10 @@
       "repo": "nousresearch/hermes-agent",
       "url": "https://github.com/NousResearch/hermes-agent",
       "file": "raw-github/nousresearch_hermes-agent.md",
-      "content_timestamp": "2026-05-16",
-      "collected_at": "2026-05-22T13:00:00+08:00",
-      "time_slice": "2026-05",
-      "timestamp_source": "AnySearch GitHub extract: latest release v2026.5.16 on 2026-05-16"
+      "content_timestamp": "2026-06-12",
+      "collected_at": "2026-06-12T14:14:31+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "web_observed_public_github_page_2026_06_12"
     },
     {
       "repo": "nowledge-co/community",
@@ -3617,10 +3617,10 @@
       "repo": "obra/superpowers",
       "url": "https://github.com/obra/superpowers",
       "file": "raw-github/obra_superpowers.md",
-      "content_timestamp": "2026-05-04",
-      "collected_at": "2026-05-22T13:00:00+08:00",
-      "time_slice": "2026-05",
-      "timestamp_source": "AnySearch GitHub extract: latest release v5.1.0 on 2026-05-04"
+      "content_timestamp": "2026-06-12",
+      "collected_at": "2026-06-12T14:14:31+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "web_observed_public_github_page_2026_06_12"
     },
     {
       "repo": "oceanbase/powermem",
@@ -3851,10 +3851,10 @@
       "repo": "openclaw/openclaw",
       "url": "https://github.com/openclaw/openclaw",
       "file": "raw-github/openclaw_openclaw.md",
-      "content_timestamp": "2026-05-21",
-      "collected_at": "2026-05-22T15:30:00+08:00",
-      "time_slice": "2026-05",
-      "timestamp_source": "AnySearch GitHub search result: repository updated 1 day before 2026-05-22; extract captured current GitHub metadata"
+      "content_timestamp": "2026-06-12",
+      "collected_at": "2026-06-12T14:14:31+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "web_observed_public_github_page_2026_06_12"
     },
     {
       "repo": "opendatabox/workspace-bench",
@@ -4103,10 +4103,10 @@
       "repo": "pinchbench/skill",
       "url": "https://github.com/pinchbench/skill",
       "file": "raw-github/pinchbench_skill.md",
-      "content_timestamp": "2026-06-04",
-      "collected_at": "2026-06-04T21:38:16+08:00",
+      "content_timestamp": "2026-06-12",
+      "collected_at": "2026-06-12T14:14:31+08:00",
       "time_slice": "2026-06",
-      "timestamp_source": "web_observed_public_github_page_2026_06_04"
+      "timestamp_source": "web_observed_public_github_page_2026_06_12"
     },
     {
       "repo": "pingcap/ossinsight",
@@ -4463,10 +4463,10 @@
       "repo": "rohitg00/agentmemory",
       "url": "https://github.com/rohitg00/agentmemory",
       "file": "raw-github/rohitg00_agentmemory.md",
-      "content_timestamp": "2026-05-18",
-      "collected_at": "2026-05-22T13:00:00+08:00",
-      "time_slice": "2026-05",
-      "timestamp_source": "AnySearch GitHub result: last push 2026-05-18; latest release v0.9.20 on 2026-05-18"
+      "content_timestamp": "2026-06-12",
+      "collected_at": "2026-06-12T14:14:31+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "web_observed_public_github_page_2026_06_12"
     },
     {
       "repo": "rohitg00/awesome-openclaw",

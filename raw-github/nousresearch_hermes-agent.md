@@ -1,39 +1,45 @@
 ---
 repo: nousresearch/hermes-agent
 url: https://github.com/NousResearch/hermes-agent
-content_timestamp: 2026-05-16
-time_slice: 2026-05
-timestamp_confidence: explicit
-timestamp_source: AnySearch GitHub extract: latest release v2026.5.16 on 2026-05-16
-collected_at: 2026-05-22T13:00:00+08:00
+content_timestamp: 2026-06-12
+time_slice: 2026-06
+timestamp_source: web_observed_public_github_page_2026_06_12
+collected_at: 2026-06-12T14:14:31+08:00
 source: github
-source_tool: anysearch
+source_tool: web.open
 ---
 
 ## GitHub - NousResearch/hermes-agent: The agent that grows with you
 
 **Source**: https://github.com/NousResearch/hermes-agent
 
-## AnySearch Evidence
+---
 
-- Stars: 162k in extracted GitHub page.
-- Forks: 26.4k in extracted GitHub page.
-- License: MIT.
-- Latest release: Hermes Agent v0.14.0 / v2026.5.16, 2026-05-16.
-- Languages: Python 88.4%, TypeScript 8.6%, TeX 1.1%, Shell 0.5%, BibTeX Style 0.4%, PowerShell 0.3%.
-- Topics include ai, ai-agent, ai-agents, claude, claude-code, codex, hermes-agent, llm, nous-research, openclaw.
+# Raw public page capture notes
 
-## Raw Content Summary
+This raw-style public GitHub page capture was refreshed by the hourly public metadata update. Shell GitHub API access remained blocked in this workspace, so freshness is web-observed rather than API-verified.
 
-Hermes Agent describes itself as a self-improving AI agent built by Nous Research. The README emphasizes a built-in learning loop: skill creation from experience, skill improvement during use, persistent knowledge nudges, search over past conversations, and user modeling across sessions.
+## Visible repository metadata
 
-The feature matrix includes a terminal interface, messaging gateway across Telegram/Discord/Slack/WhatsApp/Signal, agent-curated memory, autonomous skill creation, FTS5 session search, Honcho dialectic user modeling, scheduled automations, subagent delegation, terminal backends, and research-ready trajectory generation/compression.
+- Repository: NousResearch/hermes-agent
+- URL: https://github.com/NousResearch/hermes-agent
+- Stars: 191000
+- Forks: 33200
+- Commits: 11421
+- Issues: 5000+
+- Pull requests: 5000+
+- License: MIT
+- Primary language / stack signal: Python/TypeScript/Memory/Skills/Messaging-Agent Runtime
+- Latest visible dated signal: 2026-06-12 web-observed public GitHub page snapshot
+- Collection timestamp: 2026-06-12T14:14:31+08:00
 
-This fills a missing core raw-github record distinct from the already collected `nousresearch/hermes-agent-self-evolution` companion repository.
+## Visible README / page excerpts
 
-## Classification Notes
+- The public GitHub page on 2026-06-12 showed 191k stars, 33.2k forks, 11,421 commits, 5k+ issues, 5k+ pull requests, and MIT license metadata.
+- Hermes Agent still positions itself as a self-improving personal agent with persistent knowledge, autonomous skill creation, search over prior sessions, user modeling, messaging gateways, and scheduled automations.
+- The runtime surface remains wider than a terminal-only coding assistant: subagent delegation, session search, messaging channels, and trajectory generation stay part of the visible public story.
+- This refresh upgrades the repo from a historical AnySearch snapshot into a live GitHub page capture while preserving the self-improving personal-agent interpretation.
 
-- Suggested category: `框架/framework`.
-- Function tag: `framework-runtime`.
-- Primary themes: `self-improving-agent`, `memory`, `skills`, `messaging-agent`, `research-trajectories`.
-- Evidence status: AnySearch search + extract.
+## Raw capture boundary
+
+No benchmark was run, no source clone was modified, and no private or authenticated metadata was used. This file preserves public page evidence for downstream classification, model-card analysis, public reports, and the site index.

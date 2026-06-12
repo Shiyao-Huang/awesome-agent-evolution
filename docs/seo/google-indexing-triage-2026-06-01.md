@@ -4,6 +4,10 @@
 
 `agent-evolution.com` 必须继续作为公开 canonical 域名；当前 GSC 的 sitemap、HTTPS、redirect 和 canonical 问题，主因是 GitHub Pages 自定义域名证书尚未正确服务，而不是 sitemap 生成为空。
 
+## 2026-06-06 Redirect Update
+
+Search Console 新增 “网页会自动重定向 / Page with redirect” 时，先看 [../../reports/google-redirect-indexability.md](../../reports/google-redirect-indexability.md)。本次分诊显示当前 build 的 sitemap/canonical hygiene 通过：`985` 条 sitemap URL 没有 `http`、`www`、fragment、query 或缺尾斜杠，抽样 canonical URL 在 relaxed HTTPS 下返回 `200`，未发现 sitemap URL 自身重定向。当前仍要修的是 GitHub Pages 外部发布状态：`https_enforced=false`，证书 SAN 不覆盖 `agent-evolution.com`，旧 GitHub Pages URL 和 `www/http` 入口会继续把 Google 带到非最终入口。
+
 ## Three Sentences
 
 线上 `https://agent-evolution.com/sitemap-index.xml` 能返回 sitemap index，`sitemap-0.xml` 当前有 `388` 个 `<loc>` 地址。证书检查显示 `agent-evolution.com:443` 当前返回的是 `*.github.io` 证书，SAN 不包含 `agent-evolution.com`，所以普通 HTTPS 抓取会失败并触发 GSC 的 HTTPS / sitemap 读取异常。`agent-evolution.com/graph/#coverage-debt` 应按 `/graph/` 处理：页面 canonical 是 `https://agent-evolution.com/graph/`，锚点存在，但 fragment 不应进入 canonical 或 sitemap。

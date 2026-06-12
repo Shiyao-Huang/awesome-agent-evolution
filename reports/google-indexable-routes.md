@@ -1,6 +1,6 @@
 # Google Indexable Routes Audit
 
-Generated: 2026-06-05T19:06:50.407Z
+Generated: 2026-06-06T06:27:05.334Z
 
 Canonical host: https://agent-evolution.com
 
@@ -16,9 +16,9 @@ This audit checks every HTML route exposed through the generated sitemap. A rout
 
 | Metric | Count |
 |---|---:|
-| Sitemap URLs | 985 |
-| Routes checked | 985 |
-| Passed | 985 |
+| Sitemap URLs | 987 |
+| Routes checked | 987 |
+| Passed | 987 |
 | Failed | 0 |
 
 ## Route Kinds
@@ -27,13 +27,13 @@ This audit checks every HTML route exposed through the generated sitemap. A rout
 |---|---:|
 | blog | 26 |
 | blog-tag | 79 |
-| english | 18 |
+| english | 19 |
 | home | 1 |
 | legacy-research-project-report | 28 |
 | paper-cross-domain-report | 2 |
 | project-card | 293 |
 | project-report | 489 |
-| report-index-or-audit | 5 |
+| report-index-or-audit | 6 |
 | research | 16 |
 | site-page | 16 |
 | survey | 3 |

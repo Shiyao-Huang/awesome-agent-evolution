@@ -1,39 +1,45 @@
 ---
 repo: openclaw/openclaw
 url: https://github.com/openclaw/openclaw
-content_timestamp: 2026-05-21
-time_slice: 2026-05
-timestamp_confidence: explicit
-timestamp_source: AnySearch GitHub search result: repository updated 1 day before 2026-05-22; extract captured current GitHub metadata
-collected_at: 2026-05-22T15:30:00+08:00
+content_timestamp: 2026-06-12
+time_slice: 2026-06
+timestamp_source: web_observed_public_github_page_2026_06_12
+collected_at: 2026-06-12T14:14:31+08:00
 source: github
-source_tool: anysearch
+source_tool: web.open
 ---
 
 ## GitHub - openclaw/openclaw: Your own personal AI assistant. Any OS. Any Platform.
 
 **Source**: https://github.com/openclaw/openclaw
 
-## AnySearch Evidence
+---
 
-- Stars: 374k in extracted GitHub page.
-- Forks: 77.7k in extracted GitHub page.
-- Repository history: 51,372 commits in extracted GitHub page.
-- AnySearch search result identified this as the canonical repository for OpenClaw.
-- Related site: https://openclaw.ai/
-- Repository org page: https://github.com/openclaw
+# Raw public page capture notes
 
-## Raw Content Summary
+This raw-style public GitHub page capture was refreshed by the hourly public metadata update. Shell GitHub API access remained blocked in this workspace, so freshness is web-observed rather than API-verified.
 
-OpenClaw describes itself as a personal AI assistant that runs on user-owned devices and answers through existing channels. The extracted README shows a local-first gateway/control plane, multi-channel inbox, multi-agent routing, voice wake/talk mode, Live Canvas, first-class browser/canvas/nodes/cron/session tools, companion apps, onboarding, and skill support.
+## Visible repository metadata
 
-The search result expands the channel list to WhatsApp, Telegram, Slack, Discord, Google Chat, Signal, iMessage/BlueBubbles, IRC, Microsoft Teams, Matrix, Feishu, LINE, Mattermost, Nextcloud Talk, Nostr, Synology Chat, Tlon, Twitch, Zalo, Zalo Personal, WeChat, WebChat, macOS, and iOS/Android.
+- Repository: openclaw/openclaw
+- URL: https://github.com/openclaw/openclaw
+- Stars: 378000
+- Forks: 79100
+- Commits: 58586
+- Issues: 4400
+- Pull requests: 3700
+- License: AGPL-3.0
+- Primary language / stack signal: TypeScript/Local-First Personal Agent/Multi-Channel Runtime
+- Latest visible dated signal: 2026-06-12 web-observed public GitHub page snapshot
+- Collection timestamp: 2026-06-12T14:14:31+08:00
 
-This resolves the prior missing canonical OpenClaw raw-github record. Existing local records covered OpenClaw ecosystem projects, but not the main `openclaw/openclaw` repository.
+## Visible README / page excerpts
 
-## Classification Notes
+- The public GitHub page on 2026-06-12 showed 378k stars, 79.1k forks, 58,586 commits, 4.4k issues, 3.7k pull requests, and AGPL-3.0 license metadata.
+- OpenClaw still describes itself as a personal AI assistant that runs on user-owned devices and works across operating systems and platforms rather than as a narrow benchmark demo.
+- The public product/runtime surface remains the key signal: local-first control plane, many communication channels, sessions, tools, companion apps, onboarding, and skill support.
+- This refresh replaces the older AnySearch-only snapshot with live public GitHub evidence while keeping the same product-runtime interpretation.
 
-- Suggested category: `框架/framework`.
-- Function tag: `framework-runtime`.
-- Primary themes: `personal-agent`, `local-first`, `multi-channel`, `skills`, `gateway`, `agent-runtime`.
-- Evidence status: AnySearch search + extract.
+## Raw capture boundary
+
+No benchmark was run, no source clone was modified, and no private or authenticated metadata was used. This file preserves public page evidence for downstream classification, model-card analysis, public reports, and the site index.

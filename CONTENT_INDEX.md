@@ -30,6 +30,7 @@
 | 资料库覆盖审计 | [analysis/resource-library-coverage-audit.md](analysis/resource-library-coverage-audit.md) | processed audit：盘点 raw/processed/work/results/site/wiki 当前资产并解释计数口径边界；最新数量以 master-index 与 GitHub analysis 为准 |
 | Survey/SEO 主题地图 | [analysis/survey-seo-topic-map.md](analysis/survey-seo-topic-map.md) | processed synthesis：把资料库资产反推出定义、五类回路、代码自改进、Agent-Swarm、评估治理等 SEO/Survey 主题簇 |
 | Google 索引诊断 | [docs/seo/google-indexing-triage-2026-06-01.md](docs/seo/google-indexing-triage-2026-06-01.md) | ops+seo triage：确认 `agent-evolution.com` 是公开 canonical 域，sitemap 非空，当前阻断点是 GitHub Pages 自定义域名 HTTPS 证书 |
+| Google Redirect 可索引分诊 | [reports/google-redirect-indexability.md](reports/google-redirect-indexability.md) | results+seo audit：分清 Search Console “网页会自动重定向”中的正常非规范入口与真正错误提交到 sitemap/canonical 的重定向 URL |
 | 价值筛选双链知识库 | [analysis/value-screening-dual-chain-knowledge-base.md](analysis/value-screening-dual-chain-knowledge-base.md) | processed protocol：用 Self Mirror 风格把 evidence chain 与 mirror chain 分开，按时间、延续性、实现证据、issue/resource 信号筛选下一批 GitHub 深挖对象 |
 | Value LSH 分类体系 | [analysis/value-lsh-classification-system.md](analysis/value-lsh-classification-system.md) | processed design：把 Mom Test 访谈、机制分类、证据链、语言和 embedding/gbrain 视图汇入新的 value facet 分类体系 |
 | Value LSH Index | [analysis/value-lsh-index.md](analysis/value-lsh-index.md) | processed aggregate：2219 条去重后 GitHub/paper/social/blog 素材离散成 26 条 `-1/0/+1` value lines，生成 168 个 LSH buckets、3 个 value clusters 和 856/1066/297 三段筛选 |

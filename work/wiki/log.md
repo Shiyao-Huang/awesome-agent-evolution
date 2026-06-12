@@ -682,3 +682,20 @@
 - Updated the text asset audit route mapping so `reports/public-i18n-route-audit.md` is counted as a public Google-indexable source after build/audit regeneration.
 - Preserved the blocker: core English reader paths exist, but long-tail Chinese-first routes still need same-evidence English alternates before i18n can be called complete.
 **产出:** `site/src/pages/reports/public-i18n-route-audit.astro`, `site/src/pages/en/reports/public-i18n-route-audit/index.astro`, `work/wiki/synthesis/public-i18n-route-audit.md`
+
+## [2026-06-06 13:42] synthesis+publication | Google Redirect Indexability Triage
+
+**操作:** Added a repeatable Search Console redirect triage for the new `Page with redirect / 网页会自动重定向` notice.
+**详情:**
+- Verified the generated sitemap/canonical layer is clean in the checked build: 985 sitemap URLs, 0 sitemap hygiene problems, and 0 unexpected canonical redirects.
+- Separated expected non-canonical redirect entry points (`http`, `www`, slashless paths, and legacy GitHub Pages URLs) from actual route bugs where a sitemap/canonical URL itself redirects.
+- Preserved the current external blocker: GitHub Pages still reports `https_enforced=false`, and the TLS certificate does not cover `agent-evolution.com`.
+**产出:** `scripts/audit_google_redirect_indexability.mjs`, `reports/google-redirect-indexability.md`, `site/src/pages/reports/google-redirect-indexability.astro`, `site/src/pages/en/reports/google-redirect-indexability/index.astro`, `work/wiki/synthesis/google-redirect-indexability-triage.md`
+## [2026-06-12 14:14] data+publication | Hourly public metadata correction loop
+
+**操作:** Re-verified the public GitHub metadata packet on 2026-06-12, corrected a corrupted processed record, and propagated the repaired snapshot through raw, processed, Mermaid, analysis, and site surfaces.
+**详情:**
+- Refreshed `china-qijizhifeng/agentic-Harness-engineering`, `NousResearch/hermes-agent`, `openclaw/openclaw`, `obra/superpowers`, `rohitg00/agentmemory`, `pinchbench/skill`, and `EvoMap/awesome-agent-evolution` from live public GitHub HTML observed on 2026-06-12.
+- Corrected `research/repo-classification.json` corruption where `DSAIL-Memory/EvoMemBench` had inherited Hermes Agent's star count; Hermes Agent no longer carries a spurious `0`.
+- Recorded the actual GitNexus blocker precisely: `npx gitnexus ...` fails because `registry.npmjs.org` cannot be resolved in this workspace.
+**产出:** `raw-github/*.md`, `research/repo-classification.json`, `.mermaid/current/graph.json`, `work/research/hourly-public-metadata-update-2026-06-12-1414.md`

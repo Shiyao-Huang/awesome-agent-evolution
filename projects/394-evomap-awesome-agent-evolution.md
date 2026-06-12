@@ -4,11 +4,11 @@
 |---|---|
 | Repository | [EvoMap/awesome-agent-evolution](https://github.com/EvoMap/awesome-agent-evolution) |
 | Category | External Awesome List and Taxonomy Comparator |
-| Stars / forks snapshot | 130 / 17 |
+| Stars / forks snapshot | 137 / 20 |
 | Language | JavaScript |
 | License | View license on GitHub public page |
 | Raw capture | raw-github/evomap_awesome-agent-evolution.md |
-| Updated by | hourly public metadata update, 2026-06-02 19:52 +0800 |
+| Updated by | hourly public metadata update, 2026-06-12 14:14 +0800 |
 
 ## 1. Role in Self Evolve
 
@@ -20,7 +20,7 @@ taxonomy framing -> curated repo/paper/benchmark lists -> related awesome-list p
 
 ## 3. Evidence Path
 
-The public GitHub page on 2026-06-02 showed 130 stars, 17 forks, 57 commits, no releases, JavaScript/Shell implementation, and a README that divides the field into self-evolution, memory, protocols, platforms, coding, safety, embodied AI, papers, benchmarks, and community knowledge. Shell GitHub API access remained blocked by DNS failure and `gh` could not connect, so this card treats the snapshot as web-observed rather than API-verified.
+The public GitHub page on 2026-06-12 showed 137 stars, 20 forks, 60 commits, 6 issues, 1 pull request, no releases, JavaScript/Shell implementation, and a README that divides the field into self-evolution, memory, protocols, platforms, coding, safety, embodied AI, papers, benchmarks, and community knowledge. Shell GitHub API access remained blocked by DNS failure and `gh` could not connect, so this card treats the snapshot as web-observed rather than API-verified.
 
 ## 4. Teaching Use
 

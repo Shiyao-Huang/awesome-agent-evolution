@@ -188,6 +188,7 @@ flowchart TB
 - [KNOWN] 全仓库文字资产是否真的变成 Google 可索引资产，以 [reports/text-asset-indexability.md](reports/text-asset-indexability.md) 为覆盖审计；它区分 public HTML、GitHub README、processed-but-unrouted、raw-do-not-publish 和 external mirrors。
 - [KNOWN] 公开 I18N 路由状态由 [reports/public-i18n-route-audit.md](reports/public-i18n-route-audit.md) 审计；它区分核心英文读者路径和仍缺少英文 alternate 的中文优先长尾页面。
 - [KNOWN] Google/SEO 发布状态要同时看本地 sitemap/meta 审计和 live crawl 前提；当前 live readiness 证据在 [reports/live-publication-readiness.md](reports/live-publication-readiness.md)，它明确区分“生成站点可索引”和“自定义域名严格 HTTPS 可抓取”。
+- [KNOWN] Search Console 的“网页会自动重定向”由 [reports/google-redirect-indexability.md](reports/google-redirect-indexability.md) 分诊：sitemap/canonical 最终 URL 不应重定向，`http`、`www`、无尾斜杠和旧 GitHub Pages URL 则是应被合并的非规范入口。
 - [INFERRED] “核心洞察”是对上述证据的综合判断：把 Awesome 仓库升级为受控自进化领域的 Survey、指数和证据图谱，而不是一个单纯链接站。
 
 ## 给读者的下一步

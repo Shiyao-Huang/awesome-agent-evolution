@@ -1,10 +1,10 @@
 ---
 repo: pinchbench/skill
 url: https://github.com/pinchbench/skill
-content_timestamp: 2026-06-04
+content_timestamp: 2026-06-12
 time_slice: 2026-06
-timestamp_source: web_observed_public_github_page_2026_06_04
-collected_at: 2026-06-04T21:38:16+08:00
+timestamp_source: web_observed_public_github_page_2026_06_12
+collected_at: 2026-06-12T14:14:31+08:00
 source: github
 ---
 
@@ -23,17 +23,17 @@ This raw-style public GitHub page capture was refreshed by the hourly public met
 - Repository: pinchbench/skill
 - URL: https://github.com/pinchbench/skill
 - Stars: 1200
-- Forks: 136
+- Forks: 138
 - Commits: 383
 - Issues: 18
 - Pull requests: 0
 - License: MIT
 - Primary language / stack signal: Python/Shell/TypeScript/OpenClaw Benchmark Harness
-- Collection timestamp: 2026-06-04T21:38:16+08:00
+- Collection timestamp: 2026-06-12T14:14:31+08:00
 
 ## Visible README / page excerpts
 
-- The public GitHub page showed about 1.2k stars, 136 forks, 18 issues, 0 pull requests, and 383 commits.
+- The public GitHub page showed about 1.2k stars, 138 forks, 18 issues, 0 pull requests, and 383 commits.
 - The repository explicitly says it contains benchmark skill/tasks rather than the official leaderboard backend.
 - The benchmark covers 53 tasks across productivity, research, writing, coding, analysis, email, memory, and skill discovery.
 - Each task can be graded automatically, by an LLM judge, or both; transcripts are retained under results folders for post-run analysis.

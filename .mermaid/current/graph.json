@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-09T06:23:00+08:00",
+  "generated_at": "2026-06-12T14:14:31+08:00",
   "truth_source": ".mermaid/current/graph.json",
   "nodes": [
     {
@@ -18,14 +18,13 @@
       "layer": "raw",
       "status": "updated",
       "paths": [
-        "raw-github/composiohq_agent-orchestrator.md",
-        "raw-github/desplega-ai_agent-swarm.md",
-        "raw-github/vrsen_agency-swarm.md",
-        "raw-github/aq-medai_medmemorybench.md",
-        "raw-github/wanxingai_lightagent.md",
-        "raw-github/openai_openai-agents-python.md",
-        "raw-github/openai_openai-agents-js.md",
-        "raw-github/xskill-agent_xskill.md"
+        "raw-github/china-qijizhifeng_agentic-harness-engineering.md",
+        "raw-github/nousresearch_hermes-agent.md",
+        "raw-github/openclaw_openclaw.md",
+        "raw-github/obra_superpowers.md",
+        "raw-github/rohitg00_agentmemory.md",
+        "raw-github/pinchbench_skill.md",
+        "raw-github/evomap_awesome-agent-evolution.md"
       ]
     },
     {
@@ -82,14 +81,13 @@
       "paths": [
         "research/repo-classification.json",
         "analysis/github-project-data-analysis.md",
-        "projects/406-composio-agent-orchestrator-coding-swarm.md",
-        "projects/405-agent-swarm-compounding-lead-worker-runtime.md",
-        "projects/27-agency-swarm.md",
-        "projects/407-medmemorybench-agent-memory-benchmark.md",
-        "projects/139-lightagent-memory-mcp-skills.md",
-        "projects/408-openai-agents-python-official-sdk.md",
-        "projects/409-openai-agents-js-official-sdk.md",
-        "projects/404-xskill-continual-experience-skill-learning.md"
+        "projects/43-agentic-harness-engineering.md",
+        "projects/44-hermes-agent.md",
+        "projects/48-openclaw.md",
+        "projects/49-superpowers.md",
+        "projects/50-agentmemory.md",
+        "projects/51-pinchbench-skill.md",
+        "projects/394-evomap-awesome-agent-evolution.md"
       ]
     },
     {
@@ -99,14 +97,13 @@
       "status": "updated",
       "paths": [
         "site/src/data/projects.ts",
-        "site/public/reports/projects/406-composio-agent-orchestrator-coding-swarm.md",
-        "site/public/reports/projects/405-agent-swarm-compounding-lead-worker-runtime.md",
-        "site/public/reports/projects/27-agency-swarm.md",
-        "site/public/reports/projects/407-medmemorybench-agent-memory-benchmark.md",
-        "site/public/reports/projects/139-lightagent-memory-mcp-skills.md",
-        "site/public/reports/projects/408-openai-agents-python-official-sdk.md",
-        "site/public/reports/projects/409-openai-agents-js-official-sdk.md",
-        "site/public/reports/projects/404-xskill-continual-experience-skill-learning.md",
+        "site/public/reports/projects/43-agentic-harness-engineering.md",
+        "site/public/reports/projects/44-hermes-agent.md",
+        "site/public/reports/projects/48-openclaw.md",
+        "site/public/reports/projects/49-superpowers.md",
+        "site/public/reports/projects/50-agentmemory.md",
+        "site/public/reports/projects/51-pinchbench-skill.md",
+        "site/public/reports/projects/394-evomap-awesome-agent-evolution.md",
         "README.md",
         "README-ZH.md",
         "README-EN.md",
@@ -119,7 +116,7 @@
       "layer": "work",
       "status": "updated",
       "paths": [
-        "work/research/hourly-public-metadata-update-2026-06-09-0623.md"
+        "work/research/hourly-public-metadata-update-2026-06-12-1414.md"
       ]
     }
   ],
@@ -173,108 +170,97 @@
   "current_run": {
     "repos": [
       {
-        "repo": "AgentWrapper/agent-orchestrator",
-        "raw_capture": "raw-github/composiohq_agent-orchestrator.md",
-        "report": "projects/406-composio-agent-orchestrator-coding-swarm.md",
-        "site_report": "site/public/reports/projects/406-composio-agent-orchestrator-coding-swarm.md",
-        "stars": 7500,
-        "forks": 1000,
-        "issues": 476,
-        "pull_requests": 468,
-        "last_visible_commit_date": "2026-06-09",
-        "theme": "harness"
-      },
-      {
-        "repo": "desplega-ai/agent-swarm",
-        "raw_capture": "raw-github/desplega-ai_agent-swarm.md",
-        "report": "projects/405-agent-swarm-compounding-lead-worker-runtime.md",
-        "site_report": "site/public/reports/projects/405-agent-swarm-compounding-lead-worker-runtime.md",
-        "stars": 511,
-        "forks": 56,
-        "issues": 1,
-        "pull_requests": 2,
-        "last_visible_commit_date": "2026-06-07",
-        "theme": "framework"
-      },
-      {
-        "repo": "VRSEN/agency-swarm",
-        "raw_capture": "raw-github/vrsen_agency-swarm.md",
-        "report": "projects/27-agency-swarm.md",
-        "site_report": "site/public/reports/projects/27-agency-swarm.md",
-        "stars": 4400,
-        "forks": 1200,
-        "issues": 1,
-        "pull_requests": 3,
-        "last_visible_commit_date": "2026-06-04",
-        "theme": "framework"
-      },
-      {
-        "repo": "AQ-MedAI/MedMemoryBench",
-        "raw_capture": "raw-github/aq-medai_medmemorybench.md",
-        "report": "projects/407-medmemorybench-agent-memory-benchmark.md",
-        "site_report": "site/public/reports/projects/407-medmemorybench-agent-memory-benchmark.md",
-        "stars": 60,
-        "forks": 1,
+        "repo": "china-qijizhifeng/agentic-Harness-engineering",
+        "raw_capture": "raw-github/china-qijizhifeng_agentic-harness-engineering.md",
+        "report": "projects/43-agentic-harness-engineering.md",
+        "site_report": "site/public/reports/projects/43-agentic-harness-engineering.md",
+        "stars": 542,
+        "forks": 62,
         "issues": 0,
         "pull_requests": 0,
-        "last_visible_commit_date": "2026-06-06",
-        "theme": "memory"
-      },
-      {
-        "repo": "wanxingai/LightAgent",
-        "raw_capture": "raw-github/wanxingai_lightagent.md",
-        "report": "projects/139-lightagent-memory-mcp-skills.md",
-        "site_report": "site/public/reports/projects/139-lightagent-memory-mcp-skills.md",
-        "stars": 1100,
-        "forks": 141,
-        "issues": 8,
-        "pull_requests": 0,
-        "last_visible_commit_date": "2026-06-04",
-        "theme": "memory"
-      },
-      {
-        "repo": "openai/openai-agents-python",
-        "raw_capture": "raw-github/openai_openai-agents-python.md",
-        "report": "projects/408-openai-agents-python-official-sdk.md",
-        "site_report": "site/public/reports/projects/408-openai-agents-python-official-sdk.md",
-        "stars": 27000,
-        "forks": 4200,
-        "issues": 43,
-        "pull_requests": 89,
-        "last_visible_commit_date": "2026-06-09",
+        "last_visible_commit_date": "2026-06-12",
         "theme": "harness"
       },
       {
-        "repo": "openai/openai-agents-js",
-        "raw_capture": "raw-github/openai_openai-agents-js.md",
-        "report": "projects/409-openai-agents-js-official-sdk.md",
-        "site_report": "site/public/reports/projects/409-openai-agents-js-official-sdk.md",
-        "stars": 3200,
-        "forks": 803,
-        "issues": 35,
-        "pull_requests": 25,
-        "last_visible_commit_date": "2026-06-09",
-        "theme": "harness"
+        "repo": "NousResearch/hermes-agent",
+        "raw_capture": "raw-github/nousresearch_hermes-agent.md",
+        "report": "projects/44-hermes-agent.md",
+        "site_report": "site/public/reports/projects/44-hermes-agent.md",
+        "stars": 191000,
+        "forks": 33200,
+        "issues": 5000,
+        "pull_requests": 5000,
+        "last_visible_commit_date": "2026-06-12",
+        "theme": "framework"
       },
       {
-        "repo": "XSkill-Agent/XSkill",
-        "raw_capture": "raw-github/xskill-agent_xskill.md",
-        "report": "projects/404-xskill-continual-experience-skill-learning.md",
-        "site_report": "site/public/reports/projects/404-xskill-continual-experience-skill-learning.md",
-        "stars": 218,
-        "forks": 27,
-        "issues": 1,
-        "pull_requests": 0,
-        "last_visible_commit_date": "2026-06-08",
+        "repo": "openclaw/openclaw",
+        "raw_capture": "raw-github/openclaw_openclaw.md",
+        "report": "projects/48-openclaw.md",
+        "site_report": "site/public/reports/projects/48-openclaw.md",
+        "stars": 378000,
+        "forks": 79100,
+        "issues": 4400,
+        "pull_requests": 3700,
+        "last_visible_commit_date": "2026-06-12",
+        "theme": "framework"
+      },
+      {
+        "repo": "obra/superpowers",
+        "raw_capture": "raw-github/obra_superpowers.md",
+        "report": "projects/49-superpowers.md",
+        "site_report": "site/public/reports/projects/49-superpowers.md",
+        "stars": 225000,
+        "forks": 20000,
+        "issues": 123,
+        "pull_requests": 155,
+        "last_visible_commit_date": "2026-06-12",
         "theme": "skill"
+      },
+      {
+        "repo": "rohitg00/agentmemory",
+        "raw_capture": "raw-github/rohitg00_agentmemory.md",
+        "report": "projects/50-agentmemory.md",
+        "site_report": "site/public/reports/projects/50-agentmemory.md",
+        "stars": 22400,
+        "forks": 1800,
+        "issues": 137,
+        "pull_requests": 149,
+        "last_visible_commit_date": "2026-06-12",
+        "theme": "memory"
+      },
+      {
+        "repo": "pinchbench/skill",
+        "raw_capture": "raw-github/pinchbench_skill.md",
+        "report": "projects/51-pinchbench-skill.md",
+        "site_report": "site/public/reports/projects/51-pinchbench-skill.md",
+        "stars": 1200,
+        "forks": 138,
+        "issues": 18,
+        "pull_requests": 0,
+        "last_visible_commit_date": "2026-06-12",
+        "theme": "benchmark"
+      },
+      {
+        "repo": "EvoMap/awesome-agent-evolution",
+        "raw_capture": "raw-github/evomap_awesome-agent-evolution.md",
+        "report": "projects/394-evomap-awesome-agent-evolution.md",
+        "site_report": "site/public/reports/projects/394-evomap-awesome-agent-evolution.md",
+        "stars": 137,
+        "forks": 20,
+        "issues": 6,
+        "pull_requests": 1,
+        "last_visible_commit_date": "2026-06-12",
+        "theme": "resource-index"
       }
     ],
     "blockers": [
       "Shell curl to api.github.com fails with DNS resolution in this workspace, so GitHub API freshness is unavailable.",
       "gh auth status reports the default github.com token for Shiyao-Huang is invalid.",
-      "GitNexus MCP tools are not exposed in this session; local gitnexus CLI works and reports a stale index (`Indexed commit: 326b47d`, `Current commit: 90bda54`).",
+      "npx gitnexus status and npx gitnexus query fail because registry.npmjs.org cannot be resolved in this workspace, so GitNexus is present in project instructions but not callable for this run's evidence refresh.",
+      "The prior 2026-06-09 processed packet corrupted DSAIL-Memory/EvoMemBench stars; this run repairs that processed-layer error before rebuilding downstream analysis.",
       "Public copy review gate still lacks actual 3-5 reader/editor agents plus 3 academic agents, so README/site copy quality remains a declared gap rather than a completed gate."
     ],
-    "working_principle": "public GitHub repo pages -> raw-github captures -> research/repo-classification -> output/raw-github-timestamp-index -> analysis/github-project-data-analysis -> README/i18n + site/src/data/projects.ts + public reports -> paper/site build"
+    "working_principle": "public GitHub repo pages -> raw-github captures -> research/repo-classification -> output/raw-github-timestamp-index -> analysis/github-project-data-analysis -> projects/*.md + site/src/data/projects.ts + public reports -> site/index generation"
   }
 }

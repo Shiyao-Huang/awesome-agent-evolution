@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-06-05T19:06:43.515Z",
+  "generated_at": "2026-06-06T06:26:25.918Z",
   "canonical_host": "https://agent-evolution.com",
   "global_status": "incomplete",
   "verdict": "The public site is not fully bilingual yet: the core English path exists, but most sitemap-listed pages are still Chinese-first and do not declare an English alternate route.",
   "counts": {
-    "sitemap_urls": 985,
-    "html_routes_checked": 985,
+    "sitemap_urls": 987,
+    "html_routes_checked": 987,
     "missing_html": 0,
-    "english_routes": 25,
-    "zh_routes": 960,
-    "zh_routes_with_en_alternate": 18,
-    "en_routes_with_zh_alternate": 18,
+    "english_routes": 26,
+    "zh_routes": 961,
+    "zh_routes_with_en_alternate": 19,
+    "en_routes_with_zh_alternate": 19,
     "zh_first_without_en_alternate": 942,
     "noindex_in_sitemap": 0
   },
@@ -19,9 +19,9 @@
     "site-page": 16,
     "blog": 26,
     "blog-tag": 79,
-    "english": 18,
+    "english": 19,
     "project-card": 293,
-    "report-index-or-audit": 529,
+    "report-index-or-audit": 530,
     "research": 16,
     "survey": 3,
     "topic": 4
@@ -183,6 +183,11 @@
       "pathname": "/en/reports/",
       "title": "Self Evolve Reports — what is reviewed, what is still gated",
       "zh_alternate": "/reports/"
+    },
+    {
+      "pathname": "/en/reports/google-redirect-indexability/",
+      "title": "Google Redirect Indexability Triage | Self Evolve Reports",
+      "zh_alternate": "/reports/google-redirect-indexability/"
     },
     {
       "pathname": "/en/reports/public-i18n-route-audit/",

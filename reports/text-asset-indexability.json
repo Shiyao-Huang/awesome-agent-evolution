@@ -1,20 +1,20 @@
 {
-  "generated_at": "2026-06-05T19:06:50.151Z",
+  "generated_at": "2026-06-06T06:26:39.767Z",
   "canonical_host": "https://agent-evolution.com",
   "global_status": "incomplete",
   "verdict": "Generated sitemap routes are indexable, but repository-wide text coverage is incomplete: many processed analyses, project cards, paper reviews, drafts, and reports are not yet mapped to public Google-indexable HTML.",
   "boundary": "This audit classifies text assets. It does not mean raw sources or external mirrors should be published directly; raw stays raw and mirrors stay mirrors. It also does not clear the live custom-domain HTTPS blocker.",
   "counts": {
-    "text_files_total": 18132,
-    "owned_text_files_excluding_raw_and_external_mirrors": 2155,
-    "public_google_indexable_sources": 568,
+    "text_files_total": 18134,
+    "owned_text_files_excluding_raw_and_external_mirrors": 2157,
+    "public_google_indexable_sources": 569,
     "github_root_or_readme_assets": 4,
     "unpublished_candidate_files": 80,
-    "sitemap_urls_observed": 985
+    "sitemap_urls_observed": 987
   },
   "status_counts": {
     "unclassified-text": 29,
-    "work-internal": 166,
+    "work-internal": 167,
     "ops-or-docs": 89,
     "processed-analysis-unmapped": 161,
     "github-root-indexable": 1,
@@ -26,7 +26,7 @@
     "raw-source-do-not-publish-directly": 2435,
     "github-readme-indexable": 3,
     "results-report-unmapped": 10,
-    "public-google-indexable-source": 568,
+    "public-google-indexable-source": 569,
     "public-report-source-unmapped": 1
   },
   "unpublished_candidates": [
@@ -1583,7 +1583,7 @@
     {
       "path": "CONTENT_INDEX.md",
       "extension": ".md",
-      "words": 997,
+      "words": 1013,
       "title": "Self Evolve 全量索引",
       "route": "",
       "url": "",
@@ -2627,7 +2627,7 @@
     {
       "path": "docs/seo/google-indexing-triage-2026-06-01.md",
       "extension": ".md",
-      "words": 901,
+      "words": 950,
       "title": "Google Indexing Triage — 2026-06-01",
       "route": "",
       "url": "",
@@ -65795,7 +65795,7 @@
     {
       "path": "README-EN.md",
       "extension": ".md",
-      "words": 2804,
+      "words": 2842,
       "title": "Awesome Self-Evolving AI Agents",
       "route": "",
       "url": "",
@@ -65819,7 +65819,7 @@
     {
       "path": "README.md",
       "extension": ".md",
-      "words": 1340,
+      "words": 1354,
       "title": "Awesome Self-Evolving AI Agents",
       "route": "",
       "url": "",
@@ -65889,9 +65889,21 @@
       "priority_score": 80
     },
     {
+      "path": "reports/google-redirect-indexability.md",
+      "extension": ".md",
+      "words": 1582,
+      "title": "Google Redirect Indexability Triage",
+      "route": "/reports/google-redirect-indexability/",
+      "url": "https://agent-evolution.com/reports/google-redirect-indexability/",
+      "route_in_sitemap": true,
+      "route_status": "pass",
+      "status": "public-google-indexable-source",
+      "priority_score": 5
+    },
+    {
       "path": "reports/live-publication-readiness.md",
       "extension": ".md",
-      "words": 507,
+      "words": 513,
       "title": "Live Publication Readiness Audit",
       "route": "/reports/live-publication-readiness/",
       "url": "https://agent-evolution.com/reports/live-publication-readiness/",
@@ -65927,7 +65939,7 @@
     {
       "path": "reports/public-i18n-route-audit.md",
       "extension": ".md",
-      "words": 1789,
+      "words": 1803,
       "title": "公开 I18N 路由审计 / Public I18N Route Audit",
       "route": "/reports/public-i18n-route-audit/",
       "url": "https://agent-evolution.com/reports/public-i18n-route-audit/",
@@ -217799,7 +217811,7 @@
     {
       "path": "work/wiki/index.md",
       "extension": ".md",
-      "words": 1520,
+      "words": 1545,
       "title": "LLM Wiki Index",
       "route": "",
       "url": "",
@@ -217811,7 +217823,7 @@
     {
       "path": "work/wiki/log.md",
       "extension": ".md",
-      "words": 5754,
+      "words": 5856,
       "title": "Wiki Log",
       "route": "",
       "url": "",
@@ -218317,6 +218329,18 @@
       "extension": ".md",
       "words": 155,
       "title": "Google Indexing Custom Domain Triage",
+      "route": "",
+      "url": "",
+      "route_in_sitemap": false,
+      "route_status": "",
+      "status": "work-internal",
+      "priority_score": -10
+    },
+    {
+      "path": "work/wiki/synthesis/google-redirect-indexability-triage.md",
+      "extension": ".md",
+      "words": 198,
+      "title": "Google Redirect Indexability Triage",
       "route": "",
       "url": "",
       "route_in_sitemap": false,

@@ -1,0 +1,58 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { site } from '@/data/site';
+import { Content } from '../../../../../../reports/google-redirect-indexability.md';
+
+const title = 'Google Redirect Indexability Triage';
+const description = 'English mirror for the Self Evolve Search Console redirect triage: sitemap canonical hygiene, canonical URL checks, non-canonical redirect entry points, GitHub Pages HTTPS enforcement, and TLS state.';
+const canonical = new URL('/en/reports/google-redirect-indexability/', site.url).toString();
+const sourceUrl = `${site.github}/blob/main/reports/google-redirect-indexability.md`;
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'TechArticle',
+  headline: title,
+  description,
+  inLanguage: 'en',
+  author: { '@id': `${site.url}/#organization` },
+  publisher: { '@id': `${site.url}/#organization` },
+  mainEntityOfPage: canonical,
+  isBasedOn: sourceUrl,
+  about: ['Google Search Console', 'Page with redirect', 'canonical URLs', 'GitHub Pages HTTPS', 'SEO publication QA']
+};
+---
+<BaseLayout
+  title={`${title} | Self Evolve Reports`}
+  description={description}
+  type="article"
+  pageLang="en"
+  alternateZh="/reports/google-redirect-indexability/"
+  alternateEn="/en/reports/google-redirect-indexability/"
+  pageKeywords={['Search Console page with redirect', 'Google redirect indexing', 'canonical URL audit', 'GitHub Pages HTTPS']}
+>
+  <article class="blog-article">
+    <div class="eyebrow">Publication QA / English mirror</div>
+    <h1>{title}</h1>
+    <p class="lead">{description}</p>
+    <div class="pill-row">
+      <a class="pill" href="/en/reports/">Reports guide</a>
+      <a class="pill" href="/reports/google-redirect-indexability/">中文默认页</a>
+      <a class="pill" href="/reports/live-publication-readiness/">Live readiness</a>
+      <a class="pill" href={sourceUrl} target="_blank" rel="noopener">Markdown source</a>
+    </div>
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} is:inline />
+    <aside class="source-panel" aria-label="Google redirect indexability boundary">
+      <div>
+        <div class="eyebrow">How to read</div>
+        <h2>Separate redirect entry points from final canonical URLs.</h2>
+        <p>A Search Console “Page with redirect” row is not automatically a content failure. HTTP, www, slashless paths, and legacy GitHub Pages URLs should collapse into the canonical URL and should not be indexed separately.</p>
+        <p>The bug to fix is different: a sitemap or canonical URL that redirects instead of returning 200. This report checks that boundary and leaves custom-domain HTTPS readiness to the live publication report.</p>
+      </div>
+      <div class="source-links">
+        <a href={sourceUrl} target="_blank" rel="noopener">Open generated report</a>
+        <a href="/reports/google-redirect-indexability/">中文默认页</a>
+        <a href="/reports/live-publication-readiness/">Live HTTPS readiness</a>
+      </div>
+    </aside>
+    <Content />
+  </article>
+</BaseLayout>

@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-06-05T19:06:50.407Z",
+  "generated_at": "2026-06-06T06:27:05.334Z",
   "canonical_host": "https://agent-evolution.com",
   "audit_boundary": "Generated-site audit only. PASS means sitemap-listed HTML routes have indexable metadata in the local build; it does not prove Google has crawled, indexed, or can reach the custom domain over trusted HTTPS.",
   "global_status": "pass",
   "counts": {
-    "sitemap_urls": 985,
-    "routes_checked": 985,
-    "passed": 985,
+    "sitemap_urls": 987,
+    "routes_checked": 987,
+    "passed": 987,
     "failed": 0
   },
   "route_kind_counts": {
@@ -14,9 +14,9 @@
     "site-page": 16,
     "blog": 26,
     "blog-tag": 79,
-    "english": 18,
+    "english": 19,
     "project-card": 293,
-    "report-index-or-audit": 5,
+    "report-index-or-audit": 6,
     "paper-cross-domain-report": 2,
     "project-report": 489,
     "legacy-research-project-report": 28,
@@ -1392,6 +1392,18 @@
       "description": "English guide to Self Evolve reports: project evidence pages, legacy research wrappers, survey publication slices, paper maps, review-gated policy, and citation boundaries.",
       "lang": "en",
       "canonical": "https://agent-evolution.com/en/reports/",
+      "status": "pass",
+      "failures": []
+    },
+    {
+      "url": "https://agent-evolution.com/en/reports/google-redirect-indexability/",
+      "pathname": "/en/reports/google-redirect-indexability/",
+      "kind": "english",
+      "htmlPath": "site/dist/en/reports/google-redirect-indexability/index.html",
+      "title": "Google Redirect Indexability Triage | Self Evolve Reports",
+      "description": "English mirror for the Self Evolve Search Console redirect triage: sitemap canonical hygiene, canonical URL checks, non-canonical redirect entry points, GitHub Pages HTTPS enforcement, and TLS state.",
+      "lang": "en",
+      "canonical": "https://agent-evolution.com/en/reports/google-redirect-indexability/",
       "status": "pass",
       "failures": []
     },
@@ -5160,6 +5172,18 @@
       "description": "GitHub topic readiness audit for awesome-agent-evolution: repository topics, description, homepage, GitHub Search membership, and rendered topic-page visibility.",
       "lang": "en",
       "canonical": "https://agent-evolution.com/reports/github-topic-indexing-readiness/",
+      "status": "pass",
+      "failures": []
+    },
+    {
+      "url": "https://agent-evolution.com/reports/google-redirect-indexability/",
+      "pathname": "/reports/google-redirect-indexability/",
+      "kind": "report-index-or-audit",
+      "htmlPath": "site/dist/reports/google-redirect-indexability/index.html",
+      "title": "Google Redirect Indexability Triage | Self Evolve Reports",
+      "description": "Self Evolve Search Console redirect triage: sitemap canonical hygiene, canonical URL 200 checks, HTTP/www/slashless/GitHub Pages redirects, HTTPS enforcement, and TLS certificate state.",
+      "lang": "zh-CN",
+      "canonical": "https://agent-evolution.com/reports/google-redirect-indexability/",
       "status": "pass",
       "failures": []
     },

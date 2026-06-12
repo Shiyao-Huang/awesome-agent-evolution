@@ -1,6 +1,6 @@
 # 公开 I18N 路由审计 / Public I18N Route Audit
 
-Generated: 2026-06-05T19:06:43.515Z
+Generated: 2026-06-06T06:26:25.918Z
 
 Status: **INCOMPLETE**
 
@@ -20,8 +20,8 @@ English: The public site is not fully bilingual yet: the core English path exist
 
 ## 三句话证据 / Three-Sentence Evidence
 
-1. Sitemap 当前有 985 条 URL，审计能读取 985 条 HTML 路由；这只证明 sitemap 中列出的页面有本地 HTML，不等于全站内容完整或每条路由都完成 i18n parity。 / The sitemap exposes 985 URLs and the audit can read 985 HTML routes; this only proves sitemap-listed pages have local HTML, not whole-site content completeness or i18n parity for every route.
-2. 英文语言路由共有 25 条，中文路由中只有 18 条声明英文 alternate；这些数字来自 HTML metadata，不证明英文内容已经逐页保持同证据链。 / There are 25 English-language routes, and only 18 Chinese routes declare an English alternate. These counts come from HTML metadata; they do not prove content-level same-evidence parity.
+1. Sitemap 当前有 987 条 URL，审计能读取 987 条 HTML 路由；这只证明 sitemap 中列出的页面有本地 HTML，不等于全站内容完整或每条路由都完成 i18n parity。 / The sitemap exposes 987 URLs and the audit can read 987 HTML routes; this only proves sitemap-listed pages have local HTML, not whole-site content completeness or i18n parity for every route.
+2. 英文语言路由共有 26 条，中文路由中只有 19 条声明英文 alternate；这些数字来自 HTML metadata，不证明英文内容已经逐页保持同证据链。 / There are 26 English-language routes, and only 19 Chinese routes declare an English alternate. These counts come from HTML metadata; they do not prove content-level same-evidence parity.
 3. 因此 SEO 目标的下一步不是盲目制造英文页面，而是优先给高价值文章、报告、项目卡和研究页补英文 route、人工同证据链审查、canonical/alternate 声明和审查状态。 / The next SEO step is not to create shallow English pages. It is to promote high-value articles, reports, project cards, and research pages with English routes, manual same-evidence review, canonical/alternate declarations, and review status.
 
 ## 边界 / Boundary
@@ -34,12 +34,12 @@ This report checks whether public HTML routes in the sitemap are readable and wh
 
 | 指标 / Metric | Count |
 |---|---:|
-| Sitemap URL 数 / Sitemap URLs | 985 |
-| 已检查 HTML 路由 / HTML routes checked | 985 |
-| 英文路由 / English routes | 25 |
-| 中文路由 / Chinese routes | 960 |
-| 声明英文 alternate 的中文路由 / Chinese routes declaring English alternate | 18 |
-| 声明中文 alternate 的英文路由 / English routes declaring Chinese alternate | 18 |
+| Sitemap URL 数 / Sitemap URLs | 987 |
+| 已检查 HTML 路由 / HTML routes checked | 987 |
+| 英文路由 / English routes | 26 |
+| 中文路由 / Chinese routes | 961 |
+| 声明英文 alternate 的中文路由 / Chinese routes declaring English alternate | 19 |
+| 声明中文 alternate 的英文路由 / English routes declaring Chinese alternate | 19 |
 | 未声明英文 alternate 的中文优先路由 / Chinese-first routes without declared English alternate | 942 |
 | Sitemap 中 noindex 路由 / Noindex routes in sitemap | 0 |
 | 缺失 HTML 文件 / Missing HTML routes | 0 |
@@ -75,6 +75,7 @@ This report checks whether public HTML routes in the sitemap are readable and wh
 | /en/paper/ | /paper/ | Self-Evolving AI Survey Paper — English citation status |
 | /en/projects/ | /projects/ | Self Evolve Projects — GitHub evidence, not a quality ranking |
 | /en/reports/ | /reports/ | Self Evolve Reports — what is reviewed, what is still gated |
+| /en/reports/google-redirect-indexability/ | /reports/google-redirect-indexability/ | Google Redirect Indexability Triage / Self Evolve Reports |
 | /en/reports/public-i18n-route-audit/ | /reports/public-i18n-route-audit/ | Public I18N Route Audit / Self Evolve Reports |
 | /en/reports/text-asset-indexability/ | /reports/text-asset-indexability/ | Text Asset Indexability Audit / Self Evolve Reports |
 | /en/research/ | /research/ | Self Evolve Research Map — papers, mechanisms, and coverage gaps |

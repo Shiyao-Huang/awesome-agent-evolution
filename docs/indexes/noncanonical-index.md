@@ -1,6 +1,6 @@
 # Noncanonical Cleanup Index
 
-> Generated: 2026-06-09
+> Generated: 2026-06-12
 
 ## 一句话
 
@@ -23,6 +23,7 @@
 
 | Path | Type | Class | Cleanup Action |
 |---|---|---|---|
+| `-` | file | needs-review holding | 不删除；先放入待审清单，确认引用后再决定归层或迁入 docs/legacy。 |
 | `.DS_Store` | file | local ignored/cache | 本地状态或依赖，不发布；由 .gitignore 隔离，不作为研究素材。 |
 | `.aha` | dir | local ignored/cache | 本地状态或依赖，不发布；由 .gitignore 隔离，不作为研究素材。 |
 | `.astro` | dir | local ignored/cache | 本地状态或依赖，不发布；由 .gitignore 隔离，不作为研究素材。 |

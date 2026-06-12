@@ -188,6 +188,7 @@ flowchart TB
 - [KNOWN] Repository-wide text asset coverage is audited by [reports/text-asset-indexability.md](reports/text-asset-indexability.md); it separates public HTML assets, GitHub README assets, processed-but-unrouted files, raw-do-not-publish sources, and external mirrors.
 - [KNOWN] Public i18n route status is audited by [reports/public-i18n-route-audit.md](reports/public-i18n-route-audit.md); it separates the core English reader path from Chinese-first long-tail pages that still lack English alternates.
 - [KNOWN] Google/SEO publication status must combine local sitemap/meta audits with live crawl prerequisites; [reports/live-publication-readiness.md](reports/live-publication-readiness.md) separates "generated site is indexable" from "the custom domain is reachable over strict HTTPS."
+- [KNOWN] Search Console "Page with redirect" rows are triaged by [reports/google-redirect-indexability.md](reports/google-redirect-indexability.md): sitemap/canonical final URLs should not redirect, while `http`, `www`, slashless, and legacy GitHub Pages URLs are non-canonical entry points that should collapse into the canonical URL.
 - [INFERRED] The "core insight" is a synthesis over those sources: upgrading the Awesome repository into a survey + index + evidence graph for controlled self-evolution, not a simple link site.
 
 ## Reader Next Steps

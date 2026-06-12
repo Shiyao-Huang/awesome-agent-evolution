@@ -38,6 +38,7 @@ const routeForPath = (relativePath) => {
     return `/reports/survey-publication/${stripExt(path.basename(relativePath))}/`;
   }
   if (relativePath === 'reports/github-topic-indexing-readiness.md') return '/reports/github-topic-indexing-readiness/';
+  if (relativePath === 'reports/google-redirect-indexability.md') return '/reports/google-redirect-indexability/';
   if (relativePath === 'reports/live-publication-readiness.md') return '/reports/live-publication-readiness/';
   if (relativePath === 'reports/public-i18n-route-audit.md') return '/reports/public-i18n-route-audit/';
   if (relativePath === 'reports/text-asset-indexability.md') return '/reports/text-asset-indexability/';
