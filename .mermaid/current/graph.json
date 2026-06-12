@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-12T14:14:31+08:00",
+  "generated_at": "2026-06-12T20:16:23+08:00",
   "truth_source": ".mermaid/current/graph.json",
   "nodes": [
     {
@@ -24,7 +24,8 @@
         "raw-github/obra_superpowers.md",
         "raw-github/rohitg00_agentmemory.md",
         "raw-github/pinchbench_skill.md",
-        "raw-github/evomap_awesome-agent-evolution.md"
+        "raw-github/evomap_awesome-agent-evolution.md",
+        "raw-github/desplega-ai_agent-swarm.md"
       ]
     },
     {
@@ -87,7 +88,8 @@
         "projects/49-superpowers.md",
         "projects/50-agentmemory.md",
         "projects/51-pinchbench-skill.md",
-        "projects/394-evomap-awesome-agent-evolution.md"
+        "projects/394-evomap-awesome-agent-evolution.md",
+        "projects/405-agent-swarm-compounding-lead-worker-runtime.md"
       ]
     },
     {
@@ -104,6 +106,7 @@
         "site/public/reports/projects/50-agentmemory.md",
         "site/public/reports/projects/51-pinchbench-skill.md",
         "site/public/reports/projects/394-evomap-awesome-agent-evolution.md",
+        "site/public/reports/projects/405-agent-swarm-compounding-lead-worker-runtime.md",
         "README.md",
         "README-ZH.md",
         "README-EN.md",
@@ -116,7 +119,7 @@
       "layer": "work",
       "status": "updated",
       "paths": [
-        "work/research/hourly-public-metadata-update-2026-06-12-1414.md"
+        "work/research/hourly-public-metadata-update-2026-06-12-2016.md"
       ]
     }
   ],
@@ -174,7 +177,7 @@
         "raw_capture": "raw-github/china-qijizhifeng_agentic-harness-engineering.md",
         "report": "projects/43-agentic-harness-engineering.md",
         "site_report": "site/public/reports/projects/43-agentic-harness-engineering.md",
-        "stars": 542,
+        "stars": 545,
         "forks": 62,
         "issues": 0,
         "pull_requests": 0,
@@ -186,8 +189,8 @@
         "raw_capture": "raw-github/nousresearch_hermes-agent.md",
         "report": "projects/44-hermes-agent.md",
         "site_report": "site/public/reports/projects/44-hermes-agent.md",
-        "stars": 191000,
-        "forks": 33200,
+        "stars": 191591,
+        "forks": 33323,
         "issues": 5000,
         "pull_requests": 5000,
         "last_visible_commit_date": "2026-06-12",
@@ -198,10 +201,10 @@
         "raw_capture": "raw-github/openclaw_openclaw.md",
         "report": "projects/48-openclaw.md",
         "site_report": "site/public/reports/projects/48-openclaw.md",
-        "stars": 378000,
-        "forks": 79100,
-        "issues": 4400,
-        "pull_requests": 3700,
+        "stars": 378330,
+        "forks": 79122,
+        "issues": 4206,
+        "pull_requests": 3753,
         "last_visible_commit_date": "2026-06-12",
         "theme": "framework"
       },
@@ -210,8 +213,8 @@
         "raw_capture": "raw-github/obra_superpowers.md",
         "report": "projects/49-superpowers.md",
         "site_report": "site/public/reports/projects/49-superpowers.md",
-        "stars": 225000,
-        "forks": 20000,
+        "stars": 225591,
+        "forks": 20050,
         "issues": 123,
         "pull_requests": 155,
         "last_visible_commit_date": "2026-06-12",
@@ -222,10 +225,10 @@
         "raw_capture": "raw-github/rohitg00_agentmemory.md",
         "report": "projects/50-agentmemory.md",
         "site_report": "site/public/reports/projects/50-agentmemory.md",
-        "stars": 22400,
-        "forks": 1800,
-        "issues": 137,
-        "pull_requests": 149,
+        "stars": 22479,
+        "forks": 1851,
+        "issues": 138,
+        "pull_requests": 150,
         "last_visible_commit_date": "2026-06-12",
         "theme": "memory"
       },
@@ -234,7 +237,7 @@
         "raw_capture": "raw-github/pinchbench_skill.md",
         "report": "projects/51-pinchbench-skill.md",
         "site_report": "site/public/reports/projects/51-pinchbench-skill.md",
-        "stars": 1200,
+        "stars": 1227,
         "forks": 138,
         "issues": 18,
         "pull_requests": 0,
@@ -252,15 +255,29 @@
         "pull_requests": 1,
         "last_visible_commit_date": "2026-06-12",
         "theme": "resource-index"
+      },
+      {
+        "repo": "desplega-ai/agent-swarm",
+        "raw_capture": "raw-github/desplega-ai_agent-swarm.md",
+        "report": "projects/405-agent-swarm-compounding-lead-worker-runtime.md",
+        "site_report": "site/public/reports/projects/405-agent-swarm-compounding-lead-worker-runtime.md",
+        "stars": 520,
+        "forks": 57,
+        "issues": 1,
+        "pull_requests": 2,
+        "last_visible_commit_date": "2026-06-12",
+        "theme": "framework"
       }
     ],
     "blockers": [
-      "Shell curl to api.github.com fails with DNS resolution in this workspace, so GitHub API freshness is unavailable.",
+      "Unauthenticated GitHub API access reached 403 rate limit exceeded on 2026-06-12, so this loop used public GitHub HTML rather than API JSON.",
       "gh auth status reports the default github.com token for Shiyao-Huang is invalid.",
-      "npx gitnexus status and npx gitnexus query fail because registry.npmjs.org cannot be resolved in this workspace, so GitNexus is present in project instructions but not callable for this run's evidence refresh.",
-      "The prior 2026-06-09 processed packet corrupted DSAIL-Memory/EvoMemBench stars; this run repairs that processed-layer error before rebuilding downstream analysis.",
-      "Public copy review gate still lacks actual 3-5 reader/editor agents plus 3 academic agents, so README/site copy quality remains a declared gap rather than a completed gate."
+      "GitNexus CLI status is callable but stale; direct GitNexus MCP tools are not exposed in this Codex session, and re-running analyze was avoided because AGENTS.md / CLAUDE.md already carry unrelated user edits."
     ],
-    "working_principle": "public GitHub repo pages -> raw-github captures -> research/repo-classification -> output/raw-github-timestamp-index -> analysis/github-project-data-analysis -> projects/*.md + site/src/data/projects.ts + public reports -> site/index generation"
+    "working_principle": "public GitHub repo pages -> raw-github captures -> research/repo-classification -> output/raw-github-timestamp-index -> analysis/github-project-data-analysis -> projects/*.md + site/src/data/projects.ts + public reports -> site/index generation",
+    "notes": [
+      "The prior 2026-06-12 14:14 packet rounded several star/fork totals; this run replaces those rounded values with the exact public HTML totals visible later the same day.",
+      "Agent Swarm is now synchronized from the 2026-06-09 packet to a 2026-06-12 public GitHub snapshot before downstream rebuilds."
+    ]
   }
 }

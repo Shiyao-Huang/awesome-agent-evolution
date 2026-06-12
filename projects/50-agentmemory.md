@@ -24,4 +24,4 @@ Use agentmemory to teach why memory cannot be an afterthought. Self-evolving age
 
 ## Evidence And Limits
 
-The raw capture now reflects a live public GitHub page snapshot: 22.4k stars, 1.8k forks, 462 commits, 137 issues, 149 pull requests, and Apache-2.0 license metadata observed on 2026-06-12. The next analysis should inspect schema, memory lifecycle, and whether confidence scores are updated by real outcomes.
+The raw capture now reflects a live public GitHub page snapshot: 22,479 stars, 1,851 forks, 462 commits, 138 issues, 150 pull requests, and Apache-2.0 license metadata observed on 2026-06-12. The next analysis should inspect schema, memory lifecycle, and whether confidence scores are updated by real outcomes.

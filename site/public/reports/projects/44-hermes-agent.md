@@ -24,4 +24,4 @@ Use Hermes Agent to teach the runtime surface of self-evolving agents. It shows 
 
 ## Evidence And Limits
 
-The raw capture now reflects a live public GitHub page snapshot: 191k stars, 33.2k forks, 11,421 commits, 5k+ issues, 5k+ pull requests, and MIT license metadata observed on 2026-06-12. These are still web-observed values rather than authenticated GitHub API results, so benchmark and runtime claims remain source-scoped.
+The raw capture now reflects a live public GitHub page snapshot: 191,591 stars, 33,323 forks, 11,472 commits, 5k+ issues, 5k+ pull requests, and MIT license metadata observed on 2026-06-12. These are still web-observed values because unauthenticated GitHub API access was already rate-limited, so benchmark and runtime claims remain source-scoped.

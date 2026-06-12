@@ -1,6 +1,6 @@
 graph TD
-  intent["Direct user intent"] --> raw["raw-github public repo refresh + correction"]
+  intent["Direct user intent"] --> raw["raw-github public repo refresh + exact-count correction"]
   raw --> processed["repo classification + GitHub analysis + processed cards"]
   processed --> results["site project data + public reports + indexes"]
-  processed --> note["work learning note + corruption fix"]
+  processed --> note["work learning note + blocker ledger"]
   note --> intent

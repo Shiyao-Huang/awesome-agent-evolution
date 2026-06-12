@@ -2,7 +2,7 @@
 
 Truth source: `.mermaid/current/graph.json`
 
-Generated: 2026-06-12T14:14:31+08:00
+Generated: 2026-06-12T20:16:23+08:00
 
 ## Current Run Repositories
 
@@ -13,6 +13,7 @@ Generated: 2026-06-12T14:14:31+08:00
 - **rohitg00/agentmemory** -> raw `raw-github/rohitg00_agentmemory.md` -> card `projects/50-agentmemory.md` -> site report `site/public/reports/projects/50-agentmemory.md`
 - **pinchbench/skill** -> raw `raw-github/pinchbench_skill.md` -> card `projects/51-pinchbench-skill.md` -> site report `site/public/reports/projects/51-pinchbench-skill.md`
 - **EvoMap/awesome-agent-evolution** -> raw `raw-github/evomap_awesome-agent-evolution.md` -> card `projects/394-evomap-awesome-agent-evolution.md` -> site report `site/public/reports/projects/394-evomap-awesome-agent-evolution.md`
+- **desplega-ai/agent-swarm** -> raw `raw-github/desplega-ai_agent-swarm.md` -> card `projects/405-agent-swarm-compounding-lead-worker-runtime.md` -> site report `site/public/reports/projects/405-agent-swarm-compounding-lead-worker-runtime.md`
 
 ## Working Principle
 
@@ -20,7 +21,7 @@ GitHub public repo pages -> raw captures -> classification -> timestamp index ->
 
 ## Evidence Boundaries
 
-- Shell GitHub API access is blocked by DNS resolution failure.
+- Unauthenticated GitHub API access hit `403 rate limit exceeded` on 2026-06-12, so this loop used public GitHub HTML rather than API JSON.
 - Local `gh` auth is invalid, so no authenticated freshness claims were made.
-- `npx gitnexus status` and `npx gitnexus query` fail because `registry.npmjs.org` cannot be resolved in this workspace, so GitNexus is present in instructions but not callable for this run's evidence refresh.
+- GitNexus CLI status is callable but stale; direct GitNexus MCP tools are not exposed in this Codex session, and re-running `npx gitnexus analyze` was avoided because `AGENTS.md` / `CLAUDE.md` already contain unrelated user edits.
 - Public copy review gate is still incomplete; this run updates evidence surfaces but does not claim review-complete copy quality.

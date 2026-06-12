@@ -107,7 +107,7 @@ Generated: 2026-06-12T00:00:00+08:00
 | 98 | [centaurioun/crewai](https://github.com/centaurioun/crewai) | unknown | unknown | 2026-05-20T17:44:59Z | unknown_not_present_in_raw_capture | raw-github/centaurioun_crewai.md |
 | 99 | [channinglua/prax-agent](https://github.com/channinglua/prax-agent) | 2026-05-21 | 2026-05 | 2026-05-20T17:45:19Z | github_latest_commit_or_update_text | raw-github/channinglua_prax-agent.md |
 | 100 | [charlesq9/self-evolving-agents](https://github.com/charlesq9/self-evolving-agents) | 2026-05-21 | 2026-05 | 2026-05-20T17:45:19Z | github_latest_commit_or_update_text | raw-github/charlesq9_self-evolving-agents.md |
-| 101 | [china-qijizhifeng/agentic-Harness-engineering](https://github.com/china-qijizhifeng/agentic-Harness-engineering) | 2026-06-12 | 2026-06 | 2026-06-12T14:14:31+08:00 | web_observed_public_github_page_2026_06_12 | raw-github/china-qijizhifeng_agentic-harness-engineering.md |
+| 101 | [china-qijizhifeng/agentic-Harness-engineering](https://github.com/china-qijizhifeng/agentic-Harness-engineering) | 2026-06-12 | 2026-06 | 2026-06-12T20:16:23+08:00 | web_observed_public_github_page_2026_06_12 | raw-github/china-qijizhifeng_agentic-harness-engineering.md |
 | 102 | [Chorus-AIDLC/Chorus](https://github.com/Chorus-AIDLC/Chorus) | 2026-05-26 | 2026-05 | 2026-05-26T09:12:00+08:00 | web_observed_public_github_page_2026_05_26 | raw-github/chorus-aidlc_chorus.md |
 | 103 | [chriscox/agent-skills](https://github.com/chriscox/agent-skills) | 2026-05-24 | 2026-05 | 2026-05-24T15:06:00Z | web_observed_github_page | raw-github/chriscox_agent-skills.md |
 | 104 | [christinminor459/OnionClaw](https://github.com/christinminor459/OnionClaw) | 2026-06-01 | 2026-06 | 2026-06-01T19:51:04+08:00 | web_observed_public_github_page_2026_06_01 | raw-github/christinminor459_onionclaw.md |
@@ -149,7 +149,7 @@ Generated: 2026-06-12T00:00:00+08:00
 | 140 | [DEEP-PolyU/Awesome-GraphMemory](https://github.com/DEEP-PolyU/Awesome-GraphMemory) | 2026-05-25 | 2026-05 | 2026-05-25T23:35:00+08:00 | web_observed_search_and_public_github_page_2026_05_25 | raw-github/deep-polyu_awesome-graphmemory.md |
 | 141 | [deep-polyu/awesome-graphrag](https://github.com/deep-polyu/awesome-graphrag) | 2026-04-07 | 2026-04 | 2026-05-20T17:44:59Z | github_latest_commit_or_update_text | raw-github/deep-polyu_awesome-graphrag.md |
 | 142 | [deepelementlab/clawcode](https://github.com/deepelementlab/clawcode) | 2026-05-21 | 2026-05 | 2026-05-20T17:45:19Z | github_latest_commit_or_update_text | raw-github/deepelementlab_clawcode.md |
-| 143 | [desplega-ai/agent-swarm](https://github.com/desplega-ai/agent-swarm) | 2026-06-09 | 2026-06 | 2026-06-09T10:20:00+08:00 | web_observed_public_github_page_2026_06_09 | raw-github/desplega-ai_agent-swarm.md |
+| 143 | [desplega-ai/agent-swarm](https://github.com/desplega-ai/agent-swarm) | 2026-06-12 | 2026-06 | 2026-06-12T20:16:23+08:00 | web_observed_public_github_page_2026_06_12 | raw-github/desplega-ai_agent-swarm.md |
 | 144 | [developzir/gepa-mcp](https://github.com/developzir/gepa-mcp) | unknown | unknown | 2026-05-20T17:44:59Z | unknown_not_present_in_raw_capture | raw-github/developzir_gepa-mcp.md |
 | 145 | [diegosouzapw/awesome-omni-skills](https://github.com/diegosouzapw/awesome-omni-skills) | 2026-05-25 | 2026-05 | 2026-05-24T20:12:04Z | web_observed_github_page | raw-github/diegosouzapw_awesome-omni-skills.md |
 | 146 | [dmgrok/agent_skills_directory](https://github.com/dmgrok/agent_skills_directory) | 2026-05-24 | 2026-05 | 2026-05-24T15:58:26+08:00 | web_github_page_open_2026-05-24 | raw-github/dmgrok_agent_skills_directory.md |
@@ -178,7 +178,7 @@ Generated: 2026-06-12T00:00:00+08:00
 | 169 | [EverMind-AI/EverOS](https://github.com/EverMind-AI/EverOS) | 2026-06-03 | 2026-06 | 2026-06-03T19:56:18+08:00 | web_observed_public_github_page_2026_06_03 | raw-github/evermind-ai_everos.md |
 | 170 | [evoagentx/awesome-self-evolving-agents](https://github.com/evoagentx/awesome-self-evolving-agents) | 2026-05-21 | 2026-05 | 2026-05-20T17:45:19Z | github_latest_commit_or_update_text | raw-github/evoagentx_awesome-self-evolving-agents.md |
 | 171 | [evoagentx/evoagentx](https://github.com/evoagentx/evoagentx) | 2026-05-21 | 2026-05 | 2026-05-20T17:45:19Z | github_latest_commit_or_update_text | raw-github/evoagentx_evoagentx.md |
-| 172 | [evomap/awesome-agent-evolution](https://github.com/evomap/awesome-agent-evolution) | 2026-06-12 | 2026-06 | 2026-06-12T14:14:31+08:00 | web_observed_public_github_page_2026_06_12 | raw-github/evomap_awesome-agent-evolution.md |
+| 172 | [EvoMap/awesome-agent-evolution](https://github.com/EvoMap/awesome-agent-evolution) | 2026-06-12 | 2026-06 | 2026-06-12T20:16:23+08:00 | web_observed_public_github_page_2026_06_12 | raw-github/evomap_awesome-agent-evolution.md |
 | 173 | [EvoMap/evolver](https://github.com/EvoMap/evolver) | 2026-05-31 | 2026-05 | 2026-05-31T01:21:52+08:00 | web_observed_public_github_page_2026_05_31 | raw-github/evomap_evolver.md |
 | 174 | [evotai/evot](https://github.com/evotai/evot) | 2026-05-17 | 2026-05 | 2026-05-20T17:45:19Z | github_latest_commit_or_update_text | raw-github/evotai_evot.md |
 | 175 | [exoskeletonzj/mars](https://github.com/exoskeletonzj/mars) | unknown | unknown | 2026-05-20T17:44:59Z | unknown_not_present_in_raw_capture | raw-github/exoskeletonzj_mars.md |
@@ -405,10 +405,10 @@ Generated: 2026-06-12T00:00:00+08:00
 | 396 | [noahshinn024/reflexion-human-eval](https://github.com/noahshinn024/reflexion-human-eval) | 2026-05-21 | 2026-05 | 2026-05-20T17:45:19Z | github_latest_commit_or_update_text | raw-github/noahshinn024_reflexion-human-eval.md |
 | 397 | [nomic-ai/aec-bench](https://github.com/nomic-ai/aec-bench) | 2026-05-30 | 2026-05 | 2026-05-30T13:16:52+08:00 | web_observed_public_github_page_2026_05_30 | raw-github/nomic-ai_aec-bench.md |
 | 398 | [NousResearch/hermes-agent-self-evolution](https://github.com/NousResearch/hermes-agent-self-evolution) | 2026-05-31 | 2026-05 | 2026-05-31T01:21:52+08:00 | web_observed_public_github_page_2026_05_31 | raw-github/nousresearch_hermes-agent-self-evolution.md |
-| 399 | [nousresearch/hermes-agent](https://github.com/NousResearch/hermes-agent) | 2026-06-12 | 2026-06 | 2026-06-12T14:14:31+08:00 | web_observed_public_github_page_2026_06_12 | raw-github/nousresearch_hermes-agent.md |
+| 399 | [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent) | 2026-06-12 | 2026-06 | 2026-06-12T20:16:23+08:00 | web_observed_public_github_page_2026_06_12 | raw-github/nousresearch_hermes-agent.md |
 | 400 | [nowledge-co/community](https://github.com/nowledge-co/community) | 2026-06-01 | 2026-06 | 2026-06-01T19:51:04+08:00 | web_observed_public_github_page_2026_06_01 | raw-github/nowledge-co_community.md |
 | 401 | [NVIDIA/skills](https://github.com/NVIDIA/skills) | 2026-05-31 | 2026-05 | 2026-05-31T19:50:00+08:00 | web_observed_public_github_page_2026_05_31 | raw-github/nvidia_skills.md |
-| 402 | [obra/superpowers](https://github.com/obra/superpowers) | 2026-06-12 | 2026-06 | 2026-06-12T14:14:31+08:00 | web_observed_public_github_page_2026_06_12 | raw-github/obra_superpowers.md |
+| 402 | [obra/superpowers](https://github.com/obra/superpowers) | 2026-06-12 | 2026-06 | 2026-06-12T20:16:23+08:00 | web_observed_public_github_page_2026_06_12 | raw-github/obra_superpowers.md |
 | 403 | [oceanbase/powermem](https://github.com/oceanbase/powermem) | 2026-06-01 | 2026-06 | 2026-06-01T20:27:31+08:00 | github_public_api_observed_2026_06_01 | raw-github/oceanbase_powermem.md |
 | 404 | [octobrist/cope](https://github.com/octobrist/cope) | unknown | unknown | 2026-05-20T17:44:59Z | unknown_not_present_in_raw_capture | raw-github/octobrist_cope.md |
 | 405 | [oiioai/molt](https://github.com/OiiOAI/MOLT) | 2026-05-24 | 2026-05 | 2026-05-24T13:05:00Z | web_observed_github_page | raw-github/oiioai_molt.md |
@@ -434,7 +434,7 @@ Generated: 2026-06-12T00:00:00+08:00
 | 425 | [openclaw/discrawl](https://github.com/openclaw/discrawl) | 2026-05-29 | 2026-05 | 2026-05-29T22:15:49+08:00 | web_observed_public_github_page_2026_05_29 | raw-github/openclaw_discrawl.md |
 | 426 | [openclaw/gitcrawl](https://github.com/openclaw/gitcrawl) | 2026-05-29 | 2026-05 | 2026-05-29T22:15:49+08:00 | web_observed_public_github_page_2026_05_29 | raw-github/openclaw_gitcrawl.md |
 | 427 | [openclaw/openclaw-windows-node](https://github.com/openclaw/openclaw-windows-node) | 2026-05-30 | 2026-05 | 2026-05-30T01:15:12+08:00 | web_observed_public_github_page_2026_05_29 | raw-github/openclaw_openclaw-windows-node.md |
-| 428 | [openclaw/openclaw](https://github.com/openclaw/openclaw) | 2026-06-12 | 2026-06 | 2026-06-12T14:14:31+08:00 | web_observed_public_github_page_2026_06_12 | raw-github/openclaw_openclaw.md |
+| 428 | [openclaw/openclaw](https://github.com/openclaw/openclaw) | 2026-06-12 | 2026-06 | 2026-06-12T20:16:23+08:00 | web_observed_public_github_page_2026_06_12 | raw-github/openclaw_openclaw.md |
 | 429 | [opendatabox/workspace-bench](https://github.com/opendatabox/workspace-bench) | 2025-05-07 | 2025-05 | 2026-05-20T17:44:59Z | github_latest_commit_or_update_text | raw-github/opendatabox_workspace-bench.md |
 | 430 | [opendilab/awesome-exploration-rl](https://github.com/opendilab/awesome-exploration-rl) | 2026-05-21 | 2026-05 | 2026-05-20T17:45:19Z | github_latest_commit_or_update_text | raw-github/opendilab_awesome-exploration-rl.md |
 | 431 | [opendilab/awesome-model-based-rl](https://github.com/opendilab/awesome-model-based-rl) | 2026-05-21 | 2026-05 | 2026-05-20T17:45:19Z | github_latest_commit_or_update_text | raw-github/opendilab_awesome-model-based-rl.md |
@@ -462,7 +462,7 @@ Generated: 2026-06-12T00:00:00+08:00
 | 453 | [pgg3/evotoolkit](https://github.com/pgg3/evotoolkit) | 2026-03-23 | 2026-03 | 2026-05-20T17:45:19Z | github_latest_commit_or_update_text | raw-github/pgg3_evotoolkit.md |
 | 454 | [pgg3/l-autoda](https://github.com/pgg3/l-autoda) | 2026-05-21 | 2026-05 | 2026-05-20T17:45:19Z | github_latest_commit_or_update_text | raw-github/pgg3_l-autoda.md |
 | 455 | [Picrew/awesome-agent-harness](https://github.com/Picrew/awesome-agent-harness) | 2026-05-27 | 2026-05 | 2026-05-27T22:00:12+08:00 | web_observed_public_github_page_2026_05_27 | raw-github/picrew_awesome-agent-harness.md |
-| 456 | [pinchbench/skill](https://github.com/pinchbench/skill) | 2026-06-12 | 2026-06 | 2026-06-12T14:14:31+08:00 | web_observed_public_github_page_2026_06_12 | raw-github/pinchbench_skill.md |
+| 456 | [pinchbench/skill](https://github.com/pinchbench/skill) | 2026-06-12 | 2026-06 | 2026-06-12T20:16:23+08:00 | web_observed_public_github_page_2026_06_12 | raw-github/pinchbench_skill.md |
 | 457 | [pingcap/ossinsight](https://github.com/pingcap/ossinsight) | 2026-05-21 | 2026-05 | 2026-05-20T17:45:19Z | github_latest_commit_or_update_text | raw-github/pingcap_ossinsight.md |
 | 458 | [pingcy/ace-langgraph](https://github.com/pingcy/ace-langgraph) | unknown | unknown | 2026-05-20T17:44:59Z | unknown_not_present_in_raw_capture | raw-github/pingcy_ace-langgraph.md |
 | 459 | [pjt222/agent-almanac](https://github.com/pjt222/agent-almanac) | 2026-05-25 | 2026-05 | 2026-05-24T16:06:00Z | web_observed_github_page | raw-github/pjt222_agent-almanac.md |
@@ -502,7 +502,7 @@ Generated: 2026-06-12T00:00:00+08:00
 | 493 | [rlhflow/self-rewarding-reasoning-llm](https://github.com/rlhflow/self-rewarding-reasoning-llm) | 2026-05-21 | 2026-05 | 2026-05-20T17:45:19Z | github_latest_commit_or_update_text | raw-github/rlhflow_self-rewarding-reasoning-llm.md |
 | 494 | [rllm-org/rllm](https://github.com/rllm-org/rllm) | 2026-05-21 | 2026-05 | 2026-05-20T17:45:19Z | github_latest_commit_or_update_text | raw-github/rllm-org_rllm.md |
 | 495 | [rmanluo/gfm-rag](https://github.com/rmanluo/gfm-rag) | 2026-04-20 | 2026-04 | 2026-05-20T17:45:19Z | github_latest_commit_or_update_text | raw-github/rmanluo_gfm-rag.md |
-| 496 | [rohitg00/agentmemory](https://github.com/rohitg00/agentmemory) | 2026-06-12 | 2026-06 | 2026-06-12T14:14:31+08:00 | web_observed_public_github_page_2026_06_12 | raw-github/rohitg00_agentmemory.md |
+| 496 | [rohitg00/agentmemory](https://github.com/rohitg00/agentmemory) | 2026-06-12 | 2026-06 | 2026-06-12T20:16:23+08:00 | web_observed_public_github_page_2026_06_12 | raw-github/rohitg00_agentmemory.md |
 | 497 | [rohitg00/awesome-openclaw](https://github.com/rohitg00/awesome-openclaw) | 2026-06-01 | 2026-06 | 2026-06-01T13:52:26+08:00 | web_observed_public_github_page_2026_06_01 | raw-github/rohitg00_awesome-openclaw.md |
 | 498 | [ronit26mehta/argus-ai-debate](https://github.com/ronit26mehta/argus-ai-debate) | unknown | unknown | 2026-05-20T17:45:19Z | unknown_not_present_in_raw_capture | raw-github/ronit26mehta_argus-ai-debate.md |
 | 499 | [rtk-ai/icm](https://github.com/rtk-ai/icm) | 2026-05-25 | 2026-05 | 2026-05-24T18:08:21Z | web_observed_github_page | raw-github/rtk-ai_icm.md |

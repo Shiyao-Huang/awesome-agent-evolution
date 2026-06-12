@@ -24,4 +24,4 @@ Use OpenClaw to teach the gap between "agent method" and "agent product." A usab
 
 ## Evidence And Limits
 
-The raw capture now reflects a live public GitHub page snapshot: 378k stars, 79.1k forks, 58,586 commits, 4.4k issues, 3.7k pull requests, and AGPL-3.0 license metadata observed on 2026-06-12. These are still web-observed values rather than authenticated GitHub API results, and the deeper analysis should still inspect whether skills and sessions create real learning loops or mainly operational convenience.
+The raw capture now reflects a live public GitHub page snapshot: 378,330 stars, 79,122 forks, 58,599 commits, 4,206 issues, 3,753 pull requests, and AGPL-3.0 license metadata observed on 2026-06-12. These are still web-observed values because unauthenticated GitHub API access was already rate-limited, and the deeper analysis should still inspect whether skills and sessions create real learning loops or mainly operational convenience.

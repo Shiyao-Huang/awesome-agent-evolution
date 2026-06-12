@@ -24,4 +24,4 @@ Use this project to explain why agent self-evolution is not only weight training
 
 ## Evidence And Limits
 
-The public GitHub page on 2026-06-12 showed 542 stars, 62 forks, 45 commits, 0 issues, 0 pull requests, and MIT license metadata. That upgrades this report from a user-reported placeholder into a live public snapshot, but authenticated API metadata and source-level benchmark/evaluator verification are still missing.
+The public GitHub page on 2026-06-12 showed 545 stars, 62 forks, 45 commits, 0 issues, 0 pull requests, and MIT license metadata. That upgrades this report from a user-reported placeholder into a live public snapshot, but unauthenticated GitHub API access was already rate-limited and source-level benchmark/evaluator verification is still missing.

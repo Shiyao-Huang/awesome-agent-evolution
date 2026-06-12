@@ -909,7 +909,7 @@
       "url": "https://github.com/china-qijizhifeng/agentic-Harness-engineering",
       "file": "raw-github/china-qijizhifeng_agentic-harness-engineering.md",
       "content_timestamp": "2026-06-12",
-      "collected_at": "2026-06-12T14:14:31+08:00",
+      "collected_at": "2026-06-12T20:16:23+08:00",
       "time_slice": "2026-06",
       "timestamp_source": "web_observed_public_github_page_2026_06_12"
     },
@@ -1286,10 +1286,10 @@
       "repo": "desplega-ai/agent-swarm",
       "url": "https://github.com/desplega-ai/agent-swarm",
       "file": "raw-github/desplega-ai_agent-swarm.md",
-      "content_timestamp": "2026-06-09",
-      "collected_at": "2026-06-09T10:20:00+08:00",
+      "content_timestamp": "2026-06-12",
+      "collected_at": "2026-06-12T20:16:23+08:00",
       "time_slice": "2026-06",
-      "timestamp_source": "web_observed_public_github_page_2026_06_09"
+      "timestamp_source": "web_observed_public_github_page_2026_06_12"
     },
     {
       "repo": "developzir/gepa-mcp",
@@ -1544,11 +1544,11 @@
       "timestamp_source": "github_latest_commit_or_update_text"
     },
     {
-      "repo": "evomap/awesome-agent-evolution",
-      "url": "https://github.com/evomap/awesome-agent-evolution",
+      "repo": "EvoMap/awesome-agent-evolution",
+      "url": "https://github.com/EvoMap/awesome-agent-evolution",
       "file": "raw-github/evomap_awesome-agent-evolution.md",
       "content_timestamp": "2026-06-12",
-      "collected_at": "2026-06-12T14:14:31+08:00",
+      "collected_at": "2026-06-12T20:16:23+08:00",
       "time_slice": "2026-06",
       "timestamp_source": "web_observed_public_github_page_2026_06_12"
     },
@@ -3587,11 +3587,11 @@
       "timestamp_source": "web_observed_public_github_page_2026_05_31"
     },
     {
-      "repo": "nousresearch/hermes-agent",
+      "repo": "NousResearch/hermes-agent",
       "url": "https://github.com/NousResearch/hermes-agent",
       "file": "raw-github/nousresearch_hermes-agent.md",
       "content_timestamp": "2026-06-12",
-      "collected_at": "2026-06-12T14:14:31+08:00",
+      "collected_at": "2026-06-12T20:16:23+08:00",
       "time_slice": "2026-06",
       "timestamp_source": "web_observed_public_github_page_2026_06_12"
     },
@@ -3618,7 +3618,7 @@
       "url": "https://github.com/obra/superpowers",
       "file": "raw-github/obra_superpowers.md",
       "content_timestamp": "2026-06-12",
-      "collected_at": "2026-06-12T14:14:31+08:00",
+      "collected_at": "2026-06-12T20:16:23+08:00",
       "time_slice": "2026-06",
       "timestamp_source": "web_observed_public_github_page_2026_06_12"
     },
@@ -3852,7 +3852,7 @@
       "url": "https://github.com/openclaw/openclaw",
       "file": "raw-github/openclaw_openclaw.md",
       "content_timestamp": "2026-06-12",
-      "collected_at": "2026-06-12T14:14:31+08:00",
+      "collected_at": "2026-06-12T20:16:23+08:00",
       "time_slice": "2026-06",
       "timestamp_source": "web_observed_public_github_page_2026_06_12"
     },
@@ -4104,7 +4104,7 @@
       "url": "https://github.com/pinchbench/skill",
       "file": "raw-github/pinchbench_skill.md",
       "content_timestamp": "2026-06-12",
-      "collected_at": "2026-06-12T14:14:31+08:00",
+      "collected_at": "2026-06-12T20:16:23+08:00",
       "time_slice": "2026-06",
       "timestamp_source": "web_observed_public_github_page_2026_06_12"
     },
@@ -4464,7 +4464,7 @@
       "url": "https://github.com/rohitg00/agentmemory",
       "file": "raw-github/rohitg00_agentmemory.md",
       "content_timestamp": "2026-06-12",
-      "collected_at": "2026-06-12T14:14:31+08:00",
+      "collected_at": "2026-06-12T20:16:23+08:00",
       "time_slice": "2026-06",
       "timestamp_source": "web_observed_public_github_page_2026_06_12"
     },

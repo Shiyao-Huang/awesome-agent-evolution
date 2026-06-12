@@ -60,9 +60,9 @@ flowchart LR
   SURVEY --> SITE["site + graph + reports"]
 ```
 
-## Recent Evidence Updates (2026-06-09)
+## Recent Evidence Updates (2026-06-12)
 
-This update is not about adding a new batch of repositories. It recalibrates the public number surface for the production swarm, coding-agent harness, safety-sensitive memory benchmark, OpenAI Agents SDK orchestrator, official OpenAI Agents SDK Python/JS baselines, continual skill-memory paper code, and lightweight memory/MCP/skill runtime against GitHub pages observed on 2026-06-09.
+This update is not about adding a new batch of repositories. It recalibrates the public number surface for the production swarm, coding-agent harness, safety-sensitive memory benchmark, OpenAI Agents SDK orchestrator, official OpenAI Agents SDK Python/JS baselines, continual skill-memory paper code, and lightweight memory/MCP/skill runtime against GitHub pages observed on 2026-06-12.
 
 | Repository | Evidence gap filled | Why it matters | Evidence state |
 |---|---|---|---|

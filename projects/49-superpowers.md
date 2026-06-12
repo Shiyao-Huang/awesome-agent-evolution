@@ -24,4 +24,4 @@ Use Superpowers to teach that self-evolution can happen through reusable operati
 
 ## Evidence And Limits
 
-The raw capture now reflects a live public GitHub page snapshot: 225k stars, 20k forks, 441 commits, 123 issues, 155 pull requests, and MIT license metadata observed on 2026-06-12. The main limit is unchanged: methodology quality must be judged by use outcomes, not repository popularity alone.
+The raw capture now reflects a live public GitHub page snapshot: 225,591 stars, 20,050 forks, 441 commits, 123 issues, 155 pull requests, and MIT license metadata observed on 2026-06-12. The main limit is unchanged: methodology quality must be judged by use outcomes, not repository popularity alone.
