@@ -2,11 +2,11 @@
 
 ## One Sentence
 
-Agentic Harness Engineering is the project that makes the survey's "harness evolves, not only the model" thread explicit.
+Agentic Harness Engineering is the clearest current example of making the harness, not only the model, the object of improvement.
 
 ## Three Sentences
 
-It belongs in the runtime/harness layer: prompts, tools, middleware, skills, sub-agents, memory, and evaluation scaffolds become the object of improvement. The user explicitly pointed to this repository, so it should not stay hidden in raw notes or legacy README fragments. Its main research value is to connect benchmark movement with concrete engineering surfaces that agents can inspect, edit, test, and roll back.
+It belongs in the runtime layer: prompts, tools, middleware, memory, subagents, and evaluators are exposed as versioned engineering surfaces. That matters for this survey because it turns benchmark deltas into something an agent team can inspect, edit, test, and roll back. This run upgrades the project from a public-page snapshot to authenticated GitHub API evidence and fixes the site registry to the correct raw file.
 
 ## Model Card
 
@@ -15,13 +15,14 @@ It belongs in the runtime/harness layer: prompts, tools, middleware, skills, sub
 | Repository | `china-qijizhifeng/agentic-Harness-engineering` |
 | Source | `raw-github/china-qijizhifeng_agentic-harness-engineering.md` |
 | Category | Harness evolution engineering |
-| Pattern | evaluator -> harness mutation -> regression verification |
-| Status | Candidate; refreshed from a live public GitHub page snapshot on 2026-06-12 |
+| Pattern | editable harness surface -> evaluator pressure -> harness mutation -> regression verification |
+| Evidence | Authenticated GitHub API snapshot, 2026-06-13 |
 
 ## Teaching Use
 
-Use this project to explain why agent self-evolution is not only weight training or code search. A production agent is wrapped in a harness: prompts, tools, memory, task routing, sub-agent policy, middleware, permissions, logs, and tests. If those pieces are versioned and evaluated, the harness itself can evolve while the foundation model stays fixed.
+Use this project to explain why self-evolution is not limited to weight updates or code search. In production, the harness is where permissions, routing, memory, evaluation, and rollback actually live.
 
 ## Evidence And Limits
 
-The public GitHub page on 2026-06-12 showed 545 stars, 62 forks, 45 commits, 0 issues, 0 pull requests, and MIT license metadata. That upgrades this report from a user-reported placeholder into a live public snapshot, but unauthenticated GitHub API access was already rate-limited and source-level benchmark/evaluator verification is still missing.
+The raw capture now reflects an authenticated GitHub API snapshot: 548 stars, 62 forks, 45 commits, 0 open issues, 0 open pull requests, and MIT license metadata observed on 2026-06-13. The current evidence is still source-scoped: this run did not rerun Terminal-Bench-2, SWE-bench-Verified, or the paper workflow locally. Benchmark claims remain tied to the repository and paper surfaces unless independently reproduced.
+

@@ -1,12 +1,12 @@
 ---
 repo: pinchbench/skill
 url: https://github.com/pinchbench/skill
-content_timestamp: 2026-06-12
+content_timestamp: 2026-06-13
 time_slice: 2026-06
-timestamp_source: web_observed_public_github_page_2026_06_12
-collected_at: 2026-06-12T20:16:23+08:00
+timestamp_source: gh_api_graphql_authenticated_2026_06_13
+collected_at: 2026-06-13T08:16:40+08:00
 source: github
-source_tool: shell.python.urllib
+source_tool: gh.api.graphql
 ---
 
 ## GitHub - pinchbench/skill: PinchBench is a benchmarking system for evaluating LLM models as OpenClaw coding agents. Made with 🦀 by the humans at https://kilo.ai
@@ -15,31 +15,36 @@ source_tool: shell.python.urllib
 
 ---
 
-# Raw public page capture notes
+# Raw public metadata capture notes
 
-This raw-style public GitHub page capture was refreshed by the hourly public metadata update. Unauthenticated GitHub API access was rate-limited in this workspace, so freshness is web-observed rather than API-verified.
+This raw-style GitHub capture was refreshed by the hourly public metadata update through authenticated GitHub GraphQL/API access via `gh`.
 
 ## Visible repository metadata
 
 - Repository: pinchbench/skill
 - URL: https://github.com/pinchbench/skill
-- Stars: 1227
+- Stars: 1,229
 - Forks: 138
 - Commits: 383
-- Issues: 18
-- Pull requests: 0
+- Issues: 18 open issues
+- Pull requests: 0 open pull requests
 - License: MIT
 - Primary language / stack signal: Python/Shell/TypeScript/OpenClaw Benchmark Harness
-- Latest visible dated signal: 2026-06-12 web-observed public GitHub page snapshot
-- Collection timestamp: 2026-06-12T20:16:23+08:00
+- Created at: 2026-02-11T01:41:39Z
+- Last pushed at: 2026-06-02T21:35:43Z
+- Last updated at: 2026-06-12T23:14:08Z
+- Collection timestamp: 2026-06-13T08:16:40+08:00
+- Topics: none exposed through the GitHub API topic list
+- Latest public release: v2.0.0 (2026-05-06).
 
 ## Visible README / page excerpts
 
-- The public GitHub page on 2026-06-12 showed 1,227 stars, 138 forks, 18 issues, 0 pull requests, and 383 commits.
-- The repository explicitly says it contains benchmark skill/tasks rather than the official leaderboard backend.
-- The benchmark covers 53 tasks across productivity, research, writing, coding, analysis, email, memory, and skill discovery.
-- Each task can be graded automatically, by an LLM judge, or both; transcripts are retained under results folders for post-run analysis.
+- The authenticated GitHub API snapshot on 2026-06-13 shows 1,229 stars, 138 forks, 383 commits, 18 open issues, 0 open pull requests, and MIT license metadata.
+- The public repository still frames itself as a benchmark system for evaluating LLMs as OpenClaw coding agents, not as the agent runtime itself.
+- The benchmark story remains grounded in 53 real-world tasks plus transcript-preserving grading workflows.
+- This run upgrades the row from web-observed counts to authenticated GitHub API counts.
 
 ## Raw capture boundary
 
-No benchmark was run, no source clone was modified, and no private or authenticated metadata was used. This file preserves public page evidence for downstream classification, model-card analysis, public reports, and the site index.
+No local benchmark run, repository clone, or workflow execution was performed in this iteration. This file preserves authenticated public GitHub metadata and README-surface evidence for downstream classification, project cards, site reports, and corpus analysis.
+

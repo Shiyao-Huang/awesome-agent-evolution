@@ -1,32 +1,28 @@
 # PinchBench Skill Model Card
 
+## One Sentence
+
+PinchBench is one of the clearest benchmark anchors in this corpus: not a self-evolving runtime, but the evaluator substrate that makes self-improvement claims comparable.
+
+## Three Sentences
+
+It spans productivity, research, writing, coding, analysis, email, memory, and skill-discovery tasks rather than a single narrow benchmark lane. That makes it important for this survey’s “benchmark as selection pressure” thread. This run upgrades PinchBench from a web-observed packet to authenticated GitHub API counts.
+
+## Model Card
+
 | Field | Value |
 |---|---|
-| Repository | [pinchbench/skill](https://github.com/pinchbench/skill) |
-| Category | Real-World Agent Task Benchmark |
-| Stars / forks snapshot | 1227 / 138 |
-| Commits / issues / PRs snapshot | 383 / 18 / 0 |
-| Language | Python |
-| License | MIT |
-| Raw capture | raw-github/pinchbench_skill.md |
-| Updated by | hourly public metadata update, 2026-06-12 20:16 +0800 |
+| Repository | `pinchbench/skill` |
+| Source | `raw-github/pinchbench_skill.md` |
+| Category | Real-world agent task benchmark |
+| Pattern | task suite -> OpenClaw agent execution -> automatic and/or LLM judging -> transcript retention -> optional leaderboard upload |
+| Evidence | Authenticated GitHub API snapshot, 2026-06-13 |
 
-## 1. Role in Self Evolve
+## Teaching Use
 
-PinchBench is an OpenClaw-oriented real task benchmark that measures coding agents across productivity, research, writing, coding, analysis, email, memory, and skill-discovery tasks. It matters because self-evolving agents need explicit memory, harness, benchmark, and safety substrates before their improvement claims become trustworthy.
+Use PinchBench to explain why benchmark infrastructure matters as much as the agent loop itself. Without evaluator strength and saved transcripts, “improvement” stays anecdotal.
 
-## 2. Working Principle
+## Evidence And Limits
 
-task suite -> OpenClaw agent execution -> automatic and/or LLM judging -> transcript retention -> optional leaderboard upload
+The raw capture now reflects an authenticated GitHub API snapshot: 1,229 stars, 138 forks, 383 commits, 18 open issues, 0 open pull requests, and MIT license metadata observed on 2026-06-13. This run did not execute the benchmark, upload results, or validate leaderboard behavior locally. All benchmark-scope claims remain repository-scoped.
 
-## 3. Evidence Path
-
-web-observed GitHub page showed 1,227 stars, 138 forks, 18 issues, 383 commits, MIT license, 53 real-world tasks, and transcript-preserving benchmark workflows for OpenClaw agents. This iteration keeps freshness honest: the snapshot comes from the public GitHub page observed on 2026-06-12, while unauthenticated GitHub API access was already rate-limited in this workspace.
-
-## 4. Teaching Use
-
-Use this card to explain Real-World Agent Task Benchmark: it shows how memory systems, harness maps, benchmark suites, and outer-loop evaluators connect to the broader self-evolving-agent pipeline.
-
-## 5. Limits
-
-The repository was not cloned in this iteration; no benchmark run, workflow execution, or agent loop experiment was executed. Counts and claims are visible public-page signals unless independently revalidated later.

@@ -1,6 +1,6 @@
 # evomap/awesome-agent-evolution Dual-Chain Deep Dive
 
-> Date: 2026-06-02. Layer: `processed/analysis`. Source queue: `analysis/value-evidence-repair-queue.json`. Evidence quality: public GitHub page only; shell GitHub API remained unreachable.
+> Date: 2026-06-13. Layer: `processed/analysis`. Source queue: `analysis/value-evidence-repair-queue.json`. Evidence quality: authenticated GitHub API metadata + raw capture; local script execution not performed.
 
 ## One Sentence
 
@@ -8,21 +8,21 @@
 
 ## Three Sentences
 
-[KNOWN] The public GitHub page on 2026-06-02 shows `EvoMap/awesome-agent-evolution` at 130 stars, 17 forks, 57 commits, no releases, and a JavaScript/Shell footprint with `data/` and `scripts/` folders. Source: `raw-github/evomap_awesome-agent-evolution.md`.
+[KNOWN] The authenticated GitHub API snapshot on 2026-06-13 shows `EvoMap/awesome-agent-evolution` at 137 stars, 20 forks, 60 commits, 6 open issues, and 1 open pull request. Source: `raw-github/evomap_awesome-agent-evolution.md`.
 
-[KNOWN] The README organizes the field into self-evolution, memory, prompt optimization, A2A/MCP protocols, development platforms, coding/software engineering, safety, embodied AI, papers, benchmarks, and community knowledge, and explicitly points readers to a separate Awesome Agent Swarm list. Source: `raw-github/evomap_awesome-agent-evolution.md`.
+[KNOWN] The raw capture and topic list still show the same packaging logic: self-evolution, memory, protocols, coding, benchmarks, swarm adjacency, and community knowledge as reader-facing navigation categories. Source: `raw-github/evomap_awesome-agent-evolution.md`.
 
-[INFERRED] Its correct frontier role is `resource-index / taxonomy comparator`: it matters less as a direct implementation target and more as a signal for how the wider ecosystem currently packages and markets the self-evolving agent space.
+[INFERRED] Its correct frontier role remains `resource-index / taxonomy comparator`: it matters less as a direct implementation target and more as a signal for how the wider ecosystem currently packages and markets the self-evolving agent space.
 
 ## Evidence Chain
 
 | Link | Status | Evidence |
 |---|---|---|
-| Raw capture | [KNOWN] | `raw-github/evomap_awesome-agent-evolution.md` refreshed on 2026-06-02 with current stars/forks/commits, topics, and taxonomy signals. |
-| Queue row | [KNOWN] | `analysis/value-evidence-repair-queue.json` lane `deep-read-needed`, `value_score: 80.57`, `repair_score: 133.57`. |
+| Raw capture | [KNOWN] | `raw-github/evomap_awesome-agent-evolution.md` refreshed on 2026-06-13 with authenticated GitHub API counts, topic signals, and taxonomy surface. |
+| Queue row | [KNOWN] | `analysis/value-evidence-repair-queue.json` keeps the repo as a high-value comparator, but the freshness blocker is cleared for this row. |
 | Project card | [KNOWN] | `projects/394-evomap-awesome-agent-evolution.md` and `site/public/reports/projects/394-evomap-awesome-agent-evolution.md`. |
-| Site data | [KNOWN] | `site/src/data/projects.ts` and `site/src/data/curatedFrontier.ts` are updated in this iteration. |
-| API blocker | [KNOWN] | Shell GitHub API access remained blocked; freshness is web-observed. |
+| Site data | [KNOWN] | `site/src/data/projects.ts` keeps the repo in the public project registry. |
+| API access | [KNOWN] | `gh api graphql` succeeded in this workspace on 2026-06-13; the old API-blocked interpretation is no longer correct for this row. |
 
 ## Mirror Chain
 
@@ -53,7 +53,7 @@ flowchart TD
 
 ## Trust Chain
 
-- [KNOWN] Public GitHub page metadata and README taxonomy were re-read on 2026-06-02.
-- [KNOWN] Shell GitHub API remained unreachable; all freshness claims are web-observed.
+- [KNOWN] Authenticated GitHub API metadata and README taxonomy were re-read on 2026-06-13.
+- [KNOWN] Freshness is API-backed in this pass; the earlier API-blocked note is now historical context only.
 - [INFERRED] The taxonomy-comparator decision comes from the repo structure, category layout, and relationship to our own public packaging goals.
 - [UNVERIFIED] No local execution of EvoMap `data/` or `scripts/` was performed in this pass.

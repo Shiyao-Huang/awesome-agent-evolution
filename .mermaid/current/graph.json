@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-13T02:15:12+08:00",
+  "generated_at": "2026-06-13T08:16:40+08:00",
   "truth_source": ".mermaid/current/graph.json",
   "nodes": [
     {
@@ -18,14 +18,14 @@
       "layer": "raw",
       "status": "updated",
       "paths": [
-        "raw-github/desplega-ai_agent-swarm.md",
-        "raw-github/composiohq_agent-orchestrator.md",
-        "raw-github/vrsen_agency-swarm.md",
-        "raw-github/openai_openai-agents-python.md",
-        "raw-github/openai_openai-agents-js.md",
-        "raw-github/xskill-agent_xskill.md",
-        "raw-github/aq-medai_medmemorybench.md",
-        "raw-github/wanxingai_lightagent.md"
+        "raw-github/china-qijizhifeng_agentic-harness-engineering.md",
+        "raw-github/nousresearch_hermes-agent.md",
+        "raw-github/stanford-iris-lab_meta-harness.md",
+        "raw-github/rohitg00_agentmemory.md",
+        "raw-github/pinchbench_skill.md",
+        "raw-github/lsdefine_genericagent.md",
+        "raw-github/evomap_awesome-agent-evolution.md",
+        "raw-github/uid4oe_insight-swarm.md"
       ]
     },
     {
@@ -35,15 +35,16 @@
       "status": "updated",
       "paths": [
         "research/repo-classification.json",
-        "analysis/github-project-data-analysis.md",
-        "projects/405-agent-swarm-compounding-lead-worker-runtime.md",
-        "projects/406-composio-agent-orchestrator-coding-swarm.md",
-        "projects/27-agency-swarm.md",
-        "projects/408-openai-agents-python-official-sdk.md",
-        "projects/409-openai-agents-js-official-sdk.md",
-        "projects/404-xskill-continual-experience-skill-learning.md",
-        "projects/407-medmemorybench-agent-memory-benchmark.md",
-        "projects/139-lightagent-memory-mcp-skills.md"
+        "research/repo-classification.csv",
+        "research/repo-classification.md",
+        "analysis/frontier-projects/pinchbench-skill-dual-chain.md",
+        "analysis/frontier-projects/evomap-awesome-agent-evolution-dual-chain.md",
+        "projects/43-agentic-harness-engineering.md",
+        "projects/44-hermes-agent.md",
+        "projects/249-stanford-meta-harness-framework.md",
+        "projects/50-agentmemory.md",
+        "projects/51-pinchbench-skill.md",
+        "projects/394-evomap-awesome-agent-evolution.md"
       ]
     },
     {
@@ -53,18 +54,15 @@
       "status": "updated",
       "paths": [
         "site/src/data/projects.ts",
-        "site/public/reports/projects/405-agent-swarm-compounding-lead-worker-runtime.md",
-        "site/public/reports/projects/406-composio-agent-orchestrator-coding-swarm.md",
-        "site/public/reports/projects/27-agency-swarm.md",
-        "site/public/reports/projects/408-openai-agents-python-official-sdk.md",
-        "site/public/reports/projects/409-openai-agents-js-official-sdk.md",
-        "site/public/reports/projects/404-xskill-continual-experience-skill-learning.md",
-        "site/public/reports/projects/407-medmemorybench-agent-memory-benchmark.md",
-        "site/public/reports/projects/139-lightagent-memory-mcp-skills.md",
+        "site/public/reports/projects/43-agentic-harness-engineering.md",
+        "site/public/reports/projects/44-hermes-agent.md",
+        "site/public/reports/projects/249-stanford-meta-harness-framework.md",
+        "site/public/reports/projects/50-agentmemory.md",
+        "site/public/reports/projects/51-pinchbench-skill.md",
+        "site/public/reports/projects/394-evomap-awesome-agent-evolution.md",
         "README.md",
         "README-ZH.md",
-        "README-EN.md",
-        "CONTENT_INDEX.md"
+        "README-EN.md"
       ]
     },
     {
@@ -76,6 +74,7 @@
         "output/raw-github-timestamp-index.md",
         "output/raw-github-timestamp-index-ZH.md",
         "output/raw-github-timestamp-index.json",
+        "analysis/github-project-data-analysis.md",
         "analysis/github-project-data-analysis.json",
         "analysis/github-project-data-analysis.tex"
       ]
@@ -86,9 +85,10 @@
       "layer": "work",
       "status": "updated",
       "paths": [
-        "work/research/hourly-public-metadata-update-2026-06-13-0215.md",
+        "work/research/hourly-public-metadata-update-2026-06-13-0816.md",
         ".mermaid/current/graph.md",
-        ".mermaid/current/graph.mmd"
+        ".mermaid/current/graph.mmd",
+        "work/research/hourly-public-metadata-update-2026-06-13-0816-data.json"
       ]
     }
   ],
@@ -128,139 +128,134 @@
     "source": "authenticated gh GraphQL/API snapshot",
     "repos": [
       {
-        "repo": "desplega-ai/agent-swarm",
-        "raw_capture": "raw-github/desplega-ai_agent-swarm.md",
-        "report": "projects/405-agent-swarm-compounding-lead-worker-runtime.md",
-        "site_report": "site/public/reports/projects/405-agent-swarm-compounding-lead-worker-runtime.md",
-        "stars": 520,
-        "forks": 57,
-        "issues": 1,
-        "pull_requests": 2,
-        "commits": 1624,
-        "latest_push": "2026-06-12T17:54:36Z",
-        "latest_release": {
-          "name": "v1.97.0",
-          "published_at": "2026-06-12T14:05:11Z"
-        },
-        "theme": "framework"
-      },
-      {
-        "repo": "AgentWrapper/agent-orchestrator",
-        "raw_capture": "raw-github/composiohq_agent-orchestrator.md",
-        "report": "projects/406-composio-agent-orchestrator-coding-swarm.md",
-        "site_report": "site/public/reports/projects/406-composio-agent-orchestrator-coding-swarm.md",
-        "stars": 7514,
-        "forks": 1025,
-        "issues": 478,
-        "pull_requests": 474,
-        "commits": 1277,
-        "latest_push": "2026-06-09T00:56:58Z",
-        "latest_release": {
-          "name": "v0.9.3-nightly-5897b4e8d8cefc33f681ab73bf0e3ebc0b17b517",
-          "published_at": "2026-06-08T19:02:50Z"
-        },
+        "repo": "china-qijizhifeng/agentic-Harness-engineering",
+        "raw_capture": "raw-github/china-qijizhifeng_agentic-harness-engineering.md",
+        "report": "projects/43-agentic-harness-engineering.md",
+        "site_report": "site/public/reports/projects/43-agentic-harness-engineering.md",
+        "stars": 548,
+        "forks": 62,
+        "issues": 0,
+        "pull_requests": 0,
+        "commits": 45,
+        "latest_push": "2026-06-09T05:43:14Z",
+        "latest_release": null,
         "theme": "harness"
       },
       {
-        "repo": "VRSEN/agency-swarm",
-        "raw_capture": "raw-github/vrsen_agency-swarm.md",
-        "report": "projects/27-agency-swarm.md",
-        "site_report": "site/public/reports/projects/27-agency-swarm.md",
-        "stars": 4445,
-        "forks": 1058,
-        "issues": 0,
-        "pull_requests": 6,
-        "commits": 2545,
-        "latest_push": "2026-06-12T00:13:04Z",
+        "repo": "NousResearch/hermes-agent",
+        "raw_capture": "raw-github/nousresearch_hermes-agent.md",
+        "report": "projects/44-hermes-agent.md",
+        "site_report": "site/public/reports/projects/44-hermes-agent.md",
+        "stars": 191978,
+        "forks": 33445,
+        "issues": 6526,
+        "pull_requests": 13571,
+        "commits": 11512,
+        "latest_push": "2026-06-13T00:23:31Z",
         "latest_release": {
-          "name": "v1.10.1",
-          "published_at": "2026-06-11T17:05:13Z"
+          "name": "Hermes Agent v0.16.0 (2026.6.5) — The Surface Release",
+          "publishedAt": "2026-06-06T00:55:58Z"
         },
         "theme": "framework"
       },
       {
-        "repo": "openai/openai-agents-python",
-        "raw_capture": "raw-github/openai_openai-agents-python.md",
-        "report": "projects/408-openai-agents-python-official-sdk.md",
-        "site_report": "site/public/reports/projects/408-openai-agents-python-official-sdk.md",
-        "stars": 27111,
-        "forks": 4185,
-        "issues": 45,
-        "pull_requests": 99,
-        "commits": 1603,
-        "latest_push": "2026-06-11T04:10:37Z",
-        "latest_release": {
-          "name": "v0.17.5",
-          "published_at": "2026-06-11T04:11:51Z"
-        },
-        "theme": "framework"
-      },
-      {
-        "repo": "openai/openai-agents-js",
-        "raw_capture": "raw-github/openai_openai-agents-js.md",
-        "report": "projects/409-openai-agents-js-official-sdk.md",
-        "site_report": "site/public/reports/projects/409-openai-agents-js-official-sdk.md",
-        "stars": 3203,
-        "forks": 809,
-        "issues": 35,
-        "pull_requests": 29,
-        "commits": 933,
-        "latest_push": "2026-06-12T08:33:10Z",
-        "latest_release": {
-          "name": "v0.11.6",
-          "published_at": "2026-05-29T01:53:06Z"
-        },
-        "theme": "framework"
-      },
-      {
-        "repo": "XSkill-Agent/XSkill",
-        "raw_capture": "raw-github/xskill-agent_xskill.md",
-        "report": "projects/404-xskill-continual-experience-skill-learning.md",
-        "site_report": "site/public/reports/projects/404-xskill-continual-experience-skill-learning.md",
-        "stars": 221,
-        "forks": 27,
-        "issues": 1,
+        "repo": "stanford-iris-lab/meta-harness",
+        "raw_capture": "raw-github/stanford-iris-lab_meta-harness.md",
+        "report": "projects/249-stanford-meta-harness-framework.md",
+        "site_report": "site/public/reports/projects/249-stanford-meta-harness-framework.md",
+        "stars": 1062,
+        "forks": 103,
+        "issues": 4,
         "pull_requests": 0,
-        "commits": 16,
-        "latest_push": "2026-05-13T03:56:12Z",
+        "commits": 11,
+        "latest_push": "2026-04-29T16:39:58Z",
         "latest_release": null,
-        "theme": "skill"
+        "theme": "evolution"
       },
       {
-        "repo": "AQ-MedAI/MedMemoryBench",
-        "raw_capture": "raw-github/aq-medai_medmemorybench.md",
-        "report": "projects/407-medmemorybench-agent-memory-benchmark.md",
-        "site_report": "site/public/reports/projects/407-medmemorybench-agent-memory-benchmark.md",
-        "stars": 60,
-        "forks": 1,
-        "issues": 0,
+        "repo": "rohitg00/agentmemory",
+        "raw_capture": "raw-github/rohitg00_agentmemory.md",
+        "report": "projects/50-agentmemory.md",
+        "site_report": "site/public/reports/projects/50-agentmemory.md",
+        "stars": 22542,
+        "forks": 1853,
+        "issues": 141,
+        "pull_requests": 151,
+        "commits": 462,
+        "latest_push": "2026-06-11T09:48:24Z",
+        "latest_release": {
+          "name": "v0.9.27",
+          "publishedAt": "2026-06-07T08:58:35Z"
+        },
+        "theme": "memory"
+      },
+      {
+        "repo": "pinchbench/skill",
+        "raw_capture": "raw-github/pinchbench_skill.md",
+        "report": "projects/51-pinchbench-skill.md",
+        "site_report": "site/public/reports/projects/51-pinchbench-skill.md",
+        "stars": 1229,
+        "forks": 138,
+        "issues": 18,
         "pull_requests": 0,
-        "commits": 14,
-        "latest_push": "2026-05-13T13:26:05Z",
-        "latest_release": null,
+        "commits": 383,
+        "latest_push": "2026-06-02T21:35:43Z",
+        "latest_release": {
+          "name": "v2.0.0",
+          "publishedAt": "2026-05-06T14:50:42Z"
+        },
         "theme": "benchmark"
       },
       {
-        "repo": "wanxingai/LightAgent",
-        "raw_capture": "raw-github/wanxingai_lightagent.md",
-        "report": "projects/139-lightagent-memory-mcp-skills.md",
-        "site_report": "site/public/reports/projects/139-lightagent-memory-mcp-skills.md",
-        "stars": 1132,
-        "forks": 143,
-        "issues": 8,
-        "pull_requests": 0,
-        "commits": 107,
-        "latest_push": "2026-06-05T15:00:09Z",
+        "repo": "lsdefine/genericagent",
+        "raw_capture": "raw-github/lsdefine_genericagent.md",
+        "report": null,
+        "site_report": null,
+        "stars": 12811,
+        "forks": 1476,
+        "issues": 77,
+        "pull_requests": 65,
+        "commits": 843,
+        "latest_push": "2026-06-12T06:33:13Z",
         "latest_release": {
-          "name": "LightAgent v0.8.0",
-          "published_at": "2026-06-05T10:15:33Z"
+          "name": "v0.1.0 - Desktop App",
+          "publishedAt": "2026-05-15T10:38:24Z"
         },
-        "theme": "memory"
+        "theme": "evolution"
+      },
+      {
+        "repo": "EvoMap/awesome-agent-evolution",
+        "raw_capture": "raw-github/evomap_awesome-agent-evolution.md",
+        "report": "projects/394-evomap-awesome-agent-evolution.md",
+        "site_report": "site/public/reports/projects/394-evomap-awesome-agent-evolution.md",
+        "stars": 137,
+        "forks": 20,
+        "issues": 6,
+        "pull_requests": 1,
+        "commits": 60,
+        "latest_push": "2026-06-11T04:08:27Z",
+        "latest_release": null,
+        "theme": "evolution"
+      },
+      {
+        "repo": "uid4oe/insight-swarm",
+        "raw_capture": "raw-github/uid4oe_insight-swarm.md",
+        "report": null,
+        "site_report": null,
+        "stars": 0,
+        "forks": 0,
+        "issues": 0,
+        "pull_requests": 0,
+        "commits": 25,
+        "latest_push": "2026-03-19T18:04:30Z",
+        "latest_release": null,
+        "theme": "framework"
       }
     ],
-    "blockers": [
-      "Mermaid Architect `merge_graph.py --validate .mermaid/current/` currently fails with the error \"list indices must be integers or slices, not str\" against this graph.json schema, so graph.json remains the truth source and graph.md/.mmd are hand-rendered views.",
-      "GitNexus CLI is available but stale against current HEAD until `npx gitnexus analyze` is rerun after this iteration."
-    ]
+    "gitnexus": {
+      "status": "partially-available",
+      "note": "node .gitnexus/run.cjs status works, but query/analyze fail in the LadybugDB load stage.",
+      "blocker": "COPY failed for File: Runtime exception: Trying to read a database file with a different version. Database file version: 41, Current build storage version: 40"
+    }
   }
 }

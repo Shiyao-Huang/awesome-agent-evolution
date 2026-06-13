@@ -2,11 +2,11 @@
 
 ## One Sentence
 
-Hermes Agent is the strongest current personal-agent runtime signal in the corpus: memory, skills, messaging, automations, and trajectory generation in one user-facing system.
+Hermes Agent is still the strongest personal-agent runtime signal in the corpus: memory, skills, messaging, automations, and trajectory generation in one public system.
 
 ## Three Sentences
 
-It is not just a demo agent; the raw capture describes persistent knowledge, autonomous skill creation, session search, user modeling, messaging gateways, scheduled automations, and subagent delegation. That makes it a central sample for the user's question: which projects are usable products rather than only papers or lists? It also anchors the Hermes self-evolution companion repository, which optimizes skills and prompts with DSPy/GEPA.
+It is not just a demo agent; the public repository still exposes persistent knowledge, autonomous skill creation, session search, user modeling, messaging gateways, and scheduled automations. That makes it a central answer to the user’s product question: which systems are usable agents rather than only papers or lists? This run upgrades its evidence path from web-observed counts to authenticated GitHub API counts and a concrete release anchor.
 
 ## Model Card
 
@@ -15,13 +15,14 @@ It is not just a demo agent; the raw capture describes persistent knowledge, aut
 | Repository | `NousResearch/hermes-agent` |
 | Source | `raw-github/nousresearch_hermes-agent.md` |
 | Category | Self-improving personal agent runtime |
-| Pattern | memory -> skill creation/improvement -> messaging and automation runtime |
-| Evidence | Live public GitHub page snapshot, 2026-06-12 |
+| Pattern | persistent knowledge -> skill creation/improvement -> session search -> user modeling -> messaging and automation runtime |
+| Evidence | Authenticated GitHub API snapshot, 2026-06-13 |
 
 ## Teaching Use
 
-Use Hermes Agent to teach the runtime surface of self-evolving agents. It shows that improvement loops need memory, skill reuse, user modeling, search over prior sessions, and practical channels where the agent can act. In the taxonomy, it sits between research systems such as Reflexion and product systems such as OpenClaw/OpenHuman.
+Use Hermes Agent to teach the runtime surface of self-evolving agents. Improvement loops need memory, skill reuse, user modeling, search over prior sessions, and channels where the agent can actually act.
 
 ## Evidence And Limits
 
-The raw capture now reflects a live public GitHub page snapshot: 191,591 stars, 33,323 forks, 11,472 commits, 5k+ issues, 5k+ pull requests, and MIT license metadata observed on 2026-06-12. These are still web-observed values because unauthenticated GitHub API access was already rate-limited, so benchmark and runtime claims remain source-scoped.
+The raw capture now reflects an authenticated GitHub API snapshot: 191,978 stars, 33,445 forks, 11,512 commits, 6,526 open issues, 13,571 open pull requests, and MIT license metadata observed on 2026-06-13. This run did not execute Hermes locally, validate production messaging flows, or rerun any benchmark pack. Product, memory, and automation claims remain repository-scoped unless independently tested.
+

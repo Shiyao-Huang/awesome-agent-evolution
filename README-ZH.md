@@ -39,18 +39,18 @@ GitHub topic 收录状态（2026-06-05）：GitHub API 和 `gh search repos 'top
 
 ## 本轮 GitHub Metadata 修复包（2026-06-13）
 
-这轮重点不是新增条目，而是把 production swarm、coding-agent harness、memory benchmark 和 OpenAI Agents SDK baseline 的公开数字面校正到 `2026-06-13` 的 GitHub API 快照，并同步 raw、分类、project card、site report 和 README 前台说明。
+这轮不是新增条目，而是把 agent runtime、harness、memory、benchmark、taxonomy mirror 和 swarm 概念样本里最关键的一组公开数字面校正到 `2026-06-13` 的 authenticated GitHub API 快照，并同步 raw、分类、project card、site report、README 前台说明和 Mermaid truth source。
 
 | 仓库 | 这轮补了什么 | 为什么重要 |
 |---|---|---|
-| [desplega-ai/agent-swarm](https://github.com/desplega-ai/agent-swarm) | 刷新 raw capture、project card、site public report 与分类元数据，统一到 2026-06-12 的公开 GitHub 页面更新信号。 | 它把 agent-swarm 从“多角色编排”推进到带 Docker worker、persistent identity、compounding memory 和 HITL workflow gate 的生产执行面。 |
-| [AgentWrapper/agent-orchestrator](https://github.com/AgentWrapper/agent-orchestrator) | 校正 canonical owner redirect、stars/forks 与 issues/PR 数字面，并同步 raw、project card 和 site surface。 | 它让 coding-agent swarm harness 的工程控制面证据回到最新公开页面，而不是继续沿用已过时的低计数快照。 |
-| [VRSEN/agency-swarm](https://github.com/VRSEN/agency-swarm) | 把旧的静态项目说明升级成 current public model card，并补入 site public report 与项目注册表。 | 它回答的是 production multi-agent 编排在 2026 年已经如何从 Assistants API 迁移到 Agents SDK，并保留通信流、工具和状态持久化。 |
-| [openai/openai-agents-python](https://github.com/openai/openai-agents-python) | 刷新 official Python SDK raw capture、project card、site public report 与分类元数据，作为 canonical upstream runtime baseline。 | 它让第三方 swarm、harness、memory 和 skill 系统都能回到同一套官方 handoffs、tools、guardrails、tracing 语义上比较。 |
-| [openai/openai-agents-js](https://github.com/openai/openai-agents-js) | 刷新 official TypeScript SDK raw capture、project card、site public report 与分类元数据，补齐前端/全栈 agent 编排的上游基线。 | 它帮助我们区分“SDK 原生能力”与“框架自行增加的 memory、workflow、realtime 包装”。 |
-| [XSkill-Agent/XSkill](https://github.com/XSkill-Agent/XSkill) | 刷新 raw capture、paper-code model card 与 site public report，并把 continual-learning 证据接回 benchmark/eval 面。 | 它补的是“skills 和 experiences 如何被积累、存储、检索并在 benchmark 上复用”这一层，而不是只给一个 continual-learning 口号。 |
-| [AQ-MedAI/MedMemoryBench](https://github.com/AQ-MedAI/MedMemoryBench) | 校正 benchmark 项目的 stars 快照并把 healthcare memory evidence 同步到 raw、project card 和 site report。 | 它把 memory 评估从通用 recall 推进到 personalized healthcare 的长时程、高风险场景，帮助读者区分“记住了”与“记对了并用对了”。 |
-| [wanxingai/LightAgent](https://github.com/wanxingai/LightAgent) | 刷新 raw capture、project card、site public report 与分类元数据，统一到 2026-06-05 的 release/API dated signal。 | 它把轻量 agent runtime 这条线补到 LightFlow、native skills、persistent memory 和 trace observability 的最新公开证据。 |
+| [china-qijizhifeng/agentic-Harness-engineering](https://github.com/china-qijizhifeng/agentic-Harness-engineering) | 把 AHE 从 web-observed 数字面切到 authenticated GitHub API，并修正主站 raw 路径大小写不一致。 | 它是“harness 本身可进化”的最直接锚点。 |
+| [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent) | 刷新 stars/forks/issues/PRs/commits 与最新 release 锚点。 | 它回答“可用产品型 agent 长什么样”这个核心问题。 |
+| [stanford-iris-lab/meta-harness](https://github.com/stanford-iris-lab/meta-harness) | 把 5 月的老快照升级到 6 月 API 计数。 | 它是 outer-loop harness search 的最干净参考样本。 |
+| [rohitg00/agentmemory](https://github.com/rohitg00/agentmemory) | 刷新 memory substrate 的公开数字面与 release 锚点。 | 它回答“长期记忆如何跨 Codex / Claude Code / Hermes / OpenClaw 持续积累”。 |
+| [pinchbench/skill](https://github.com/pinchbench/skill) | 把 benchmark/eval 样本升级为 API 口径，并同步 frontier analysis。 | 它是 skill、memory、benchmark 三条线交叉的 evaluator substrate。 |
+| [lsdefine/GenericAgent](https://github.com/lsdefine/GenericAgent) | 把 stale raw/classification 升级为 API 计数。 | 它是“不要预装技能，而是让技能树生长”的 self-evolving 极简路线。 |
+| [EvoMap/awesome-agent-evolution](https://github.com/EvoMap/awesome-agent-evolution) | 刷新 taxonomy comparator 的 counts，并同步 frontier analysis。 | 它帮助我们检查公开叙事是否比普通 awesome list 更有证据密度。 |
+| [uid4oe/insight-swarm](https://github.com/uid4oe/insight-swarm) | 把 stale raw/classification 升级为 API 计数。 | 它是“shared knowledge graph 替代中心 orchestrator”的 swarm 概念锚点。 |
 
 ## 核心洞察
 

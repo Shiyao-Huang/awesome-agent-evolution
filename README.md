@@ -62,18 +62,18 @@ flowchart LR
 
 ## 近期证据更新（2026-06-13）
 
-本轮不是新增一批条目，而是把 production swarm、coding-agent harness、memory benchmark、OpenAI Agents SDK orchestrator、official OpenAI Agents SDK Python/JS baseline、continual skill-memory paper code 和轻量 memory/MCP/skill runtime 的公开数字面重新校正到 `2026-06-13` GitHub API 快照。下面每个仓库都只回答一个问题：它补上了哪类判断证据，以及这轮是否发生了需要同步到公开面的计数修正。
+本轮不是新增一批条目，而是把 agent runtime、harness、memory、benchmark、taxonomy mirror 和 swarm 概念样本里最关键的一组公开数字面重新校正到 `2026-06-13` 的 authenticated GitHub API 快照。重点不是“谁又多了几个 star”，而是把这几类核心角色的最新证据同步到 raw、分类、project card、site report、README 前台说明和 Mermaid truth source。
 
-| 仓库 | 补上的证据缺口 | 对读者的意义 | 证据状态 |
+| 仓库 | 这轮补了什么 | 为什么重要 | 证据状态 |
 |---|---|---|---|
-| [desplega-ai/agent-swarm](https://github.com/desplega-ai/agent-swarm) | production lead-worker swarm runtime | 它把 agent-swarm 从“多角色编排”推进到带 Docker worker、persistent identity、compounding memory 和 HITL gate 的生产执行面。 | [KNOWN] GitHub source-scoped；未做独立生产审计。 |
-| [AgentWrapper/agent-orchestrator](https://github.com/AgentWrapper/agent-orchestrator) | coding-agent swarm harness with worktree isolation | 它把 coding-agent orchestration 从单线程执行推进到可并行 worktree、技能复用、memory 和记审流程共存的工程控制面。 | [KNOWN] GitHub source-scoped；工程控制面说法需继续用 runs/tests/logs 复核。 |
-| [VRSEN/agency-swarm](https://github.com/VRSEN/agency-swarm) | OpenAI Agents SDK orchestration baseline | 它回答的是 production multi-agent 编排在 2026 年已经如何从 Assistants API 迁移到 Agents SDK，并保留通信流、工具和状态持久化。 | [KNOWN] public repo/source-scoped；SDK 迁移结论需随 upstream 更新复核。 |
-| [openai/openai-agents-python](https://github.com/openai/openai-agents-python) | official Python Agents SDK baseline | 它补的是 official upstream runtime 这一层：让第三方 swarm、harness、memory 和 skill 系统回到同一套 canonical handoffs、tools、guardrails、tracing 语义上比较。 | [KNOWN] official repo/source-scoped；上游 SDK 迭代快，结论需随 release 复核。 |
-| [openai/openai-agents-js](https://github.com/openai/openai-agents-js) | official TypeScript Agents SDK baseline | 它把前端/全栈 agent 编排的 canonical baseline 补齐，帮助我们区分“SDK 原生能力”与“框架自行增加的 memory、workflow、realtime 包装”。 | [KNOWN] official repo/source-scoped；JS/runtime capability 仍需 runs/examples 复核。 |
-| [XSkill-Agent/XSkill](https://github.com/XSkill-Agent/XSkill) | continual skill-memory benchmarked paper code | 它补的是“skills 和 experiences 如何被积累、存储、检索并在 benchmark 上复用”这一层，而不是只给一个概念性 continual-learning 口号。 | [KNOWN] paper-code source-scoped；benchmark claim 不等于本站复现。 |
-| [AQ-MedAI/MedMemoryBench](https://github.com/AQ-MedAI/MedMemoryBench) | safety-sensitive longitudinal memory benchmark | 它把 memory 评估从通用 recall 推进到 personalized healthcare 的长时程、高风险场景，帮助读者区分“记住了”与“记对了并用对了”。 | [KNOWN] benchmark repo source-scoped；医疗场景结论需安全/评估复核。 |
-| [wanxingai/LightAgent](https://github.com/wanxingai/LightAgent) | lightweight memory/MCP/skill runtime refresh | 它把轻量 agent runtime 这条线补到 2026-06-05 的 LightFlow、native skills、persistent memory 和 trace observability 证据。 | [KNOWN] repo snapshot source-scoped；运行时能力需继续以 tests/logs 复核。 |
+| [china-qijizhifeng/agentic-Harness-engineering](https://github.com/china-qijizhifeng/agentic-Harness-engineering) | 把 AHE 从 web-observed 数字面切到 authenticated GitHub API，并修正主站 raw 路径大小写不一致。 | 它是“harness 本身可进化”的最直接锚点。 | [KNOWN] GitHub API source-scoped；benchmark 仍未在本站复现。 |
+| [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent) | 刷新 stars/forks/issues/PRs/commits 与最新 release 锚点。 | 它回答“可用产品型 agent 长什么样”这个核心问题。 | [KNOWN] GitHub API source-scoped；未做本地运行验证。 |
+| [stanford-iris-lab/meta-harness](https://github.com/stanford-iris-lab/meta-harness) | 把 5 月的老快照升级到 6 月 API 计数。 | 它是 outer-loop harness search 的最干净参考样本。 | [KNOWN] GitHub API source-scoped；未重跑实验。 |
+| [rohitg00/agentmemory](https://github.com/rohitg00/agentmemory) | 刷新 memory substrate 的公开数字面与 release 锚点。 | 它回答“长期记忆如何跨 Codex / Claude Code / Hermes / OpenClaw 持续积累”。 | [KNOWN] GitHub API source-scoped；memory 质量未在本站独立复核。 |
+| [pinchbench/skill](https://github.com/pinchbench/skill) | 把 benchmark/eval 样本升级为 API 口径，并同步 frontier analysis。 | 它是 skill、memory、benchmark 三条线交叉的 evaluator substrate。 | [KNOWN] GitHub API source-scoped；benchmark 未在本站重跑。 |
+| [lsdefine/GenericAgent](https://github.com/lsdefine/GenericAgent) | 把 stale raw/classification 升级为 API 计数。 | 它是“不要预装技能，而是让技能树生长”的 self-evolving 极简路线。 | [KNOWN] GitHub API source-scoped；本轮未推广到主站 project card。 |
+| [EvoMap/awesome-agent-evolution](https://github.com/EvoMap/awesome-agent-evolution) | 刷新 taxonomy comparator 的 counts，并同步 frontier analysis。 | 它帮助我们检查公开叙事是否比普通 awesome list 更有证据密度。 | [KNOWN] GitHub API source-scoped；未执行其脚本流水线。 |
+| [uid4oe/insight-swarm](https://github.com/uid4oe/insight-swarm) | 把 stale raw/classification 升级为 API 计数。 | 它是“shared knowledge graph 替代中心 orchestrator”的 swarm 概念锚点。 | [KNOWN] GitHub API source-scoped；本轮未推广到主站 project card。 |
 
 ## 核心洞察
 

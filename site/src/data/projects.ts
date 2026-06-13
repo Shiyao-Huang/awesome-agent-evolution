@@ -3258,8 +3258,8 @@ export const projects: Project[] = [
         "name": "Meta-Harness (Stanford IRIS)",
         "repo": "stanford-iris-lab/meta-harness",
         "url": "https://github.com/stanford-iris-lab/meta-harness",
-        "stars": 959,
-        "forks": 92,
+        "stars": 1062,
+        "forks": 103,
         "language": "Python",
         "license": "MIT",
         "report": "projects/249-stanford-meta-harness-framework.md",
@@ -3267,10 +3267,11 @@ export const projects: Project[] = [
         "description": "Meta-Harness provides reference code for automated search over model harnesses, including terminal benchmark scaffold evolution and text-classification memory-system search.",
         "stack": [
             "Python",
-            "Shell"
+            "Harness Search",
+            "Benchmark Scaffold Evolution"
         ],
-        "category": "Meta-Harness Framework and Reference Experiments",
-        "lastPushed": "2026-05-26T00:00:00Z",
+        "category": "Meta-harness framework and reference experiments",
+        "lastPushed": "2026-04-29T16:39:58Z",
         "localPath": "raw-github/stanford-iris-lab_meta-harness.md",
         "status": "candidate",
         "tags": [
@@ -7473,7 +7474,7 @@ export const projects: Project[] = [
         "name": "PinchBench Skill",
         "repo": "pinchbench/skill",
         "url": "https://github.com/pinchbench/skill",
-        "stars": 1227,
+        "stars": 1229,
         "forks": 138,
         "language": "Python",
         "license": "MIT",
@@ -7486,8 +7487,8 @@ export const projects: Project[] = [
             "TypeScript",
             "OpenClaw Benchmark Harness"
         ],
-        "category": "Real-World Agent Task Benchmark",
-        "lastPushed": "2026-05-06T00:00:00Z",
+        "category": "Real-world agent task benchmark",
+        "lastPushed": "2026-06-02T21:35:43Z",
         "localPath": "raw-github/pinchbench_skill.md",
         "status": "candidate",
         "tags": [
@@ -7534,17 +7535,17 @@ export const projects: Project[] = [
         "stars": 137,
         "forks": 20,
         "language": "JavaScript",
-        "license": "View license on GitHub",
+        "license": "NOASSERTION",
         "report": "projects/394-evomap-awesome-agent-evolution.md",
         "pattern": "field taxonomy -> curated project/paper/benchmark sections -> related awesome-list pointers -> reader-facing ecosystem navigation",
         "description": "EvoMap/awesome-agent-evolution is a curated awesome list covering self-evolution, memory, protocols, benchmarks, coding agents, and adjacent infrastructure.",
         "stack": [
             "JavaScript",
             "Shell",
-            "Awesome List Pipeline"
+            "Curated Taxonomy Pipeline"
         ],
-        "category": "External Awesome List and Taxonomy Comparator",
-        "lastPushed": "2026-06-09T00:00:00Z",
+        "category": "External awesome list and taxonomy comparator",
+        "lastPushed": "2026-06-11T04:08:27Z",
         "localPath": "raw-github/evomap_awesome-agent-evolution.md",
         "status": "candidate",
         "tags": [
@@ -8153,18 +8154,18 @@ export const projects: Project[] = [
         "name": "Agentic Harness Engineering",
         "repo": "china-qijizhifeng/agentic-Harness-engineering",
         "url": "https://github.com/china-qijizhifeng/agentic-Harness-engineering",
-        "description": "Agentic Harness Engineering names the layer where prompts, tools, middleware, skills, memory, subagents, and evaluators become editable agent infrastructure rather than fixed wrappers around a base model.",
+        "description": "Harness engineering is the layer where prompts, tools, middleware, memory, subagents, and evaluators become editable agent infrastructure rather than fixed wrappers around a base model.",
         "stack": [
-            "TypeScript",
+            "Python",
             "Harness Evolution",
             "Coding-Agent Workflow"
         ],
-        "category": "Harness Evolution Engineering",
+        "category": "Harness evolution engineering",
         "status": "candidate",
-        "stars": 545,
+        "stars": 548,
         "forks": 62,
-        "lastPushed": "2026-06-09T00:00:00Z",
-        "language": "TypeScript",
+        "lastPushed": "2026-06-09T05:43:14Z",
+        "language": "Python",
         "license": "MIT",
         "report": "projects/43-agentic-harness-engineering.md",
         "pattern": "editable prompts/tools/middleware/skills/memory/subagents -> evaluator pressure -> harness mutation -> regression verification",
@@ -8187,13 +8188,13 @@ export const projects: Project[] = [
             "TypeScript",
             "Memory",
             "Skills",
-            "Messaging Runtime"
+            "Messaging-Agent Runtime"
         ],
-        "category": "Self-Improving Personal Agent Runtime",
+        "category": "Self-improving personal agent runtime",
         "status": "candidate",
-        "stars": 191591,
-        "forks": 33323,
-        "lastPushed": "2026-06-09T00:00:00Z",
+        "stars": 191978,
+        "forks": 33445,
+        "lastPushed": "2026-06-13T00:23:31Z",
         "language": "Python",
         "license": "MIT",
         "report": "projects/44-hermes-agent.md",
@@ -8273,14 +8274,14 @@ export const projects: Project[] = [
         "stack": [
             "TypeScript",
             "MCP",
-            "Knowledge Graph",
-            "Hybrid Search"
+            "Coding-Agent Memory",
+            "Wiki Index"
         ],
-        "category": "Agent Persistent Memory Layer",
+        "category": "Agent persistent memory layer",
         "status": "candidate",
-        "stars": 22479,
-        "forks": 1851,
-        "lastPushed": "2026-06-09T00:00:00Z",
+        "stars": 22542,
+        "forks": 1853,
+        "lastPushed": "2026-06-11T09:48:24Z",
         "language": "TypeScript",
         "license": "Apache-2.0",
         "report": "projects/50-agentmemory.md",
@@ -8751,4 +8752,8 @@ export const projectGroups = [
     ]
   }
 ];
+
+
+
+
 

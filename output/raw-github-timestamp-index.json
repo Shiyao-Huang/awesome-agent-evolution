@@ -908,10 +908,10 @@
       "repo": "china-qijizhifeng/agentic-Harness-engineering",
       "url": "https://github.com/china-qijizhifeng/agentic-Harness-engineering",
       "file": "raw-github/china-qijizhifeng_agentic-harness-engineering.md",
-      "content_timestamp": "2026-06-12",
-      "collected_at": "2026-06-12T20:16:23+08:00",
+      "content_timestamp": "2026-06-13",
+      "collected_at": "2026-06-13T08:16:40+08:00",
       "time_slice": "2026-06",
-      "timestamp_source": "web_observed_public_github_page_2026_06_12"
+      "timestamp_source": "gh_api_graphql_authenticated_2026_06_13"
     },
     {
       "repo": "Chorus-AIDLC/Chorus",
@@ -1547,10 +1547,10 @@
       "repo": "EvoMap/awesome-agent-evolution",
       "url": "https://github.com/EvoMap/awesome-agent-evolution",
       "file": "raw-github/evomap_awesome-agent-evolution.md",
-      "content_timestamp": "2026-06-12",
-      "collected_at": "2026-06-12T20:16:23+08:00",
+      "content_timestamp": "2026-06-13",
+      "collected_at": "2026-06-13T08:16:40+08:00",
       "time_slice": "2026-06",
-      "timestamp_source": "web_observed_public_github_page_2026_06_12"
+      "timestamp_source": "gh_api_graphql_authenticated_2026_06_13"
     },
     {
       "repo": "EvoMap/evolver",
@@ -2859,12 +2859,12 @@
     },
     {
       "repo": "lsdefine/genericagent",
-      "url": "https://github.com/lsdefine/genericagent",
+      "url": "https://github.com/lsdefine/GenericAgent",
       "file": "raw-github/lsdefine_genericagent.md",
-      "content_timestamp": "2026-05-21",
-      "collected_at": "2026-05-20T17:45:19Z",
-      "time_slice": "2026-05",
-      "timestamp_source": "github_latest_commit_or_update_text"
+      "content_timestamp": "2026-06-13",
+      "collected_at": "2026-06-13T08:16:40+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "gh_api_graphql_authenticated_2026_06_13"
     },
     {
       "repo": "ltzheng/curriculummarl",
@@ -3590,10 +3590,10 @@
       "repo": "NousResearch/hermes-agent",
       "url": "https://github.com/NousResearch/hermes-agent",
       "file": "raw-github/nousresearch_hermes-agent.md",
-      "content_timestamp": "2026-06-12",
-      "collected_at": "2026-06-12T20:16:23+08:00",
+      "content_timestamp": "2026-06-13",
+      "collected_at": "2026-06-13T08:16:40+08:00",
       "time_slice": "2026-06",
-      "timestamp_source": "web_observed_public_github_page_2026_06_12"
+      "timestamp_source": "gh_api_graphql_authenticated_2026_06_13"
     },
     {
       "repo": "nowledge-co/community",
@@ -4103,10 +4103,10 @@
       "repo": "pinchbench/skill",
       "url": "https://github.com/pinchbench/skill",
       "file": "raw-github/pinchbench_skill.md",
-      "content_timestamp": "2026-06-12",
-      "collected_at": "2026-06-12T20:16:23+08:00",
+      "content_timestamp": "2026-06-13",
+      "collected_at": "2026-06-13T08:16:40+08:00",
       "time_slice": "2026-06",
-      "timestamp_source": "web_observed_public_github_page_2026_06_12"
+      "timestamp_source": "gh_api_graphql_authenticated_2026_06_13"
     },
     {
       "repo": "pingcap/ossinsight",
@@ -4463,10 +4463,10 @@
       "repo": "rohitg00/agentmemory",
       "url": "https://github.com/rohitg00/agentmemory",
       "file": "raw-github/rohitg00_agentmemory.md",
-      "content_timestamp": "2026-06-12",
-      "collected_at": "2026-06-12T20:16:23+08:00",
+      "content_timestamp": "2026-06-13",
+      "collected_at": "2026-06-13T08:16:40+08:00",
       "time_slice": "2026-06",
-      "timestamp_source": "web_observed_public_github_page_2026_06_12"
+      "timestamp_source": "gh_api_graphql_authenticated_2026_06_13"
     },
     {
       "repo": "rohitg00/awesome-openclaw",
@@ -4958,10 +4958,10 @@
       "repo": "stanford-iris-lab/meta-harness",
       "url": "https://github.com/stanford-iris-lab/meta-harness",
       "file": "raw-github/stanford-iris-lab_meta-harness.md",
-      "content_timestamp": "2026-05-26",
-      "collected_at": "2026-05-26T21:54:04+08:00",
-      "time_slice": "2026-05",
-      "timestamp_source": "web_observed_public_github_page_2026_05_26"
+      "content_timestamp": "2026-06-13",
+      "collected_at": "2026-06-13T08:16:40+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "gh_api_graphql_authenticated_2026_06_13"
     },
     {
       "repo": "stanfordnlp/dsp",
@@ -5444,10 +5444,10 @@
       "repo": "uid4oe/insight-swarm",
       "url": "https://github.com/uid4oe/insight-swarm",
       "file": "raw-github/uid4oe_insight-swarm.md",
-      "content_timestamp": "2026-05-21",
-      "collected_at": "2026-05-20T17:45:19Z",
-      "time_slice": "2026-05",
-      "timestamp_source": "github_latest_commit_or_update_text"
+      "content_timestamp": "2026-06-13",
+      "collected_at": "2026-06-13T08:16:40+08:00",
+      "time_slice": "2026-06",
+      "timestamp_source": "gh_api_graphql_authenticated_2026_06_13"
     },
     {
       "repo": "UnicomAI/hexagent",

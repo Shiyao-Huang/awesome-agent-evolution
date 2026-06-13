@@ -1,31 +1,28 @@
 # EvoMap Awesome Agent Evolution Model Card
 
+## One Sentence
+
+EvoMap is not a runnable self-evolving system, but it is one of the best external mirrors for checking whether our public taxonomy is clearer than a generic awesome list.
+
+## Three Sentences
+
+Its value is not execution but packaging: how the broader ecosystem currently teaches self-evolution, memory, protocols, benchmarks, and swarm adjacency to readers. That makes it a direct comparator for README, topic pages, and site entry design. This run upgrades EvoMap from a web-observed packet to authenticated GitHub API counts.
+
+## Model Card
+
 | Field | Value |
 |---|---|
-| Repository | [EvoMap/awesome-agent-evolution](https://github.com/EvoMap/awesome-agent-evolution) |
-| Category | External Awesome List and Taxonomy Comparator |
-| Stars / forks snapshot | 137 / 20 |
-| Language | JavaScript |
-| License | View license on GitHub public page |
-| Raw capture | raw-github/evomap_awesome-agent-evolution.md |
-| Updated by | hourly public metadata update, 2026-06-12 20:16 +0800 |
+| Repository | `EvoMap/awesome-agent-evolution` |
+| Source | `raw-github/evomap_awesome-agent-evolution.md` |
+| Category | External awesome list and taxonomy comparator |
+| Pattern | field taxonomy -> curated repo/paper/benchmark sections -> related awesome-list pointers -> reader-facing ecosystem navigation |
+| Evidence | Authenticated GitHub API snapshot, 2026-06-13 |
 
-## 1. Role in Self Evolve
+## Teaching Use
 
-This repository is not a self-evolving runtime. It matters because it is a live external mirror of how the broader ecosystem packages self-evolution, memory, benchmark, protocol, and multi-agent topics for readers.
+Use EvoMap to compare curation strategies. It is the external mirror that exposes whether our own public narrative adds evidence density instead of only another list of links.
 
-## 2. Working Principle
+## Evidence And Limits
 
-taxonomy framing -> curated repo/paper/benchmark lists -> related awesome-list pointers -> field navigation for newcomers
+The raw capture now reflects an authenticated GitHub API snapshot: 137 stars, 20 forks, 60 commits, 6 open issues, 1 open pull requests, and NOASSERTION license metadata observed on 2026-06-13. This run did not execute EvoMap scripts or validate its data pipeline locally. The classification is based on public taxonomy, maintenance surface, and comparison value.
 
-## 3. Evidence Path
-
-The public GitHub page on 2026-06-12 showed 137 stars, 20 forks, 60 commits, 6 issues, 1 pull request, no releases, JavaScript/Shell implementation, and a README that divides the field into self-evolution, memory, protocols, platforms, coding, safety, embodied AI, papers, benchmarks, and community knowledge. Unauthenticated GitHub API access was already rate-limited, so this card treats the snapshot as web-observed rather than API-verified.
-
-## 4. Teaching Use
-
-Use this card to compare curation strategies. EvoMap is a good external benchmark for whether our own README and website are exposing the right categories without collapsing the project back into a shallow link list.
-
-## 5. Limits
-
-This iteration did not execute the repo's `data/` or `scripts/` folders. The classification is based on public taxonomy, maintenance surface, and comparison value, not on running its pipeline.
