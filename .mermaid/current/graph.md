@@ -2,7 +2,7 @@
 
 Truth source: `.mermaid/current/graph.json`
 
-Generated: 2026-06-13T08:16:40+08:00
+Generated: 2026-06-14T14:22:49+08:00
 
 ## Current Run Repositories
 
@@ -11,7 +11,7 @@ Generated: 2026-06-13T08:16:40+08:00
 - **stanford-iris-lab/meta-harness** -> raw `raw-github/stanford-iris-lab_meta-harness.md` -> card `projects/249-stanford-meta-harness-framework.md` -> site report `site/public/reports/projects/249-stanford-meta-harness-framework.md`
 - **rohitg00/agentmemory** -> raw `raw-github/rohitg00_agentmemory.md` -> card `projects/50-agentmemory.md` -> site report `site/public/reports/projects/50-agentmemory.md`
 - **pinchbench/skill** -> raw `raw-github/pinchbench_skill.md` -> card `projects/51-pinchbench-skill.md` -> site report `site/public/reports/projects/51-pinchbench-skill.md`
-- **lsdefine/genericagent** -> raw `raw-github/lsdefine_genericagent.md` -> card `not promoted to public project card in this run` -> site report `not promoted to public site report in this run`
+- **lsdefine/GenericAgent** -> raw `raw-github/lsdefine_genericagent.md` -> card `not promoted to public project card in this run` -> site report `not promoted to public site report in this run`
 - **EvoMap/awesome-agent-evolution** -> raw `raw-github/evomap_awesome-agent-evolution.md` -> card `projects/394-evomap-awesome-agent-evolution.md` -> site report `site/public/reports/projects/394-evomap-awesome-agent-evolution.md`
 - **uid4oe/insight-swarm** -> raw `raw-github/uid4oe_insight-swarm.md` -> card `not promoted to public project card in this run` -> site report `not promoted to public site report in this run`
 
@@ -21,7 +21,7 @@ Authenticated GitHub API snapshots -> raw captures -> classification -> timestam
 
 ## Evidence Boundaries
 
-- This loop used authenticated GitHub GraphQL/API access through `gh`, so counts are fresher than prior web-observed packets.
-- Mermaid Architect validation is currently schema-incompatible with this graph shape (`list indices must be integers or slices, not str`), so `graph.json` remains truth and `.md` / `.mmd` are maintained views.
+- This loop used authenticated GitHub GraphQL/API access through `gh`.
+- Relative to the 2026-06-13 14:16 packet, 7 of the 8 anchors moved on public metadata; only Insight Swarm stayed unchanged.
 - GitNexus is partially available: `node .gitnexus/run.cjs status` works, but query/analyze fail when loading LadybugDB because the database file version is `41` while the current build storage version is `40`.
 - Public copy review gate is still incomplete; this run updates evidence surfaces but does not claim review-complete copy quality.

@@ -60,20 +60,20 @@ flowchart LR
   SURVEY --> SITE["网站 + 图谱 + 报告"]
 ```
 
-## 近期证据更新（2026-06-13）
+## 近期证据更新（2026-06-14）
 
-本轮不是新增一批条目，而是把 agent runtime、harness、memory、benchmark、taxonomy mirror 和 swarm 概念样本里最关键的一组公开数字面重新校正到 `2026-06-13` 的 authenticated GitHub API 快照。重点不是“谁又多了几个 star”，而是把这几类核心角色的最新证据同步到 raw、分类、project card、site report、README 前台说明和 Mermaid truth source。
+本轮是新的 authenticated GitHub API packet，而不是沿用昨天的同日复核。相对 `2026-06-13 14:16 +0800` 的上一轮公开快照，8 个锚点里有 7 个出现了新的公开 metadata 变化；只有 Insight Swarm 维持不变。
 
-| 仓库 | 这轮补了什么 | 为什么重要 | 证据状态 |
+| 仓库 | 这轮状态 | 为什么重要 | 证据状态 |
 |---|---|---|---|
-| [china-qijizhifeng/agentic-Harness-engineering](https://github.com/china-qijizhifeng/agentic-Harness-engineering) | 把 AHE 从 web-observed 数字面切到 authenticated GitHub API，并修正主站 raw 路径大小写不一致。 | 它是“harness 本身可进化”的最直接锚点。 | [KNOWN] GitHub API source-scoped；benchmark 仍未在本站复现。 |
-| [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent) | 刷新 stars/forks/issues/PRs/commits 与最新 release 锚点。 | 它回答“可用产品型 agent 长什么样”这个核心问题。 | [KNOWN] GitHub API source-scoped；未做本地运行验证。 |
-| [stanford-iris-lab/meta-harness](https://github.com/stanford-iris-lab/meta-harness) | 把 5 月的老快照升级到 6 月 API 计数。 | 它是 outer-loop harness search 的最干净参考样本。 | [KNOWN] GitHub API source-scoped；未重跑实验。 |
-| [rohitg00/agentmemory](https://github.com/rohitg00/agentmemory) | 刷新 memory substrate 的公开数字面与 release 锚点。 | 它回答“长期记忆如何跨 Codex / Claude Code / Hermes / OpenClaw 持续积累”。 | [KNOWN] GitHub API source-scoped；memory 质量未在本站独立复核。 |
-| [pinchbench/skill](https://github.com/pinchbench/skill) | 把 benchmark/eval 样本升级为 API 口径，并同步 frontier analysis。 | 它是 skill、memory、benchmark 三条线交叉的 evaluator substrate。 | [KNOWN] GitHub API source-scoped；benchmark 未在本站重跑。 |
-| [lsdefine/GenericAgent](https://github.com/lsdefine/GenericAgent) | 把 stale raw/classification 升级为 API 计数。 | 它是“不要预装技能，而是让技能树生长”的 self-evolving 极简路线。 | [KNOWN] GitHub API source-scoped；本轮未推广到主站 project card。 |
-| [EvoMap/awesome-agent-evolution](https://github.com/EvoMap/awesome-agent-evolution) | 刷新 taxonomy comparator 的 counts，并同步 frontier analysis。 | 它帮助我们检查公开叙事是否比普通 awesome list 更有证据密度。 | [KNOWN] GitHub API source-scoped；未执行其脚本流水线。 |
-| [uid4oe/insight-swarm](https://github.com/uid4oe/insight-swarm) | 把 stale raw/classification 升级为 API 计数。 | 它是“shared knowledge graph 替代中心 orchestrator”的 swarm 概念锚点。 | [KNOWN] GitHub API source-scoped；本轮未推广到主站 project card。 |
+| [china-qijizhifeng/agentic-Harness-engineering](https://github.com/china-qijizhifeng/agentic-Harness-engineering) | stars 从 549 增到 556，`updatedAt` 前进；其余核心计数稳定。 | 它是“harness 本身可进化”的最直接锚点。 | [KNOWN] Authenticated GitHub API；未做本地运行/benchmark 复核。 |
+| [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent) | stars/forks/issues/PRs/commits/pushedAt/updatedAt 再次整体前进。 | 它回答“可用产品型 agent 长什么样”这个核心问题。 | [KNOWN] Authenticated GitHub API；未做本地运行/benchmark 复核。 |
+| [stanford-iris-lab/meta-harness](https://github.com/stanford-iris-lab/meta-harness) | stars +1、forks +1，`updatedAt` 前进；其余核心计数稳定。 | 它是 outer-loop harness search 的最干净参考样本。 | [KNOWN] Authenticated GitHub API；未做本地运行/benchmark 复核。 |
+| [rohitg00/agentmemory](https://github.com/rohitg00/agentmemory) | stars/forks/issues/PRs/updatedAt 再次前进；commits 与 pushedAt 保持不变。 | 它回答“长期记忆如何跨 Codex / Claude Code / Hermes / OpenClaw 持续积累”。 | [KNOWN] Authenticated GitHub API；未做本地运行/benchmark 复核。 |
+| [pinchbench/skill](https://github.com/pinchbench/skill) | stars +1、forks +1、issues +1，`updatedAt` 前进；其余核心计数稳定。 | 它是 skill、memory、benchmark 三条线交叉的 evaluator substrate。 | [KNOWN] Authenticated GitHub API；未做本地运行/benchmark 复核。 |
+| [lsdefine/GenericAgent](https://github.com/lsdefine/GenericAgent) | stars/forks/issues/commits/pushedAt/updatedAt 前进，open PR 从 65 降到 59。 | 它是“不要预装技能，而是让技能树生长”的 self-evolving 极简路线。 | [KNOWN] Authenticated GitHub API；未做本地运行/benchmark 复核。 |
+| [EvoMap/awesome-agent-evolution](https://github.com/EvoMap/awesome-agent-evolution) | stars +1，`updatedAt` 前进；其余核心计数稳定。 | 它帮助我们检查公开叙事是否比普通 awesome list 更有证据密度。 | [KNOWN] Authenticated GitHub API；未做本地运行/benchmark 复核。 |
+| [uid4oe/insight-swarm](https://github.com/uid4oe/insight-swarm) | 与 2026-06-13 14:16 packet 相比无公开数字变化。 | 它是“shared knowledge graph 替代中心 orchestrator”的 swarm 概念锚点。 | [KNOWN] Authenticated GitHub API；未做本地运行/benchmark 复核。 |
 
 ## 核心洞察
 

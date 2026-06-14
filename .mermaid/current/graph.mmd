@@ -1,6 +1,6 @@
 flowchart LR
   intent["Direct user intent"] --> raw["authenticated GitHub API repo refresh"]
-  raw --> processed["classification + project cards + frontier analyses"]
+  raw --> processed["classification + project cards"]
   processed --> results["README/site/report surfaces"]
   processed --> indexes["timestamp index + GitHub corpus analysis"]
   results --> note["work note + Mermaid truth source"]

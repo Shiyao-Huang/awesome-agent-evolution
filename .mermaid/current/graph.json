@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-13T08:16:40+08:00",
+  "generated_at": "2026-06-14T14:22:49+08:00",
   "truth_source": ".mermaid/current/graph.json",
   "nodes": [
     {
@@ -37,8 +37,6 @@
         "research/repo-classification.json",
         "research/repo-classification.csv",
         "research/repo-classification.md",
-        "analysis/frontier-projects/pinchbench-skill-dual-chain.md",
-        "analysis/frontier-projects/evomap-awesome-agent-evolution-dual-chain.md",
         "projects/43-agentic-harness-engineering.md",
         "projects/44-hermes-agent.md",
         "projects/249-stanford-meta-harness-framework.md",
@@ -85,10 +83,10 @@
       "layer": "work",
       "status": "updated",
       "paths": [
-        "work/research/hourly-public-metadata-update-2026-06-13-0816.md",
+        "work/research/hourly-public-metadata-update-2026-06-14-1422.md",
         ".mermaid/current/graph.md",
         ".mermaid/current/graph.mmd",
-        "work/research/hourly-public-metadata-update-2026-06-13-0816-data.json"
+        "work/research/hourly-public-metadata-update-2026-06-14-1422-data.json"
       ]
     }
   ],
@@ -132,7 +130,7 @@
         "raw_capture": "raw-github/china-qijizhifeng_agentic-harness-engineering.md",
         "report": "projects/43-agentic-harness-engineering.md",
         "site_report": "site/public/reports/projects/43-agentic-harness-engineering.md",
-        "stars": 548,
+        "stars": 556,
         "forks": 62,
         "issues": 0,
         "pull_requests": 0,
@@ -146,12 +144,12 @@
         "raw_capture": "raw-github/nousresearch_hermes-agent.md",
         "report": "projects/44-hermes-agent.md",
         "site_report": "site/public/reports/projects/44-hermes-agent.md",
-        "stars": 191978,
-        "forks": 33445,
-        "issues": 6526,
-        "pull_requests": 13571,
-        "commits": 11512,
-        "latest_push": "2026-06-13T00:23:31Z",
+        "stars": 192929,
+        "forks": 33681,
+        "issues": 6640,
+        "pull_requests": 13761,
+        "commits": 11641,
+        "latest_push": "2026-06-14T06:07:45Z",
         "latest_release": {
           "name": "Hermes Agent v0.16.0 (2026.6.5) — The Surface Release",
           "publishedAt": "2026-06-06T00:55:58Z"
@@ -163,8 +161,8 @@
         "raw_capture": "raw-github/stanford-iris-lab_meta-harness.md",
         "report": "projects/249-stanford-meta-harness-framework.md",
         "site_report": "site/public/reports/projects/249-stanford-meta-harness-framework.md",
-        "stars": 1062,
-        "forks": 103,
+        "stars": 1064,
+        "forks": 104,
         "issues": 4,
         "pull_requests": 0,
         "commits": 11,
@@ -177,10 +175,10 @@
         "raw_capture": "raw-github/rohitg00_agentmemory.md",
         "report": "projects/50-agentmemory.md",
         "site_report": "site/public/reports/projects/50-agentmemory.md",
-        "stars": 22542,
-        "forks": 1853,
-        "issues": 141,
-        "pull_requests": 151,
+        "stars": 22716,
+        "forks": 1868,
+        "issues": 144,
+        "pull_requests": 156,
         "commits": 462,
         "latest_push": "2026-06-11T09:48:24Z",
         "latest_release": {
@@ -194,9 +192,9 @@
         "raw_capture": "raw-github/pinchbench_skill.md",
         "report": "projects/51-pinchbench-skill.md",
         "site_report": "site/public/reports/projects/51-pinchbench-skill.md",
-        "stars": 1229,
-        "forks": 138,
-        "issues": 18,
+        "stars": 1230,
+        "forks": 139,
+        "issues": 19,
         "pull_requests": 0,
         "commits": 383,
         "latest_push": "2026-06-02T21:35:43Z",
@@ -207,16 +205,16 @@
         "theme": "benchmark"
       },
       {
-        "repo": "lsdefine/genericagent",
+        "repo": "lsdefine/GenericAgent",
         "raw_capture": "raw-github/lsdefine_genericagent.md",
         "report": null,
         "site_report": null,
-        "stars": 12811,
-        "forks": 1476,
-        "issues": 77,
-        "pull_requests": 65,
-        "commits": 843,
-        "latest_push": "2026-06-12T06:33:13Z",
+        "stars": 12844,
+        "forks": 1480,
+        "issues": 80,
+        "pull_requests": 59,
+        "commits": 855,
+        "latest_push": "2026-06-14T01:43:07Z",
         "latest_release": {
           "name": "v0.1.0 - Desktop App",
           "publishedAt": "2026-05-15T10:38:24Z"
@@ -228,7 +226,7 @@
         "raw_capture": "raw-github/evomap_awesome-agent-evolution.md",
         "report": "projects/394-evomap-awesome-agent-evolution.md",
         "site_report": "site/public/reports/projects/394-evomap-awesome-agent-evolution.md",
-        "stars": 137,
+        "stars": 138,
         "forks": 20,
         "issues": 6,
         "pull_requests": 1,
@@ -255,7 +253,7 @@
     "gitnexus": {
       "status": "partially-available",
       "note": "node .gitnexus/run.cjs status works, but query/analyze fail in the LadybugDB load stage.",
-      "blocker": "COPY failed for File: Runtime exception: Trying to read a database file with a different version. Database file version: 41, Current build storage version: 40"
+      "blocker": "Runtime exception: Trying to read a database file with a different version. Database file version: 41, Current build storage version: 40"
     }
   }
 }
