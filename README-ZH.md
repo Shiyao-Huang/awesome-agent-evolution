@@ -39,18 +39,19 @@ GitHub topic 收录状态（2026-06-05）：GitHub API 和 `gh search repos 'top
 
 ## 本轮 GitHub Metadata 修复包（2026-06-15）
 
-本轮是新的 authenticated GitHub API packet，而不是沿用 2026-06-14 的上一轮快照。相对 `2026-06-14 14:22 +0800`，8 个锚点里有 7 个出现新的公开 metadata 变化；唯一保持不变的是 Insight Swarm。
+本轮是新的 authenticated GitHub API packet，而不是沿用 `2026-06-15 08:24 +0800` 的上午快照。相对该 packet，9 个锚点里有 8 个出现新的公开 metadata 变化；保持不变的条目是 uid4oe/insight-swarm。
 
 | 仓库 | 这轮状态 | 为什么重要 |
 |---|---|---|
-| [china-qijizhifeng/agentic-Harness-engineering](https://github.com/china-qijizhifeng/agentic-Harness-engineering) | stars 556 -> 561；forks 62 -> 64；commits 45 -> 46；pushedAt 2026-06-09T05:43:14Z -> 2026-06-14T16:03:21Z；updatedAt 2026-06-13T16:21:31Z -> 2026-06-14T20:52:54Z。 | 它是“harness 本身可进化”的最直接锚点。 |
-| [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent) | stars 192,929 -> 193,517；forks 33,681 -> 33,848；issues 6,640 -> 6,709；PRs 13,761 -> 13,888；commits 11,641 -> 11,695；pushedAt 2026-06-14T06:07:45Z -> 2026-06-15T00:18:13Z；updatedAt 2026-06-14T06:26:36Z -> 2026-06-15T00:30:22Z。 | 它回答“可用产品型 agent 长什么样”这个核心问题。 |
-| [stanford-iris-lab/meta-harness](https://github.com/stanford-iris-lab/meta-harness) | stars 1,064 -> 1,068；updatedAt 2026-06-14T03:09:42Z -> 2026-06-14T20:52:22Z。 | 它是 outer-loop harness search 的最干净参考样本。 |
-| [rohitg00/agentmemory](https://github.com/rohitg00/agentmemory) | stars 22,716 -> 22,804；forks 1,868 -> 1,877；issues 144 -> 146；PRs 156 -> 157；updatedAt 2026-06-14T06:23:38Z -> 2026-06-15T00:25:41Z。 | 它回答“长期记忆如何跨 Codex / Claude Code / Hermes / OpenClaw 持续积累”。 |
-| [pinchbench/skill](https://github.com/pinchbench/skill) | forks 139 -> 140。 | 它是 skill、memory、benchmark 三条线交叉的 evaluator substrate。 |
-| [lsdefine/GenericAgent](https://github.com/lsdefine/GenericAgent) | stars 12,844 -> 12,863；forks 1,480 -> 1,483；issues 80 -> 81；PRs 59 -> 61；updatedAt 2026-06-14T05:30:42Z -> 2026-06-14T20:03:46Z。 | 它是“不要预装技能，而是让技能树生长”的 self-evolving 极简路线。 |
-| [EvoMap/awesome-agent-evolution](https://github.com/EvoMap/awesome-agent-evolution) | stars 138 -> 139；commits 60 -> 62；pushedAt 2026-06-11T04:08:27Z -> 2026-06-14T16:29:41Z；updatedAt 2026-06-13T16:15:07Z -> 2026-06-14T19:53:04Z。 | 它帮助我们检查公开叙事是否比普通 awesome list 更有证据密度。 |
-| [uid4oe/insight-swarm](https://github.com/uid4oe/insight-swarm) | 与 2026-06-14 packet 相比无公开数字变化。 | 它是“shared knowledge graph 替代中心 orchestrator”的 swarm 概念锚点。 |
+| [china-qijizhifeng/agentic-Harness-engineering](https://github.com/china-qijizhifeng/agentic-Harness-engineering) | stars 561 -> 569；updatedAt 2026-06-14T20:52:54Z -> 2026-06-15T11:45:35Z。 | 它是“harness 本身可进化”的最直接锚点。 |
+| [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent) | stars 193,517 -> 194,086；forks 33,848 -> 33,984；issues 6,709 -> 6,763；PRs 13,888 -> 13,988；commits 11,695 -> 11,728；pushedAt 2026-06-15T00:18:13Z -> 2026-06-15T13:01:58Z；updatedAt 2026-06-15T00:30:22Z -> 2026-06-15T13:00:34Z。 | 它回答“可用产品型 agent 长什么样”这个核心问题。 |
+| [stanford-iris-lab/meta-harness](https://github.com/stanford-iris-lab/meta-harness) | stars 1,068 -> 1,070；updatedAt 2026-06-14T20:52:22Z -> 2026-06-15T11:58:09Z。 | 它是 outer-loop harness search 的最干净参考样本。 |
+| [rohitg00/agentmemory](https://github.com/rohitg00/agentmemory) | stars 22,804 -> 22,899；forks 1,877 -> 1,887；issues 146 -> 147；PRs 157 -> 158；pushedAt 2026-06-11T09:48:24Z -> 2026-06-15T06:20:23Z；updatedAt 2026-06-15T00:25:41Z -> 2026-06-15T12:45:15Z。 | 它回答“长期记忆如何跨 Codex / Claude Code / Hermes / OpenClaw 持续积累”。 |
+| [pinchbench/skill](https://github.com/pinchbench/skill) | stars 1,230 -> 1,232；updatedAt 2026-06-14T00:18:05Z -> 2026-06-15T12:24:18Z。 | 它是 skill、memory、benchmark 三条线交叉的 evaluator substrate。 |
+| [lsdefine/GenericAgent](https://github.com/lsdefine/GenericAgent) | stars 12,863 -> 12,884；forks 1,483 -> 1,488；issues 81 -> 82；commits 855 -> 860；pushedAt 2026-06-14T01:43:07Z -> 2026-06-15T02:15:18Z；updatedAt 2026-06-14T20:03:46Z -> 2026-06-15T11:07:50Z。 | 它是“不要预装技能，而是让技能树生长”的 self-evolving 极简路线。 |
+| [EvoMap/awesome-agent-evolution](https://github.com/EvoMap/awesome-agent-evolution) | stars 139 -> 140；commits 62 -> 63；pushedAt 2026-06-14T16:29:41Z -> 2026-06-15T02:37:31Z；updatedAt 2026-06-14T19:53:04Z -> 2026-06-15T09:18:19Z。 | 它帮助我们检查公开叙事是否比普通 awesome list 更有证据密度。 |
+| [uid4oe/insight-swarm](https://github.com/uid4oe/insight-swarm) | 与 2026-06-15 08:24 packet 相比无公开数字变化。 | 它是“shared knowledge graph 替代中心 orchestrator”的 swarm 概念锚点。 |
+| [desplega-ai/agent-swarm](https://github.com/desplega-ai/agent-swarm) | stars = 527；forks = 58；issues = 1；PRs = 1；commits = 1,636；pushedAt unknown -> 2026-06-15T09:52:53Z；updatedAt unknown -> 2026-06-15T10:30:03Z。 | 它把用户要求的 agent-swarm 主线补进了公开证据链。 |
 
 ## 核心洞察
 

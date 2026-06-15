@@ -24,4 +24,4 @@ Use PinchBench to explain why benchmark infrastructure matters as much as the ag
 
 ## Evidence And Limits
 
-The raw capture now reflects an authenticated GitHub API snapshot: 1,230 stars, 140 forks, 383 commits, 19 open issues, and 0 open pull requests observed on 2026-06-15. Relative to the previous 2026-06-14 packet: forks 139 -> 140. This run did not execute the benchmark, upload results, or validate leaderboard behavior locally. All benchmark-scope claims remain repository-scoped.
+The raw capture now reflects an authenticated GitHub API snapshot: 1,232 stars, 140 forks, 383 commits, 19 open issues, and 0 open pull requests observed on 2026-06-15. Relative to the previous 2026-06-15 08:24 packet: stars 1,230 -> 1,232; updatedAt 2026-06-14T00:18:05Z -> 2026-06-15T12:24:18Z. This run did not execute the benchmark, upload results, or validate leaderboard behavior locally. All benchmark-scope claims remain repository-scoped.

@@ -2,7 +2,7 @@
 
 Truth source: `.mermaid/current/graph.json`
 
-Generated: 2026-06-15T08:24:11+08:00
+Generated: 2026-06-15T20:24:30+08:00
 
 ## Current Run Repositories
 
@@ -14,6 +14,7 @@ Generated: 2026-06-15T08:24:11+08:00
 - **lsdefine/GenericAgent** -> raw `raw-github/lsdefine_genericagent.md` -> card `not promoted to public project card in this run` -> site report `not promoted to public site report in this run`
 - **EvoMap/awesome-agent-evolution** -> raw `raw-github/evomap_awesome-agent-evolution.md` -> card `projects/394-evomap-awesome-agent-evolution.md` -> site report `site/public/reports/projects/394-evomap-awesome-agent-evolution.md`
 - **uid4oe/insight-swarm** -> raw `raw-github/uid4oe_insight-swarm.md` -> card `not promoted to public project card in this run` -> site report `not promoted to public site report in this run`
+- **desplega-ai/agent-swarm** -> raw `raw-github/desplega-ai_agent-swarm.md` -> card `projects/405-agent-swarm-compounding-lead-worker-runtime.md` -> site report `site/public/reports/projects/405-agent-swarm-compounding-lead-worker-runtime.md`
 
 ## Working Principle
 
@@ -22,6 +23,6 @@ Authenticated GitHub API snapshots -> raw captures -> classification -> timestam
 ## Evidence Boundaries
 
 - This loop used authenticated GitHub GraphQL/API access through `gh`.
-- Relative to the 2026-06-14 14:22 packet, 7 of the 8 anchors moved on public metadata; only Insight Swarm stayed unchanged.
+- Relative to the 2026-06-15 08:24 packet, 8 of the 9 anchors moved on public metadata.
 - GitNexus is partially available: `node .gitnexus/run.cjs status` works, but `node .gitnexus/run.cjs query agentmemory --repo awesome-evolution-workspace-cleanup` fails while loading LadybugDB because the database file version is `41` and the current build storage version is `40`.
 - Public copy review gate is still incomplete; this run updates evidence surfaces but does not claim review-complete copy quality.

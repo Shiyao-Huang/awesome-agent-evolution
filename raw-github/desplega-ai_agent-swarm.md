@@ -1,15 +1,15 @@
 ---
 repo: desplega-ai/agent-swarm
 url: https://github.com/desplega-ai/agent-swarm
-content_timestamp: 2026-06-13
+content_timestamp: 2026-06-15
 time_slice: 2026-06
-timestamp_source: github_graphql_api_observed_2026_06_13
-collected_at: 2026-06-13T02:15:12+08:00
+timestamp_source: gh_api_graphql_authenticated_2026_06_15
+collected_at: 2026-06-15T20:24:30+08:00
 source: github
 source_tool: gh.api.graphql
 ---
 
-## GitHub - desplega-ai/agent-swarm: Agent Swarm is a production-oriented lead-worker runtime that routes work from Slack/GitHub/Email/API into Dockerized agent workers, persists memory and identity, and exposes MCP, workflows, pages, and recurring task patterns as reusable swarm infrastructure.
+## GitHub - desplega-ai/agent-swarm: Intelligence that compounds. Every single day.
 
 **Source**: https://github.com/desplega-ai/agent-swarm
 
@@ -17,31 +17,34 @@ source_tool: gh.api.graphql
 
 # Raw public metadata capture notes
 
-This raw-style GitHub capture was refreshed by the hourly public metadata update using authenticated GitHub GraphQL/API access through `gh` on 2026-06-13. Counts are current public API snapshot values, not local summaries.
+This raw GitHub capture was refreshed by the hourly public metadata update through authenticated GitHub GraphQL/API access via `gh`.
 
 ## Visible repository metadata
 
 - Repository: desplega-ai/agent-swarm
 - URL: https://github.com/desplega-ai/agent-swarm
-- Stars: 520
-- Forks: 57
-- Commits: 1624
+- Stars: 527
+- Forks: 58
+- Commits: 1,636
 - Open issues: 1
-- Open pull requests: 2
+- Open pull requests: 1
 - License: MIT
 - Primary language / stack signal: TypeScript/Docker/MCP/Lead-Worker Swarm
-- Latest push: 2026-06-12T17:54:36Z
-- Latest default-branch commit: 2026-06-12T17:50:23Z
-- Latest release: v1.97.0 (2026-06-12T14:05:11Z)
-- Collection timestamp: 2026-06-13T02:15:12+08:00
+- Created at: 2025-12-19T18:59:13Z
+- Last pushed at: 2026-06-15T09:52:53Z
+- Last updated at: 2026-06-15T10:30:03Z
+- Collection timestamp: 2026-06-15T20:24:30+08:00
+- Topics: ai-agents, claude, claude-code, swarm
+- Latest public release: v1.99.0 (2026-06-15)
 
 ## Visible README / page excerpts
 
-- Authenticated GitHub GraphQL/API snapshot captured on 2026-06-13 showed 520 stars, 57 forks, 1 open issue, 2 open pull requests, and 1,624 commits on `main`.
-- Latest push time is 2026-06-12T17:54:36Z and the latest default-branch commit is 2026-06-12T17:50:23Z.
-- Latest release is `v1.97.0`, published on 2026-06-12T14:05:11Z.
-- The repository still presents a lead-worker runtime with Docker worker isolation, MCP tools, compounding memory, persistent identity, dashboards, pages, and recurring workflows.
+- The authenticated GitHub API snapshot on 2026-06-15 shows 527 stars, 58 forks, 1,636 commits, 1 open issues, and 1 open pull requests.
+- Relative to the previous 2026-06-15 08:24 packet: stars = 527; forks = 58; issues = 1; PRs = 1; commits = 1,636; pushedAt unknown -> 2026-06-15T09:52:53Z; updatedAt unknown -> 2026-06-15T10:30:03Z.
+- The public repository still centers the lead-worker runtime story: Slack, GitHub, email, API, pages, workflows, and MCP all feed a compounding swarm rather than a single-session script.
+- The newest public release moved again on 2026-06-15, so the swarm thread now has a same-day authenticated packet rather than only the 2026-06-13 checkpoint.
+- This 2026-06-15 evening refresh keeps the user-requested agent-swarm lane visible across raw evidence, processed classification, project cards, and site search surfaces.
 
 ## Raw capture boundary
 
-No benchmark was run, no source clone was modified, and no private repository metadata was used. This file preserves public GitHub API evidence for downstream classification, model-card analysis, public reports, and the site index.
+No local benchmark run, repository clone, or workflow execution was performed in this iteration. This file preserves authenticated public GitHub metadata and README-surface evidence for downstream classification, project cards, site reports, and corpus analysis.
