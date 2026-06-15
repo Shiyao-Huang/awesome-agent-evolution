@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-15T20:24:30+08:00",
+  "generated_at": "2026-06-16T02:26:37+08:00",
   "rows": [
     {
       "repo": "01-ai/langcrew",
@@ -1519,7 +1519,7 @@
     {
       "repo": "china-qijizhifeng/agentic-Harness-engineering",
       "url": "https://github.com/china-qijizhifeng/agentic-Harness-engineering",
-      "stars": "569",
+      "stars": "570",
       "prior_category": "框架",
       "prior_unclassified": "false",
       "final_category": "框架/framework",
@@ -1527,8 +1527,8 @@
       "base_theme": "harness",
       "stack": "Python/Harness Evolution/Coding-Agent Workflow",
       "time_slice": "2026-06",
-      "content_timestamp": "2026-06-15",
-      "evidence": "authenticated GitHub API snapshot on 2026-06-15; stars 561 -> 569; updatedAt 2026-06-14T20:52:54Z -> 2026-06-15T11:45:35Z. topic/description surface still matches harness / framework-runtime.",
+      "content_timestamp": "2026-06-16",
+      "evidence": "authenticated GitHub API snapshot on 2026-06-16; stars 569 -> 570; updatedAt 2026-06-15T11:45:35Z -> 2026-06-15T17:37:01Z. topic/description surface still matches harness / framework-runtime.",
       "description": "Harness engineering is the layer where prompts, tools, middleware, memory, subagents, and evaluators become editable agent infrastructure rather than fixed wrappers around a base model."
     },
     {
@@ -2134,7 +2134,7 @@
     {
       "repo": "desplega-ai/agent-swarm",
       "url": "https://github.com/desplega-ai/agent-swarm",
-      "stars": "527",
+      "stars": "529",
       "prior_category": "-",
       "prior_unclassified": "true",
       "final_category": "框架/framework",
@@ -2142,8 +2142,8 @@
       "base_theme": "framework",
       "stack": "TypeScript/Docker/MCP/Lead-Worker Swarm",
       "time_slice": "2026-06",
-      "content_timestamp": "2026-06-15",
-      "evidence": "authenticated GitHub API snapshot on 2026-06-15; stars = 527; forks = 58; issues = 1; PRs = 1; commits = 1,636; pushedAt unknown -> 2026-06-15T09:52:53Z; updatedAt unknown -> 2026-06-15T10:30:03Z. topic/description surface still matches framework / framework-runtime.",
+      "content_timestamp": "2026-06-16",
+      "evidence": "authenticated GitHub API snapshot on 2026-06-16; stars 527 -> 529; commits 1,636 -> 1,637; pushedAt 2026-06-15T09:52:53Z -> 2026-06-15T17:02:59Z; updatedAt 2026-06-15T10:30:03Z -> 2026-06-15T18:31:10Z. topic/description surface still matches framework / framework-runtime.",
       "description": "Agent Swarm is a production-oriented lead-worker runtime that routes work from Slack/GitHub/Email/API into Dockerized agent workers, persists memory and identity, and exposes MCP, workflows, pages, and recurring task patterns as reusable swarm infrastructure."
     },
     {
@@ -2577,8 +2577,8 @@
       "base_theme": "evolution",
       "stack": "JavaScript/Shell/Curated Taxonomy Pipeline",
       "time_slice": "2026-06",
-      "content_timestamp": "2026-06-15",
-      "evidence": "authenticated GitHub API snapshot on 2026-06-15; stars 139 -> 140; commits 62 -> 63; pushedAt 2026-06-14T16:29:41Z -> 2026-06-15T02:37:31Z; updatedAt 2026-06-14T19:53:04Z -> 2026-06-15T09:18:19Z. topic/description surface still matches evolution / resource-index.",
+      "content_timestamp": "2026-06-16",
+      "evidence": "authenticated GitHub API snapshot on 2026-06-16; commits 63 -> 64; pushedAt 2026-06-15T02:37:31Z -> 2026-06-15T14:57:02Z; updatedAt 2026-06-15T09:18:19Z -> 2026-06-15T14:58:05Z. topic/description surface still matches evolution / resource-index.",
       "description": "EvoMap/awesome-agent-evolution is a curated awesome list covering self-evolution, memory, protocols, benchmarks, coding agents, and adjacent infrastructure."
     },
     {
@@ -4759,7 +4759,7 @@
     {
       "repo": "lsdefine/GenericAgent",
       "url": "https://github.com/lsdefine/GenericAgent",
-      "stars": "12884",
+      "stars": "12889",
       "prior_category": "框架",
       "prior_unclassified": "false",
       "final_category": "框架/framework",
@@ -4767,8 +4767,8 @@
       "base_theme": "evolution",
       "stack": "Python/Self-Evolving Agent/Skill Tree Runtime",
       "time_slice": "2026-06",
-      "content_timestamp": "2026-06-15",
-      "evidence": "authenticated GitHub API snapshot on 2026-06-15; stars 12,863 -> 12,884; forks 1,483 -> 1,488; issues 81 -> 82; commits 855 -> 860; pushedAt 2026-06-14T01:43:07Z -> 2026-06-15T02:15:18Z; updatedAt 2026-06-14T20:03:46Z -> 2026-06-15T11:07:50Z. topic/description surface still matches evolution / tool-module.",
+      "content_timestamp": "2026-06-16",
+      "evidence": "authenticated GitHub API snapshot on 2026-06-16; stars 12,884 -> 12,889; forks 1,488 -> 1,490; issues 82 -> 83; commits 860 -> 862; pushedAt 2026-06-15T02:15:18Z -> 2026-06-15T13:35:30Z; updatedAt 2026-06-15T11:07:50Z -> 2026-06-15T17:59:27Z. topic/description surface still matches evolution / tool-module.",
       "description": "GenericAgent is a minimal self-evolving autonomous agent framework that grows a skill tree from a small seed loop instead of preloading a large fixed procedure library."
     },
     {
@@ -5959,17 +5959,17 @@
     {
       "repo": "NousResearch/hermes-agent",
       "url": "https://github.com/NousResearch/hermes-agent",
-      "stars": "194086",
+      "stars": "194308",
       "prior_category": "-",
       "final_category": "框架/framework",
       "function_tag": "framework-runtime",
       "base_theme": "framework",
       "stack": "Python/TypeScript/Memory/Skills/Messaging-Agent Runtime",
-      "evidence": "authenticated GitHub API snapshot on 2026-06-15; stars 193,517 -> 194,086; forks 33,848 -> 33,984; issues 6,709 -> 6,763; PRs 13,888 -> 13,988; commits 11,695 -> 11,728; pushedAt 2026-06-15T00:18:13Z -> 2026-06-15T13:01:58Z; updatedAt 2026-06-15T00:30:22Z -> 2026-06-15T13:00:34Z. topic/description surface still matches framework / framework-runtime.",
+      "evidence": "authenticated GitHub API snapshot on 2026-06-16; stars 194,086 -> 194,308; forks 33,984 -> 34,054; issues 6,763 -> 6,791; PRs 13,988 -> 13,998; commits 11,728 -> 11,751; pushedAt 2026-06-15T13:01:58Z -> 2026-06-15T18:31:09Z; updatedAt 2026-06-15T13:00:34Z -> 2026-06-15T18:29:33Z. topic/description surface still matches framework / framework-runtime.",
       "description": "Hermes Agent is a self-improving personal-agent runtime that combines memory, skill creation, session search, user modeling, messaging gateways, and scheduled automations in one user-facing system.",
       "prior_unclassified": "true",
       "time_slice": "2026-06",
-      "content_timestamp": "2026-06-15"
+      "content_timestamp": "2026-06-16"
     },
     {
       "repo": "NousResearch/hermes-agent-self-evolution",
@@ -6019,17 +6019,17 @@
     {
       "repo": "obra/superpowers",
       "url": "https://github.com/obra/superpowers",
-      "stars": "225591",
+      "stars": "228656",
       "prior_category": "-",
       "final_category": "工具/tool",
       "function_tag": "tool-module",
       "base_theme": "skill",
       "stack": "Shell/JavaScript/Cross-Agent Skills Methodology",
-      "evidence": "web-observed GitHub page on 2026-06-12 showed 225,591 stars, 20,050 forks, 441 commits, 123 issues, 155 pull requests, MIT license metadata, and continued positioning as an agentic skills framework plus software-development methodology for Claude Code, Codex, Cursor, OpenCode, and related clients.",
+      "evidence": "authenticated GitHub API snapshot on 2026-06-16; stars = 228,656; forks = 20,345; issues = 124; PRs = 162; commits = 441; pushedAt unknown -> 2026-06-13T22:17:11Z; updatedAt unknown -> 2026-06-15T18:24:27Z. topic/description surface still matches skill / tool-module.",
       "description": "Superpowers packages reusable development skills and operating procedures for coding agents, turning engineering workflow habits into cross-agent runtime policy.",
       "prior_unclassified": "true",
       "time_slice": "2026-06",
-      "content_timestamp": "2026-06-12"
+      "content_timestamp": "2026-06-16"
     },
     {
       "repo": "oceanbase/powermem",
@@ -6394,17 +6394,17 @@
     {
       "repo": "openclaw/openclaw",
       "url": "https://github.com/openclaw/openclaw",
-      "stars": "378330",
+      "stars": "378854",
       "prior_category": "-",
       "final_category": "框架/framework",
       "function_tag": "framework-runtime",
       "base_theme": "framework",
       "stack": "TypeScript/Local-First Personal Agent/Multi-Channel Runtime",
-      "evidence": "web-observed GitHub page on 2026-06-12 showed 378,330 stars, 79,122 forks, 58,599 commits, 4,206 issues, 3,753 pull requests, AGPL-3.0 license metadata, and continued product framing around a personal AI assistant that spans platforms, channels, tools, sessions, and skills.",
+      "evidence": "authenticated GitHub API snapshot on 2026-06-16; stars = 378,854; forks = 79,269; issues = 3,339; PRs = 3,041; commits = 59,023; pushedAt unknown -> 2026-06-15T18:29:45Z; updatedAt unknown -> 2026-06-15T18:31:35Z. topic/description surface still matches framework / framework-runtime.",
       "description": "OpenClaw is a local-first personal agent runtime whose product surface includes channels, sessions, tools, skills, and companion apps rather than only a benchmark-facing demo loop.",
       "prior_unclassified": "true",
       "time_slice": "2026-06",
-      "content_timestamp": "2026-06-12"
+      "content_timestamp": "2026-06-16"
     },
     {
       "repo": "openclaw/openclaw-windows-node",
@@ -6835,11 +6835,11 @@
       "function_tag": "benchmark-eval",
       "base_theme": "benchmark",
       "stack": "Python/Shell/TypeScript/OpenClaw Benchmark Harness",
-      "evidence": "authenticated GitHub API snapshot on 2026-06-15; stars 1,230 -> 1,232; updatedAt 2026-06-14T00:18:05Z -> 2026-06-15T12:24:18Z. topic/description surface still matches benchmark / benchmark-eval.",
+      "evidence": "authenticated GitHub API snapshot on 2026-06-16; No public metadata delta relative to the 2026-06-15 20:24 packet. topic/description surface still matches benchmark / benchmark-eval.",
       "description": "PinchBench is an OpenClaw-oriented real task benchmark that measures coding agents across productivity, research, writing, coding, analysis, email, memory, and skill-discovery tasks.",
       "prior_unclassified": "true",
       "time_slice": "2026-06",
-      "content_timestamp": "2026-06-15"
+      "content_timestamp": "2026-06-16"
     },
     {
       "repo": "pingcap/ossinsight",
@@ -7429,17 +7429,17 @@
     {
       "repo": "rohitg00/agentmemory",
       "url": "https://github.com/rohitg00/agentmemory",
-      "stars": "22899",
+      "stars": "22936",
       "prior_category": "-",
       "final_category": "工具/tool",
       "function_tag": "tool-module",
       "base_theme": "memory",
       "stack": "TypeScript/MCP/Coding-Agent Memory/Wiki Index",
-      "evidence": "authenticated GitHub API snapshot on 2026-06-15; stars 22,804 -> 22,899; forks 1,877 -> 1,887; issues 146 -> 147; PRs 157 -> 158; pushedAt 2026-06-11T09:48:24Z -> 2026-06-15T06:20:23Z; updatedAt 2026-06-15T00:25:41Z -> 2026-06-15T12:45:15Z. topic/description surface still matches memory / tool-module.",
+      "evidence": "authenticated GitHub API snapshot on 2026-06-16; stars 22,899 -> 22,936; forks 1,887 -> 1,891; issues 147 -> 146; updatedAt 2026-06-15T12:45:15Z -> 2026-06-15T18:18:42Z. topic/description surface still matches memory / tool-module.",
       "description": "agentmemory is a cross-harness persistent memory layer for coding agents and MCP clients, with wiki-style knowledge capture, retrieval, and continuity signals.",
       "prior_unclassified": "true",
       "time_slice": "2026-06",
-      "content_timestamp": "2026-06-15"
+      "content_timestamp": "2026-06-16"
     },
     {
       "repo": "rohitg00/awesome-openclaw",
@@ -8254,7 +8254,7 @@
     {
       "repo": "stanford-iris-lab/meta-harness",
       "url": "https://github.com/stanford-iris-lab/meta-harness",
-      "stars": "1070",
+      "stars": "1072",
       "prior_category": "-",
       "prior_unclassified": "true",
       "final_category": "框架/framework",
@@ -8262,8 +8262,8 @@
       "base_theme": "evolution",
       "stack": "Python/Harness Search/Benchmark Scaffold Evolution",
       "time_slice": "2026-06",
-      "content_timestamp": "2026-06-15",
-      "evidence": "authenticated GitHub API snapshot on 2026-06-15; stars 1,068 -> 1,070; updatedAt 2026-06-14T20:52:22Z -> 2026-06-15T11:58:09Z. topic/description surface still matches evolution / agent-evolution-infra.",
+      "content_timestamp": "2026-06-16",
+      "evidence": "authenticated GitHub API snapshot on 2026-06-16; stars 1,070 -> 1,072; updatedAt 2026-06-15T11:58:09Z -> 2026-06-15T16:03:15Z. topic/description surface still matches evolution / agent-evolution-infra.",
       "description": "Meta-Harness provides reference code for automated search over model harnesses, including terminal benchmark scaffold evolution and text-classification memory-system search."
     },
     {
@@ -9072,8 +9072,8 @@
       "base_theme": "framework",
       "stack": "TypeScript/Knowledge-Graph Multi-Agent Runtime",
       "time_slice": "2026-06",
-      "content_timestamp": "2026-06-15",
-      "evidence": "authenticated GitHub API snapshot on 2026-06-15; No public metadata delta relative to the 2026-06-15 08:24 packet. topic/description surface still matches framework / framework-runtime.",
+      "content_timestamp": "2026-06-16",
+      "evidence": "authenticated GitHub API snapshot on 2026-06-16; No public metadata delta relative to the 2026-06-15 20:24 packet. topic/description surface still matches framework / framework-runtime.",
       "description": "Insight Swarm is a knowledge-graph-mediated multi-agent runtime that removes the central orchestrator and forces synthesis through shared-graph interaction."
     },
     {

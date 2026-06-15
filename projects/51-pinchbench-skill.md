@@ -6,7 +6,7 @@ PinchBench is one of the clearest benchmark anchors in this corpus: not a self-e
 
 ## Three Sentences
 
-It spans productivity, research, writing, coding, analysis, email, memory, and skill-discovery tasks rather than a single narrow benchmark lane. That makes it important for this survey’s “benchmark as selection pressure” thread. This 2026-06-15 packet confirms the benchmark anchor on a fresh authenticated snapshot.
+It spans productivity, research, writing, coding, analysis, email, memory, and skill-discovery tasks rather than a single narrow benchmark lane. That makes it important for this survey’s “benchmark as selection pressure” thread. This 2026-06-16 packet confirms the benchmark anchor on a fresh authenticated snapshot.
 
 ## Model Card
 
@@ -16,7 +16,7 @@ It spans productivity, research, writing, coding, analysis, email, memory, and s
 | Source | `raw-github/pinchbench_skill.md` |
 | Category | Real-world agent task benchmark |
 | Pattern | task suite -> OpenClaw agent execution -> automatic and/or LLM judging -> transcript retention -> optional leaderboard upload |
-| Evidence | Authenticated GitHub API snapshot, 2026-06-15 |
+| Evidence | Authenticated GitHub API snapshot, 2026-06-16 |
 
 ## Teaching Use
 
@@ -24,4 +24,4 @@ Use PinchBench to explain why benchmark infrastructure matters as much as the ag
 
 ## Evidence And Limits
 
-The raw capture now reflects an authenticated GitHub API snapshot: 1,232 stars, 140 forks, 383 commits, 19 open issues, and 0 open pull requests observed on 2026-06-15. Relative to the previous 2026-06-15 08:24 packet: stars 1,230 -> 1,232; updatedAt 2026-06-14T00:18:05Z -> 2026-06-15T12:24:18Z. This run did not execute the benchmark, upload results, or validate leaderboard behavior locally. All benchmark-scope claims remain repository-scoped.
+The raw capture now reflects an authenticated GitHub API snapshot: 1,232 stars, 140 forks, 383 commits, 19 open issues, and 0 open pull requests observed on 2026-06-16. Relative to the previous 2026-06-15 20:24 packet: No public metadata delta relative to the 2026-06-15 20:24 packet. This run did not execute the benchmark, upload results, or validate leaderboard behavior locally. All benchmark-scope claims remain repository-scoped.

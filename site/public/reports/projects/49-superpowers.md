@@ -6,7 +6,7 @@ Superpowers is a skills-and-methodology layer for coding agents, turning operati
 
 ## Three Sentences
 
-It supports multiple agent clients, including Claude Code, Codex, Cursor, and related coding agents. Its value is that it treats development workflow as a skill library: brainstorming, worktrees, plans, TDD, review, debugging, and finishing branches. In the self-evolution graph, this is the "methodology becomes runtime" branch.
+It supports multiple agent clients, including Claude Code, Codex, Cursor, and related coding agents. Its value is that it treats development workflow as a skill library: brainstorming, worktrees, plans, TDD, review, debugging, and finishing branches. In this 2026-06-16 run, the methodology lane is now backed by authenticated API evidence instead of a web-observed fallback.
 
 ## Model Card
 
@@ -15,13 +15,13 @@ It supports multiple agent clients, including Claude Code, Codex, Cursor, and re
 | Repository | `obra/superpowers` |
 | Source | `raw-github/obra_superpowers.md` |
 | Category | Agentic skills methodology |
-| Pattern | reusable skills -> disciplined workflow -> cross-agent execution |
-| Evidence | Live public GitHub page snapshot, 2026-06-12 |
+| Pattern | reusable skills -> disciplined workflow policy -> worktrees/plans/TDD/review -> cross-agent execution |
+| Evidence | Authenticated GitHub API snapshot, 2026-06-16 |
 
 ## Teaching Use
 
-Use Superpowers to teach that self-evolution can happen through reusable operating manuals, not only through automated mutation. A skill is a compressed decision policy: when to plan, when to test, when to ask review, and when to finish. That matches the user's "write your own operating manual" requirement.
+Use Superpowers to teach that self-evolution can happen through reusable operating manuals, not only through automated mutation. A skill is a compressed decision policy: when to plan, when to test, when to ask for review, and when to finish.
 
 ## Evidence And Limits
 
-The raw capture now reflects a live public GitHub page snapshot: 225,591 stars, 20,050 forks, 441 commits, 123 issues, 155 pull requests, and MIT license metadata observed on 2026-06-12. The main limit is unchanged: methodology quality must be judged by use outcomes, not repository popularity alone.
+The raw capture now reflects an authenticated GitHub API snapshot: 228,656 stars, 20,345 forks, 441 commits, 124 open issues, and 162 open pull requests observed on 2026-06-16. Relative to the previous 2026-06-15 20:24 packet: stars = 228,656; forks = 20,345; issues = 124; PRs = 162; commits = 441; pushedAt unknown -> 2026-06-13T22:17:11Z; updatedAt unknown -> 2026-06-15T18:24:27Z. This run did not validate methodology quality through local usage outcomes. The main limit is unchanged: workflow value must be judged by operational results, not repository popularity alone.

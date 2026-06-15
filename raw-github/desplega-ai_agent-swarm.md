@@ -1,10 +1,10 @@
 ---
 repo: desplega-ai/agent-swarm
 url: https://github.com/desplega-ai/agent-swarm
-content_timestamp: 2026-06-15
+content_timestamp: 2026-06-16
 time_slice: 2026-06
-timestamp_source: gh_api_graphql_authenticated_2026_06_15
-collected_at: 2026-06-15T20:24:30+08:00
+timestamp_source: gh_api_graphql_authenticated_2026_06_16
+collected_at: 2026-06-16T02:26:37+08:00
 source: github
 source_tool: gh.api.graphql
 ---
@@ -23,27 +23,27 @@ This raw GitHub capture was refreshed by the hourly public metadata update throu
 
 - Repository: desplega-ai/agent-swarm
 - URL: https://github.com/desplega-ai/agent-swarm
-- Stars: 527
+- Stars: 529
 - Forks: 58
-- Commits: 1,636
+- Commits: 1,637
 - Open issues: 1
 - Open pull requests: 1
 - License: MIT
 - Primary language / stack signal: TypeScript/Docker/MCP/Lead-Worker Swarm
 - Created at: 2025-12-19T18:59:13Z
-- Last pushed at: 2026-06-15T09:52:53Z
-- Last updated at: 2026-06-15T10:30:03Z
-- Collection timestamp: 2026-06-15T20:24:30+08:00
+- Last pushed at: 2026-06-15T17:02:59Z
+- Last updated at: 2026-06-15T18:31:10Z
+- Collection timestamp: 2026-06-16T02:26:37+08:00
 - Topics: ai-agents, claude, claude-code, swarm
-- Latest public release: v1.99.0 (2026-06-15)
+- Latest public release: v1.99.1 (2026-06-15)
 
 ## Visible README / page excerpts
 
-- The authenticated GitHub API snapshot on 2026-06-15 shows 527 stars, 58 forks, 1,636 commits, 1 open issues, and 1 open pull requests.
-- Relative to the previous 2026-06-15 08:24 packet: stars = 527; forks = 58; issues = 1; PRs = 1; commits = 1,636; pushedAt unknown -> 2026-06-15T09:52:53Z; updatedAt unknown -> 2026-06-15T10:30:03Z.
+- The authenticated GitHub API snapshot on 2026-06-16 shows 529 stars, 58 forks, 1,637 commits, 1 open issues, and 1 open pull requests.
+- Relative to the previous 2026-06-15 20:24 packet: stars 527 -> 529; commits 1,636 -> 1,637; pushedAt 2026-06-15T09:52:53Z -> 2026-06-15T17:02:59Z; updatedAt 2026-06-15T10:30:03Z -> 2026-06-15T18:31:10Z.
 - The public repository still centers the lead-worker runtime story: Slack, GitHub, email, API, pages, workflows, and MCP all feed a compounding swarm rather than a single-session script.
-- The newest public release moved again on 2026-06-15, so the swarm thread now has a same-day authenticated packet rather than only the 2026-06-13 checkpoint.
-- This 2026-06-15 evening refresh keeps the user-requested agent-swarm lane visible across raw evidence, processed classification, project cards, and site search surfaces.
+- The newest public release moved again on 2026-06-15, so the swarm thread now has an authenticated packet with same-day release and activity evidence.
+- This 2026-06-16 refresh keeps the user-requested agent-swarm lane visible across raw evidence, processed classification, project cards, and site search surfaces.
 
 ## Raw capture boundary
 

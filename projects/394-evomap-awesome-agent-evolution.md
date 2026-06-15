@@ -6,7 +6,7 @@ EvoMap is not a runnable self-evolving system, but it is one of the best externa
 
 ## Three Sentences
 
-Its value is not execution but packaging: how the broader ecosystem currently teaches self-evolution, memory, protocols, benchmarks, and swarm adjacency to readers. That makes it a direct comparator for README, topic pages, and site entry design. This 2026-06-15 refresh keeps the comparator surface synchronized with the newest public metadata.
+Its value is not execution but packaging: how the broader ecosystem currently teaches self-evolution, memory, protocols, benchmarks, and swarm adjacency to readers. That makes it a direct comparator for README, topic pages, and site entry design. This 2026-06-16 refresh keeps the comparator surface synchronized with the newest public metadata.
 
 ## Model Card
 
@@ -16,7 +16,7 @@ Its value is not execution but packaging: how the broader ecosystem currently te
 | Source | `raw-github/evomap_awesome-agent-evolution.md` |
 | Category | External awesome list and taxonomy comparator |
 | Pattern | field taxonomy -> curated repo/paper/benchmark sections -> related awesome-list pointers -> reader-facing ecosystem navigation |
-| Evidence | Authenticated GitHub API snapshot, 2026-06-15 |
+| Evidence | Authenticated GitHub API snapshot, 2026-06-16 |
 
 ## Teaching Use
 
@@ -24,4 +24,4 @@ Use EvoMap to compare curation strategies. It is the external mirror that expose
 
 ## Evidence And Limits
 
-The raw capture now reflects an authenticated GitHub API snapshot: 140 stars, 20 forks, 63 commits, 6 open issues, and 1 open pull requests observed on 2026-06-15. Relative to the previous 2026-06-15 08:24 packet: stars 139 -> 140; commits 62 -> 63; pushedAt 2026-06-14T16:29:41Z -> 2026-06-15T02:37:31Z; updatedAt 2026-06-14T19:53:04Z -> 2026-06-15T09:18:19Z. This run did not execute EvoMap scripts or validate its data pipeline locally. The classification is based on public taxonomy, maintenance surface, and comparison value.
+The raw capture now reflects an authenticated GitHub API snapshot: 140 stars, 20 forks, 64 commits, 6 open issues, and 1 open pull requests observed on 2026-06-16. Relative to the previous 2026-06-15 20:24 packet: commits 63 -> 64; pushedAt 2026-06-15T02:37:31Z -> 2026-06-15T14:57:02Z; updatedAt 2026-06-15T09:18:19Z -> 2026-06-15T14:58:05Z. This run did not execute EvoMap scripts or validate its data pipeline locally. The classification is based on public taxonomy, maintenance surface, and comparison value.

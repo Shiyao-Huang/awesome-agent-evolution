@@ -6,7 +6,7 @@ Meta-Harness remains the cleanest outer-loop harness-search reference in the pub
 
 ## Three Sentences
 
-It matters because it isolates harness mutation from base-model change, which is exactly the mechanism many production systems implicitly use without naming it. The public repository still anchors two stories: domain onboarding and reference experiments for harness search. This 2026-06-15 refresh keeps the outer-loop reference on the newest authenticated GitHub packet.
+It matters because it isolates harness mutation from base-model change, which is exactly the mechanism many production systems implicitly use without naming it. The public repository still anchors two stories: domain onboarding and reference experiments for harness search. This 2026-06-16 refresh keeps the outer-loop reference on the newest authenticated GitHub packet.
 
 ## Model Card
 
@@ -16,7 +16,7 @@ It matters because it isolates harness mutation from base-model change, which is
 | Source | `raw-github/stanford-iris-lab_meta-harness.md` |
 | Category | Meta-harness framework and reference experiments |
 | Pattern | define domain spec -> search harness candidates -> run reference experiments -> compare outcomes -> retain stronger harness |
-| Evidence | Authenticated GitHub API snapshot, 2026-06-15 |
+| Evidence | Authenticated GitHub API snapshot, 2026-06-16 |
 
 ## Teaching Use
 
@@ -24,4 +24,4 @@ Use Meta-Harness to explain outer-loop search over prompts, workflows, or scaffo
 
 ## Evidence And Limits
 
-The raw capture now reflects an authenticated GitHub API snapshot: 1,070 stars, 104 forks, 11 commits, 4 open issues, and 0 open pull requests observed on 2026-06-15. Relative to the previous 2026-06-15 08:24 packet: stars 1,068 -> 1,070; updatedAt 2026-06-14T20:52:22Z -> 2026-06-15T11:58:09Z. This run did not execute the onboarding flow, Terminal-Bench-2 experiment, or any text-classification search workflow. Claims stay repository-scoped unless rerun.
+The raw capture now reflects an authenticated GitHub API snapshot: 1,072 stars, 104 forks, 11 commits, 4 open issues, and 0 open pull requests observed on 2026-06-16. Relative to the previous 2026-06-15 20:24 packet: stars 1,070 -> 1,072; updatedAt 2026-06-15T11:58:09Z -> 2026-06-15T16:03:15Z. This run did not execute the onboarding flow, Terminal-Bench-2 experiment, or any text-classification search workflow. Claims stay repository-scoped unless rerun.

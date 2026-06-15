@@ -1,10 +1,10 @@
 ---
 repo: EvoMap/awesome-agent-evolution
 url: https://github.com/EvoMap/awesome-agent-evolution
-content_timestamp: 2026-06-15
+content_timestamp: 2026-06-16
 time_slice: 2026-06
-timestamp_source: gh_api_graphql_authenticated_2026_06_15
-collected_at: 2026-06-15T20:24:30+08:00
+timestamp_source: gh_api_graphql_authenticated_2026_06_16
+collected_at: 2026-06-16T02:26:37+08:00
 source: github
 source_tool: gh.api.graphql
 ---
@@ -25,25 +25,25 @@ This raw GitHub capture was refreshed by the hourly public metadata update throu
 - URL: https://github.com/EvoMap/awesome-agent-evolution
 - Stars: 140
 - Forks: 20
-- Commits: 63
+- Commits: 64
 - Open issues: 6
 - Open pull requests: 1
 - License: NOASSERTION
 - Primary language / stack signal: JavaScript/Shell/Curated Taxonomy Pipeline
 - Created at: 2026-03-07T04:11:34Z
-- Last pushed at: 2026-06-15T02:37:31Z
-- Last updated at: 2026-06-15T09:18:19Z
-- Collection timestamp: 2026-06-15T20:24:30+08:00
+- Last pushed at: 2026-06-15T14:57:02Z
+- Last updated at: 2026-06-15T14:58:05Z
+- Collection timestamp: 2026-06-16T02:26:37+08:00
 - Topics: a2a, agent-evolution, agentic-ai, ai-agent, awesome, awesome-list, llm, mcp, memory-system, multi-agent, self-evolving, self-improvement, agent-framework, agent-protocol, autonomous-agent, evomap, llm-agent, prompt-engineering, skill-library, skills
 - Latest public release: none exposed through the GitHub API release list
 
 ## Visible README / page excerpts
 
-- The authenticated GitHub API snapshot on 2026-06-15 shows 140 stars, 20 forks, 63 commits, 6 open issues, and 1 open pull requests.
-- Relative to the previous 2026-06-15 08:24 packet: stars 139 -> 140; commits 62 -> 63; pushedAt 2026-06-14T16:29:41Z -> 2026-06-15T02:37:31Z; updatedAt 2026-06-14T19:53:04Z -> 2026-06-15T09:18:19Z.
+- The authenticated GitHub API snapshot on 2026-06-16 shows 140 stars, 20 forks, 64 commits, 6 open issues, and 1 open pull requests.
+- Relative to the previous 2026-06-15 20:24 packet: commits 63 -> 64; pushedAt 2026-06-15T02:37:31Z -> 2026-06-15T14:57:02Z; updatedAt 2026-06-15T09:18:19Z -> 2026-06-15T14:58:05Z.
 - The topic set still makes it a live field-packaging mirror: `agent-evolution`, `self-evolving`, `memory-system`, `multi-agent`, `skill-library`, and `awesome-list` remain active.
 - Its README still splits the field into self-evolution, memory, protocols, development platforms, coding, safety, embodied AI, papers, benchmarks, and community knowledge.
-- This 2026-06-15 packet keeps the taxonomy-comparator surface on a current authenticated baseline.
+- This 2026-06-16 packet keeps the taxonomy-comparator surface on a current authenticated baseline.
 
 ## Raw capture boundary
 
