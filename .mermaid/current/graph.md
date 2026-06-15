@@ -2,7 +2,7 @@
 
 Truth source: `.mermaid/current/graph.json`
 
-Generated: 2026-06-14T14:22:49+08:00
+Generated: 2026-06-15T08:24:11+08:00
 
 ## Current Run Repositories
 
@@ -22,6 +22,6 @@ Authenticated GitHub API snapshots -> raw captures -> classification -> timestam
 ## Evidence Boundaries
 
 - This loop used authenticated GitHub GraphQL/API access through `gh`.
-- Relative to the 2026-06-13 14:16 packet, 7 of the 8 anchors moved on public metadata; only Insight Swarm stayed unchanged.
-- GitNexus is partially available: `node .gitnexus/run.cjs status` works, but query/analyze fail when loading LadybugDB because the database file version is `41` while the current build storage version is `40`.
+- Relative to the 2026-06-14 14:22 packet, 7 of the 8 anchors moved on public metadata; only Insight Swarm stayed unchanged.
+- GitNexus is partially available: `node .gitnexus/run.cjs status` works, but `node .gitnexus/run.cjs query agentmemory --repo awesome-evolution-workspace-cleanup` fails while loading LadybugDB because the database file version is `41` and the current build storage version is `40`.
 - Public copy review gate is still incomplete; this run updates evidence surfaces but does not claim review-complete copy quality.

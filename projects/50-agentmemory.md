@@ -6,7 +6,7 @@ agentmemory is the cross-harness memory layer that turns continuity from a promi
 
 ## Three Sentences
 
-It targets Claude Code, Codex, Cursor, Hermes, OpenClaw, and MCP clients instead of staying inside one runtime. That makes it a direct answer to the user’s memory-substrate requirement for self-evolving agents. The 2026-06-14 authenticated refresh captured another metadata advance beyond yesterday's packet, so the public memory-substrate evidence now reflects the newer counts.
+It targets Claude Code, Codex, Cursor, Hermes, OpenClaw, and MCP clients instead of staying inside one runtime. That makes it a direct answer to the user’s memory-substrate requirement for self-evolving agents. This 2026-06-15 packet keeps the public memory evidence synchronized with the latest available GitHub metadata.
 
 ## Model Card
 
@@ -16,7 +16,7 @@ It targets Claude Code, Codex, Cursor, Hermes, OpenClaw, and MCP clients instead
 | Source | `raw-github/rohitg00_agentmemory.md` |
 | Category | Agent persistent memory layer |
 | Pattern | persistent memory -> wiki-style knowledge capture -> graph/hybrid retrieval -> cross-harness continuity |
-| Evidence | Authenticated GitHub API snapshot, 2026-06-14 |
+| Evidence | Authenticated GitHub API snapshot, 2026-06-15 |
 
 ## Teaching Use
 
@@ -24,4 +24,4 @@ Use agentmemory to teach why memory cannot be an afterthought. Durable facts, pr
 
 ## Evidence And Limits
 
-The raw capture now reflects an authenticated GitHub API snapshot: 22,716 stars, 1,868 forks, 462 commits, 144 open issues, 156 open pull requests, and Apache-2.0 license metadata observed on 2026-06-14. This run did not inspect the schema, lifecycle implementation, or confidence updates in code. Memory-quality claims remain repository-scoped unless validated with tests or benchmarks.
+The raw capture now reflects an authenticated GitHub API snapshot: 22,804 stars, 1,877 forks, 462 commits, 146 open issues, and 157 open pull requests observed on 2026-06-15. Relative to the previous 2026-06-14 packet: stars 22,716 -> 22,804; forks 1,868 -> 1,877; issues 144 -> 146; PRs 156 -> 157; updatedAt 2026-06-14T06:23:38Z -> 2026-06-15T00:25:41Z. This run did not inspect the schema, lifecycle implementation, or confidence updates in code. Memory-quality claims remain repository-scoped unless validated with tests or benchmarks.

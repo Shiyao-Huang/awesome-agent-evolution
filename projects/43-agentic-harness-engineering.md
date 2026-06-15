@@ -2,11 +2,11 @@
 
 ## One Sentence
 
-Agentic Harness Engineering is the clearest current example of making the harness, not only the model, the object of improvement.
+Agentic Harness Engineering remains the clearest public example of making the harness, not only the model, the object of improvement.
 
 ## Three Sentences
 
-It belongs in the runtime layer: prompts, tools, middleware, memory, subagents, and evaluators are exposed as versioned engineering surfaces. That matters for this survey because it turns benchmark deltas into something an agent team can inspect, edit, test, and roll back. The 2026-06-14 authenticated refresh captured a fresh star and timestamp movement beyond yesterday's packet, so the harness-evolution anchor still needed a new public metadata sync.
+It belongs in the runtime layer: prompts, tools, middleware, memory, subagents, and evaluators are exposed as versioned engineering surfaces. That matters for this survey because it turns benchmark deltas into something an agent team can inspect, edit, test, and roll back. The 2026-06-15 packet shows the anchor is still moving publicly, so the evidence chain needs to stay synced through raw, processed, and public-site layers.
 
 ## Model Card
 
@@ -16,7 +16,7 @@ It belongs in the runtime layer: prompts, tools, middleware, memory, subagents, 
 | Source | `raw-github/china-qijizhifeng_agentic-harness-engineering.md` |
 | Category | Harness evolution engineering |
 | Pattern | editable harness surface -> evaluator pressure -> harness mutation -> regression verification |
-| Evidence | Authenticated GitHub API snapshot, 2026-06-14 |
+| Evidence | Authenticated GitHub API snapshot, 2026-06-15 |
 
 ## Teaching Use
 
@@ -24,4 +24,4 @@ Use this project to explain why self-evolution is not limited to weight updates 
 
 ## Evidence And Limits
 
-The raw capture now reflects an authenticated GitHub API snapshot: 556 stars, 62 forks, 45 commits, 0 open issues, 0 open pull requests, and MIT license metadata observed on 2026-06-14. This run did not rerun Terminal-Bench-2, SWE-bench-Verified, or the paper workflow locally. Benchmark claims remain tied to the repository and paper surfaces unless independently reproduced.
+The raw capture now reflects an authenticated GitHub API snapshot: 561 stars, 64 forks, 46 commits, 0 open issues, and 0 open pull requests observed on 2026-06-15. Relative to the previous 2026-06-14 packet: stars 556 -> 561; forks 62 -> 64; commits 45 -> 46; pushedAt 2026-06-09T05:43:14Z -> 2026-06-14T16:03:21Z; updatedAt 2026-06-13T16:21:31Z -> 2026-06-14T20:52:54Z. This run did not rerun Terminal-Bench-2, SWE-bench-Verified, or the paper workflow locally. Benchmark claims remain tied to the repository and paper surfaces unless independently reproduced.

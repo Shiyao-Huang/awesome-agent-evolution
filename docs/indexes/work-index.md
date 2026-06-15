@@ -1,6 +1,6 @@
 # Work / 工作产物 Index
 
-> Generated: 2026-06-14
+> Generated: 2026-06-15
 
 ## Rule
 
@@ -15,9 +15,9 @@
 | `latex` | present | 9 | 2 | 0 | 53 KB |
 | `site` | present | 2293 | 1081 | 0 | 66 MB |
 | `survey` | present | 94 | 4 | 0 | 3.4 MB |
-| `scripts` | present | 74 | 1 | 0 | 2.0 MB |
+| `scripts` | present | 75 | 1 | 0 | 2.1 MB |
 | `data-engine` | present | 495 | 20 | 0 | 29 MB |
-| `work/research` | present | 95 | 2 | 0 | 2.3 MB |
+| `work/research` | present | 97 | 2 | 0 | 2.3 MB |
 | `work/wiki` | present | 85 | 6 | 0 | 587 KB |
 | `wiki` | present | 8 | 2 | 0 | 4.2 MB |
 
