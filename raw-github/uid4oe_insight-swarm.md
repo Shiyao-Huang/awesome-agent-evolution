@@ -3,10 +3,10 @@ repo: uid4oe/insight-swarm
 url: https://github.com/uid4oe/insight-swarm
 content_timestamp: 2026-06-16
 time_slice: 2026-06
-timestamp_source: gh_api_graphql_authenticated_2026_06_16
-collected_at: 2026-06-16T14:28:39+08:00
+timestamp_source: gh_api_graphql_authenticated_2026_06_16_2027
+collected_at: 2026-06-16T20:27:47+08:00
 source: github
-source_tool: gh.api.graphql
+source_tool: previous_authenticated_packet_2026-06-16-1428
 ---
 
 ## GitHub - uid4oe/insight-swarm: Emergent multi-agent intelligence — AI agents collaborate via a shared knowledge graph, discovering tensions and synthesizing theses without a central orchestrator.
@@ -17,7 +17,7 @@ source_tool: gh.api.graphql
 
 # Raw public metadata capture notes
 
-This raw GitHub capture was refreshed by the hourly public metadata update through authenticated GitHub GraphQL/API access via `gh`.
+This raw GitHub capture was refreshed by the hourly public metadata update through authenticated GitHub API access via `gh`.
 
 ## Visible repository metadata
 
@@ -33,18 +33,20 @@ This raw GitHub capture was refreshed by the hourly public metadata update throu
 - Created at: 2026-02-15T12:38:51Z
 - Last pushed at: 2026-03-19T18:04:30Z
 - Last updated at: 2026-03-19T21:28:11Z
-- Collection timestamp: 2026-06-16T14:28:39+08:00
+- Collection timestamp: 2026-06-16T20:27:47+08:00
 - Topics: agents, llm, swarm-intelligence
 - Latest public release: none exposed through the GitHub API release list
 
 ## Visible README / page excerpts
 
-- The authenticated GitHub API snapshot on 2026-06-16 shows 0 stars, 0 forks, 25 commits, 0 open issues, and 0 open pull requests.
-- Relative to the previous 2026-06-16 08:26 +0800 packet: commits = 25; pushedAt unknown -> 2026-03-19T18:04:30Z; updatedAt unknown -> 2026-03-19T21:28:11Z.
-- The public README still makes the architectural claim explicit: replace the central orchestrator with a shared knowledge graph and let agents discover, challenge, and synthesize each other’s findings.
-- Its topic set stays sparse (`agents`, `llm`, `swarm-intelligence`), so the repo is still more valuable as a concept anchor than as a momentum signal.
-- This 2026-06-16 packet keeps the swarm concept anchor refreshed even though it remains outside the public site registry.
+- The current packet on 2026-06-16 shows 0 stars, 0 forks, 25 commits, 0 open issues, and 0 open pull requests.
+- The public README still makes the architectural claim explicit: replace the central orchestrator with a shared knowledge graph and let agents discover, challenge, and synthesize.
+- Its sparse topic set keeps it more useful as a concept anchor than as a public momentum signal.
+- Live GitHub fetch was not fully available during this run, so the metadata surface keeps the previous authenticated packet from 2026-06-16 14:28 +0800.
 
 ## Raw capture boundary
 
-No local benchmark run, repository clone, or workflow execution was performed in this iteration. This file preserves authenticated public GitHub metadata and README-surface evidence for downstream classification, project cards, site reports, and corpus analysis.
+- Fetch lane: live GitHub fetch unavailable; retained 2026-06-16 14:28 +0800 authenticated packet.
+- Fetch blocker: graphql: GitHub GraphQL failed for uid4oe/insight-swarm; rest: GitHub REST failed for uid4oe/insight-swarm.
+- No local benchmark run, repository clone, or workflow execution was performed in this iteration.
+- This file preserves GitHub metadata and README-surface evidence for downstream classification, project cards, site reports, and corpus analysis.

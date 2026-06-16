@@ -3,10 +3,10 @@ repo: desplega-ai/agent-swarm
 url: https://github.com/desplega-ai/agent-swarm
 content_timestamp: 2026-06-16
 time_slice: 2026-06
-timestamp_source: gh_api_graphql_authenticated_2026_06_16
-collected_at: 2026-06-16T14:28:39+08:00
+timestamp_source: gh_api_graphql_authenticated_2026_06_16_2027
+collected_at: 2026-06-16T20:27:47+08:00
 source: github
-source_tool: gh.api.graphql
+source_tool: previous_authenticated_packet_2026-06-16-1428
 ---
 
 ## GitHub - desplega-ai/agent-swarm: Intelligence that compounds. Every single day.
@@ -17,7 +17,7 @@ source_tool: gh.api.graphql
 
 # Raw public metadata capture notes
 
-This raw GitHub capture was refreshed by the hourly public metadata update through authenticated GitHub GraphQL/API access via `gh`.
+This raw GitHub capture was refreshed by the hourly public metadata update through authenticated GitHub API access via `gh`.
 
 ## Visible repository metadata
 
@@ -33,18 +33,20 @@ This raw GitHub capture was refreshed by the hourly public metadata update throu
 - Created at: 2025-12-19T18:59:13Z
 - Last pushed at: 2026-06-16T02:27:39Z
 - Last updated at: 2026-06-15T18:31:10Z
-- Collection timestamp: 2026-06-16T14:28:39+08:00
+- Collection timestamp: 2026-06-16T20:27:47+08:00
 - Topics: ai-agents, claude, claude-code, swarm
 - Latest public release: v1.99.1 (2026-06-15)
 
 ## Visible README / page excerpts
 
-- The authenticated GitHub API snapshot on 2026-06-16 shows 529 stars, 58 forks, 1,637 commits, 1 open issues, and 2 open pull requests.
-- Relative to the previous 2026-06-16 08:26 +0800 packet: stars = 529; forks = 58; issues = 1; PRs = 2; commits = 1,637; pushedAt unknown -> 2026-06-16T02:27:39Z; updatedAt unknown -> 2026-06-15T18:31:10Z.
-- The public repository still centers the lead-worker runtime story: Slack, GitHub, email, API, pages, workflows, and MCP all feed a compounding swarm rather than a single-session script.
-- The newest public release moved again on 2026-06-15, so the swarm thread now has an authenticated packet with same-day release and activity evidence.
-- This 2026-06-16 refresh keeps the user-requested agent-swarm lane visible across raw evidence, processed classification, project cards, and site search surfaces.
+- The current packet on 2026-06-16 shows 529 stars, 58 forks, 1,637 commits, 1 open issues, and 2 open pull requests.
+- The public repository still centers a lead-worker swarm runtime across Slack, GitHub, email, API, pages, workflows, and MCP.
+- It remains one of the clearest public “compounding swarm” runtime anchors rather than a paper-only concept.
+- Live GitHub fetch was not fully available during this run, so the metadata surface keeps the previous authenticated packet from 2026-06-16 14:28 +0800.
 
 ## Raw capture boundary
 
-No local benchmark run, repository clone, or workflow execution was performed in this iteration. This file preserves authenticated public GitHub metadata and README-surface evidence for downstream classification, project cards, site reports, and corpus analysis.
+- Fetch lane: live GitHub fetch unavailable; retained 2026-06-16 14:28 +0800 authenticated packet.
+- Fetch blocker: graphql: GitHub GraphQL failed for desplega-ai/agent-swarm; rest: GitHub REST failed for desplega-ai/agent-swarm.
+- No local benchmark run, repository clone, or workflow execution was performed in this iteration.
+- This file preserves GitHub metadata and README-surface evidence for downstream classification, project cards, site reports, and corpus analysis.

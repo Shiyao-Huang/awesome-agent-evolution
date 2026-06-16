@@ -24,4 +24,4 @@ Use this project to explain why self-evolution is not limited to weight updates 
 
 ## Evidence And Limits
 
-The raw capture now reflects an authenticated GitHub API snapshot: 575 stars, 64 forks, 46 commits, 0 open issues, and 0 open pull requests observed on 2026-06-16. Relative to the previous 2026-06-16 08:26 +0800 packet: stars = 575; forks = 64; commits = 46; pushedAt unknown -> 2026-06-14T16:03:21Z; updatedAt unknown -> 2026-06-16T05:38:40Z. This run did not rerun Terminal-Bench-2, SWE-bench-Verified, or the paper workflow locally. Benchmark claims remain tied to the repository and paper surfaces unless independently reproduced.
+The raw capture now reflects a GitHub metadata packet observed on 2026-06-16: 575 stars, 64 forks, 46 commits, 0 open issues, and 0 open pull requests. The live GitHub fetch was degraded in this run, so some fields were preserved from the previous authenticated packet at 2026-06-16 14:28 +0800. This run did not execute the repository locally, validate workflows end to end, or independently rerun benchmark claims. Product, memory, benchmark, and automation claims therefore remain repository-scoped unless separately tested.

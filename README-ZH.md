@@ -37,24 +37,25 @@ GitHub topic 收录状态（2026-06-05）：GitHub API 和 `gh search repos 'top
 | 产品/投资/行业读者 | 区分真实能力积累、刷榜、演示热度和治理成熟度。 |
 | 内容创作者 | 获得带证据入口的选题地图：项目、论文、趋势、痛点、图谱和长尾 SEO 页面。 |
 
-## 本轮 GitHub Metadata 修复包（2026-06-16 08:26 +0800）
+## 近期证据更新（2026-06-16 20:27 +0800）
 
-本轮是新的 authenticated GitHub API packet，而不是沿用 `2026-06-16 02:26 +0800` 的早间快照。相对该 packet，11 个锚点里有 7 个出现新的公开 metadata 变化；保持不变的条目是 PinchBench Skill、EvoMap/awesome-agent-evolution、uid4oe/insight-swarm、desplega-ai/agent-swarm。
+本轮是新的 hourly public metadata 修复包，不再沿用 `2026-06-16 14:28 +0800` 的上一个 authenticated packet 作为唯一前台口径。抓取链路本身是抖动的而不是完全不可用，因此本轮按“先重试 live GitHub API，失败时明确回退到上一个 authenticated packet”的规则更新，避免伪造 freshness。
 
-| 仓库 | 这轮状态 | 为什么重要 |
-|---|---|---|
-| [china-qijizhifeng/agentic-Harness-engineering](https://github.com/china-qijizhifeng/agentic-Harness-engineering) | stars 570 -> 571；updatedAt 2026-06-15T17:37:01Z -> 2026-06-15T21:12:02Z。 | 它是“harness 本身可进化”的最直接锚点。 |
-| [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent) | stars 194,308 -> 194,440；forks 34,054 -> 34,092；issues 6,791 -> 6,816；PRs 13,998 -> 14,017；commits 11,751 -> 11,788；pushedAt 2026-06-15T18:31:09Z -> 2026-06-16T00:23:04Z；updatedAt 2026-06-15T18:29:33Z -> 2026-06-16T00:25:12Z。 | 它回答“可用产品型 agent 长什么样”这个核心问题。 |
-| [stanford-iris-lab/meta-harness](https://github.com/stanford-iris-lab/meta-harness) | stars 1,072 -> 1,076；updatedAt 2026-06-15T16:03:15Z -> 2026-06-15T23:09:49Z。 | 它是 outer-loop harness search 的最干净参考样本。 |
-| [rohitg00/agentmemory](https://github.com/rohitg00/agentmemory) | stars 22,936 -> 22,961；forks 1,891 -> 1,893；updatedAt 2026-06-15T18:18:42Z -> 2026-06-16T00:26:04Z。 | 它回答“长期记忆如何跨 Codex / Claude Code / Hermes / OpenClaw 持续积累”。 |
-| [pinchbench/skill](https://github.com/pinchbench/skill) | 与上一轮 2026-06-16 02:26 +0800 packet 相比无公开数字变化。 | 它是 skill、memory、benchmark 三条线交叉的 evaluator substrate。 |
-| [lsdefine/GenericAgent](https://github.com/lsdefine/GenericAgent) | issues 83 -> 84；stars、forks、commits、pushedAt、updatedAt 相比上一轮 2026-06-16 02:26 +0800 packet 保持不变。 | 它是“不要预装技能，而是让技能树生长”的 self-evolving 极简路线。 |
-| [openclaw/openclaw](https://github.com/openclaw/openclaw) | stars 378,854 -> 378,882；forks 79,269 -> 79,271；PRs 3,041 -> 2,989；commits 59,023 -> 59,077；pushedAt 2026-06-15T18:29:45Z -> 2026-06-16T00:23:05Z；updatedAt 2026-06-15T18:31:35Z -> 2026-06-16T00:25:07Z。 | 它是“agent 是否真的能给人用”的产品运行时锚点。 |
-| [obra/superpowers](https://github.com/obra/superpowers) | stars 228,656 -> 228,771；forks 20,345 -> 20,349；commits 441 -> 442；pushedAt 2026-06-13T22:17:11Z -> 2026-06-15T23:57:48Z；updatedAt 2026-06-15T18:24:27Z -> 2026-06-16T00:17:51Z。 | 它把可复用技能和工程方法论这条线接进了自进化公开证据链。 |
-| [EvoMap/awesome-agent-evolution](https://github.com/EvoMap/awesome-agent-evolution) | 与上一轮 2026-06-16 02:26 +0800 packet 相比无公开数字变化。 | 它帮助我们检查公开叙事是否比普通 awesome list 更有证据密度。 |
-| [uid4oe/insight-swarm](https://github.com/uid4oe/insight-swarm) | 与上一轮 2026-06-16 02:26 +0800 packet 相比无公开数字变化。 | 它是“shared knowledge graph 替代中心 orchestrator”的 swarm 概念锚点。 |
-| [desplega-ai/agent-swarm](https://github.com/desplega-ai/agent-swarm) | 与上一轮 2026-06-16 02:26 +0800 packet 相比无公开数字变化。 | 它把用户要求的 agent-swarm 主线补进了公开证据链。 |
+| 仓库 | 这轮状态 | 为什么重要 | 证据状态 |
+|---|---|---|---|
+| [china-qijizhifeng/agentic-Harness-engineering](https://github.com/china-qijizhifeng/agentic-Harness-engineering) | Live GitHub fetch was not fully available during this run, so the metadata surface keeps the previous authenticated packet from 2026-06-16 14:28 +0800. | 它是“harness 本身可进化”的最直接锚点。 | [INFERRED] 保留 2026-06-16 14:28 +0800 packet；本轮 live fetch 受阻。 |
+| [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent) | Live GitHub fetch was not fully available during this run, so the metadata surface keeps the previous authenticated packet from 2026-06-16 14:28 +0800. | 它回答“可用产品型 agent 长什么样”这个核心问题。 | [INFERRED] 保留 2026-06-16 14:28 +0800 packet；本轮 live fetch 受阻。 |
+| [stanford-iris-lab/meta-harness](https://github.com/stanford-iris-lab/meta-harness) | Live GitHub fetch was not fully available during this run, so the metadata surface keeps the previous authenticated packet from 2026-06-16 14:28 +0800. | 它是 outer-loop harness search 的最干净参考样本。 | [INFERRED] 保留 2026-06-16 14:28 +0800 packet；本轮 live fetch 受阻。 |
+| [rohitg00/agentmemory](https://github.com/rohitg00/agentmemory) | Live GitHub fetch was not fully available during this run, so the metadata surface keeps the previous authenticated packet from 2026-06-16 14:28 +0800. | 它回答“长期记忆如何跨 Codex / Claude Code / Hermes / OpenClaw 持续积累”。 | [INFERRED] 保留 2026-06-16 14:28 +0800 packet；本轮 live fetch 受阻。 |
+| [pinchbench/skill](https://github.com/pinchbench/skill) | Live GitHub fetch was not fully available during this run, so the metadata surface keeps the previous authenticated packet from 2026-06-16 14:28 +0800. | 它是 skill、memory、benchmark 三条线交叉的 evaluator substrate。 | [INFERRED] 保留 2026-06-16 14:28 +0800 packet；本轮 live fetch 受阻。 |
+| [lsdefine/GenericAgent](https://github.com/lsdefine/GenericAgent) | Live GitHub fetch was not fully available during this run, so the metadata surface keeps the previous authenticated packet from 2026-06-16 14:28 +0800. | 它是“不要预装技能，而是让技能树生长”的 self-evolving 极简路线。 | [INFERRED] 保留 2026-06-16 14:28 +0800 packet；本轮 live fetch 受阻。 |
+| [openclaw/openclaw](https://github.com/openclaw/openclaw) | Live GitHub fetch was not fully available during this run, so the metadata surface keeps the previous authenticated packet from 2026-06-16 14:28 +0800. | 它是“agent 是否真的能给人用”的产品运行时锚点。 | [INFERRED] 保留 2026-06-16 14:28 +0800 packet；本轮 live fetch 受阻。 |
+| [obra/superpowers](https://github.com/obra/superpowers) | Live GitHub fetch was not fully available during this run, so the metadata surface keeps the previous authenticated packet from 2026-06-16 14:28 +0800. | 它把可复用技能和工程方法论这条线接进了自进化公开证据链。 | [INFERRED] 保留 2026-06-16 14:28 +0800 packet；本轮 live fetch 受阻。 |
+| [EvoMap/awesome-agent-evolution](https://github.com/EvoMap/awesome-agent-evolution) | Live GitHub fetch was not fully available during this run, so the metadata surface keeps the previous authenticated packet from 2026-06-16 14:28 +0800. | 它帮助我们检查公开叙事是否比普通 awesome list 更有证据密度。 | [INFERRED] 保留 2026-06-16 14:28 +0800 packet；本轮 live fetch 受阻。 |
+| [uid4oe/insight-swarm](https://github.com/uid4oe/insight-swarm) | Live GitHub fetch was not fully available during this run, so the metadata surface keeps the previous authenticated packet from 2026-06-16 14:28 +0800. | 它是“shared knowledge graph 替代中心 orchestrator”的 swarm 概念锚点。 | [INFERRED] 保留 2026-06-16 14:28 +0800 packet；本轮 live fetch 受阻。 |
+| [desplega-ai/agent-swarm](https://github.com/desplega-ai/agent-swarm) | Live GitHub fetch was not fully available during this run, so the metadata surface keeps the previous authenticated packet from 2026-06-16 14:28 +0800. | 它把用户要求的 agent-swarm 主线补进了公开证据链。 | [INFERRED] 保留 2026-06-16 14:28 +0800 packet；本轮 live fetch 受阻。 |
 
+GitNexus 证据链本轮可用但有边界：`node .gitnexus/run.cjs status` 和带 `-r awesome-evolution-workspace-cleanup` 的 `query` 都能工作，并把小时更新链路指回历史脚本里的 `renderGraphJson`、`renderGraphMd`、`renderRunNote` 等节点；但索引状态仍然是 `stale`，所以本轮把它作为关系证据，不把它当作“已经最新”的索引结论。
 ## 核心洞察
 
 一句话：本项目的核心洞察，是把 Self-Evolving AI Agents 从“自我改进的故事”变成“可审计的改进系统”。
@@ -181,24 +182,25 @@ flowchart TB
   note         = {Open survey repository for self-evolving AI agents, benchmark evidence, project model cards, and field maturity indexing.}
 }
 ```
-## 本轮 GitHub Metadata 修复包（2026-06-16）
+## 近期证据更新（2026-06-16 20:27 +0800）
 
-本轮是新的 authenticated GitHub API packet，而不是沿用 `2026-06-16 08:26 +0800` 的上一轮快照。相对该 packet，11 个锚点里有 11 个出现新的公开 metadata 变化；保持不变的条目是 无。
+本轮是新的 hourly public metadata 修复包，不再沿用 `2026-06-16 14:28 +0800` 的上一个 authenticated packet 作为唯一前台口径。抓取链路本身是抖动的而不是完全不可用，因此本轮按“先重试 live GitHub API，失败时明确回退到上一个 authenticated packet”的规则更新，避免伪造 freshness。
 
-| 仓库 | 这轮状态 | 为什么重要 |
-|---|---|---|
-| [china-qijizhifeng/agentic-Harness-engineering](https://github.com/china-qijizhifeng/agentic-Harness-engineering) | stars = 575；forks = 64；commits = 46；pushedAt unknown -> 2026-06-14T16:03:21Z；updatedAt unknown -> 2026-06-16T05:38:40Z。 | 它是“harness 本身可进化”的最直接锚点。 |
-| [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent) | stars = 194,687；forks = 34,157；issues = 6,857；PRs = 14,099；commits = 11,798；pushedAt unknown -> 2026-06-16T06:10:54Z；updatedAt unknown -> 2026-06-16T06:32:07Z。 | 它回答“可用产品型 agent 长什么样”这个核心问题。 |
-| [stanford-iris-lab/meta-harness](https://github.com/stanford-iris-lab/meta-harness) | stars = 1,079；forks = 104；issues = 4；commits = 11；pushedAt unknown -> 2026-04-29T16:39:58Z；updatedAt unknown -> 2026-06-16T05:34:26Z。 | 它是 outer-loop harness search 的最干净参考样本。 |
-| [rohitg00/agentmemory](https://github.com/rohitg00/agentmemory) | stars = 23,006；forks = 1,899；issues = 147；PRs = 160；commits = 462；pushedAt unknown -> 2026-06-15T06:20:23Z；updatedAt unknown -> 2026-06-16T06:30:35Z。 | 它回答“长期记忆如何跨 Codex / Claude Code / Hermes / OpenClaw 持续积累”。 |
-| [pinchbench/skill](https://github.com/pinchbench/skill) | stars = 1,234；forks = 140；issues = 20；PRs = 1；commits = 383；pushedAt unknown -> 2026-06-02T21:35:43Z；updatedAt unknown -> 2026-06-16T05:55:10Z。 | 它是 skill、memory、benchmark 三条线交叉的 evaluator substrate。 |
-| [lsdefine/GenericAgent](https://github.com/lsdefine/GenericAgent) | stars = 12,895；forks = 1,490；issues = 84；PRs = 61；commits = 864；pushedAt unknown -> 2026-06-16T03:27:32Z；updatedAt unknown -> 2026-06-16T05:00:16Z。 | 它是“不要预装技能，而是让技能树生长”的 self-evolving 极简路线。 |
-| [openclaw/openclaw](https://github.com/openclaw/openclaw) | stars = 378,926；forks = 79,283；issues = 3,321；PRs = 2,972；commits = 59,184；pushedAt unknown -> 2026-06-16T06:31:55Z；updatedAt unknown -> 2026-06-16T06:32:11Z。 | 它是“agent 是否真的能给人用”的产品运行时锚点。 |
-| [obra/superpowers](https://github.com/obra/superpowers) | stars = 229,084；forks = 20,380；issues = 125；PRs = 159；commits = 442；pushedAt unknown -> 2026-06-16T05:34:02Z；updatedAt unknown -> 2026-06-16T06:32:17Z。 | 它把可复用技能和工程方法论这条线接进了自进化公开证据链。 |
-| [EvoMap/awesome-agent-evolution](https://github.com/EvoMap/awesome-agent-evolution) | stars = 140；forks = 20；issues = 6；PRs = 1；commits = 64；pushedAt unknown -> 2026-06-15T14:57:02Z；updatedAt unknown -> 2026-06-15T14:58:05Z。 | 它帮助我们检查公开叙事是否比普通 awesome list 更有证据密度。 |
-| [uid4oe/insight-swarm](https://github.com/uid4oe/insight-swarm) | commits = 25；pushedAt unknown -> 2026-03-19T18:04:30Z；updatedAt unknown -> 2026-03-19T21:28:11Z。 | 它是“shared knowledge graph 替代中心 orchestrator”的 swarm 概念锚点。 |
-| [desplega-ai/agent-swarm](https://github.com/desplega-ai/agent-swarm) | stars = 529；forks = 58；issues = 1；PRs = 2；commits = 1,637；pushedAt unknown -> 2026-06-16T02:27:39Z；updatedAt unknown -> 2026-06-15T18:31:10Z。 | 它把用户要求的 agent-swarm 主线补进了公开证据链。 |
+| 仓库 | 这轮状态 | 为什么重要 | 证据状态 |
+|---|---|---|---|
+| [china-qijizhifeng/agentic-Harness-engineering](https://github.com/china-qijizhifeng/agentic-Harness-engineering) | Live GitHub fetch was not fully available during this run, so the metadata surface keeps the previous authenticated packet from 2026-06-16 14:28 +0800. | 它是“harness 本身可进化”的最直接锚点。 | [INFERRED] 保留 2026-06-16 14:28 +0800 packet；本轮 live fetch 受阻。 |
+| [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent) | Live GitHub fetch was not fully available during this run, so the metadata surface keeps the previous authenticated packet from 2026-06-16 14:28 +0800. | 它回答“可用产品型 agent 长什么样”这个核心问题。 | [INFERRED] 保留 2026-06-16 14:28 +0800 packet；本轮 live fetch 受阻。 |
+| [stanford-iris-lab/meta-harness](https://github.com/stanford-iris-lab/meta-harness) | Live GitHub fetch was not fully available during this run, so the metadata surface keeps the previous authenticated packet from 2026-06-16 14:28 +0800. | 它是 outer-loop harness search 的最干净参考样本。 | [INFERRED] 保留 2026-06-16 14:28 +0800 packet；本轮 live fetch 受阻。 |
+| [rohitg00/agentmemory](https://github.com/rohitg00/agentmemory) | Live GitHub fetch was not fully available during this run, so the metadata surface keeps the previous authenticated packet from 2026-06-16 14:28 +0800. | 它回答“长期记忆如何跨 Codex / Claude Code / Hermes / OpenClaw 持续积累”。 | [INFERRED] 保留 2026-06-16 14:28 +0800 packet；本轮 live fetch 受阻。 |
+| [pinchbench/skill](https://github.com/pinchbench/skill) | Live GitHub fetch was not fully available during this run, so the metadata surface keeps the previous authenticated packet from 2026-06-16 14:28 +0800. | 它是 skill、memory、benchmark 三条线交叉的 evaluator substrate。 | [INFERRED] 保留 2026-06-16 14:28 +0800 packet；本轮 live fetch 受阻。 |
+| [lsdefine/GenericAgent](https://github.com/lsdefine/GenericAgent) | Live GitHub fetch was not fully available during this run, so the metadata surface keeps the previous authenticated packet from 2026-06-16 14:28 +0800. | 它是“不要预装技能，而是让技能树生长”的 self-evolving 极简路线。 | [INFERRED] 保留 2026-06-16 14:28 +0800 packet；本轮 live fetch 受阻。 |
+| [openclaw/openclaw](https://github.com/openclaw/openclaw) | Live GitHub fetch was not fully available during this run, so the metadata surface keeps the previous authenticated packet from 2026-06-16 14:28 +0800. | 它是“agent 是否真的能给人用”的产品运行时锚点。 | [INFERRED] 保留 2026-06-16 14:28 +0800 packet；本轮 live fetch 受阻。 |
+| [obra/superpowers](https://github.com/obra/superpowers) | Live GitHub fetch was not fully available during this run, so the metadata surface keeps the previous authenticated packet from 2026-06-16 14:28 +0800. | 它把可复用技能和工程方法论这条线接进了自进化公开证据链。 | [INFERRED] 保留 2026-06-16 14:28 +0800 packet；本轮 live fetch 受阻。 |
+| [EvoMap/awesome-agent-evolution](https://github.com/EvoMap/awesome-agent-evolution) | Live GitHub fetch was not fully available during this run, so the metadata surface keeps the previous authenticated packet from 2026-06-16 14:28 +0800. | 它帮助我们检查公开叙事是否比普通 awesome list 更有证据密度。 | [INFERRED] 保留 2026-06-16 14:28 +0800 packet；本轮 live fetch 受阻。 |
+| [uid4oe/insight-swarm](https://github.com/uid4oe/insight-swarm) | Live GitHub fetch was not fully available during this run, so the metadata surface keeps the previous authenticated packet from 2026-06-16 14:28 +0800. | 它是“shared knowledge graph 替代中心 orchestrator”的 swarm 概念锚点。 | [INFERRED] 保留 2026-06-16 14:28 +0800 packet；本轮 live fetch 受阻。 |
+| [desplega-ai/agent-swarm](https://github.com/desplega-ai/agent-swarm) | Live GitHub fetch was not fully available during this run, so the metadata surface keeps the previous authenticated packet from 2026-06-16 14:28 +0800. | 它把用户要求的 agent-swarm 主线补进了公开证据链。 | [INFERRED] 保留 2026-06-16 14:28 +0800 packet；本轮 live fetch 受阻。 |
 
+GitNexus 证据链本轮可用但有边界：`node .gitnexus/run.cjs status` 和带 `-r awesome-evolution-workspace-cleanup` 的 `query` 都能工作，并把小时更新链路指回历史脚本里的 `renderGraphJson`、`renderGraphMd`、`renderRunNote` 等节点；但索引状态仍然是 `stale`，所以本轮把它作为关系证据，不把它当作“已经最新”的索引结论。
 ## 核心洞察
 
 一句话：本项目的核心洞察，是把 Self-Evolving AI Agents 从“自我改进的故事”变成“可审计的改进系统”。
