@@ -4,7 +4,7 @@ url: https://github.com/EvoMap/awesome-agent-evolution
 content_timestamp: 2026-06-16
 time_slice: 2026-06
 timestamp_source: gh_api_graphql_authenticated_2026_06_16
-collected_at: 2026-06-16T08:26:03+08:00
+collected_at: 2026-06-16T14:28:39+08:00
 source: github
 source_tool: gh.api.graphql
 ---
@@ -33,14 +33,14 @@ This raw GitHub capture was refreshed by the hourly public metadata update throu
 - Created at: 2026-03-07T04:11:34Z
 - Last pushed at: 2026-06-15T14:57:02Z
 - Last updated at: 2026-06-15T14:58:05Z
-- Collection timestamp: 2026-06-16T08:26:03+08:00
+- Collection timestamp: 2026-06-16T14:28:39+08:00
 - Topics: a2a, agent-evolution, agentic-ai, ai-agent, awesome, awesome-list, llm, mcp, memory-system, multi-agent, self-evolving, self-improvement, agent-framework, agent-protocol, autonomous-agent, evomap, llm-agent, prompt-engineering, skill-library, skills
 - Latest public release: none exposed through the GitHub API release list
 
 ## Visible README / page excerpts
 
-- The authenticated GitHub API snapshot on 2026-06-16 08:26 +0800 shows 140 stars, 20 forks, 64 commits, 6 open issues, and 1 open pull requests.
-- Relative to the previous 2026-06-16 02:26 +0800 packet: No public metadata delta relative to the previous 2026-06-16 02:26 +0800 packet.
+- The authenticated GitHub API snapshot on 2026-06-16 shows 140 stars, 20 forks, 64 commits, 6 open issues, and 1 open pull requests.
+- Relative to the previous 2026-06-16 08:26 +0800 packet: stars = 140; forks = 20; issues = 6; PRs = 1; commits = 64; pushedAt unknown -> 2026-06-15T14:57:02Z; updatedAt unknown -> 2026-06-15T14:58:05Z.
 - The topic set still makes it a live field-packaging mirror: `agent-evolution`, `self-evolving`, `memory-system`, `multi-agent`, `skill-library`, and `awesome-list` remain active.
 - Its README still splits the field into self-evolution, memory, protocols, development platforms, coding, safety, embodied AI, papers, benchmarks, and community knowledge.
 - This 2026-06-16 packet keeps the taxonomy-comparator surface on a current authenticated baseline.

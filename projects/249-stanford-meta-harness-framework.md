@@ -24,4 +24,4 @@ Use Meta-Harness to explain outer-loop search over prompts, workflows, or scaffo
 
 ## Evidence And Limits
 
-The raw capture now reflects an authenticated GitHub API snapshot: 1,076 stars, 104 forks, 11 commits, 4 open issues, and 0 open pull requests observed on 2026-06-16 08:26 +0800. Relative to the previous 2026-06-16 02:26 +0800 packet: stars 1,072 -> 1,076; updatedAt 2026-06-15T16:03:15Z -> 2026-06-15T23:09:49Z. This run did not execute the onboarding flow, Terminal-Bench-2 experiment, or any text-classification search workflow. Claims stay repository-scoped unless rerun.
+The raw capture now reflects an authenticated GitHub API snapshot: 1,079 stars, 104 forks, 11 commits, 4 open issues, and 0 open pull requests observed on 2026-06-16. Relative to the previous 2026-06-16 08:26 +0800 packet: stars = 1,079; forks = 104; issues = 4; commits = 11; pushedAt unknown -> 2026-04-29T16:39:58Z; updatedAt unknown -> 2026-06-16T05:34:26Z. This run did not execute the onboarding flow, Terminal-Bench-2 experiment, or any text-classification search workflow. Claims stay repository-scoped unless rerun.

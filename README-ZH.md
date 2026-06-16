@@ -181,3 +181,147 @@ flowchart TB
   note         = {Open survey repository for self-evolving AI agents, benchmark evidence, project model cards, and field maturity indexing.}
 }
 ```
+## 本轮 GitHub Metadata 修复包（2026-06-16）
+
+本轮是新的 authenticated GitHub API packet，而不是沿用 `2026-06-16 08:26 +0800` 的上一轮快照。相对该 packet，11 个锚点里有 11 个出现新的公开 metadata 变化；保持不变的条目是 无。
+
+| 仓库 | 这轮状态 | 为什么重要 |
+|---|---|---|
+| [china-qijizhifeng/agentic-Harness-engineering](https://github.com/china-qijizhifeng/agentic-Harness-engineering) | stars = 575；forks = 64；commits = 46；pushedAt unknown -> 2026-06-14T16:03:21Z；updatedAt unknown -> 2026-06-16T05:38:40Z。 | 它是“harness 本身可进化”的最直接锚点。 |
+| [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent) | stars = 194,687；forks = 34,157；issues = 6,857；PRs = 14,099；commits = 11,798；pushedAt unknown -> 2026-06-16T06:10:54Z；updatedAt unknown -> 2026-06-16T06:32:07Z。 | 它回答“可用产品型 agent 长什么样”这个核心问题。 |
+| [stanford-iris-lab/meta-harness](https://github.com/stanford-iris-lab/meta-harness) | stars = 1,079；forks = 104；issues = 4；commits = 11；pushedAt unknown -> 2026-04-29T16:39:58Z；updatedAt unknown -> 2026-06-16T05:34:26Z。 | 它是 outer-loop harness search 的最干净参考样本。 |
+| [rohitg00/agentmemory](https://github.com/rohitg00/agentmemory) | stars = 23,006；forks = 1,899；issues = 147；PRs = 160；commits = 462；pushedAt unknown -> 2026-06-15T06:20:23Z；updatedAt unknown -> 2026-06-16T06:30:35Z。 | 它回答“长期记忆如何跨 Codex / Claude Code / Hermes / OpenClaw 持续积累”。 |
+| [pinchbench/skill](https://github.com/pinchbench/skill) | stars = 1,234；forks = 140；issues = 20；PRs = 1；commits = 383；pushedAt unknown -> 2026-06-02T21:35:43Z；updatedAt unknown -> 2026-06-16T05:55:10Z。 | 它是 skill、memory、benchmark 三条线交叉的 evaluator substrate。 |
+| [lsdefine/GenericAgent](https://github.com/lsdefine/GenericAgent) | stars = 12,895；forks = 1,490；issues = 84；PRs = 61；commits = 864；pushedAt unknown -> 2026-06-16T03:27:32Z；updatedAt unknown -> 2026-06-16T05:00:16Z。 | 它是“不要预装技能，而是让技能树生长”的 self-evolving 极简路线。 |
+| [openclaw/openclaw](https://github.com/openclaw/openclaw) | stars = 378,926；forks = 79,283；issues = 3,321；PRs = 2,972；commits = 59,184；pushedAt unknown -> 2026-06-16T06:31:55Z；updatedAt unknown -> 2026-06-16T06:32:11Z。 | 它是“agent 是否真的能给人用”的产品运行时锚点。 |
+| [obra/superpowers](https://github.com/obra/superpowers) | stars = 229,084；forks = 20,380；issues = 125；PRs = 159；commits = 442；pushedAt unknown -> 2026-06-16T05:34:02Z；updatedAt unknown -> 2026-06-16T06:32:17Z。 | 它把可复用技能和工程方法论这条线接进了自进化公开证据链。 |
+| [EvoMap/awesome-agent-evolution](https://github.com/EvoMap/awesome-agent-evolution) | stars = 140；forks = 20；issues = 6；PRs = 1；commits = 64；pushedAt unknown -> 2026-06-15T14:57:02Z；updatedAt unknown -> 2026-06-15T14:58:05Z。 | 它帮助我们检查公开叙事是否比普通 awesome list 更有证据密度。 |
+| [uid4oe/insight-swarm](https://github.com/uid4oe/insight-swarm) | commits = 25；pushedAt unknown -> 2026-03-19T18:04:30Z；updatedAt unknown -> 2026-03-19T21:28:11Z。 | 它是“shared knowledge graph 替代中心 orchestrator”的 swarm 概念锚点。 |
+| [desplega-ai/agent-swarm](https://github.com/desplega-ai/agent-swarm) | stars = 529；forks = 58；issues = 1；PRs = 2；commits = 1,637；pushedAt unknown -> 2026-06-16T02:27:39Z；updatedAt unknown -> 2026-06-15T18:31:10Z。 | 它把用户要求的 agent-swarm 主线补进了公开证据链。 |
+
+## 核心洞察
+
+一句话：本项目的核心洞察，是把 Self-Evolving AI Agents 从“自我改进的故事”变成“可审计的改进系统”。
+
+三句话：一个系统只有在反馈中改变自己的 prompt、memory、tool policy、workflow、code、weights 或 population，并且保留可验证证据时，才进入自进化范围。Survey 背后的全部资源现在按同一个问题重排：哪个对象在变，什么信号驱动它变，谁阻止它变坏。Evolve-AGI Index 是这次重排后的测量主线，它把论文发现、GitHub 语料、benchmark 和治理要求接成一条可复跑的数据流。
+
+五句话展开：
+
+1. 过去读者需要在链接、star 排名、论文列表和网站材料之间自行判断；现在先看到结论，再进入证据。
+2. Survey 不是“论文综述合集”，而是把论文、项目、benchmark、社交/博客信号和用户痛点互相校验。
+3. 关键判断不再是“项目名字里有没有 evolution”，而是“系统是否形成 Observe -> Interpret -> Modify -> Verify -> Retain 的闭环”。
+4. Evolve-AGI Index 不只是网站模块，而是论文的核心贡献之一：给这个领域一个可解释的成熟度坐标系。
+5. 对外读者看到的每个核心判断都应该能回到论文、项目报告、数据索引或 benchmark 证据；没有证据链的结论标记为 `[UNVERIFIED]`。
+
+## 核心结论
+
+| 排名 | Survey 结论 | 对读者的意义 | 证据入口 |
+|---:|---|---|---|
+| 1 | 自进化是受控系统过程，不是 demo 标签。 | 读任何项目先问“改了什么、谁验证、怎么回滚”。 | [paper abstract](paper-drafts/main.tex), [ch1 intro](paper-drafts/ch1-intro.tex) |
+| 2 | Benchmark 是选择压力，也是风险源。 | 分数提高不等于能力积累；要看隐藏测试、迁移、成本、失败候选。 | [ch5 evaluation](paper-drafts/ch5-evaluation.tex), [survey ch5](survey/ch5-evaluation-cn.md) |
+| 3 | 记忆、技能、评估框架是核心基础设施。 | 不要只看模型层；可审计记忆、可安装技能和评估器才决定长期可用性。 | [ch7 painpoints](paper-drafts/ch7-painpoints.tex), [agent-swarm evolve](analysis/agent-swarm-evolve.md) |
+| 4 | 五类进化回路比项目名更稳定。 | 新项目可以按机制归类，而不是被营销词牵着走。 | [survey methods](survey/ch3-methods-cn.md), [method taxonomy](survey/figures/method-taxonomy-mermaid.md) |
+| 5 | Evolve-AGI Index 应成为论文核心指标。 | 它把成熟度拆成 benchmark、闭环、证据、迁移、可运行、动量、治理七个信号。 | [Evolve-AGI Index](analysis/evolve-agi-index.md), [trend snapshot](reports/evolve-agi-index-trend.json) |
+| 6 | 用户真正关心信任边界。 | 产品价值来自可靠、透明、可控、低成本，不来自“更自主”的口号。 | [survey ch7](survey/ch7-painpoints-cn.md), [site survey](site/src/pages/survey/index.astro) |
+| 7 | 失败候选和负结果是资产。 | 没有被拒补丁、回归记录和 lineage，无法判断系统是否真的会进化。 | [ch8 future](paper-drafts/ch8-future.tex), [survey spark analysis](analysis/survey-resource-spark.md) |
+
+## Evolve-AGI Index 进入论文核心
+
+一句话：Evolve-AGI Index 是本 survey 的“领域成熟度仪表盘”，不是 AGI 终局能力评分。
+
+```text
+EAI = Σ(signal_score × signal_weight)
+```
+
+| 信号 | 权重 | 为什么进入核心 |
+|---|---:|---|
+| Benchmark 表现 | 18% | 自进化必须接受实测；但 benchmark 不能单独决定成熟度。 |
+| 闭环强度 | 20% | 没有可变对象、反馈、选择和保留机制，就没有自进化。 |
+| 证据链可信度 | 18% | 原始材料、分析、model card 和论文附录必须互相能追溯。 |
+| 迁移与验证 | 14% | 只在一个公开测试上涨分，不能证明能力积累。 |
+| 实现可获得性 | 12% | 能运行、能复用、能审计，才有工程价值。 |
+| 领域动量 | 10% | 新项目和社区动量是趋势信号，但不能覆盖证据质量。 |
+| 治理准备度 | 8% | 自修改系统必须有安全边界、日志、回滚和时间戳信心。 |
+
+当前快照来自 [reports/evolve-agi-index-trend.json](reports/evolve-agi-index-trend.json)：2026-06-01 的指数为 `72.9`，benchmark 子指数为 `80.1`，对应 `93` 个 strict evolution repos、`200` 个 broad evolution repos 和 `239` 个 trend 输入中的 analyzed public-report records。这个快照与 [docs/indexes/master-index.md](docs/indexes/master-index.md) 的全仓库计数共同使用；前者服务指数趋势，后者服务仓库治理和完整 public-report 文件口径。
+
+## Survey 证据地图
+
+| 层级 | 当前角色 | 关键证据 |
+|---|---|---|
+| 原始证据 | 保留 GitHub、论文、博客、社交素材，作为判断起点。 | [raw index](docs/indexes/raw-index.md), `raw-github/`, `raw-papers/`, `raw-social/`, `raw-blogs/` |
+| 加工分析 | 把素材转成分类、机制、model card、paper review、ranking 和 Evolve-AGI Index。 | [processed index](docs/indexes/processed-index.md), [GitHub analysis](analysis/github-project-data-analysis.md), [projects index](projects/INDEX.md) |
+| Survey 论文 | 把机制、系统、评估、工业实践、痛点和未来方向写成论文结构。 | [survey CN chapters](survey/ch1-intro-cn.md), [paper drafts](paper-drafts/main.tex), [survey latex](survey/latex/main.tex) |
+| 公开结果 | 发布 PDF、网站、报告、图谱、趋势快照和 SEO 页面。 | [results index](docs/indexes/results-index.md), [site](site/src/pages/index.astro), [reports](reports/) |
+| 证据目录 | 给读者检查证据链、索引和公开结果的入口。 | [CONTENT_INDEX.md](CONTENT_INDEX.md), [master index](docs/indexes/master-index.md) |
+
+```mermaid
+flowchart TB
+  Q["核心问题<br/>什么算真正自进化?"] --> A["资源重组<br/>原始证据 -> 加工分析 -> Survey -> 公开结果"]
+  A --> B["机制框架<br/>Five Evolution Loops"]
+  A --> C["证据框架<br/>trust chain + model card"]
+  A --> D["测量框架<br/>Evolve-AGI Index"]
+  B --> P["论文核心"]
+  C --> P
+  D --> P
+  P --> R["README / 网站 / PDF / SEO"]
+```
+
+## 论文主线
+
+| 章节 | Survey 成果 | 当前入口 |
+|---|---|---|
+| Ch1 Introduction | 定义 self-evolution，并把 Evolve-AGI Index 作为 evidence-to-index 贡献纳入核心。 | [paper-drafts/ch1-intro.tex](paper-drafts/ch1-intro.tex) |
+| Ch2 Taxonomy | 区分 continual learning、online learning、self-supervision、AutoML、RL 和真正 self-evolution。 | [paper-drafts/ch2-taxonomy.tex](paper-drafts/ch2-taxonomy.tex) |
+| Ch3 Methods | 按五类 loops 分析 feedback 如何变成 retained change。 | [paper-drafts/ch3-methods.tex](paper-drafts/ch3-methods.tex) |
+| Ch4 Systems | 比较 Self-Refine、Reflexion、ADAS、DGM、AlphaEvolve、Absolute Zero 等代表系统。 | [paper-drafts/ch4-evolutionary.tex](paper-drafts/ch4-evolutionary.tex) |
+| Ch5 Evaluation | 把 benchmark、trajectory、transfer、cost、regression 和 Goodhart 风险放在同一评估面。 | [paper-drafts/ch5-evaluation.tex](paper-drafts/ch5-evaluation.tex) |
+| Ch6 Frameworks | 讨论 runtime、memory、harness、workflow、tool sandbox 和 reference architecture。 | [paper-drafts/ch6-frameworks.tex](paper-drafts/ch6-frameworks.tex) |
+| Ch7 Pain Points | 用真实用户痛点校验研究问题：可靠性、成本、可观测性、权限、记忆污染。 | [paper-drafts/ch7-painpoints.tex](paper-drafts/ch7-painpoints.tex) |
+| Ch8 Future | 把 Evolve-AGI Index 扩展成 field knowledge data model 和后续路线图。 | [paper-drafts/ch8-future.tex](paper-drafts/ch8-future.tex) |
+
+## 怎么读这个仓库
+
+| 你想知道 | 先读 | 再读 |
+|---|---|---|
+| 这个领域一句话是什么 | 本 README 的 [核心洞察](#核心洞察) | [paper abstract](paper-drafts/main.tex) |
+| 什么才算真正自进化 | [定义主题页](https://shiyao-huang.github.io/awesome-agent-evolution/topics/self-evolving-ai-agents/) | [definition criteria](analysis/self-evolution-definition-criteria.md), [ch1 intro](paper-drafts/ch1-intro.tex) |
+| 自进化到底怎么发生 | [五类进化回路](https://shiyao-huang.github.io/awesome-agent-evolution/topics/five-evolution-loops/) | [five-loop analysis](analysis/five-evolution-loops-topic.md), [survey mechanisms](site/src/pages/survey/mechanisms.astro) |
+| 哪些系统真的会改代码 | [代码自我改进 Benchmark Matrix](https://shiyao-huang.github.io/awesome-agent-evolution/topics/code-evolution-benchmark/) | [code benchmark matrix](analysis/code-evolution-benchmark-matrix.md), [benchmark page](site/src/pages/benchmark/index.astro) |
+| 什么项目真的算自进化 | [核心结论](#核心结论) | [projects/INDEX.md](projects/INDEX.md), [analysis/github-project-data-analysis.md](analysis/github-project-data-analysis.md) |
+| 论文现在怎么组织 | [论文主线](#论文主线) | [paper-drafts/main.tex](paper-drafts/main.tex), [survey/latex/main.tex](survey/latex/main.tex) |
+| Evolve-AGI Index 怎么进入核心 | [Evolve-AGI Index 进入论文核心](#evolve-agi-index-进入论文核心) | [analysis/evolve-agi-index.md](analysis/evolve-agi-index.md), [网站页面](site/src/pages/evolve-agi-index/index.astro) |
+| 全量文件在哪里 | [CONTENT_INDEX.md](CONTENT_INDEX.md) | [docs/indexes/master-index.md](docs/indexes/master-index.md) |
+| 网站和 SEO 在哪里 | [site](site/) | [site survey page](site/src/pages/survey/index.astro), [graph page](site/src/pages/graph/index.astro) |
+
+## 证据边界
+
+- [KNOWN] 全仓库治理计数来自 [docs/indexes/master-index.md](docs/indexes/master-index.md)，由 `node scripts/generate_project_indexes.mjs` 生成。
+- [KNOWN] GitHub 语料、strict/broad evolution 子集和时间切片来自 [analysis/github-project-data-analysis.md](analysis/github-project-data-analysis.md) 与对应 JSON。
+- [KNOWN] 资料库覆盖、计数口径和当前缺口来自 [analysis/resource-library-coverage-audit.md](analysis/resource-library-coverage-audit.md)；最新 raw/classified/model-card/public-report 计数以 [docs/indexes/master-index.md](docs/indexes/master-index.md) 和 [analysis/github-project-data-analysis.md](analysis/github-project-data-analysis.md) 为准。
+- [KNOWN] Evolve-AGI Index 方法、权重和 benchmark 输入来自 [analysis/evolve-agi-index.md](analysis/evolve-agi-index.md)、[site/src/data/evolveAgiIndex.ts](site/src/data/evolveAgiIndex.ts) 和 [reports/evolve-agi-index-trend.json](reports/evolve-agi-index-trend.json)。
+- [KNOWN] Survey 章节和论文主稿来自 [paper-drafts/main.tex](paper-drafts/main.tex) 与 [survey/latex/main.tex](survey/latex/main.tex)。
+- [INFERRED] “核心洞察”是对上述证据的综合判断：把 Awesome 仓库升级为受控自进化领域的 Survey、指数和证据图谱，而不是一个单纯链接站。
+
+## 给读者的下一步
+
+| 目标 | 推荐入口 |
+|---|---|
+| 快速理解领域 | 先读本 README 的核心结论和 Evolve-AGI Index。 |
+| 深入阅读论文 | 打开 [paper-drafts/main.pdf](paper-drafts/main.pdf) 或 [paper page](site/src/pages/paper/index.astro)。 |
+| 查项目证据 | 使用 [projects/INDEX.md](projects/INDEX.md) 和 [public project reports](site/public/reports/projects/INDEX.md)。 |
+| 查数据范围 | 先看 [资料库覆盖页](https://shiyao-huang.github.io/awesome-agent-evolution/resource-library/)，再查 [analysis/resource-library-coverage-audit.md](analysis/resource-library-coverage-audit.md)、[docs/indexes/master-index.md](docs/indexes/master-index.md) 和 [analysis/github-project-data-analysis.md](analysis/github-project-data-analysis.md)。 |
+| 按问题找主题 | 打开 [Survey/SEO 主题地图](https://shiyao-huang.github.io/awesome-agent-evolution/topics/)，从定义、五类回路、[代码自改进](https://shiyao-huang.github.io/awesome-agent-evolution/topics/code-evolution-benchmark/)、Agent-Swarm、评估治理和生产痛点进入证据。 |
+| 浏览网站 | 打开 [Self Evolve site](https://shiyao-huang.github.io/awesome-agent-evolution/) 或本仓库的 [site source](site/)。 |
+
+## Citation
+
+```bibtex
+@misc{awesomeSelfEvolvingAgents2026,
+  title        = {Awesome Self-Evolving AI Agents: Survey, Evidence Graph, and Evolve-AGI Index},
+  author       = {aha team},
+  year         = {2026},
+  howpublished = {\url{https://github.com/shiyao-huang/awesome-agent-evolution}},
+  note         = {Open survey repository for self-evolving AI agents, benchmark evidence, project model cards, and field maturity indexing.}
+}
+```
