@@ -24,4 +24,4 @@ Use EvoMap to compare curation strategies. It is the external mirror that expose
 
 ## Evidence And Limits
 
-The raw capture now reflects an authenticated GitHub API snapshot: 140 stars, 20 forks, 64 commits, 6 open issues, and 1 open pull requests observed on 2026-06-16. Relative to the previous 2026-06-15 20:24 packet: commits 63 -> 64; pushedAt 2026-06-15T02:37:31Z -> 2026-06-15T14:57:02Z; updatedAt 2026-06-15T09:18:19Z -> 2026-06-15T14:58:05Z. This run did not execute EvoMap scripts or validate its data pipeline locally. The classification is based on public taxonomy, maintenance surface, and comparison value.
+The raw capture now reflects an authenticated GitHub API snapshot: 140 stars, 20 forks, 64 commits, 6 open issues, and 1 open pull requests observed on 2026-06-16 08:26 +0800. Relative to the previous 2026-06-16 02:26 +0800 packet: No public metadata delta relative to the previous 2026-06-16 02:26 +0800 packet. This run did not execute EvoMap scripts or validate its data pipeline locally. The classification is based on public taxonomy, maintenance surface, and comparison value.

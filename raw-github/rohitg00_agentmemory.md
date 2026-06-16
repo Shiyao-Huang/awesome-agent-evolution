@@ -4,7 +4,7 @@ url: https://github.com/rohitg00/agentmemory
 content_timestamp: 2026-06-16
 time_slice: 2026-06
 timestamp_source: gh_api_graphql_authenticated_2026_06_16
-collected_at: 2026-06-16T02:26:37+08:00
+collected_at: 2026-06-16T08:26:03+08:00
 source: github
 source_tool: gh.api.graphql
 ---
@@ -23,8 +23,8 @@ This raw GitHub capture was refreshed by the hourly public metadata update throu
 
 - Repository: rohitg00/agentmemory
 - URL: https://github.com/rohitg00/agentmemory
-- Stars: 22,936
-- Forks: 1,891
+- Stars: 22,961
+- Forks: 1,893
 - Commits: 462
 - Open issues: 146
 - Open pull requests: 158
@@ -32,15 +32,15 @@ This raw GitHub capture was refreshed by the hourly public metadata update throu
 - Primary language / stack signal: TypeScript/MCP/Coding-Agent Memory/Wiki Index
 - Created at: 2026-02-25T07:32:52Z
 - Last pushed at: 2026-06-15T06:20:23Z
-- Last updated at: 2026-06-15T18:18:42Z
-- Collection timestamp: 2026-06-16T02:26:37+08:00
+- Last updated at: 2026-06-16T00:26:04Z
+- Collection timestamp: 2026-06-16T08:26:03+08:00
 - Topics: agentmemory, agents, ai, claude, claudecode, codex, copilot, cursor, genai, harness, hermes, memory, openclaw
 - Latest public release: v0.9.27 (2026-06-07)
 
 ## Visible README / page excerpts
 
-- The authenticated GitHub API snapshot on 2026-06-16 shows 22,936 stars, 1,891 forks, 462 commits, 146 open issues, and 158 open pull requests.
-- Relative to the previous 2026-06-15 20:24 packet: stars 22,899 -> 22,936; forks 1,887 -> 1,891; issues 147 -> 146; updatedAt 2026-06-15T12:45:15Z -> 2026-06-15T18:18:42Z.
+- The authenticated GitHub API snapshot on 2026-06-16 08:26 +0800 shows 22,961 stars, 1,893 forks, 462 commits, 146 open issues, and 158 open pull requests.
+- Relative to the previous 2026-06-16 02:26 +0800 packet: stars 22,936 -> 22,961; forks 1,891 -> 1,893; updatedAt 2026-06-15T18:18:42Z -> 2026-06-16T00:26:04Z.
 - The homepage still points to `agent-memory.dev`, and the topic set still binds the project to Claude Code, Codex, Cursor, Hermes, OpenClaw, and cross-harness memory usage.
 - The repository continues to position itself as persistent memory for coding agents rather than a single-framework plugin.
 - This 2026-06-16 refresh ensures the memory-substrate anchor is carried by current authenticated counts rather than stale badges or local summaries.

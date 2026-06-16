@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-16T02:26:37+08:00",
+  "generated_at": "2026-06-16T08:26:03+08:00",
   "truth_source": ".mermaid/current/graph.json",
   "nodes": [
     {
@@ -17,19 +17,7 @@
       "title": "Hourly GitHub raw captures",
       "layer": "raw",
       "status": "updated",
-      "paths": [
-        "raw-github/china-qijizhifeng_agentic-harness-engineering.md",
-        "raw-github/nousresearch_hermes-agent.md",
-        "raw-github/stanford-iris-lab_meta-harness.md",
-        "raw-github/rohitg00_agentmemory.md",
-        "raw-github/pinchbench_skill.md",
-        "raw-github/lsdefine_genericagent.md",
-        "raw-github/openclaw_openclaw.md",
-        "raw-github/obra_superpowers.md",
-        "raw-github/evomap_awesome-agent-evolution.md",
-        "raw-github/uid4oe_insight-swarm.md",
-        "raw-github/desplega-ai_agent-swarm.md"
-      ]
+      "paths": []
     },
     {
       "id": "processed.github-classification",
@@ -45,6 +33,7 @@
         "projects/249-stanford-meta-harness-framework.md",
         "projects/50-agentmemory.md",
         "projects/51-pinchbench-skill.md",
+        "projects/47-genericagent.md",
         "projects/48-openclaw.md",
         "projects/49-superpowers.md",
         "projects/394-evomap-awesome-agent-evolution.md",
@@ -63,6 +52,7 @@
         "site/public/reports/projects/249-stanford-meta-harness-framework.md",
         "site/public/reports/projects/50-agentmemory.md",
         "site/public/reports/projects/51-pinchbench-skill.md",
+        "site/public/reports/projects/47-genericagent.md",
         "site/public/reports/projects/48-openclaw.md",
         "site/public/reports/projects/49-superpowers.md",
         "site/public/reports/projects/394-evomap-awesome-agent-evolution.md",
@@ -92,10 +82,10 @@
       "layer": "work",
       "status": "updated",
       "paths": [
-        "work/research/hourly-public-metadata-update-2026-06-16-0226.md",
+        "work/research/hourly-public-metadata-update-2026-06-16-0826.md",
         ".mermaid/current/graph.md",
         ".mermaid/current/graph.mmd",
-        "work/research/hourly-public-metadata-update-2026-06-16-0226-data.json"
+        "work/research/hourly-public-metadata-update-2026-06-16-0826-data.json"
       ]
     }
   ],
@@ -133,187 +123,10 @@
   ],
   "current_run": {
     "source": "authenticated gh GraphQL/API snapshot",
-    "repos": [
-      {
-        "repo": "china-qijizhifeng/agentic-Harness-engineering",
-        "raw_capture": "raw-github/china-qijizhifeng_agentic-harness-engineering.md",
-        "report": "projects/43-agentic-harness-engineering.md",
-        "site_report": "site/public/reports/projects/43-agentic-harness-engineering.md",
-        "stars": 570,
-        "forks": 64,
-        "issues": 0,
-        "pull_requests": 0,
-        "commits": 46,
-        "latest_push": "2026-06-14T16:03:21Z",
-        "latest_release": null,
-        "theme": "harness"
-      },
-      {
-        "repo": "NousResearch/hermes-agent",
-        "raw_capture": "raw-github/nousresearch_hermes-agent.md",
-        "report": "projects/44-hermes-agent.md",
-        "site_report": "site/public/reports/projects/44-hermes-agent.md",
-        "stars": 194308,
-        "forks": 34054,
-        "issues": 6791,
-        "pull_requests": 13998,
-        "commits": 11751,
-        "latest_push": "2026-06-15T18:31:09Z",
-        "latest_release": {
-          "name": "Hermes Agent v0.16.0 (2026.6.5) — The Surface Release",
-          "publishedAt": "2026-06-06T00:55:58Z"
-        },
-        "theme": "framework"
-      },
-      {
-        "repo": "stanford-iris-lab/meta-harness",
-        "raw_capture": "raw-github/stanford-iris-lab_meta-harness.md",
-        "report": "projects/249-stanford-meta-harness-framework.md",
-        "site_report": "site/public/reports/projects/249-stanford-meta-harness-framework.md",
-        "stars": 1072,
-        "forks": 104,
-        "issues": 4,
-        "pull_requests": 0,
-        "commits": 11,
-        "latest_push": "2026-04-29T16:39:58Z",
-        "latest_release": null,
-        "theme": "evolution"
-      },
-      {
-        "repo": "rohitg00/agentmemory",
-        "raw_capture": "raw-github/rohitg00_agentmemory.md",
-        "report": "projects/50-agentmemory.md",
-        "site_report": "site/public/reports/projects/50-agentmemory.md",
-        "stars": 22936,
-        "forks": 1891,
-        "issues": 146,
-        "pull_requests": 158,
-        "commits": 462,
-        "latest_push": "2026-06-15T06:20:23Z",
-        "latest_release": {
-          "name": "v0.9.27",
-          "publishedAt": "2026-06-07T08:58:35Z"
-        },
-        "theme": "memory"
-      },
-      {
-        "repo": "pinchbench/skill",
-        "raw_capture": "raw-github/pinchbench_skill.md",
-        "report": "projects/51-pinchbench-skill.md",
-        "site_report": "site/public/reports/projects/51-pinchbench-skill.md",
-        "stars": 1232,
-        "forks": 140,
-        "issues": 19,
-        "pull_requests": 0,
-        "commits": 383,
-        "latest_push": "2026-06-02T21:35:43Z",
-        "latest_release": {
-          "name": "v2.0.0",
-          "publishedAt": "2026-05-06T14:50:42Z"
-        },
-        "theme": "benchmark"
-      },
-      {
-        "repo": "lsdefine/GenericAgent",
-        "raw_capture": "raw-github/lsdefine_genericagent.md",
-        "report": null,
-        "site_report": null,
-        "stars": 12889,
-        "forks": 1490,
-        "issues": 83,
-        "pull_requests": 61,
-        "commits": 862,
-        "latest_push": "2026-06-15T13:35:30Z",
-        "latest_release": {
-          "name": "v0.1.0 - Desktop App",
-          "publishedAt": "2026-05-15T10:38:24Z"
-        },
-        "theme": "evolution"
-      },
-      {
-        "repo": "openclaw/openclaw",
-        "raw_capture": "raw-github/openclaw_openclaw.md",
-        "report": "projects/48-openclaw.md",
-        "site_report": "site/public/reports/projects/48-openclaw.md",
-        "stars": 378854,
-        "forks": 79269,
-        "issues": 3339,
-        "pull_requests": 3041,
-        "commits": 59023,
-        "latest_push": "2026-06-15T18:29:45Z",
-        "latest_release": {
-          "name": "openclaw 2026.6.8-beta.1",
-          "publishedAt": "2026-06-14T22:45:33Z"
-        },
-        "theme": "framework"
-      },
-      {
-        "repo": "obra/superpowers",
-        "raw_capture": "raw-github/obra_superpowers.md",
-        "report": "projects/49-superpowers.md",
-        "site_report": "site/public/reports/projects/49-superpowers.md",
-        "stars": 228656,
-        "forks": 20345,
-        "issues": 124,
-        "pull_requests": 162,
-        "commits": 441,
-        "latest_push": "2026-06-13T22:17:11Z",
-        "latest_release": {
-          "name": "v5.1.0",
-          "publishedAt": "2026-05-04T22:13:34Z"
-        },
-        "theme": "skill"
-      },
-      {
-        "repo": "EvoMap/awesome-agent-evolution",
-        "raw_capture": "raw-github/evomap_awesome-agent-evolution.md",
-        "report": "projects/394-evomap-awesome-agent-evolution.md",
-        "site_report": "site/public/reports/projects/394-evomap-awesome-agent-evolution.md",
-        "stars": 140,
-        "forks": 20,
-        "issues": 6,
-        "pull_requests": 1,
-        "commits": 64,
-        "latest_push": "2026-06-15T14:57:02Z",
-        "latest_release": null,
-        "theme": "evolution"
-      },
-      {
-        "repo": "uid4oe/insight-swarm",
-        "raw_capture": "raw-github/uid4oe_insight-swarm.md",
-        "report": null,
-        "site_report": null,
-        "stars": 0,
-        "forks": 0,
-        "issues": 0,
-        "pull_requests": 0,
-        "commits": 25,
-        "latest_push": "2026-03-19T18:04:30Z",
-        "latest_release": null,
-        "theme": "framework"
-      },
-      {
-        "repo": "desplega-ai/agent-swarm",
-        "raw_capture": "raw-github/desplega-ai_agent-swarm.md",
-        "report": "projects/405-agent-swarm-compounding-lead-worker-runtime.md",
-        "site_report": "site/public/reports/projects/405-agent-swarm-compounding-lead-worker-runtime.md",
-        "stars": 529,
-        "forks": 58,
-        "issues": 1,
-        "pull_requests": 1,
-        "commits": 1637,
-        "latest_push": "2026-06-15T17:02:59Z",
-        "latest_release": {
-          "name": "v1.99.1",
-          "publishedAt": "2026-06-15T17:13:18Z"
-        },
-        "theme": "framework"
-      }
-    ],
     "gitnexus": {
-      "status": "partially-available",
-      "note": "npx gitnexus status works and the direct query lane still fails on LadybugDB version mismatch.",
-      "blocker": "LadybugDB unavailable for awesome-evolution-workspace-cleanup. Another process may be rebuilding the index. Retry later. (Runtime exception: Trying to read a database file with a different version. Database file version: 41, Current build storage version: 40)"
+      "status": "available_after_reindex",
+      "query": "node .gitnexus/run.cjs query \"site/src/data/projects.ts hourly metadata\" --repo awesome-evolution-workspace-cleanup returned script/process definitions tied to updateWorkNote, writeRunNote, renderGraphJson, updateSiteProjects, updateSiteData, and generate_visual_assets parsing.",
+      "caveat": "GitNexus CLI requires explicit --repo because many repositories are indexed in this environment."
     }
   }
 }

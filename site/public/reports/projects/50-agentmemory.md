@@ -24,4 +24,4 @@ Use agentmemory to teach why memory cannot be an afterthought. Durable facts, pr
 
 ## Evidence And Limits
 
-The raw capture now reflects an authenticated GitHub API snapshot: 22,936 stars, 1,891 forks, 462 commits, 146 open issues, and 158 open pull requests observed on 2026-06-16. Relative to the previous 2026-06-15 20:24 packet: stars 22,899 -> 22,936; forks 1,887 -> 1,891; issues 147 -> 146; updatedAt 2026-06-15T12:45:15Z -> 2026-06-15T18:18:42Z. This run did not inspect the schema, lifecycle implementation, or confidence updates in code. Memory-quality claims remain repository-scoped unless validated with tests or benchmarks.
+The raw capture now reflects an authenticated GitHub API snapshot: 22,961 stars, 1,893 forks, 462 commits, 146 open issues, and 158 open pull requests observed on 2026-06-16 08:26 +0800. Relative to the previous 2026-06-16 02:26 +0800 packet: stars 22,936 -> 22,961; forks 1,891 -> 1,893; updatedAt 2026-06-15T18:18:42Z -> 2026-06-16T00:26:04Z. This run did not inspect the schema, lifecycle implementation, or confidence updates in code. Memory-quality claims remain repository-scoped unless validated with tests or benchmarks.

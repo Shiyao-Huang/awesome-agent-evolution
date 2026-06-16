@@ -60,23 +60,23 @@ flowchart LR
   SURVEY --> SITE["网站 + 图谱 + 报告"]
 ```
 
-## 近期证据更新（2026-06-16）
+## 近期证据更新（2026-06-16 08:26 +0800）
 
-本轮是新的 authenticated GitHub API packet，而不是沿用 `2026-06-15 20:24 +0800` 的晚间快照。相对该 packet，11 个锚点里有 9 个出现新的公开 metadata 变化；保持不变的条目是 PinchBench Skill、uid4oe/insight-swarm。
+本轮是新的 authenticated GitHub API packet，而不是沿用 `2026-06-16 02:26 +0800` 的早间快照。相对该 packet，11 个锚点里有 7 个出现新的公开 metadata 变化；保持不变的条目是 PinchBench Skill、EvoMap/awesome-agent-evolution、uid4oe/insight-swarm、desplega-ai/agent-swarm。
 
 | 仓库 | 这轮状态 | 为什么重要 | 证据状态 |
 |---|---|---|---|
-| [china-qijizhifeng/agentic-Harness-engineering](https://github.com/china-qijizhifeng/agentic-Harness-engineering) | stars 569 -> 570；updatedAt 2026-06-15T11:45:35Z -> 2026-06-15T17:37:01Z。 | 它是“harness 本身可进化”的最直接锚点。 | [KNOWN] Authenticated GitHub API；未做本地运行/benchmark 复核。 |
-| [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent) | stars 194,086 -> 194,308；forks 33,984 -> 34,054；issues 6,763 -> 6,791；PRs 13,988 -> 13,998；commits 11,728 -> 11,751；pushedAt 2026-06-15T13:01:58Z -> 2026-06-15T18:31:09Z；updatedAt 2026-06-15T13:00:34Z -> 2026-06-15T18:29:33Z。 | 它回答“可用产品型 agent 长什么样”这个核心问题。 | [KNOWN] Authenticated GitHub API；未做本地运行/benchmark 复核。 |
-| [stanford-iris-lab/meta-harness](https://github.com/stanford-iris-lab/meta-harness) | stars 1,070 -> 1,072；updatedAt 2026-06-15T11:58:09Z -> 2026-06-15T16:03:15Z。 | 它是 outer-loop harness search 的最干净参考样本。 | [KNOWN] Authenticated GitHub API；未做本地运行/benchmark 复核。 |
-| [rohitg00/agentmemory](https://github.com/rohitg00/agentmemory) | stars 22,899 -> 22,936；forks 1,887 -> 1,891；issues 147 -> 146；updatedAt 2026-06-15T12:45:15Z -> 2026-06-15T18:18:42Z。 | 它回答“长期记忆如何跨 Codex / Claude Code / Hermes / OpenClaw 持续积累”。 | [KNOWN] Authenticated GitHub API；未做本地运行/benchmark 复核。 |
-| [pinchbench/skill](https://github.com/pinchbench/skill) | 与 2026-06-15 20:24 packet 相比无公开数字变化。 | 它是 skill、memory、benchmark 三条线交叉的 evaluator substrate。 | [KNOWN] Authenticated GitHub API；未做本地运行/benchmark 复核。 |
-| [lsdefine/GenericAgent](https://github.com/lsdefine/GenericAgent) | stars 12,884 -> 12,889；forks 1,488 -> 1,490；issues 82 -> 83；commits 860 -> 862；pushedAt 2026-06-15T02:15:18Z -> 2026-06-15T13:35:30Z；updatedAt 2026-06-15T11:07:50Z -> 2026-06-15T17:59:27Z。 | 它是“不要预装技能，而是让技能树生长”的 self-evolving 极简路线。 | [KNOWN] Authenticated GitHub API；未做本地运行/benchmark 复核。 |
-| [openclaw/openclaw](https://github.com/openclaw/openclaw) | stars = 378,854；forks = 79,269；issues = 3,339；PRs = 3,041；commits = 59,023；pushedAt unknown -> 2026-06-15T18:29:45Z；updatedAt unknown -> 2026-06-15T18:31:35Z。 | 它是“agent 是否真的能给人用”的产品运行时锚点。 | [KNOWN] Authenticated GitHub API；未做本地运行/benchmark 复核。 |
-| [obra/superpowers](https://github.com/obra/superpowers) | stars = 228,656；forks = 20,345；issues = 124；PRs = 162；commits = 441；pushedAt unknown -> 2026-06-13T22:17:11Z；updatedAt unknown -> 2026-06-15T18:24:27Z。 | 它把可复用技能和工程方法论这条线接进了自进化公开证据链。 | [KNOWN] Authenticated GitHub API；未做本地运行/benchmark 复核。 |
-| [EvoMap/awesome-agent-evolution](https://github.com/EvoMap/awesome-agent-evolution) | commits 63 -> 64；pushedAt 2026-06-15T02:37:31Z -> 2026-06-15T14:57:02Z；updatedAt 2026-06-15T09:18:19Z -> 2026-06-15T14:58:05Z。 | 它帮助我们检查公开叙事是否比普通 awesome list 更有证据密度。 | [KNOWN] Authenticated GitHub API；未做本地运行/benchmark 复核。 |
-| [uid4oe/insight-swarm](https://github.com/uid4oe/insight-swarm) | 与 2026-06-15 20:24 packet 相比无公开数字变化。 | 它是“shared knowledge graph 替代中心 orchestrator”的 swarm 概念锚点。 | [KNOWN] Authenticated GitHub API；未做本地运行/benchmark 复核。 |
-| [desplega-ai/agent-swarm](https://github.com/desplega-ai/agent-swarm) | stars 527 -> 529；commits 1,636 -> 1,637；pushedAt 2026-06-15T09:52:53Z -> 2026-06-15T17:02:59Z；updatedAt 2026-06-15T10:30:03Z -> 2026-06-15T18:31:10Z。 | 它把用户要求的 agent-swarm 主线补进了公开证据链。 | [KNOWN] Authenticated GitHub API；未做本地运行/benchmark 复核。 |
+| [china-qijizhifeng/agentic-Harness-engineering](https://github.com/china-qijizhifeng/agentic-Harness-engineering) | stars 570 -> 571；updatedAt 2026-06-15T17:37:01Z -> 2026-06-15T21:12:02Z。 | 它是“harness 本身可进化”的最直接锚点。 | [KNOWN] Authenticated GitHub API；未做本地运行/benchmark 复核。 |
+| [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent) | stars 194,308 -> 194,440；forks 34,054 -> 34,092；issues 6,791 -> 6,816；PRs 13,998 -> 14,017；commits 11,751 -> 11,788；pushedAt 2026-06-15T18:31:09Z -> 2026-06-16T00:23:04Z；updatedAt 2026-06-15T18:29:33Z -> 2026-06-16T00:25:12Z。 | 它回答“可用产品型 agent 长什么样”这个核心问题。 | [KNOWN] Authenticated GitHub API；未做本地运行/benchmark 复核。 |
+| [stanford-iris-lab/meta-harness](https://github.com/stanford-iris-lab/meta-harness) | stars 1,072 -> 1,076；updatedAt 2026-06-15T16:03:15Z -> 2026-06-15T23:09:49Z。 | 它是 outer-loop harness search 的最干净参考样本。 | [KNOWN] Authenticated GitHub API；未做本地运行/benchmark 复核。 |
+| [rohitg00/agentmemory](https://github.com/rohitg00/agentmemory) | stars 22,936 -> 22,961；forks 1,891 -> 1,893；updatedAt 2026-06-15T18:18:42Z -> 2026-06-16T00:26:04Z。 | 它回答“长期记忆如何跨 Codex / Claude Code / Hermes / OpenClaw 持续积累”。 | [KNOWN] Authenticated GitHub API；未做本地运行/benchmark 复核。 |
+| [pinchbench/skill](https://github.com/pinchbench/skill) | 与上一轮 2026-06-16 02:26 +0800 packet 相比无公开数字变化。 | 它是 skill、memory、benchmark 三条线交叉的 evaluator substrate。 | [KNOWN] Authenticated GitHub API；未做本地运行/benchmark 复核。 |
+| [lsdefine/GenericAgent](https://github.com/lsdefine/GenericAgent) | issues 83 -> 84；stars、forks、commits、pushedAt、updatedAt 相比上一轮 2026-06-16 02:26 +0800 packet 保持不变。 | 它是“不要预装技能，而是让技能树生长”的 self-evolving 极简路线。 | [KNOWN] Authenticated GitHub API；未做本地运行/benchmark 复核。 |
+| [openclaw/openclaw](https://github.com/openclaw/openclaw) | stars 378,854 -> 378,882；forks 79,269 -> 79,271；PRs 3,041 -> 2,989；commits 59,023 -> 59,077；pushedAt 2026-06-15T18:29:45Z -> 2026-06-16T00:23:05Z；updatedAt 2026-06-15T18:31:35Z -> 2026-06-16T00:25:07Z。 | 它是“agent 是否真的能给人用”的产品运行时锚点。 | [KNOWN] Authenticated GitHub API；未做本地运行/benchmark 复核。 |
+| [obra/superpowers](https://github.com/obra/superpowers) | stars 228,656 -> 228,771；forks 20,345 -> 20,349；commits 441 -> 442；pushedAt 2026-06-13T22:17:11Z -> 2026-06-15T23:57:48Z；updatedAt 2026-06-15T18:24:27Z -> 2026-06-16T00:17:51Z。 | 它把可复用技能和工程方法论这条线接进了自进化公开证据链。 | [KNOWN] Authenticated GitHub API；未做本地运行/benchmark 复核。 |
+| [EvoMap/awesome-agent-evolution](https://github.com/EvoMap/awesome-agent-evolution) | 与上一轮 2026-06-16 02:26 +0800 packet 相比无公开数字变化。 | 它帮助我们检查公开叙事是否比普通 awesome list 更有证据密度。 | [KNOWN] Authenticated GitHub API；未做本地运行/benchmark 复核。 |
+| [uid4oe/insight-swarm](https://github.com/uid4oe/insight-swarm) | 与上一轮 2026-06-16 02:26 +0800 packet 相比无公开数字变化。 | 它是“shared knowledge graph 替代中心 orchestrator”的 swarm 概念锚点。 | [KNOWN] Authenticated GitHub API；未做本地运行/benchmark 复核。 |
+| [desplega-ai/agent-swarm](https://github.com/desplega-ai/agent-swarm) | 与上一轮 2026-06-16 02:26 +0800 packet 相比无公开数字变化。 | 它把用户要求的 agent-swarm 主线补进了公开证据链。 | [KNOWN] Authenticated GitHub API；未做本地运行/benchmark 复核。 |
 
 ## 核心洞察
 

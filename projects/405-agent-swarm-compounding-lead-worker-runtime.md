@@ -24,4 +24,4 @@ Use Agent Swarm to explain the runtime side of swarm evolution. Improvement is n
 
 ## Evidence And Limits
 
-The raw capture now reflects an authenticated GitHub API snapshot: 529 stars, 58 forks, 1,637 commits, 1 open issues, and 1 open pull requests observed on 2026-06-16. Relative to the previous 2026-06-15 20:24 packet: stars 527 -> 529; commits 1,636 -> 1,637; pushedAt 2026-06-15T09:52:53Z -> 2026-06-15T17:02:59Z; updatedAt 2026-06-15T10:30:03Z -> 2026-06-15T18:31:10Z. This run did not execute the swarm locally, validate Docker worker flows, or rerun production task pipelines. Swarm capability claims remain repository-scoped unless independently tested.
+The raw capture now reflects an authenticated GitHub API snapshot: 529 stars, 58 forks, 1,637 commits, 1 open issues, and 1 open pull requests observed on 2026-06-16 08:26 +0800. Relative to the previous 2026-06-16 02:26 +0800 packet: No public metadata delta relative to the previous 2026-06-16 02:26 +0800 packet. This run did not execute the swarm locally, validate Docker worker flows, or rerun production task pipelines. Swarm capability claims remain repository-scoped unless independently tested.
