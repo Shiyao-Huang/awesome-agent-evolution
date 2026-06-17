@@ -1,10 +1,10 @@
 ---
 repo: uid4oe/insight-swarm
 url: https://github.com/uid4oe/insight-swarm
-content_timestamp: 2026-06-17
+content_timestamp: 2026-06-18
 time_slice: 2026-06
-timestamp_source: gh_api_graphql_authenticated_2026_06_17_1430
-collected_at: 2026-06-17T14:30:30+08:00
+timestamp_source: gh_api_graphql_authenticated_2026_06_18_0232
+collected_at: 2026-06-18T02:32:33+08:00
 source: github
 source_tool: gh_graphql
 ---
@@ -33,16 +33,16 @@ This raw GitHub capture was refreshed by the hourly public metadata update throu
 - Created at: 2026-02-15T12:38:51Z
 - Last pushed at: 2026-03-19T18:04:30Z
 - Last updated at: 2026-03-19T21:28:11Z
-- Collection timestamp: 2026-06-17T14:30:30+08:00
+- Collection timestamp: 2026-06-18T02:32:33+08:00
 - Topics: agents, llm, swarm-intelligence
 - Latest public release: none exposed through the GitHub API release list
 
 ## Visible README / page excerpts
 
-- The current packet on 2026-06-17 shows 0 stars, 0 forks, 25 commits, 0 open issues, and 0 open pull requests.
+- The current packet on 2026-06-18 shows 0 stars, 0 forks, 25 commits, 0 open issues, and 0 open pull requests.
 - The public README still makes the architectural claim explicit: replace the central orchestrator with a shared knowledge graph and let agents discover, challenge, and synthesize.
 - Its sparse topic set keeps it more useful as a concept anchor than as a public momentum signal.
-- No public metadata delta was observed relative to the previous authenticated packet at 2026-06-17 08:29 +0800.
+- No public metadata delta was observed relative to the previous authenticated packet at 2026-06-17 14:30 +0800.
 
 ## Raw capture boundary
 

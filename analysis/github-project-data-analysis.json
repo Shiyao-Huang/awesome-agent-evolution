@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-17T06:33:55.732Z",
+  "generated_at": "2026-06-17T18:33:58.442Z",
   "counts": {
     "raw_captures": 686,
     "raw_files_on_disk": 686,
@@ -1427,7 +1427,7 @@
     {
       "repo": "lsdefine/GenericAgent",
       "url": "https://github.com/lsdefine/GenericAgent",
-      "stars": "12927",
+      "stars": "12938",
       "prior_category": "框架",
       "prior_unclassified": "false",
       "final_category": "框架/framework",
@@ -1435,8 +1435,8 @@
       "base_theme": "evolution",
       "stack": "Python/Self-Evolving Agent/Skill Tree Runtime",
       "time_slice": "2026-06",
-      "content_timestamp": "2026-06-17",
-      "evidence": "GitHub metadata packet on 2026-06-17 showed 12,927 stars, 1,495 forks, 866 commits, 83 open issues, 63 open pull requests, and positioning consistent with evolution / tool-module.",
+      "content_timestamp": "2026-06-18",
+      "evidence": "GitHub metadata packet on 2026-06-18 showed 12,938 stars, 1,499 forks, 869 commits, 83 open issues, 62 open pull requests, and positioning consistent with evolution / tool-module.",
       "description": "GenericAgent is a minimal self-evolving autonomous agent framework that grows a skill tree from a small seed loop instead of preloading a large fixed procedure library."
     },
     {
@@ -1622,7 +1622,7 @@
     {
       "repo": "stanford-iris-lab/meta-harness",
       "url": "https://github.com/stanford-iris-lab/meta-harness",
-      "stars": "1101",
+      "stars": "1107",
       "prior_category": "-",
       "prior_unclassified": "true",
       "final_category": "框架/framework",
@@ -1630,8 +1630,8 @@
       "base_theme": "evolution",
       "stack": "Python/Harness Search/Benchmark Scaffold Evolution",
       "time_slice": "2026-06",
-      "content_timestamp": "2026-06-17",
-      "evidence": "GitHub metadata packet on 2026-06-17 showed 1,101 stars, 105 forks, 11 commits, 5 open issues, 0 open pull requests, and positioning consistent with evolution / agent-evolution-infra.",
+      "content_timestamp": "2026-06-18",
+      "evidence": "GitHub metadata packet on 2026-06-18 showed 1,107 stars, 105 forks, 11 commits, 5 open issues, 0 open pull requests, and positioning consistent with evolution / agent-evolution-infra.",
       "description": "Meta-Harness provides reference code for automated search over model harnesses, including terminal benchmark scaffold evolution and text-classification memory-system search."
     },
     {
@@ -1789,17 +1789,17 @@
     {
       "repo": "NousResearch/hermes-agent",
       "url": "https://github.com/NousResearch/hermes-agent",
-      "stars": "195585",
+      "stars": "196048",
       "prior_category": "-",
       "final_category": "框架/framework",
       "function_tag": "framework-runtime",
       "base_theme": "framework",
       "stack": "Python/TypeScript/Memory/Skills/Messaging-Agent Runtime",
-      "evidence": "GitHub metadata packet on 2026-06-17 showed 195,585 stars, 34,358 forks, 11,857 commits, 7,014 open issues, 14,329 open pull requests, and positioning consistent with framework / framework-runtime.",
+      "evidence": "GitHub metadata packet on 2026-06-18 showed 196,048 stars, 34,477 forks, 11,891 commits, 7,088 open issues, 14,464 open pull requests, and positioning consistent with framework / framework-runtime.",
       "description": "Hermes Agent is a self-improving personal-agent runtime that combines memory, skill creation, session search, user modeling, messaging gateways, and scheduled automations in one user-facing system.",
       "prior_unclassified": "true",
       "time_slice": "2026-06",
-      "content_timestamp": "2026-06-17"
+      "content_timestamp": "2026-06-18"
     },
     {
       "repo": "google-gemini/gemini-cli",
@@ -1834,7 +1834,7 @@
     {
       "repo": "lsdefine/GenericAgent",
       "url": "https://github.com/lsdefine/GenericAgent",
-      "stars": "12927",
+      "stars": "12938",
       "prior_category": "框架",
       "prior_unclassified": "false",
       "final_category": "框架/framework",
@@ -1842,8 +1842,8 @@
       "base_theme": "evolution",
       "stack": "Python/Self-Evolving Agent/Skill Tree Runtime",
       "time_slice": "2026-06",
-      "content_timestamp": "2026-06-17",
-      "evidence": "GitHub metadata packet on 2026-06-17 showed 12,927 stars, 1,495 forks, 866 commits, 83 open issues, 63 open pull requests, and positioning consistent with evolution / tool-module.",
+      "content_timestamp": "2026-06-18",
+      "evidence": "GitHub metadata packet on 2026-06-18 showed 12,938 stars, 1,499 forks, 869 commits, 83 open issues, 62 open pull requests, and positioning consistent with evolution / tool-module.",
       "description": "GenericAgent is a minimal self-evolving autonomous agent framework that grows a skill tree from a small seed loop instead of preloading a large fixed procedure library."
     },
     {
@@ -2089,7 +2089,7 @@
     {
       "repo": "stanford-iris-lab/meta-harness",
       "url": "https://github.com/stanford-iris-lab/meta-harness",
-      "stars": "1101",
+      "stars": "1107",
       "prior_category": "-",
       "prior_unclassified": "true",
       "final_category": "框架/framework",
@@ -2097,8 +2097,8 @@
       "base_theme": "evolution",
       "stack": "Python/Harness Search/Benchmark Scaffold Evolution",
       "time_slice": "2026-06",
-      "content_timestamp": "2026-06-17",
-      "evidence": "GitHub metadata packet on 2026-06-17 showed 1,101 stars, 105 forks, 11 commits, 5 open issues, 0 open pull requests, and positioning consistent with evolution / agent-evolution-infra.",
+      "content_timestamp": "2026-06-18",
+      "evidence": "GitHub metadata packet on 2026-06-18 showed 1,107 stars, 105 forks, 11 commits, 5 open issues, 0 open pull requests, and positioning consistent with evolution / agent-evolution-infra.",
       "description": "Meta-Harness provides reference code for automated search over model harnesses, including terminal benchmark scaffold evolution and text-classification memory-system search."
     },
     {
@@ -4056,7 +4056,7 @@
     {
       "repo": "china-qijizhifeng/agentic-Harness-engineering",
       "url": "https://github.com/china-qijizhifeng/agentic-harness-engineering",
-      "stars": "583",
+      "stars": "585",
       "prior_category": "框架",
       "prior_unclassified": "false",
       "final_category": "框架/framework",
@@ -4064,8 +4064,8 @@
       "base_theme": "harness",
       "stack": "Python/Harness Evolution/Coding-Agent Workflow",
       "time_slice": "2026-06",
-      "content_timestamp": "2026-06-17",
-      "evidence": "GitHub metadata packet on 2026-06-17 showed 583 stars, 65 forks, 46 commits, 0 open issues, 0 open pull requests, and positioning consistent with harness / framework-runtime.",
+      "content_timestamp": "2026-06-18",
+      "evidence": "GitHub metadata packet on 2026-06-18 showed 585 stars, 65 forks, 46 commits, 0 open issues, 0 open pull requests, and positioning consistent with harness / framework-runtime.",
       "description": "Harness engineering is the layer where prompts, tools, middleware, memory, subagents, and evaluators become editable agent infrastructure rather than fixed wrappers around a base model."
     },
     {
@@ -4671,7 +4671,7 @@
     {
       "repo": "desplega-ai/agent-swarm",
       "url": "https://github.com/desplega-ai/agent-swarm",
-      "stars": "532",
+      "stars": "533",
       "prior_category": "-",
       "prior_unclassified": "true",
       "final_category": "框架/framework",
@@ -4679,8 +4679,8 @@
       "base_theme": "agent-swarm",
       "stack": "TypeScript/Docker/MCP/Lead-Worker Swarm",
       "time_slice": "2026-06",
-      "content_timestamp": "2026-06-17",
-      "evidence": "GitHub metadata packet on 2026-06-17 showed 532 stars, 59 forks, 1,641 commits, 1 open issues, 4 open pull requests, and positioning consistent with agent-swarm / framework-runtime.",
+      "content_timestamp": "2026-06-18",
+      "evidence": "GitHub metadata packet on 2026-06-18 showed 533 stars, 59 forks, 1,647 commits, 1 open issues, 4 open pull requests, and positioning consistent with agent-swarm / framework-runtime.",
       "description": "Agent Swarm is a compounding lead-worker runtime that packages delegation topology, worker isolation, shared memory, MCP tooling, and recurring workflows into one public swarm system."
     },
     {
@@ -5114,8 +5114,8 @@
       "base_theme": "evolution",
       "stack": "JavaScript/Shell/Curated Taxonomy Pipeline",
       "time_slice": "2026-06",
-      "content_timestamp": "2026-06-17",
-      "evidence": "GitHub metadata packet on 2026-06-17 showed 141 stars, 20 forks, 64 commits, 6 open issues, 1 open pull requests, and positioning consistent with evolution / resource-index.",
+      "content_timestamp": "2026-06-18",
+      "evidence": "GitHub metadata packet on 2026-06-18 showed 141 stars, 20 forks, 65 commits, 6 open issues, 1 open pull requests, and positioning consistent with evolution / resource-index.",
       "description": "EvoMap/awesome-agent-evolution is a curated awesome list covering self-evolution, memory, protocols, benchmarks, coding agents, and adjacent infrastructure."
     },
     {
@@ -7296,7 +7296,7 @@
     {
       "repo": "lsdefine/GenericAgent",
       "url": "https://github.com/lsdefine/GenericAgent",
-      "stars": "12927",
+      "stars": "12938",
       "prior_category": "框架",
       "prior_unclassified": "false",
       "final_category": "框架/framework",
@@ -7304,8 +7304,8 @@
       "base_theme": "evolution",
       "stack": "Python/Self-Evolving Agent/Skill Tree Runtime",
       "time_slice": "2026-06",
-      "content_timestamp": "2026-06-17",
-      "evidence": "GitHub metadata packet on 2026-06-17 showed 12,927 stars, 1,495 forks, 866 commits, 83 open issues, 63 open pull requests, and positioning consistent with evolution / tool-module.",
+      "content_timestamp": "2026-06-18",
+      "evidence": "GitHub metadata packet on 2026-06-18 showed 12,938 stars, 1,499 forks, 869 commits, 83 open issues, 62 open pull requests, and positioning consistent with evolution / tool-module.",
       "description": "GenericAgent is a minimal self-evolving autonomous agent framework that grows a skill tree from a small seed loop instead of preloading a large fixed procedure library."
     },
     {
@@ -8496,17 +8496,17 @@
     {
       "repo": "NousResearch/hermes-agent",
       "url": "https://github.com/NousResearch/hermes-agent",
-      "stars": "195585",
+      "stars": "196048",
       "prior_category": "-",
       "final_category": "框架/framework",
       "function_tag": "framework-runtime",
       "base_theme": "framework",
       "stack": "Python/TypeScript/Memory/Skills/Messaging-Agent Runtime",
-      "evidence": "GitHub metadata packet on 2026-06-17 showed 195,585 stars, 34,358 forks, 11,857 commits, 7,014 open issues, 14,329 open pull requests, and positioning consistent with framework / framework-runtime.",
+      "evidence": "GitHub metadata packet on 2026-06-18 showed 196,048 stars, 34,477 forks, 11,891 commits, 7,088 open issues, 14,464 open pull requests, and positioning consistent with framework / framework-runtime.",
       "description": "Hermes Agent is a self-improving personal-agent runtime that combines memory, skill creation, session search, user modeling, messaging gateways, and scheduled automations in one user-facing system.",
       "prior_unclassified": "true",
       "time_slice": "2026-06",
-      "content_timestamp": "2026-06-17"
+      "content_timestamp": "2026-06-18"
     },
     {
       "repo": "NousResearch/hermes-agent-self-evolution",
@@ -8556,17 +8556,17 @@
     {
       "repo": "obra/superpowers",
       "url": "https://github.com/obra/superpowers",
-      "stars": "230146",
+      "stars": "230834",
       "prior_category": "-",
       "final_category": "工具/tool",
       "function_tag": "skill-orchestration",
       "base_theme": "skill",
       "stack": "Markdown/Workflow Skills/Coding-Agent Operating Manual",
-      "evidence": "GitHub metadata packet on 2026-06-17 showed 230,146 stars, 20,463 forks, 602 commits, 123 open issues, 162 open pull requests, and positioning consistent with skill / skill-orchestration.",
+      "evidence": "GitHub metadata packet on 2026-06-18 showed 230,834 stars, 20,525 forks, 602 commits, 125 open issues, 162 open pull requests, and positioning consistent with skill / skill-orchestration.",
       "description": "Superpowers is a cross-agent skill and workflow methodology library that packages reusable operating habits for Claude Code, Codex, Cursor, and adjacent coding agents.",
       "prior_unclassified": "true",
       "time_slice": "2026-06",
-      "content_timestamp": "2026-06-17"
+      "content_timestamp": "2026-06-18"
     },
     {
       "repo": "oceanbase/powermem",
@@ -8931,17 +8931,17 @@
     {
       "repo": "openclaw/openclaw",
       "url": "https://github.com/openclaw/openclaw",
-      "stars": "379087",
+      "stars": "379194",
       "prior_category": "-",
       "final_category": "应用/application",
       "function_tag": "framework-runtime",
       "base_theme": "framework",
       "stack": "TypeScript/Rust/Multi-Channel Personal Agent Runtime",
-      "evidence": "GitHub metadata packet on 2026-06-17 showed 379,087 stars, 79,340 forks, 59,657 commits, 3,281 open issues, 3,018 open pull requests, and positioning consistent with framework / framework-runtime.",
+      "evidence": "GitHub metadata packet on 2026-06-18 showed 379,194 stars, 79,367 forks, 59,863 commits, 3,310 open issues, 3,144 open pull requests, and positioning consistent with framework / framework-runtime.",
       "description": "OpenClaw is a local-first personal AI agent runtime with multi-channel interaction, durable sessions, skills, companion apps, and product-facing operating workflows.",
       "prior_unclassified": "true",
       "time_slice": "2026-06",
-      "content_timestamp": "2026-06-17"
+      "content_timestamp": "2026-06-18"
     },
     {
       "repo": "openclaw/openclaw-windows-node",
@@ -9366,17 +9366,17 @@
     {
       "repo": "pinchbench/skill",
       "url": "https://github.com/pinchbench/skill",
-      "stars": "1235",
+      "stars": "1239",
       "prior_category": "-",
       "final_category": "评测/evaluation",
       "function_tag": "benchmark-eval",
       "base_theme": "benchmark",
       "stack": "Python/Shell/TypeScript/OpenClaw Benchmark Harness",
-      "evidence": "GitHub metadata packet on 2026-06-17 showed 1,235 stars, 140 forks, 383 commits, 21 open issues, 1 open pull requests, and positioning consistent with benchmark / benchmark-eval.",
+      "evidence": "GitHub metadata packet on 2026-06-18 showed 1,239 stars, 140 forks, 383 commits, 21 open issues, 1 open pull requests, and positioning consistent with benchmark / benchmark-eval.",
       "description": "PinchBench is an OpenClaw-oriented real task benchmark that measures coding agents across productivity, research, writing, coding, analysis, email, memory, and skill-discovery tasks.",
       "prior_unclassified": "true",
       "time_slice": "2026-06",
-      "content_timestamp": "2026-06-17"
+      "content_timestamp": "2026-06-18"
     },
     {
       "repo": "pingcap/ossinsight",
@@ -9966,17 +9966,17 @@
     {
       "repo": "rohitg00/agentmemory",
       "url": "https://github.com/rohitg00/agentmemory",
-      "stars": "23192",
+      "stars": "23249",
       "prior_category": "-",
       "final_category": "工具/tool",
       "function_tag": "tool-module",
       "base_theme": "memory",
       "stack": "TypeScript/MCP/Coding-Agent Memory/Wiki Index",
-      "evidence": "GitHub metadata packet on 2026-06-17 showed 23,192 stars, 1,912 forks, 462 commits, 148 open issues, 160 open pull requests, and positioning consistent with memory / tool-module.",
+      "evidence": "GitHub metadata packet on 2026-06-18 showed 23,249 stars, 1,913 forks, 462 commits, 148 open issues, 159 open pull requests, and positioning consistent with memory / tool-module.",
       "description": "agentmemory is a cross-harness persistent memory layer for coding agents and MCP clients, with wiki-style knowledge capture, retrieval, and continuity signals.",
       "prior_unclassified": "true",
       "time_slice": "2026-06",
-      "content_timestamp": "2026-06-17"
+      "content_timestamp": "2026-06-18"
     },
     {
       "repo": "rohitg00/awesome-openclaw",
@@ -10791,7 +10791,7 @@
     {
       "repo": "stanford-iris-lab/meta-harness",
       "url": "https://github.com/stanford-iris-lab/meta-harness",
-      "stars": "1101",
+      "stars": "1107",
       "prior_category": "-",
       "prior_unclassified": "true",
       "final_category": "框架/framework",
@@ -10799,8 +10799,8 @@
       "base_theme": "evolution",
       "stack": "Python/Harness Search/Benchmark Scaffold Evolution",
       "time_slice": "2026-06",
-      "content_timestamp": "2026-06-17",
-      "evidence": "GitHub metadata packet on 2026-06-17 showed 1,101 stars, 105 forks, 11 commits, 5 open issues, 0 open pull requests, and positioning consistent with evolution / agent-evolution-infra.",
+      "content_timestamp": "2026-06-18",
+      "evidence": "GitHub metadata packet on 2026-06-18 showed 1,107 stars, 105 forks, 11 commits, 5 open issues, 0 open pull requests, and positioning consistent with evolution / agent-evolution-infra.",
       "description": "Meta-Harness provides reference code for automated search over model harnesses, including terminal benchmark scaffold evolution and text-classification memory-system search."
     },
     {
@@ -11609,8 +11609,8 @@
       "base_theme": "framework",
       "stack": "TypeScript/Knowledge-Graph Multi-Agent Runtime",
       "time_slice": "2026-06",
-      "content_timestamp": "2026-06-17",
-      "evidence": "GitHub metadata packet on 2026-06-17 showed 0 stars, 0 forks, 25 commits, 0 open issues, 0 open pull requests, and positioning consistent with framework / framework-runtime.",
+      "content_timestamp": "2026-06-18",
+      "evidence": "GitHub metadata packet on 2026-06-18 showed 0 stars, 0 forks, 25 commits, 0 open issues, 0 open pull requests, and positioning consistent with framework / framework-runtime.",
       "description": "Insight Swarm is a knowledge-graph-mediated multi-agent runtime that removes the central orchestrator and forces synthesis through shared-graph interaction."
     },
     {
@@ -13276,8 +13276,8 @@
       "base_theme": "evolution",
       "stack": "JavaScript/Shell/Curated Taxonomy Pipeline",
       "time_slice": "2026-06",
-      "content_timestamp": "2026-06-17",
-      "evidence": "GitHub metadata packet on 2026-06-17 showed 141 stars, 20 forks, 64 commits, 6 open issues, 1 open pull requests, and positioning consistent with evolution / resource-index.",
+      "content_timestamp": "2026-06-18",
+      "evidence": "GitHub metadata packet on 2026-06-18 showed 141 stars, 20 forks, 65 commits, 6 open issues, 1 open pull requests, and positioning consistent with evolution / resource-index.",
       "description": "EvoMap/awesome-agent-evolution is a curated awesome list covering self-evolution, memory, protocols, benchmarks, coding agents, and adjacent infrastructure."
     },
     {
@@ -13568,7 +13568,7 @@
     {
       "repo": "lsdefine/GenericAgent",
       "url": "https://github.com/lsdefine/GenericAgent",
-      "stars": "12927",
+      "stars": "12938",
       "prior_category": "框架",
       "prior_unclassified": "false",
       "final_category": "框架/framework",
@@ -13576,8 +13576,8 @@
       "base_theme": "evolution",
       "stack": "Python/Self-Evolving Agent/Skill Tree Runtime",
       "time_slice": "2026-06",
-      "content_timestamp": "2026-06-17",
-      "evidence": "GitHub metadata packet on 2026-06-17 showed 12,927 stars, 1,495 forks, 866 commits, 83 open issues, 63 open pull requests, and positioning consistent with evolution / tool-module.",
+      "content_timestamp": "2026-06-18",
+      "evidence": "GitHub metadata packet on 2026-06-18 showed 12,938 stars, 1,499 forks, 869 commits, 83 open issues, 62 open pull requests, and positioning consistent with evolution / tool-module.",
       "description": "GenericAgent is a minimal self-evolving autonomous agent framework that grows a skill tree from a small seed loop instead of preloading a large fixed procedure library."
     },
     {
@@ -13943,7 +13943,7 @@
     {
       "repo": "stanford-iris-lab/meta-harness",
       "url": "https://github.com/stanford-iris-lab/meta-harness",
-      "stars": "1101",
+      "stars": "1107",
       "prior_category": "-",
       "prior_unclassified": "true",
       "final_category": "框架/framework",
@@ -13951,8 +13951,8 @@
       "base_theme": "evolution",
       "stack": "Python/Harness Search/Benchmark Scaffold Evolution",
       "time_slice": "2026-06",
-      "content_timestamp": "2026-06-17",
-      "evidence": "GitHub metadata packet on 2026-06-17 showed 1,101 stars, 105 forks, 11 commits, 5 open issues, 0 open pull requests, and positioning consistent with evolution / agent-evolution-infra.",
+      "content_timestamp": "2026-06-18",
+      "evidence": "GitHub metadata packet on 2026-06-18 showed 1,107 stars, 105 forks, 11 commits, 5 open issues, 0 open pull requests, and positioning consistent with evolution / agent-evolution-infra.",
       "description": "Meta-Harness provides reference code for automated search over model harnesses, including terminal benchmark scaffold evolution and text-classification memory-system search."
     },
     {
@@ -15228,8 +15228,8 @@
       "base_theme": "evolution",
       "stack": "JavaScript/Shell/Curated Taxonomy Pipeline",
       "time_slice": "2026-06",
-      "content_timestamp": "2026-06-17",
-      "evidence": "GitHub metadata packet on 2026-06-17 showed 141 stars, 20 forks, 64 commits, 6 open issues, 1 open pull requests, and positioning consistent with evolution / resource-index.",
+      "content_timestamp": "2026-06-18",
+      "evidence": "GitHub metadata packet on 2026-06-18 showed 141 stars, 20 forks, 65 commits, 6 open issues, 1 open pull requests, and positioning consistent with evolution / resource-index.",
       "description": "EvoMap/awesome-agent-evolution is a curated awesome list covering self-evolution, memory, protocols, benchmarks, coding agents, and adjacent infrastructure."
     },
     {
@@ -15880,7 +15880,7 @@
     {
       "repo": "lsdefine/GenericAgent",
       "url": "https://github.com/lsdefine/GenericAgent",
-      "stars": "12927",
+      "stars": "12938",
       "prior_category": "框架",
       "prior_unclassified": "false",
       "final_category": "框架/framework",
@@ -15888,8 +15888,8 @@
       "base_theme": "evolution",
       "stack": "Python/Self-Evolving Agent/Skill Tree Runtime",
       "time_slice": "2026-06",
-      "content_timestamp": "2026-06-17",
-      "evidence": "GitHub metadata packet on 2026-06-17 showed 12,927 stars, 1,495 forks, 866 commits, 83 open issues, 63 open pull requests, and positioning consistent with evolution / tool-module.",
+      "content_timestamp": "2026-06-18",
+      "evidence": "GitHub metadata packet on 2026-06-18 showed 12,938 stars, 1,499 forks, 869 commits, 83 open issues, 62 open pull requests, and positioning consistent with evolution / tool-module.",
       "description": "GenericAgent is a minimal self-evolving autonomous agent framework that grows a skill tree from a small seed loop instead of preloading a large fixed procedure library."
     },
     {
@@ -16255,17 +16255,17 @@
     {
       "repo": "NousResearch/hermes-agent",
       "url": "https://github.com/NousResearch/hermes-agent",
-      "stars": "195585",
+      "stars": "196048",
       "prior_category": "-",
       "final_category": "框架/framework",
       "function_tag": "framework-runtime",
       "base_theme": "framework",
       "stack": "Python/TypeScript/Memory/Skills/Messaging-Agent Runtime",
-      "evidence": "GitHub metadata packet on 2026-06-17 showed 195,585 stars, 34,358 forks, 11,857 commits, 7,014 open issues, 14,329 open pull requests, and positioning consistent with framework / framework-runtime.",
+      "evidence": "GitHub metadata packet on 2026-06-18 showed 196,048 stars, 34,477 forks, 11,891 commits, 7,088 open issues, 14,464 open pull requests, and positioning consistent with framework / framework-runtime.",
       "description": "Hermes Agent is a self-improving personal-agent runtime that combines memory, skill creation, session search, user modeling, messaging gateways, and scheduled automations in one user-facing system.",
       "prior_unclassified": "true",
       "time_slice": "2026-06",
-      "content_timestamp": "2026-06-17"
+      "content_timestamp": "2026-06-18"
     },
     {
       "repo": "NousResearch/hermes-agent-self-evolution",
@@ -16825,7 +16825,7 @@
     {
       "repo": "stanford-iris-lab/meta-harness",
       "url": "https://github.com/stanford-iris-lab/meta-harness",
-      "stars": "1101",
+      "stars": "1107",
       "prior_category": "-",
       "prior_unclassified": "true",
       "final_category": "框架/framework",
@@ -16833,8 +16833,8 @@
       "base_theme": "evolution",
       "stack": "Python/Harness Search/Benchmark Scaffold Evolution",
       "time_slice": "2026-06",
-      "content_timestamp": "2026-06-17",
-      "evidence": "GitHub metadata packet on 2026-06-17 showed 1,101 stars, 105 forks, 11 commits, 5 open issues, 0 open pull requests, and positioning consistent with evolution / agent-evolution-infra.",
+      "content_timestamp": "2026-06-18",
+      "evidence": "GitHub metadata packet on 2026-06-18 showed 1,107 stars, 105 forks, 11 commits, 5 open issues, 0 open pull requests, and positioning consistent with evolution / agent-evolution-infra.",
       "description": "Meta-Harness provides reference code for automated search over model harnesses, including terminal benchmark scaffold evolution and text-classification memory-system search."
     },
     {
@@ -24355,7 +24355,7 @@
         "benchmark",
         "outer-loop search"
       ],
-      "site_stars": 1101,
+      "site_stars": 1107,
       "site_forks": 105,
       "license": "MIT",
       "lastPushed": "2026-04-29T16:39:58Z",
@@ -24378,13 +24378,13 @@
       "github_error": "fetch failed",
       "in_raw_timestamp_index": true,
       "raw_file": "raw-github/stanford-iris-lab_meta-harness.md",
-      "raw_collected_at": "2026-06-17T14:30:30+08:00",
-      "raw_content_timestamp": "2026-06-17",
-      "raw_timestamp_source": "gh_api_graphql_authenticated_2026_06_17_1430",
+      "raw_collected_at": "2026-06-18T02:32:33+08:00",
+      "raw_content_timestamp": "2026-06-18",
+      "raw_timestamp_source": "gh_api_graphql_authenticated_2026_06_18_0232",
       "in_classification": true,
       "classification_category": "框架/framework",
       "classification_function_tag": "agent-evolution-infra",
-      "classification_evidence": "GitHub metadata packet on 2026-06-17 showed 1,101 stars, 105 forks, 11 commits, 5 open issues, 0 open pull requests, and positioning consistent with evolution / agent-evolution-infra.",
+      "classification_evidence": "GitHub metadata packet on 2026-06-18 showed 1,107 stars, 105 forks, 11 commits, 5 open issues, 0 open pull requests, and positioning consistent with evolution / agent-evolution-infra.",
       "raw_time_slice": "2026-06",
       "classified_theme": "evolution",
       "evolution_focused": true
@@ -31541,7 +31541,7 @@
         "skills",
         "transcripts"
       ],
-      "site_stars": 1235,
+      "site_stars": 1239,
       "site_forks": 140,
       "license": "MIT",
       "lastPushed": "2026-06-02T21:35:43Z",
@@ -31560,13 +31560,13 @@
       "github_source": "github_api_403",
       "in_raw_timestamp_index": true,
       "raw_file": "raw-github/pinchbench_skill.md",
-      "raw_collected_at": "2026-06-17T14:30:30+08:00",
-      "raw_content_timestamp": "2026-06-17",
-      "raw_timestamp_source": "gh_api_graphql_authenticated_2026_06_17_1430",
+      "raw_collected_at": "2026-06-18T02:32:33+08:00",
+      "raw_content_timestamp": "2026-06-18",
+      "raw_timestamp_source": "gh_api_graphql_authenticated_2026_06_18_0232",
       "in_classification": true,
       "classification_category": "评测/evaluation",
       "classification_function_tag": "benchmark-eval",
-      "classification_evidence": "GitHub metadata packet on 2026-06-17 showed 1,235 stars, 140 forks, 383 commits, 21 open issues, 1 open pull requests, and positioning consistent with benchmark / benchmark-eval.",
+      "classification_evidence": "GitHub metadata packet on 2026-06-18 showed 1,239 stars, 140 forks, 383 commits, 21 open issues, 1 open pull requests, and positioning consistent with benchmark / benchmark-eval.",
       "raw_time_slice": "2026-06",
       "classified_theme": "benchmark",
       "evolution_focused": false
@@ -31637,7 +31637,7 @@
       "site_stars": 141,
       "site_forks": 20,
       "license": "NOASSERTION",
-      "lastPushed": "2026-06-15T14:57:02Z",
+      "lastPushed": "2026-06-17T10:22:38Z",
       "localPath": "raw-github/evomap_awesome-agent-evolution.md",
       "local_git": null,
       "local_git_history_24m": null,
@@ -31657,13 +31657,13 @@
       "github_error": "fetch failed",
       "in_raw_timestamp_index": true,
       "raw_file": "raw-github/evomap_awesome-agent-evolution.md",
-      "raw_collected_at": "2026-06-17T14:30:30+08:00",
-      "raw_content_timestamp": "2026-06-17",
-      "raw_timestamp_source": "gh_api_graphql_authenticated_2026_06_17_1430",
+      "raw_collected_at": "2026-06-18T02:32:33+08:00",
+      "raw_content_timestamp": "2026-06-18",
+      "raw_timestamp_source": "gh_api_graphql_authenticated_2026_06_18_0232",
       "in_classification": true,
       "classification_category": "工具/tool",
       "classification_function_tag": "resource-index",
-      "classification_evidence": "GitHub metadata packet on 2026-06-17 showed 141 stars, 20 forks, 64 commits, 6 open issues, 1 open pull requests, and positioning consistent with evolution / resource-index.",
+      "classification_evidence": "GitHub metadata packet on 2026-06-18 showed 141 stars, 20 forks, 65 commits, 6 open issues, 1 open pull requests, and positioning consistent with evolution / resource-index.",
       "raw_time_slice": "2026-06",
       "classified_theme": "evolution",
       "evolution_focused": true
@@ -32393,10 +32393,10 @@
         "mcp",
         "compounding-memory"
       ],
-      "site_stars": 532,
+      "site_stars": 533,
       "site_forks": 59,
       "license": "MIT",
-      "lastPushed": "2026-06-17T03:05:28Z",
+      "lastPushed": "2026-06-17T17:22:33Z",
       "localPath": "raw-github/desplega-ai_agent-swarm.md",
       "local_git": null,
       "local_git_history_24m": null,
@@ -32416,13 +32416,13 @@
       "github_error": "fetch failed",
       "in_raw_timestamp_index": true,
       "raw_file": "raw-github/desplega-ai_agent-swarm.md",
-      "raw_collected_at": "2026-06-17T14:30:30+08:00",
-      "raw_content_timestamp": "2026-06-17",
-      "raw_timestamp_source": "gh_api_graphql_authenticated_2026_06_17_1430",
+      "raw_collected_at": "2026-06-18T02:32:33+08:00",
+      "raw_content_timestamp": "2026-06-18",
+      "raw_timestamp_source": "gh_api_graphql_authenticated_2026_06_18_0232",
       "in_classification": true,
       "classification_category": "框架/framework",
       "classification_function_tag": "framework-runtime",
-      "classification_evidence": "GitHub metadata packet on 2026-06-17 showed 532 stars, 59 forks, 1,641 commits, 1 open issues, 4 open pull requests, and positioning consistent with agent-swarm / framework-runtime.",
+      "classification_evidence": "GitHub metadata packet on 2026-06-18 showed 533 stars, 59 forks, 1,647 commits, 1 open issues, 4 open pull requests, and positioning consistent with agent-swarm / framework-runtime.",
       "raw_time_slice": "2026-06",
       "classified_theme": "agent-swarm",
       "evolution_focused": false
@@ -32681,7 +32681,7 @@
         "evaluation",
         "coding-agent"
       ],
-      "site_stars": 583,
+      "site_stars": 585,
       "site_forks": 65,
       "license": "MIT",
       "lastPushed": "2026-06-14T16:03:21Z",
@@ -32700,13 +32700,13 @@
       "github_source": "github_api_403",
       "in_raw_timestamp_index": true,
       "raw_file": "raw-github/china-qijizhifeng_agentic-harness-engineering.md",
-      "raw_collected_at": "2026-06-17T14:30:30+08:00",
-      "raw_content_timestamp": "2026-06-17",
-      "raw_timestamp_source": "gh_api_graphql_authenticated_2026_06_17_1430",
+      "raw_collected_at": "2026-06-18T02:32:33+08:00",
+      "raw_content_timestamp": "2026-06-18",
+      "raw_timestamp_source": "gh_api_graphql_authenticated_2026_06_18_0232",
       "in_classification": true,
       "classification_category": "框架/framework",
       "classification_function_tag": "framework-runtime",
-      "classification_evidence": "GitHub metadata packet on 2026-06-17 showed 583 stars, 65 forks, 46 commits, 0 open issues, 0 open pull requests, and positioning consistent with harness / framework-runtime.",
+      "classification_evidence": "GitHub metadata packet on 2026-06-18 showed 585 stars, 65 forks, 46 commits, 0 open issues, 0 open pull requests, and positioning consistent with harness / framework-runtime.",
       "raw_time_slice": "2026-06",
       "classified_theme": "harness",
       "evolution_focused": true
@@ -32725,10 +32725,10 @@
         "messaging",
         "automation"
       ],
-      "site_stars": 195585,
-      "site_forks": 34358,
+      "site_stars": 196048,
+      "site_forks": 34477,
       "license": "MIT",
-      "lastPushed": "2026-06-17T05:57:18Z",
+      "lastPushed": "2026-06-17T18:19:26Z",
       "localPath": "raw-github/nousresearch_hermes-agent.md",
       "local_git": null,
       "local_git_history_24m": null,
@@ -32744,13 +32744,13 @@
       "github_source": "github_api_403",
       "in_raw_timestamp_index": true,
       "raw_file": "raw-github/nousresearch_hermes-agent.md",
-      "raw_collected_at": "2026-06-17T14:30:30+08:00",
-      "raw_content_timestamp": "2026-06-17",
-      "raw_timestamp_source": "gh_api_graphql_authenticated_2026_06_17_1430",
+      "raw_collected_at": "2026-06-18T02:32:33+08:00",
+      "raw_content_timestamp": "2026-06-18",
+      "raw_timestamp_source": "gh_api_graphql_authenticated_2026_06_18_0232",
       "in_classification": true,
       "classification_category": "框架/framework",
       "classification_function_tag": "framework-runtime",
-      "classification_evidence": "GitHub metadata packet on 2026-06-17 showed 195,585 stars, 34,358 forks, 11,857 commits, 7,014 open issues, 14,329 open pull requests, and positioning consistent with framework / framework-runtime.",
+      "classification_evidence": "GitHub metadata packet on 2026-06-18 showed 196,048 stars, 34,477 forks, 11,891 commits, 7,088 open issues, 14,464 open pull requests, and positioning consistent with framework / framework-runtime.",
       "raw_time_slice": "2026-06",
       "classified_theme": "framework",
       "evolution_focused": true
@@ -32769,10 +32769,10 @@
         "autonomous-agent",
         "token-efficiency"
       ],
-      "site_stars": 12927,
-      "site_forks": 1495,
+      "site_stars": 12938,
+      "site_forks": 1499,
       "license": "MIT",
-      "lastPushed": "2026-06-16T13:38:01Z",
+      "lastPushed": "2026-06-17T17:02:31Z",
       "localPath": "raw-github/lsdefine_genericagent.md",
       "local_git": null,
       "local_git_history_24m": null,
@@ -32788,13 +32788,13 @@
       "github_source": "github_api_403",
       "in_raw_timestamp_index": true,
       "raw_file": "raw-github/lsdefine_genericagent.md",
-      "raw_collected_at": "2026-06-17T14:30:30+08:00",
-      "raw_content_timestamp": "2026-06-17",
-      "raw_timestamp_source": "gh_api_graphql_authenticated_2026_06_17_1430",
+      "raw_collected_at": "2026-06-18T02:32:33+08:00",
+      "raw_content_timestamp": "2026-06-18",
+      "raw_timestamp_source": "gh_api_graphql_authenticated_2026_06_18_0232",
       "in_classification": true,
       "classification_category": "框架/framework",
       "classification_function_tag": "tool-module",
-      "classification_evidence": "GitHub metadata packet on 2026-06-17 showed 12,927 stars, 1,495 forks, 866 commits, 83 open issues, 63 open pull requests, and positioning consistent with evolution / tool-module.",
+      "classification_evidence": "GitHub metadata packet on 2026-06-18 showed 12,938 stars, 1,499 forks, 869 commits, 83 open issues, 62 open pull requests, and positioning consistent with evolution / tool-module.",
       "raw_time_slice": "2026-06",
       "classified_theme": "evolution",
       "evolution_focused": true
@@ -32813,10 +32813,10 @@
         "skills",
         "runtime"
       ],
-      "site_stars": 379087,
-      "site_forks": 79340,
+      "site_stars": 379194,
+      "site_forks": 79367,
       "license": "NOASSERTION",
-      "lastPushed": "2026-06-17T06:32:32Z",
+      "lastPushed": "2026-06-17T18:27:56Z",
       "localPath": "raw-github/openclaw_openclaw.md",
       "local_git": null,
       "local_git_history_24m": null,
@@ -32832,13 +32832,13 @@
       "github_source": "github_api_403",
       "in_raw_timestamp_index": true,
       "raw_file": "raw-github/openclaw_openclaw.md",
-      "raw_collected_at": "2026-06-17T14:30:30+08:00",
-      "raw_content_timestamp": "2026-06-17",
-      "raw_timestamp_source": "gh_api_graphql_authenticated_2026_06_17_1430",
+      "raw_collected_at": "2026-06-18T02:32:33+08:00",
+      "raw_content_timestamp": "2026-06-18",
+      "raw_timestamp_source": "gh_api_graphql_authenticated_2026_06_18_0232",
       "in_classification": true,
       "classification_category": "应用/application",
       "classification_function_tag": "framework-runtime",
-      "classification_evidence": "GitHub metadata packet on 2026-06-17 showed 379,087 stars, 79,340 forks, 59,657 commits, 3,281 open issues, 3,018 open pull requests, and positioning consistent with framework / framework-runtime.",
+      "classification_evidence": "GitHub metadata packet on 2026-06-18 showed 379,194 stars, 79,367 forks, 59,863 commits, 3,310 open issues, 3,144 open pull requests, and positioning consistent with framework / framework-runtime.",
       "raw_time_slice": "2026-06",
       "classified_theme": "framework",
       "evolution_focused": false
@@ -32857,8 +32857,8 @@
         "methodology",
         "worktrees"
       ],
-      "site_stars": 230146,
-      "site_forks": 20463,
+      "site_stars": 230834,
+      "site_forks": 20525,
       "license": "MIT",
       "lastPushed": "2026-06-17T05:46:48Z",
       "localPath": "raw-github/obra_superpowers.md",
@@ -32876,13 +32876,13 @@
       "github_source": "github_api_403",
       "in_raw_timestamp_index": true,
       "raw_file": "raw-github/obra_superpowers.md",
-      "raw_collected_at": "2026-06-17T14:30:30+08:00",
-      "raw_content_timestamp": "2026-06-17",
-      "raw_timestamp_source": "gh_api_graphql_authenticated_2026_06_17_1430",
+      "raw_collected_at": "2026-06-18T02:32:33+08:00",
+      "raw_content_timestamp": "2026-06-18",
+      "raw_timestamp_source": "gh_api_graphql_authenticated_2026_06_18_0232",
       "in_classification": true,
       "classification_category": "工具/tool",
       "classification_function_tag": "skill-orchestration",
-      "classification_evidence": "GitHub metadata packet on 2026-06-17 showed 230,146 stars, 20,463 forks, 602 commits, 123 open issues, 162 open pull requests, and positioning consistent with skill / skill-orchestration.",
+      "classification_evidence": "GitHub metadata packet on 2026-06-18 showed 230,834 stars, 20,525 forks, 602 commits, 125 open issues, 162 open pull requests, and positioning consistent with skill / skill-orchestration.",
       "raw_time_slice": "2026-06",
       "classified_theme": "skill",
       "evolution_focused": false
@@ -32901,8 +32901,8 @@
         "knowledge-graph",
         "continuity"
       ],
-      "site_stars": 23192,
-      "site_forks": 1912,
+      "site_stars": 23249,
+      "site_forks": 1913,
       "license": "Apache-2.0",
       "lastPushed": "2026-06-15T06:20:23Z",
       "localPath": "raw-github/rohitg00_agentmemory.md",
@@ -32920,13 +32920,13 @@
       "github_source": "github_api_403",
       "in_raw_timestamp_index": true,
       "raw_file": "raw-github/rohitg00_agentmemory.md",
-      "raw_collected_at": "2026-06-17T14:30:30+08:00",
-      "raw_content_timestamp": "2026-06-17",
-      "raw_timestamp_source": "gh_api_graphql_authenticated_2026_06_17_1430",
+      "raw_collected_at": "2026-06-18T02:32:33+08:00",
+      "raw_content_timestamp": "2026-06-18",
+      "raw_timestamp_source": "gh_api_graphql_authenticated_2026_06_18_0232",
       "in_classification": true,
       "classification_category": "工具/tool",
       "classification_function_tag": "tool-module",
-      "classification_evidence": "GitHub metadata packet on 2026-06-17 showed 23,192 stars, 1,912 forks, 462 commits, 148 open issues, 160 open pull requests, and positioning consistent with memory / tool-module.",
+      "classification_evidence": "GitHub metadata packet on 2026-06-18 showed 23,249 stars, 1,913 forks, 462 commits, 148 open issues, 159 open pull requests, and positioning consistent with memory / tool-module.",
       "raw_time_slice": "2026-06",
       "classified_theme": "memory",
       "evolution_focused": false
@@ -32947,10 +32947,10 @@
         "skills",
         "runtime"
       ],
-      "site_stars": 379087,
-      "site_forks": 79340,
+      "site_stars": 379194,
+      "site_forks": 79367,
       "license": "NOASSERTION",
-      "lastPushed": "2026-06-17T06:32:32Z",
+      "lastPushed": "2026-06-17T18:27:56Z",
       "localPath": "raw-github/openclaw_openclaw.md",
       "local_git": null,
       "local_git_history_24m": null,
@@ -32966,13 +32966,13 @@
       "github_source": "github_api_403",
       "in_raw_timestamp_index": true,
       "raw_file": "raw-github/openclaw_openclaw.md",
-      "raw_collected_at": "2026-06-17T14:30:30+08:00",
-      "raw_content_timestamp": "2026-06-17",
-      "raw_timestamp_source": "gh_api_graphql_authenticated_2026_06_17_1430",
+      "raw_collected_at": "2026-06-18T02:32:33+08:00",
+      "raw_content_timestamp": "2026-06-18",
+      "raw_timestamp_source": "gh_api_graphql_authenticated_2026_06_18_0232",
       "in_classification": true,
       "classification_category": "应用/application",
       "classification_function_tag": "framework-runtime",
-      "classification_evidence": "GitHub metadata packet on 2026-06-17 showed 379,087 stars, 79,340 forks, 59,657 commits, 3,281 open issues, 3,018 open pull requests, and positioning consistent with framework / framework-runtime.",
+      "classification_evidence": "GitHub metadata packet on 2026-06-18 showed 379,194 stars, 79,367 forks, 59,863 commits, 3,310 open issues, 3,144 open pull requests, and positioning consistent with framework / framework-runtime.",
       "raw_time_slice": "2026-06",
       "classified_theme": "framework",
       "evolution_focused": false
@@ -32991,8 +32991,8 @@
         "methodology",
         "worktrees"
       ],
-      "site_stars": 230146,
-      "site_forks": 20463,
+      "site_stars": 230834,
+      "site_forks": 20525,
       "license": "MIT",
       "lastPushed": "2026-06-17T05:46:48Z",
       "localPath": "raw-github/obra_superpowers.md",
@@ -33010,13 +33010,13 @@
       "github_source": "github_api_403",
       "in_raw_timestamp_index": true,
       "raw_file": "raw-github/obra_superpowers.md",
-      "raw_collected_at": "2026-06-17T14:30:30+08:00",
-      "raw_content_timestamp": "2026-06-17",
-      "raw_timestamp_source": "gh_api_graphql_authenticated_2026_06_17_1430",
+      "raw_collected_at": "2026-06-18T02:32:33+08:00",
+      "raw_content_timestamp": "2026-06-18",
+      "raw_timestamp_source": "gh_api_graphql_authenticated_2026_06_18_0232",
       "in_classification": true,
       "classification_category": "工具/tool",
       "classification_function_tag": "skill-orchestration",
-      "classification_evidence": "GitHub metadata packet on 2026-06-17 showed 230,146 stars, 20,463 forks, 602 commits, 123 open issues, 162 open pull requests, and positioning consistent with skill / skill-orchestration.",
+      "classification_evidence": "GitHub metadata packet on 2026-06-18 showed 230,834 stars, 20,525 forks, 602 commits, 125 open issues, 162 open pull requests, and positioning consistent with skill / skill-orchestration.",
       "raw_time_slice": "2026-06",
       "classified_theme": "skill",
       "evolution_focused": false
@@ -33035,10 +33035,10 @@
         "messaging",
         "automation"
       ],
-      "site_stars": 195585,
-      "site_forks": 34358,
+      "site_stars": 196048,
+      "site_forks": 34477,
       "license": "MIT",
-      "lastPushed": "2026-06-17T05:57:18Z",
+      "lastPushed": "2026-06-17T18:19:26Z",
       "localPath": "raw-github/nousresearch_hermes-agent.md",
       "local_git": null,
       "local_git_history_24m": null,
@@ -33054,13 +33054,13 @@
       "github_source": "github_api_403",
       "in_raw_timestamp_index": true,
       "raw_file": "raw-github/nousresearch_hermes-agent.md",
-      "raw_collected_at": "2026-06-17T14:30:30+08:00",
-      "raw_content_timestamp": "2026-06-17",
-      "raw_timestamp_source": "gh_api_graphql_authenticated_2026_06_17_1430",
+      "raw_collected_at": "2026-06-18T02:32:33+08:00",
+      "raw_content_timestamp": "2026-06-18",
+      "raw_timestamp_source": "gh_api_graphql_authenticated_2026_06_18_0232",
       "in_classification": true,
       "classification_category": "框架/framework",
       "classification_function_tag": "framework-runtime",
-      "classification_evidence": "GitHub metadata packet on 2026-06-17 showed 195,585 stars, 34,358 forks, 11,857 commits, 7,014 open issues, 14,329 open pull requests, and positioning consistent with framework / framework-runtime.",
+      "classification_evidence": "GitHub metadata packet on 2026-06-18 showed 196,048 stars, 34,477 forks, 11,891 commits, 7,088 open issues, 14,464 open pull requests, and positioning consistent with framework / framework-runtime.",
       "raw_time_slice": "2026-06",
       "classified_theme": "framework",
       "evolution_focused": true
@@ -34480,8 +34480,8 @@
         "knowledge-graph",
         "continuity"
       ],
-      "site_stars": 23192,
-      "site_forks": 1912,
+      "site_stars": 23249,
+      "site_forks": 1913,
       "license": "Apache-2.0",
       "lastPushed": "2026-06-15T06:20:23Z",
       "localPath": "raw-github/rohitg00_agentmemory.md",
@@ -34499,13 +34499,13 @@
       "github_source": "github_api_403",
       "in_raw_timestamp_index": true,
       "raw_file": "raw-github/rohitg00_agentmemory.md",
-      "raw_collected_at": "2026-06-17T14:30:30+08:00",
-      "raw_content_timestamp": "2026-06-17",
-      "raw_timestamp_source": "gh_api_graphql_authenticated_2026_06_17_1430",
+      "raw_collected_at": "2026-06-18T02:32:33+08:00",
+      "raw_content_timestamp": "2026-06-18",
+      "raw_timestamp_source": "gh_api_graphql_authenticated_2026_06_18_0232",
       "in_classification": true,
       "classification_category": "工具/tool",
       "classification_function_tag": "tool-module",
-      "classification_evidence": "GitHub metadata packet on 2026-06-17 showed 23,192 stars, 1,912 forks, 462 commits, 148 open issues, 160 open pull requests, and positioning consistent with memory / tool-module.",
+      "classification_evidence": "GitHub metadata packet on 2026-06-18 showed 23,249 stars, 1,913 forks, 462 commits, 148 open issues, 159 open pull requests, and positioning consistent with memory / tool-module.",
       "raw_time_slice": "2026-06",
       "classified_theme": "memory",
       "evolution_focused": false
@@ -35493,10 +35493,10 @@
         "autonomous-agent",
         "token-efficiency"
       ],
-      "site_stars": 12927,
-      "site_forks": 1495,
+      "site_stars": 12938,
+      "site_forks": 1499,
       "license": "MIT",
-      "lastPushed": "2026-06-16T13:38:01Z",
+      "lastPushed": "2026-06-17T17:02:31Z",
       "localPath": "raw-github/lsdefine_genericagent.md",
       "local_git": null,
       "local_git_history_24m": null,
@@ -35512,13 +35512,13 @@
       "github_source": "github_api_403",
       "in_raw_timestamp_index": true,
       "raw_file": "raw-github/lsdefine_genericagent.md",
-      "raw_collected_at": "2026-06-17T14:30:30+08:00",
-      "raw_content_timestamp": "2026-06-17",
-      "raw_timestamp_source": "gh_api_graphql_authenticated_2026_06_17_1430",
+      "raw_collected_at": "2026-06-18T02:32:33+08:00",
+      "raw_content_timestamp": "2026-06-18",
+      "raw_timestamp_source": "gh_api_graphql_authenticated_2026_06_18_0232",
       "in_classification": true,
       "classification_category": "框架/framework",
       "classification_function_tag": "tool-module",
-      "classification_evidence": "GitHub metadata packet on 2026-06-17 showed 12,927 stars, 1,495 forks, 866 commits, 83 open issues, 63 open pull requests, and positioning consistent with evolution / tool-module.",
+      "classification_evidence": "GitHub metadata packet on 2026-06-18 showed 12,938 stars, 1,499 forks, 869 commits, 83 open issues, 62 open pull requests, and positioning consistent with evolution / tool-module.",
       "raw_time_slice": "2026-06",
       "classified_theme": "evolution",
       "evolution_focused": true
@@ -38508,7 +38508,7 @@
         "skills",
         "transcripts"
       ],
-      "site_stars": 1235,
+      "site_stars": 1239,
       "site_forks": 140,
       "license": "MIT",
       "lastPushed": "2026-06-02T21:35:43Z",
@@ -38527,13 +38527,13 @@
       "github_source": "github_api_403",
       "in_raw_timestamp_index": true,
       "raw_file": "raw-github/pinchbench_skill.md",
-      "raw_collected_at": "2026-06-17T14:30:30+08:00",
-      "raw_content_timestamp": "2026-06-17",
-      "raw_timestamp_source": "gh_api_graphql_authenticated_2026_06_17_1430",
+      "raw_collected_at": "2026-06-18T02:32:33+08:00",
+      "raw_content_timestamp": "2026-06-18",
+      "raw_timestamp_source": "gh_api_graphql_authenticated_2026_06_18_0232",
       "in_classification": true,
       "classification_category": "评测/evaluation",
       "classification_function_tag": "benchmark-eval",
-      "classification_evidence": "GitHub metadata packet on 2026-06-17 showed 1,235 stars, 140 forks, 383 commits, 21 open issues, 1 open pull requests, and positioning consistent with benchmark / benchmark-eval.",
+      "classification_evidence": "GitHub metadata packet on 2026-06-18 showed 1,239 stars, 140 forks, 383 commits, 21 open issues, 1 open pull requests, and positioning consistent with benchmark / benchmark-eval.",
       "raw_time_slice": "2026-06",
       "classified_theme": "benchmark",
       "evolution_focused": false
@@ -38838,7 +38838,7 @@
         "benchmark",
         "outer-loop search"
       ],
-      "site_stars": 1101,
+      "site_stars": 1107,
       "site_forks": 105,
       "license": "MIT",
       "lastPushed": "2026-04-29T16:39:58Z",
@@ -38861,13 +38861,13 @@
       "github_error": "fetch failed",
       "in_raw_timestamp_index": true,
       "raw_file": "raw-github/stanford-iris-lab_meta-harness.md",
-      "raw_collected_at": "2026-06-17T14:30:30+08:00",
-      "raw_content_timestamp": "2026-06-17",
-      "raw_timestamp_source": "gh_api_graphql_authenticated_2026_06_17_1430",
+      "raw_collected_at": "2026-06-18T02:32:33+08:00",
+      "raw_content_timestamp": "2026-06-18",
+      "raw_timestamp_source": "gh_api_graphql_authenticated_2026_06_18_0232",
       "in_classification": true,
       "classification_category": "框架/framework",
       "classification_function_tag": "agent-evolution-infra",
-      "classification_evidence": "GitHub metadata packet on 2026-06-17 showed 1,101 stars, 105 forks, 11 commits, 5 open issues, 0 open pull requests, and positioning consistent with evolution / agent-evolution-infra.",
+      "classification_evidence": "GitHub metadata packet on 2026-06-18 showed 1,107 stars, 105 forks, 11 commits, 5 open issues, 0 open pull requests, and positioning consistent with evolution / agent-evolution-infra.",
       "raw_time_slice": "2026-06",
       "classified_theme": "evolution",
       "evolution_focused": true
@@ -40207,7 +40207,7 @@
         "evaluation",
         "coding-agent"
       ],
-      "site_stars": 583,
+      "site_stars": 585,
       "site_forks": 65,
       "license": "MIT",
       "lastPushed": "2026-06-14T16:03:21Z",
@@ -40226,13 +40226,13 @@
       "github_source": "github_api_403",
       "in_raw_timestamp_index": true,
       "raw_file": "raw-github/china-qijizhifeng_agentic-harness-engineering.md",
-      "raw_collected_at": "2026-06-17T14:30:30+08:00",
-      "raw_content_timestamp": "2026-06-17",
-      "raw_timestamp_source": "gh_api_graphql_authenticated_2026_06_17_1430",
+      "raw_collected_at": "2026-06-18T02:32:33+08:00",
+      "raw_content_timestamp": "2026-06-18",
+      "raw_timestamp_source": "gh_api_graphql_authenticated_2026_06_18_0232",
       "in_classification": true,
       "classification_category": "框架/framework",
       "classification_function_tag": "framework-runtime",
-      "classification_evidence": "GitHub metadata packet on 2026-06-17 showed 583 stars, 65 forks, 46 commits, 0 open issues, 0 open pull requests, and positioning consistent with harness / framework-runtime.",
+      "classification_evidence": "GitHub metadata packet on 2026-06-18 showed 585 stars, 65 forks, 46 commits, 0 open issues, 0 open pull requests, and positioning consistent with harness / framework-runtime.",
       "raw_time_slice": "2026-06",
       "classified_theme": "harness",
       "evolution_focused": true
@@ -40485,10 +40485,10 @@
         "mcp",
         "compounding-memory"
       ],
-      "site_stars": 532,
+      "site_stars": 533,
       "site_forks": 59,
       "license": "MIT",
-      "lastPushed": "2026-06-17T03:05:28Z",
+      "lastPushed": "2026-06-17T17:22:33Z",
       "localPath": "raw-github/desplega-ai_agent-swarm.md",
       "local_git": null,
       "local_git_history_24m": null,
@@ -40508,13 +40508,13 @@
       "github_error": "fetch failed",
       "in_raw_timestamp_index": true,
       "raw_file": "raw-github/desplega-ai_agent-swarm.md",
-      "raw_collected_at": "2026-06-17T14:30:30+08:00",
-      "raw_content_timestamp": "2026-06-17",
-      "raw_timestamp_source": "gh_api_graphql_authenticated_2026_06_17_1430",
+      "raw_collected_at": "2026-06-18T02:32:33+08:00",
+      "raw_content_timestamp": "2026-06-18",
+      "raw_timestamp_source": "gh_api_graphql_authenticated_2026_06_18_0232",
       "in_classification": true,
       "classification_category": "框架/framework",
       "classification_function_tag": "framework-runtime",
-      "classification_evidence": "GitHub metadata packet on 2026-06-17 showed 532 stars, 59 forks, 1,641 commits, 1 open issues, 4 open pull requests, and positioning consistent with agent-swarm / framework-runtime.",
+      "classification_evidence": "GitHub metadata packet on 2026-06-18 showed 533 stars, 59 forks, 1,647 commits, 1 open issues, 4 open pull requests, and positioning consistent with agent-swarm / framework-runtime.",
       "raw_time_slice": "2026-06",
       "classified_theme": "agent-swarm",
       "evolution_focused": false
@@ -43293,7 +43293,7 @@
       "site_stars": 141,
       "site_forks": 20,
       "license": "NOASSERTION",
-      "lastPushed": "2026-06-15T14:57:02Z",
+      "lastPushed": "2026-06-17T10:22:38Z",
       "localPath": "raw-github/evomap_awesome-agent-evolution.md",
       "local_git": null,
       "local_git_history_24m": null,
@@ -43313,13 +43313,13 @@
       "github_error": "fetch failed",
       "in_raw_timestamp_index": true,
       "raw_file": "raw-github/evomap_awesome-agent-evolution.md",
-      "raw_collected_at": "2026-06-17T14:30:30+08:00",
-      "raw_content_timestamp": "2026-06-17",
-      "raw_timestamp_source": "gh_api_graphql_authenticated_2026_06_17_1430",
+      "raw_collected_at": "2026-06-18T02:32:33+08:00",
+      "raw_content_timestamp": "2026-06-18",
+      "raw_timestamp_source": "gh_api_graphql_authenticated_2026_06_18_0232",
       "in_classification": true,
       "classification_category": "工具/tool",
       "classification_function_tag": "resource-index",
-      "classification_evidence": "GitHub metadata packet on 2026-06-17 showed 141 stars, 20 forks, 64 commits, 6 open issues, 1 open pull requests, and positioning consistent with evolution / resource-index.",
+      "classification_evidence": "GitHub metadata packet on 2026-06-18 showed 141 stars, 20 forks, 65 commits, 6 open issues, 1 open pull requests, and positioning consistent with evolution / resource-index.",
       "raw_time_slice": "2026-06",
       "classified_theme": "evolution",
       "evolution_focused": true
@@ -52331,7 +52331,7 @@
         "evaluation",
         "coding-agent"
       ],
-      "site_stars": 583,
+      "site_stars": 585,
       "site_forks": 65,
       "license": "MIT",
       "lastPushed": "2026-06-14T16:03:21Z",
@@ -52350,13 +52350,13 @@
       "github_source": "github_api_403",
       "in_raw_timestamp_index": true,
       "raw_file": "raw-github/china-qijizhifeng_agentic-harness-engineering.md",
-      "raw_collected_at": "2026-06-17T14:30:30+08:00",
-      "raw_content_timestamp": "2026-06-17",
-      "raw_timestamp_source": "gh_api_graphql_authenticated_2026_06_17_1430",
+      "raw_collected_at": "2026-06-18T02:32:33+08:00",
+      "raw_content_timestamp": "2026-06-18",
+      "raw_timestamp_source": "gh_api_graphql_authenticated_2026_06_18_0232",
       "in_classification": true,
       "classification_category": "框架/framework",
       "classification_function_tag": "framework-runtime",
-      "classification_evidence": "GitHub metadata packet on 2026-06-17 showed 583 stars, 65 forks, 46 commits, 0 open issues, 0 open pull requests, and positioning consistent with harness / framework-runtime.",
+      "classification_evidence": "GitHub metadata packet on 2026-06-18 showed 585 stars, 65 forks, 46 commits, 0 open issues, 0 open pull requests, and positioning consistent with harness / framework-runtime.",
       "raw_time_slice": "2026-06",
       "classified_theme": "harness",
       "evolution_focused": true
@@ -53428,10 +53428,10 @@
         "mcp",
         "compounding-memory"
       ],
-      "site_stars": 532,
+      "site_stars": 533,
       "site_forks": 59,
       "license": "MIT",
-      "lastPushed": "2026-06-17T03:05:28Z",
+      "lastPushed": "2026-06-17T17:22:33Z",
       "localPath": "raw-github/desplega-ai_agent-swarm.md",
       "local_git": null,
       "local_git_history_24m": null,
@@ -53451,13 +53451,13 @@
       "github_error": "fetch failed",
       "in_raw_timestamp_index": true,
       "raw_file": "raw-github/desplega-ai_agent-swarm.md",
-      "raw_collected_at": "2026-06-17T14:30:30+08:00",
-      "raw_content_timestamp": "2026-06-17",
-      "raw_timestamp_source": "gh_api_graphql_authenticated_2026_06_17_1430",
+      "raw_collected_at": "2026-06-18T02:32:33+08:00",
+      "raw_content_timestamp": "2026-06-18",
+      "raw_timestamp_source": "gh_api_graphql_authenticated_2026_06_18_0232",
       "in_classification": true,
       "classification_category": "框架/framework",
       "classification_function_tag": "framework-runtime",
-      "classification_evidence": "GitHub metadata packet on 2026-06-17 showed 532 stars, 59 forks, 1,641 commits, 1 open issues, 4 open pull requests, and positioning consistent with agent-swarm / framework-runtime.",
+      "classification_evidence": "GitHub metadata packet on 2026-06-18 showed 533 stars, 59 forks, 1,647 commits, 1 open issues, 4 open pull requests, and positioning consistent with agent-swarm / framework-runtime.",
       "raw_time_slice": "2026-06",
       "classified_theme": "agent-swarm",
       "evolution_focused": false
@@ -53911,7 +53911,7 @@
       "site_stars": 141,
       "site_forks": 20,
       "license": "NOASSERTION",
-      "lastPushed": "2026-06-15T14:57:02Z",
+      "lastPushed": "2026-06-17T10:22:38Z",
       "localPath": "raw-github/evomap_awesome-agent-evolution.md",
       "local_git": null,
       "local_git_history_24m": null,
@@ -53931,13 +53931,13 @@
       "github_error": "fetch failed",
       "in_raw_timestamp_index": true,
       "raw_file": "raw-github/evomap_awesome-agent-evolution.md",
-      "raw_collected_at": "2026-06-17T14:30:30+08:00",
-      "raw_content_timestamp": "2026-06-17",
-      "raw_timestamp_source": "gh_api_graphql_authenticated_2026_06_17_1430",
+      "raw_collected_at": "2026-06-18T02:32:33+08:00",
+      "raw_content_timestamp": "2026-06-18",
+      "raw_timestamp_source": "gh_api_graphql_authenticated_2026_06_18_0232",
       "in_classification": true,
       "classification_category": "工具/tool",
       "classification_function_tag": "resource-index",
-      "classification_evidence": "GitHub metadata packet on 2026-06-17 showed 141 stars, 20 forks, 64 commits, 6 open issues, 1 open pull requests, and positioning consistent with evolution / resource-index.",
+      "classification_evidence": "GitHub metadata packet on 2026-06-18 showed 141 stars, 20 forks, 65 commits, 6 open issues, 1 open pull requests, and positioning consistent with evolution / resource-index.",
       "raw_time_slice": "2026-06",
       "classified_theme": "evolution",
       "evolution_focused": true
@@ -56461,10 +56461,10 @@
         "autonomous-agent",
         "token-efficiency"
       ],
-      "site_stars": 12927,
-      "site_forks": 1495,
+      "site_stars": 12938,
+      "site_forks": 1499,
       "license": "MIT",
-      "lastPushed": "2026-06-16T13:38:01Z",
+      "lastPushed": "2026-06-17T17:02:31Z",
       "localPath": "raw-github/lsdefine_genericagent.md",
       "local_git": null,
       "local_git_history_24m": null,
@@ -56480,13 +56480,13 @@
       "github_source": "github_api_403",
       "in_raw_timestamp_index": true,
       "raw_file": "raw-github/lsdefine_genericagent.md",
-      "raw_collected_at": "2026-06-17T14:30:30+08:00",
-      "raw_content_timestamp": "2026-06-17",
-      "raw_timestamp_source": "gh_api_graphql_authenticated_2026_06_17_1430",
+      "raw_collected_at": "2026-06-18T02:32:33+08:00",
+      "raw_content_timestamp": "2026-06-18",
+      "raw_timestamp_source": "gh_api_graphql_authenticated_2026_06_18_0232",
       "in_classification": true,
       "classification_category": "框架/framework",
       "classification_function_tag": "tool-module",
-      "classification_evidence": "GitHub metadata packet on 2026-06-17 showed 12,927 stars, 1,495 forks, 866 commits, 83 open issues, 63 open pull requests, and positioning consistent with evolution / tool-module.",
+      "classification_evidence": "GitHub metadata packet on 2026-06-18 showed 12,938 stars, 1,499 forks, 869 commits, 83 open issues, 62 open pull requests, and positioning consistent with evolution / tool-module.",
       "raw_time_slice": "2026-06",
       "classified_theme": "evolution",
       "evolution_focused": true
@@ -57878,10 +57878,10 @@
         "messaging",
         "automation"
       ],
-      "site_stars": 195585,
-      "site_forks": 34358,
+      "site_stars": 196048,
+      "site_forks": 34477,
       "license": "MIT",
-      "lastPushed": "2026-06-17T05:57:18Z",
+      "lastPushed": "2026-06-17T18:19:26Z",
       "localPath": "raw-github/nousresearch_hermes-agent.md",
       "local_git": null,
       "local_git_history_24m": null,
@@ -57897,13 +57897,13 @@
       "github_source": "github_api_403",
       "in_raw_timestamp_index": true,
       "raw_file": "raw-github/nousresearch_hermes-agent.md",
-      "raw_collected_at": "2026-06-17T14:30:30+08:00",
-      "raw_content_timestamp": "2026-06-17",
-      "raw_timestamp_source": "gh_api_graphql_authenticated_2026_06_17_1430",
+      "raw_collected_at": "2026-06-18T02:32:33+08:00",
+      "raw_content_timestamp": "2026-06-18",
+      "raw_timestamp_source": "gh_api_graphql_authenticated_2026_06_18_0232",
       "in_classification": true,
       "classification_category": "框架/framework",
       "classification_function_tag": "framework-runtime",
-      "classification_evidence": "GitHub metadata packet on 2026-06-17 showed 195,585 stars, 34,358 forks, 11,857 commits, 7,014 open issues, 14,329 open pull requests, and positioning consistent with framework / framework-runtime.",
+      "classification_evidence": "GitHub metadata packet on 2026-06-18 showed 196,048 stars, 34,477 forks, 11,891 commits, 7,088 open issues, 14,464 open pull requests, and positioning consistent with framework / framework-runtime.",
       "raw_time_slice": "2026-06",
       "classified_theme": "framework",
       "evolution_focused": true
@@ -58062,8 +58062,8 @@
         "methodology",
         "worktrees"
       ],
-      "site_stars": 230146,
-      "site_forks": 20463,
+      "site_stars": 230834,
+      "site_forks": 20525,
       "license": "MIT",
       "lastPushed": "2026-06-17T05:46:48Z",
       "localPath": "raw-github/obra_superpowers.md",
@@ -58081,13 +58081,13 @@
       "github_source": "github_api_403",
       "in_raw_timestamp_index": true,
       "raw_file": "raw-github/obra_superpowers.md",
-      "raw_collected_at": "2026-06-17T14:30:30+08:00",
-      "raw_content_timestamp": "2026-06-17",
-      "raw_timestamp_source": "gh_api_graphql_authenticated_2026_06_17_1430",
+      "raw_collected_at": "2026-06-18T02:32:33+08:00",
+      "raw_content_timestamp": "2026-06-18",
+      "raw_timestamp_source": "gh_api_graphql_authenticated_2026_06_18_0232",
       "in_classification": true,
       "classification_category": "工具/tool",
       "classification_function_tag": "skill-orchestration",
-      "classification_evidence": "GitHub metadata packet on 2026-06-17 showed 230,146 stars, 20,463 forks, 602 commits, 123 open issues, 162 open pull requests, and positioning consistent with skill / skill-orchestration.",
+      "classification_evidence": "GitHub metadata packet on 2026-06-18 showed 230,834 stars, 20,525 forks, 602 commits, 125 open issues, 162 open pull requests, and positioning consistent with skill / skill-orchestration.",
       "raw_time_slice": "2026-06",
       "classified_theme": "skill",
       "evolution_focused": false
@@ -59139,10 +59139,10 @@
         "skills",
         "runtime"
       ],
-      "site_stars": 379087,
-      "site_forks": 79340,
+      "site_stars": 379194,
+      "site_forks": 79367,
       "license": "NOASSERTION",
-      "lastPushed": "2026-06-17T06:32:32Z",
+      "lastPushed": "2026-06-17T18:27:56Z",
       "localPath": "raw-github/openclaw_openclaw.md",
       "local_git": null,
       "local_git_history_24m": null,
@@ -59158,13 +59158,13 @@
       "github_source": "github_api_403",
       "in_raw_timestamp_index": true,
       "raw_file": "raw-github/openclaw_openclaw.md",
-      "raw_collected_at": "2026-06-17T14:30:30+08:00",
-      "raw_content_timestamp": "2026-06-17",
-      "raw_timestamp_source": "gh_api_graphql_authenticated_2026_06_17_1430",
+      "raw_collected_at": "2026-06-18T02:32:33+08:00",
+      "raw_content_timestamp": "2026-06-18",
+      "raw_timestamp_source": "gh_api_graphql_authenticated_2026_06_18_0232",
       "in_classification": true,
       "classification_category": "应用/application",
       "classification_function_tag": "framework-runtime",
-      "classification_evidence": "GitHub metadata packet on 2026-06-17 showed 379,087 stars, 79,340 forks, 59,657 commits, 3,281 open issues, 3,018 open pull requests, and positioning consistent with framework / framework-runtime.",
+      "classification_evidence": "GitHub metadata packet on 2026-06-18 showed 379,194 stars, 79,367 forks, 59,863 commits, 3,310 open issues, 3,144 open pull requests, and positioning consistent with framework / framework-runtime.",
       "raw_time_slice": "2026-06",
       "classified_theme": "framework",
       "evolution_focused": false
@@ -59799,7 +59799,7 @@
         "skills",
         "transcripts"
       ],
-      "site_stars": 1235,
+      "site_stars": 1239,
       "site_forks": 140,
       "license": "MIT",
       "lastPushed": "2026-06-02T21:35:43Z",
@@ -59818,13 +59818,13 @@
       "github_source": "github_api_403",
       "in_raw_timestamp_index": true,
       "raw_file": "raw-github/pinchbench_skill.md",
-      "raw_collected_at": "2026-06-17T14:30:30+08:00",
-      "raw_content_timestamp": "2026-06-17",
-      "raw_timestamp_source": "gh_api_graphql_authenticated_2026_06_17_1430",
+      "raw_collected_at": "2026-06-18T02:32:33+08:00",
+      "raw_content_timestamp": "2026-06-18",
+      "raw_timestamp_source": "gh_api_graphql_authenticated_2026_06_18_0232",
       "in_classification": true,
       "classification_category": "评测/evaluation",
       "classification_function_tag": "benchmark-eval",
-      "classification_evidence": "GitHub metadata packet on 2026-06-17 showed 1,235 stars, 140 forks, 383 commits, 21 open issues, 1 open pull requests, and positioning consistent with benchmark / benchmark-eval.",
+      "classification_evidence": "GitHub metadata packet on 2026-06-18 showed 1,239 stars, 140 forks, 383 commits, 21 open issues, 1 open pull requests, and positioning consistent with benchmark / benchmark-eval.",
       "raw_time_slice": "2026-06",
       "classified_theme": "benchmark",
       "evolution_focused": false
@@ -60381,8 +60381,8 @@
         "knowledge-graph",
         "continuity"
       ],
-      "site_stars": 23192,
-      "site_forks": 1912,
+      "site_stars": 23249,
+      "site_forks": 1913,
       "license": "Apache-2.0",
       "lastPushed": "2026-06-15T06:20:23Z",
       "localPath": "raw-github/rohitg00_agentmemory.md",
@@ -60400,13 +60400,13 @@
       "github_source": "github_api_403",
       "in_raw_timestamp_index": true,
       "raw_file": "raw-github/rohitg00_agentmemory.md",
-      "raw_collected_at": "2026-06-17T14:30:30+08:00",
-      "raw_content_timestamp": "2026-06-17",
-      "raw_timestamp_source": "gh_api_graphql_authenticated_2026_06_17_1430",
+      "raw_collected_at": "2026-06-18T02:32:33+08:00",
+      "raw_content_timestamp": "2026-06-18",
+      "raw_timestamp_source": "gh_api_graphql_authenticated_2026_06_18_0232",
       "in_classification": true,
       "classification_category": "工具/tool",
       "classification_function_tag": "tool-module",
-      "classification_evidence": "GitHub metadata packet on 2026-06-17 showed 23,192 stars, 1,912 forks, 462 commits, 148 open issues, 160 open pull requests, and positioning consistent with memory / tool-module.",
+      "classification_evidence": "GitHub metadata packet on 2026-06-18 showed 23,249 stars, 1,913 forks, 462 commits, 148 open issues, 159 open pull requests, and positioning consistent with memory / tool-module.",
       "raw_time_slice": "2026-06",
       "classified_theme": "memory",
       "evolution_focused": false
@@ -61267,7 +61267,7 @@
         "benchmark",
         "outer-loop search"
       ],
-      "site_stars": 1101,
+      "site_stars": 1107,
       "site_forks": 105,
       "license": "MIT",
       "lastPushed": "2026-04-29T16:39:58Z",
@@ -61290,13 +61290,13 @@
       "github_error": "fetch failed",
       "in_raw_timestamp_index": true,
       "raw_file": "raw-github/stanford-iris-lab_meta-harness.md",
-      "raw_collected_at": "2026-06-17T14:30:30+08:00",
-      "raw_content_timestamp": "2026-06-17",
-      "raw_timestamp_source": "gh_api_graphql_authenticated_2026_06_17_1430",
+      "raw_collected_at": "2026-06-18T02:32:33+08:00",
+      "raw_content_timestamp": "2026-06-18",
+      "raw_timestamp_source": "gh_api_graphql_authenticated_2026_06_18_0232",
       "in_classification": true,
       "classification_category": "框架/framework",
       "classification_function_tag": "agent-evolution-infra",
-      "classification_evidence": "GitHub metadata packet on 2026-06-17 showed 1,101 stars, 105 forks, 11 commits, 5 open issues, 0 open pull requests, and positioning consistent with evolution / agent-evolution-infra.",
+      "classification_evidence": "GitHub metadata packet on 2026-06-18 showed 1,107 stars, 105 forks, 11 commits, 5 open issues, 0 open pull requests, and positioning consistent with evolution / agent-evolution-infra.",
       "raw_time_slice": "2026-06",
       "classified_theme": "evolution",
       "evolution_focused": true
@@ -64648,7 +64648,7 @@
   },
   "ranking_method": {
     "name": "recency_weighted_current_value",
-    "reference_date": "2026-06-17T06:33:55.732Z",
+    "reference_date": "2026-06-17T18:33:58.442Z",
     "weights": {
       "time": 0.5,
       "mechanism": 0.2,
@@ -64687,8 +64687,8 @@
       "stars": 1440,
       "report": "projects/modelscope__agentevolver.md",
       "scores": {
-        "current_value": 81.56,
-        "time": 72.99,
+        "current_value": 81.51,
+        "time": 72.9,
         "mechanism": 100,
         "evidence": 100,
         "adoption": 56.62,
@@ -64715,8 +64715,8 @@
       "stars": 41,
       "report": "projects/zju_llm_safety__darwin.md",
       "scores": {
-        "current_value": 75.3,
-        "time": 90.87,
+        "current_value": 75.25,
+        "time": 90.78,
         "mechanism": 75,
         "evidence": 62,
         "adoption": 29.1,
@@ -64745,8 +64745,8 @@
       "stars": 43,
       "report": "projects/oppo_mente_lab__llm_self_judge.md",
       "scores": {
-        "current_value": 74.25,
-        "time": 83.71,
+        "current_value": 74.21,
+        "time": 83.62,
         "mechanism": 85,
         "evidence": 62,
         "adoption": 29.46,
@@ -64773,8 +64773,8 @@
       "stars": 6377,
       "report": "projects/algorithmicsuperintelligence__openevolve.md",
       "scores": {
-        "current_value": 69.23,
-        "time": 54.43,
+        "current_value": 69.19,
+        "time": 54.34,
         "mechanism": 79,
         "evidence": 100,
         "adoption": 68.2,
@@ -64800,8 +64800,8 @@
       "stars": 77,
       "report": "projects/jarvispei__scope.md",
       "scores": {
-        "current_value": 66.65,
-        "time": 75.81,
+        "current_value": 66.6,
+        "time": 75.72,
         "mechanism": 67,
         "evidence": 62,
         "adoption": 33.92,
@@ -64828,8 +64828,8 @@
       "stars": 98,
       "report": "projects/inter_co__science_codeevolve.md",
       "scores": {
-        "current_value": 64.1,
-        "time": 70.75,
+        "current_value": 64.06,
+        "time": 70.66,
         "mechanism": 59,
         "evidence": 68,
         "adoption": 35.77,
@@ -64857,11 +64857,11 @@
       "stars": 274,
       "report": "projects/jarvis_xs__se_agent.md",
       "scores": {
-        "current_value": 61.87,
-        "time": 45.4,
+        "current_value": 61.83,
+        "time": 45.31,
         "mechanism": 77,
         "evidence": 100,
-        "adoption": 43.73,
+        "adoption": 43.72,
         "usefulness": 88
       },
       "caveat": ""
@@ -64884,15 +64884,15 @@
       "created_at": null,
       "created_at_source": "unknown",
       "first_observed_at": null,
-      "activity_at": "2026-06-16T13:38:01Z",
-      "stars": 12927,
+      "activity_at": "2026-06-17T17:02:31Z",
+      "stars": 12938,
       "report": "projects/47-genericagent.md",
       "scores": {
         "current_value": 61.67,
         "time": 45,
         "mechanism": 95,
         "evidence": 62,
-        "adoption": 73.7,
+        "adoption": 73.71,
         "usefulness": 70
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
@@ -64923,7 +64923,7 @@
         "time": 45,
         "mechanism": 93,
         "evidence": 62,
-        "adoption": 69.57,
+        "adoption": 69.56,
         "usefulness": 80
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
@@ -65047,7 +65047,7 @@
         "time": 45,
         "mechanism": 95,
         "evidence": 56,
-        "adoption": 66.91,
+        "adoption": 66.9,
         "usefulness": 70
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
@@ -65101,15 +65101,15 @@
       "created_at": null,
       "created_at_source": "unknown",
       "first_observed_at": null,
-      "activity_at": "2026-06-17T05:57:18Z",
-      "stars": 195585,
+      "activity_at": "2026-06-17T18:19:26Z",
+      "stars": 196048,
       "report": "projects/44-hermes-agent.md",
       "scores": {
-        "current_value": 59.78,
+        "current_value": 59.79,
         "time": 45,
         "mechanism": 75,
         "evidence": 62,
-        "adoption": 94.85,
+        "adoption": 94.86,
         "usefulness": 70
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
@@ -65209,37 +65209,6 @@
     },
     {
       "rank": 19,
-      "repo": "EvoAgentX/EvoAgentX",
-      "name": "EvoAgentX",
-      "url": "https://github.com/EvoAgentX/EvoAgentX",
-      "category": "自进化 Agent 生态系统",
-      "pattern": "进化/搜索循环 → 智能体编排 → 评估器/打分器 → 反馈-精炼",
-      "tags": [
-        "进化/搜索循环",
-        "智能体编排",
-        "评估器/打分器",
-        "反馈-精炼",
-        "自进化引擎"
-      ],
-      "status": "verified",
-      "created_at": null,
-      "created_at_source": "unknown",
-      "first_observed_at": "2026-05-15T09:39:03+01:00",
-      "activity_at": "2026-01-01T00:00:00Z",
-      "stars": 6800,
-      "report": "projects/22-evoagentx-agent-evolution-framework.md",
-      "scores": {
-        "current_value": 57.12,
-        "time": 27.1,
-        "mechanism": 97,
-        "evidence": 86,
-        "adoption": 68.7,
-        "usefulness": 88
-      },
-      "caveat": "created_at unavailable; time score capped and based on activity/observation only"
-    },
-    {
-      "rank": 20,
       "repo": "clawland-ai/geneclaw",
       "name": "Geneclaw",
       "url": "https://github.com/Clawland-AI/Geneclaw",
@@ -65266,6 +65235,37 @@
         "evidence": 56,
         "adoption": 28.11,
         "usefulness": 80
+      },
+      "caveat": "created_at unavailable; time score capped and based on activity/observation only"
+    },
+    {
+      "rank": 20,
+      "repo": "EvoAgentX/EvoAgentX",
+      "name": "EvoAgentX",
+      "url": "https://github.com/EvoAgentX/EvoAgentX",
+      "category": "自进化 Agent 生态系统",
+      "pattern": "进化/搜索循环 → 智能体编排 → 评估器/打分器 → 反馈-精炼",
+      "tags": [
+        "进化/搜索循环",
+        "智能体编排",
+        "评估器/打分器",
+        "反馈-精炼",
+        "自进化引擎"
+      ],
+      "status": "verified",
+      "created_at": null,
+      "created_at_source": "unknown",
+      "first_observed_at": "2026-05-15T09:39:03+01:00",
+      "activity_at": "2026-01-01T00:00:00Z",
+      "stars": 6800,
+      "report": "projects/22-evoagentx-agent-evolution-framework.md",
+      "scores": {
+        "current_value": 57.09,
+        "time": 27.03,
+        "mechanism": 97,
+        "evidence": 86,
+        "adoption": 68.7,
+        "usefulness": 88
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
@@ -65319,14 +65319,14 @@
       "created_at_source": "unknown",
       "first_observed_at": null,
       "activity_at": "2026-04-29T16:39:58Z",
-      "stars": 1101,
+      "stars": 1107,
       "report": "projects/249-stanford-meta-harness-framework.md",
       "scores": {
-        "current_value": 56.93,
-        "time": 43.35,
+        "current_value": 56.9,
+        "time": 43.28,
         "mechanism": 87,
         "evidence": 56,
-        "adoption": 54.53,
+        "adoption": 54.57,
         "usefulness": 80
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
@@ -65357,7 +65357,7 @@
         "time": 45,
         "mechanism": 95,
         "evidence": 56,
-        "adoption": 34.59,
+        "adoption": 34.58,
         "usefulness": 70
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
@@ -65628,7 +65628,7 @@
       "created_at": null,
       "created_at_source": "unknown",
       "first_observed_at": null,
-      "activity_at": "2026-06-15T14:57:02Z",
+      "activity_at": "2026-06-17T10:22:38Z",
       "stars": 141,
       "report": "projects/394-evomap-awesome-agent-evolution.md",
       "scores": {
@@ -65690,14 +65690,14 @@
       "created_at_source": "unknown",
       "first_observed_at": null,
       "activity_at": "2026-06-14T16:03:21Z",
-      "stars": 583,
+      "stars": 585,
       "report": "projects/43-agentic-harness-engineering.md",
       "scores": {
         "current_value": 54.16,
         "time": 45,
         "mechanism": 67,
         "evidence": 62,
-        "adoption": 49.59,
+        "adoption": 49.61,
         "usefulness": 80
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
@@ -65728,7 +65728,7 @@
         "time": 45,
         "mechanism": 85,
         "evidence": 56,
-        "adoption": 17.93,
+        "adoption": 17.92,
         "usefulness": 80
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
@@ -65755,8 +65755,8 @@
       "stars": 426,
       "report": "projects/228-yunjue-agent-in-situ-self-evolving-agent.md",
       "scores": {
-        "current_value": 52.87,
-        "time": 32.71,
+        "current_value": 52.84,
+        "time": 32.65,
         "mechanism": 97,
         "evidence": 56,
         "adoption": 47.15,
@@ -65785,8 +65785,8 @@
       "stars": 34604,
       "report": "projects/10-dspy-declarative-llm-programming.md",
       "scores": {
-        "current_value": 52.08,
-        "time": 28,
+        "current_value": 52.06,
+        "time": 27.96,
         "mechanism": 59,
         "evidence": 100,
         "adoption": 81.36,
@@ -65874,14 +65874,14 @@
       "created_at_source": "unknown",
       "first_observed_at": null,
       "activity_at": "2026-06-02T21:35:43Z",
-      "stars": 1235,
+      "stars": 1239,
       "report": "projects/51-pinchbench-skill.md",
       "scores": {
         "current_value": 51.34,
         "time": 45,
         "mechanism": 50,
         "evidence": 62,
-        "adoption": 55.43,
+        "adoption": 55.45,
         "usefulness": 80
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
@@ -65969,8 +65969,8 @@
       "stars": 1000,
       "report": "projects/23-everos-self-evolving-agents.md",
       "scores": {
-        "current_value": 49.93,
-        "time": 27.1,
+        "current_value": 49.89,
+        "time": 27.03,
         "mechanism": 71,
         "evidence": 86,
         "adoption": 53.78,
@@ -66028,14 +66028,14 @@
       "created_at_source": "unknown",
       "first_observed_at": null,
       "activity_at": "2026-06-15T06:20:23Z",
-      "stars": 23192,
+      "stars": 23249,
       "report": "projects/50-agentmemory.md",
       "scores": {
-        "current_value": 49.22,
+        "current_value": 49.23,
         "time": 45,
         "mechanism": 28,
         "evidence": 62,
-        "adoption": 78.25,
+        "adoption": 78.27,
         "usefulness": 80
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
@@ -66058,8 +66058,8 @@
       "created_at": null,
       "created_at_source": "unknown",
       "first_observed_at": null,
-      "activity_at": "2026-06-17T06:32:32Z",
-      "stars": 379087,
+      "activity_at": "2026-06-17T18:27:56Z",
+      "stars": 379194,
       "report": "projects/48-openclaw.md",
       "scores": {
         "current_value": 48.9,
@@ -66128,7 +66128,7 @@
         "time": 45,
         "mechanism": 18,
         "evidence": 68,
-        "adoption": 90.01,
+        "adoption": 90,
         "usefulness": 70
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
@@ -66152,14 +66152,14 @@
       "created_at_source": "unknown",
       "first_observed_at": null,
       "activity_at": "2026-06-17T05:46:48Z",
-      "stars": 230146,
+      "stars": 230834,
       "report": "projects/49-superpowers.md",
       "scores": {
         "current_value": 48.51,
         "time": 45,
         "mechanism": 18,
         "evidence": 62,
-        "adoption": 96.11,
+        "adoption": 96.14,
         "usefulness": 70
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
@@ -66491,8 +66491,8 @@
       "stars": 3800,
       "report": "research/projects/44-xmu-self-evolving-agents.md",
       "scores": {
-        "current_value": 47.43,
-        "time": 29.02,
+        "current_value": 47.39,
+        "time": 28.95,
         "mechanism": 69,
         "evidence": 68,
         "adoption": 64.17,
@@ -66805,7 +66805,7 @@
         "time": 45,
         "mechanism": 28,
         "evidence": 62,
-        "adoption": 50.88,
+        "adoption": 50.87,
         "usefulness": 80
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
@@ -66898,7 +66898,7 @@
         "time": 45,
         "mechanism": 28,
         "evidence": 56,
-        "adoption": 58.36,
+        "adoption": 58.35,
         "usefulness": 80
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
@@ -67091,35 +67091,6 @@
     },
     {
       "rank": 80,
-      "repo": "Zesearch/self-improvement-llm",
-      "name": "self-improvement-llm",
-      "url": "https://github.com/Zesearch/self-improvement-llm",
-      "category": "LLM 自改进综述",
-      "pattern": "文献综述",
-      "tags": [
-        "文献综述",
-        "自改进",
-        "LLM优化"
-      ],
-      "status": "verified",
-      "created_at": null,
-      "created_at_source": "unknown",
-      "first_observed_at": "2026-03-31T22:45:19-04:00",
-      "activity_at": "2026-01-01T00:00:00Z",
-      "stars": 200,
-      "report": "projects/33-self-improvement-llm.md",
-      "scores": {
-        "current_value": 46.03,
-        "time": 27.1,
-        "mechanism": 69,
-        "evidence": 86,
-        "adoption": 41.29,
-        "usefulness": 33
-      },
-      "caveat": "created_at unavailable; time score capped and based on activity/observation only"
-    },
-    {
-      "rank": 81,
       "repo": "openclaw/clownfish",
       "name": "Clownfish",
       "url": "https://github.com/openclaw/clownfish",
@@ -67150,6 +67121,35 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
+      "rank": 81,
+      "repo": "Zesearch/self-improvement-llm",
+      "name": "self-improvement-llm",
+      "url": "https://github.com/Zesearch/self-improvement-llm",
+      "category": "LLM 自改进综述",
+      "pattern": "文献综述",
+      "tags": [
+        "文献综述",
+        "自改进",
+        "LLM优化"
+      ],
+      "status": "verified",
+      "created_at": null,
+      "created_at_source": "unknown",
+      "first_observed_at": "2026-03-31T22:45:19-04:00",
+      "activity_at": "2026-01-01T00:00:00Z",
+      "stars": 200,
+      "report": "projects/33-self-improvement-llm.md",
+      "scores": {
+        "current_value": 45.99,
+        "time": 27.03,
+        "mechanism": 69,
+        "evidence": 86,
+        "adoption": 41.28,
+        "usefulness": 33
+      },
+      "caveat": "created_at unavailable; time score capped and based on activity/observation only"
+    },
+    {
       "rank": 82,
       "repo": "openai/openai-agents-python",
       "name": "OpenAI Agents SDK (Python)",
@@ -67175,7 +67175,7 @@
         "time": 45,
         "mechanism": 18,
         "evidence": 56,
-        "adoption": 79.47,
+        "adoption": 79.46,
         "usefulness": 70
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
@@ -67265,7 +67265,7 @@
         "time": 45,
         "mechanism": 10,
         "evidence": 68,
-        "adoption": 87.39,
+        "adoption": 87.38,
         "usefulness": 45
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
@@ -67303,35 +67303,6 @@
     },
     {
       "rank": 87,
-      "repo": "DeepAuto-AI/automl-agent",
-      "name": "AutoML-Agent",
-      "url": "https://github.com/DeepAuto-AI/automl-agent",
-      "category": "多 Agent AutoML",
-      "pattern": "智能体编排 → 进化/搜索循环 → 评估器/打分器",
-      "tags": [
-        "智能体编排",
-        "Evol-Instruct",
-        "AutoML"
-      ],
-      "status": "verified",
-      "created_at": "2025-05-08T08:36:54Z",
-      "created_at_source": "github_api",
-      "first_observed_at": null,
-      "activity_at": "2025-07-11T19:39:49Z",
-      "stars": 136,
-      "report": "projects/05-automl-agent-multi-agent.md",
-      "scores": {
-        "current_value": 45.6,
-        "time": 33.24,
-        "mechanism": 59,
-        "evidence": 68,
-        "adoption": 38.3,
-        "usefulness": 63
-      },
-      "caveat": ""
-    },
-    {
-      "rank": 88,
       "repo": "NVIDIA/skills",
       "name": "NVIDIA Agent Skills Registry",
       "url": "https://github.com/NVIDIA/skills",
@@ -67362,7 +67333,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 89,
+      "rank": 88,
       "repo": "aiwaves-cn/agents",
       "name": "agents",
       "url": "https://github.com/aiwaves-cn/agents",
@@ -67387,6 +67358,35 @@
         "evidence": 100,
         "adoption": 67.63,
         "usefulness": 88
+      },
+      "caveat": ""
+    },
+    {
+      "rank": 89,
+      "repo": "DeepAuto-AI/automl-agent",
+      "name": "AutoML-Agent",
+      "url": "https://github.com/DeepAuto-AI/automl-agent",
+      "category": "多 Agent AutoML",
+      "pattern": "智能体编排 → 进化/搜索循环 → 评估器/打分器",
+      "tags": [
+        "智能体编排",
+        "Evol-Instruct",
+        "AutoML"
+      ],
+      "status": "verified",
+      "created_at": "2025-05-08T08:36:54Z",
+      "created_at_source": "github_api",
+      "first_observed_at": null,
+      "activity_at": "2025-07-11T19:39:49Z",
+      "stars": 136,
+      "report": "projects/05-automl-agent-multi-agent.md",
+      "scores": {
+        "current_value": 45.55,
+        "time": 33.15,
+        "mechanism": 59,
+        "evidence": 68,
+        "adoption": 38.3,
+        "usefulness": 63
       },
       "caveat": ""
     },
@@ -67416,7 +67416,7 @@
         "time": 45,
         "mechanism": 28,
         "evidence": 56,
-        "adoption": 50.39,
+        "adoption": 50.38,
         "usefulness": 80
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
@@ -67508,7 +67508,7 @@
         "time": 45,
         "mechanism": 18,
         "evidence": 56,
-        "adoption": 70.71,
+        "adoption": 70.7,
         "usefulness": 70
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
@@ -67570,7 +67570,7 @@
         "time": 45,
         "mechanism": 18,
         "evidence": 56,
-        "adoption": 70.44,
+        "adoption": 70.43,
         "usefulness": 70
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
@@ -68063,7 +68063,7 @@
         "time": 45,
         "mechanism": 32,
         "evidence": 56,
-        "adoption": 33.82,
+        "adoption": 33.81,
         "usefulness": 70
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
@@ -68244,7 +68244,7 @@
         "time": 45,
         "mechanism": 20,
         "evidence": 62,
-        "adoption": 46.82,
+        "adoption": 46.81,
         "usefulness": 70
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
@@ -68275,44 +68275,13 @@
         "time": 45,
         "mechanism": 18,
         "evidence": 56,
-        "adoption": 59.56,
+        "adoption": 59.55,
         "usefulness": 70
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
       "rank": 119,
-      "repo": "openai/swarm",
-      "name": "OpenAI Swarm",
-      "url": "https://github.com/openai/swarm",
-      "category": "Experimental Multi-Agent Orchestration Framework",
-      "pattern": "compose lightweight routines and handoffs -> route user tasks across specialized agents -> keep tool usage explicit and inspectable -> treat orchestration as a simple educational baseline rather than a production control plane",
-      "tags": [
-        "multi-agent",
-        "orchestration",
-        "handoff",
-        "openai",
-        "educational"
-      ],
-      "status": "candidate",
-      "created_at": null,
-      "created_at_source": "unknown",
-      "first_observed_at": null,
-      "activity_at": "2026-04-15T00:00:00Z",
-      "stars": 21600,
-      "report": "projects/311-openai-swarm-multi-agent-orchestration.md",
-      "scores": {
-        "current_value": 43.94,
-        "time": 41.34,
-        "mechanism": 18,
-        "evidence": 56,
-        "adoption": 77.7,
-        "usefulness": 70
-      },
-      "caveat": "created_at unavailable; time score capped and based on activity/observation only"
-    },
-    {
-      "rank": 120,
       "repo": "0xNyk/lacp",
       "name": "LACP Lightweight Agent Context Protocol",
       "url": "https://github.com/0xNyk/lacp",
@@ -68338,6 +68307,37 @@
         "mechanism": 26,
         "evidence": 56,
         "adoption": 43.35,
+        "usefulness": 70
+      },
+      "caveat": "created_at unavailable; time score capped and based on activity/observation only"
+    },
+    {
+      "rank": 120,
+      "repo": "openai/swarm",
+      "name": "OpenAI Swarm",
+      "url": "https://github.com/openai/swarm",
+      "category": "Experimental Multi-Agent Orchestration Framework",
+      "pattern": "compose lightweight routines and handoffs -> route user tasks across specialized agents -> keep tool usage explicit and inspectable -> treat orchestration as a simple educational baseline rather than a production control plane",
+      "tags": [
+        "multi-agent",
+        "orchestration",
+        "handoff",
+        "openai",
+        "educational"
+      ],
+      "status": "candidate",
+      "created_at": null,
+      "created_at_source": "unknown",
+      "first_observed_at": null,
+      "activity_at": "2026-04-15T00:00:00Z",
+      "stars": 21600,
+      "report": "projects/311-openai-swarm-multi-agent-orchestration.md",
+      "scores": {
+        "current_value": 43.9,
+        "time": 41.27,
+        "mechanism": 18,
+        "evidence": 56,
+        "adoption": 77.69,
         "usefulness": 70
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
@@ -68430,7 +68430,7 @@
         "time": 45,
         "mechanism": 10,
         "evidence": 56,
-        "adoption": 74.49,
+        "adoption": 74.48,
         "usefulness": 70
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
@@ -68455,8 +68455,8 @@
       "stars": 19280,
       "report": "projects/14-swe-agent-software-engineering.md",
       "scores": {
-        "current_value": 43.83,
-        "time": 27.59,
+        "current_value": 43.81,
+        "time": 27.55,
         "mechanism": 45,
         "evidence": 68,
         "adoption": 76.81,
@@ -68638,8 +68638,8 @@
       "stars": 2800,
       "report": "research/projects/60-swe-bench-evaluation.md",
       "scores": {
-        "current_value": 43.59,
-        "time": 39.42,
+        "current_value": 43.56,
+        "time": 39.35,
         "mechanism": 20,
         "evidence": 68,
         "adoption": 61.79,
@@ -68854,8 +68854,8 @@
       "stars": 52041,
       "report": "projects/09-crewai-multi-agent-framework.md",
       "scores": {
-        "current_value": 43.35,
-        "time": 27.99,
+        "current_value": 43.33,
+        "time": 27.95,
         "mechanism": 10,
         "evidence": 100,
         "adoption": 84.54,
@@ -68976,8 +68976,8 @@
       "stars": 184482,
       "report": "projects/08-autogpt-autonomous-agent.md",
       "scores": {
-        "current_value": 43.1,
-        "time": 28.02,
+        "current_value": 43.08,
+        "time": 27.98,
         "mechanism": 10,
         "evidence": 100,
         "adoption": 94.39,
@@ -69018,34 +69018,6 @@
     },
     {
       "rank": 143,
-      "repo": "swarmclawai/swarmclaw",
-      "name": "swarmclaw",
-      "url": "https://github.com/swarmclawai/swarmclaw",
-      "category": "Self-Hosted Agent Runtime",
-      "pattern": "agent runtime -> memory and MCP connectors -> schedules and delegation -> swarm workflows -> self-hosted distribution and release cadence",
-      "tags": [
-        "harness",
-        "framework-runtime"
-      ],
-      "status": "candidate",
-      "created_at": null,
-      "created_at_source": "unknown",
-      "first_observed_at": null,
-      "activity_at": "2026-06-04T00:00:00Z",
-      "stars": 544,
-      "report": "projects/93-swarmclaw-agent-runtime.md",
-      "scores": {
-        "current_value": 42.91,
-        "time": 45,
-        "mechanism": 18,
-        "evidence": 56,
-        "adoption": 49.05,
-        "usefulness": 70
-      },
-      "caveat": "created_at unavailable; time score capped and based on activity/observation only"
-    },
-    {
-      "rank": 144,
       "repo": "alibaizhanov/mengram",
       "name": "Mengram Human-Like Agent Memory",
       "url": "https://github.com/alibaizhanov/mengram",
@@ -69071,6 +69043,34 @@
         "mechanism": 18,
         "evidence": 62,
         "adoption": 40.12,
+        "usefulness": 70
+      },
+      "caveat": "created_at unavailable; time score capped and based on activity/observation only"
+    },
+    {
+      "rank": 144,
+      "repo": "swarmclawai/swarmclaw",
+      "name": "swarmclaw",
+      "url": "https://github.com/swarmclawai/swarmclaw",
+      "category": "Self-Hosted Agent Runtime",
+      "pattern": "agent runtime -> memory and MCP connectors -> schedules and delegation -> swarm workflows -> self-hosted distribution and release cadence",
+      "tags": [
+        "harness",
+        "framework-runtime"
+      ],
+      "status": "candidate",
+      "created_at": null,
+      "created_at_source": "unknown",
+      "first_observed_at": null,
+      "activity_at": "2026-06-04T00:00:00Z",
+      "stars": 544,
+      "report": "projects/93-swarmclaw-agent-runtime.md",
+      "scores": {
+        "current_value": 42.9,
+        "time": 45,
+        "mechanism": 18,
+        "evidence": 56,
+        "adoption": 49.05,
         "usefulness": 70
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
@@ -69124,15 +69124,15 @@
       "created_at": null,
       "created_at_source": "unknown",
       "first_observed_at": null,
-      "activity_at": "2026-06-17T03:05:28Z",
-      "stars": 532,
+      "activity_at": "2026-06-17T17:22:33Z",
+      "stars": 533,
       "report": "projects/405-agent-swarm-compounding-lead-worker-runtime.md",
       "scores": {
         "current_value": 42.89,
         "time": 45,
         "mechanism": 18,
         "evidence": 56,
-        "adoption": 48.88,
+        "adoption": 48.89,
         "usefulness": 70
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
@@ -69233,35 +69233,6 @@
     },
     {
       "rank": 150,
-      "repo": "Agenta-AI/agenta",
-      "name": "agenta",
-      "url": "https://github.com/Agenta-AI/agenta",
-      "category": "LLM 评测平台",
-      "pattern": "Prompt 管理 → 测试集 → 评估器 → 可观测性",
-      "tags": [
-        "LLMOps",
-        "评测框架",
-        "Prompt 管理"
-      ],
-      "status": "candidate",
-      "created_at": null,
-      "created_at_source": "unknown",
-      "first_observed_at": "2026-05-20T14:56:55+02:00",
-      "activity_at": "2026-05-10T00:00:00Z",
-      "stars": 8000,
-      "report": "research/projects/53-agenta-evaluation.md",
-      "scores": {
-        "current_value": 42.78,
-        "time": 44.76,
-        "mechanism": 20,
-        "evidence": 36,
-        "adoption": 69.96,
-        "usefulness": 80
-      },
-      "caveat": "created_at unavailable; time score capped and based on activity/observation only"
-    },
-    {
-      "rank": 151,
       "repo": "zorazrw/agent-workflow-memory",
       "name": "Agent Workflow Memory Knowledge Graph Runtime",
       "url": "https://github.com/zorazrw/agent-workflow-memory",
@@ -69288,6 +69259,35 @@
         "evidence": 56,
         "adoption": 47.4,
         "usefulness": 70
+      },
+      "caveat": "created_at unavailable; time score capped and based on activity/observation only"
+    },
+    {
+      "rank": 151,
+      "repo": "Agenta-AI/agenta",
+      "name": "agenta",
+      "url": "https://github.com/Agenta-AI/agenta",
+      "category": "LLM 评测平台",
+      "pattern": "Prompt 管理 → 测试集 → 评估器 → 可观测性",
+      "tags": [
+        "LLMOps",
+        "评测框架",
+        "Prompt 管理"
+      ],
+      "status": "candidate",
+      "created_at": null,
+      "created_at_source": "unknown",
+      "first_observed_at": "2026-05-20T14:56:55+02:00",
+      "activity_at": "2026-05-10T00:00:00Z",
+      "stars": 8000,
+      "report": "research/projects/53-agenta-evaluation.md",
+      "scores": {
+        "current_value": 42.74,
+        "time": 44.69,
+        "mechanism": 20,
+        "evidence": 36,
+        "adoption": 69.96,
+        "usefulness": 80
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
@@ -69440,7 +69440,7 @@
         "time": 45,
         "mechanism": 18,
         "evidence": 56,
-        "adoption": 46.47,
+        "adoption": 46.46,
         "usefulness": 70
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
@@ -69507,35 +69507,6 @@
     },
     {
       "rank": 159,
-      "repo": "camel-ai/camel",
-      "name": "CAMEL-AI",
-      "url": "https://github.com/camel-ai/camel",
-      "category": "角色扮演 Agent 框架",
-      "pattern": "智能体编排 → 反馈-精炼",
-      "tags": [
-        "智能体编排",
-        "角色扮演",
-        "Critic在环"
-      ],
-      "status": "verified",
-      "created_at": "2023-03-17T21:41:54Z",
-      "created_at_source": "github_api",
-      "first_observed_at": null,
-      "activity_at": "2026-05-19T10:37:24Z",
-      "stars": 17025,
-      "report": "projects/12-camel-ai-communicative-agents.md",
-      "scores": {
-        "current_value": 42.5,
-        "time": 27.63,
-        "mechanism": 35,
-        "evidence": 68,
-        "adoption": 75.84,
-        "usefulness": 78
-      },
-      "caveat": ""
-    },
-    {
-      "rank": 160,
       "repo": "agentevals-dev/agentevals",
       "name": "AgentEvals.dev Benchmark Framework",
       "url": "https://github.com/agentevals-dev/agentevals",
@@ -69564,6 +69535,35 @@
         "usefulness": 80
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
+    },
+    {
+      "rank": 160,
+      "repo": "camel-ai/camel",
+      "name": "CAMEL-AI",
+      "url": "https://github.com/camel-ai/camel",
+      "category": "角色扮演 Agent 框架",
+      "pattern": "智能体编排 → 反馈-精炼",
+      "tags": [
+        "智能体编排",
+        "角色扮演",
+        "Critic在环"
+      ],
+      "status": "verified",
+      "created_at": "2023-03-17T21:41:54Z",
+      "created_at_source": "github_api",
+      "first_observed_at": null,
+      "activity_at": "2026-05-19T10:37:24Z",
+      "stars": 17025,
+      "report": "projects/12-camel-ai-communicative-agents.md",
+      "scores": {
+        "current_value": 42.48,
+        "time": 27.59,
+        "mechanism": 35,
+        "evidence": 68,
+        "adoption": 75.84,
+        "usefulness": 78
+      },
+      "caveat": ""
     },
     {
       "rank": 161,
@@ -69684,7 +69684,7 @@
         "time": 45,
         "mechanism": 28,
         "evidence": 56,
-        "adoption": 17.93,
+        "adoption": 17.92,
         "usefulness": 80
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
@@ -69715,7 +69715,7 @@
         "time": 45,
         "mechanism": 20,
         "evidence": 56,
-        "adoption": 33.82,
+        "adoption": 33.81,
         "usefulness": 80
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
@@ -69870,7 +69870,7 @@
         "time": 45,
         "mechanism": 0,
         "evidence": 56,
-        "adoption": 84.14,
+        "adoption": 84.13,
         "usefulness": 50
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
@@ -69957,8 +69957,8 @@
       "stars": 32784,
       "report": "projects/13-langgraph-agent-workflows.md",
       "scores": {
-        "current_value": 41.75,
-        "time": 28.01,
+        "current_value": 41.73,
+        "time": 27.97,
         "mechanism": 10,
         "evidence": 100,
         "adoption": 80.94,
@@ -70393,7 +70393,7 @@
         "time": 45,
         "mechanism": 18,
         "evidence": 56,
-        "adoption": 34.86,
+        "adoption": 34.85,
         "usefulness": 70
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
@@ -70515,7 +70515,7 @@
         "time": 45,
         "mechanism": 10,
         "evidence": 36,
-        "adoption": 92.25,
+        "adoption": 92.24,
         "usefulness": 45
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
@@ -70698,7 +70698,7 @@
         "time": 45,
         "mechanism": 10,
         "evidence": 36,
-        "adoption": 89.23,
+        "adoption": 89.22,
         "usefulness": 45
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
@@ -70951,36 +70951,6 @@
     },
     {
       "rank": 206,
-      "repo": "Genentech/OpenTreeSearch",
-      "name": "OpenTreeSearch",
-      "url": "https://github.com/Genentech/opentreesearch",
-      "category": "LLM 引导代码进化",
-      "pattern": "进化/搜索循环 → 评估器/打分器",
-      "tags": [
-        "进化/搜索循环",
-        "评估器/打分器",
-        "树搜索",
-        "代码进化"
-      ],
-      "status": "verified",
-      "created_at": null,
-      "created_at_source": "unknown",
-      "first_observed_at": "2026-05-19T09:51:47-04:00",
-      "activity_at": "2026-01-01T00:00:00Z",
-      "stars": 200,
-      "report": "projects/24-opentreesearch-llm-code-evolution.md",
-      "scores": {
-        "current_value": 40.73,
-        "time": 27.1,
-        "mechanism": 59,
-        "evidence": 54,
-        "adoption": 41.29,
-        "usefulness": 63
-      },
-      "caveat": "created_at unavailable; time score capped and based on activity/observation only"
-    },
-    {
-      "rank": 207,
       "repo": "agiprolabs/claude-trading-skills",
       "name": "Claude Trading Skills",
       "url": "https://github.com/agiprolabs/claude-trading-skills",
@@ -71011,7 +70981,7 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 208,
+      "rank": 207,
       "repo": "langflow-ai/langflow",
       "name": "langflow",
       "url": "https://github.com/langflow-ai/langflow",
@@ -71034,8 +71004,38 @@
         "time": 45,
         "mechanism": 10,
         "evidence": 36,
-        "adoption": 85.39,
+        "adoption": 85.38,
         "usefulness": 45
+      },
+      "caveat": "created_at unavailable; time score capped and based on activity/observation only"
+    },
+    {
+      "rank": 208,
+      "repo": "Genentech/OpenTreeSearch",
+      "name": "OpenTreeSearch",
+      "url": "https://github.com/Genentech/opentreesearch",
+      "category": "LLM 引导代码进化",
+      "pattern": "进化/搜索循环 → 评估器/打分器",
+      "tags": [
+        "进化/搜索循环",
+        "评估器/打分器",
+        "树搜索",
+        "代码进化"
+      ],
+      "status": "verified",
+      "created_at": null,
+      "created_at_source": "unknown",
+      "first_observed_at": "2026-05-19T09:51:47-04:00",
+      "activity_at": "2026-01-01T00:00:00Z",
+      "stars": 200,
+      "report": "projects/24-opentreesearch-llm-code-evolution.md",
+      "scores": {
+        "current_value": 40.69,
+        "time": 27.03,
+        "mechanism": 59,
+        "evidence": 54,
+        "adoption": 41.28,
+        "usefulness": 63
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
@@ -71071,37 +71071,6 @@
     },
     {
       "rank": 210,
-      "repo": "redis/agent-memory-server",
-      "name": "Redis Agent Memory Server",
-      "url": "https://github.com/redis/agent-memory-server",
-      "category": "Agent Memory Runtime and Context Service",
-      "pattern": "capture agent events and context -> store and retrieve memory through Redis-backed services -> expose memory operations via MCP and client APIs -> feed retrieved context into later agent loops",
-      "tags": [
-        "memory",
-        "redis",
-        "mcp",
-        "agent-runtime",
-        "context-service"
-      ],
-      "status": "candidate",
-      "created_at": null,
-      "created_at_source": "unknown",
-      "first_observed_at": null,
-      "activity_at": "2026-04-16T00:00:00Z",
-      "stars": 266,
-      "report": "projects/281-redis-agent-memory-server-runtime.md",
-      "scores": {
-        "current_value": 40.59,
-        "time": 41.48,
-        "mechanism": 18,
-        "evidence": 56,
-        "adoption": 43.5,
-        "usefulness": 70
-      },
-      "caveat": "created_at unavailable; time score capped and based on activity/observation only"
-    },
-    {
-      "rank": 211,
       "repo": "Chainlit/chainlit",
       "name": "chainlit",
       "url": "https://github.com/Chainlit/chainlit",
@@ -71125,6 +71094,37 @@
         "mechanism": 10,
         "evidence": 36,
         "adoption": 71.7,
+        "usefulness": 70
+      },
+      "caveat": "created_at unavailable; time score capped and based on activity/observation only"
+    },
+    {
+      "rank": 211,
+      "repo": "redis/agent-memory-server",
+      "name": "Redis Agent Memory Server",
+      "url": "https://github.com/redis/agent-memory-server",
+      "category": "Agent Memory Runtime and Context Service",
+      "pattern": "capture agent events and context -> store and retrieve memory through Redis-backed services -> expose memory operations via MCP and client APIs -> feed retrieved context into later agent loops",
+      "tags": [
+        "memory",
+        "redis",
+        "mcp",
+        "agent-runtime",
+        "context-service"
+      ],
+      "status": "candidate",
+      "created_at": null,
+      "created_at_source": "unknown",
+      "first_observed_at": null,
+      "activity_at": "2026-04-16T00:00:00Z",
+      "stars": 266,
+      "report": "projects/281-redis-agent-memory-server-runtime.md",
+      "scores": {
+        "current_value": 40.55,
+        "time": 41.41,
+        "mechanism": 18,
+        "evidence": 56,
+        "adoption": 43.49,
         "usefulness": 70
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
@@ -71550,7 +71550,7 @@
         "time": 45,
         "mechanism": 18,
         "evidence": 56,
-        "adoption": 17.93,
+        "adoption": 17.92,
         "usefulness": 70
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
@@ -71576,8 +71576,8 @@
       "stars": 50000,
       "report": "projects/41-opendevin-ai-software.md",
       "scores": {
-        "current_value": 39.72,
-        "time": 27.1,
+        "current_value": 39.69,
+        "time": 27.03,
         "mechanism": 35,
         "evidence": 54,
         "adoption": 84.23,
@@ -71667,8 +71667,8 @@
       "stars": 3200,
       "report": "research/projects/67-cheshire-cat-ai-framework.md",
       "scores": {
-        "current_value": 39.56,
-        "time": 44.76,
+        "current_value": 39.53,
+        "time": 44.69,
         "mechanism": 10,
         "evidence": 36,
         "adoption": 62.83,
@@ -71864,35 +71864,6 @@
     },
     {
       "rank": 236,
-      "repo": "OpenBMB/ChatDev",
-      "name": "chatdev",
-      "url": "https://github.com/OpenBMB/ChatDev",
-      "category": "多 Agent 协作框架",
-      "pattern": "虚拟公司 → 角色对话链 → 软件开发",
-      "tags": [
-        "多 Agent",
-        "角色扮演",
-        "RL 编排"
-      ],
-      "status": "candidate",
-      "created_at": null,
-      "created_at_source": "unknown",
-      "first_observed_at": "2026-05-12T21:23:48+08:00",
-      "activity_at": "2026-01-07T00:00:00Z",
-      "stars": 26000,
-      "report": "research/projects/46-chatdev-multi-agent-platform.md",
-      "scores": {
-        "current_value": 39.38,
-        "time": 27.92,
-        "mechanism": 43,
-        "evidence": 36,
-        "adoption": 79.14,
-        "usefulness": 70
-      },
-      "caveat": "created_at unavailable; time score capped and based on activity/observation only"
-    },
-    {
-      "rank": 237,
       "repo": "Picrew/awesome-agent-harness",
       "name": "Awesome Agent Harness (Picrew)",
       "url": "https://github.com/Picrew/awesome-agent-harness",
@@ -71919,6 +71890,35 @@
         "evidence": 56,
         "adoption": 50.7,
         "usefulness": 60
+      },
+      "caveat": "created_at unavailable; time score capped and based on activity/observation only"
+    },
+    {
+      "rank": 237,
+      "repo": "OpenBMB/ChatDev",
+      "name": "chatdev",
+      "url": "https://github.com/OpenBMB/ChatDev",
+      "category": "多 Agent 协作框架",
+      "pattern": "虚拟公司 → 角色对话链 → 软件开发",
+      "tags": [
+        "多 Agent",
+        "角色扮演",
+        "RL 编排"
+      ],
+      "status": "candidate",
+      "created_at": null,
+      "created_at_source": "unknown",
+      "first_observed_at": "2026-05-12T21:23:48+08:00",
+      "activity_at": "2026-01-07T00:00:00Z",
+      "stars": 26000,
+      "report": "research/projects/46-chatdev-multi-agent-platform.md",
+      "scores": {
+        "current_value": 39.34,
+        "time": 27.85,
+        "mechanism": 43,
+        "evidence": 36,
+        "adoption": 79.14,
+        "usefulness": 70
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
@@ -72065,11 +72065,11 @@
       "stars": 500,
       "report": "projects/36-llm-agent-optimization.md",
       "scores": {
-        "current_value": 39.14,
-        "time": 27.1,
+        "current_value": 39.11,
+        "time": 27.03,
         "mechanism": 31,
         "evidence": 86,
-        "adoption": 48.4,
+        "adoption": 48.39,
         "usefulness": 33
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
@@ -72129,7 +72129,7 @@
         "time": 45,
         "mechanism": 10,
         "evidence": 36,
-        "adoption": 68.93,
+        "adoption": 68.92,
         "usefulness": 45
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
@@ -72278,7 +72278,7 @@
       "stars": 99,
       "report": "projects/393-repairagent-java-autonomous-bug-repair.md",
       "scores": {
-        "current_value": 38.74,
+        "current_value": 38.73,
         "time": 45,
         "mechanism": 10,
         "evidence": 56,
@@ -72308,8 +72308,8 @@
       "stars": 68239,
       "report": "projects/07-metagpt-multi-agent-framework.md",
       "scores": {
-        "current_value": 38.73,
-        "time": 17.94,
+        "current_value": 38.71,
+        "time": 17.9,
         "mechanism": 35,
         "evidence": 68,
         "adoption": 86.65,
@@ -72374,7 +72374,7 @@
         "time": 45,
         "mechanism": 18,
         "evidence": 38,
-        "adoption": 29.81,
+        "adoption": 29.8,
         "usefulness": 70
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
@@ -72583,8 +72583,8 @@
       "stars": 74662,
       "report": "projects/15-openhands-ai-software-dev.md",
       "scores": {
-        "current_value": 37.59,
-        "time": 28.01,
+        "current_value": 37.57,
+        "time": 27.97,
         "mechanism": 10,
         "evidence": 68,
         "adoption": 87.35,
@@ -72643,8 +72643,8 @@
       "stars": 58330,
       "report": "projects/11-autogen-multi-agent-conversation.md",
       "scores": {
-        "current_value": 37.06,
-        "time": 24.84,
+        "current_value": 37.04,
+        "time": 24.8,
         "mechanism": 10,
         "evidence": 68,
         "adoption": 85.43,
@@ -72678,7 +72678,7 @@
         "time": 45,
         "mechanism": 0,
         "evidence": 56,
-        "adoption": 35.29,
+        "adoption": 35.28,
         "usefulness": 50
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
@@ -72765,11 +72765,11 @@
       "stars": 500,
       "report": "projects/40-awesome-fm4co.md",
       "scores": {
-        "current_value": 36.34,
-        "time": 27.1,
+        "current_value": 36.31,
+        "time": 27.03,
         "mechanism": 17,
         "evidence": 86,
-        "adoption": 48.4,
+        "adoption": 48.39,
         "usefulness": 33
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
@@ -72794,8 +72794,8 @@
       "stars": 2200,
       "report": "research/projects/61-osworld-agent-evaluation.md",
       "scores": {
-        "current_value": 35.82,
-        "time": 22.86,
+        "current_value": 35.79,
+        "time": 22.79,
         "mechanism": 28,
         "evidence": 62,
         "adoption": 59.92,
@@ -72851,8 +72851,8 @@
       "stars": 1200,
       "report": "research/projects/59-awesome-agent-papers.md",
       "scores": {
-        "current_value": 34.56,
-        "time": 35.18,
+        "current_value": 34.52,
+        "time": 35.11,
         "mechanism": 0,
         "evidence": 68,
         "adoption": 55.2,
@@ -72937,11 +72937,11 @@
       "stars": 2000,
       "report": "projects/37-awesome-code-llm.md",
       "scores": {
-        "current_value": 33.32,
-        "time": 27.1,
+        "current_value": 33.28,
+        "time": 27.03,
         "mechanism": 25,
         "evidence": 48,
-        "adoption": 59.18,
+        "adoption": 59.17,
         "usefulness": 33
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
@@ -72966,8 +72966,8 @@
       "stars": 1581,
       "report": "projects/03-adas-automated-design-agentic-systems.md",
       "scores": {
-        "current_value": 33.04,
-        "time": 4.3,
+        "current_value": 33.01,
+        "time": 4.25,
         "mechanism": 59,
         "evidence": 68,
         "adoption": 57.35,
@@ -73059,7 +73059,7 @@
         "time": 0,
         "mechanism": 59,
         "evidence": 54,
-        "adoption": 67.73,
+        "adoption": 67.72,
         "usefulness": 88
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
@@ -73236,7 +73236,7 @@
         "time": 0,
         "mechanism": 67,
         "evidence": 54,
-        "adoption": 48.4,
+        "adoption": 48.39,
         "usefulness": 63
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
@@ -73265,7 +73265,7 @@
         "time": 0,
         "mechanism": 51,
         "evidence": 86,
-        "adoption": 41.29,
+        "adoption": 41.28,
         "usefulness": 33
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
@@ -73383,7 +73383,7 @@
         "time": 0,
         "mechanism": 43,
         "evidence": 54,
-        "adoption": 66.31,
+        "adoption": 66.3,
         "usefulness": 53
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
@@ -73500,7 +73500,7 @@
         "time": 0,
         "mechanism": 49,
         "evidence": 54,
-        "adoption": 41.29,
+        "adoption": 41.28,
         "usefulness": 53
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
@@ -73525,8 +73525,8 @@
       "stars": 2800,
       "report": "research/projects/62-webarena-web-evaluation.md",
       "scores": {
-        "current_value": 24.33,
-        "time": 14.51,
+        "current_value": 24.3,
+        "time": 14.44,
         "mechanism": 10,
         "evidence": 36,
         "adoption": 61.79,
@@ -73670,11 +73670,11 @@
       "stars": 33000,
       "report": "research/projects/52-agentgpt-autonomous.md",
       "scores": {
-        "current_value": 20.83,
-        "time": 6.16,
+        "current_value": 20.79,
+        "time": 6.09,
         "mechanism": 10,
         "evidence": 36,
-        "adoption": 81,
+        "adoption": 80.99,
         "usefulness": 45
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
@@ -73728,8 +73728,8 @@
       "stars": 4200,
       "report": "research/projects/47-openagents-platform.md",
       "scores": {
-        "current_value": 19.22,
-        "time": 6.16,
+        "current_value": 19.19,
+        "time": 6.09,
         "mechanism": 10,
         "evidence": 36,
         "adoption": 64.95,
