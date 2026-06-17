@@ -3,8 +3,8 @@ repo: pinchbench/skill
 url: https://github.com/pinchbench/skill
 content_timestamp: 2026-06-17
 time_slice: 2026-06
-timestamp_source: gh_api_graphql_authenticated_2026_06_17_0829
-collected_at: 2026-06-17T08:29:47+08:00
+timestamp_source: gh_api_graphql_authenticated_2026_06_17_1430
+collected_at: 2026-06-17T14:30:30+08:00
 source: github
 source_tool: gh_graphql
 ---
@@ -23,26 +23,26 @@ This raw GitHub capture was refreshed by the hourly public metadata update throu
 
 - Repository: pinchbench/skill
 - URL: https://github.com/pinchbench/skill
-- Stars: 1,236
+- Stars: 1,235
 - Forks: 140
 - Commits: 383
-- Open issues: 20
+- Open issues: 21
 - Open pull requests: 1
 - License: MIT
 - Primary language / stack signal: Python/Shell/TypeScript/OpenClaw Benchmark Harness
 - Created at: 2026-02-11T01:41:39Z
 - Last pushed at: 2026-06-02T21:35:43Z
-- Last updated at: 2026-06-16T21:19:02Z
-- Collection timestamp: 2026-06-17T08:29:47+08:00
+- Last updated at: 2026-06-17T01:43:26Z
+- Collection timestamp: 2026-06-17T14:30:30+08:00
 - Topics: none exposed through the GitHub API topic list
 - Latest public release: v2.0.0 (2026-05-06)
 
 ## Visible README / page excerpts
 
-- The authenticated GitHub API snapshot on 2026-06-17 08:29 +0800 shows 1,236 stars, 140 forks, 383 commits, 20 open issues, and 1 open pull requests.
-- The public repository still frames itself as a benchmark system for evaluating LLMs as OpenClaw coding agents, not as the agent runtime itself.
-- Its benchmark story remains grounded in real-world tasks plus transcript-preserving grading workflows.
-- Relative to the previous authenticated packet at 2026-06-17 02:30 +0800: stars 1235 -> 1236.
+- The current packet on 2026-06-17 shows 1,235 stars, 140 forks, 383 commits, 21 open issues, and 1 open pull requests.
+- The repository still frames itself as an OpenClaw-oriented benchmark harness rather than the runtime itself.
+- Its public story remains grounded in real-world task execution plus transcript-preserving grading, so it stays useful as evaluator pressure rather than product evidence.
+- Relative to the previous authenticated packet at 2026-06-17 08:29 +0800: stars 1,236 -> 1,235; issues 20 -> 21; updatedAt 2026-06-16T21:19:02Z -> 2026-06-17T01:43:26Z.
 
 ## Raw capture boundary
 

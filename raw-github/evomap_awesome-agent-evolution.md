@@ -3,8 +3,8 @@ repo: EvoMap/awesome-agent-evolution
 url: https://github.com/EvoMap/awesome-agent-evolution
 content_timestamp: 2026-06-17
 time_slice: 2026-06
-timestamp_source: gh_api_graphql_authenticated_2026_06_17_0829
-collected_at: 2026-06-17T08:29:47+08:00
+timestamp_source: gh_api_graphql_authenticated_2026_06_17_1430
+collected_at: 2026-06-17T14:30:30+08:00
 source: github
 source_tool: gh_graphql
 ---
@@ -33,16 +33,16 @@ This raw GitHub capture was refreshed by the hourly public metadata update throu
 - Created at: 2026-03-07T04:11:34Z
 - Last pushed at: 2026-06-15T14:57:02Z
 - Last updated at: 2026-06-16T09:18:37Z
-- Collection timestamp: 2026-06-17T08:29:47+08:00
+- Collection timestamp: 2026-06-17T14:30:30+08:00
 - Topics: a2a, agent-evolution, agentic-ai, ai-agent, awesome, awesome-list, llm, mcp, memory-system, multi-agent, self-evolving, self-improvement, agent-framework, agent-protocol, autonomous-agent, evomap, llm-agent, prompt-engineering, skill-library, skills
 - Latest public release: none exposed through the GitHub API release list
 
 ## Visible README / page excerpts
 
-- The authenticated GitHub API snapshot on 2026-06-17 08:29 +0800 shows 141 stars, 20 forks, 64 commits, 6 open issues, and 1 open pull requests.
-- The topic set still makes it a live field-packaging mirror: agent-evolution, self-evolving, memory-system, multi-agent, skill-library, and awesome-list all remain active.
-- Its README still splits the field into self-evolution, memory, protocols, development platforms, coding, safety, embodied AI, papers, benchmarks, and community knowledge.
-- No public metadata delta was observed relative to the previous authenticated packet at 2026-06-17 02:30 +0800.
+- The current packet on 2026-06-17 shows 141 stars, 20 forks, 64 commits, 6 open issues, and 1 open pull requests.
+- Its topic set still makes it a live field-packaging mirror across `agent-evolution`, `self-evolving`, `memory-system`, `multi-agent`, `skill-library`, and `awesome-list`.
+- Its README still functions primarily as a curated taxonomy comparator instead of a runnable system.
+- No public metadata delta was observed relative to the previous authenticated packet at 2026-06-17 08:29 +0800.
 
 ## Raw capture boundary
 
