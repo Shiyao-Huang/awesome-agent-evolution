@@ -17,7 +17,7 @@
 | `survey` | present | 94 | 4 | 0 | 3.4 MB |
 | `scripts` | present | 80 | 1 | 0 | 2.3 MB |
 | `data-engine` | present | 495 | 20 | 0 | 29 MB |
-| `work/research` | present | 109 | 2 | 0 | 2.4 MB |
+| `work/research` | present | 111 | 2 | 0 | 2.5 MB |
 | `work/wiki` | present | 85 | 6 | 0 | 587 KB |
 | `wiki` | present | 8 | 2 | 0 | 4.2 MB |
 

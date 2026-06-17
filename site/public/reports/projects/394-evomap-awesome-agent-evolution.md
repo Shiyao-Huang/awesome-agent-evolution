@@ -6,7 +6,7 @@ EvoMap is not a runnable self-evolving system, but it is one of the best externa
 
 ## Three Sentences
 
-Its value is not execution but packaging: how the broader ecosystem currently teaches self-evolution, memory, protocols, benchmarks, and swarm adjacency to readers. That makes it a direct comparator for README, topic pages, and site entry design. This 2026-06-16 refresh keeps the comparator surface synchronized with the newest public metadata.
+Its value is not execution but packaging: how the broader ecosystem currently teaches self-evolution, memory, protocols, benchmarks, and swarm adjacency to readers. That makes it a direct comparator for README, topic pages, and site entry design. The 2026-06-17 morning recheck kept its public counts stable, confirming it remains a comparator surface rather than a moving runtime anchor.
 
 ## Model Card
 
@@ -16,7 +16,7 @@ Its value is not execution but packaging: how the broader ecosystem currently te
 | Source | `raw-github/evomap_awesome-agent-evolution.md` |
 | Category | External awesome list and taxonomy comparator |
 | Pattern | field taxonomy -> curated repo/paper/benchmark sections -> related awesome-list pointers -> reader-facing ecosystem navigation |
-| Evidence | Authenticated GitHub API snapshot, 2026-06-16 |
+| Evidence | Authenticated GitHub API snapshot, 2026-06-17 08:29 +0800 |
 
 ## Teaching Use
 
@@ -24,4 +24,4 @@ Use EvoMap to compare curation strategies. It is the external mirror that expose
 
 ## Evidence And Limits
 
-The raw capture now reflects a GitHub metadata packet observed on 2026-06-17: 141 stars, 20 forks, 64 commits, 6 open issues, and 1 open pull requests. This packet is fresher than the previous authenticated packet at 2026-06-16 20:27 +0800 where a delta was observed. This run did not execute the repository locally, validate workflows end to end, or independently rerun benchmark claims. Product, memory, benchmark, and automation claims therefore remain repository-scoped unless separately tested.
+The raw capture now reflects an authenticated GitHub API snapshot observed on 2026-06-17 08:29 +0800: 141 stars, 20 forks, 64 commits, 6 open issues, and 1 open pull requests. No public metadata delta was observed relative to the previous authenticated packet at 2026-06-17 02:30 +0800. This run did not execute EvoMap scripts or validate its data pipeline locally. The classification is based on public taxonomy, maintenance surface, and comparison value.

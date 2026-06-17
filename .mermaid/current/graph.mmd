@@ -1,7 +1,7 @@
 flowchart LR
-  intent["Direct user intent"] --> raw["GitHub API retry + fallback packet"]
+  intent["Direct user intent"] --> raw["authenticated GitHub API repo recheck"]
   raw --> processed["classification + project cards"]
-  processed --> public["README + site/public reports"]
-  processed --> indexes["timestamp index + corpus analysis"]
-  public --> note["run note + Mermaid truth source"]
+  processed --> results["README/site/report surfaces"]
+  processed --> indexes["timestamp index + GitHub corpus analysis"]
+  results --> note["work note + Mermaid truth source"]
   note --> intent

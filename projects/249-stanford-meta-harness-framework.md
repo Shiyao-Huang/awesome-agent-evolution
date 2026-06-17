@@ -6,7 +6,7 @@ Meta-Harness remains the cleanest outer-loop harness-search reference in the pub
 
 ## Three Sentences
 
-It matters because it isolates harness mutation from base-model change, which is exactly the mechanism many production systems implicitly use without naming it. The public repository still anchors two stories: domain onboarding and reference experiments for harness search. This 2026-06-16 refresh keeps the outer-loop reference on the newest authenticated GitHub packet.
+It matters because it isolates harness mutation from base-model change, which is exactly the mechanism many production systems implicitly use without naming it. The public repository still anchors two stories: domain onboarding and reference experiments for harness search. The 2026-06-17 morning packet moved the public star count again, so this reference surface still needs active metadata sync.
 
 ## Model Card
 
@@ -16,7 +16,7 @@ It matters because it isolates harness mutation from base-model change, which is
 | Source | `raw-github/stanford-iris-lab_meta-harness.md` |
 | Category | Meta-harness framework and reference experiments |
 | Pattern | define domain spec -> search harness candidates -> run reference experiments -> compare outcomes -> retain stronger harness |
-| Evidence | Authenticated GitHub API snapshot, 2026-06-16 |
+| Evidence | Authenticated GitHub API snapshot, 2026-06-17 08:29 +0800 |
 
 ## Teaching Use
 
@@ -24,4 +24,4 @@ Use Meta-Harness to explain outer-loop search over prompts, workflows, or scaffo
 
 ## Evidence And Limits
 
-The raw capture now reflects a GitHub metadata packet observed on 2026-06-17: 1,096 stars, 105 forks, 11 commits, 5 open issues, and 0 open pull requests. This packet is fresher than the previous authenticated packet at 2026-06-16 20:27 +0800 where a delta was observed. This run did not execute the repository locally, validate workflows end to end, or independently rerun benchmark claims. Product, memory, benchmark, and automation claims therefore remain repository-scoped unless separately tested.
+The raw capture now reflects an authenticated GitHub API snapshot observed on 2026-06-17 08:29 +0800: 1,097 stars, 105 forks, 11 commits, 5 open issues, and 0 open pull requests. Relative to the previous authenticated packet at 2026-06-17 02:30 +0800: stars 1096 -> 1097. This run did not execute the repository locally, validate workflows end to end, or independently rerun benchmark claims. Product, memory, benchmark, and automation claims therefore remain repository-scoped unless separately tested.

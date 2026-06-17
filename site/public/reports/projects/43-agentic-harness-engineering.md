@@ -6,7 +6,7 @@ Agentic Harness Engineering remains the clearest public example of making the ha
 
 ## Three Sentences
 
-It belongs in the runtime layer: prompts, tools, middleware, memory, subagents, and evaluators are exposed as versioned engineering surfaces. That matters for this survey because it turns benchmark deltas into something an agent team can inspect, edit, test, and roll back. The 2026-06-16 authenticated packet shows the harness anchor is still receiving public attention, so the evidence chain needs a fresh sync.
+It belongs in the runtime layer: prompts, tools, middleware, memory, subagents, and evaluators are exposed as versioned engineering surfaces. That matters for this survey because it turns benchmark deltas into something an agent team can inspect, edit, test, and roll back. The 2026-06-17 morning authenticated packet keeps the harness anchor current even though its public counts stayed stable versus the earlier 02:30 packet.
 
 ## Model Card
 
@@ -16,7 +16,7 @@ It belongs in the runtime layer: prompts, tools, middleware, memory, subagents, 
 | Source | `raw-github/china-qijizhifeng_agentic-harness-engineering.md` |
 | Category | Harness evolution engineering |
 | Pattern | editable harness surface -> evaluator pressure -> harness mutation -> regression verification |
-| Evidence | Authenticated GitHub API snapshot, 2026-06-16 |
+| Evidence | Authenticated GitHub API snapshot, 2026-06-17 08:29 +0800 |
 
 ## Teaching Use
 
@@ -24,4 +24,4 @@ Use this project to explain why self-evolution is not limited to weight updates 
 
 ## Evidence And Limits
 
-The raw capture now reflects a GitHub metadata packet observed on 2026-06-17: 580 stars, 65 forks, 46 commits, 0 open issues, and 0 open pull requests. This packet is fresher than the previous authenticated packet at 2026-06-16 20:27 +0800 where a delta was observed. This run did not execute the repository locally, validate workflows end to end, or independently rerun benchmark claims. Product, memory, benchmark, and automation claims therefore remain repository-scoped unless separately tested.
+The raw capture now reflects an authenticated GitHub API snapshot observed on 2026-06-17 08:29 +0800: 580 stars, 65 forks, 46 commits, 0 open issues, and 0 open pull requests. No public metadata delta was observed relative to the previous authenticated packet at 2026-06-17 02:30 +0800. This run did not execute the repository locally, validate workflows end to end, or independently rerun benchmark claims. Product, memory, benchmark, and automation claims therefore remain repository-scoped unless separately tested.
