@@ -3,8 +3,8 @@ repo: desplega-ai/agent-swarm
 url: https://github.com/desplega-ai/agent-swarm
 content_timestamp: 2026-06-18
 time_slice: 2026-06
-timestamp_source: gh_api_graphql_authenticated_2026_06_18_0232
-collected_at: 2026-06-18T02:32:33+08:00
+timestamp_source: gh_api_graphql_authenticated_2026_06_18_0833
+collected_at: 2026-06-18T08:33:03+08:00
 source: github
 source_tool: gh_graphql
 ---
@@ -25,24 +25,24 @@ This raw GitHub capture was refreshed by the hourly public metadata update throu
 - URL: https://github.com/desplega-ai/agent-swarm
 - Stars: 533
 - Forks: 59
-- Commits: 1,647
+- Commits: 1,648
 - Open issues: 1
 - Open pull requests: 4
 - License: MIT
 - Primary language / stack signal: TypeScript/Docker/MCP/Lead-Worker Swarm
 - Created at: 2025-12-19T18:59:13Z
-- Last pushed at: 2026-06-17T17:22:33Z
-- Last updated at: 2026-06-17T17:23:28Z
-- Collection timestamp: 2026-06-18T02:32:33+08:00
+- Last pushed at: 2026-06-17T22:00:05Z
+- Last updated at: 2026-06-17T21:59:46Z
+- Collection timestamp: 2026-06-18T08:33:03+08:00
 - Topics: ai-agents, claude, claude-code, swarm
-- Latest public release: v1.100.1 (2026-06-17)
+- Latest public release: v1.100.2 (2026-06-17)
 
 ## Visible README / page excerpts
 
-- The current packet on 2026-06-18 shows 533 stars, 59 forks, 1,647 commits, 1 open issues, and 4 open pull requests.
+- The current packet on 2026-06-18 shows 533 stars, 59 forks, 1,648 commits, 1 open issues, and 4 open pull requests.
 - The public repository still centers a lead-worker swarm runtime across Slack, GitHub, email, API, pages, workflows, and MCP.
 - It remains one of the clearest public “compounding swarm” runtime anchors rather than a paper-only concept.
-- Relative to the previous authenticated packet at 2026-06-17 14:30 +0800: stars 532 -> 533; commits 1,641 -> 1,647; pushedAt 2026-06-17T03:05:28Z -> 2026-06-17T17:22:33Z; updatedAt 2026-06-17T06:29:38Z -> 2026-06-17T17:23:28Z.
+- Relative to the previous authenticated packet at 2026-06-18 02:32 +0800: commits 1,647 -> 1,648; pushedAt 2026-06-17T17:22:33Z -> 2026-06-17T22:00:05Z; updatedAt 2026-06-17T17:23:28Z -> 2026-06-17T21:59:46Z.
 
 ## Raw capture boundary
 

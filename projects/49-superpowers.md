@@ -24,4 +24,4 @@ Use Superpowers to teach that self-evolution can happen through reusable operati
 
 ## Evidence And Limits
 
-The raw capture now reflects a GitHub metadata packet observed on 2026-06-18: 230,834 stars, 20,525 forks, 602 commits, 125 open issues, and 162 open pull requests. This packet is fresher than the previous authenticated packet at 2026-06-17 14:30 +0800 where a delta was observed. This run did not execute the repository locally, validate workflows end to end, or independently rerun benchmark claims. Product, memory, benchmark, and automation claims therefore remain repository-scoped unless separately tested.
+The raw capture now reflects a GitHub metadata packet observed on 2026-06-18: 231,049 stars, 20,541 forks, 602 commits, 122 open issues, and 141 open pull requests. This packet is fresher than the previous authenticated packet at 2026-06-18 02:32 +0800 where a delta was observed. This run did not execute the repository locally, validate workflows end to end, or independently rerun benchmark claims. Product, memory, benchmark, and automation claims therefore remain repository-scoped unless separately tested.
