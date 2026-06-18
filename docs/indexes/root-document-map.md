@@ -1,6 +1,6 @@
 # Root Document Map
 
-> Generated: 2026-06-18
+> Generated: 2026-06-19
 
 Root only keeps entry points, legal/release files, and compatibility files still referenced by scripts or research notes. New management documents belong in `docs/`.
 
