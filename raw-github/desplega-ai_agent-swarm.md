@@ -3,8 +3,8 @@ repo: desplega-ai/agent-swarm
 url: https://github.com/desplega-ai/agent-swarm
 content_timestamp: 2026-06-18
 time_slice: 2026-06
-timestamp_source: gh_api_graphql_authenticated_2026_06_18_0833
-collected_at: 2026-06-18T08:33:03+08:00
+timestamp_source: gh_api_graphql_authenticated_2026_06_18_1435
+collected_at: 2026-06-18T14:35:26+08:00
 source: github
 source_tool: gh_graphql
 ---
@@ -27,22 +27,22 @@ This raw GitHub capture was refreshed by the hourly public metadata update throu
 - Forks: 59
 - Commits: 1,648
 - Open issues: 1
-- Open pull requests: 4
+- Open pull requests: 6
 - License: MIT
 - Primary language / stack signal: TypeScript/Docker/MCP/Lead-Worker Swarm
 - Created at: 2025-12-19T18:59:13Z
-- Last pushed at: 2026-06-17T22:00:05Z
+- Last pushed at: 2026-06-18T02:28:29Z
 - Last updated at: 2026-06-17T21:59:46Z
-- Collection timestamp: 2026-06-18T08:33:03+08:00
+- Collection timestamp: 2026-06-18T14:35:26+08:00
 - Topics: ai-agents, claude, claude-code, swarm
 - Latest public release: v1.100.2 (2026-06-17)
 
 ## Visible README / page excerpts
 
-- The current packet on 2026-06-18 shows 533 stars, 59 forks, 1,648 commits, 1 open issues, and 4 open pull requests.
+- The current packet on 2026-06-18 shows 533 stars, 59 forks, 1,648 commits, 1 open issues, and 6 open pull requests.
 - The public repository still centers a lead-worker swarm runtime across Slack, GitHub, email, API, pages, workflows, and MCP.
 - It remains one of the clearest public “compounding swarm” runtime anchors rather than a paper-only concept.
-- Relative to the previous authenticated packet at 2026-06-18 02:32 +0800: commits 1,647 -> 1,648; pushedAt 2026-06-17T17:22:33Z -> 2026-06-17T22:00:05Z; updatedAt 2026-06-17T17:23:28Z -> 2026-06-17T21:59:46Z.
+- Relative to the previous authenticated packet at 2026-06-18 08:33 +0800: PRs 4 -> 6; pushedAt 2026-06-17T22:00:05Z -> 2026-06-18T02:28:29Z.
 
 ## Raw capture boundary
 
