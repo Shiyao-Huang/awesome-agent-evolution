@@ -3,8 +3,8 @@ repo: NousResearch/hermes-agent
 url: https://github.com/NousResearch/hermes-agent
 content_timestamp: 2026-06-19
 time_slice: 2026-06
-timestamp_source: gh_api_graphql_authenticated_2026_06_19_0321
-collected_at: 2026-06-19T03:21:02+08:00
+timestamp_source: gh_api_graphql_authenticated_2026_06_19_0921
+collected_at: 2026-06-19T09:21:05+08:00
 source: github
 source_tool: gh_graphql
 ---
@@ -23,26 +23,26 @@ This raw GitHub capture was refreshed by the hourly public metadata update throu
 
 - Repository: NousResearch/hermes-agent
 - URL: https://github.com/NousResearch/hermes-agent
-- Stars: 196,896
-- Forks: 34,747
-- Commits: 12,001
-- Open issues: 7,207
-- Open pull requests: 14,731
+- Stars: 197,017
+- Forks: 34,794
+- Commits: 12,020
+- Open issues: 7,225
+- Open pull requests: 14,777
 - License: MIT
 - Primary language / stack signal: Python/TypeScript/Memory/Skills/Messaging-Agent Runtime
 - Created at: 2025-07-22T22:22:28Z
-- Last pushed at: 2026-06-18T19:18:40Z
-- Last updated at: 2026-06-18T19:18:06Z
-- Collection timestamp: 2026-06-19T03:21:02+08:00
+- Last pushed at: 2026-06-19T01:01:25Z
+- Last updated at: 2026-06-19T01:21:49Z
+- Collection timestamp: 2026-06-19T09:21:05+08:00
 - Topics: ai, ai-agent, ai-agents, llm, anthropic, chatgpt, claude, claude-code, clawdbot, codex, hermes, hermes-agent, moltbot, nous-research, openai, openclaw
 - Latest public release: Hermes Agent v0.16.0 (2026.6.5) — The Surface Release (2026-06-06)
 
 ## Visible README / page excerpts
 
-- The current packet on 2026-06-19 shows 196,896 stars, 34,747 forks, 12,001 commits, 7,207 open issues, and 14,731 open pull requests.
+- The current packet on 2026-06-19 shows 197,017 stars, 34,794 forks, 12,020 commits, 7,225 open issues, and 14,777 open pull requests.
 - Hermes Agent still positions itself as the personal agent that grows with you: persistent knowledge, skill creation, session search, user modeling, messaging gateways, and scheduled automations remain explicit.
 - Its topic surface still ties it to the broader coding-agent runtime lane through `claude-code`, `codex`, `openclaw`, `ai-agent`, and adjacent public discovery tags.
-- Relative to the previous authenticated packet at 2026-06-18 21:20 +0800: stars 196,664 -> 196,896; forks 34,669 -> 34,747; issues 7,194 -> 7,207; PRs 14,654 -> 14,731; commits 11,979 -> 12,001; pushedAt 2026-06-18T13:02:16Z -> 2026-06-18T19:18:40Z; updatedAt 2026-06-18T13:18:54Z -> 2026-06-18T19:18:06Z.
+- Relative to the previous authenticated packet at 2026-06-19 03:21 +0800: stars 196,896 -> 197,017; forks 34,747 -> 34,794; issues 7,207 -> 7,225; PRs 14,731 -> 14,777; commits 12,001 -> 12,020; pushedAt 2026-06-18T19:18:40Z -> 2026-06-19T01:01:25Z; updatedAt 2026-06-18T19:18:06Z -> 2026-06-19T01:21:49Z.
 
 ## Raw capture boundary
 

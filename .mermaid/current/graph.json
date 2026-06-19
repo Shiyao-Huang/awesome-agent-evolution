@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-19T03:21:02+08:00",
+  "generated_at": "2026-06-19T09:21:05+08:00",
   "truth_source": ".mermaid/current/graph.json",
   "nodes": [
     {
@@ -96,8 +96,8 @@
       "paths": [
         ".mermaid/current/graph.md",
         ".mermaid/current/graph.mmd",
-        "work/research/hourly-public-metadata-update-2026-06-19-0321.md",
-        "work/research/hourly-public-metadata-update-2026-06-19-0321-data.json"
+        "work/research/hourly-public-metadata-update-2026-06-19-0921.md",
+        "work/research/hourly-public-metadata-update-2026-06-19-0921-data.json"
       ]
     }
   ],
@@ -135,14 +135,14 @@
   ],
   "current_run": {
     "source": "gh authenticated GitHub API with retry + fallback",
-    "previous_packet": "2026-06-18 21:20 +0800",
+    "previous_packet": "2026-06-19 03:21 +0800",
     "repos": [
       {
         "repo": "china-qijizhifeng/agentic-Harness-engineering",
         "raw_capture": "raw-github/china-qijizhifeng_agentic-harness-engineering.md",
         "report": "projects/43-agentic-harness-engineering.md",
         "site_report": "site/public/reports/projects/43-agentic-harness-engineering.md",
-        "stars": 592,
+        "stars": 593,
         "forks": 66,
         "issues": 1,
         "pull_requests": 0,
@@ -157,12 +157,12 @@
         "raw_capture": "raw-github/nousresearch_hermes-agent.md",
         "report": "projects/44-hermes-agent.md",
         "site_report": "site/public/reports/projects/44-hermes-agent.md",
-        "stars": 196896,
-        "forks": 34747,
-        "issues": 7207,
-        "pull_requests": 14731,
-        "commits": 12001,
-        "latest_push": "2026-06-18T19:18:40Z",
+        "stars": 197017,
+        "forks": 34794,
+        "issues": 7225,
+        "pull_requests": 14777,
+        "commits": 12020,
+        "latest_push": "2026-06-19T01:01:25Z",
         "latest_release": {
           "name": "Hermes Agent v0.16.0 (2026.6.5) — The Surface Release",
           "publishedAt": "2026-06-06T00:55:58Z"
@@ -175,7 +175,7 @@
         "raw_capture": "raw-github/stanford-iris-lab_meta-harness.md",
         "report": "projects/249-stanford-meta-harness-framework.md",
         "site_report": "site/public/reports/projects/249-stanford-meta-harness-framework.md",
-        "stars": 1122,
+        "stars": 1123,
         "forks": 106,
         "issues": 5,
         "pull_requests": 0,
@@ -190,8 +190,8 @@
         "raw_capture": "raw-github/rohitg00_agentmemory.md",
         "report": "projects/50-agentmemory.md",
         "site_report": "site/public/reports/projects/50-agentmemory.md",
-        "stars": 23346,
-        "forks": 1913,
+        "stars": 23367,
+        "forks": 1916,
         "issues": 149,
         "pull_requests": 159,
         "commits": 462,
@@ -208,7 +208,7 @@
         "raw_capture": "raw-github/pinchbench_skill.md",
         "report": "projects/51-pinchbench-skill.md",
         "site_report": "site/public/reports/projects/51-pinchbench-skill.md",
-        "stars": 1240,
+        "stars": 1241,
         "forks": 140,
         "issues": 21,
         "pull_requests": 0,
@@ -244,12 +244,12 @@
         "raw_capture": "raw-github/openclaw_openclaw.md",
         "report": "projects/48-openclaw.md",
         "site_report": "site/public/reports/projects/48-openclaw.md",
-        "stars": 379387,
-        "forks": 79415,
-        "issues": 3315,
-        "pull_requests": 3220,
-        "commits": 60176,
-        "latest_push": "2026-06-18T19:20:38Z",
+        "stars": 379415,
+        "forks": 79422,
+        "issues": 3310,
+        "pull_requests": 3211,
+        "commits": 60271,
+        "latest_push": "2026-06-19T01:21:33Z",
         "latest_release": {
           "name": "openclaw 2026.6.8",
           "publishedAt": "2026-06-16T16:32:26Z"
@@ -262,15 +262,15 @@
         "raw_capture": "raw-github/obra_superpowers.md",
         "report": "projects/49-superpowers.md",
         "site_report": "site/public/reports/projects/49-superpowers.md",
-        "stars": 232264,
-        "forks": 20627,
-        "issues": 126,
-        "pull_requests": 140,
-        "commits": 602,
-        "latest_push": "2026-06-18T18:49:56Z",
+        "stars": 232428,
+        "forks": 20645,
+        "issues": 125,
+        "pull_requests": 142,
+        "commits": 609,
+        "latest_push": "2026-06-18T22:45:11Z",
         "latest_release": {
-          "name": "v6.0.2",
-          "publishedAt": "2026-06-17T05:43:37Z"
+          "name": "v6.0.3",
+          "publishedAt": "2026-06-18T22:45:19Z"
         },
         "source": "gh_graphql",
         "fallback": false
@@ -313,9 +313,9 @@
         "stars": 534,
         "forks": 59,
         "issues": 1,
-        "pull_requests": 2,
-        "commits": 1654,
-        "latest_push": "2026-06-18T18:25:13Z",
+        "pull_requests": 3,
+        "commits": 1655,
+        "latest_push": "2026-06-18T23:37:03Z",
         "latest_release": {
           "name": "v1.100.2",
           "publishedAt": "2026-06-17T22:10:01Z"
@@ -325,8 +325,8 @@
       }
     ],
     "gitnexus": {
-      "status_output": "Repository: /Users/copizzah/Desktop/work/awesome-evolution\nIndexed: 6/16/2026, 8:26:12 AM\nIndexed commit: 27fbfcd\nCurrent commit: de494f2\nStatus: ⚠️ stale (re-run gitnexus analyze)",
-      "query_excerpt": "{\n  \"processes\": [],\n  \"process_symbols\": [],\n  \"definitions\": [\n    {\n      \"id\": \"Function:scripts/hourly-public-metadata-update-2026-06-03-1355.mjs:renderGraphJson\",\n      \"name\": \"renderGraphJson\",\n      \"filePath\": \"scripts/hourly-public-metadata-update-2026-06-03-1355.mjs\",\n      \"startLine\": 462,\n      \"endLine\": 527\n    },\n    {\n      \"id\": \"Function:scripts/hourly-public-metadata-update-2026-06-03-1355.mjs:renderGraphMd\",\n      \"name\": \"renderGraphMd\",\n      \"filePath\": \"scripts/hourly-public-metadata-update-2026-06-03-1355.mjs\",\n      \"startLine\": 529,\n      \"endLine\": 558\n    },\n    {\n      \"id\": \"Function:scripts/hourly-public-metadata-update-2026-06-03-1355.mjs:renderRunNote\",\n      \"name\": \"renderRunNote\",\n      \"filePath\": \"scripts/hourly-public-metadata-update-2026-06-03-1355.mjs\",\n      \"startLine\": 568,\n      \"endLine\": 596\n    },\n    {\n      \"id\": \"Function:scripts/hourly-public-metadata-update-2026-06-03-0752.mjs:renderGraphJson\",\n      \"name\": \"renderGraphJson\",\n      \"filePath\": \"scripts/hourly-public-metadata-update-2026-06-03-0752.mjs\",\n      \"startLine\": 272,\n      \"endLine\": 336\n    },\n    {\n      \"id\": \"Function:scripts/hourly-public-metadata-update-2026-06-03-0752.mjs:renderGraphMd\",\n      \"name\": \"renderGraphMd\",\n      \"filePath\": \"scripts/hourly-public-metadata-update-2026-06-03-0752.mjs\",\n      \"startLine\": 338,\n      \"endLine\": 367\n    },\n    {\n      \"id\": \"Function:scripts/hourly-public-metadata-update-2026-06-03-0752.mjs:renderGraphMmd\",\n      \"name\": \"renderGraphMmd\",\n      \"filePath\": \"scripts/hourly-public-metadata-update-2026-06-03-0752.mjs\",\n      \"startLine\": 369,\n      \"endLine\": 375\n    },\n    {\n      \"id\": \"Function:scripts/hourly-public-metadata-update-2026-06-04-1600.mjs:renderGraphJson\",\n      \"name\": \"renderGraphJson\",\n      \"filePath\": \"scripts/hourly-public-metadata-update-2026-06-04-1600.mjs\",\n      \"startLine\": 460,\n      \"endLine\": 525\n    },\n    {\n      \"id\": \"Function:scripts/hourly-public-metadata-update-2026-06-04-1600.mjs:renderGraphMd\",\n      \"name\": \"renderGraphMd\",\n      \"filePath\": \"scripts/hourly-public-metadata-update-2026-06-04-1600.mjs\",\n      \"startLine\": 527,\n      \"endLine\": 556\n    },\n    {\n      \"id\": \"Function:scripts/hourly-public-metadata-update-2026-06-04-1600.mjs:renderRunNote\",\n      \"name\": \"renderRunNote\",\n      \"filePath\": \"scripts/hourly-public-metadata-update-2026-06-04-1600.mjs\",\n      \"startLine\": 566,\n      \"endLine\": 593\n    },\n    {\n      \"id\": \"File:work/research/hourly-public-metadata-update-2026-06-05-2200.md\",\n      \"name\": \"hourly-public-metadata-update-2026-06-05-2200.md\",\n      \"filePath\": \"work/research/hourly-public-metadata-update-2026-06-05-2200.md\"\n    },\n    {\n      \"id\": \"Function:scripts/hourly-public-metadata-update-2026-06-01-2027.mjs:updateGraphAndNotes\",\n      \"name\": \"updateGraphAndNotes\",\n      \"filePath\": \"scripts/hourly-public-metadata-update-2026-06-01-2027.mjs\",\n      \"startLine\": 498,\n      \"endLine\": 523,\n      \"module\": \"Scripts\"\n    },\n    {\n      \"id\": \"Function:scripts/hourly-public-metadata-update-2026-06-04-1536.mjs:updateGraph\",\n      \"name\": \"updateGraph\",\n      \"filePath\": \"scripts/hourly-public-metadata-update-2026-06-04-1536.mjs\",\n      \"startLine\": 572,\n      \"endLine\": 686,\n      \"module\": \"Scripts\"\n    },\n    {\n      \"id\": \"Function:scripts/hourly-public-metadata-update-2026-05-26-2154.mjs:updateGraphAndNotes\",\n      \"name\": \"updateGraphAndNotes\",\n      \"filePath\": \"scripts/hourly-public-metadata-update-2026-05-26-2154.mjs\",\n      \"startLine\": 363,\n      \"endLine\": 388,\n      \"module\": \"Scripts\"\n    },\n    {\n      \"id\": \"Function:scripts/hourly-public-metadata-update-2026-05-27-0959.mjs:updateGraphAndNotes\",\n      \"name\": \"updateGraphAndNotes\",\n      \"filePath\": \"scripts/hourly-public-metadata-update-2026-05-27-0959.mjs\",\n      \"startLine\": 401,\n      \"endLine\": 426,\n      \"module\": \"Scripts\"\n    },\n    {\n      \"id\": \"Function:scripts/hourly-public-metadata-update-2026-05-27-1600.mjs:updateGraphAndNotes\",\n      \"name\": \"updateGraphAndNotes\",\n      \"filePath\": \"scripts/hourly-public-metadata-update-2026-05-27-1600.mjs\",\n      \"startLine\": 428,\n      \"endLine\": 453,\n      \"module\": \"Scripts\"\n    },\n    {\n      \"id\": \"Function:scripts/hourly-public-metadata-update-2026-05-27-2200.mjs:updateGraphAndNotes\",\n      \"name\": \"updateGraphAndNotes\",\n      \"filePath\": \"scripts/hourly-public-metadata-update-2026-05-27-2200.mjs\",\n      \"startLine\": 428,\n      \"endLine\": 453,\n      \"module\": \"Scripts\"\n    },\n    {\n      \"id\": \"Function:scripts/hourly-public-metadata-update-2026-05-28-0400.mjs:updateGraphAndNotes\",\n      \"name\": \"updateGraphAndNotes\",\n      \"filePath\": \"scripts/hourly-public-metadata-update-2026-05-28-0400.mjs\",\n      \"startLine\": 428,\n      \"endLine\": 453,\n      \"module\": \"Scripts\"\n    },\n    {\n      \"id\": \"Function:scripts/hourly-public-metadata-update-2026-05-28-1000.mjs:updateGraphAndNotes\",\n      \"name\": \"updateGraphAndNotes\",\n      \"filePath\": \"scripts/hourly-public-metadata-update-2026-05-28-1000.mjs\",\n      \"startLine\": 428,\n      \"endLine\": 453,\n      \"module\": \"Scripts\"\n    },\n    {\n      \"id\": \"Function:scripts/hourly-public-metadata-update-2026-05-28-1625.mjs:updateGraphAndNotes\",\n      \"name\": \"updateGraphAndNotes\",\n      \"filePath\": \"scripts/hourly-public-metadata-update-2026-05-28-1625.mjs\",\n      \"startLine\": 428,\n      \"endLine\": 453,\n      \"module\": \"Scripts\"\n    },\n    {\n      \"id\": \"Function:scripts/hourly-public-metadata-update-2026-05-28-2203.mjs:updateGraphAndNotes\",\n      \"name\": \"updateGraphAndNotes\",\n      \"filePath\": \"scripts/hourly-public-metadata-update-2026-05-28-2203.mjs\",\n      \"startLine\": 428,\n      \"endLine\": 453,\n      \"module\": \"Scripts\"\n    }\n  ],\n  \"timing\": {\n    \"vector\": 9.7,\n    \"bm25\": 161.9,\n    \"merge\": 0.1,\n    \"symbol_lookup\": 142.1,\n    \"ranking\": 0,\n    \"formatting\": 0,\n    \"wall\": 305\n  }\n}"
+      "status_output": "Repository: /Users/copizzah/Desktop/work/awesome-evolution\nIndexed: 6/16/2026, 8:26:12 AM\nIndexed commit: 27fbfcd\nCurrent commit: dc99278\nStatus: ⚠️ stale (re-run gitnexus analyze)",
+      "query_excerpt": "{\n  \"processes\": [],\n  \"process_symbols\": [],\n  \"definitions\": [\n    {\n      \"id\": \"Function:scripts/hourly-public-metadata-update-2026-06-03-1355.mjs:renderGraphJson\",\n      \"name\": \"renderGraphJson\",\n      \"filePath\": \"scripts/hourly-public-metadata-update-2026-06-03-1355.mjs\",\n      \"startLine\": 462,\n      \"endLine\": 527\n    },\n    {\n      \"id\": \"Function:scripts/hourly-public-metadata-update-2026-06-03-1355.mjs:renderGraphMd\",\n      \"name\": \"renderGraphMd\",\n      \"filePath\": \"scripts/hourly-public-metadata-update-2026-06-03-1355.mjs\",\n      \"startLine\": 529,\n      \"endLine\": 558\n    },\n    {\n      \"id\": \"Function:scripts/hourly-public-metadata-update-2026-06-03-1355.mjs:renderRunNote\",\n      \"name\": \"renderRunNote\",\n      \"filePath\": \"scripts/hourly-public-metadata-update-2026-06-03-1355.mjs\",\n      \"startLine\": 568,\n      \"endLine\": 596\n    },\n    {\n      \"id\": \"Function:scripts/hourly-public-metadata-update-2026-06-03-0752.mjs:renderGraphJson\",\n      \"name\": \"renderGraphJson\",\n      \"filePath\": \"scripts/hourly-public-metadata-update-2026-06-03-0752.mjs\",\n      \"startLine\": 272,\n      \"endLine\": 336\n    },\n    {\n      \"id\": \"Function:scripts/hourly-public-metadata-update-2026-06-03-0752.mjs:renderGraphMd\",\n      \"name\": \"renderGraphMd\",\n      \"filePath\": \"scripts/hourly-public-metadata-update-2026-06-03-0752.mjs\",\n      \"startLine\": 338,\n      \"endLine\": 367\n    },\n    {\n      \"id\": \"Function:scripts/hourly-public-metadata-update-2026-06-03-0752.mjs:renderGraphMmd\",\n      \"name\": \"renderGraphMmd\",\n      \"filePath\": \"scripts/hourly-public-metadata-update-2026-06-03-0752.mjs\",\n      \"startLine\": 369,\n      \"endLine\": 375\n    },\n    {\n      \"id\": \"Function:scripts/hourly-public-metadata-update-2026-06-04-1600.mjs:renderGraphJson\",\n      \"name\": \"renderGraphJson\",\n      \"filePath\": \"scripts/hourly-public-metadata-update-2026-06-04-1600.mjs\",\n      \"startLine\": 460,\n      \"endLine\": 525\n    },\n    {\n      \"id\": \"Function:scripts/hourly-public-metadata-update-2026-06-04-1600.mjs:renderGraphMd\",\n      \"name\": \"renderGraphMd\",\n      \"filePath\": \"scripts/hourly-public-metadata-update-2026-06-04-1600.mjs\",\n      \"startLine\": 527,\n      \"endLine\": 556\n    },\n    {\n      \"id\": \"Function:scripts/hourly-public-metadata-update-2026-06-04-1600.mjs:renderRunNote\",\n      \"name\": \"renderRunNote\",\n      \"filePath\": \"scripts/hourly-public-metadata-update-2026-06-04-1600.mjs\",\n      \"startLine\": 566,\n      \"endLine\": 593\n    },\n    {\n      \"id\": \"File:work/research/hourly-public-metadata-update-2026-06-05-2200.md\",\n      \"name\": \"hourly-public-metadata-update-2026-06-05-2200.md\",\n      \"filePath\": \"work/research/hourly-public-metadata-update-2026-06-05-2200.md\"\n    },\n    {\n      \"id\": \"Function:scripts/hourly-public-metadata-update-2026-06-01-2027.mjs:updateGraphAndNotes\",\n      \"name\": \"updateGraphAndNotes\",\n      \"filePath\": \"scripts/hourly-public-metadata-update-2026-06-01-2027.mjs\",\n      \"startLine\": 498,\n      \"endLine\": 523,\n      \"module\": \"Scripts\"\n    },\n    {\n      \"id\": \"Function:scripts/hourly-public-metadata-update-2026-06-04-1536.mjs:updateGraph\",\n      \"name\": \"updateGraph\",\n      \"filePath\": \"scripts/hourly-public-metadata-update-2026-06-04-1536.mjs\",\n      \"startLine\": 572,\n      \"endLine\": 686,\n      \"module\": \"Scripts\"\n    },\n    {\n      \"id\": \"Function:scripts/hourly-public-metadata-update-2026-05-26-2154.mjs:updateGraphAndNotes\",\n      \"name\": \"updateGraphAndNotes\",\n      \"filePath\": \"scripts/hourly-public-metadata-update-2026-05-26-2154.mjs\",\n      \"startLine\": 363,\n      \"endLine\": 388,\n      \"module\": \"Scripts\"\n    },\n    {\n      \"id\": \"Function:scripts/hourly-public-metadata-update-2026-05-27-0959.mjs:updateGraphAndNotes\",\n      \"name\": \"updateGraphAndNotes\",\n      \"filePath\": \"scripts/hourly-public-metadata-update-2026-05-27-0959.mjs\",\n      \"startLine\": 401,\n      \"endLine\": 426,\n      \"module\": \"Scripts\"\n    },\n    {\n      \"id\": \"Function:scripts/hourly-public-metadata-update-2026-05-27-1600.mjs:updateGraphAndNotes\",\n      \"name\": \"updateGraphAndNotes\",\n      \"filePath\": \"scripts/hourly-public-metadata-update-2026-05-27-1600.mjs\",\n      \"startLine\": 428,\n      \"endLine\": 453,\n      \"module\": \"Scripts\"\n    },\n    {\n      \"id\": \"Function:scripts/hourly-public-metadata-update-2026-05-27-2200.mjs:updateGraphAndNotes\",\n      \"name\": \"updateGraphAndNotes\",\n      \"filePath\": \"scripts/hourly-public-metadata-update-2026-05-27-2200.mjs\",\n      \"startLine\": 428,\n      \"endLine\": 453,\n      \"module\": \"Scripts\"\n    },\n    {\n      \"id\": \"Function:scripts/hourly-public-metadata-update-2026-05-28-0400.mjs:updateGraphAndNotes\",\n      \"name\": \"updateGraphAndNotes\",\n      \"filePath\": \"scripts/hourly-public-metadata-update-2026-05-28-0400.mjs\",\n      \"startLine\": 428,\n      \"endLine\": 453,\n      \"module\": \"Scripts\"\n    },\n    {\n      \"id\": \"Function:scripts/hourly-public-metadata-update-2026-05-28-1000.mjs:updateGraphAndNotes\",\n      \"name\": \"updateGraphAndNotes\",\n      \"filePath\": \"scripts/hourly-public-metadata-update-2026-05-28-1000.mjs\",\n      \"startLine\": 428,\n      \"endLine\": 453,\n      \"module\": \"Scripts\"\n    },\n    {\n      \"id\": \"Function:scripts/hourly-public-metadata-update-2026-05-28-1625.mjs:updateGraphAndNotes\",\n      \"name\": \"updateGraphAndNotes\",\n      \"filePath\": \"scripts/hourly-public-metadata-update-2026-05-28-1625.mjs\",\n      \"startLine\": 428,\n      \"endLine\": 453,\n      \"module\": \"Scripts\"\n    },\n    {\n      \"id\": \"Function:scripts/hourly-public-metadata-update-2026-05-28-2203.mjs:updateGraphAndNotes\",\n      \"name\": \"updateGraphAndNotes\",\n      \"filePath\": \"scripts/hourly-public-metadata-update-2026-05-28-2203.mjs\",\n      \"startLine\": 428,\n      \"endLine\": 453,\n      \"module\": \"Scripts\"\n    }\n  ],\n  \"timing\": {\n    \"vector\": 12.1,\n    \"bm25\": 166.4,\n    \"merge\": 0.1,\n    \"symbol_lookup\": 140.8,\n    \"ranking\": 0,\n    \"formatting\": 0,\n    \"wall\": 308.3\n  }\n}"
     }
   }
 }
