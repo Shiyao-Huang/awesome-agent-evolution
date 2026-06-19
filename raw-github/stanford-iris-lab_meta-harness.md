@@ -1,10 +1,10 @@
 ---
 repo: stanford-iris-lab/meta-harness
 url: https://github.com/stanford-iris-lab/meta-harness
-content_timestamp: 2026-06-19
+content_timestamp: 2026-06-20
 time_slice: 2026-06
-timestamp_source: gh_api_graphql_authenticated_2026_06_19_2122
-collected_at: 2026-06-19T21:22:45+08:00
+timestamp_source: gh_api_graphql_authenticated_2026_06_20_0322
+collected_at: 2026-06-20T03:22:50+08:00
 source: github
 source_tool: gh_graphql
 ---
@@ -23,7 +23,7 @@ This raw GitHub capture was refreshed by the hourly public metadata update throu
 
 - Repository: stanford-iris-lab/meta-harness
 - URL: https://github.com/stanford-iris-lab/meta-harness
-- Stars: 1,124
+- Stars: 1,125
 - Forks: 107
 - Commits: 11
 - Open issues: 5
@@ -32,17 +32,17 @@ This raw GitHub capture was refreshed by the hourly public metadata update throu
 - Primary language / stack signal: Python/Harness Search/Benchmark Scaffold Evolution
 - Created at: 2026-04-15T05:31:36Z
 - Last pushed at: 2026-04-29T16:39:58Z
-- Last updated at: 2026-06-19T01:32:53Z
-- Collection timestamp: 2026-06-19T21:22:45+08:00
+- Last updated at: 2026-06-19T17:05:07Z
+- Collection timestamp: 2026-06-20T03:22:50+08:00
 - Topics: harness-engineering, llm-agents
 - Latest public release: none exposed through the GitHub API release list
 
 ## Visible README / page excerpts
 
-- The current packet on 2026-06-19 shows 1,124 stars, 107 forks, 11 commits, 5 open issues, and 0 open pull requests.
+- The current packet on 2026-06-20 shows 1,125 stars, 107 forks, 11 commits, 5 open issues, and 0 open pull requests.
 - The public repository still separates the core framework from the optimized Terminal-Bench-2 artifact, which preserves the outer-loop interpretation.
 - It remains one of the clearest examples of fixed-model, mutable-harness search rather than weight-level self-evolution.
-- Relative to the previous authenticated packet at 2026-06-19 15:25 +0800: forks 106 -> 107.
+- Relative to the previous authenticated packet at 2026-06-19 21:22 +0800: stars 1,124 -> 1,125; updatedAt 2026-06-19T01:32:53Z -> 2026-06-19T17:05:07Z.
 
 ## Raw capture boundary
 
