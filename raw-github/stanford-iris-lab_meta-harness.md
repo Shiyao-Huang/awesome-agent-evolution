@@ -3,8 +3,8 @@ repo: stanford-iris-lab/meta-harness
 url: https://github.com/stanford-iris-lab/meta-harness
 content_timestamp: 2026-06-20
 time_slice: 2026-06
-timestamp_source: gh_api_graphql_authenticated_2026_06_20_0322
-collected_at: 2026-06-20T03:22:50+08:00
+timestamp_source: gh_api_graphql_authenticated_2026_06_20_0924
+collected_at: 2026-06-20T09:24:55+08:00
 source: github
 source_tool: gh_graphql
 ---
@@ -33,7 +33,7 @@ This raw GitHub capture was refreshed by the hourly public metadata update throu
 - Created at: 2026-04-15T05:31:36Z
 - Last pushed at: 2026-04-29T16:39:58Z
 - Last updated at: 2026-06-19T17:05:07Z
-- Collection timestamp: 2026-06-20T03:22:50+08:00
+- Collection timestamp: 2026-06-20T09:24:55+08:00
 - Topics: harness-engineering, llm-agents
 - Latest public release: none exposed through the GitHub API release list
 
@@ -42,7 +42,7 @@ This raw GitHub capture was refreshed by the hourly public metadata update throu
 - The current packet on 2026-06-20 shows 1,125 stars, 107 forks, 11 commits, 5 open issues, and 0 open pull requests.
 - The public repository still separates the core framework from the optimized Terminal-Bench-2 artifact, which preserves the outer-loop interpretation.
 - It remains one of the clearest examples of fixed-model, mutable-harness search rather than weight-level self-evolution.
-- Relative to the previous authenticated packet at 2026-06-19 21:22 +0800: stars 1,124 -> 1,125; updatedAt 2026-06-19T01:32:53Z -> 2026-06-19T17:05:07Z.
+- No public metadata delta was observed relative to the previous authenticated packet at 2026-06-20 03:22 +0800.
 
 ## Raw capture boundary
 
