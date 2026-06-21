@@ -2,16 +2,16 @@
 
 Truth source: `.mermaid/current/graph.json`
 
-Generated: 2026-06-21T23:06:23+08:00
+Generated: 2026-06-22T05:06:36+08:00
 
 ## Current Run
 
-- Previous authenticated packet used for comparison: `2026-06-21 17:05 +0800`
+- Previous authenticated packet used for comparison: `2026-06-21 23:06 +0800`
 - Fetch policy: retry live GitHub API first, then fall back to the previous authenticated packet only when live fetch fails.
 - GitNexus status: Repository: /Users/copizzah/Desktop/work/awesome-evolution
 Indexed: 6/20/2026, 3:29:43 PM
 Indexed commit: 850ea9f
-Current commit: 6351acf
+Current commit: 0e32b58
 Status: ⚠️ stale (re-run gitnexus analyze)
 
 ## Repo Paths

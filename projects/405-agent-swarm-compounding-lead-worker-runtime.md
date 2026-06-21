@@ -24,4 +24,4 @@ Use Agent Swarm to explain the runtime side of swarm evolution. Improvement is n
 
 ## Evidence And Limits
 
-The raw capture now reflects a GitHub metadata packet observed on 2026-06-21: 542 stars, 60 forks, 1,660 commits, 1 open issues, and 3 open pull requests. This packet is fresher than the previous authenticated packet at 2026-06-21 17:05 +0800 where a delta was observed. This run did not execute the repository locally, validate workflows end to end, or independently rerun benchmark claims. Product, memory, benchmark, and automation claims therefore remain repository-scoped unless separately tested.
+The raw capture now reflects a GitHub metadata packet observed on 2026-06-22: 544 stars, 60 forks, 1,660 commits, 1 open issues, and 4 open pull requests. This packet is fresher than the previous authenticated packet at 2026-06-21 23:06 +0800 where a delta was observed. This run did not execute the repository locally, validate workflows end to end, or independently rerun benchmark claims. Product, memory, benchmark, and automation claims therefore remain repository-scoped unless separately tested.

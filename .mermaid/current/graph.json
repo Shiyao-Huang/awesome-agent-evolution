@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-21T23:06:23+08:00",
+  "generated_at": "2026-06-22T05:06:36+08:00",
   "truth_source": ".mermaid/current/graph.json",
   "nodes": [
     {
@@ -96,8 +96,8 @@
       "paths": [
         ".mermaid/current/graph.md",
         ".mermaid/current/graph.mmd",
-        "work/research/hourly-public-metadata-update-2026-06-21-2306.md",
-        "work/research/hourly-public-metadata-update-2026-06-21-2306-data.json"
+        "work/research/hourly-public-metadata-update-2026-06-22-0506.md",
+        "work/research/hourly-public-metadata-update-2026-06-22-0506-data.json"
       ]
     }
   ],
@@ -135,7 +135,7 @@
   ],
   "current_run": {
     "source": "gh authenticated GitHub API with retry + fallback",
-    "previous_packet": "2026-06-21 17:05 +0800",
+    "previous_packet": "2026-06-21 23:06 +0800",
     "repos": [
       {
         "repo": "china-qijizhifeng/agentic-Harness-engineering",
@@ -157,12 +157,12 @@
         "raw_capture": "raw-github/nousresearch_hermes-agent.md",
         "report": "projects/44-hermes-agent.md",
         "site_report": "site/public/reports/projects/44-hermes-agent.md",
-        "stars": 198749,
-        "forks": 35280,
-        "issues": 7384,
-        "pull_requests": 15218,
-        "commits": 12373,
-        "latest_push": "2026-06-21T14:53:16Z",
+        "stars": 198925,
+        "forks": 35320,
+        "issues": 7303,
+        "pull_requests": 15156,
+        "commits": 12446,
+        "latest_push": "2026-06-21T21:02:28Z",
         "latest_release": {
           "name": "Hermes Agent v0.17.0 (v2026.6.19)",
           "publishedAt": "2026-06-19T19:39:06Z"
@@ -190,7 +190,7 @@
         "raw_capture": "raw-github/rohitg00_agentmemory.md",
         "report": "projects/50-agentmemory.md",
         "site_report": "site/public/reports/projects/50-agentmemory.md",
-        "stars": 23593,
+        "stars": 23604,
         "forks": 1939,
         "issues": 154,
         "pull_requests": 168,
@@ -226,10 +226,10 @@
         "raw_capture": "raw-github/lsdefine_genericagent.md",
         "report": "projects/47-genericagent.md",
         "site_report": "site/public/reports/projects/47-genericagent.md",
-        "stars": 12986,
+        "stars": 12987,
         "forks": 1507,
-        "issues": 89,
-        "pull_requests": 62,
+        "issues": 90,
+        "pull_requests": 61,
         "commits": 878,
         "latest_push": "2026-06-20T13:03:40Z",
         "latest_release": {
@@ -244,12 +244,12 @@
         "raw_capture": "raw-github/openclaw_openclaw.md",
         "report": "projects/48-openclaw.md",
         "site_report": "site/public/reports/projects/48-openclaw.md",
-        "stars": 379777,
-        "forks": 79500,
+        "stars": 379814,
+        "forks": 79505,
         "issues": 3290,
-        "pull_requests": 3165,
-        "commits": 61202,
-        "latest_push": "2026-06-21T15:04:40Z",
+        "pull_requests": 3171,
+        "commits": 61289,
+        "latest_push": "2026-06-21T21:05:47Z",
         "latest_release": {
           "name": "openclaw 2026.6.10-beta.1",
           "publishedAt": "2026-06-21T09:12:41Z"
@@ -262,10 +262,10 @@
         "raw_capture": "raw-github/obra_superpowers.md",
         "report": "projects/49-superpowers.md",
         "site_report": "site/public/reports/projects/49-superpowers.md",
-        "stars": 234773,
-        "forks": 20840,
-        "issues": 128,
-        "pull_requests": 151,
+        "stars": 234928,
+        "forks": 20858,
+        "issues": 129,
+        "pull_requests": 149,
         "commits": 609,
         "latest_push": "2026-06-18T22:45:11Z",
         "latest_release": {
@@ -310,10 +310,10 @@
         "raw_capture": "raw-github/desplega-ai_agent-swarm.md",
         "report": "projects/405-agent-swarm-compounding-lead-worker-runtime.md",
         "site_report": "site/public/reports/projects/405-agent-swarm-compounding-lead-worker-runtime.md",
-        "stars": 542,
+        "stars": 544,
         "forks": 60,
         "issues": 1,
-        "pull_requests": 3,
+        "pull_requests": 4,
         "commits": 1660,
         "latest_push": "2026-06-20T14:30:00Z",
         "latest_release": {
@@ -325,7 +325,7 @@
       }
     ],
     "gitnexus": {
-      "status_output": "Repository: /Users/copizzah/Desktop/work/awesome-evolution\nIndexed: 6/20/2026, 3:29:43 PM\nIndexed commit: 850ea9f\nCurrent commit: 6351acf\nStatus: ⚠️ stale (re-run gitnexus analyze)",
+      "status_output": "Repository: /Users/copizzah/Desktop/work/awesome-evolution\nIndexed: 6/20/2026, 3:29:43 PM\nIndexed commit: 850ea9f\nCurrent commit: 0e32b58\nStatus: ⚠️ stale (re-run gitnexus analyze)",
       "query_excerpt": ""
     }
   }
