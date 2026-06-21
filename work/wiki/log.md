@@ -699,3 +699,13 @@
 - Corrected `research/repo-classification.json` corruption where `DSAIL-Memory/EvoMemBench` had inherited Hermes Agent's star count; Hermes Agent no longer carries a spurious `0`.
 - Recorded the actual GitNexus blocker precisely: `npx gitnexus ...` fails because `registry.npmjs.org` cannot be resolved in this workspace.
 **产出:** `raw-github/*.md`, `research/repo-classification.json`, `.mermaid/current/graph.json`, `work/research/hourly-public-metadata-update-2026-06-12-1414.md`
+
+## [2026-06-21 11:07] data+publication | Hourly public metadata update loop
+
+**操作:** Refreshed the live authenticated GitHub metadata packet for the tracked harness, memory, skill, benchmark, runtime, and agent-swarm anchors, then propagated the packet through raw captures, processed classification, README/i18n, Mermaid, public project reports, indexes, and site build.
+**详情:**
+- Refreshed 11 tracked repositories: `china-qijizhifeng/agentic-Harness-engineering`, `NousResearch/hermes-agent`, `stanford-iris-lab/meta-harness`, `rohitg00/agentmemory`, `pinchbench/skill`, `lsdefine/GenericAgent`, `openclaw/openclaw`, `obra/superpowers`, `EvoMap/awesome-agent-evolution`, `uid4oe/insight-swarm`, and `desplega-ai/agent-swarm`.
+- Recorded real deltas versus the 2026-06-20 15:26 +0800 packet for 9 repositories; no repository fell back to the previous packet.
+- Corrected the public GitNexus boundary: status is readable but `query -r awesome-evolution-workspace-cleanup` is blocked by a LadybugDB storage-version mismatch, so this run does not claim current GitNexus relationship evidence.
+- Validated with project index generation, raw timestamp enforcement, GitHub project analysis, and Astro site build.
+**产出:** `work/research/hourly-public-metadata-update-2026-06-21-1107.md`, `raw-github/*.md`, `research/repo-classification.*`, `.mermaid/current/graph.json`, `analysis/github-project-data-analysis.*`, `site/public/reports/projects/*.md`

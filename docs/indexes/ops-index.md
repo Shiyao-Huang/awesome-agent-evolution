@@ -1,6 +1,6 @@
 # Ops / 管理与协作 Index
 
-> Generated: 2026-06-20
+> Generated: 2026-06-21
 
 ## Rule
 
@@ -14,7 +14,7 @@
 | `README-ZH.md` | present | 1 | 0 | 0 | 33 KB |
 | `README-EN.md` | present | 1 | 0 | 0 | 44 KB |
 | `CONTENT_INDEX.md` | present | 1 | 0 | 0 | 16 KB |
-| `AGENTS.md` | present | 1 | 0 | 0 | 23 KB |
+| `AGENTS.md` | present | 1 | 0 | 0 | 24 KB |
 | `CLAUDE.md` | present | 1 | 0 | 0 | 15 KB |
 | `CLOUD.md` | present | 1 | 0 | 0 | 725 B |
 | `docs` | present | 87 | 16 | 0 | 1.3 MB |

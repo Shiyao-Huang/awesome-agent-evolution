@@ -24,4 +24,4 @@ Use GenericAgent to teach context economics. Many self-evolution systems spend m
 
 ## Evidence And Limits
 
-The raw capture now reflects a GitHub metadata packet observed on 2026-06-20: 12,970 stars, 1,501 forks, 876 commits, 87 open issues, and 63 open pull requests. This packet is fresher than the previous authenticated packet at 2026-06-20 09:24 +0800 where a delta was observed. This run did not execute the repository locally, validate workflows end to end, or independently rerun benchmark claims. Product, memory, benchmark, and automation claims therefore remain repository-scoped unless separately tested.
+The raw capture now reflects a GitHub metadata packet observed on 2026-06-21: 12,976 stars, 1,503 forks, 878 commits, 89 open issues, and 62 open pull requests. This packet is fresher than the previous authenticated packet at 2026-06-20 15:26 +0800 where a delta was observed. This run did not execute the repository locally, validate workflows end to end, or independently rerun benchmark claims. Product, memory, benchmark, and automation claims therefore remain repository-scoped unless separately tested.
