@@ -719,3 +719,13 @@
 - Corrected the public GitNexus boundary: `status` is readable and stale, but `query -r awesome-evolution-workspace-cleanup` and `detect_changes` are blocked by LadybugDB storage-version mismatch (`41` vs `40`), so this run does not claim current GitNexus relationship evidence.
 - Validated with project index generation, raw timestamp enforcement, GitHub project analysis, Astro site build, and English paper XeLaTeX build.
 **产出:** `work/research/hourly-public-metadata-update-2026-06-21-1705.md`, `raw-github/*.md`, `research/repo-classification.*`, `.mermaid/current/graph.json`, `analysis/github-project-data-analysis.*`, `site/public/reports/projects/*.md`
+
+## [2026-06-21 23:06] data+publication | Hourly public metadata update loop
+
+**操作:** Refreshed the harness, memory, skill, benchmark, runtime, and agent-swarm public metadata packet against the 2026-06-21 17:05 baseline, then propagated live authenticated GitHub GraphQL deltas through raw captures, processed classification, README/i18n, Mermaid, public project reports, indexes, site build, and paper build.
+**详情:**
+- Refreshed 11 tracked repositories: `china-qijizhifeng/agentic-Harness-engineering`, `NousResearch/hermes-agent`, `stanford-iris-lab/meta-harness`, `rohitg00/agentmemory`, `pinchbench/skill`, `lsdefine/GenericAgent`, `openclaw/openclaw`, `obra/superpowers`, `EvoMap/awesome-agent-evolution`, `uid4oe/insight-swarm`, and `desplega-ai/agent-swarm`.
+- Recorded real public deltas versus the 2026-06-21 17:05 +0800 packet for 10 repositories; `uid4oe/insight-swarm` remained stable; no repository fell back to the previous packet.
+- GitNexus status is readable but stale (`indexed commit 850ea9f`, current `6351acf`); query with `-r awesome-evolution-workspace-cleanup` still resolves historical script/data-flow symbols, so the run treats it as stale relationship evidence.
+- Validated with project index generation, raw timestamp enforcement, GitHub project analysis, Astro site build, English paper XeLaTeX build, and i18n TODO scan.
+**产出:** `work/research/hourly-public-metadata-update-2026-06-21-2306.md`, `raw-github/*.md`, `research/repo-classification.*`, `.mermaid/current/graph.json`, `analysis/github-project-data-analysis.*`, `site/public/reports/projects/*.md`
