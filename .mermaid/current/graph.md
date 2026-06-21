@@ -2,18 +2,18 @@
 
 Truth source: `.mermaid/current/graph.json`
 
-Generated: 2026-06-21T11:07:06+08:00
+Generated: 2026-06-21T17:05:57+08:00
 
 ## Current Run
 
-- Previous authenticated packet used for comparison: `2026-06-20 15:26 +0800`
+- Previous authenticated packet used for comparison: `2026-06-21 11:07 +0800`
 - Fetch policy: retry live GitHub API first, then fall back to the previous authenticated packet only when live fetch fails.
 - GitNexus status: Repository: /Users/copizzah/Desktop/work/awesome-evolution
 Indexed: 6/20/2026, 3:29:43 PM
 Indexed commit: 850ea9f
-Current commit: 1ec3a56
+Current commit: 7fa6776
 Status: ⚠️ stale (re-run gitnexus analyze)
-- GitNexus query boundary: `query -r awesome-evolution-workspace-cleanup` failed with LadybugDB storage-version mismatch (`Database file version: 41`, `Current build storage version: 40`), so this graph uses the file lineage and live GitHub packet as evidence for this iteration.
+- GitNexus blocker: `query -r awesome-evolution-workspace-cleanup` and `detect_changes` are blocked by a LadybugDB storage-version mismatch (`Database file version: 41`, `Current build storage version: 40`).
 
 ## Repo Paths
 

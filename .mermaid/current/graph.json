@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-21T11:07:06+08:00",
+  "generated_at": "2026-06-21T17:05:57+08:00",
   "truth_source": ".mermaid/current/graph.json",
   "nodes": [
     {
@@ -96,8 +96,8 @@
       "paths": [
         ".mermaid/current/graph.md",
         ".mermaid/current/graph.mmd",
-        "work/research/hourly-public-metadata-update-2026-06-21-1107.md",
-        "work/research/hourly-public-metadata-update-2026-06-21-1107-data.json"
+        "work/research/hourly-public-metadata-update-2026-06-21-1705.md",
+        "work/research/hourly-public-metadata-update-2026-06-21-1705-data.json"
       ]
     }
   ],
@@ -135,14 +135,14 @@
   ],
   "current_run": {
     "source": "gh authenticated GitHub API with retry + fallback",
-    "previous_packet": "2026-06-20 15:26 +0800",
+    "previous_packet": "2026-06-21 11:07 +0800",
     "repos": [
       {
         "repo": "china-qijizhifeng/agentic-Harness-engineering",
         "raw_capture": "raw-github/china-qijizhifeng_agentic-harness-engineering.md",
         "report": "projects/43-agentic-harness-engineering.md",
         "site_report": "site/public/reports/projects/43-agentic-harness-engineering.md",
-        "stars": 600,
+        "stars": 603,
         "forks": 67,
         "issues": 1,
         "pull_requests": 0,
@@ -157,12 +157,12 @@
         "raw_capture": "raw-github/nousresearch_hermes-agent.md",
         "report": "projects/44-hermes-agent.md",
         "site_report": "site/public/reports/projects/44-hermes-agent.md",
-        "stars": 198376,
-        "forks": 35189,
-        "issues": 7428,
-        "pull_requests": 15204,
-        "commits": 12281,
-        "latest_push": "2026-06-21T03:06:25Z",
+        "stars": 198547,
+        "forks": 35236,
+        "issues": 7363,
+        "pull_requests": 15179,
+        "commits": 12349,
+        "latest_push": "2026-06-21T08:41:16Z",
         "latest_release": {
           "name": "Hermes Agent v0.17.0 (v2026.6.19)",
           "publishedAt": "2026-06-19T19:39:06Z"
@@ -175,7 +175,7 @@
         "raw_capture": "raw-github/stanford-iris-lab_meta-harness.md",
         "report": "projects/249-stanford-meta-harness-framework.md",
         "site_report": "site/public/reports/projects/249-stanford-meta-harness-framework.md",
-        "stars": 1129,
+        "stars": 1130,
         "forks": 107,
         "issues": 5,
         "pull_requests": 0,
@@ -190,7 +190,7 @@
         "raw_capture": "raw-github/rohitg00_agentmemory.md",
         "report": "projects/50-agentmemory.md",
         "site_report": "site/public/reports/projects/50-agentmemory.md",
-        "stars": 23550,
+        "stars": 23575,
         "forks": 1938,
         "issues": 154,
         "pull_requests": 168,
@@ -226,8 +226,8 @@
         "raw_capture": "raw-github/lsdefine_genericagent.md",
         "report": "projects/47-genericagent.md",
         "site_report": "site/public/reports/projects/47-genericagent.md",
-        "stars": 12976,
-        "forks": 1503,
+        "stars": 12981,
+        "forks": 1504,
         "issues": 89,
         "pull_requests": 62,
         "commits": 878,
@@ -244,12 +244,12 @@
         "raw_capture": "raw-github/openclaw_openclaw.md",
         "report": "projects/48-openclaw.md",
         "site_report": "site/public/reports/projects/48-openclaw.md",
-        "stars": 379689,
-        "forks": 79481,
-        "issues": 3282,
-        "pull_requests": 3181,
-        "commits": 61019,
-        "latest_push": "2026-06-21T03:06:47Z",
+        "stars": 379735,
+        "forks": 79490,
+        "issues": 3289,
+        "pull_requests": 3174,
+        "commits": 61123,
+        "latest_push": "2026-06-21T09:05:35Z",
         "latest_release": {
           "name": "openclaw 2026.6.9",
           "publishedAt": "2026-06-21T01:44:28Z"
@@ -262,8 +262,8 @@
         "raw_capture": "raw-github/obra_superpowers.md",
         "report": "projects/49-superpowers.md",
         "site_report": "site/public/reports/projects/49-superpowers.md",
-        "stars": 234281,
-        "forks": 20797,
+        "stars": 234516,
+        "forks": 20817,
         "issues": 128,
         "pull_requests": 151,
         "commits": 609,
@@ -310,7 +310,7 @@
         "raw_capture": "raw-github/desplega-ai_agent-swarm.md",
         "report": "projects/405-agent-swarm-compounding-lead-worker-runtime.md",
         "site_report": "site/public/reports/projects/405-agent-swarm-compounding-lead-worker-runtime.md",
-        "stars": 538,
+        "stars": 540,
         "forks": 60,
         "issues": 1,
         "pull_requests": 3,
@@ -324,10 +324,10 @@
         "fallback": false
       }
     ],
-  "gitnexus": {
-    "status_output": "Repository: /Users/copizzah/Desktop/work/awesome-evolution\nIndexed: 6/20/2026, 3:29:43 PM\nIndexed commit: 850ea9f\nCurrent commit: 1ec3a56\nStatus: ⚠️ stale (re-run gitnexus analyze)",
+    "gitnexus": {
+      "status_output": "Repository: /Users/copizzah/Desktop/work/awesome-evolution\nIndexed: 6/20/2026, 3:29:43 PM\nIndexed commit: 850ea9f\nCurrent commit: 7fa6776\nStatus: ⚠️ stale (re-run gitnexus analyze)",
     "query_excerpt": "",
-    "query_blocker": "LadybugDB storage-version mismatch blocked `node .gitnexus/run.cjs query -r awesome-evolution-workspace-cleanup`: Database file version 41, current build storage version 40. Rebuild or align GitNexus before using relationship evidence."
+    "query_blocker": "LadybugDB storage-version mismatch blocks query and detect_changes for awesome-evolution-workspace-cleanup (Database file version: 41, Current build storage version: 40)."
   }
 }
 }
