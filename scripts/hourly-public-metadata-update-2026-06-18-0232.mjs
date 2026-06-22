@@ -12,7 +12,7 @@ const previousPacketLabel = '2026-06-17 14:30 +0800';
 const previousDataPath = `work/research/hourly-public-metadata-update-${previousPacketSlug}-data.json`;
 
 const gitnexusStatusOutput = exec('node', ['.gitnexus/run.cjs', 'status'], { allowFailure: true }).stdout.trim();
-const gitnexusQueryOutput = exec(
+const gitnexusQueryResult = exec(
   'node',
   [
     '.gitnexus/run.cjs',
@@ -24,7 +24,14 @@ const gitnexusQueryOutput = exec(
     'hourly public metadata raw-github repo-classification graph.json README site/public/reports/projects'
   ],
   { allowFailure: true }
-).stdout.trim();
+);
+const gitnexusQueryOutput = (gitnexusQueryResult.ok ? gitnexusQueryResult.stdout : gitnexusQueryResult.stderr).trim();
+const gitnexusEvidenceZh = gitnexusQueryResult.ok
+  ? 'GitNexus 证据链本轮可用但有边界：`node .gitnexus/run.cjs status` 和带 `-r awesome-evolution-workspace-cleanup` 的 `query` 都能工作，并把小时更新链路指回历史脚本里的 `renderGraphJson`、`renderGraphMd`、`renderRunNote` 等节点；但索引状态仍然是 `stale`，所以本轮把它作为关系证据，不把它当作“已经最新”的索引结论。'
+  : `GitNexus 证据链本轮受限：\`node .gitnexus/run.cjs status\` 可读但显示索引 \`stale\`；\`query -r awesome-evolution-workspace-cleanup\` 当前被 LadybugDB storage-version mismatch 阻断（${gitnexusQueryOutput.split('\n')[0] || 'query failed'}），所以本轮不声明 GitNexus 关系证据已刷新。`;
+const gitnexusEvidenceEn = gitnexusQueryResult.ok
+  ? 'The GitNexus lane is available with a boundary: `node .gitnexus/run.cjs status` and `query -r awesome-evolution-workspace-cleanup` work and point the metadata flow back to historical script definitions such as `renderGraphJson`, `renderGraphMd`, and `renderRunNote`, but the local index is still marked `stale`, so this run uses GitNexus for relationship evidence rather than as proof that the repo index is current.'
+  : `The GitNexus lane is limited in this run: \`node .gitnexus/run.cjs status\` is readable but marks the index \`stale\`; \`query -r awesome-evolution-workspace-cleanup\` is blocked by a LadybugDB storage-version mismatch (${gitnexusQueryOutput.split('\n')[0] || 'query failed'}), so this run does not claim refreshed GitNexus relationship evidence.`;
 
 const repoConfigs = [
   {
@@ -565,7 +572,7 @@ function buildZhReadmeBlock() {
 |---|---|---|---|
 ${rows}
 
-GitNexus 证据链本轮可用但有边界：\`node .gitnexus/run.cjs status\` 和带 \`-r awesome-evolution-workspace-cleanup\` 的 \`query\` 都能工作，并把小时更新链路指回历史脚本里的 \`renderGraphJson\`、\`renderGraphMd\`、\`renderRunNote\` 等节点；但索引状态仍然是 \`stale\`，所以本轮把它作为关系证据，不把它当作“已经最新”的索引结论。
+${gitnexusEvidenceZh}
 `;
 }
 
@@ -582,7 +589,7 @@ This is a fresh hourly public metadata repair packet rather than another reuse o
 |---|---|---|---|
 ${rows}
 
-The GitNexus lane is available with a boundary: \`node .gitnexus/run.cjs status\` and \`query -r awesome-evolution-workspace-cleanup\` work and point the metadata flow back to historical script definitions such as \`renderGraphJson\`, \`renderGraphMd\`, and \`renderRunNote\`, but the local index is still marked \`stale\`, so this run uses GitNexus for relationship evidence rather than as proof that the repo index is current.
+${gitnexusEvidenceEn}
 `;
 }
 
@@ -705,6 +712,7 @@ function updateMermaid() {
       }),
       gitnexus: {
         status_output: gitnexusStatusOutput,
+        query_ok: gitnexusQueryResult.ok,
         query_excerpt: gitnexusQueryOutput
       }
     }
@@ -734,6 +742,7 @@ Generated: ${runAt}
 - Previous authenticated packet used for comparison: \`${previousPacketLabel}\`
 - Fetch policy: retry live GitHub API first, then fall back to the previous authenticated packet only when live fetch fails.
 - GitNexus status: ${gitnexusStatusOutput || 'unavailable'}
+- GitNexus query: ${gitnexusQueryResult.ok ? 'available' : `blocked (${gitnexusQueryOutput.split('\n')[0] || 'query failed'})`}
 
 ## Repo Paths
 
@@ -765,7 +774,7 @@ Refreshed the tracked GitHub anchors at ${runDisplay}, propagated the fresher me
 
 This iteration keeps the direct-user loop intact: raw GitHub evidence first, processed classification second, and public site / README / report sync third.
 The GitHub lane is available again in this workspace, so this run records live authenticated GitHub API packets unless a specific request falls back.
-GitNexus is usable for repo-relationship evidence in this workspace when \`-r awesome-evolution-workspace-cleanup\` is specified, but its local index still reports \`stale\`.
+${gitnexusEvidenceEn}
 
 ## Refreshed Repositories
 
@@ -786,7 +795,7 @@ GitHub API retry/fallback packet -> \`raw-github/*.md\` -> \`research/repo-class
 
 - Status: ${gitnexusStatusOutput || 'unavailable'}
 - Query: \`node .gitnexus/run.cjs query -r awesome-evolution-workspace-cleanup "hourly public metadata raw-github repo-classification graph.json README site/public/reports/projects"\`
-- Result: the query resolves the loop back to historical script definitions such as \`renderGraphJson\`, \`renderGraphMd\`, \`renderRunNote\`, and \`updateGraphAndNotes\`, which is enough to justify the Mermaid truth-source and downstream public-surface coupling in this run.
+- Result: ${gitnexusQueryResult.ok ? 'the query resolves the loop back to historical script definitions such as `renderGraphJson`, `renderGraphMd`, `renderRunNote`, and `updateGraphAndNotes`, which is enough to justify the Mermaid truth-source and downstream public-surface coupling in this run.' : `blocked; ${gitnexusQueryOutput.split('\n')[0] || 'query failed'}. This run therefore keeps GitNexus as an explicit blocker rather than relationship evidence.`}
 
 ## Validation Commands For This Iteration
 

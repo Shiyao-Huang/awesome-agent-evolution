@@ -3,8 +3,8 @@ repo: desplega-ai/agent-swarm
 url: https://github.com/desplega-ai/agent-swarm
 content_timestamp: 2026-06-22
 time_slice: 2026-06
-timestamp_source: gh_api_graphql_authenticated_2026_06_22_0506
-collected_at: 2026-06-22T05:06:36+08:00
+timestamp_source: gh_api_graphql_authenticated_2026_06_22_1106
+collected_at: 2026-06-22T11:06:23+08:00
 source: github
 source_tool: gh_graphql
 ---
@@ -33,7 +33,7 @@ This raw GitHub capture was refreshed by the hourly public metadata update throu
 - Created at: 2025-12-19T18:59:13Z
 - Last pushed at: 2026-06-20T14:30:00Z
 - Last updated at: 2026-06-21T20:19:23Z
-- Collection timestamp: 2026-06-22T05:06:36+08:00
+- Collection timestamp: 2026-06-22T11:06:23+08:00
 - Topics: ai-agents, claude, claude-code, swarm
 - Latest public release: v1.100.4 (2026-06-20)
 
@@ -42,7 +42,7 @@ This raw GitHub capture was refreshed by the hourly public metadata update throu
 - The current packet on 2026-06-22 shows 544 stars, 60 forks, 1,660 commits, 1 open issues, and 4 open pull requests.
 - The public repository still centers a lead-worker swarm runtime across Slack, GitHub, email, API, pages, workflows, and MCP.
 - It remains one of the clearest public “compounding swarm” runtime anchors rather than a paper-only concept.
-- Relative to the previous authenticated packet at 2026-06-21 23:06 +0800: stars 542 -> 544; PRs 3 -> 4; updatedAt 2026-06-21T12:01:32Z -> 2026-06-21T20:19:23Z.
+- No public metadata delta was observed relative to the previous authenticated packet at 2026-06-22 05:06 +0800.
 
 ## Raw capture boundary
 
