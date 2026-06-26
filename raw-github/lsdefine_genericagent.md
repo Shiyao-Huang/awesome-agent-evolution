@@ -1,10 +1,10 @@
 ---
 repo: lsdefine/GenericAgent
 url: https://github.com/lsdefine/GenericAgent
-content_timestamp: 2026-06-26
+content_timestamp: 2026-06-27
 time_slice: 2026-06
-timestamp_source: gh_api_graphql_authenticated_2026_06_26_2253
-collected_at: 2026-06-26T22:53:15+08:00
+timestamp_source: gh_api_graphql_authenticated_2026_06_27_0454
+collected_at: 2026-06-27T04:54:55+08:00
 source: github
 source_tool: gh_graphql
 ---
@@ -32,17 +32,17 @@ This raw GitHub capture was refreshed by the hourly public metadata update throu
 - Primary language / stack signal: Python/Self-Evolving Agent/Skill Tree Runtime
 - Created at: 2026-01-16T15:45:24Z
 - Last pushed at: 2026-06-26T12:04:23Z
-- Last updated at: 2026-06-26T13:43:47Z
-- Collection timestamp: 2026-06-26T22:53:15+08:00
+- Last updated at: 2026-06-26T17:18:05Z
+- Collection timestamp: 2026-06-27T04:54:55+08:00
 - Topics: ai-agent, automation, autonomous-agent, browser-automation, claude, computer-control, desktop-automation, gemini, lightweight, llm-agent, memory-system, python, self-evolving, skill-tree, task-automation
 - Latest public release: GenericAgent Desktop desktop-portable-v0.1.4 (2026-06-26)
 
 ## Visible README / page excerpts
 
-- The current packet on 2026-06-26 shows 13,104 stars, 1,523 forks, 887 commits, 94 open issues, and 61 open pull requests.
+- The current packet on 2026-06-27 shows 13,104 stars, 1,523 forks, 887 commits, 94 open issues, and 61 open pull requests.
 - The public README still leads with the seed loop, a tiny tool surface, and the “do not preload skills, evolve them” design philosophy.
 - Its topic set still emphasizes `self-evolving`, `skill-tree`, `memory-system`, and `autonomous-agent` rather than generic automation.
-- Relative to the previous authenticated packet at 2026-06-22 11:06 +0800: stars 12,991 -> 13,104; forks 1,509 -> 1,523; issues 90 -> 94; commits 878 -> 887; pushedAt 2026-06-20T13:03:40Z -> 2026-06-26T12:04:23Z; updatedAt 2026-06-22T03:08:40Z -> 2026-06-26T13:43:47Z.
+- Relative to the previous authenticated packet at 2026-06-26 22:53 +0800: updatedAt 2026-06-26T13:43:47Z -> 2026-06-26T17:18:05Z.
 
 ## Raw capture boundary
 
