@@ -1,10 +1,10 @@
 ---
 repo: lsdefine/GenericAgent
 url: https://github.com/lsdefine/GenericAgent
-content_timestamp: 2026-06-22
+content_timestamp: 2026-06-26
 time_slice: 2026-06
-timestamp_source: gh_api_graphql_authenticated_2026_06_22_1106
-collected_at: 2026-06-22T11:06:23+08:00
+timestamp_source: gh_api_graphql_authenticated_2026_06_26_2253
+collected_at: 2026-06-26T22:53:15+08:00
 source: github
 source_tool: gh_graphql
 ---
@@ -23,26 +23,26 @@ This raw GitHub capture was refreshed by the hourly public metadata update throu
 
 - Repository: lsdefine/GenericAgent
 - URL: https://github.com/lsdefine/GenericAgent
-- Stars: 12,991
-- Forks: 1,509
-- Commits: 878
-- Open issues: 90
+- Stars: 13,104
+- Forks: 1,523
+- Commits: 887
+- Open issues: 94
 - Open pull requests: 61
 - License: MIT
 - Primary language / stack signal: Python/Self-Evolving Agent/Skill Tree Runtime
 - Created at: 2026-01-16T15:45:24Z
-- Last pushed at: 2026-06-20T13:03:40Z
-- Last updated at: 2026-06-22T03:08:40Z
-- Collection timestamp: 2026-06-22T11:06:23+08:00
+- Last pushed at: 2026-06-26T12:04:23Z
+- Last updated at: 2026-06-26T13:43:47Z
+- Collection timestamp: 2026-06-26T22:53:15+08:00
 - Topics: ai-agent, automation, autonomous-agent, browser-automation, claude, computer-control, desktop-automation, gemini, lightweight, llm-agent, memory-system, python, self-evolving, skill-tree, task-automation
-- Latest public release: v0.1.0 - Desktop App (2026-05-15)
+- Latest public release: GenericAgent Desktop desktop-portable-v0.1.4 (2026-06-26)
 
 ## Visible README / page excerpts
 
-- The current packet on 2026-06-22 shows 12,991 stars, 1,509 forks, 878 commits, 90 open issues, and 61 open pull requests.
+- The current packet on 2026-06-26 shows 13,104 stars, 1,523 forks, 887 commits, 94 open issues, and 61 open pull requests.
 - The public README still leads with the seed loop, a tiny tool surface, and the “do not preload skills, evolve them” design philosophy.
 - Its topic set still emphasizes `self-evolving`, `skill-tree`, `memory-system`, and `autonomous-agent` rather than generic automation.
-- Relative to the previous authenticated packet at 2026-06-22 05:06 +0800: stars 12,987 -> 12,991; forks 1,507 -> 1,509; updatedAt 2026-06-21T16:19:46Z -> 2026-06-22T03:08:40Z.
+- Relative to the previous authenticated packet at 2026-06-22 11:06 +0800: stars 12,991 -> 13,104; forks 1,509 -> 1,523; issues 90 -> 94; commits 878 -> 887; pushedAt 2026-06-20T13:03:40Z -> 2026-06-26T12:04:23Z; updatedAt 2026-06-22T03:08:40Z -> 2026-06-26T13:43:47Z.
 
 ## Raw capture boundary
 

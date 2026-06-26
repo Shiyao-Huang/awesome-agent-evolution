@@ -24,4 +24,4 @@ Use agentmemory to teach why memory cannot be an afterthought. Durable facts, pr
 
 ## Evidence And Limits
 
-The raw capture now reflects a GitHub metadata packet observed on 2026-06-22: 23,628 stars, 1,942 forks, 462 commits, 154 open issues, and 169 open pull requests. This packet is fresher than the previous authenticated packet at 2026-06-22 05:06 +0800 where a delta was observed. This run did not execute the repository locally, validate workflows end to end, or independently rerun benchmark claims. Product, memory, benchmark, and automation claims therefore remain repository-scoped unless separately tested.
+The raw capture now reflects a GitHub metadata packet observed on 2026-06-26: 24,101 stars, 1,977 forks, 462 commits, 158 open issues, and 175 open pull requests. This packet is fresher than the previous authenticated packet at 2026-06-22 11:06 +0800 where a delta was observed. This run did not execute the repository locally, validate workflows end to end, or independently rerun benchmark claims. Product, memory, benchmark, and automation claims therefore remain repository-scoped unless separately tested.

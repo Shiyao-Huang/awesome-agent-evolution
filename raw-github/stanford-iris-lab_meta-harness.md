@@ -1,10 +1,10 @@
 ---
 repo: stanford-iris-lab/meta-harness
 url: https://github.com/stanford-iris-lab/meta-harness
-content_timestamp: 2026-06-22
+content_timestamp: 2026-06-26
 time_slice: 2026-06
-timestamp_source: gh_api_graphql_authenticated_2026_06_22_1106
-collected_at: 2026-06-22T11:06:23+08:00
+timestamp_source: gh_api_graphql_authenticated_2026_06_26_2253
+collected_at: 2026-06-26T22:53:15+08:00
 source: github
 source_tool: gh_graphql
 ---
@@ -23,8 +23,8 @@ This raw GitHub capture was refreshed by the hourly public metadata update throu
 
 - Repository: stanford-iris-lab/meta-harness
 - URL: https://github.com/stanford-iris-lab/meta-harness
-- Stars: 1,133
-- Forks: 108
+- Stars: 1,162
+- Forks: 113
 - Commits: 11
 - Open issues: 5
 - Open pull requests: 0
@@ -32,17 +32,17 @@ This raw GitHub capture was refreshed by the hourly public metadata update throu
 - Primary language / stack signal: Python/Harness Search/Benchmark Scaffold Evolution
 - Created at: 2026-04-15T05:31:36Z
 - Last pushed at: 2026-04-29T16:39:58Z
-- Last updated at: 2026-06-21T21:58:16Z
-- Collection timestamp: 2026-06-22T11:06:23+08:00
+- Last updated at: 2026-06-26T12:11:12Z
+- Collection timestamp: 2026-06-26T22:53:15+08:00
 - Topics: harness-engineering, llm-agents
 - Latest public release: none exposed through the GitHub API release list
 
 ## Visible README / page excerpts
 
-- The current packet on 2026-06-22 shows 1,133 stars, 108 forks, 11 commits, 5 open issues, and 0 open pull requests.
+- The current packet on 2026-06-26 shows 1,162 stars, 113 forks, 11 commits, 5 open issues, and 0 open pull requests.
 - The public repository still separates the core framework from the optimized Terminal-Bench-2 artifact, which preserves the outer-loop interpretation.
 - It remains one of the clearest examples of fixed-model, mutable-harness search rather than weight-level self-evolution.
-- Relative to the previous authenticated packet at 2026-06-22 05:06 +0800: stars 1,132 -> 1,133; updatedAt 2026-06-21T12:16:20Z -> 2026-06-21T21:58:16Z.
+- Relative to the previous authenticated packet at 2026-06-22 11:06 +0800: stars 1,133 -> 1,162; forks 108 -> 113; updatedAt 2026-06-21T21:58:16Z -> 2026-06-26T12:11:12Z.
 
 ## Raw capture boundary
 

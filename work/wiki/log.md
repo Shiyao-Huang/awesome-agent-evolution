@@ -739,3 +739,13 @@
 - GitNexus status is readable but stale (`indexed commit 850ea9f`, current `0e32b58` before this commit); `query -r awesome-evolution-workspace-cleanup` and `detect_changes -r awesome-evolution-workspace-cleanup` work, with `detect_changes` reporting low risk.
 - Validated with project index generation, raw timestamp enforcement, GitHub project analysis, Astro site build, English paper XeLaTeX build, i18n TODO scan, and GitNexus detect_changes.
 **产出:** `work/research/hourly-public-metadata-update-2026-06-22-0506.md`, `raw-github/*.md`, `research/repo-classification.*`, `.mermaid/current/graph.json`, `analysis/github-project-data-analysis.*`, `site/public/reports/projects/*.md`
+
+## [2026-06-26 22:53] data+publication | Hourly public metadata update loop
+
+**操作:** Refreshed the harness, memory, skill, benchmark, runtime, and agent-swarm public metadata packet against the 2026-06-22 11:06 baseline, then propagated live authenticated GitHub GraphQL deltas through raw captures, processed classification, README/i18n, Mermaid, public project reports, indexes, site build, and paper build.
+**详情:**
+- Refreshed 11 tracked repositories: `china-qijizhifeng/agentic-Harness-engineering`, `NousResearch/hermes-agent`, `stanford-iris-lab/meta-harness`, `rohitg00/agentmemory`, `pinchbench/skill`, `lsdefine/GenericAgent`, `openclaw/openclaw`, `obra/superpowers`, `EvoMap/awesome-agent-evolution`, `uid4oe/insight-swarm`, and `desplega-ai/agent-swarm`.
+- Recorded live GitHub API packets for all 11 repositories; 10 repositories moved versus the 2026-06-22 11:06 +0800 packet and none used fallback.
+- GitNexus status is readable but stale (`indexed commit 850ea9f`, current `6ed1e28` before this commit); `query` and `detect_changes` are blocked by LadybugDB storage-version mismatch (`41` vs `40`), so this run records GitNexus as a blocker rather than fresh relationship evidence.
+- Validated with project index generation, raw timestamp enforcement, GitHub project analysis, Astro site build, English paper XeLaTeX build, and i18n TODO scan; paper build passed with existing Chinese-glyph warnings in generated English analysis tables.
+**产出:** `work/research/hourly-public-metadata-update-2026-06-26-2253.md`, `raw-github/*.md`, `research/repo-classification.*`, `.mermaid/current/graph.json`, `analysis/github-project-data-analysis.*`, `site/public/reports/projects/*.md`

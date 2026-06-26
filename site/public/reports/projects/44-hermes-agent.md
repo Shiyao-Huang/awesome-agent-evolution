@@ -24,4 +24,4 @@ Use Hermes Agent to teach the runtime surface of self-evolving agents. Improveme
 
 ## Evidence And Limits
 
-The raw capture now reflects a GitHub metadata packet observed on 2026-06-22: 199,099 stars, 35,364 forks, 12,497 commits, 7,309 open issues, and 15,177 open pull requests. This packet is fresher than the previous authenticated packet at 2026-06-22 05:06 +0800 where a delta was observed. This run did not execute the repository locally, validate workflows end to end, or independently rerun benchmark claims. Product, memory, benchmark, and automation claims therefore remain repository-scoped unless separately tested.
+The raw capture now reflects a GitHub metadata packet observed on 2026-06-26: 203,583 stars, 36,497 forks, 13,037 commits, 7,775 open issues, and 16,080 open pull requests. This packet is fresher than the previous authenticated packet at 2026-06-22 11:06 +0800 where a delta was observed. This run did not execute the repository locally, validate workflows end to end, or independently rerun benchmark claims. Product, memory, benchmark, and automation claims therefore remain repository-scoped unless separately tested.
