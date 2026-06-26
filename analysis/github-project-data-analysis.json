@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-26T14:55:09.174Z",
+  "generated_at": "2026-06-26T14:58:53.639Z",
   "counts": {
     "raw_captures": 686,
     "raw_files_on_disk": 686,
@@ -64648,7 +64648,7 @@
   },
   "ranking_method": {
     "name": "recency_weighted_current_value",
-    "reference_date": "2026-06-26T14:55:09.174Z",
+    "reference_date": "2026-06-26T14:58:53.639Z",
     "weights": {
       "time": 0.5,
       "mechanism": 0.2,
@@ -67701,35 +67701,6 @@
     },
     {
       "rank": 100,
-      "repo": "DeepAuto-AI/automl-agent",
-      "name": "AutoML-Agent",
-      "url": "https://github.com/DeepAuto-AI/automl-agent",
-      "category": "多 Agent AutoML",
-      "pattern": "智能体编排 → 进化/搜索循环 → 评估器/打分器",
-      "tags": [
-        "智能体编排",
-        "Evol-Instruct",
-        "AutoML"
-      ],
-      "status": "verified",
-      "created_at": "2025-05-08T08:36:54Z",
-      "created_at_source": "github_api",
-      "first_observed_at": null,
-      "activity_at": "2025-07-11T19:39:49Z",
-      "stars": 136,
-      "report": "projects/05-automl-agent-multi-agent.md",
-      "scores": {
-        "current_value": 44.77,
-        "time": 31.57,
-        "mechanism": 59,
-        "evidence": 68,
-        "adoption": 38.29,
-        "usefulness": 63
-      },
-      "caveat": ""
-    },
-    {
-      "rank": 101,
       "repo": "elizaOS/agentmemory",
       "name": "ElizaOS AgentMemory Plugin",
       "url": "https://github.com/elizaOS/agentmemory",
@@ -67758,6 +67729,35 @@
         "usefulness": 80
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
+    },
+    {
+      "rank": 101,
+      "repo": "DeepAuto-AI/automl-agent",
+      "name": "AutoML-Agent",
+      "url": "https://github.com/DeepAuto-AI/automl-agent",
+      "category": "多 Agent AutoML",
+      "pattern": "智能体编排 → 进化/搜索循环 → 评估器/打分器",
+      "tags": [
+        "智能体编排",
+        "Evol-Instruct",
+        "AutoML"
+      ],
+      "status": "verified",
+      "created_at": "2025-05-08T08:36:54Z",
+      "created_at_source": "github_api",
+      "first_observed_at": null,
+      "activity_at": "2025-07-11T19:39:49Z",
+      "stars": 136,
+      "report": "projects/05-automl-agent-multi-agent.md",
+      "scores": {
+        "current_value": 44.76,
+        "time": 31.57,
+        "mechanism": 59,
+        "evidence": 68,
+        "adoption": 38.29,
+        "usefulness": 63
+      },
+      "caveat": ""
     },
     {
       "rank": 102,

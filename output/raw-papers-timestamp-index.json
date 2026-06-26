@@ -1,7 +1,7 @@
 {
   "generated_at": "2026-06-26T00:00:00+08:00",
-  "total": 197,
-  "updated_files": 197,
+  "total": 198,
+  "updated_files": 198,
   "unknown_content_timestamp": 1,
   "records": [
     {
@@ -1343,6 +1343,16 @@
       "collected_at": "2026-05-21",
       "time_slice": "2025-09",
       "timestamp_source": "arXiv submission history"
+    },
+    {
+      "arxiv_id": "2509.16457",
+      "title": "unknown",
+      "url": "https://arxiv.org/abs/2509.16457",
+      "file": "raw-papers/2509.16457.md",
+      "content_timestamp": "2025-09-19",
+      "collected_at": "2026-06-14T01:00:00+08:00",
+      "time_slice": "2025-09",
+      "timestamp_source": "arxiv submission date"
     },
     {
       "arxiv_id": "2509.20562",

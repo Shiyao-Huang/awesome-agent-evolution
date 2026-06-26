@@ -15,7 +15,7 @@ Self Evolve 的项目结构按 `raw -> processed -> work -> results` 管线治�
 | Analyzed project/model-card reports | 300 |
 | Strict evolution-related repositories | 98 |
 | Broad evolution-related repositories | 204 |
-| Raw paper files on disk | 201 |
+| Raw paper files on disk | 202 |
 | Paper review files | 171 |
 | Public project report files | 492 |
 | Current paper PDF | present |
@@ -24,7 +24,7 @@ Self Evolve 的项目结构按 `raw -> processed -> work -> results` 管线治�
 
 | Category | Present Paths | Files | Directories | Skipped | Size | Rule |
 |---|---:|---:|---:|---:|---:|---|
-| [Raw / 原始素材](./raw-index.md) | 9/9 | 3995 | 9 | 0 | 40 MB | 只保存采集原貌和最小元数据；除时间戳补齐、去重索引外，不在这里写分析结论。 |
+| [Raw / 原始素材](./raw-index.md) | 9/9 | 3996 | 9 | 0 | 40 MB | 只保存采集原貌和最小元数据；除时间戳补齐、去重索引外，不在这里写分析结论。 |
 | [Processed / 加工分析](./processed-index.md) | 6/8 | 46353 | 6025 | 1 | 3.3 GB | 清洗、分类、交叉分析、深度项目卡、论文评审都归这里；内容必须能追溯到 raw 或外部 canonical source。 |
 | [Work / 工作产物](./work-index.md) | 10/10 | 3280 | 1124 | 0 | 113 MB | 论文草稿、站点源码、脚本、调查图表、工程中间件归这里；可以迭代，但要有构建或验证入口。 |
 | [Results / 结果输出](./results-index.md) | 6/6 | 2139 | 1019 | 0 | 60 MB | 可交付、可发布、可下载、可部署的输出归这里；生成物要说明来源和刷新命令。 |

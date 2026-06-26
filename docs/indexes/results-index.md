@@ -11,7 +11,7 @@
 | Path | Status | Files | Directories | Skipped | Size |
 |---|---|---:|---:|---:|---:|
 | `reports` | present | 28 | 2 | 0 | 7.6 MB |
-| `output` | present | 8 | 1 | 0 | 691 KB |
+| `output` | present | 8 | 1 | 0 | 692 KB |
 | `site/public/reports` | present | 525 | 6 | 0 | 3.7 MB |
 | `site/dist` | present | 1576 | 1010 | 0 | 47 MB |
 | `paper-drafts/main.pdf` | present | 1 | 0 | 0 | 1.6 MB |
