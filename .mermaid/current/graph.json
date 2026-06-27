@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-27T04:54:55+08:00",
+  "generated_at": "2026-06-27T10:55:09+08:00",
   "truth_source": ".mermaid/current/graph.json",
   "nodes": [
     {
@@ -96,8 +96,8 @@
       "paths": [
         ".mermaid/current/graph.md",
         ".mermaid/current/graph.mmd",
-        "work/research/hourly-public-metadata-update-2026-06-27-0454.md",
-        "work/research/hourly-public-metadata-update-2026-06-27-0454-data.json"
+        "work/research/hourly-public-metadata-update-2026-06-27-1055.md",
+        "work/research/hourly-public-metadata-update-2026-06-27-1055-data.json"
       ]
     }
   ],
@@ -135,7 +135,7 @@
   ],
   "current_run": {
     "source": "gh authenticated GitHub API with retry + fallback",
-    "previous_packet": "2026-06-26 22:53 +0800",
+    "previous_packet": "2026-06-27 04:54 +0800",
     "repos": [
       {
         "repo": "china-qijizhifeng/agentic-Harness-engineering",
@@ -157,12 +157,12 @@
         "raw_capture": "raw-github/nousresearch_hermes-agent.md",
         "report": "projects/44-hermes-agent.md",
         "site_report": "site/public/reports/projects/44-hermes-agent.md",
-        "stars": 203727,
-        "forks": 36545,
-        "issues": 7810,
-        "pull_requests": 16154,
-        "commits": 13061,
-        "latest_push": "2026-06-26T19:58:13Z",
+        "stars": 203827,
+        "forks": 36593,
+        "issues": 7823,
+        "pull_requests": 16179,
+        "commits": 13109,
+        "latest_push": "2026-06-27T02:54:57Z",
         "latest_release": {
           "name": "Hermes Agent v0.17.0 (v2026.6.19)",
           "publishedAt": "2026-06-19T19:39:06Z"
@@ -190,8 +190,8 @@
         "raw_capture": "raw-github/rohitg00_agentmemory.md",
         "report": "projects/50-agentmemory.md",
         "site_report": "site/public/reports/projects/50-agentmemory.md",
-        "stars": 24114,
-        "forks": 1981,
+        "stars": 24122,
+        "forks": 1982,
         "issues": 159,
         "pull_requests": 176,
         "commits": 462,
@@ -226,7 +226,7 @@
         "raw_capture": "raw-github/lsdefine_genericagent.md",
         "report": "projects/47-genericagent.md",
         "site_report": "site/public/reports/projects/47-genericagent.md",
-        "stars": 13104,
+        "stars": 13109,
         "forks": 1523,
         "issues": 94,
         "pull_requests": 61,
@@ -244,12 +244,12 @@
         "raw_capture": "raw-github/openclaw_openclaw.md",
         "report": "projects/48-openclaw.md",
         "site_report": "site/public/reports/projects/48-openclaw.md",
-        "stars": 380601,
-        "forks": 79731,
-        "issues": 3359,
-        "pull_requests": 3353,
-        "commits": 62353,
-        "latest_push": "2026-06-26T20:45:22Z",
+        "stars": 380626,
+        "forks": 79738,
+        "issues": 3352,
+        "pull_requests": 3338,
+        "commits": 62413,
+        "latest_push": "2026-06-27T02:52:53Z",
         "latest_release": {
           "name": "openclaw 2026.6.11-beta.1",
           "publishedAt": "2026-06-24T23:37:32Z"
@@ -262,8 +262,8 @@
         "raw_capture": "raw-github/obra_superpowers.md",
         "report": "projects/49-superpowers.md",
         "site_report": "site/public/reports/projects/49-superpowers.md",
-        "stars": 239384,
-        "forks": 21239,
+        "stars": 239475,
+        "forks": 21244,
         "issues": 135,
         "pull_requests": 150,
         "commits": 609,
@@ -280,7 +280,7 @@
         "raw_capture": "raw-github/evomap_awesome-agent-evolution.md",
         "report": "projects/394-evomap-awesome-agent-evolution.md",
         "site_report": "site/public/reports/projects/394-evomap-awesome-agent-evolution.md",
-        "stars": 144,
+        "stars": 145,
         "forks": 20,
         "issues": 8,
         "pull_requests": 1,
@@ -313,9 +313,9 @@
         "stars": 550,
         "forks": 60,
         "issues": 1,
-        "pull_requests": 4,
+        "pull_requests": 5,
         "commits": 1686,
-        "latest_push": "2026-06-26T18:52:39Z",
+        "latest_push": "2026-06-27T02:29:40Z",
         "latest_release": {
           "name": "v1.102.0",
           "publishedAt": "2026-06-26T10:01:33Z"
@@ -325,7 +325,7 @@
       }
     ],
     "gitnexus": {
-      "status_output": "Repository: /Users/copizzah/Desktop/work/awesome-evolution\nIndexed: 6/20/2026, 3:29:43 PM\nIndexed commit: 850ea9f\nCurrent commit: 113ca6c\nStatus: ⚠️ stale (re-run gitnexus analyze)",
+      "status_output": "Repository: /Users/copizzah/Desktop/work/awesome-evolution\nIndexed: 6/20/2026, 3:29:43 PM\nIndexed commit: 850ea9f\nCurrent commit: 50d7ede\nStatus: ⚠️ stale (re-run gitnexus analyze)",
       "query_ok": false,
       "query_excerpt": "file:///Users/copizzah/.local/lib/node_modules/gitnexus/dist/core/lbug/pool-adapter.js:325\n            throw new Error(`LadybugDB unavailable for ${repoId}. Another process may be rebuilding the index. ` +\n                  ^\n\nError: LadybugDB unavailable for awesome-evolution-workspace-cleanup. Another process may be rebuilding the index. Retry later. (Runtime exception: Trying to read a database file with a different version. Database file version: 41, Current build storage version: 40)\n    at doInitLbug (file:///Users/copizzah/.local/lib/node_modules/gitnexus/dist/core/lbug/pool-adapter.js:325:19)\n    at async initLbug (file:///Users/copizzah/.local/lib/node_modules/gitnexus/dist/core/lbug/pool-adapter.js:268:9)\n    at async LocalBackend.ensureInitialized (file:///Users/copizzah/.local/lib/node_modules/gitnexus/dist/mcp/local/local-backend.js:415:13)\n    at async LocalBackend.query (file:///Users/copizzah/.local/lib/node_modules/gitnexus/dist/mcp/local/local-backend.js:616:9)\n    at async queryCommand (file:///Users/copizzah/.local/lib/node_modules/gitnexus/dist/cli/tool.js:63:20)\n    at async Command.<anonymous> (file:///Users/copizzah/.local/lib/node_modules/gitnexus/dist/cli/lazy-action.js:16:9)\n\nNode.js v24.14.0"
     }
