@@ -3,8 +3,8 @@ repo: desplega-ai/agent-swarm
 url: https://github.com/desplega-ai/agent-swarm
 content_timestamp: 2026-06-27
 time_slice: 2026-06
-timestamp_source: gh_api_graphql_authenticated_2026_06_27_1055
-collected_at: 2026-06-27T10:55:09+08:00
+timestamp_source: gh_api_graphql_authenticated_2026_06_27_1656
+collected_at: 2026-06-27T16:56:35+08:00
 source: github
 source_tool: gh_graphql
 ---
@@ -24,7 +24,7 @@ This raw GitHub capture was refreshed by the hourly public metadata update throu
 - Repository: desplega-ai/agent-swarm
 - URL: https://github.com/desplega-ai/agent-swarm
 - Stars: 550
-- Forks: 60
+- Forks: 61
 - Commits: 1,686
 - Open issues: 1
 - Open pull requests: 5
@@ -33,16 +33,16 @@ This raw GitHub capture was refreshed by the hourly public metadata update throu
 - Created at: 2025-12-19T18:59:13Z
 - Last pushed at: 2026-06-27T02:29:40Z
 - Last updated at: 2026-06-26T18:22:36Z
-- Collection timestamp: 2026-06-27T10:55:09+08:00
+- Collection timestamp: 2026-06-27T16:56:35+08:00
 - Topics: ai-agents, agentic, agentic-framework, agentic-os, ai-memory-system, harness-execution-layer, agent-teams, multi-agent, docker, self-hosted, agent-harness, harness-engineering, agent-memory, ai-memory
 - Latest public release: v1.102.0 (2026-06-26)
 
 ## Visible README / page excerpts
 
-- The current packet on 2026-06-27 shows 550 stars, 60 forks, 1,686 commits, 1 open issues, and 5 open pull requests.
+- The current packet on 2026-06-27 shows 550 stars, 61 forks, 1,686 commits, 1 open issues, and 5 open pull requests.
 - The public repository still centers a lead-worker swarm runtime across Slack, GitHub, email, API, pages, workflows, and MCP.
 - It remains one of the clearest public “compounding swarm” runtime anchors rather than a paper-only concept.
-- Relative to the previous authenticated packet at 2026-06-27 04:54 +0800: PRs 4 -> 5; pushedAt 2026-06-26T18:52:39Z -> 2026-06-27T02:29:40Z.
+- Relative to the previous authenticated packet at 2026-06-27 10:55 +0800: forks 60 -> 61.
 
 ## Raw capture boundary
 
