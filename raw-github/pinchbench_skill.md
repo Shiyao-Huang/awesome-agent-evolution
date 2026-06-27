@@ -1,10 +1,10 @@
 ---
 repo: pinchbench/skill
 url: https://github.com/pinchbench/skill
-content_timestamp: 2026-06-27
+content_timestamp: 2026-06-28
 time_slice: 2026-06
-timestamp_source: gh_api_graphql_authenticated_2026_06_27_1656
-collected_at: 2026-06-27T16:56:35+08:00
+timestamp_source: gh_api_graphql_authenticated_2026_06_28_0458
+collected_at: 2026-06-28T04:58:35+08:00
 source: github
 source_tool: gh_graphql
 ---
@@ -33,16 +33,16 @@ This raw GitHub capture was refreshed by the hourly public metadata update throu
 - Created at: 2026-02-11T01:41:39Z
 - Last pushed at: 2026-06-02T21:35:43Z
 - Last updated at: 2026-06-27T06:17:17Z
-- Collection timestamp: 2026-06-27T16:56:35+08:00
+- Collection timestamp: 2026-06-28T04:58:35+08:00
 - Topics: none exposed through the GitHub API topic list
 - Latest public release: v2.0.0 (2026-05-06)
 
 ## Visible README / page excerpts
 
-- The current packet on 2026-06-27 shows 1,254 stars, 143 forks, 383 commits, 21 open issues, and 0 open pull requests.
+- The current packet on 2026-06-28 shows 1,254 stars, 143 forks, 383 commits, 21 open issues, and 0 open pull requests.
 - The repository still frames itself as an OpenClaw-oriented benchmark harness rather than the runtime itself.
 - Its public story remains grounded in real-world task execution plus transcript-preserving grading, so it stays useful as evaluator pressure rather than product evidence.
-- Relative to the previous authenticated packet at 2026-06-27 10:55 +0800: stars 1,252 -> 1,254; updatedAt 2026-06-25T20:14:11Z -> 2026-06-27T06:17:17Z.
+- No public metadata delta was observed relative to the previous authenticated packet at 2026-06-27 16:56 +0800.
 
 ## Raw capture boundary
 

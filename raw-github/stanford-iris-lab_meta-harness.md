@@ -1,10 +1,10 @@
 ---
 repo: stanford-iris-lab/meta-harness
 url: https://github.com/stanford-iris-lab/meta-harness
-content_timestamp: 2026-06-27
+content_timestamp: 2026-06-28
 time_slice: 2026-06
-timestamp_source: gh_api_graphql_authenticated_2026_06_27_1656
-collected_at: 2026-06-27T16:56:35+08:00
+timestamp_source: gh_api_graphql_authenticated_2026_06_28_0458
+collected_at: 2026-06-28T04:58:35+08:00
 source: github
 source_tool: gh_graphql
 ---
@@ -23,7 +23,7 @@ This raw GitHub capture was refreshed by the hourly public metadata update throu
 
 - Repository: stanford-iris-lab/meta-harness
 - URL: https://github.com/stanford-iris-lab/meta-harness
-- Stars: 1,164
+- Stars: 1,165
 - Forks: 113
 - Commits: 11
 - Open issues: 5
@@ -32,17 +32,17 @@ This raw GitHub capture was refreshed by the hourly public metadata update throu
 - Primary language / stack signal: Python/Harness Search/Benchmark Scaffold Evolution
 - Created at: 2026-04-15T05:31:36Z
 - Last pushed at: 2026-04-29T16:39:58Z
-- Last updated at: 2026-06-27T08:28:49Z
-- Collection timestamp: 2026-06-27T16:56:35+08:00
+- Last updated at: 2026-06-27T17:17:54Z
+- Collection timestamp: 2026-06-28T04:58:35+08:00
 - Topics: harness-engineering, llm-agents
 - Latest public release: none exposed through the GitHub API release list
 
 ## Visible README / page excerpts
 
-- The current packet on 2026-06-27 shows 1,164 stars, 113 forks, 11 commits, 5 open issues, and 0 open pull requests.
+- The current packet on 2026-06-28 shows 1,165 stars, 113 forks, 11 commits, 5 open issues, and 0 open pull requests.
 - The public repository still separates the core framework from the optimized Terminal-Bench-2 artifact, which preserves the outer-loop interpretation.
 - It remains one of the clearest examples of fixed-model, mutable-harness search rather than weight-level self-evolution.
-- Relative to the previous authenticated packet at 2026-06-27 10:55 +0800: stars 1,162 -> 1,164; updatedAt 2026-06-26T12:11:12Z -> 2026-06-27T08:28:49Z.
+- Relative to the previous authenticated packet at 2026-06-27 16:56 +0800: stars 1,164 -> 1,165; updatedAt 2026-06-27T08:28:49Z -> 2026-06-27T17:17:54Z.
 
 ## Raw capture boundary
 
