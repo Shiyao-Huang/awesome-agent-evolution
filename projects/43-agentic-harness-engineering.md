@@ -24,4 +24,4 @@ Use this project to explain why self-evolution is not limited to weight updates 
 
 ## Evidence And Limits
 
-The raw capture now reflects a GitHub metadata packet observed on 2026-06-28: 639 stars, 73 forks, 46 commits, 2 open issues, and 0 open pull requests. This packet is fresher than the previous authenticated packet at 2026-06-28 10:59 +0800 where a delta was observed. This run did not execute the repository locally, validate workflows end to end, or independently rerun benchmark claims. Product, memory, benchmark, and automation claims therefore remain repository-scoped unless separately tested.
+The raw capture now reflects a GitHub metadata packet observed on 2026-06-28: 640 stars, 73 forks, 46 commits, 2 open issues, and 0 open pull requests. This packet is fresher than the previous authenticated packet at 2026-06-28 16:59 +0800 where a delta was observed. This run did not execute the repository locally, validate workflows end to end, or independently rerun benchmark claims. Product, memory, benchmark, and automation claims therefore remain repository-scoped unless separately tested.

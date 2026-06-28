@@ -1,11 +1,7 @@
 flowchart LR
-  intent["Direct user intent<br/>2026-06-28 16:59 +0800"] --> raw["GitHub GraphQL packet<br/>11 tracked repositories"]
-  raw --> captures["raw-github captures<br/>timestamped evidence"]
-  captures --> processed["repo classification<br/>project cards"]
-  processed --> public["README ZH/EN<br/>site public reports"]
-  processed --> indexes["timestamp index<br/>GitHub corpus analysis"]
-  public --> site["Astro build<br/>1000 pages"]
-  indexes --> paper["paper metadata appendix<br/>210-page PDF"]
-  site --> note["run note + Mermaid views"]
-  paper --> note
+  intent["Direct user intent"] --> raw["GitHub API retry + fallback packet"]
+  raw --> processed["classification + project cards"]
+  processed --> public["README + site/public reports"]
+  processed --> indexes["timestamp index + corpus analysis"]
+  public --> note["run note + Mermaid truth source"]
   note --> intent

@@ -3,8 +3,8 @@ repo: desplega-ai/agent-swarm
 url: https://github.com/desplega-ai/agent-swarm
 content_timestamp: 2026-06-28
 time_slice: 2026-06
-timestamp_source: gh_api_graphql_authenticated_2026_06_28_1659
-collected_at: 2026-06-28T16:59:43+08:00
+timestamp_source: gh_api_graphql_authenticated_2026_06_28_2259
+collected_at: 2026-06-28T22:59:03+08:00
 source: github
 source_tool: gh_graphql
 ---
@@ -23,26 +23,26 @@ This raw GitHub capture was refreshed by the hourly public metadata update throu
 
 - Repository: desplega-ai/agent-swarm
 - URL: https://github.com/desplega-ai/agent-swarm
-- Stars: 551
+- Stars: 552
 - Forks: 62
-- Commits: 1,688
+- Commits: 1,689
 - Open issues: 1
-- Open pull requests: 7
+- Open pull requests: 5
 - License: MIT
 - Primary language / stack signal: TypeScript/Docker/MCP/Lead-Worker Swarm
 - Created at: 2025-12-19T18:59:13Z
-- Last pushed at: 2026-06-28T02:27:21Z
-- Last updated at: 2026-06-27T17:59:40Z
-- Collection timestamp: 2026-06-28T16:59:43+08:00
+- Last pushed at: 2026-06-28T14:13:06Z
+- Last updated at: 2026-06-28T13:02:28Z
+- Collection timestamp: 2026-06-28T22:59:03+08:00
 - Topics: ai-agents, agentic, agentic-framework, agentic-os, ai-memory-system, harness-execution-layer, agent-teams, multi-agent, docker, self-hosted, agent-harness, harness-engineering, agent-memory, ai-memory
 - Latest public release: v1.103.0 (2026-06-27)
 
 ## Visible README / page excerpts
 
-- The current packet on 2026-06-28 shows 551 stars, 62 forks, 1,688 commits, 1 open issues, and 7 open pull requests.
+- The current packet on 2026-06-28 shows 552 stars, 62 forks, 1,689 commits, 1 open issues, and 5 open pull requests.
 - The public repository still centers a lead-worker swarm runtime across Slack, GitHub, email, API, pages, workflows, and MCP.
 - It remains one of the clearest public “compounding swarm” runtime anchors rather than a paper-only concept.
-- Relative to the previous authenticated packet at 2026-06-28 10:59 +0800: PRs 6 -> 7.
+- Relative to the previous authenticated packet at 2026-06-28 16:59 +0800: stars 551 -> 552; PRs 7 -> 5; commits 1,688 -> 1,689; pushedAt 2026-06-28T02:27:21Z -> 2026-06-28T14:13:06Z; updatedAt 2026-06-27T17:59:40Z -> 2026-06-28T13:02:28Z.
 
 ## Raw capture boundary
 

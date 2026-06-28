@@ -3,8 +3,8 @@ repo: openclaw/openclaw
 url: https://github.com/openclaw/openclaw
 content_timestamp: 2026-06-28
 time_slice: 2026-06
-timestamp_source: gh_api_graphql_authenticated_2026_06_28_1659
-collected_at: 2026-06-28T16:59:43+08:00
+timestamp_source: gh_api_graphql_authenticated_2026_06_28_2259
+collected_at: 2026-06-28T22:59:03+08:00
 source: github
 source_tool: gh_graphql
 ---
@@ -23,26 +23,26 @@ This raw GitHub capture was refreshed by the hourly public metadata update throu
 
 - Repository: openclaw/openclaw
 - URL: https://github.com/openclaw/openclaw
-- Stars: 380,783
-- Forks: 79,770
-- Commits: 62,473
-- Open issues: 3,364
-- Open pull requests: 3,349
+- Stars: 380,823
+- Forks: 79,777
+- Commits: 62,487
+- Open issues: 3,365
+- Open pull requests: 3,355
 - License: NOASSERTION
 - Primary language / stack signal: TypeScript/Rust/Multi-Channel Personal Agent Runtime
 - Created at: 2025-11-24T10:16:47Z
-- Last pushed at: 2026-06-28T08:57:21Z
-- Last updated at: 2026-06-28T08:57:33Z
-- Collection timestamp: 2026-06-28T16:59:43+08:00
+- Last pushed at: 2026-06-28T14:57:25Z
+- Last updated at: 2026-06-28T14:57:39Z
+- Collection timestamp: 2026-06-28T22:59:03+08:00
 - Topics: ai, assistant, own-your-data, personal, crustacean, molty, openclaw
 - Latest public release: openclaw 2026.6.11-beta.1 (2026-06-24)
 
 ## Visible README / page excerpts
 
-- The current packet on 2026-06-28 shows 380,783 stars, 79,770 forks, 62,473 commits, 3,364 open issues, and 3,349 open pull requests.
+- The current packet on 2026-06-28 shows 380,823 stars, 79,777 forks, 62,487 commits, 3,365 open issues, and 3,355 open pull requests.
 - OpenClaw still describes itself as a local-first personal assistant that spans devices, channels, sessions, tools, skills, and companion apps.
 - That keeps it in the product-runtime lane rather than only the benchmark or paper-code lane.
-- Relative to the previous authenticated packet at 2026-06-28 10:59 +0800: stars 380,748 -> 380,783; forks 79,773 -> 79,770; PRs 3,372 -> 3,349; commits 62,465 -> 62,473; pushedAt 2026-06-28T02:57:28Z -> 2026-06-28T08:57:21Z; updatedAt 2026-06-28T02:46:39Z -> 2026-06-28T08:57:33Z.
+- Relative to the previous authenticated packet at 2026-06-28 16:59 +0800: stars 380,783 -> 380,823; forks 79,770 -> 79,777; issues 3,364 -> 3,365; PRs 3,349 -> 3,355; commits 62,473 -> 62,487; pushedAt 2026-06-28T08:57:21Z -> 2026-06-28T14:57:25Z; updatedAt 2026-06-28T08:57:33Z -> 2026-06-28T14:57:39Z.
 
 ## Raw capture boundary
 
