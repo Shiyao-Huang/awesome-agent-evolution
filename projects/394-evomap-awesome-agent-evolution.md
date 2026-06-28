@@ -24,4 +24,4 @@ Use EvoMap to compare curation strategies. It is the external mirror that expose
 
 ## Evidence And Limits
 
-The raw capture now reflects a GitHub metadata packet observed on 2026-06-28: 145 stars, 20 forks, 67 commits, 8 open issues, and 1 open pull requests. This packet is fresher than the previous authenticated packet at 2026-06-27 16:56 +0800 where a delta was observed. This run did not execute the repository locally, validate workflows end to end, or independently rerun benchmark claims. Product, memory, benchmark, and automation claims therefore remain repository-scoped unless separately tested.
+The raw capture now reflects a GitHub metadata packet observed on 2026-06-28: 145 stars, 20 forks, 67 commits, 8 open issues, and 1 open pull requests. This packet is fresher than the previous authenticated packet at 2026-06-28 04:58 +0800 where a delta was observed. This run did not execute the repository locally, validate workflows end to end, or independently rerun benchmark claims. Product, memory, benchmark, and automation claims therefore remain repository-scoped unless separately tested.

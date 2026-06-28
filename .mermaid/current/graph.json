@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-28T04:58:35+08:00",
+  "generated_at": "2026-06-28T10:59:35+08:00",
   "truth_source": ".mermaid/current/graph.json",
   "nodes": [
     {
@@ -96,8 +96,8 @@
       "paths": [
         ".mermaid/current/graph.md",
         ".mermaid/current/graph.mmd",
-        "work/research/hourly-public-metadata-update-2026-06-28-0458.md",
-        "work/research/hourly-public-metadata-update-2026-06-28-0458-data.json"
+        "work/research/hourly-public-metadata-update-2026-06-28-1059.md",
+        "work/research/hourly-public-metadata-update-2026-06-28-1059-data.json"
       ]
     }
   ],
@@ -135,14 +135,14 @@
   ],
   "current_run": {
     "source": "gh authenticated GitHub API with retry + fallback",
-    "previous_packet": "2026-06-27 16:56 +0800",
+    "previous_packet": "2026-06-28 04:58 +0800",
     "repos": [
       {
         "repo": "china-qijizhifeng/agentic-Harness-engineering",
         "raw_capture": "raw-github/china-qijizhifeng_agentic-harness-engineering.md",
         "report": "projects/43-agentic-harness-engineering.md",
         "site_report": "site/public/reports/projects/43-agentic-harness-engineering.md",
-        "stars": 638,
+        "stars": 639,
         "forks": 73,
         "issues": 2,
         "pull_requests": 0,
@@ -157,12 +157,12 @@
         "raw_capture": "raw-github/nousresearch_hermes-agent.md",
         "report": "projects/44-hermes-agent.md",
         "site_report": "site/public/reports/projects/44-hermes-agent.md",
-        "stars": 204294,
-        "forks": 36758,
-        "issues": 7872,
-        "pull_requests": 16207,
-        "commits": 13178,
-        "latest_push": "2026-06-27T20:27:48Z",
+        "stars": 204400,
+        "forks": 36790,
+        "issues": 7845,
+        "pull_requests": 16197,
+        "commits": 13220,
+        "latest_push": "2026-06-28T02:57:34Z",
         "latest_release": {
           "name": "Hermes Agent v0.17.0 (v2026.6.19)",
           "publishedAt": "2026-06-19T19:39:06Z"
@@ -175,7 +175,7 @@
         "raw_capture": "raw-github/stanford-iris-lab_meta-harness.md",
         "report": "projects/249-stanford-meta-harness-framework.md",
         "site_report": "site/public/reports/projects/249-stanford-meta-harness-framework.md",
-        "stars": 1165,
+        "stars": 1167,
         "forks": 113,
         "issues": 5,
         "pull_requests": 0,
@@ -190,8 +190,8 @@
         "raw_capture": "raw-github/rohitg00_agentmemory.md",
         "report": "projects/50-agentmemory.md",
         "site_report": "site/public/reports/projects/50-agentmemory.md",
-        "stars": 24158,
-        "forks": 1986,
+        "stars": 24163,
+        "forks": 1989,
         "issues": 161,
         "pull_requests": 177,
         "commits": 462,
@@ -226,10 +226,10 @@
         "raw_capture": "raw-github/lsdefine_genericagent.md",
         "report": "projects/47-genericagent.md",
         "site_report": "site/public/reports/projects/47-genericagent.md",
-        "stars": 13128,
-        "forks": 1523,
+        "stars": 13130,
+        "forks": 1525,
         "issues": 95,
-        "pull_requests": 62,
+        "pull_requests": 63,
         "commits": 887,
         "latest_push": "2026-06-26T12:04:23Z",
         "latest_release": {
@@ -244,12 +244,12 @@
         "raw_capture": "raw-github/openclaw_openclaw.md",
         "report": "projects/48-openclaw.md",
         "site_report": "site/public/reports/projects/48-openclaw.md",
-        "stars": 380730,
-        "forks": 79767,
+        "stars": 380748,
+        "forks": 79773,
         "issues": 3364,
-        "pull_requests": 3376,
-        "commits": 62455,
-        "latest_push": "2026-06-27T20:57:29Z",
+        "pull_requests": 3372,
+        "commits": 62465,
+        "latest_push": "2026-06-28T02:57:28Z",
         "latest_release": {
           "name": "openclaw 2026.6.11-beta.1",
           "publishedAt": "2026-06-24T23:37:32Z"
@@ -262,8 +262,8 @@
         "raw_capture": "raw-github/obra_superpowers.md",
         "report": "projects/49-superpowers.md",
         "site_report": "site/public/reports/projects/49-superpowers.md",
-        "stars": 239999,
-        "forks": 21297,
+        "stars": 240110,
+        "forks": 21310,
         "issues": 135,
         "pull_requests": 151,
         "commits": 609,
@@ -313,9 +313,9 @@
         "stars": 551,
         "forks": 62,
         "issues": 1,
-        "pull_requests": 5,
+        "pull_requests": 6,
         "commits": 1688,
-        "latest_push": "2026-06-27T20:50:32Z",
+        "latest_push": "2026-06-28T02:27:21Z",
         "latest_release": {
           "name": "v1.103.0",
           "publishedAt": "2026-06-27T15:35:39Z"
@@ -325,7 +325,7 @@
       }
     ],
     "gitnexus": {
-      "status_output": "Repository: /Users/copizzah/Desktop/work/awesome-evolution\nIndexed: 6/20/2026, 3:29:43 PM\nIndexed commit: 850ea9f\nCurrent commit: 2f97776\nStatus: ⚠️ stale (re-run gitnexus analyze)",
+      "status_output": "Repository: /Users/copizzah/Desktop/work/awesome-evolution\nIndexed: 6/20/2026, 3:29:43 PM\nIndexed commit: 850ea9f\nCurrent commit: aad5ef9\nStatus: ⚠️ stale (re-run gitnexus analyze)",
       "query_ok": false,
       "query_excerpt": "file:///Users/copizzah/.local/lib/node_modules/gitnexus/dist/core/lbug/pool-adapter.js:325\n            throw new Error(`LadybugDB unavailable for ${repoId}. Another process may be rebuilding the index. ` +\n                  ^\n\nError: LadybugDB unavailable for awesome-evolution-workspace-cleanup. Another process may be rebuilding the index. Retry later. (Runtime exception: Trying to read a database file with a different version. Database file version: 41, Current build storage version: 40)\n    at doInitLbug (file:///Users/copizzah/.local/lib/node_modules/gitnexus/dist/core/lbug/pool-adapter.js:325:19)\n    at async initLbug (file:///Users/copizzah/.local/lib/node_modules/gitnexus/dist/core/lbug/pool-adapter.js:268:9)\n    at async LocalBackend.ensureInitialized (file:///Users/copizzah/.local/lib/node_modules/gitnexus/dist/mcp/local/local-backend.js:415:13)\n    at async LocalBackend.query (file:///Users/copizzah/.local/lib/node_modules/gitnexus/dist/mcp/local/local-backend.js:616:9)\n    at async queryCommand (file:///Users/copizzah/.local/lib/node_modules/gitnexus/dist/cli/tool.js:63:20)\n    at async Command.<anonymous> (file:///Users/copizzah/.local/lib/node_modules/gitnexus/dist/cli/lazy-action.js:16:9)\n\nNode.js v24.14.0"
     }
