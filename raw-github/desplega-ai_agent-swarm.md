@@ -3,8 +3,8 @@ repo: desplega-ai/agent-swarm
 url: https://github.com/desplega-ai/agent-swarm
 content_timestamp: 2026-06-28
 time_slice: 2026-06
-timestamp_source: gh_api_graphql_authenticated_2026_06_28_1059
-collected_at: 2026-06-28T10:59:35+08:00
+timestamp_source: gh_api_graphql_authenticated_2026_06_28_1659
+collected_at: 2026-06-28T16:59:43+08:00
 source: github
 source_tool: gh_graphql
 ---
@@ -27,22 +27,22 @@ This raw GitHub capture was refreshed by the hourly public metadata update throu
 - Forks: 62
 - Commits: 1,688
 - Open issues: 1
-- Open pull requests: 6
+- Open pull requests: 7
 - License: MIT
 - Primary language / stack signal: TypeScript/Docker/MCP/Lead-Worker Swarm
 - Created at: 2025-12-19T18:59:13Z
 - Last pushed at: 2026-06-28T02:27:21Z
 - Last updated at: 2026-06-27T17:59:40Z
-- Collection timestamp: 2026-06-28T10:59:35+08:00
+- Collection timestamp: 2026-06-28T16:59:43+08:00
 - Topics: ai-agents, agentic, agentic-framework, agentic-os, ai-memory-system, harness-execution-layer, agent-teams, multi-agent, docker, self-hosted, agent-harness, harness-engineering, agent-memory, ai-memory
 - Latest public release: v1.103.0 (2026-06-27)
 
 ## Visible README / page excerpts
 
-- The current packet on 2026-06-28 shows 551 stars, 62 forks, 1,688 commits, 1 open issues, and 6 open pull requests.
+- The current packet on 2026-06-28 shows 551 stars, 62 forks, 1,688 commits, 1 open issues, and 7 open pull requests.
 - The public repository still centers a lead-worker swarm runtime across Slack, GitHub, email, API, pages, workflows, and MCP.
 - It remains one of the clearest public “compounding swarm” runtime anchors rather than a paper-only concept.
-- Relative to the previous authenticated packet at 2026-06-28 04:58 +0800: PRs 5 -> 6; pushedAt 2026-06-27T20:50:32Z -> 2026-06-28T02:27:21Z.
+- Relative to the previous authenticated packet at 2026-06-28 10:59 +0800: PRs 6 -> 7.
 
 ## Raw capture boundary
 
