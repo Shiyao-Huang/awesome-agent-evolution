@@ -1,10 +1,10 @@
 ---
 repo: EvoMap/awesome-agent-evolution
 url: https://github.com/EvoMap/awesome-agent-evolution
-content_timestamp: 2026-06-29
+content_timestamp: 2026-06-30
 time_slice: 2026-06
-timestamp_source: gh_api_graphql_authenticated_2026_06_29_1703
-collected_at: 2026-06-29T17:03:45+08:00
+timestamp_source: gh_api_graphql_authenticated_2026_06_30_0503
+collected_at: 2026-06-30T05:03:14+08:00
 source: github
 source_tool: gh_graphql
 ---
@@ -25,24 +25,24 @@ This raw GitHub capture was refreshed by the hourly public metadata update throu
 - URL: https://github.com/EvoMap/awesome-agent-evolution
 - Stars: 145
 - Forks: 20
-- Commits: 67
+- Commits: 68
 - Open issues: 8
 - Open pull requests: 1
 - License: NOASSERTION
 - Primary language / stack signal: JavaScript/Shell/Curated Taxonomy Pipeline
 - Created at: 2026-03-07T04:11:34Z
-- Last pushed at: 2026-06-24T08:50:39Z
-- Last updated at: 2026-06-26T22:26:17Z
-- Collection timestamp: 2026-06-29T17:03:45+08:00
+- Last pushed at: 2026-06-29T12:58:33Z
+- Last updated at: 2026-06-29T12:58:38Z
+- Collection timestamp: 2026-06-30T05:03:14+08:00
 - Topics: a2a, agent-evolution, agentic-ai, ai-agent, awesome, awesome-list, llm, mcp, memory-system, multi-agent, self-evolving, self-improvement, agent-framework, agent-protocol, autonomous-agent, evomap, llm-agent, prompt-engineering, skill-library, skills
 - Latest public release: none exposed through the GitHub API release list
 
 ## Visible README / page excerpts
 
-- The current packet on 2026-06-29 shows 145 stars, 20 forks, 67 commits, 8 open issues, and 1 open pull requests.
+- The current packet on 2026-06-30 shows 145 stars, 20 forks, 68 commits, 8 open issues, and 1 open pull requests.
 - Its topic set still makes it a live field-packaging mirror across `agent-evolution`, `self-evolving`, `memory-system`, `multi-agent`, `skill-library`, and `awesome-list`.
 - Its README still functions primarily as a curated taxonomy comparator instead of a runnable system.
-- No public metadata delta was observed relative to the previous authenticated packet at 2026-06-29 11:02 +0800.
+- Relative to the previous authenticated packet at 2026-06-29 17:03 +0800: commits 67 -> 68; pushedAt 2026-06-24T08:50:39Z -> 2026-06-29T12:58:33Z; updatedAt 2026-06-26T22:26:17Z -> 2026-06-29T12:58:38Z.
 
 ## Raw capture boundary
 

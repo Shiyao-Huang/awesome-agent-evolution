@@ -1,6 +1,6 @@
 # Ops / 管理与协作 Index
 
-> Generated: 2026-06-29
+> Generated: 2026-06-30
 
 ## Rule
 
