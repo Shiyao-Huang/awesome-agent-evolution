@@ -45,6 +45,11 @@ Status: ⚠️ stale (re-run gitnexus analyze)
 - Query: `node .gitnexus/run.cjs query -r awesome-evolution-workspace-cleanup "hourly public metadata raw-github repo-classification graph.json README site/public/reports/projects"`
 - Result: blocked; file:///Users/copizzah/.local/lib/node_modules/gitnexus/dist/core/lbug/pool-adapter.js:325. This run therefore keeps GitNexus as an explicit blocker rather than relationship evidence.
 
+## Public Copy Review Boundary
+
+- README/README-ZH/README-EN and site report metadata were synchronized as factual public metadata surfaces.
+- This iteration did not run the required 3-5 reader/editor agents plus 3 academic agents, so it does not mark public copy quality as complete; the changed copy should be treated as timestamped evidence sync rather than final editorial review.
+
 ## Validation Commands For This Iteration
 
 - `node scripts/generate_project_indexes.mjs`
