@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-29T05:00:03+08:00",
+  "generated_at": "2026-06-29T11:02:22+08:00",
   "rows": [
     {
       "repo": "01-ai/langcrew",
@@ -1519,7 +1519,7 @@
     {
       "repo": "china-qijizhifeng/agentic-Harness-engineering",
       "url": "https://github.com/china-qijizhifeng/agentic-harness-engineering",
-      "stars": "642",
+      "stars": "643",
       "prior_category": "框架",
       "prior_unclassified": "false",
       "final_category": "框架/framework",
@@ -1528,7 +1528,7 @@
       "stack": "Python/Harness Evolution/Coding-Agent Workflow",
       "time_slice": "2026-06",
       "content_timestamp": "2026-06-29",
-      "evidence": "GitHub metadata packet on 2026-06-29 showed 642 stars, 74 forks, 46 commits, 2 open issues, 0 open pull requests, and positioning consistent with harness / framework-runtime.",
+      "evidence": "GitHub metadata packet on 2026-06-29 showed 643 stars, 74 forks, 46 commits, 2 open issues, 0 open pull requests, and positioning consistent with harness / framework-runtime.",
       "description": "Harness engineering is the layer where prompts, tools, middleware, memory, subagents, and evaluators become editable agent infrastructure rather than fixed wrappers around a base model."
     },
     {
@@ -2143,7 +2143,7 @@
       "stack": "TypeScript/Docker/MCP/Lead-Worker Swarm",
       "time_slice": "2026-06",
       "content_timestamp": "2026-06-29",
-      "evidence": "GitHub metadata packet on 2026-06-29 showed 552 stars, 62 forks, 1,692 commits, 1 open issues, 3 open pull requests, and positioning consistent with agent-swarm / framework-runtime.",
+      "evidence": "GitHub metadata packet on 2026-06-29 showed 552 stars, 62 forks, 1,693 commits, 1 open issues, 7 open pull requests, and positioning consistent with agent-swarm / framework-runtime.",
       "description": "Agent Swarm is a compounding lead-worker runtime that packages delegation topology, worker isolation, shared memory, MCP tooling, and recurring workflows into one public swarm system."
     },
     {
@@ -5959,13 +5959,13 @@
     {
       "repo": "NousResearch/hermes-agent",
       "url": "https://github.com/NousResearch/hermes-agent",
-      "stars": "204906",
+      "stars": "205062",
       "prior_category": "-",
       "final_category": "框架/framework",
       "function_tag": "framework-runtime",
       "base_theme": "framework",
       "stack": "Python/TypeScript/Memory/Skills/Messaging-Agent Runtime",
-      "evidence": "GitHub metadata packet on 2026-06-29 showed 204,906 stars, 36,943 forks, 13,379 commits, 7,824 open issues, 16,207 open pull requests, and positioning consistent with framework / framework-runtime.",
+      "evidence": "GitHub metadata packet on 2026-06-29 showed 205,062 stars, 36,966 forks, 13,448 commits, 7,833 open issues, 16,208 open pull requests, and positioning consistent with framework / framework-runtime.",
       "description": "Hermes Agent is a self-improving personal-agent runtime that combines memory, skill creation, session search, user modeling, messaging gateways, and scheduled automations in one user-facing system.",
       "prior_unclassified": "true",
       "time_slice": "2026-06",
@@ -6019,13 +6019,13 @@
     {
       "repo": "obra/superpowers",
       "url": "https://github.com/obra/superpowers",
-      "stars": "240594",
+      "stars": "240754",
       "prior_category": "-",
       "final_category": "工具/tool",
       "function_tag": "skill-orchestration",
       "base_theme": "skill",
       "stack": "Markdown/Workflow Skills/Coding-Agent Operating Manual",
-      "evidence": "GitHub metadata packet on 2026-06-29 showed 240,594 stars, 21,364 forks, 609 commits, 136 open issues, 147 open pull requests, and positioning consistent with skill / skill-orchestration.",
+      "evidence": "GitHub metadata packet on 2026-06-29 showed 240,754 stars, 21,376 forks, 609 commits, 137 open issues, 149 open pull requests, and positioning consistent with skill / skill-orchestration.",
       "description": "Superpowers is a cross-agent skill and workflow methodology library that packages reusable operating habits for Claude Code, Codex, Cursor, and adjacent coding agents.",
       "prior_unclassified": "true",
       "time_slice": "2026-06",
@@ -6394,13 +6394,13 @@
     {
       "repo": "openclaw/openclaw",
       "url": "https://github.com/openclaw/openclaw",
-      "stars": "380856",
+      "stars": "380891",
       "prior_category": "-",
       "final_category": "应用/application",
       "function_tag": "framework-runtime",
       "base_theme": "framework",
       "stack": "TypeScript/Rust/Multi-Channel Personal Agent Runtime",
-      "evidence": "GitHub metadata packet on 2026-06-29 showed 380,856 stars, 79,781 forks, 62,556 commits, 3,355 open issues, 3,302 open pull requests, and positioning consistent with framework / framework-runtime.",
+      "evidence": "GitHub metadata packet on 2026-06-29 showed 380,891 stars, 79,792 forks, 62,631 commits, 3,341 open issues, 3,260 open pull requests, and positioning consistent with framework / framework-runtime.",
       "description": "OpenClaw is a local-first personal AI agent runtime with multi-channel interaction, durable sessions, skills, companion apps, and product-facing operating workflows.",
       "prior_unclassified": "true",
       "time_slice": "2026-06",
@@ -7429,13 +7429,13 @@
     {
       "repo": "rohitg00/agentmemory",
       "url": "https://github.com/rohitg00/agentmemory",
-      "stars": "24216",
+      "stars": "24235",
       "prior_category": "-",
       "final_category": "工具/tool",
       "function_tag": "tool-module",
       "base_theme": "memory",
       "stack": "TypeScript/MCP/Coding-Agent Memory/Wiki Index",
-      "evidence": "GitHub metadata packet on 2026-06-29 showed 24,216 stars, 1,990 forks, 463 commits, 162 open issues, 177 open pull requests, and positioning consistent with memory / tool-module.",
+      "evidence": "GitHub metadata packet on 2026-06-29 showed 24,235 stars, 1,990 forks, 463 commits, 162 open issues, 177 open pull requests, and positioning consistent with memory / tool-module.",
       "description": "agentmemory is a cross-harness persistent memory layer for coding agents and MCP clients, with wiki-style knowledge capture, retrieval, and continuity signals.",
       "prior_unclassified": "true",
       "time_slice": "2026-06",
@@ -8254,7 +8254,7 @@
     {
       "repo": "stanford-iris-lab/meta-harness",
       "url": "https://github.com/stanford-iris-lab/meta-harness",
-      "stars": "1166",
+      "stars": "1167",
       "prior_category": "-",
       "prior_unclassified": "true",
       "final_category": "框架/framework",
@@ -8263,7 +8263,7 @@
       "stack": "Python/Harness Search/Benchmark Scaffold Evolution",
       "time_slice": "2026-06",
       "content_timestamp": "2026-06-29",
-      "evidence": "GitHub metadata packet on 2026-06-29 showed 1,166 stars, 113 forks, 11 commits, 5 open issues, 0 open pull requests, and positioning consistent with evolution / agent-evolution-infra.",
+      "evidence": "GitHub metadata packet on 2026-06-29 showed 1,167 stars, 113 forks, 11 commits, 5 open issues, 0 open pull requests, and positioning consistent with evolution / agent-evolution-infra.",
       "description": "Meta-Harness provides reference code for automated search over model harnesses, including terminal benchmark scaffold evolution and text-classification memory-system search."
     },
     {
