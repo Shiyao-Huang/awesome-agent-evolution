@@ -2,16 +2,16 @@
 
 Truth source: `.mermaid/current/graph.json`
 
-Generated: 2026-06-30T23:06:00+08:00
+Generated: 2026-07-01T05:07:00+08:00
 
 ## Current Run
 
-- Previous authenticated packet used for comparison: `2026-06-30 17:06 +0800`
+- Previous authenticated packet used for comparison: `2026-06-30 23:06 +0800`
 - Fetch policy: retry live GitHub API first, then fall back to the previous authenticated packet only when live fetch fails.
 - GitNexus status: Repository: /Users/copizzah/Desktop/work/awesome-evolution
 Indexed: 6/20/2026, 3:29:43 PM
 Indexed commit: 850ea9f
-Current commit: 11c2f25
+Current commit: 90acb73
 Status: ⚠️ stale (re-run gitnexus analyze)
 - GitNexus query: blocked (file:///Users/copizzah/.local/lib/node_modules/gitnexus/dist/core/lbug/pool-adapter.js:325)
 
