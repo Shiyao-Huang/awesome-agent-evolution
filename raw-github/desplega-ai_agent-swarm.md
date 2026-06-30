@@ -3,8 +3,8 @@ repo: desplega-ai/agent-swarm
 url: https://github.com/desplega-ai/agent-swarm
 content_timestamp: 2026-06-30
 time_slice: 2026-06
-timestamp_source: gh_api_graphql_authenticated_2026_06_30_1104
-collected_at: 2026-06-30T11:04:14+08:00
+timestamp_source: gh_api_graphql_authenticated_2026_06_30_1706
+collected_at: 2026-06-30T17:06:31+08:00
 source: github
 source_tool: gh_graphql
 ---
@@ -23,8 +23,8 @@ This raw GitHub capture was refreshed by the hourly public metadata update throu
 
 - Repository: desplega-ai/agent-swarm
 - URL: https://github.com/desplega-ai/agent-swarm
-- Stars: 557
-- Forks: 62
+- Stars: 558
+- Forks: 63
 - Commits: 1,703
 - Open issues: 1
 - Open pull requests: 5
@@ -32,17 +32,17 @@ This raw GitHub capture was refreshed by the hourly public metadata update throu
 - Primary language / stack signal: TypeScript/Docker/MCP/Lead-Worker Swarm
 - Created at: 2025-12-19T18:59:13Z
 - Last pushed at: 2026-06-30T02:29:00Z
-- Last updated at: 2026-06-30T02:28:22Z
-- Collection timestamp: 2026-06-30T11:04:14+08:00
+- Last updated at: 2026-06-30T06:26:08Z
+- Collection timestamp: 2026-06-30T17:06:31+08:00
 - Topics: ai-agents, agentic, agentic-framework, agentic-os, ai-memory-system, harness-execution-layer, agent-teams, multi-agent, docker, self-hosted, agent-harness, harness-engineering, agent-memory, ai-memory
 - Latest public release: v1.104.0 (2026-06-29)
 
 ## Visible README / page excerpts
 
-- The current packet on 2026-06-30 shows 557 stars, 62 forks, 1,703 commits, 1 open issues, and 5 open pull requests.
+- The current packet on 2026-06-30 shows 558 stars, 63 forks, 1,703 commits, 1 open issues, and 5 open pull requests.
 - The public repository still centers a lead-worker swarm runtime across Slack, GitHub, email, API, pages, workflows, and MCP.
 - It remains one of the clearest public “compounding swarm” runtime anchors rather than a paper-only concept.
-- Relative to the previous authenticated packet at 2026-06-30 05:03 +0800: stars 556 -> 557; PRs 2 -> 5; pushedAt 2026-06-29T16:57:08Z -> 2026-06-30T02:29:00Z; updatedAt 2026-06-29T16:57:12Z -> 2026-06-30T02:28:22Z.
+- Relative to the previous authenticated packet at 2026-06-30 11:04 +0800: stars 557 -> 558; forks 62 -> 63; updatedAt 2026-06-30T02:28:22Z -> 2026-06-30T06:26:08Z.
 
 ## Raw capture boundary
 

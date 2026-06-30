@@ -3,8 +3,8 @@ repo: rohitg00/agentmemory
 url: https://github.com/rohitg00/agentmemory
 content_timestamp: 2026-06-30
 time_slice: 2026-06
-timestamp_source: gh_api_graphql_authenticated_2026_06_30_1104
-collected_at: 2026-06-30T11:04:14+08:00
+timestamp_source: gh_api_graphql_authenticated_2026_06_30_1706
+collected_at: 2026-06-30T17:06:31+08:00
 source: github
 source_tool: gh_graphql
 ---
@@ -23,8 +23,8 @@ This raw GitHub capture was refreshed by the hourly public metadata update throu
 
 - Repository: rohitg00/agentmemory
 - URL: https://github.com/rohitg00/agentmemory
-- Stars: 24,307
-- Forks: 1,995
+- Stars: 24,331
+- Forks: 1,997
 - Commits: 463
 - Open issues: 165
 - Open pull requests: 180
@@ -32,17 +32,17 @@ This raw GitHub capture was refreshed by the hourly public metadata update throu
 - Primary language / stack signal: TypeScript/MCP/Coding-Agent Memory/Wiki Index
 - Created at: 2026-02-25T07:32:52Z
 - Last pushed at: 2026-06-29T06:13:48Z
-- Last updated at: 2026-06-30T03:02:33Z
-- Collection timestamp: 2026-06-30T11:04:14+08:00
+- Last updated at: 2026-06-30T08:53:15Z
+- Collection timestamp: 2026-06-30T17:06:31+08:00
 - Topics: agentmemory, agents, ai, claude, claudecode, codex, copilot, cursor, genai, harness, hermes, memory, openclaw
 - Latest public release: v0.9.27 (2026-06-07)
 
 ## Visible README / page excerpts
 
-- The current packet on 2026-06-30 shows 24,307 stars, 1,995 forks, 463 commits, 165 open issues, and 180 open pull requests.
+- The current packet on 2026-06-30 shows 24,331 stars, 1,997 forks, 463 commits, 165 open issues, and 180 open pull requests.
 - The homepage still points to `agent-memory.dev`, and the topic surface still binds the project to Claude Code, Codex, Cursor, Hermes, OpenClaw, and MCP-style continuity.
 - It remains a cross-harness memory substrate rather than a single-runtime plugin, which is why it matters for long-horizon agent accumulation.
-- Relative to the previous authenticated packet at 2026-06-30 05:03 +0800: stars 24,300 -> 24,307; forks 1,994 -> 1,995; issues 164 -> 165; PRs 178 -> 180; updatedAt 2026-06-29T20:48:14Z -> 2026-06-30T03:02:33Z.
+- Relative to the previous authenticated packet at 2026-06-30 11:04 +0800: stars 24,307 -> 24,331; forks 1,995 -> 1,997; updatedAt 2026-06-30T03:02:33Z -> 2026-06-30T08:53:15Z.
 
 ## Raw capture boundary
 
