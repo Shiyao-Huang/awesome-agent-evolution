@@ -3,8 +3,8 @@ repo: pinchbench/skill
 url: https://github.com/pinchbench/skill
 content_timestamp: 2026-06-30
 time_slice: 2026-06
-timestamp_source: gh_api_graphql_authenticated_2026_06_30_1706
-collected_at: 2026-06-30T17:06:31+08:00
+timestamp_source: gh_api_graphql_authenticated_2026_06_30_2306
+collected_at: 2026-06-30T23:06:00+08:00
 source: github
 source_tool: gh_graphql
 ---
@@ -23,7 +23,7 @@ This raw GitHub capture was refreshed by the hourly public metadata update throu
 
 - Repository: pinchbench/skill
 - URL: https://github.com/pinchbench/skill
-- Stars: 1,256
+- Stars: 1,257
 - Forks: 143
 - Commits: 383
 - Open issues: 21
@@ -32,17 +32,17 @@ This raw GitHub capture was refreshed by the hourly public metadata update throu
 - Primary language / stack signal: Python/Shell/TypeScript/OpenClaw Benchmark Harness
 - Created at: 2026-02-11T01:41:39Z
 - Last pushed at: 2026-06-02T21:35:43Z
-- Last updated at: 2026-06-28T18:18:19Z
-- Collection timestamp: 2026-06-30T17:06:31+08:00
+- Last updated at: 2026-06-30T13:49:39Z
+- Collection timestamp: 2026-06-30T23:06:00+08:00
 - Topics: none exposed through the GitHub API topic list
 - Latest public release: v2.0.0 (2026-05-06)
 
 ## Visible README / page excerpts
 
-- The current packet on 2026-06-30 shows 1,256 stars, 143 forks, 383 commits, 21 open issues, and 0 open pull requests.
+- The current packet on 2026-06-30 shows 1,257 stars, 143 forks, 383 commits, 21 open issues, and 0 open pull requests.
 - The repository still frames itself as an OpenClaw-oriented benchmark harness rather than the runtime itself.
 - Its public story remains grounded in real-world task execution plus transcript-preserving grading, so it stays useful as evaluator pressure rather than product evidence.
-- Relative to the previous authenticated packet at 2026-06-30 11:04 +0800: issues 22 -> 21.
+- Relative to the previous authenticated packet at 2026-06-30 17:06 +0800: stars 1,256 -> 1,257; updatedAt 2026-06-28T18:18:19Z -> 2026-06-30T13:49:39Z.
 
 ## Raw capture boundary
 
