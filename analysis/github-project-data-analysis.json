@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-30T21:08:41.299Z",
+  "generated_at": "2026-07-01T03:10:20.272Z",
   "counts": {
     "raw_captures": 686,
     "raw_files_on_disk": 686,
@@ -1427,7 +1427,7 @@
     {
       "repo": "lsdefine/GenericAgent",
       "url": "https://github.com/lsdefine/GenericAgent",
-      "stars": "13214",
+      "stars": "13218",
       "prior_category": "框架",
       "prior_unclassified": "false",
       "final_category": "框架/framework",
@@ -1436,7 +1436,7 @@
       "stack": "Python/Self-Evolving Agent/Skill Tree Runtime",
       "time_slice": "2026-06",
       "content_timestamp": "2026-07-01",
-      "evidence": "GitHub metadata packet on 2026-07-01 showed 13,214 stars, 1,528 forks, 894 commits, 93 open issues, 65 open pull requests, and positioning consistent with evolution / tool-module.",
+      "evidence": "GitHub metadata packet on 2026-07-01 showed 13,218 stars, 1,527 forks, 894 commits, 93 open issues, 65 open pull requests, and positioning consistent with evolution / tool-module.",
       "description": "GenericAgent is a minimal self-evolving autonomous agent framework that grows a skill tree from a small seed loop instead of preloading a large fixed procedure library."
     },
     {
@@ -1622,7 +1622,7 @@
     {
       "repo": "stanford-iris-lab/meta-harness",
       "url": "https://github.com/stanford-iris-lab/meta-harness",
-      "stars": "1175",
+      "stars": "1177",
       "prior_category": "-",
       "prior_unclassified": "true",
       "final_category": "框架/framework",
@@ -1631,7 +1631,7 @@
       "stack": "Python/Harness Search/Benchmark Scaffold Evolution",
       "time_slice": "2026-06",
       "content_timestamp": "2026-07-01",
-      "evidence": "GitHub metadata packet on 2026-07-01 showed 1,175 stars, 113 forks, 11 commits, 5 open issues, 0 open pull requests, and positioning consistent with evolution / agent-evolution-infra.",
+      "evidence": "GitHub metadata packet on 2026-07-01 showed 1,177 stars, 113 forks, 11 commits, 5 open issues, 0 open pull requests, and positioning consistent with evolution / agent-evolution-infra.",
       "description": "Meta-Harness provides reference code for automated search over model harnesses, including terminal benchmark scaffold evolution and text-classification memory-system search."
     },
     {
@@ -1789,13 +1789,13 @@
     {
       "repo": "NousResearch/hermes-agent",
       "url": "https://github.com/NousResearch/hermes-agent",
-      "stars": "206418",
+      "stars": "206580",
       "prior_category": "-",
       "final_category": "框架/framework",
       "function_tag": "framework-runtime",
       "base_theme": "framework",
       "stack": "Python/TypeScript/Memory/Skills/Messaging-Agent Runtime",
-      "evidence": "GitHub metadata packet on 2026-07-01 showed 206,418 stars, 37,325 forks, 13,785 commits, 8,165 open issues, 16,570 open pull requests, and positioning consistent with framework / framework-runtime.",
+      "evidence": "GitHub metadata packet on 2026-07-01 showed 206,580 stars, 37,373 forks, 13,844 commits, 8,169 open issues, 16,570 open pull requests, and positioning consistent with framework / framework-runtime.",
       "description": "Hermes Agent is a self-improving personal-agent runtime that combines memory, skill creation, session search, user modeling, messaging gateways, and scheduled automations in one user-facing system.",
       "prior_unclassified": "true",
       "time_slice": "2026-06",
@@ -1834,7 +1834,7 @@
     {
       "repo": "lsdefine/GenericAgent",
       "url": "https://github.com/lsdefine/GenericAgent",
-      "stars": "13214",
+      "stars": "13218",
       "prior_category": "框架",
       "prior_unclassified": "false",
       "final_category": "框架/framework",
@@ -1843,7 +1843,7 @@
       "stack": "Python/Self-Evolving Agent/Skill Tree Runtime",
       "time_slice": "2026-06",
       "content_timestamp": "2026-07-01",
-      "evidence": "GitHub metadata packet on 2026-07-01 showed 13,214 stars, 1,528 forks, 894 commits, 93 open issues, 65 open pull requests, and positioning consistent with evolution / tool-module.",
+      "evidence": "GitHub metadata packet on 2026-07-01 showed 13,218 stars, 1,527 forks, 894 commits, 93 open issues, 65 open pull requests, and positioning consistent with evolution / tool-module.",
       "description": "GenericAgent is a minimal self-evolving autonomous agent framework that grows a skill tree from a small seed loop instead of preloading a large fixed procedure library."
     },
     {
@@ -2089,7 +2089,7 @@
     {
       "repo": "stanford-iris-lab/meta-harness",
       "url": "https://github.com/stanford-iris-lab/meta-harness",
-      "stars": "1175",
+      "stars": "1177",
       "prior_category": "-",
       "prior_unclassified": "true",
       "final_category": "框架/framework",
@@ -2098,7 +2098,7 @@
       "stack": "Python/Harness Search/Benchmark Scaffold Evolution",
       "time_slice": "2026-06",
       "content_timestamp": "2026-07-01",
-      "evidence": "GitHub metadata packet on 2026-07-01 showed 1,175 stars, 113 forks, 11 commits, 5 open issues, 0 open pull requests, and positioning consistent with evolution / agent-evolution-infra.",
+      "evidence": "GitHub metadata packet on 2026-07-01 showed 1,177 stars, 113 forks, 11 commits, 5 open issues, 0 open pull requests, and positioning consistent with evolution / agent-evolution-infra.",
       "description": "Meta-Harness provides reference code for automated search over model harnesses, including terminal benchmark scaffold evolution and text-classification memory-system search."
     },
     {
@@ -4671,7 +4671,7 @@
     {
       "repo": "desplega-ai/agent-swarm",
       "url": "https://github.com/desplega-ai/agent-swarm",
-      "stars": "562",
+      "stars": "565",
       "prior_category": "-",
       "prior_unclassified": "true",
       "final_category": "框架/framework",
@@ -4680,7 +4680,7 @@
       "stack": "TypeScript/Docker/MCP/Lead-Worker Swarm",
       "time_slice": "2026-06",
       "content_timestamp": "2026-07-01",
-      "evidence": "GitHub metadata packet on 2026-07-01 showed 562 stars, 63 forks, 1,713 commits, 1 open issues, 2 open pull requests, and positioning consistent with agent-swarm / framework-runtime.",
+      "evidence": "GitHub metadata packet on 2026-07-01 showed 565 stars, 63 forks, 1,716 commits, 1 open issues, 6 open pull requests, and positioning consistent with agent-swarm / framework-runtime.",
       "description": "Agent Swarm is a compounding lead-worker runtime that packages delegation topology, worker isolation, shared memory, MCP tooling, and recurring workflows into one public swarm system."
     },
     {
@@ -5106,7 +5106,7 @@
     {
       "repo": "EvoMap/awesome-agent-evolution",
       "url": "https://github.com/EvoMap/awesome-agent-evolution",
-      "stars": "147",
+      "stars": "149",
       "prior_category": "工具",
       "prior_unclassified": "false",
       "final_category": "工具/tool",
@@ -5115,7 +5115,7 @@
       "stack": "JavaScript/Shell/Curated Taxonomy Pipeline",
       "time_slice": "2026-06",
       "content_timestamp": "2026-07-01",
-      "evidence": "GitHub metadata packet on 2026-07-01 showed 147 stars, 20 forks, 68 commits, 8 open issues, 1 open pull requests, and positioning consistent with evolution / resource-index.",
+      "evidence": "GitHub metadata packet on 2026-07-01 showed 149 stars, 20 forks, 68 commits, 8 open issues, 1 open pull requests, and positioning consistent with evolution / resource-index.",
       "description": "EvoMap/awesome-agent-evolution is a curated awesome list covering self-evolution, memory, protocols, benchmarks, coding agents, and adjacent infrastructure."
     },
     {
@@ -7296,7 +7296,7 @@
     {
       "repo": "lsdefine/GenericAgent",
       "url": "https://github.com/lsdefine/GenericAgent",
-      "stars": "13214",
+      "stars": "13218",
       "prior_category": "框架",
       "prior_unclassified": "false",
       "final_category": "框架/framework",
@@ -7305,7 +7305,7 @@
       "stack": "Python/Self-Evolving Agent/Skill Tree Runtime",
       "time_slice": "2026-06",
       "content_timestamp": "2026-07-01",
-      "evidence": "GitHub metadata packet on 2026-07-01 showed 13,214 stars, 1,528 forks, 894 commits, 93 open issues, 65 open pull requests, and positioning consistent with evolution / tool-module.",
+      "evidence": "GitHub metadata packet on 2026-07-01 showed 13,218 stars, 1,527 forks, 894 commits, 93 open issues, 65 open pull requests, and positioning consistent with evolution / tool-module.",
       "description": "GenericAgent is a minimal self-evolving autonomous agent framework that grows a skill tree from a small seed loop instead of preloading a large fixed procedure library."
     },
     {
@@ -8496,13 +8496,13 @@
     {
       "repo": "NousResearch/hermes-agent",
       "url": "https://github.com/NousResearch/hermes-agent",
-      "stars": "206418",
+      "stars": "206580",
       "prior_category": "-",
       "final_category": "框架/framework",
       "function_tag": "framework-runtime",
       "base_theme": "framework",
       "stack": "Python/TypeScript/Memory/Skills/Messaging-Agent Runtime",
-      "evidence": "GitHub metadata packet on 2026-07-01 showed 206,418 stars, 37,325 forks, 13,785 commits, 8,165 open issues, 16,570 open pull requests, and positioning consistent with framework / framework-runtime.",
+      "evidence": "GitHub metadata packet on 2026-07-01 showed 206,580 stars, 37,373 forks, 13,844 commits, 8,169 open issues, 16,570 open pull requests, and positioning consistent with framework / framework-runtime.",
       "description": "Hermes Agent is a self-improving personal-agent runtime that combines memory, skill creation, session search, user modeling, messaging gateways, and scheduled automations in one user-facing system.",
       "prior_unclassified": "true",
       "time_slice": "2026-06",
@@ -8556,13 +8556,13 @@
     {
       "repo": "obra/superpowers",
       "url": "https://github.com/obra/superpowers",
-      "stars": "242403",
+      "stars": "242637",
       "prior_category": "-",
       "final_category": "工具/tool",
       "function_tag": "skill-orchestration",
       "base_theme": "skill",
       "stack": "Markdown/Workflow Skills/Coding-Agent Operating Manual",
-      "evidence": "GitHub metadata packet on 2026-07-01 showed 242,403 stars, 21,508 forks, 618 commits, 142 open issues, 156 open pull requests, and positioning consistent with skill / skill-orchestration.",
+      "evidence": "GitHub metadata packet on 2026-07-01 showed 242,637 stars, 21,528 forks, 618 commits, 142 open issues, 155 open pull requests, and positioning consistent with skill / skill-orchestration.",
       "description": "Superpowers is a cross-agent skill and workflow methodology library that packages reusable operating habits for Claude Code, Codex, Cursor, and adjacent coding agents.",
       "prior_unclassified": "true",
       "time_slice": "2026-06",
@@ -8931,13 +8931,13 @@
     {
       "repo": "openclaw/openclaw",
       "url": "https://github.com/openclaw/openclaw",
-      "stars": "381163",
+      "stars": "381197",
       "prior_category": "-",
       "final_category": "应用/application",
       "function_tag": "framework-runtime",
       "base_theme": "framework",
       "stack": "TypeScript/Rust/Multi-Channel Personal Agent Runtime",
-      "evidence": "GitHub metadata packet on 2026-07-01 showed 381,163 stars, 79,845 forks, 62,787 commits, 3,415 open issues, 3,320 open pull requests, and positioning consistent with framework / framework-runtime.",
+      "evidence": "GitHub metadata packet on 2026-07-01 showed 381,197 stars, 79,855 forks, 62,876 commits, 3,417 open issues, 3,286 open pull requests, and positioning consistent with framework / framework-runtime.",
       "description": "OpenClaw is a local-first personal AI agent runtime with multi-channel interaction, durable sessions, skills, companion apps, and product-facing operating workflows.",
       "prior_unclassified": "true",
       "time_slice": "2026-06",
@@ -9366,13 +9366,13 @@
     {
       "repo": "pinchbench/skill",
       "url": "https://github.com/pinchbench/skill",
-      "stars": "1256",
+      "stars": "1257",
       "prior_category": "-",
       "final_category": "评测/evaluation",
       "function_tag": "benchmark-eval",
       "base_theme": "benchmark",
       "stack": "Python/Shell/TypeScript/OpenClaw Benchmark Harness",
-      "evidence": "GitHub metadata packet on 2026-07-01 showed 1,256 stars, 143 forks, 383 commits, 21 open issues, 0 open pull requests, and positioning consistent with benchmark / benchmark-eval.",
+      "evidence": "GitHub metadata packet on 2026-07-01 showed 1,257 stars, 143 forks, 383 commits, 21 open issues, 0 open pull requests, and positioning consistent with benchmark / benchmark-eval.",
       "description": "PinchBench is an OpenClaw-oriented real task benchmark that measures coding agents across productivity, research, writing, coding, analysis, email, memory, and skill-discovery tasks.",
       "prior_unclassified": "true",
       "time_slice": "2026-06",
@@ -9966,13 +9966,13 @@
     {
       "repo": "rohitg00/agentmemory",
       "url": "https://github.com/rohitg00/agentmemory",
-      "stars": "24355",
+      "stars": "24366",
       "prior_category": "-",
       "final_category": "工具/tool",
       "function_tag": "tool-module",
       "base_theme": "memory",
       "stack": "TypeScript/MCP/Coding-Agent Memory/Wiki Index",
-      "evidence": "GitHub metadata packet on 2026-07-01 showed 24,355 stars, 1,998 forks, 463 commits, 166 open issues, 181 open pull requests, and positioning consistent with memory / tool-module.",
+      "evidence": "GitHub metadata packet on 2026-07-01 showed 24,366 stars, 2,001 forks, 463 commits, 166 open issues, 181 open pull requests, and positioning consistent with memory / tool-module.",
       "description": "agentmemory is a cross-harness persistent memory layer for coding agents and MCP clients, with wiki-style knowledge capture, retrieval, and continuity signals.",
       "prior_unclassified": "true",
       "time_slice": "2026-06",
@@ -10791,7 +10791,7 @@
     {
       "repo": "stanford-iris-lab/meta-harness",
       "url": "https://github.com/stanford-iris-lab/meta-harness",
-      "stars": "1175",
+      "stars": "1177",
       "prior_category": "-",
       "prior_unclassified": "true",
       "final_category": "框架/framework",
@@ -10800,7 +10800,7 @@
       "stack": "Python/Harness Search/Benchmark Scaffold Evolution",
       "time_slice": "2026-06",
       "content_timestamp": "2026-07-01",
-      "evidence": "GitHub metadata packet on 2026-07-01 showed 1,175 stars, 113 forks, 11 commits, 5 open issues, 0 open pull requests, and positioning consistent with evolution / agent-evolution-infra.",
+      "evidence": "GitHub metadata packet on 2026-07-01 showed 1,177 stars, 113 forks, 11 commits, 5 open issues, 0 open pull requests, and positioning consistent with evolution / agent-evolution-infra.",
       "description": "Meta-Harness provides reference code for automated search over model harnesses, including terminal benchmark scaffold evolution and text-classification memory-system search."
     },
     {
@@ -13268,7 +13268,7 @@
     {
       "repo": "EvoMap/awesome-agent-evolution",
       "url": "https://github.com/EvoMap/awesome-agent-evolution",
-      "stars": "147",
+      "stars": "149",
       "prior_category": "工具",
       "prior_unclassified": "false",
       "final_category": "工具/tool",
@@ -13277,7 +13277,7 @@
       "stack": "JavaScript/Shell/Curated Taxonomy Pipeline",
       "time_slice": "2026-06",
       "content_timestamp": "2026-07-01",
-      "evidence": "GitHub metadata packet on 2026-07-01 showed 147 stars, 20 forks, 68 commits, 8 open issues, 1 open pull requests, and positioning consistent with evolution / resource-index.",
+      "evidence": "GitHub metadata packet on 2026-07-01 showed 149 stars, 20 forks, 68 commits, 8 open issues, 1 open pull requests, and positioning consistent with evolution / resource-index.",
       "description": "EvoMap/awesome-agent-evolution is a curated awesome list covering self-evolution, memory, protocols, benchmarks, coding agents, and adjacent infrastructure."
     },
     {
@@ -13568,7 +13568,7 @@
     {
       "repo": "lsdefine/GenericAgent",
       "url": "https://github.com/lsdefine/GenericAgent",
-      "stars": "13214",
+      "stars": "13218",
       "prior_category": "框架",
       "prior_unclassified": "false",
       "final_category": "框架/framework",
@@ -13577,7 +13577,7 @@
       "stack": "Python/Self-Evolving Agent/Skill Tree Runtime",
       "time_slice": "2026-06",
       "content_timestamp": "2026-07-01",
-      "evidence": "GitHub metadata packet on 2026-07-01 showed 13,214 stars, 1,528 forks, 894 commits, 93 open issues, 65 open pull requests, and positioning consistent with evolution / tool-module.",
+      "evidence": "GitHub metadata packet on 2026-07-01 showed 13,218 stars, 1,527 forks, 894 commits, 93 open issues, 65 open pull requests, and positioning consistent with evolution / tool-module.",
       "description": "GenericAgent is a minimal self-evolving autonomous agent framework that grows a skill tree from a small seed loop instead of preloading a large fixed procedure library."
     },
     {
@@ -13943,7 +13943,7 @@
     {
       "repo": "stanford-iris-lab/meta-harness",
       "url": "https://github.com/stanford-iris-lab/meta-harness",
-      "stars": "1175",
+      "stars": "1177",
       "prior_category": "-",
       "prior_unclassified": "true",
       "final_category": "框架/framework",
@@ -13952,7 +13952,7 @@
       "stack": "Python/Harness Search/Benchmark Scaffold Evolution",
       "time_slice": "2026-06",
       "content_timestamp": "2026-07-01",
-      "evidence": "GitHub metadata packet on 2026-07-01 showed 1,175 stars, 113 forks, 11 commits, 5 open issues, 0 open pull requests, and positioning consistent with evolution / agent-evolution-infra.",
+      "evidence": "GitHub metadata packet on 2026-07-01 showed 1,177 stars, 113 forks, 11 commits, 5 open issues, 0 open pull requests, and positioning consistent with evolution / agent-evolution-infra.",
       "description": "Meta-Harness provides reference code for automated search over model harnesses, including terminal benchmark scaffold evolution and text-classification memory-system search."
     },
     {
@@ -15220,7 +15220,7 @@
     {
       "repo": "EvoMap/awesome-agent-evolution",
       "url": "https://github.com/EvoMap/awesome-agent-evolution",
-      "stars": "147",
+      "stars": "149",
       "prior_category": "工具",
       "prior_unclassified": "false",
       "final_category": "工具/tool",
@@ -15229,7 +15229,7 @@
       "stack": "JavaScript/Shell/Curated Taxonomy Pipeline",
       "time_slice": "2026-06",
       "content_timestamp": "2026-07-01",
-      "evidence": "GitHub metadata packet on 2026-07-01 showed 147 stars, 20 forks, 68 commits, 8 open issues, 1 open pull requests, and positioning consistent with evolution / resource-index.",
+      "evidence": "GitHub metadata packet on 2026-07-01 showed 149 stars, 20 forks, 68 commits, 8 open issues, 1 open pull requests, and positioning consistent with evolution / resource-index.",
       "description": "EvoMap/awesome-agent-evolution is a curated awesome list covering self-evolution, memory, protocols, benchmarks, coding agents, and adjacent infrastructure."
     },
     {
@@ -15880,7 +15880,7 @@
     {
       "repo": "lsdefine/GenericAgent",
       "url": "https://github.com/lsdefine/GenericAgent",
-      "stars": "13214",
+      "stars": "13218",
       "prior_category": "框架",
       "prior_unclassified": "false",
       "final_category": "框架/framework",
@@ -15889,7 +15889,7 @@
       "stack": "Python/Self-Evolving Agent/Skill Tree Runtime",
       "time_slice": "2026-06",
       "content_timestamp": "2026-07-01",
-      "evidence": "GitHub metadata packet on 2026-07-01 showed 13,214 stars, 1,528 forks, 894 commits, 93 open issues, 65 open pull requests, and positioning consistent with evolution / tool-module.",
+      "evidence": "GitHub metadata packet on 2026-07-01 showed 13,218 stars, 1,527 forks, 894 commits, 93 open issues, 65 open pull requests, and positioning consistent with evolution / tool-module.",
       "description": "GenericAgent is a minimal self-evolving autonomous agent framework that grows a skill tree from a small seed loop instead of preloading a large fixed procedure library."
     },
     {
@@ -16255,13 +16255,13 @@
     {
       "repo": "NousResearch/hermes-agent",
       "url": "https://github.com/NousResearch/hermes-agent",
-      "stars": "206418",
+      "stars": "206580",
       "prior_category": "-",
       "final_category": "框架/framework",
       "function_tag": "framework-runtime",
       "base_theme": "framework",
       "stack": "Python/TypeScript/Memory/Skills/Messaging-Agent Runtime",
-      "evidence": "GitHub metadata packet on 2026-07-01 showed 206,418 stars, 37,325 forks, 13,785 commits, 8,165 open issues, 16,570 open pull requests, and positioning consistent with framework / framework-runtime.",
+      "evidence": "GitHub metadata packet on 2026-07-01 showed 206,580 stars, 37,373 forks, 13,844 commits, 8,169 open issues, 16,570 open pull requests, and positioning consistent with framework / framework-runtime.",
       "description": "Hermes Agent is a self-improving personal-agent runtime that combines memory, skill creation, session search, user modeling, messaging gateways, and scheduled automations in one user-facing system.",
       "prior_unclassified": "true",
       "time_slice": "2026-06",
@@ -16825,7 +16825,7 @@
     {
       "repo": "stanford-iris-lab/meta-harness",
       "url": "https://github.com/stanford-iris-lab/meta-harness",
-      "stars": "1175",
+      "stars": "1177",
       "prior_category": "-",
       "prior_unclassified": "true",
       "final_category": "框架/framework",
@@ -16834,7 +16834,7 @@
       "stack": "Python/Harness Search/Benchmark Scaffold Evolution",
       "time_slice": "2026-06",
       "content_timestamp": "2026-07-01",
-      "evidence": "GitHub metadata packet on 2026-07-01 showed 1,175 stars, 113 forks, 11 commits, 5 open issues, 0 open pull requests, and positioning consistent with evolution / agent-evolution-infra.",
+      "evidence": "GitHub metadata packet on 2026-07-01 showed 1,177 stars, 113 forks, 11 commits, 5 open issues, 0 open pull requests, and positioning consistent with evolution / agent-evolution-infra.",
       "description": "Meta-Harness provides reference code for automated search over model harnesses, including terminal benchmark scaffold evolution and text-classification memory-system search."
     },
     {
@@ -17389,7 +17389,7 @@
         "head": "80945ed"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -17463,7 +17463,7 @@
         "head": "e8c4e3c"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -17530,7 +17530,7 @@
         "head": "218cf0e"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -17596,7 +17596,7 @@
         "head": "a5a8db8"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -17659,7 +17659,7 @@
         "head": "9a206d4"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -17724,7 +17724,7 @@
         "head": "c188ce1"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -17788,7 +17788,7 @@
         "head": "c077959"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -17986,7 +17986,7 @@
         "head": "a76bdce"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -18051,7 +18051,7 @@
         "head": "c844e14"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 0,
         "commit_month_counts": [],
         "tags_total": 0,
@@ -18111,7 +18111,7 @@
         "head": "2702bee"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -18176,7 +18176,7 @@
         "head": "cc53f27"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 0,
         "commit_month_counts": [],
         "tags_total": 0,
@@ -18236,7 +18236,7 @@
         "head": "9e0d842"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -18301,7 +18301,7 @@
         "head": "46f7452"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -18367,7 +18367,7 @@
         "head": "11cdf46"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -18432,7 +18432,7 @@
         "head": "127a0fa"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -18497,7 +18497,7 @@
         "head": "179c20b"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -18563,7 +18563,7 @@
         "head": "6fb3f96"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -18628,7 +18628,7 @@
         "head": "027ecf0"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -18693,7 +18693,7 @@
         "head": "1d38051"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -18758,7 +18758,7 @@
         "head": "82b3872"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -18823,7 +18823,7 @@
         "head": "0f4f3bb"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -18888,7 +18888,7 @@
         "head": "3515cb0"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -18953,7 +18953,7 @@
         "head": "80bb343"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -19015,7 +19015,7 @@
         "head": "f90c4bd"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -19078,7 +19078,7 @@
         "head": "6dce182"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -19141,7 +19141,7 @@
         "head": "8e4833e"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -19203,7 +19203,7 @@
         "head": "94caff3"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -19265,7 +19265,7 @@
         "head": "fc6d087"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -19329,7 +19329,7 @@
         "head": "f542ce4"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -19392,7 +19392,7 @@
         "head": "e37205f"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -19455,7 +19455,7 @@
         "head": "0c8b452"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -19518,7 +19518,7 @@
         "head": "91479af"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -19580,7 +19580,7 @@
         "head": "a6ef587"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -19642,7 +19642,7 @@
         "head": "a198a9c"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -19705,7 +19705,7 @@
         "head": "617a3b0"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -19768,7 +19768,7 @@
         "head": "8a96fd3"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -19830,7 +19830,7 @@
         "head": "83089d1"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -19902,7 +19902,7 @@
         "head": "6732112"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 0,
         "commit_month_counts": [],
         "tags_total": 0,
@@ -19959,7 +19959,7 @@
         "head": "c017544"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -20021,7 +20021,7 @@
         "head": "45c630c"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -20083,7 +20083,7 @@
         "head": "fbaa79f"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -20146,7 +20146,7 @@
         "head": "e3b3c52"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -20209,7 +20209,7 @@
         "head": "662b5b5"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -20313,7 +20313,7 @@
         "head": "d1e4a10"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -20376,7 +20376,7 @@
         "head": "7a15396"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -20438,7 +20438,7 @@
         "head": "5e4c333"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -20501,7 +20501,7 @@
         "head": "3515cb0"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -20606,7 +20606,7 @@
         "head": "0f5ed34"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -20671,7 +20671,7 @@
         "head": "5081d19"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -20736,7 +20736,7 @@
         "head": "f50307a"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -20801,7 +20801,7 @@
         "head": "b23950d"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -20866,7 +20866,7 @@
         "head": "ff2e464"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -20931,7 +20931,7 @@
         "head": "c3c1982"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -20996,7 +20996,7 @@
         "head": "dfb9298"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -21070,7 +21070,7 @@
         "head": "a6747d1"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 0,
         "commit_month_counts": [],
         "tags_total": 0,
@@ -21130,7 +21130,7 @@
         "head": "473c945"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -21195,7 +21195,7 @@
         "head": "18b073a"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -21260,7 +21260,7 @@
         "head": "5eef689"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -21325,7 +21325,7 @@
         "head": "b355e7c"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -21391,7 +21391,7 @@
         "head": "3660bc0"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -21467,7 +21467,7 @@
         "head": "ba04e99"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -21532,7 +21532,7 @@
         "head": "51415e14"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -21597,7 +21597,7 @@
         "head": "49de16c"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -21661,7 +21661,7 @@
         "head": "55afd29"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -21726,7 +21726,7 @@
         "head": "f7bbbb2"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -21791,7 +21791,7 @@
         "head": "705623c"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -21857,7 +21857,7 @@
         "head": "dce0468"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -21922,7 +21922,7 @@
         "head": "d04373f"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -21987,7 +21987,7 @@
         "head": "91c8e5e"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -22052,7 +22052,7 @@
         "head": "b7a2005"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -22117,7 +22117,7 @@
         "head": "fa8930e"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -22182,7 +22182,7 @@
         "head": "f8025c9"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -22256,7 +22256,7 @@
         "head": "3cd5c84"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -22321,7 +22321,7 @@
         "head": "9eb9328"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -22386,7 +22386,7 @@
         "head": "488b745"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -22497,7 +22497,7 @@
         "head": "6819d0b"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -24355,7 +24355,7 @@
         "benchmark",
         "outer-loop search"
       ],
-      "site_stars": 1175,
+      "site_stars": 1177,
       "site_forks": 113,
       "license": "MIT",
       "lastPushed": "2026-04-29T16:39:58Z",
@@ -24384,7 +24384,7 @@
       "in_classification": true,
       "classification_category": "框架/framework",
       "classification_function_tag": "agent-evolution-infra",
-      "classification_evidence": "GitHub metadata packet on 2026-07-01 showed 1,175 stars, 113 forks, 11 commits, 5 open issues, 0 open pull requests, and positioning consistent with evolution / agent-evolution-infra.",
+      "classification_evidence": "GitHub metadata packet on 2026-07-01 showed 1,177 stars, 113 forks, 11 commits, 5 open issues, 0 open pull requests, and positioning consistent with evolution / agent-evolution-infra.",
       "raw_time_slice": "2026-06",
       "classified_theme": "evolution",
       "evolution_focused": true
@@ -31541,7 +31541,7 @@
         "skills",
         "transcripts"
       ],
-      "site_stars": 1256,
+      "site_stars": 1257,
       "site_forks": 143,
       "license": "MIT",
       "lastPushed": "2026-06-02T21:35:43Z",
@@ -31566,7 +31566,7 @@
       "in_classification": true,
       "classification_category": "评测/evaluation",
       "classification_function_tag": "benchmark-eval",
-      "classification_evidence": "GitHub metadata packet on 2026-07-01 showed 1,256 stars, 143 forks, 383 commits, 21 open issues, 0 open pull requests, and positioning consistent with benchmark / benchmark-eval.",
+      "classification_evidence": "GitHub metadata packet on 2026-07-01 showed 1,257 stars, 143 forks, 383 commits, 21 open issues, 0 open pull requests, and positioning consistent with benchmark / benchmark-eval.",
       "raw_time_slice": "2026-06",
       "classified_theme": "benchmark",
       "evolution_focused": false
@@ -31634,7 +31634,7 @@
         "benchmark",
         "agent-swarm"
       ],
-      "site_stars": 147,
+      "site_stars": 149,
       "site_forks": 20,
       "license": "NOASSERTION",
       "lastPushed": "2026-06-29T12:58:33Z",
@@ -31663,7 +31663,7 @@
       "in_classification": true,
       "classification_category": "工具/tool",
       "classification_function_tag": "resource-index",
-      "classification_evidence": "GitHub metadata packet on 2026-07-01 showed 147 stars, 20 forks, 68 commits, 8 open issues, 1 open pull requests, and positioning consistent with evolution / resource-index.",
+      "classification_evidence": "GitHub metadata packet on 2026-07-01 showed 149 stars, 20 forks, 68 commits, 8 open issues, 1 open pull requests, and positioning consistent with evolution / resource-index.",
       "raw_time_slice": "2026-06",
       "classified_theme": "evolution",
       "evolution_focused": true
@@ -32393,10 +32393,10 @@
         "mcp",
         "compounding-memory"
       ],
-      "site_stars": 562,
+      "site_stars": 565,
       "site_forks": 63,
       "license": "MIT",
-      "lastPushed": "2026-06-30T20:30:47Z",
+      "lastPushed": "2026-07-01T03:08:57Z",
       "localPath": "raw-github/desplega-ai_agent-swarm.md",
       "local_git": null,
       "local_git_history_24m": null,
@@ -32422,7 +32422,7 @@
       "in_classification": true,
       "classification_category": "框架/framework",
       "classification_function_tag": "framework-runtime",
-      "classification_evidence": "GitHub metadata packet on 2026-07-01 showed 562 stars, 63 forks, 1,713 commits, 1 open issues, 2 open pull requests, and positioning consistent with agent-swarm / framework-runtime.",
+      "classification_evidence": "GitHub metadata packet on 2026-07-01 showed 565 stars, 63 forks, 1,716 commits, 1 open issues, 6 open pull requests, and positioning consistent with agent-swarm / framework-runtime.",
       "raw_time_slice": "2026-06",
       "classified_theme": "agent-swarm",
       "evolution_focused": false
@@ -32725,10 +32725,10 @@
         "messaging",
         "automation"
       ],
-      "site_stars": 206418,
-      "site_forks": 37325,
+      "site_stars": 206580,
+      "site_forks": 37373,
       "license": "MIT",
-      "lastPushed": "2026-06-30T20:54:13Z",
+      "lastPushed": "2026-07-01T03:08:23Z",
       "localPath": "raw-github/nousresearch_hermes-agent.md",
       "local_git": null,
       "local_git_history_24m": null,
@@ -32750,7 +32750,7 @@
       "in_classification": true,
       "classification_category": "框架/framework",
       "classification_function_tag": "framework-runtime",
-      "classification_evidence": "GitHub metadata packet on 2026-07-01 showed 206,418 stars, 37,325 forks, 13,785 commits, 8,165 open issues, 16,570 open pull requests, and positioning consistent with framework / framework-runtime.",
+      "classification_evidence": "GitHub metadata packet on 2026-07-01 showed 206,580 stars, 37,373 forks, 13,844 commits, 8,169 open issues, 16,570 open pull requests, and positioning consistent with framework / framework-runtime.",
       "raw_time_slice": "2026-06",
       "classified_theme": "framework",
       "evolution_focused": true
@@ -32769,8 +32769,8 @@
         "autonomous-agent",
         "token-efficiency"
       ],
-      "site_stars": 13214,
-      "site_forks": 1528,
+      "site_stars": 13218,
+      "site_forks": 1527,
       "license": "MIT",
       "lastPushed": "2026-06-30T10:33:54Z",
       "localPath": "raw-github/lsdefine_genericagent.md",
@@ -32794,7 +32794,7 @@
       "in_classification": true,
       "classification_category": "框架/framework",
       "classification_function_tag": "tool-module",
-      "classification_evidence": "GitHub metadata packet on 2026-07-01 showed 13,214 stars, 1,528 forks, 894 commits, 93 open issues, 65 open pull requests, and positioning consistent with evolution / tool-module.",
+      "classification_evidence": "GitHub metadata packet on 2026-07-01 showed 13,218 stars, 1,527 forks, 894 commits, 93 open issues, 65 open pull requests, and positioning consistent with evolution / tool-module.",
       "raw_time_slice": "2026-06",
       "classified_theme": "evolution",
       "evolution_focused": true
@@ -32813,10 +32813,10 @@
         "skills",
         "runtime"
       ],
-      "site_stars": 381163,
-      "site_forks": 79845,
+      "site_stars": 381197,
+      "site_forks": 79855,
       "license": "NOASSERTION",
-      "lastPushed": "2026-06-30T20:58:02Z",
+      "lastPushed": "2026-07-01T03:03:15Z",
       "localPath": "raw-github/openclaw_openclaw.md",
       "local_git": null,
       "local_git_history_24m": null,
@@ -32838,7 +32838,7 @@
       "in_classification": true,
       "classification_category": "应用/application",
       "classification_function_tag": "framework-runtime",
-      "classification_evidence": "GitHub metadata packet on 2026-07-01 showed 381,163 stars, 79,845 forks, 62,787 commits, 3,415 open issues, 3,320 open pull requests, and positioning consistent with framework / framework-runtime.",
+      "classification_evidence": "GitHub metadata packet on 2026-07-01 showed 381,197 stars, 79,855 forks, 62,876 commits, 3,417 open issues, 3,286 open pull requests, and positioning consistent with framework / framework-runtime.",
       "raw_time_slice": "2026-06",
       "classified_theme": "framework",
       "evolution_focused": false
@@ -32857,10 +32857,10 @@
         "methodology",
         "worktrees"
       ],
-      "site_stars": 242403,
-      "site_forks": 21508,
+      "site_stars": 242637,
+      "site_forks": 21528,
       "license": "MIT",
-      "lastPushed": "2026-06-30T20:45:56Z",
+      "lastPushed": "2026-07-01T00:48:33Z",
       "localPath": "raw-github/obra_superpowers.md",
       "local_git": null,
       "local_git_history_24m": null,
@@ -32882,7 +32882,7 @@
       "in_classification": true,
       "classification_category": "工具/tool",
       "classification_function_tag": "skill-orchestration",
-      "classification_evidence": "GitHub metadata packet on 2026-07-01 showed 242,403 stars, 21,508 forks, 618 commits, 142 open issues, 156 open pull requests, and positioning consistent with skill / skill-orchestration.",
+      "classification_evidence": "GitHub metadata packet on 2026-07-01 showed 242,637 stars, 21,528 forks, 618 commits, 142 open issues, 155 open pull requests, and positioning consistent with skill / skill-orchestration.",
       "raw_time_slice": "2026-06",
       "classified_theme": "skill",
       "evolution_focused": false
@@ -32901,8 +32901,8 @@
         "knowledge-graph",
         "continuity"
       ],
-      "site_stars": 24355,
-      "site_forks": 1998,
+      "site_stars": 24366,
+      "site_forks": 2001,
       "license": "Apache-2.0",
       "lastPushed": "2026-06-29T06:13:48Z",
       "localPath": "raw-github/rohitg00_agentmemory.md",
@@ -32926,7 +32926,7 @@
       "in_classification": true,
       "classification_category": "工具/tool",
       "classification_function_tag": "tool-module",
-      "classification_evidence": "GitHub metadata packet on 2026-07-01 showed 24,355 stars, 1,998 forks, 463 commits, 166 open issues, 181 open pull requests, and positioning consistent with memory / tool-module.",
+      "classification_evidence": "GitHub metadata packet on 2026-07-01 showed 24,366 stars, 2,001 forks, 463 commits, 166 open issues, 181 open pull requests, and positioning consistent with memory / tool-module.",
       "raw_time_slice": "2026-06",
       "classified_theme": "memory",
       "evolution_focused": false
@@ -32947,10 +32947,10 @@
         "skills",
         "runtime"
       ],
-      "site_stars": 381163,
-      "site_forks": 79845,
+      "site_stars": 381197,
+      "site_forks": 79855,
       "license": "NOASSERTION",
-      "lastPushed": "2026-06-30T20:58:02Z",
+      "lastPushed": "2026-07-01T03:03:15Z",
       "localPath": "raw-github/openclaw_openclaw.md",
       "local_git": null,
       "local_git_history_24m": null,
@@ -32972,7 +32972,7 @@
       "in_classification": true,
       "classification_category": "应用/application",
       "classification_function_tag": "framework-runtime",
-      "classification_evidence": "GitHub metadata packet on 2026-07-01 showed 381,163 stars, 79,845 forks, 62,787 commits, 3,415 open issues, 3,320 open pull requests, and positioning consistent with framework / framework-runtime.",
+      "classification_evidence": "GitHub metadata packet on 2026-07-01 showed 381,197 stars, 79,855 forks, 62,876 commits, 3,417 open issues, 3,286 open pull requests, and positioning consistent with framework / framework-runtime.",
       "raw_time_slice": "2026-06",
       "classified_theme": "framework",
       "evolution_focused": false
@@ -32991,10 +32991,10 @@
         "methodology",
         "worktrees"
       ],
-      "site_stars": 242403,
-      "site_forks": 21508,
+      "site_stars": 242637,
+      "site_forks": 21528,
       "license": "MIT",
-      "lastPushed": "2026-06-30T20:45:56Z",
+      "lastPushed": "2026-07-01T00:48:33Z",
       "localPath": "raw-github/obra_superpowers.md",
       "local_git": null,
       "local_git_history_24m": null,
@@ -33016,7 +33016,7 @@
       "in_classification": true,
       "classification_category": "工具/tool",
       "classification_function_tag": "skill-orchestration",
-      "classification_evidence": "GitHub metadata packet on 2026-07-01 showed 242,403 stars, 21,508 forks, 618 commits, 142 open issues, 156 open pull requests, and positioning consistent with skill / skill-orchestration.",
+      "classification_evidence": "GitHub metadata packet on 2026-07-01 showed 242,637 stars, 21,528 forks, 618 commits, 142 open issues, 155 open pull requests, and positioning consistent with skill / skill-orchestration.",
       "raw_time_slice": "2026-06",
       "classified_theme": "skill",
       "evolution_focused": false
@@ -33035,10 +33035,10 @@
         "messaging",
         "automation"
       ],
-      "site_stars": 206418,
-      "site_forks": 37325,
+      "site_stars": 206580,
+      "site_forks": 37373,
       "license": "MIT",
-      "lastPushed": "2026-06-30T20:54:13Z",
+      "lastPushed": "2026-07-01T03:08:23Z",
       "localPath": "raw-github/nousresearch_hermes-agent.md",
       "local_git": null,
       "local_git_history_24m": null,
@@ -33060,7 +33060,7 @@
       "in_classification": true,
       "classification_category": "框架/framework",
       "classification_function_tag": "framework-runtime",
-      "classification_evidence": "GitHub metadata packet on 2026-07-01 showed 206,418 stars, 37,325 forks, 13,785 commits, 8,165 open issues, 16,570 open pull requests, and positioning consistent with framework / framework-runtime.",
+      "classification_evidence": "GitHub metadata packet on 2026-07-01 showed 206,580 stars, 37,373 forks, 13,844 commits, 8,169 open issues, 16,570 open pull requests, and positioning consistent with framework / framework-runtime.",
       "raw_time_slice": "2026-06",
       "classified_theme": "framework",
       "evolution_focused": true
@@ -33091,7 +33091,7 @@
         "head": "127a0fa"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -33156,7 +33156,7 @@
         "head": "91c8e5e"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -33222,7 +33222,7 @@
         "head": "3660bc0"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -33298,7 +33298,7 @@
         "head": "ba04e99"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -33363,7 +33363,7 @@
         "head": "473c945"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -33428,7 +33428,7 @@
         "head": "51415e14"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -33493,7 +33493,7 @@
         "head": "3515cb0"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -33559,7 +33559,7 @@
         "head": "11cdf46"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -33672,7 +33672,7 @@
         "head": "027ecf0"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -33737,7 +33737,7 @@
         "head": "49de16c"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -33802,7 +33802,7 @@
         "head": "179c20b"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -33868,7 +33868,7 @@
         "head": "3515cb0"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -34026,7 +34026,7 @@
         "head": "b7a2005"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -34092,7 +34092,7 @@
         "head": "6fb3f96"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -34157,7 +34157,7 @@
         "head": "18b073a"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -34222,7 +34222,7 @@
         "head": "82b3872"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -34335,7 +34335,7 @@
         "head": "b23950d"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -34388,8 +34388,8 @@
         "knowledge-graph",
         "continuity"
       ],
-      "site_stars": 24355,
-      "site_forks": 1998,
+      "site_stars": 24366,
+      "site_forks": 2001,
       "license": "Apache-2.0",
       "lastPushed": "2026-06-29T06:13:48Z",
       "localPath": "raw-github/rohitg00_agentmemory.md",
@@ -34413,7 +34413,7 @@
       "in_classification": true,
       "classification_category": "工具/tool",
       "classification_function_tag": "tool-module",
-      "classification_evidence": "GitHub metadata packet on 2026-07-01 showed 24,355 stars, 1,998 forks, 463 commits, 166 open issues, 181 open pull requests, and positioning consistent with memory / tool-module.",
+      "classification_evidence": "GitHub metadata packet on 2026-07-01 showed 24,366 stars, 2,001 forks, 463 commits, 166 open issues, 181 open pull requests, and positioning consistent with memory / tool-module.",
       "raw_time_slice": "2026-06",
       "classified_theme": "memory",
       "evolution_focused": false
@@ -34584,7 +34584,7 @@
         "head": "d04373f"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -34649,7 +34649,7 @@
         "head": "80bb343"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -34807,7 +34807,7 @@
         "head": "fa8930e"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -34872,7 +34872,7 @@
         "head": "0f4f3bb"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -34985,7 +34985,7 @@
         "head": "dfb9298"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -35202,7 +35202,7 @@
         "head": "1d38051"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -35267,7 +35267,7 @@
         "head": "c3c1982"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -35332,7 +35332,7 @@
         "head": "3cd5c84"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -35445,7 +35445,7 @@
         "head": "a6747d1"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 0,
         "commit_month_counts": [],
         "tags_total": 0,
@@ -35493,8 +35493,8 @@
         "autonomous-agent",
         "token-efficiency"
       ],
-      "site_stars": 13214,
-      "site_forks": 1528,
+      "site_stars": 13218,
+      "site_forks": 1527,
       "license": "MIT",
       "lastPushed": "2026-06-30T10:33:54Z",
       "localPath": "raw-github/lsdefine_genericagent.md",
@@ -35518,7 +35518,7 @@
       "in_classification": true,
       "classification_category": "框架/framework",
       "classification_function_tag": "tool-module",
-      "classification_evidence": "GitHub metadata packet on 2026-07-01 showed 13,214 stars, 1,528 forks, 894 commits, 93 open issues, 65 open pull requests, and positioning consistent with evolution / tool-module.",
+      "classification_evidence": "GitHub metadata packet on 2026-07-01 showed 13,218 stars, 1,527 forks, 894 commits, 93 open issues, 65 open pull requests, and positioning consistent with evolution / tool-module.",
       "raw_time_slice": "2026-06",
       "classified_theme": "evolution",
       "evolution_focused": true
@@ -35549,7 +35549,7 @@
         "head": "488b745"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -35758,7 +35758,7 @@
         "head": "5eef689"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -35823,7 +35823,7 @@
         "head": "9eb9328"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -35981,7 +35981,7 @@
         "head": "6732112"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 0,
         "commit_month_counts": [],
         "tags_total": 0,
@@ -36038,7 +36038,7 @@
         "head": "b355e7c"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -36105,7 +36105,7 @@
         "head": "f542ce4"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -36214,7 +36214,7 @@
         "head": "80945ed"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -36289,7 +36289,7 @@
         "head": "8a96fd3"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -36351,7 +36351,7 @@
         "head": "e8c4e3c"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -36464,7 +36464,7 @@
         "head": "f50307a"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -36529,7 +36529,7 @@
         "head": "0f5ed34"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -36594,7 +36594,7 @@
         "head": "f90c4bd"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -36848,7 +36848,7 @@
         "head": "ff2e464"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -36914,7 +36914,7 @@
         "head": "617a3b0"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -37024,7 +37024,7 @@
         "head": "5081d19"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -37229,7 +37229,7 @@
         "head": "f8025c9"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -37401,7 +37401,7 @@
         "head": "218cf0e"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -37514,7 +37514,7 @@
         "head": "d1e4a10"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -37624,7 +37624,7 @@
         "head": "f7bbbb2"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -37689,7 +37689,7 @@
         "head": "dce0468"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -37802,7 +37802,7 @@
         "head": "705623c"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -38149,7 +38149,7 @@
         "head": "2702bee"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -38263,7 +38263,7 @@
         "head": "a5a8db8"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -38508,7 +38508,7 @@
         "skills",
         "transcripts"
       ],
-      "site_stars": 1256,
+      "site_stars": 1257,
       "site_forks": 143,
       "license": "MIT",
       "lastPushed": "2026-06-02T21:35:43Z",
@@ -38533,7 +38533,7 @@
       "in_classification": true,
       "classification_category": "评测/evaluation",
       "classification_function_tag": "benchmark-eval",
-      "classification_evidence": "GitHub metadata packet on 2026-07-01 showed 1,256 stars, 143 forks, 383 commits, 21 open issues, 0 open pull requests, and positioning consistent with benchmark / benchmark-eval.",
+      "classification_evidence": "GitHub metadata packet on 2026-07-01 showed 1,257 stars, 143 forks, 383 commits, 21 open issues, 0 open pull requests, and positioning consistent with benchmark / benchmark-eval.",
       "raw_time_slice": "2026-06",
       "classified_theme": "benchmark",
       "evolution_focused": false
@@ -38565,7 +38565,7 @@
         "head": "7a15396"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -38674,7 +38674,7 @@
         "head": "55afd29"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -38740,7 +38740,7 @@
         "head": "8e4833e"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -38790,7 +38790,7 @@
         "benchmark",
         "outer-loop search"
       ],
-      "site_stars": 1175,
+      "site_stars": 1177,
       "site_forks": 113,
       "license": "MIT",
       "lastPushed": "2026-04-29T16:39:58Z",
@@ -38819,7 +38819,7 @@
       "in_classification": true,
       "classification_category": "框架/framework",
       "classification_function_tag": "agent-evolution-infra",
-      "classification_evidence": "GitHub metadata packet on 2026-07-01 showed 1,175 stars, 113 forks, 11 commits, 5 open issues, 0 open pull requests, and positioning consistent with evolution / agent-evolution-infra.",
+      "classification_evidence": "GitHub metadata packet on 2026-07-01 showed 1,177 stars, 113 forks, 11 commits, 5 open issues, 0 open pull requests, and positioning consistent with evolution / agent-evolution-infra.",
       "raw_time_slice": "2026-06",
       "classified_theme": "evolution",
       "evolution_focused": true
@@ -38946,7 +38946,7 @@
         "head": "cc53f27"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 0,
         "commit_month_counts": [],
         "tags_total": 0,
@@ -39054,7 +39054,7 @@
         "head": "83089d1"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -39126,7 +39126,7 @@
         "head": "e37205f"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -39424,7 +39424,7 @@
         "head": "9a206d4"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -39538,7 +39538,7 @@
         "head": "91479af"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -39600,7 +39600,7 @@
         "head": "6819d0b"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -39760,7 +39760,7 @@
         "head": "a76bdce"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -39873,7 +39873,7 @@
         "head": "c844e14"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 0,
         "commit_month_counts": [],
         "tags_total": 0,
@@ -40251,10 +40251,10 @@
         "mcp",
         "compounding-memory"
       ],
-      "site_stars": 562,
+      "site_stars": 565,
       "site_forks": 63,
       "license": "MIT",
-      "lastPushed": "2026-06-30T20:30:47Z",
+      "lastPushed": "2026-07-01T03:08:57Z",
       "localPath": "raw-github/desplega-ai_agent-swarm.md",
       "local_git": null,
       "local_git_history_24m": null,
@@ -40280,7 +40280,7 @@
       "in_classification": true,
       "classification_category": "框架/framework",
       "classification_function_tag": "framework-runtime",
-      "classification_evidence": "GitHub metadata packet on 2026-07-01 showed 562 stars, 63 forks, 1,713 commits, 1 open issues, 2 open pull requests, and positioning consistent with agent-swarm / framework-runtime.",
+      "classification_evidence": "GitHub metadata packet on 2026-07-01 showed 565 stars, 63 forks, 1,716 commits, 1 open issues, 6 open pull requests, and positioning consistent with agent-swarm / framework-runtime.",
       "raw_time_slice": "2026-06",
       "classified_theme": "agent-swarm",
       "evolution_focused": false
@@ -40593,7 +40593,7 @@
         "head": "5e4c333"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -40656,7 +40656,7 @@
         "head": "6dce182"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -40719,7 +40719,7 @@
         "head": "662b5b5"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -41353,7 +41353,7 @@
         "head": "a198a9c"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -41749,7 +41749,7 @@
         "head": "94caff3"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -41811,7 +41811,7 @@
         "head": "c017544"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -41873,7 +41873,7 @@
         "head": "fbaa79f"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -42031,7 +42031,7 @@
         "head": "c188ce1"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -42719,7 +42719,7 @@
         "head": "0c8b452"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -42781,7 +42781,7 @@
         "head": "fc6d087"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -42843,7 +42843,7 @@
         "head": "a6ef587"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -42905,7 +42905,7 @@
         "head": "45c630c"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -43290,7 +43290,7 @@
         "benchmark",
         "agent-swarm"
       ],
-      "site_stars": 147,
+      "site_stars": 149,
       "site_forks": 20,
       "license": "NOASSERTION",
       "lastPushed": "2026-06-29T12:58:33Z",
@@ -43319,7 +43319,7 @@
       "in_classification": true,
       "classification_category": "工具/tool",
       "classification_function_tag": "resource-index",
-      "classification_evidence": "GitHub metadata packet on 2026-07-01 showed 147 stars, 20 forks, 68 commits, 8 open issues, 1 open pull requests, and positioning consistent with evolution / resource-index.",
+      "classification_evidence": "GitHub metadata packet on 2026-07-01 showed 149 stars, 20 forks, 68 commits, 8 open issues, 1 open pull requests, and positioning consistent with evolution / resource-index.",
       "raw_time_slice": "2026-06",
       "classified_theme": "evolution",
       "evolution_focused": true
@@ -43398,7 +43398,7 @@
         "head": "9e0d842"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -43894,7 +43894,7 @@
         "head": "46f7452"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -44097,7 +44097,7 @@
         "head": "c077959"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -45117,7 +45117,7 @@
         "head": "e3b3c52"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -48528,7 +48528,7 @@
         "head": "c844e14"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 0,
         "commit_month_counts": [],
         "tags_total": 0,
@@ -48589,7 +48589,7 @@
         "head": "6fb3f96"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -48654,7 +48654,7 @@
         "head": "127a0fa"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -48719,7 +48719,7 @@
         "head": "1d38051"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -48786,7 +48786,7 @@
         "head": "218cf0e"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -48849,7 +48849,7 @@
         "head": "9a206d4"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -48914,7 +48914,7 @@
         "head": "46f7452"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -48980,7 +48980,7 @@
         "head": "11cdf46"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -49045,7 +49045,7 @@
         "head": "e8c4e3c"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -49110,7 +49110,7 @@
         "head": "82b3872"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -49175,7 +49175,7 @@
         "head": "027ecf0"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -49240,7 +49240,7 @@
         "head": "a76bdce"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -49305,7 +49305,7 @@
         "head": "179c20b"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -49370,7 +49370,7 @@
         "head": "cc53f27"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 0,
         "commit_month_counts": [],
         "tags_total": 0,
@@ -49430,7 +49430,7 @@
         "head": "3515cb0"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -49495,7 +49495,7 @@
         "head": "0f4f3bb"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -49560,7 +49560,7 @@
         "head": "2702bee"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -49625,7 +49625,7 @@
         "head": "9e0d842"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -49689,7 +49689,7 @@
         "head": "80945ed"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -49763,7 +49763,7 @@
         "head": "c188ce1"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -49827,7 +49827,7 @@
         "head": "c077959"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -49893,7 +49893,7 @@
         "head": "a5a8db8"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -50235,7 +50235,7 @@
         "head": "f50307a"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -50348,7 +50348,7 @@
         "head": "5eef689"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -50797,7 +50797,7 @@
         "head": "5e4c333"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -50860,7 +50860,7 @@
         "head": "6dce182"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -50923,7 +50923,7 @@
         "head": "7a15396"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -51082,7 +51082,7 @@
         "head": "e3b3c52"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -51575,7 +51575,7 @@
         "head": "6732112"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 0,
         "commit_month_counts": [],
         "tags_total": 0,
@@ -51775,7 +51775,7 @@
         "head": "94caff3"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -51885,7 +51885,7 @@
         "head": "d04373f"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -52142,7 +52142,7 @@
         "head": "488b745"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -52207,7 +52207,7 @@
         "head": "c017544"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -52269,7 +52269,7 @@
         "head": "f8025c9"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -52627,7 +52627,7 @@
         "head": "83089d1"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -53122,7 +53122,7 @@
         "head": "9eb9328"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -53332,7 +53332,7 @@
         "head": "8a96fd3"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -53428,10 +53428,10 @@
         "mcp",
         "compounding-memory"
       ],
-      "site_stars": 562,
+      "site_stars": 565,
       "site_forks": 63,
       "license": "MIT",
-      "lastPushed": "2026-06-30T20:30:47Z",
+      "lastPushed": "2026-07-01T03:08:57Z",
       "localPath": "raw-github/desplega-ai_agent-swarm.md",
       "local_git": null,
       "local_git_history_24m": null,
@@ -53457,7 +53457,7 @@
       "in_classification": true,
       "classification_category": "框架/framework",
       "classification_function_tag": "framework-runtime",
-      "classification_evidence": "GitHub metadata packet on 2026-07-01 showed 562 stars, 63 forks, 1,713 commits, 1 open issues, 2 open pull requests, and positioning consistent with agent-swarm / framework-runtime.",
+      "classification_evidence": "GitHub metadata packet on 2026-07-01 showed 565 stars, 63 forks, 1,716 commits, 1 open issues, 6 open pull requests, and positioning consistent with agent-swarm / framework-runtime.",
       "raw_time_slice": "2026-06",
       "classified_theme": "agent-swarm",
       "evolution_focused": false
@@ -53536,7 +53536,7 @@
         "head": "b355e7c"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -53794,7 +53794,7 @@
         "head": "e37205f"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -53858,7 +53858,7 @@
         "head": "f542ce4"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -53908,7 +53908,7 @@
         "benchmark",
         "agent-swarm"
       ],
-      "site_stars": 147,
+      "site_stars": 149,
       "site_forks": 20,
       "license": "NOASSERTION",
       "lastPushed": "2026-06-29T12:58:33Z",
@@ -53937,7 +53937,7 @@
       "in_classification": true,
       "classification_category": "工具/tool",
       "classification_function_tag": "resource-index",
-      "classification_evidence": "GitHub metadata packet on 2026-07-01 showed 147 stars, 20 forks, 68 commits, 8 open issues, 1 open pull requests, and positioning consistent with evolution / resource-index.",
+      "classification_evidence": "GitHub metadata packet on 2026-07-01 showed 149 stars, 20 forks, 68 commits, 8 open issues, 1 open pull requests, and positioning consistent with evolution / resource-index.",
       "raw_time_slice": "2026-06",
       "classified_theme": "evolution",
       "evolution_focused": true
@@ -54013,7 +54013,7 @@
         "head": "617a3b0"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -54075,7 +54075,7 @@
         "head": "a198a9c"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -54233,7 +54233,7 @@
         "head": "b7a2005"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -54346,7 +54346,7 @@
         "head": "0f5ed34"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -54507,7 +54507,7 @@
         "head": "0c8b452"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -54619,7 +54619,7 @@
         "head": "ba04e99"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -54924,7 +54924,7 @@
         "head": "3cd5c84"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -55134,7 +55134,7 @@
         "head": "91479af"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -56055,7 +56055,7 @@
         "head": "49de16c"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -56120,7 +56120,7 @@
         "head": "473c945"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -56461,8 +56461,8 @@
         "autonomous-agent",
         "token-efficiency"
       ],
-      "site_stars": 13214,
-      "site_forks": 1528,
+      "site_stars": 13218,
+      "site_forks": 1527,
       "license": "MIT",
       "lastPushed": "2026-06-30T10:33:54Z",
       "localPath": "raw-github/lsdefine_genericagent.md",
@@ -56486,7 +56486,7 @@
       "in_classification": true,
       "classification_category": "框架/framework",
       "classification_function_tag": "tool-module",
-      "classification_evidence": "GitHub metadata packet on 2026-07-01 showed 13,214 stars, 1,528 forks, 894 commits, 93 open issues, 65 open pull requests, and positioning consistent with evolution / tool-module.",
+      "classification_evidence": "GitHub metadata packet on 2026-07-01 showed 13,218 stars, 1,527 forks, 894 commits, 93 open issues, 65 open pull requests, and positioning consistent with evolution / tool-module.",
       "raw_time_slice": "2026-06",
       "classified_theme": "evolution",
       "evolution_focused": true
@@ -56516,7 +56516,7 @@
         "head": "55afd29"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -57633,7 +57633,7 @@
         "head": "51415e14"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -57878,10 +57878,10 @@
         "messaging",
         "automation"
       ],
-      "site_stars": 206418,
-      "site_forks": 37325,
+      "site_stars": 206580,
+      "site_forks": 37373,
       "license": "MIT",
-      "lastPushed": "2026-06-30T20:54:13Z",
+      "lastPushed": "2026-07-01T03:08:23Z",
       "localPath": "raw-github/nousresearch_hermes-agent.md",
       "local_git": null,
       "local_git_history_24m": null,
@@ -57903,7 +57903,7 @@
       "in_classification": true,
       "classification_category": "框架/framework",
       "classification_function_tag": "framework-runtime",
-      "classification_evidence": "GitHub metadata packet on 2026-07-01 showed 206,418 stars, 37,325 forks, 13,785 commits, 8,165 open issues, 16,570 open pull requests, and positioning consistent with framework / framework-runtime.",
+      "classification_evidence": "GitHub metadata packet on 2026-07-01 showed 206,580 stars, 37,373 forks, 13,844 commits, 8,169 open issues, 16,570 open pull requests, and positioning consistent with framework / framework-runtime.",
       "raw_time_slice": "2026-06",
       "classified_theme": "framework",
       "evolution_focused": true
@@ -58062,10 +58062,10 @@
         "methodology",
         "worktrees"
       ],
-      "site_stars": 242403,
-      "site_forks": 21508,
+      "site_stars": 242637,
+      "site_forks": 21528,
       "license": "MIT",
-      "lastPushed": "2026-06-30T20:45:56Z",
+      "lastPushed": "2026-07-01T00:48:33Z",
       "localPath": "raw-github/obra_superpowers.md",
       "local_git": null,
       "local_git_history_24m": null,
@@ -58087,7 +58087,7 @@
       "in_classification": true,
       "classification_category": "工具/tool",
       "classification_function_tag": "skill-orchestration",
-      "classification_evidence": "GitHub metadata packet on 2026-07-01 showed 242,403 stars, 21,508 forks, 618 commits, 142 open issues, 156 open pull requests, and positioning consistent with skill / skill-orchestration.",
+      "classification_evidence": "GitHub metadata packet on 2026-07-01 showed 242,637 stars, 21,528 forks, 618 commits, 142 open issues, 155 open pull requests, and positioning consistent with skill / skill-orchestration.",
       "raw_time_slice": "2026-06",
       "classified_theme": "skill",
       "evolution_focused": false
@@ -58165,7 +58165,7 @@
         "head": "91c8e5e"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -58326,7 +58326,7 @@
         "head": "3660bc0"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -58544,7 +58544,7 @@
         "head": "f90c4bd"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -58606,7 +58606,7 @@
         "head": "b23950d"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -59139,10 +59139,10 @@
         "skills",
         "runtime"
       ],
-      "site_stars": 381163,
-      "site_forks": 79845,
+      "site_stars": 381197,
+      "site_forks": 79855,
       "license": "NOASSERTION",
-      "lastPushed": "2026-06-30T20:58:02Z",
+      "lastPushed": "2026-07-01T03:03:15Z",
       "localPath": "raw-github/openclaw_openclaw.md",
       "local_git": null,
       "local_git_history_24m": null,
@@ -59164,7 +59164,7 @@
       "in_classification": true,
       "classification_category": "应用/application",
       "classification_function_tag": "framework-runtime",
-      "classification_evidence": "GitHub metadata packet on 2026-07-01 showed 381,163 stars, 79,845 forks, 62,787 commits, 3,415 open issues, 3,320 open pull requests, and positioning consistent with framework / framework-runtime.",
+      "classification_evidence": "GitHub metadata packet on 2026-07-01 showed 381,197 stars, 79,855 forks, 62,876 commits, 3,417 open issues, 3,286 open pull requests, and positioning consistent with framework / framework-runtime.",
       "raw_time_slice": "2026-06",
       "classified_theme": "framework",
       "evolution_focused": false
@@ -59244,7 +59244,7 @@
         "head": "3515cb0"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -59689,7 +59689,7 @@
         "head": "dfb9298"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -59799,7 +59799,7 @@
         "skills",
         "transcripts"
       ],
-      "site_stars": 1256,
+      "site_stars": 1257,
       "site_forks": 143,
       "license": "MIT",
       "lastPushed": "2026-06-02T21:35:43Z",
@@ -59824,7 +59824,7 @@
       "in_classification": true,
       "classification_category": "评测/evaluation",
       "classification_function_tag": "benchmark-eval",
-      "classification_evidence": "GitHub metadata packet on 2026-07-01 showed 1,256 stars, 143 forks, 383 commits, 21 open issues, 0 open pull requests, and positioning consistent with benchmark / benchmark-eval.",
+      "classification_evidence": "GitHub metadata packet on 2026-07-01 showed 1,257 stars, 143 forks, 383 commits, 21 open issues, 0 open pull requests, and positioning consistent with benchmark / benchmark-eval.",
       "raw_time_slice": "2026-06",
       "classified_theme": "benchmark",
       "evolution_focused": false
@@ -60328,7 +60328,7 @@
         "head": "18b073a"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -60381,8 +60381,8 @@
         "knowledge-graph",
         "continuity"
       ],
-      "site_stars": 24355,
-      "site_forks": 1998,
+      "site_stars": 24366,
+      "site_forks": 2001,
       "license": "Apache-2.0",
       "lastPushed": "2026-06-29T06:13:48Z",
       "localPath": "raw-github/rohitg00_agentmemory.md",
@@ -60406,7 +60406,7 @@
       "in_classification": true,
       "classification_category": "工具/tool",
       "classification_function_tag": "tool-module",
-      "classification_evidence": "GitHub metadata packet on 2026-07-01 showed 24,355 stars, 1,998 forks, 463 commits, 166 open issues, 181 open pull requests, and positioning consistent with memory / tool-module.",
+      "classification_evidence": "GitHub metadata packet on 2026-07-01 showed 24,366 stars, 2,001 forks, 463 commits, 166 open issues, 181 open pull requests, and positioning consistent with memory / tool-module.",
       "raw_time_slice": "2026-06",
       "classified_theme": "memory",
       "evolution_focused": false
@@ -60917,7 +60917,7 @@
         "head": "fc6d087"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -61027,7 +61027,7 @@
         "head": "a6747d1"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 0,
         "commit_month_counts": [],
         "tags_total": 0,
@@ -61267,7 +61267,7 @@
         "benchmark",
         "outer-loop search"
       ],
-      "site_stars": 1175,
+      "site_stars": 1177,
       "site_forks": 113,
       "license": "MIT",
       "lastPushed": "2026-04-29T16:39:58Z",
@@ -61296,7 +61296,7 @@
       "in_classification": true,
       "classification_category": "框架/framework",
       "classification_function_tag": "agent-evolution-infra",
-      "classification_evidence": "GitHub metadata packet on 2026-07-01 showed 1,175 stars, 113 forks, 11 commits, 5 open issues, 0 open pull requests, and positioning consistent with evolution / agent-evolution-infra.",
+      "classification_evidence": "GitHub metadata packet on 2026-07-01 showed 1,177 stars, 113 forks, 11 commits, 5 open issues, 0 open pull requests, and positioning consistent with evolution / agent-evolution-infra.",
       "raw_time_slice": "2026-06",
       "classified_theme": "evolution",
       "evolution_focused": true
@@ -61327,7 +61327,7 @@
         "head": "80bb343"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -61720,7 +61720,7 @@
         "head": "f7bbbb2"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -62025,7 +62025,7 @@
         "head": "d1e4a10"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -62135,7 +62135,7 @@
         "head": "c3c1982"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -62723,7 +62723,7 @@
         "head": "dce0468"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -62883,7 +62883,7 @@
         "head": "a6ef587"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -62946,7 +62946,7 @@
         "head": "8e4833e"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -63008,7 +63008,7 @@
         "head": "fbaa79f"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -63070,7 +63070,7 @@
         "head": "ff2e464"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -63135,7 +63135,7 @@
         "head": "705623c"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -63201,7 +63201,7 @@
         "head": "5081d19"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -63362,7 +63362,7 @@
         "head": "fa8930e"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -63476,7 +63476,7 @@
         "head": "662b5b5"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -63682,7 +63682,7 @@
         "head": "45c630c"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -63838,7 +63838,7 @@
         "head": "6819d0b"
       },
       "local_git_history_24m": {
-        "since": "2024-07-01",
+        "since": "2024-08-01",
         "commits_24m": 1,
         "commit_month_counts": [
           {
@@ -64073,13 +64073,13 @@
   "two_year_project_timeline": {
     "window": {
       "months": 24,
-      "start_month": "2024-07",
-      "end_month": "2026-06",
-      "reference_month": "2026-06"
+      "start_month": "2024-08",
+      "end_month": "2026-07",
+      "reference_month": "2026-07"
     },
     "coverage": {
-      "inside_window": 282,
-      "older_than_window": 18,
+      "inside_window": 281,
+      "older_than_window": 19,
       "future_window": 0,
       "unknown": 0
     },
@@ -64110,18 +64110,6 @@
       }
     ],
     "monthly_counts": [
-      {
-        "month": "2024-07",
-        "total": 1,
-        "source_counts": {
-          "github_created_at": 1,
-          "local_first_observed": 0,
-          "github_pushed_at": 0,
-          "site_last_pushed": 0,
-          "raw_content_timestamp": 0,
-          "raw_collected_at": 0
-        }
-      },
       {
         "month": "2024-08",
         "total": 1,
@@ -64388,12 +64376,24 @@
       },
       {
         "month": "2026-06",
-        "total": 75,
+        "total": 71,
         "source_counts": {
           "github_created_at": 0,
           "local_first_observed": 0,
           "github_pushed_at": 0,
-          "site_last_pushed": 75,
+          "site_last_pushed": 71,
+          "raw_content_timestamp": 0,
+          "raw_collected_at": 0
+        }
+      },
+      {
+        "month": "2026-07",
+        "total": 4,
+        "source_counts": {
+          "github_created_at": 0,
+          "local_first_observed": 0,
+          "github_pushed_at": 0,
+          "site_last_pushed": 4,
           "raw_content_timestamp": 0,
           "raw_collected_at": 0
         }
@@ -64403,9 +64403,9 @@
   "local_git_history_24m": {
     "window": {
       "months": 24,
-      "start_month": "2024-07",
-      "end_month": "2026-06",
-      "reference_month": "2026-06"
+      "start_month": "2024-08",
+      "end_month": "2026-07",
+      "reference_month": "2026-07"
     },
     "coverage": {
       "repositories_with_local_git": 76,
@@ -64418,10 +64418,6 @@
       "tags_24m": 5
     },
     "monthly_commit_counts": [
-      {
-        "month": "2024-07",
-        "count": 0
-      },
       {
         "month": "2024-08",
         "count": 1
@@ -64513,13 +64509,13 @@
       {
         "month": "2026-06",
         "count": 0
+      },
+      {
+        "month": "2026-07",
+        "count": 0
       }
     ],
     "monthly_tag_counts": [
-      {
-        "month": "2024-07",
-        "count": 0
-      },
       {
         "month": "2024-08",
         "count": 0
@@ -64611,6 +64607,10 @@
       {
         "month": "2026-06",
         "count": 0
+      },
+      {
+        "month": "2026-07",
+        "count": 0
       }
     ],
     "latest_tags": [
@@ -64648,7 +64648,7 @@
   },
   "ranking_method": {
     "name": "recency_weighted_current_value",
-    "reference_date": "2026-06-30T21:08:41.299Z",
+    "reference_date": "2026-07-01T03:10:20.272Z",
     "weights": {
       "time": 0.5,
       "mechanism": 0.2,
@@ -64687,8 +64687,8 @@
       "stars": 1440,
       "report": "projects/modelscope__agentevolver.md",
       "scores": {
-        "current_value": 80.34,
-        "time": 70.57,
+        "current_value": 80.32,
+        "time": 70.53,
         "mechanism": 100,
         "evidence": 100,
         "adoption": 56.6,
@@ -64715,8 +64715,8 @@
       "stars": 41,
       "report": "projects/zju_llm_safety__darwin.md",
       "scores": {
-        "current_value": 74.08,
-        "time": 88.45,
+        "current_value": 74.06,
+        "time": 88.41,
         "mechanism": 75,
         "evidence": 62,
         "adoption": 29.08,
@@ -64745,8 +64745,8 @@
       "stars": 43,
       "report": "projects/oppo_mente_lab__llm_self_judge.md",
       "scores": {
-        "current_value": 73.04,
-        "time": 81.29,
+        "current_value": 73.02,
+        "time": 81.25,
         "mechanism": 85,
         "evidence": 62,
         "adoption": 29.45,
@@ -64773,8 +64773,8 @@
       "stars": 6377,
       "report": "projects/algorithmicsuperintelligence__openevolve.md",
       "scores": {
-        "current_value": 68.02,
-        "time": 52.01,
+        "current_value": 68,
+        "time": 51.96,
         "mechanism": 79,
         "evidence": 100,
         "adoption": 68.17,
@@ -64800,8 +64800,8 @@
       "stars": 77,
       "report": "projects/jarvispei__scope.md",
       "scores": {
-        "current_value": 65.43,
-        "time": 73.39,
+        "current_value": 65.41,
+        "time": 73.34,
         "mechanism": 67,
         "evidence": 62,
         "adoption": 33.9,
@@ -64828,8 +64828,8 @@
       "stars": 98,
       "report": "projects/inter_co__science_codeevolve.md",
       "scores": {
-        "current_value": 62.89,
-        "time": 68.33,
+        "current_value": 62.87,
+        "time": 68.28,
         "mechanism": 59,
         "evidence": 68,
         "adoption": 35.76,
@@ -64856,7 +64856,7 @@
       "created_at_source": "unknown",
       "first_observed_at": null,
       "activity_at": "2026-06-30T10:33:54Z",
-      "stars": 13214,
+      "stars": 13218,
       "report": "projects/47-genericagent.md",
       "scores": {
         "current_value": 61.68,
@@ -64950,8 +64950,8 @@
       "stars": 274,
       "report": "projects/jarvis_xs__se_agent.md",
       "scores": {
-        "current_value": 60.66,
-        "time": 42.98,
+        "current_value": 60.64,
+        "time": 42.93,
         "mechanism": 77,
         "evidence": 100,
         "adoption": 43.71,
@@ -65101,8 +65101,8 @@
       "created_at": null,
       "created_at_source": "unknown",
       "first_observed_at": null,
-      "activity_at": "2026-06-30T20:54:13Z",
-      "stars": 206418,
+      "activity_at": "2026-07-01T03:08:23Z",
+      "stars": 206580,
       "report": "projects/44-hermes-agent.md",
       "scores": {
         "current_value": 59.82,
@@ -65508,8 +65508,8 @@
       "stars": 6800,
       "report": "projects/22-evoagentx-agent-evolution-framework.md",
       "scores": {
-        "current_value": 56.19,
-        "time": 25.24,
+        "current_value": 56.17,
+        "time": 25.2,
         "mechanism": 97,
         "evidence": 86,
         "adoption": 68.67,
@@ -65536,14 +65536,14 @@
       "created_at_source": "unknown",
       "first_observed_at": null,
       "activity_at": "2026-04-29T16:39:58Z",
-      "stars": 1175,
+      "stars": 1177,
       "report": "projects/249-stanford-meta-harness-framework.md",
       "scores": {
-        "current_value": 56.04,
-        "time": 41.49,
+        "current_value": 56.03,
+        "time": 41.45,
         "mechanism": 87,
         "evidence": 56,
-        "adoption": 55.01,
+        "adoption": 55.03,
         "usefulness": 80
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
@@ -65629,14 +65629,14 @@
       "created_at_source": "unknown",
       "first_observed_at": null,
       "activity_at": "2026-06-29T12:58:33Z",
-      "stars": 147,
+      "stars": 149,
       "report": "projects/394-evomap-awesome-agent-evolution.md",
       "scores": {
-        "current_value": 55.19,
+        "current_value": 55.2,
         "time": 45,
         "mechanism": 87,
         "evidence": 56,
-        "adoption": 38.89,
+        "adoption": 38.99,
         "usefulness": 60
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
@@ -65755,8 +65755,8 @@
       "stars": 426,
       "report": "projects/228-yunjue-agent-in-situ-self-evolving-agent.md",
       "scores": {
-        "current_value": 51.94,
-        "time": 30.85,
+        "current_value": 51.92,
+        "time": 30.82,
         "mechanism": 97,
         "evidence": 56,
         "adoption": 47.13,
@@ -65790,7 +65790,7 @@
         "time": 45,
         "mechanism": 67,
         "evidence": 56,
-        "adoption": 40.5,
+        "adoption": 40.49,
         "usefulness": 70
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
@@ -65846,8 +65846,8 @@
       "stars": 34604,
       "report": "projects/10-dspy-declarative-llm-programming.md",
       "scores": {
-        "current_value": 51.52,
-        "time": 26.88,
+        "current_value": 51.51,
+        "time": 26.86,
         "mechanism": 59,
         "evidence": 100,
         "adoption": 81.33,
@@ -65874,14 +65874,14 @@
       "created_at_source": "unknown",
       "first_observed_at": null,
       "activity_at": "2026-06-02T21:35:43Z",
-      "stars": 1256,
+      "stars": 1257,
       "report": "projects/51-pinchbench-skill.md",
       "scores": {
         "current_value": 51.35,
         "time": 45,
         "mechanism": 50,
         "evidence": 62,
-        "adoption": 55.53,
+        "adoption": 55.54,
         "usefulness": 80
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
@@ -65943,7 +65943,7 @@
         "time": 45,
         "mechanism": 59,
         "evidence": 56,
-        "adoption": 36.07,
+        "adoption": 36.06,
         "usefulness": 80
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
@@ -65998,7 +65998,7 @@
       "created_at_source": "unknown",
       "first_observed_at": null,
       "activity_at": "2026-06-29T06:13:48Z",
-      "stars": 24355,
+      "stars": 24366,
       "report": "projects/50-agentmemory.md",
       "scores": {
         "current_value": 49.26,
@@ -66031,8 +66031,8 @@
       "stars": 1000,
       "report": "projects/23-everos-self-evolving-agents.md",
       "scores": {
-        "current_value": 49,
-        "time": 25.24,
+        "current_value": 48.98,
+        "time": 25.2,
         "mechanism": 71,
         "evidence": 86,
         "adoption": 53.76,
@@ -66058,8 +66058,8 @@
       "created_at": null,
       "created_at_source": "unknown",
       "first_observed_at": null,
-      "activity_at": "2026-06-30T20:58:02Z",
-      "stars": 381163,
+      "activity_at": "2026-07-01T03:03:15Z",
+      "stars": 381197,
       "report": "projects/48-openclaw.md",
       "scores": {
         "current_value": 48.9,
@@ -66124,8 +66124,8 @@
       "stars": 105000,
       "report": "projects/214-gemini-cli-auto-memory-skills.md",
       "scores": {
-        "current_value": 48.77,
-        "time": 44.95,
+        "current_value": 48.76,
+        "time": 44.92,
         "mechanism": 18,
         "evidence": 68,
         "adoption": 89.97,
@@ -66151,8 +66151,8 @@
       "created_at": null,
       "created_at_source": "unknown",
       "first_observed_at": null,
-      "activity_at": "2026-06-30T20:45:56Z",
-      "stars": 242403,
+      "activity_at": "2026-07-01T00:48:33Z",
+      "stars": 242637,
       "report": "projects/49-superpowers.md",
       "scores": {
         "current_value": 48.55,
@@ -66462,8 +66462,8 @@
       "stars": 15000,
       "report": "research/projects/68-smolagents-huggingface.md",
       "scores": {
-        "current_value": 47.32,
-        "time": 44.27,
+        "current_value": 47.3,
+        "time": 44.23,
         "mechanism": 20,
         "evidence": 68,
         "adoption": 74.83,
@@ -66801,8 +66801,8 @@
       "stars": 3800,
       "report": "research/projects/44-xmu-self-evolving-agents.md",
       "scores": {
-        "current_value": 46.49,
-        "time": 27.16,
+        "current_value": 46.47,
+        "time": 27.12,
         "mechanism": 69,
         "evidence": 68,
         "adoption": 64.14,
@@ -67022,7 +67022,7 @@
         "time": 45,
         "mechanism": 42,
         "evidence": 56,
-        "adoption": 28.71,
+        "adoption": 28.7,
         "usefulness": 80
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
@@ -67354,8 +67354,8 @@
       "stars": 75000,
       "report": "research/projects/57-n8n-workflow-automation.md",
       "scores": {
-        "current_value": 45.46,
-        "time": 44.54,
+        "current_value": 45.44,
+        "time": 44.51,
         "mechanism": 10,
         "evidence": 68,
         "adoption": 87.35,
@@ -67413,8 +67413,8 @@
       "stars": 200,
       "report": "projects/33-self-improvement-llm.md",
       "scores": {
-        "current_value": 45.1,
-        "time": 25.24,
+        "current_value": 45.08,
+        "time": 25.2,
         "mechanism": 69,
         "evidence": 86,
         "adoption": 41.27,
@@ -67610,35 +67610,6 @@
     },
     {
       "rank": 97,
-      "repo": "zhangfengcdt/memoir",
-      "name": "Memoir",
-      "url": "https://github.com/zhangfengcdt/memoir",
-      "category": "Git-like Agent Auto-Memory",
-      "pattern": "agent activity -> hierarchical memory paths -> Git-like commits/branches -> recoverable continuity",
-      "tags": [
-        "agent memory",
-        "versioned memory",
-        "continuity"
-      ],
-      "status": "candidate",
-      "created_at": null,
-      "created_at_source": "unknown",
-      "first_observed_at": null,
-      "activity_at": "2026-05-25T00:00:00Z",
-      "stars": 549,
-      "report": "projects/210-memoir-agent-auto-memory.md",
-      "scores": {
-        "current_value": 44.89,
-        "time": 44.95,
-        "mechanism": 28,
-        "evidence": 56,
-        "adoption": 49.1,
-        "usefulness": 70
-      },
-      "caveat": "created_at unavailable; time score capped and based on activity/observation only"
-    },
-    {
-      "rank": 98,
       "repo": "kyegomez/swarms",
       "name": "Swarms",
       "url": "https://github.com/kyegomez/swarms",
@@ -67664,6 +67635,35 @@
         "mechanism": 18,
         "evidence": 56,
         "adoption": 68.67,
+        "usefulness": 70
+      },
+      "caveat": "created_at unavailable; time score capped and based on activity/observation only"
+    },
+    {
+      "rank": 98,
+      "repo": "zhangfengcdt/memoir",
+      "name": "Memoir",
+      "url": "https://github.com/zhangfengcdt/memoir",
+      "category": "Git-like Agent Auto-Memory",
+      "pattern": "agent activity -> hierarchical memory paths -> Git-like commits/branches -> recoverable continuity",
+      "tags": [
+        "agent memory",
+        "versioned memory",
+        "continuity"
+      ],
+      "status": "candidate",
+      "created_at": null,
+      "created_at_source": "unknown",
+      "first_observed_at": null,
+      "activity_at": "2026-05-25T00:00:00Z",
+      "stars": 549,
+      "report": "projects/210-memoir-agent-auto-memory.md",
+      "scores": {
+        "current_value": 44.87,
+        "time": 44.92,
+        "mechanism": 28,
+        "evidence": 56,
+        "adoption": 49.1,
         "usefulness": 70
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
@@ -67818,7 +67818,7 @@
         "time": 45,
         "mechanism": 28,
         "evidence": 56,
-        "adoption": 40.5,
+        "adoption": 40.49,
         "usefulness": 80
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
@@ -67917,35 +67917,6 @@
     },
     {
       "rank": 107,
-      "repo": "DeepAuto-AI/automl-agent",
-      "name": "AutoML-Agent",
-      "url": "https://github.com/DeepAuto-AI/automl-agent",
-      "category": "多 Agent AutoML",
-      "pattern": "智能体编排 → 进化/搜索循环 → 评估器/打分器",
-      "tags": [
-        "智能体编排",
-        "Evol-Instruct",
-        "AutoML"
-      ],
-      "status": "verified",
-      "created_at": "2025-05-08T08:36:54Z",
-      "created_at_source": "github_api",
-      "first_observed_at": null,
-      "activity_at": "2025-07-11T19:39:49Z",
-      "stars": 136,
-      "report": "projects/05-automl-agent-multi-agent.md",
-      "scores": {
-        "current_value": 44.39,
-        "time": 30.81,
-        "mechanism": 59,
-        "evidence": 68,
-        "adoption": 38.28,
-        "usefulness": 63
-      },
-      "caveat": ""
-    },
-    {
-      "rank": 108,
       "repo": "InternScience/Awesome-Scientific-Skills",
       "name": "Awesome Scientific Skills",
       "url": "https://github.com/InternScience/Awesome-Scientific-Skills",
@@ -67974,6 +67945,35 @@
         "usefulness": 80
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
+    },
+    {
+      "rank": 108,
+      "repo": "DeepAuto-AI/automl-agent",
+      "name": "AutoML-Agent",
+      "url": "https://github.com/DeepAuto-AI/automl-agent",
+      "category": "多 Agent AutoML",
+      "pattern": "智能体编排 → 进化/搜索循环 → 评估器/打分器",
+      "tags": [
+        "智能体编排",
+        "Evol-Instruct",
+        "AutoML"
+      ],
+      "status": "verified",
+      "created_at": "2025-05-08T08:36:54Z",
+      "created_at_source": "github_api",
+      "first_observed_at": null,
+      "activity_at": "2025-07-11T19:39:49Z",
+      "stars": 136,
+      "report": "projects/05-automl-agent-multi-agent.md",
+      "scores": {
+        "current_value": 44.36,
+        "time": 30.77,
+        "mechanism": 59,
+        "evidence": 68,
+        "adoption": 38.28,
+        "usefulness": 63
+      },
+      "caveat": ""
     },
     {
       "rank": 109,
@@ -68333,8 +68333,8 @@
       "stars": 221,
       "report": "projects/404-xskill-continual-experience-skill-learning.md",
       "scores": {
-        "current_value": 43.87,
-        "time": 43.33,
+        "current_value": 43.85,
+        "time": 43.3,
         "mechanism": 28,
         "evidence": 56,
         "adoption": 42.04,
@@ -68426,8 +68426,8 @@
       "stars": 1900,
       "report": "projects/223-skills-best-practices-agent-skill-authoring.md",
       "scores": {
-        "current_value": 43.78,
-        "time": 44.81,
+        "current_value": 43.77,
+        "time": 44.78,
         "mechanism": 18,
         "evidence": 56,
         "adoption": 58.75,
@@ -68644,8 +68644,8 @@
       "stars": 14300,
       "report": "projects/261-browser-harness-self-healing-web-agent-runtime.md",
       "scores": {
-        "current_value": 43.48,
-        "time": 44.27,
+        "current_value": 43.46,
+        "time": 44.23,
         "mechanism": 10,
         "evidence": 56,
         "adoption": 74.45,
@@ -68679,7 +68679,7 @@
         "time": 45,
         "mechanism": 20,
         "evidence": 56,
-        "adoption": 45.34,
+        "adoption": 45.33,
         "usefulness": 80
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
@@ -68766,8 +68766,8 @@
       "stars": 19280,
       "report": "projects/14-swe-agent-software-engineering.md",
       "scores": {
-        "current_value": 43.27,
-        "time": 26.48,
+        "current_value": 43.26,
+        "time": 26.46,
         "mechanism": 45,
         "evidence": 68,
         "adoption": 76.78,
@@ -68890,8 +68890,8 @@
       "stars": 21600,
       "report": "projects/311-openai-swarm-multi-agent-orchestration.md",
       "scores": {
-        "current_value": 43,
-        "time": 39.48,
+        "current_value": 42.99,
+        "time": 39.44,
         "mechanism": 18,
         "evidence": 56,
         "adoption": 77.66,
@@ -68917,15 +68917,15 @@
       "created_at": null,
       "created_at_source": "unknown",
       "first_observed_at": null,
-      "activity_at": "2026-06-30T20:30:47Z",
-      "stars": 562,
+      "activity_at": "2026-07-01T03:08:57Z",
+      "stars": 565,
       "report": "projects/405-agent-swarm-compounding-lead-worker-runtime.md",
       "scores": {
         "current_value": 42.93,
         "time": 45,
         "mechanism": 18,
         "evidence": 56,
-        "adoption": 49.28,
+        "adoption": 49.32,
         "usefulness": 70
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
@@ -69041,8 +69041,8 @@
       "stars": 60,
       "report": "projects/407-medmemorybench-agent-memory-benchmark.md",
       "scores": {
-        "current_value": 42.89,
-        "time": 43.39,
+        "current_value": 42.87,
+        "time": 43.35,
         "mechanism": 28,
         "evidence": 56,
         "adoption": 31.99,
@@ -69115,35 +69115,6 @@
     },
     {
       "rank": 146,
-      "repo": "crewAIInc/crewAI",
-      "name": "CrewAI",
-      "url": "https://github.com/crewAIInc/crewAI",
-      "category": "多 Agent 协作框架",
-      "pattern": "智能体编排",
-      "tags": [
-        "智能体编排",
-        "Crew+Flow",
-        "零依赖"
-      ],
-      "status": "verified",
-      "created_at": "2023-10-27T03:26:59Z",
-      "created_at_source": "github_api",
-      "first_observed_at": null,
-      "activity_at": "2026-05-23T20:10:54Z",
-      "stars": 52041,
-      "report": "projects/09-crewai-multi-agent-framework.md",
-      "scores": {
-        "current_value": 42.79,
-        "time": 26.88,
-        "mechanism": 10,
-        "evidence": 100,
-        "adoption": 84.51,
-        "usefulness": 78
-      },
-      "caveat": ""
-    },
-    {
-      "rank": 147,
       "repo": "ALucek/agentic-memory",
       "name": "ALucek Agentic Memory Methods Library",
       "url": "https://github.com/ALucek/agentic-memory",
@@ -69172,6 +69143,35 @@
         "usefulness": 70
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
+    },
+    {
+      "rank": 147,
+      "repo": "crewAIInc/crewAI",
+      "name": "CrewAI",
+      "url": "https://github.com/crewAIInc/crewAI",
+      "category": "多 Agent 协作框架",
+      "pattern": "智能体编排",
+      "tags": [
+        "智能体编排",
+        "Crew+Flow",
+        "零依赖"
+      ],
+      "status": "verified",
+      "created_at": "2023-10-27T03:26:59Z",
+      "created_at_source": "github_api",
+      "first_observed_at": null,
+      "activity_at": "2026-05-23T20:10:54Z",
+      "stars": 52041,
+      "report": "projects/09-crewai-multi-agent-framework.md",
+      "scores": {
+        "current_value": 42.78,
+        "time": 26.85,
+        "mechanism": 10,
+        "evidence": 100,
+        "adoption": 84.51,
+        "usefulness": 78
+      },
+      "caveat": ""
     },
     {
       "rank": 148,
@@ -69292,72 +69292,13 @@
         "time": 45,
         "mechanism": 20,
         "evidence": 56,
-        "adoption": 37.7,
+        "adoption": 37.69,
         "usefulness": 80
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
       "rank": 152,
-      "repo": "SWE-bench/SWE-bench",
-      "name": "swe-bench",
-      "url": "https://github.com/SWE-bench/SWE-bench",
-      "category": "Agent 评测基准",
-      "pattern": "真实 GitHub Issue → 模型生成 Patch → 评估",
-      "tags": [
-        "评测基准",
-        "软件工程",
-        "代码补丁"
-      ],
-      "status": "candidate",
-      "created_at": null,
-      "created_at_source": "unknown",
-      "first_observed_at": "2026-03-19T01:19:47+01:00",
-      "activity_at": "2026-04-01T00:00:00Z",
-      "stars": 2800,
-      "report": "research/projects/60-swe-bench-evaluation.md",
-      "scores": {
-        "current_value": 42.66,
-        "time": 37.56,
-        "mechanism": 20,
-        "evidence": 68,
-        "adoption": 61.77,
-        "usefulness": 70
-      },
-      "caveat": "created_at unavailable; time score capped and based on activity/observation only"
-    },
-    {
-      "rank": 153,
-      "repo": "open-gitagent/gitagent",
-      "name": "Gitagent",
-      "url": "https://github.com/open-gitagent/gitagent",
-      "category": "Git-Native Agent Framework",
-      "pattern": "git repository -> agent identity/rules/memory/tools/skills/hooks -> auditable agent runtime",
-      "tags": [
-        "git-native agent",
-        "agent memory",
-        "skills",
-        "audit"
-      ],
-      "status": "candidate",
-      "created_at": null,
-      "created_at_source": "unknown",
-      "first_observed_at": null,
-      "activity_at": "2026-05-25T00:00:00Z",
-      "stars": 404,
-      "report": "projects/213-gitagent-git-native-agent-framework.md",
-      "scores": {
-        "current_value": 42.65,
-        "time": 44.95,
-        "mechanism": 18,
-        "evidence": 56,
-        "adoption": 46.72,
-        "usefulness": 70
-      },
-      "caveat": "created_at unavailable; time score capped and based on activity/observation only"
-    },
-    {
-      "rank": 154,
       "repo": "VectorSpaceLab/general-agentic-memory",
       "name": "VectorSpaceLab General Agentic Memory",
       "url": "https://github.com/VectorSpaceLab/general-agentic-memory",
@@ -69383,6 +69324,65 @@
         "mechanism": 18,
         "evidence": 56,
         "adoption": 46.45,
+        "usefulness": 70
+      },
+      "caveat": "created_at unavailable; time score capped and based on activity/observation only"
+    },
+    {
+      "rank": 153,
+      "repo": "SWE-bench/SWE-bench",
+      "name": "swe-bench",
+      "url": "https://github.com/SWE-bench/SWE-bench",
+      "category": "Agent 评测基准",
+      "pattern": "真实 GitHub Issue → 模型生成 Patch → 评估",
+      "tags": [
+        "评测基准",
+        "软件工程",
+        "代码补丁"
+      ],
+      "status": "candidate",
+      "created_at": null,
+      "created_at_source": "unknown",
+      "first_observed_at": "2026-03-19T01:19:47+01:00",
+      "activity_at": "2026-04-01T00:00:00Z",
+      "stars": 2800,
+      "report": "research/projects/60-swe-bench-evaluation.md",
+      "scores": {
+        "current_value": 42.64,
+        "time": 37.52,
+        "mechanism": 20,
+        "evidence": 68,
+        "adoption": 61.77,
+        "usefulness": 70
+      },
+      "caveat": "created_at unavailable; time score capped and based on activity/observation only"
+    },
+    {
+      "rank": 154,
+      "repo": "open-gitagent/gitagent",
+      "name": "Gitagent",
+      "url": "https://github.com/open-gitagent/gitagent",
+      "category": "Git-Native Agent Framework",
+      "pattern": "git repository -> agent identity/rules/memory/tools/skills/hooks -> auditable agent runtime",
+      "tags": [
+        "git-native agent",
+        "agent memory",
+        "skills",
+        "audit"
+      ],
+      "status": "candidate",
+      "created_at": null,
+      "created_at_source": "unknown",
+      "first_observed_at": null,
+      "activity_at": "2026-05-25T00:00:00Z",
+      "stars": 404,
+      "report": "projects/213-gitagent-git-native-agent-framework.md",
+      "scores": {
+        "current_value": 42.63,
+        "time": 44.92,
+        "mechanism": 18,
+        "evidence": 56,
+        "adoption": 46.72,
         "usefulness": 70
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
@@ -69438,8 +69438,8 @@
       "stars": 184482,
       "report": "projects/08-autogpt-autonomous-agent.md",
       "scores": {
-        "current_value": 42.53,
-        "time": 26.9,
+        "current_value": 42.52,
+        "time": 26.88,
         "mechanism": 10,
         "evidence": 100,
         "adoption": 94.35,
@@ -69746,8 +69746,8 @@
       "stars": 17025,
       "report": "projects/12-camel-ai-communicative-agents.md",
       "scores": {
-        "current_value": 41.94,
-        "time": 26.51,
+        "current_value": 41.93,
+        "time": 26.49,
         "mechanism": 35,
         "evidence": 68,
         "adoption": 75.81,
@@ -69775,8 +69775,8 @@
       "stars": 18000,
       "report": "research/projects/49-phidata-framework.md",
       "scores": {
-        "current_value": 41.92,
-        "time": 43.58,
+        "current_value": 41.9,
+        "time": 43.55,
         "mechanism": 18,
         "evidence": 36,
         "adoption": 76.24,
@@ -69835,8 +69835,8 @@
       "stars": 8000,
       "report": "research/projects/53-agenta-evaluation.md",
       "scores": {
-        "current_value": 41.84,
-        "time": 42.9,
+        "current_value": 41.83,
+        "time": 42.86,
         "mechanism": 20,
         "evidence": 36,
         "adoption": 69.93,
@@ -70087,7 +70087,7 @@
         "time": 45,
         "mechanism": 10,
         "evidence": 56,
-        "adoption": 52.06,
+        "adoption": 52.05,
         "usefulness": 70
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
@@ -70236,8 +70236,8 @@
       "stars": 3,
       "report": "projects/212-atant-agent-continuity-eval.md",
       "scores": {
-        "current_value": 41.55,
-        "time": 44.95,
+        "current_value": 41.54,
+        "time": 44.92,
         "mechanism": 28,
         "evidence": 56,
         "adoption": 10.79,
@@ -70606,8 +70606,8 @@
       "stars": 32784,
       "report": "projects/13-langgraph-agent-workflows.md",
       "scores": {
-        "current_value": 41.19,
-        "time": 26.89,
+        "current_value": 41.18,
+        "time": 26.87,
         "mechanism": 10,
         "evidence": 100,
         "adoption": 80.91,
@@ -70635,8 +70635,8 @@
       "stars": 140000,
       "report": "research/projects/64-ollama-llm-runtime.md",
       "scores": {
-        "current_value": 41.14,
-        "time": 44.54,
+        "current_value": 41.12,
+        "time": 44.51,
         "mechanism": 10,
         "evidence": 36,
         "adoption": 92.21,
@@ -70646,36 +70646,6 @@
     },
     {
       "rank": 196,
-      "repo": "open-webui/open-webui",
-      "name": "open-webui",
-      "url": "https://github.com/open-webui/open-webui",
-      "category": "自托管 AI 平台",
-      "pattern": "自托管 → 多 LLM → RAG → 插件",
-      "tags": [
-        "自托管",
-        "多 LLM",
-        "RAG",
-        "插件"
-      ],
-      "status": "candidate",
-      "created_at": null,
-      "created_at_source": "unknown",
-      "first_observed_at": "2026-05-10T14:13:55-04:00",
-      "activity_at": "2026-05-22T00:00:00Z",
-      "stars": 124000,
-      "report": "research/projects/55-open-webui.md",
-      "scores": {
-        "current_value": 41.05,
-        "time": 44.54,
-        "mechanism": 10,
-        "evidence": 36,
-        "adoption": 91.26,
-        "usefulness": 45
-      },
-      "caveat": "created_at unavailable; time score capped and based on activity/observation only"
-    },
-    {
-      "rank": 197,
       "repo": "razroo/state-trace",
       "name": "state-trace",
       "url": "https://github.com/razroo/state-trace",
@@ -70700,6 +70670,36 @@
         "evidence": 56,
         "adoption": 5.39,
         "usefulness": 80
+      },
+      "caveat": "created_at unavailable; time score capped and based on activity/observation only"
+    },
+    {
+      "rank": 197,
+      "repo": "open-webui/open-webui",
+      "name": "open-webui",
+      "url": "https://github.com/open-webui/open-webui",
+      "category": "自托管 AI 平台",
+      "pattern": "自托管 → 多 LLM → RAG → 插件",
+      "tags": [
+        "自托管",
+        "多 LLM",
+        "RAG",
+        "插件"
+      ],
+      "status": "candidate",
+      "created_at": null,
+      "created_at_source": "unknown",
+      "first_observed_at": "2026-05-10T14:13:55-04:00",
+      "activity_at": "2026-05-22T00:00:00Z",
+      "stars": 124000,
+      "report": "research/projects/55-open-webui.md",
+      "scores": {
+        "current_value": 41.03,
+        "time": 44.51,
+        "mechanism": 10,
+        "evidence": 36,
+        "adoption": 91.26,
+        "usefulness": 45
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
@@ -70816,8 +70816,8 @@
       "stars": 95000,
       "report": "research/projects/51-dify-ai-platform.md",
       "scores": {
-        "current_value": 40.84,
-        "time": 44.54,
+        "current_value": 40.82,
+        "time": 44.51,
         "mechanism": 10,
         "evidence": 36,
         "adoption": 89.19,
@@ -71092,8 +71092,8 @@
       "stars": 58000,
       "report": "research/projects/58-langflow-visual-agent.md",
       "scores": {
-        "current_value": 40.32,
-        "time": 44.27,
+        "current_value": 40.3,
+        "time": 44.23,
         "mechanism": 10,
         "evidence": 36,
         "adoption": 85.35,
@@ -71307,8 +71307,8 @@
       "stars": 10000,
       "report": "research/projects/70-chainlit-llm-chat.md",
       "scores": {
-        "current_value": 39.86,
-        "time": 43.58,
+        "current_value": 39.84,
+        "time": 43.55,
         "mechanism": 10,
         "evidence": 36,
         "adoption": 71.67,
@@ -71318,36 +71318,6 @@
     },
     {
       "rank": 218,
-      "repo": "Genentech/OpenTreeSearch",
-      "name": "OpenTreeSearch",
-      "url": "https://github.com/Genentech/opentreesearch",
-      "category": "LLM 引导代码进化",
-      "pattern": "进化/搜索循环 → 评估器/打分器",
-      "tags": [
-        "进化/搜索循环",
-        "评估器/打分器",
-        "树搜索",
-        "代码进化"
-      ],
-      "status": "verified",
-      "created_at": null,
-      "created_at_source": "unknown",
-      "first_observed_at": "2026-05-19T09:51:47-04:00",
-      "activity_at": "2026-01-01T00:00:00Z",
-      "stars": 200,
-      "report": "projects/24-opentreesearch-llm-code-evolution.md",
-      "scores": {
-        "current_value": 39.8,
-        "time": 25.24,
-        "mechanism": 59,
-        "evidence": 54,
-        "adoption": 41.27,
-        "usefulness": 63
-      },
-      "caveat": "created_at unavailable; time score capped and based on activity/observation only"
-    },
-    {
-      "rank": 219,
       "repo": "datalayer/agent-skills",
       "name": "Datalayer Agent Skills",
       "url": "https://github.com/datalayer/agent-skills",
@@ -71378,6 +71348,36 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
+      "rank": 219,
+      "repo": "Genentech/OpenTreeSearch",
+      "name": "OpenTreeSearch",
+      "url": "https://github.com/Genentech/opentreesearch",
+      "category": "LLM 引导代码进化",
+      "pattern": "进化/搜索循环 → 评估器/打分器",
+      "tags": [
+        "进化/搜索循环",
+        "评估器/打分器",
+        "树搜索",
+        "代码进化"
+      ],
+      "status": "verified",
+      "created_at": null,
+      "created_at_source": "unknown",
+      "first_observed_at": "2026-05-19T09:51:47-04:00",
+      "activity_at": "2026-01-01T00:00:00Z",
+      "stars": 200,
+      "report": "projects/24-opentreesearch-llm-code-evolution.md",
+      "scores": {
+        "current_value": 39.78,
+        "time": 25.2,
+        "mechanism": 59,
+        "evidence": 54,
+        "adoption": 41.27,
+        "usefulness": 63
+      },
+      "caveat": "created_at unavailable; time score capped and based on activity/observation only"
+    },
+    {
       "rank": 220,
       "repo": "Zijian-Ni/awesome-ai-agents-2026",
       "name": "awesome-ai-agents-2026",
@@ -71397,8 +71397,8 @@
       "stars": 800,
       "report": "research/projects/72-awesome-ai-agents-2026.md",
       "scores": {
-        "current_value": 39.79,
-        "time": 44.27,
+        "current_value": 39.77,
+        "time": 44.23,
         "mechanism": 0,
         "evidence": 68,
         "adoption": 52.03,
@@ -71426,8 +71426,8 @@
       "stars": 22000,
       "report": "research/projects/63-litellm-gateway.md",
       "scores": {
-        "current_value": 39.7,
-        "time": 44.54,
+        "current_value": 39.68,
+        "time": 44.51,
         "mechanism": 10,
         "evidence": 36,
         "adoption": 77.81,
@@ -71455,8 +71455,8 @@
       "stars": 5200,
       "report": "research/projects/45-ag2-multi-agent.md",
       "scores": {
-        "current_value": 39.69,
-        "time": 44.27,
+        "current_value": 39.67,
+        "time": 44.23,
         "mechanism": 10,
         "evidence": 36,
         "adoption": 66.58,
@@ -71486,8 +71486,8 @@
       "stars": 266,
       "report": "projects/281-redis-agent-memory-server-runtime.md",
       "scores": {
-        "current_value": 39.65,
-        "time": 39.61,
+        "current_value": 39.64,
+        "time": 39.58,
         "mechanism": 18,
         "evidence": 56,
         "adoption": 43.48,
@@ -71577,8 +71577,8 @@
       "stars": 36000,
       "report": "research/projects/65-flowise-visual-llm.md",
       "scores": {
-        "current_value": 39.6,
-        "time": 43.58,
+        "current_value": 39.59,
+        "time": 43.55,
         "mechanism": 10,
         "evidence": 36,
         "adoption": 81.64,
@@ -71732,8 +71732,8 @@
       "stars": 13,
       "report": "projects/234-ai-skills-agent-process-discipline.md",
       "scores": {
-        "current_value": 39.41,
-        "time": 43.72,
+        "current_value": 39.4,
+        "time": 43.68,
         "mechanism": 18,
         "evidence": 56,
         "adoption": 20.54,
@@ -72022,36 +72022,6 @@
     },
     {
       "rank": 241,
-      "repo": "OpenDevin/OpenDevin",
-      "name": "OpenDevin",
-      "url": "https://github.com/OpenDevin/OpenDevin",
-      "category": "AI 软件开发平台",
-      "pattern": "智能体编排 → 反馈-精炼",
-      "tags": [
-        "智能体编排",
-        "反馈-精炼",
-        "SWE-bench",
-        "软件开发"
-      ],
-      "status": "verified",
-      "created_at": null,
-      "created_at_source": "unknown",
-      "first_observed_at": "2026-05-21T18:44:54-03:00",
-      "activity_at": "2026-01-01T00:00:00Z",
-      "stars": 50000,
-      "report": "projects/41-opendevin-ai-software.md",
-      "scores": {
-        "current_value": 38.79,
-        "time": 25.24,
-        "mechanism": 35,
-        "evidence": 54,
-        "adoption": 84.19,
-        "usefulness": 53
-      },
-      "caveat": "created_at unavailable; time score capped and based on activity/observation only"
-    },
-    {
-      "rank": 242,
       "repo": "skillmatic-ai/awesome-agent-skills",
       "name": "Awesome Agent Skills (Skillmatic)",
       "url": "https://github.com/skillmatic-ai/awesome-agent-skills",
@@ -72082,36 +72052,37 @@
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 243,
-      "repo": "DEEP-PolyU/Awesome-GraphMemory",
-      "name": "Awesome GraphMemory",
-      "url": "https://github.com/DEEP-PolyU/Awesome-GraphMemory",
-      "category": "Graph-Based Agent Memory Index",
-      "pattern": "graph memory papers -> techniques/applications -> memory substrate map",
+      "rank": 242,
+      "repo": "OpenDevin/OpenDevin",
+      "name": "OpenDevin",
+      "url": "https://github.com/OpenDevin/OpenDevin",
+      "category": "AI 软件开发平台",
+      "pattern": "智能体编排 → 反馈-精炼",
       "tags": [
-        "graph memory",
-        "agent memory",
-        "paper index"
+        "智能体编排",
+        "反馈-精炼",
+        "SWE-bench",
+        "软件开发"
       ],
-      "status": "candidate",
+      "status": "verified",
       "created_at": null,
       "created_at_source": "unknown",
-      "first_observed_at": null,
-      "activity_at": "2026-05-25T00:00:00Z",
-      "stars": 273,
-      "report": "projects/211-awesome-graphmemory.md",
+      "first_observed_at": "2026-05-21T18:44:54-03:00",
+      "activity_at": "2026-01-01T00:00:00Z",
+      "stars": 50000,
+      "report": "projects/41-opendevin-ai-software.md",
       "scores": {
-        "current_value": 38.74,
-        "time": 44.95,
-        "mechanism": 0,
-        "evidence": 56,
-        "adoption": 43.68,
-        "usefulness": 70
+        "current_value": 38.77,
+        "time": 25.2,
+        "mechanism": 35,
+        "evidence": 54,
+        "adoption": 84.19,
+        "usefulness": 53
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
     {
-      "rank": 244,
+      "rank": 243,
       "repo": "sola-st/repairagent",
       "name": "RepairAgent",
       "url": "https://github.com/sola-st/RepairAgent",
@@ -72136,8 +72107,37 @@
         "time": 45,
         "mechanism": 10,
         "evidence": 56,
-        "adoption": 35.84,
+        "adoption": 35.83,
         "usefulness": 45
+      },
+      "caveat": "created_at unavailable; time score capped and based on activity/observation only"
+    },
+    {
+      "rank": 244,
+      "repo": "DEEP-PolyU/Awesome-GraphMemory",
+      "name": "Awesome GraphMemory",
+      "url": "https://github.com/DEEP-PolyU/Awesome-GraphMemory",
+      "category": "Graph-Based Agent Memory Index",
+      "pattern": "graph memory papers -> techniques/applications -> memory substrate map",
+      "tags": [
+        "graph memory",
+        "agent memory",
+        "paper index"
+      ],
+      "status": "candidate",
+      "created_at": null,
+      "created_at_source": "unknown",
+      "first_observed_at": null,
+      "activity_at": "2026-05-25T00:00:00Z",
+      "stars": 273,
+      "report": "projects/211-awesome-graphmemory.md",
+      "scores": {
+        "current_value": 38.73,
+        "time": 44.92,
+        "mechanism": 0,
+        "evidence": 56,
+        "adoption": 43.68,
+        "usefulness": 70
       },
       "caveat": "created_at unavailable; time score capped and based on activity/observation only"
     },
@@ -72161,8 +72161,8 @@
       "stars": 8000,
       "report": "research/projects/69-bisheng-llm-platform.md",
       "scores": {
-        "current_value": 38.64,
-        "time": 43.99,
+        "current_value": 38.62,
+        "time": 43.96,
         "mechanism": 10,
         "evidence": 36,
         "adoption": 69.93,
@@ -72190,8 +72190,8 @@
       "stars": 3200,
       "report": "research/projects/67-cheshire-cat-ai-framework.md",
       "scores": {
-        "current_value": 38.63,
-        "time": 42.9,
+        "current_value": 38.61,
+        "time": 42.86,
         "mechanism": 10,
         "evidence": 36,
         "adoption": 62.81,
@@ -72219,8 +72219,8 @@
       "stars": 7000,
       "report": "research/projects/54-e2b-sandbox.md",
       "scores": {
-        "current_value": 38.54,
-        "time": 43.99,
+        "current_value": 38.52,
+        "time": 43.96,
         "mechanism": 10,
         "evidence": 36,
         "adoption": 68.9,
@@ -72248,8 +72248,8 @@
       "stars": 26000,
       "report": "research/projects/46-chatdev-multi-agent-platform.md",
       "scores": {
-        "current_value": 38.44,
-        "time": 26.06,
+        "current_value": 38.42,
+        "time": 26.03,
         "mechanism": 43,
         "evidence": 36,
         "adoption": 79.11,
@@ -72340,8 +72340,8 @@
       "stars": 500,
       "report": "projects/36-llm-agent-optimization.md",
       "scores": {
-        "current_value": 38.21,
-        "time": 25.24,
+        "current_value": 38.19,
+        "time": 25.2,
         "mechanism": 31,
         "evidence": 86,
         "adoption": 48.37,
@@ -72370,8 +72370,8 @@
       "stars": 68239,
       "report": "projects/07-metagpt-multi-agent-framework.md",
       "scores": {
-        "current_value": 38.17,
-        "time": 16.82,
+        "current_value": 38.16,
+        "time": 16.8,
         "mechanism": 35,
         "evidence": 68,
         "adoption": 86.61,
@@ -72399,8 +72399,8 @@
       "stars": 11,
       "report": "projects/209-cxxz-awesome-agent-memory.md",
       "scores": {
-        "current_value": 38.11,
-        "time": 44.95,
+        "current_value": 38.09,
+        "time": 44.92,
         "mechanism": 14,
         "evidence": 56,
         "adoption": 19.34,
@@ -72614,8 +72614,8 @@
       "stars": 74662,
       "report": "projects/15-openhands-ai-software-dev.md",
       "scores": {
-        "current_value": 37.03,
-        "time": 26.89,
+        "current_value": 37.02,
+        "time": 26.87,
         "mechanism": 10,
         "evidence": 68,
         "adoption": 87.31,
@@ -72736,8 +72736,8 @@
       "stars": 58330,
       "report": "projects/11-autogen-multi-agent-conversation.md",
       "scores": {
-        "current_value": 36.5,
-        "time": 23.73,
+        "current_value": 36.49,
+        "time": 23.71,
         "mechanism": 10,
         "evidence": 68,
         "adoption": 85.39,
@@ -72794,8 +72794,8 @@
       "stars": 500,
       "report": "projects/40-awesome-fm4co.md",
       "scores": {
-        "current_value": 35.41,
-        "time": 25.24,
+        "current_value": 35.39,
+        "time": 25.2,
         "mechanism": 17,
         "evidence": 86,
         "adoption": 48.37,
@@ -72823,8 +72823,8 @@
       "stars": 2200,
       "report": "research/projects/61-osworld-agent-evaluation.md",
       "scores": {
-        "current_value": 34.89,
-        "time": 21,
+        "current_value": 34.87,
+        "time": 20.96,
         "mechanism": 28,
         "evidence": 62,
         "adoption": 59.89,
@@ -72878,8 +72878,8 @@
       "stars": 1200,
       "report": "research/projects/59-awesome-agent-papers.md",
       "scores": {
-        "current_value": 33.63,
-        "time": 33.32,
+        "current_value": 33.61,
+        "time": 33.28,
         "mechanism": 0,
         "evidence": 68,
         "adoption": 55.18,
@@ -72937,8 +72937,8 @@
       "stars": 2000,
       "report": "projects/37-awesome-code-llm.md",
       "scores": {
-        "current_value": 32.38,
-        "time": 25.24,
+        "current_value": 32.37,
+        "time": 25.2,
         "mechanism": 25,
         "evidence": 48,
         "adoption": 59.15,
@@ -72966,8 +72966,8 @@
       "stars": 1581,
       "report": "projects/03-adas-automated-design-agentic-systems.md",
       "scores": {
-        "current_value": 32.38,
-        "time": 3,
+        "current_value": 32.37,
+        "time": 2.97,
         "mechanism": 59,
         "evidence": 68,
         "adoption": 57.32,
@@ -73114,7 +73114,7 @@
       "stars": 1065,
       "report": "projects/04-funsearch-mathematical-discoveries.md",
       "scores": {
-        "current_value": 30.58,
+        "current_value": 30.57,
         "time": 0,
         "mechanism": 59,
         "evidence": 68,
@@ -73554,8 +73554,8 @@
       "stars": 2800,
       "report": "research/projects/62-webarena-web-evaluation.md",
       "scores": {
-        "current_value": 23.4,
-        "time": 12.64,
+        "current_value": 23.38,
+        "time": 12.61,
         "mechanism": 10,
         "evidence": 36,
         "adoption": 61.77,
@@ -73699,8 +73699,8 @@
       "stars": 33000,
       "report": "research/projects/52-agentgpt-autonomous.md",
       "scores": {
-        "current_value": 19.89,
-        "time": 4.29,
+        "current_value": 19.88,
+        "time": 4.26,
         "mechanism": 10,
         "evidence": 36,
         "adoption": 80.96,
@@ -73728,8 +73728,8 @@
       "stars": 4200,
       "report": "research/projects/47-openagents-platform.md",
       "scores": {
-        "current_value": 18.29,
-        "time": 4.29,
+        "current_value": 18.27,
+        "time": 4.26,
         "mechanism": 10,
         "evidence": 36,
         "adoption": 64.92,
