@@ -3,8 +3,8 @@ repo: EvoMap/awesome-agent-evolution
 url: https://github.com/EvoMap/awesome-agent-evolution
 content_timestamp: 2026-07-01
 time_slice: 2026-06
-timestamp_source: gh_api_graphql_authenticated_2026_07_01_1711
-collected_at: 2026-07-01T17:11:00+08:00
+timestamp_source: gh_api_graphql_authenticated_2026_07_01_2311
+collected_at: 2026-07-01T23:11:00+08:00
 source: github
 source_tool: gh_graphql
 ---
@@ -25,24 +25,24 @@ This raw GitHub capture was refreshed by the hourly public metadata update throu
 - URL: https://github.com/EvoMap/awesome-agent-evolution
 - Stars: 154
 - Forks: 21
-- Commits: 68
+- Commits: 69
 - Open issues: 8
 - Open pull requests: 1
 - License: NOASSERTION
 - Primary language / stack signal: JavaScript/Shell/Curated Taxonomy Pipeline
 - Created at: 2026-03-07T04:11:34Z
-- Last pushed at: 2026-06-29T12:58:33Z
-- Last updated at: 2026-07-01T07:23:55Z
-- Collection timestamp: 2026-07-01T17:11:00+08:00
+- Last pushed at: 2026-07-01T09:25:43Z
+- Last updated at: 2026-07-01T09:25:47Z
+- Collection timestamp: 2026-07-01T23:11:00+08:00
 - Topics: a2a, agent-evolution, agentic-ai, ai-agent, awesome, awesome-list, llm, mcp, memory-system, multi-agent, self-evolving, self-improvement, agent-framework, agent-protocol, autonomous-agent, evomap, llm-agent, prompt-engineering, skill-library, skills
 - Latest public release: none exposed through the GitHub API release list
 
 ## Visible README / page excerpts
 
-- The current packet on 2026-07-01 shows 154 stars, 21 forks, 68 commits, 8 open issues, and 1 open pull requests.
+- The current packet on 2026-07-01 shows 154 stars, 21 forks, 69 commits, 8 open issues, and 1 open pull requests.
 - Its topic set still makes it a live field-packaging mirror across `agent-evolution`, `self-evolving`, `memory-system`, `multi-agent`, `skill-library`, and `awesome-list`.
 - Its README still functions primarily as a curated taxonomy comparator instead of a runnable system.
-- Relative to the previous authenticated packet at 2026-07-01 11:09 +0800: stars 149 -> 154; forks 20 -> 21; updatedAt 2026-07-01T02:38:35Z -> 2026-07-01T07:23:55Z.
+- Relative to the previous authenticated packet at 2026-07-01 1711: +0800: commits 68 -> 69; pushedAt 2026-06-29T12:58:33Z -> 2026-07-01T09:25:43Z; updatedAt 2026-07-01T07:23:55Z -> 2026-07-01T09:25:47Z.
 
 ## Raw capture boundary
 
