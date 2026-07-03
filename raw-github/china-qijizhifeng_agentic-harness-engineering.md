@@ -1,10 +1,10 @@
 ---
 repo: china-qijizhifeng/agentic-Harness-engineering
 url: https://github.com/china-qijizhifeng/agentic-Harness-engineering
-content_timestamp: 2026-07-01
+content_timestamp: 2026-07-03
 time_slice: 2026-06
-timestamp_source: gh_api_graphql_authenticated_2026_07_01_2311
-collected_at: 2026-07-01T23:11:00+08:00
+timestamp_source: gh_api_graphql_authenticated_2026_07_03_1938
+collected_at: 2026-07-03T19:38:00+08:00
 source: github
 source_tool: gh_graphql
 ---
@@ -23,7 +23,7 @@ This raw GitHub capture was refreshed by the hourly public metadata update throu
 
 - Repository: china-qijizhifeng/agentic-Harness-engineering
 - URL: https://github.com/china-qijizhifeng/agentic-Harness-engineering
-- Stars: 661
+- Stars: 678
 - Forks: 74
 - Commits: 46
 - Open issues: 2
@@ -32,17 +32,17 @@ This raw GitHub capture was refreshed by the hourly public metadata update throu
 - Primary language / stack signal: Python/Harness Evolution/Coding-Agent Workflow
 - Created at: 2026-04-23T07:01:18Z
 - Last pushed at: 2026-06-14T16:03:21Z
-- Last updated at: 2026-07-01T15:05:37Z
-- Collection timestamp: 2026-07-01T23:11:00+08:00
+- Last updated at: 2026-07-03T08:37:39Z
+- Collection timestamp: 2026-07-03T19:38:00+08:00
 - Topics: none exposed through the GitHub API topic list
 - Latest public release: none exposed through the GitHub API release list
 
 ## Visible README / page excerpts
 
-- The current packet on 2026-07-01 shows 661 stars, 74 forks, 46 commits, 2 open issues, and 0 open pull requests.
+- The current packet on 2026-07-03 shows 678 stars, 74 forks, 46 commits, 2 open issues, and 0 open pull requests.
 - The repository still treats prompts, tools, middleware, memory, subagents, and evaluators as editable harness layers rather than fixed wrappers around a base model.
 - Its public benchmark story still centers Terminal-Bench-2 plus SWE-bench-Verified transfer, so it remains a core harness-evolution evidence anchor.
-- Relative to the previous authenticated packet at 2026-07-01 1711: +0800: stars 660 -> 661; updatedAt 2026-07-01T06:06:04Z -> 2026-07-01T15:05:37Z.
+- Relative to the previous authenticated packet at 2026-07-01 23:11 +0800: stars 661 -> 678; updatedAt 2026-07-01T15:05:37Z -> 2026-07-03T08:37:39Z.
 
 ## Raw capture boundary
 

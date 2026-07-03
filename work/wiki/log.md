@@ -2,6 +2,17 @@
 
 > Append-only chronological record. Format: `## [date] operation | title`
 
+## [2026-07-03 19:43] data+publication | Hourly public metadata update loop
+
+**操作:** Refreshed the hourly public metadata packet for 11 harness, memory, skill, benchmark, runtime, and agent-swarm repositories with live authenticated GitHub GraphQL data, then propagated the results through raw captures, processed classification, README/i18n, Mermaid object graph views, public project reports, generated indexes, site build, and paper build.
+**详情:**
+- Refreshed `china-qijizhifeng/agentic-Harness-engineering`, `NousResearch/hermes-agent`, `stanford-iris-lab/meta-harness`, `rohitg00/agentmemory`, `pinchbench/skill`, `lsdefine/GenericAgent`, `openclaw/openclaw`, `obra/superpowers`, `EvoMap/awesome-agent-evolution`, `uid4oe/insight-swarm`, and `desplega-ai/agent-swarm`.
+- Recorded live authenticated GitHub API packets for all 11 repositories; 10 repositories changed versus the 2026-07-01 23:11 +0800 packet and no repository used fallback.
+- GitNexus status is readable but stale; `query` and `detect-changes -r awesome-evolution-workspace-cleanup` are blocked by LadybugDB storage-version mismatch (`41` vs `40`), so this run records GitNexus as a blocker rather than refreshed relationship evidence.
+- Validated with project index generation, raw timestamp enforcement, GitHub project analysis, Astro site build, English paper XeLaTeX build, and i18n TODO scan; paper build passed with existing Chinese-glyph and table layout warnings.
+- Public copy review gate was not run with 3-5 reader/editor agents plus 3 academic agents; synchronized README/site text is factual metadata sync, not final editorial-quality completion.
+**产出:** `work/research/hourly-public-metadata-update-2026-07-03-1938.md`, `work/research/hourly-public-metadata-update-2026-07-03-1938-data.json`, `raw-github/*.md`, `research/repo-classification.*`, `.mermaid/current/graph.json`, `.mermaid/current/graph.md`, `analysis/github-project-data-analysis.*`, `site/public/reports/projects/*.md`
+
 ## [2026-05-26] init | Wiki structure created
 - Created directory structure: entities/, concepts/, sources/, synthesis/
 - Created index.md and log.md

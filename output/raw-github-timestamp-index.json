@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-01T00:00:00+08:00",
+  "generated_at": "2026-07-03T00:00:00+08:00",
   "total": 686,
   "updated_files": 686,
   "unknown_content_timestamp": 100,
@@ -908,10 +908,10 @@
       "repo": "china-qijizhifeng/agentic-Harness-engineering",
       "url": "https://github.com/china-qijizhifeng/agentic-Harness-engineering",
       "file": "raw-github/china-qijizhifeng_agentic-harness-engineering.md",
-      "content_timestamp": "2026-07-01",
-      "collected_at": "2026-07-01T23:11:00+08:00",
+      "content_timestamp": "2026-07-03",
+      "collected_at": "2026-07-03T19:38:00+08:00",
       "time_slice": "2026-06",
-      "timestamp_source": "gh_api_graphql_authenticated_2026_07_01_2311"
+      "timestamp_source": "gh_api_graphql_authenticated_2026_07_03_1938"
     },
     {
       "repo": "Chorus-AIDLC/Chorus",
@@ -1286,10 +1286,10 @@
       "repo": "desplega-ai/agent-swarm",
       "url": "https://github.com/desplega-ai/agent-swarm",
       "file": "raw-github/desplega-ai_agent-swarm.md",
-      "content_timestamp": "2026-07-01",
-      "collected_at": "2026-07-01T23:11:00+08:00",
+      "content_timestamp": "2026-07-03",
+      "collected_at": "2026-07-03T19:38:00+08:00",
       "time_slice": "2026-06",
-      "timestamp_source": "gh_api_graphql_authenticated_2026_07_01_2311"
+      "timestamp_source": "gh_api_graphql_authenticated_2026_07_03_1938"
     },
     {
       "repo": "developzir/gepa-mcp",
@@ -1547,10 +1547,10 @@
       "repo": "EvoMap/awesome-agent-evolution",
       "url": "https://github.com/EvoMap/awesome-agent-evolution",
       "file": "raw-github/evomap_awesome-agent-evolution.md",
-      "content_timestamp": "2026-07-01",
-      "collected_at": "2026-07-01T23:11:00+08:00",
+      "content_timestamp": "2026-07-03",
+      "collected_at": "2026-07-03T19:38:00+08:00",
       "time_slice": "2026-06",
-      "timestamp_source": "gh_api_graphql_authenticated_2026_07_01_2311"
+      "timestamp_source": "gh_api_graphql_authenticated_2026_07_03_1938"
     },
     {
       "repo": "EvoMap/evolver",
@@ -2861,10 +2861,10 @@
       "repo": "lsdefine/GenericAgent",
       "url": "https://github.com/lsdefine/GenericAgent",
       "file": "raw-github/lsdefine_genericagent.md",
-      "content_timestamp": "2026-07-01",
-      "collected_at": "2026-07-01T23:11:00+08:00",
+      "content_timestamp": "2026-07-03",
+      "collected_at": "2026-07-03T19:38:00+08:00",
       "time_slice": "2026-06",
-      "timestamp_source": "gh_api_graphql_authenticated_2026_07_01_2311"
+      "timestamp_source": "gh_api_graphql_authenticated_2026_07_03_1938"
     },
     {
       "repo": "ltzheng/curriculummarl",
@@ -3590,10 +3590,10 @@
       "repo": "NousResearch/hermes-agent",
       "url": "https://github.com/NousResearch/hermes-agent",
       "file": "raw-github/nousresearch_hermes-agent.md",
-      "content_timestamp": "2026-07-01",
-      "collected_at": "2026-07-01T23:11:00+08:00",
+      "content_timestamp": "2026-07-03",
+      "collected_at": "2026-07-03T19:38:00+08:00",
       "time_slice": "2026-06",
-      "timestamp_source": "gh_api_graphql_authenticated_2026_07_01_2311"
+      "timestamp_source": "gh_api_graphql_authenticated_2026_07_03_1938"
     },
     {
       "repo": "nowledge-co/community",
@@ -3617,10 +3617,10 @@
       "repo": "obra/superpowers",
       "url": "https://github.com/obra/superpowers",
       "file": "raw-github/obra_superpowers.md",
-      "content_timestamp": "2026-07-01",
-      "collected_at": "2026-07-01T23:11:00+08:00",
+      "content_timestamp": "2026-07-03",
+      "collected_at": "2026-07-03T19:38:00+08:00",
       "time_slice": "2026-06",
-      "timestamp_source": "gh_api_graphql_authenticated_2026_07_01_2311"
+      "timestamp_source": "gh_api_graphql_authenticated_2026_07_03_1938"
     },
     {
       "repo": "oceanbase/powermem",
@@ -3851,10 +3851,10 @@
       "repo": "openclaw/openclaw",
       "url": "https://github.com/openclaw/openclaw",
       "file": "raw-github/openclaw_openclaw.md",
-      "content_timestamp": "2026-07-01",
-      "collected_at": "2026-07-01T23:11:00+08:00",
+      "content_timestamp": "2026-07-03",
+      "collected_at": "2026-07-03T19:38:00+08:00",
       "time_slice": "2026-06",
-      "timestamp_source": "gh_api_graphql_authenticated_2026_07_01_2311"
+      "timestamp_source": "gh_api_graphql_authenticated_2026_07_03_1938"
     },
     {
       "repo": "opendatabox/workspace-bench",
@@ -4103,10 +4103,10 @@
       "repo": "pinchbench/skill",
       "url": "https://github.com/pinchbench/skill",
       "file": "raw-github/pinchbench_skill.md",
-      "content_timestamp": "2026-07-01",
-      "collected_at": "2026-07-01T23:11:00+08:00",
+      "content_timestamp": "2026-07-03",
+      "collected_at": "2026-07-03T19:38:00+08:00",
       "time_slice": "2026-06",
-      "timestamp_source": "gh_api_graphql_authenticated_2026_07_01_2311"
+      "timestamp_source": "gh_api_graphql_authenticated_2026_07_03_1938"
     },
     {
       "repo": "pingcap/ossinsight",
@@ -4463,10 +4463,10 @@
       "repo": "rohitg00/agentmemory",
       "url": "https://github.com/rohitg00/agentmemory",
       "file": "raw-github/rohitg00_agentmemory.md",
-      "content_timestamp": "2026-07-01",
-      "collected_at": "2026-07-01T23:11:00+08:00",
+      "content_timestamp": "2026-07-03",
+      "collected_at": "2026-07-03T19:38:00+08:00",
       "time_slice": "2026-06",
-      "timestamp_source": "gh_api_graphql_authenticated_2026_07_01_2311"
+      "timestamp_source": "gh_api_graphql_authenticated_2026_07_03_1938"
     },
     {
       "repo": "rohitg00/awesome-openclaw",
@@ -4958,10 +4958,10 @@
       "repo": "stanford-iris-lab/meta-harness",
       "url": "https://github.com/stanford-iris-lab/meta-harness",
       "file": "raw-github/stanford-iris-lab_meta-harness.md",
-      "content_timestamp": "2026-07-01",
-      "collected_at": "2026-07-01T23:11:00+08:00",
+      "content_timestamp": "2026-07-03",
+      "collected_at": "2026-07-03T19:38:00+08:00",
       "time_slice": "2026-06",
-      "timestamp_source": "gh_api_graphql_authenticated_2026_07_01_2311"
+      "timestamp_source": "gh_api_graphql_authenticated_2026_07_03_1938"
     },
     {
       "repo": "stanfordnlp/dsp",
@@ -5444,10 +5444,10 @@
       "repo": "uid4oe/insight-swarm",
       "url": "https://github.com/uid4oe/insight-swarm",
       "file": "raw-github/uid4oe_insight-swarm.md",
-      "content_timestamp": "2026-07-01",
-      "collected_at": "2026-07-01T23:11:00+08:00",
+      "content_timestamp": "2026-07-03",
+      "collected_at": "2026-07-03T19:38:00+08:00",
       "time_slice": "2026-06",
-      "timestamp_source": "gh_api_graphql_authenticated_2026_07_01_2311"
+      "timestamp_source": "gh_api_graphql_authenticated_2026_07_03_1938"
     },
     {
       "repo": "UnicomAI/hexagent",
