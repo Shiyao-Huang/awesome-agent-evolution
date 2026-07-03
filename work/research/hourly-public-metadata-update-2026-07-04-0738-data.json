@@ -1,0 +1,1031 @@
+{
+  "china-qijizhifeng/agentic-Harness-engineering": {
+    "nameWithOwner": "china-qijizhifeng/agentic-harness-engineering",
+    "description": "Official AHE code — Agentic Harness Engineering: observability-driven automatic evolution of coding-agent harnesses (concurrent w/ meta-harness). NexAU-AHE reaches 84.7% ± 2.1 pass@1 on Terminal-Bench 2 (GPT-5.5). Lifts GPT-5.4 69.7→77.0% over 10 iters, beats Codex/ACE/Training-Free GRPO; frozen harness transfers to SWE-bench-Verified.",
+    "url": "https://github.com/china-qijizhifeng/agentic-harness-engineering",
+    "homepageUrl": "https://arxiv.org/abs/2604.25850",
+    "createdAt": "2026-04-23T07:01:18Z",
+    "pushedAt": "2026-06-14T16:03:21Z",
+    "updatedAt": "2026-07-03T17:02:48Z",
+    "stargazerCount": 681,
+    "forkCount": 74,
+    "isArchived": false,
+    "isFork": false,
+    "primaryLanguage": {
+      "name": "Python"
+    },
+    "licenseInfo": {
+      "spdxId": "MIT",
+      "name": "MIT License"
+    },
+    "repositoryTopics": {
+      "nodes": []
+    },
+    "issues": {
+      "totalCount": 2
+    },
+    "pullRequests": {
+      "totalCount": 0
+    },
+    "defaultBranchRef": {
+      "name": "main",
+      "target": {
+        "history": {
+          "totalCount": 46
+        }
+      }
+    },
+    "releases": {
+      "nodes": []
+    },
+    "_fetch": {
+      "source": "gh_graphql",
+      "fallback": false,
+      "note": "live authenticated GitHub GraphQL packet"
+    }
+  },
+  "NousResearch/hermes-agent": {
+    "nameWithOwner": "NousResearch/hermes-agent",
+    "description": "The agent that grows with you",
+    "url": "https://github.com/NousResearch/hermes-agent",
+    "homepageUrl": "https://hermes-agent.nousresearch.com",
+    "createdAt": "2025-07-22T22:22:28Z",
+    "pushedAt": "2026-07-03T20:44:02Z",
+    "updatedAt": "2026-07-03T23:32:39Z",
+    "stargazerCount": 208683,
+    "forkCount": 38011,
+    "isArchived": false,
+    "isFork": false,
+    "primaryLanguage": {
+      "name": "Python"
+    },
+    "licenseInfo": {
+      "spdxId": "MIT",
+      "name": "MIT License"
+    },
+    "repositoryTopics": {
+      "nodes": [
+        {
+          "topic": {
+            "name": "ai"
+          }
+        },
+        {
+          "topic": {
+            "name": "ai-agent"
+          }
+        },
+        {
+          "topic": {
+            "name": "ai-agents"
+          }
+        },
+        {
+          "topic": {
+            "name": "llm"
+          }
+        },
+        {
+          "topic": {
+            "name": "anthropic"
+          }
+        },
+        {
+          "topic": {
+            "name": "chatgpt"
+          }
+        },
+        {
+          "topic": {
+            "name": "claude"
+          }
+        },
+        {
+          "topic": {
+            "name": "claude-code"
+          }
+        },
+        {
+          "topic": {
+            "name": "clawdbot"
+          }
+        },
+        {
+          "topic": {
+            "name": "codex"
+          }
+        },
+        {
+          "topic": {
+            "name": "hermes"
+          }
+        },
+        {
+          "topic": {
+            "name": "hermes-agent"
+          }
+        },
+        {
+          "topic": {
+            "name": "moltbot"
+          }
+        },
+        {
+          "topic": {
+            "name": "nous-research"
+          }
+        },
+        {
+          "topic": {
+            "name": "openai"
+          }
+        },
+        {
+          "topic": {
+            "name": "openclaw"
+          }
+        }
+      ]
+    },
+    "issues": {
+      "totalCount": 8479
+    },
+    "pullRequests": {
+      "totalCount": 16949
+    },
+    "defaultBranchRef": {
+      "name": "main",
+      "target": {
+        "history": {
+          "totalCount": 14351
+        }
+      }
+    },
+    "releases": {
+      "nodes": [
+        {
+          "name": "Hermes Agent v0.18.0 (2026.7.1) — The Judgment Release",
+          "publishedAt": "2026-07-01T20:08:06Z"
+        }
+      ]
+    },
+    "_fetch": {
+      "source": "gh_graphql",
+      "fallback": false,
+      "note": "live authenticated GitHub GraphQL packet"
+    }
+  },
+  "stanford-iris-lab/meta-harness": {
+    "nameWithOwner": "stanford-iris-lab/meta-harness",
+    "description": "Reference code for the Meta-Harness paper.",
+    "url": "https://github.com/stanford-iris-lab/meta-harness",
+    "homepageUrl": "https://yoonholee.com/meta-harness/",
+    "createdAt": "2026-04-15T05:31:36Z",
+    "pushedAt": "2026-04-29T16:39:58Z",
+    "updatedAt": "2026-07-03T20:33:29Z",
+    "stargazerCount": 1197,
+    "forkCount": 116,
+    "isArchived": false,
+    "isFork": false,
+    "primaryLanguage": {
+      "name": "Python"
+    },
+    "licenseInfo": {
+      "spdxId": "MIT",
+      "name": "MIT License"
+    },
+    "repositoryTopics": {
+      "nodes": [
+        {
+          "topic": {
+            "name": "harness-engineering"
+          }
+        },
+        {
+          "topic": {
+            "name": "llm-agents"
+          }
+        }
+      ]
+    },
+    "issues": {
+      "totalCount": 6
+    },
+    "pullRequests": {
+      "totalCount": 0
+    },
+    "defaultBranchRef": {
+      "name": "main",
+      "target": {
+        "history": {
+          "totalCount": 11
+        }
+      }
+    },
+    "releases": {
+      "nodes": []
+    },
+    "_fetch": {
+      "source": "gh_graphql",
+      "fallback": false,
+      "note": "live authenticated GitHub GraphQL packet"
+    }
+  },
+  "rohitg00/agentmemory": {
+    "nameWithOwner": "rohitg00/agentmemory",
+    "description": "#1 Persistent memory for AI coding agents based on real-world benchmarks",
+    "url": "https://github.com/rohitg00/agentmemory",
+    "homepageUrl": "https://agent-memory.dev",
+    "createdAt": "2026-02-25T07:32:52Z",
+    "pushedAt": "2026-06-29T06:13:48Z",
+    "updatedAt": "2026-07-03T22:10:28Z",
+    "stargazerCount": 24513,
+    "forkCount": 2016,
+    "isArchived": false,
+    "isFork": false,
+    "primaryLanguage": {
+      "name": "TypeScript"
+    },
+    "licenseInfo": {
+      "spdxId": "Apache-2.0",
+      "name": "Apache License 2.0"
+    },
+    "repositoryTopics": {
+      "nodes": [
+        {
+          "topic": {
+            "name": "agentmemory"
+          }
+        },
+        {
+          "topic": {
+            "name": "agents"
+          }
+        },
+        {
+          "topic": {
+            "name": "ai"
+          }
+        },
+        {
+          "topic": {
+            "name": "claude"
+          }
+        },
+        {
+          "topic": {
+            "name": "claudecode"
+          }
+        },
+        {
+          "topic": {
+            "name": "codex"
+          }
+        },
+        {
+          "topic": {
+            "name": "copilot"
+          }
+        },
+        {
+          "topic": {
+            "name": "cursor"
+          }
+        },
+        {
+          "topic": {
+            "name": "genai"
+          }
+        },
+        {
+          "topic": {
+            "name": "harness"
+          }
+        },
+        {
+          "topic": {
+            "name": "hermes"
+          }
+        },
+        {
+          "topic": {
+            "name": "memory"
+          }
+        },
+        {
+          "topic": {
+            "name": "openclaw"
+          }
+        }
+      ]
+    },
+    "issues": {
+      "totalCount": 170
+    },
+    "pullRequests": {
+      "totalCount": 185
+    },
+    "defaultBranchRef": {
+      "name": "main",
+      "target": {
+        "history": {
+          "totalCount": 463
+        }
+      }
+    },
+    "releases": {
+      "nodes": [
+        {
+          "name": "v0.9.27",
+          "publishedAt": "2026-06-07T08:58:35Z"
+        }
+      ]
+    },
+    "_fetch": {
+      "source": "gh_graphql",
+      "fallback": false,
+      "note": "live authenticated GitHub GraphQL packet"
+    }
+  },
+  "pinchbench/skill": {
+    "nameWithOwner": "pinchbench/skill",
+    "description": "PinchBench is a benchmarking system for evaluating LLM models as OpenClaw coding agents. Made with 🦀 by the humans at https://kilo.ai",
+    "url": "https://github.com/pinchbench/skill",
+    "homepageUrl": "https://pinchbench.com",
+    "createdAt": "2026-02-11T01:41:39Z",
+    "pushedAt": "2026-07-02T01:44:55Z",
+    "updatedAt": "2026-07-03T08:54:33Z",
+    "stargazerCount": 1260,
+    "forkCount": 144,
+    "isArchived": false,
+    "isFork": false,
+    "primaryLanguage": {
+      "name": "Python"
+    },
+    "licenseInfo": {
+      "spdxId": "MIT",
+      "name": "MIT License"
+    },
+    "repositoryTopics": {
+      "nodes": []
+    },
+    "issues": {
+      "totalCount": 21
+    },
+    "pullRequests": {
+      "totalCount": 0
+    },
+    "defaultBranchRef": {
+      "name": "main",
+      "target": {
+        "history": {
+          "totalCount": 383
+        }
+      }
+    },
+    "releases": {
+      "nodes": [
+        {
+          "name": "v2.0.0",
+          "publishedAt": "2026-05-06T14:50:42Z"
+        }
+      ]
+    },
+    "_fetch": {
+      "source": "gh_graphql",
+      "fallback": false,
+      "note": "live authenticated GitHub GraphQL packet"
+    }
+  },
+  "lsdefine/GenericAgent": {
+    "nameWithOwner": "lsdefine/GenericAgent",
+    "description": "Self-evolving agent: grows skill tree from 3.3K-line seed, achieving full system control with 6x less token consumption",
+    "url": "https://github.com/lsdefine/GenericAgent",
+    "homepageUrl": "https://github.com/lsdefine/GenericAgent",
+    "createdAt": "2026-01-16T15:45:24Z",
+    "pushedAt": "2026-07-02T12:26:28Z",
+    "updatedAt": "2026-07-03T22:24:03Z",
+    "stargazerCount": 13281,
+    "forkCount": 1533,
+    "isArchived": false,
+    "isFork": false,
+    "primaryLanguage": {
+      "name": "Python"
+    },
+    "licenseInfo": {
+      "spdxId": "MIT",
+      "name": "MIT License"
+    },
+    "repositoryTopics": {
+      "nodes": [
+        {
+          "topic": {
+            "name": "ai-agent"
+          }
+        },
+        {
+          "topic": {
+            "name": "automation"
+          }
+        },
+        {
+          "topic": {
+            "name": "autonomous-agent"
+          }
+        },
+        {
+          "topic": {
+            "name": "browser-automation"
+          }
+        },
+        {
+          "topic": {
+            "name": "claude"
+          }
+        },
+        {
+          "topic": {
+            "name": "computer-control"
+          }
+        },
+        {
+          "topic": {
+            "name": "desktop-automation"
+          }
+        },
+        {
+          "topic": {
+            "name": "gemini"
+          }
+        },
+        {
+          "topic": {
+            "name": "lightweight"
+          }
+        },
+        {
+          "topic": {
+            "name": "llm-agent"
+          }
+        },
+        {
+          "topic": {
+            "name": "memory-system"
+          }
+        },
+        {
+          "topic": {
+            "name": "python"
+          }
+        },
+        {
+          "topic": {
+            "name": "self-evolving"
+          }
+        },
+        {
+          "topic": {
+            "name": "skill-tree"
+          }
+        },
+        {
+          "topic": {
+            "name": "task-automation"
+          }
+        }
+      ]
+    },
+    "issues": {
+      "totalCount": 94
+    },
+    "pullRequests": {
+      "totalCount": 70
+    },
+    "defaultBranchRef": {
+      "name": "main",
+      "target": {
+        "history": {
+          "totalCount": 895
+        }
+      }
+    },
+    "releases": {
+      "nodes": [
+        {
+          "name": "GenericAgent Desktop desktop-portable-v0.1.4",
+          "publishedAt": "2026-06-26T12:04:23Z"
+        }
+      ]
+    },
+    "_fetch": {
+      "source": "gh_graphql",
+      "fallback": false,
+      "note": "live authenticated GitHub GraphQL packet"
+    }
+  },
+  "openclaw/openclaw": {
+    "nameWithOwner": "openclaw/openclaw",
+    "description": "Your own personal AI assistant. Any OS. Any Platform. The lobster way. 🦞 ",
+    "url": "https://github.com/openclaw/openclaw",
+    "homepageUrl": "https://openclaw.ai",
+    "createdAt": "2025-11-24T10:16:47Z",
+    "pushedAt": "2026-07-03T23:38:05Z",
+    "updatedAt": "2026-07-03T23:38:16Z",
+    "stargazerCount": 381601,
+    "forkCount": 80002,
+    "isArchived": false,
+    "isFork": false,
+    "primaryLanguage": {
+      "name": "TypeScript"
+    },
+    "licenseInfo": {
+      "spdxId": "NOASSERTION",
+      "name": "Other"
+    },
+    "repositoryTopics": {
+      "nodes": [
+        {
+          "topic": {
+            "name": "ai"
+          }
+        },
+        {
+          "topic": {
+            "name": "assistant"
+          }
+        },
+        {
+          "topic": {
+            "name": "own-your-data"
+          }
+        },
+        {
+          "topic": {
+            "name": "personal"
+          }
+        },
+        {
+          "topic": {
+            "name": "crustacean"
+          }
+        },
+        {
+          "topic": {
+            "name": "molty"
+          }
+        },
+        {
+          "topic": {
+            "name": "openclaw"
+          }
+        }
+      ]
+    },
+    "issues": {
+      "totalCount": 3587
+    },
+    "pullRequests": {
+      "totalCount": 3435
+    },
+    "defaultBranchRef": {
+      "name": "main",
+      "target": {
+        "history": {
+          "totalCount": 63702
+        }
+      }
+    },
+    "releases": {
+      "nodes": [
+        {
+          "name": "openclaw 2026.7.1-beta.1",
+          "publishedAt": "2026-07-02T07:25:49Z"
+        }
+      ]
+    },
+    "_fetch": {
+      "source": "gh_graphql",
+      "fallback": false,
+      "note": "live authenticated GitHub GraphQL packet"
+    }
+  },
+  "obra/superpowers": {
+    "nameWithOwner": "obra/superpowers",
+    "description": "An agentic skills framework & software development methodology that works.",
+    "url": "https://github.com/obra/superpowers",
+    "homepageUrl": "",
+    "createdAt": "2025-10-09T19:45:18Z",
+    "pushedAt": "2026-07-02T21:58:21Z",
+    "updatedAt": "2026-07-03T23:30:25Z",
+    "stargazerCount": 245505,
+    "forkCount": 21762,
+    "isArchived": false,
+    "isFork": false,
+    "primaryLanguage": {
+      "name": "Shell"
+    },
+    "licenseInfo": {
+      "spdxId": "MIT",
+      "name": "MIT License"
+    },
+    "repositoryTopics": {
+      "nodes": [
+        {
+          "topic": {
+            "name": "ai"
+          }
+        },
+        {
+          "topic": {
+            "name": "brainstorming"
+          }
+        },
+        {
+          "topic": {
+            "name": "coding"
+          }
+        },
+        {
+          "topic": {
+            "name": "obra"
+          }
+        },
+        {
+          "topic": {
+            "name": "sdlc"
+          }
+        },
+        {
+          "topic": {
+            "name": "skills"
+          }
+        },
+        {
+          "topic": {
+            "name": "superpowers"
+          }
+        },
+        {
+          "topic": {
+            "name": "subagent-driven-development"
+          }
+        }
+      ]
+    },
+    "issues": {
+      "totalCount": 145
+    },
+    "pullRequests": {
+      "totalCount": 169
+    },
+    "defaultBranchRef": {
+      "name": "main",
+      "target": {
+        "history": {
+          "totalCount": 628
+        }
+      }
+    },
+    "releases": {
+      "nodes": [
+        {
+          "name": "v6.1.1",
+          "publishedAt": "2026-07-02T21:58:30Z"
+        }
+      ]
+    },
+    "_fetch": {
+      "source": "gh_graphql",
+      "fallback": false,
+      "note": "live authenticated GitHub GraphQL packet"
+    }
+  },
+  "EvoMap/awesome-agent-evolution": {
+    "nameWithOwner": "EvoMap/awesome-agent-evolution",
+    "description": "A curated list of AI Agent evolution, memory systems, multi-agent architectures, and self-improvement projects. | evomap.ai",
+    "url": "https://github.com/EvoMap/awesome-agent-evolution",
+    "homepageUrl": null,
+    "createdAt": "2026-03-07T04:11:34Z",
+    "pushedAt": "2026-07-01T09:25:43Z",
+    "updatedAt": "2026-07-03T22:26:21Z",
+    "stargazerCount": 163,
+    "forkCount": 23,
+    "isArchived": false,
+    "isFork": false,
+    "primaryLanguage": {
+      "name": "JavaScript"
+    },
+    "licenseInfo": {
+      "spdxId": "NOASSERTION",
+      "name": "Other"
+    },
+    "repositoryTopics": {
+      "nodes": [
+        {
+          "topic": {
+            "name": "a2a"
+          }
+        },
+        {
+          "topic": {
+            "name": "agent-evolution"
+          }
+        },
+        {
+          "topic": {
+            "name": "agentic-ai"
+          }
+        },
+        {
+          "topic": {
+            "name": "ai-agent"
+          }
+        },
+        {
+          "topic": {
+            "name": "awesome"
+          }
+        },
+        {
+          "topic": {
+            "name": "awesome-list"
+          }
+        },
+        {
+          "topic": {
+            "name": "llm"
+          }
+        },
+        {
+          "topic": {
+            "name": "mcp"
+          }
+        },
+        {
+          "topic": {
+            "name": "memory-system"
+          }
+        },
+        {
+          "topic": {
+            "name": "multi-agent"
+          }
+        },
+        {
+          "topic": {
+            "name": "self-evolving"
+          }
+        },
+        {
+          "topic": {
+            "name": "self-improvement"
+          }
+        },
+        {
+          "topic": {
+            "name": "agent-framework"
+          }
+        },
+        {
+          "topic": {
+            "name": "agent-protocol"
+          }
+        },
+        {
+          "topic": {
+            "name": "autonomous-agent"
+          }
+        },
+        {
+          "topic": {
+            "name": "evomap"
+          }
+        },
+        {
+          "topic": {
+            "name": "llm-agent"
+          }
+        },
+        {
+          "topic": {
+            "name": "prompt-engineering"
+          }
+        },
+        {
+          "topic": {
+            "name": "skill-library"
+          }
+        },
+        {
+          "topic": {
+            "name": "skills"
+          }
+        }
+      ]
+    },
+    "issues": {
+      "totalCount": 9
+    },
+    "pullRequests": {
+      "totalCount": 2
+    },
+    "defaultBranchRef": {
+      "name": "main",
+      "target": {
+        "history": {
+          "totalCount": 69
+        }
+      }
+    },
+    "releases": {
+      "nodes": []
+    },
+    "_fetch": {
+      "source": "gh_graphql",
+      "fallback": false,
+      "note": "live authenticated GitHub GraphQL packet"
+    }
+  },
+  "uid4oe/insight-swarm": {
+    "nameWithOwner": "uid4oe/insight-swarm",
+    "description": "Emergent multi-agent intelligence — AI agents collaborate via a shared knowledge graph, discovering tensions and synthesizing theses without a central orchestrator.",
+    "url": "https://github.com/uid4oe/insight-swarm",
+    "homepageUrl": "https://insight-swarm.uid4oe.dev",
+    "createdAt": "2026-02-15T12:38:51Z",
+    "pushedAt": "2026-03-19T18:04:30Z",
+    "updatedAt": "2026-03-19T21:28:11Z",
+    "stargazerCount": 0,
+    "forkCount": 0,
+    "isArchived": false,
+    "isFork": false,
+    "primaryLanguage": {
+      "name": "TypeScript"
+    },
+    "licenseInfo": {
+      "spdxId": "MIT",
+      "name": "MIT License"
+    },
+    "repositoryTopics": {
+      "nodes": [
+        {
+          "topic": {
+            "name": "agents"
+          }
+        },
+        {
+          "topic": {
+            "name": "llm"
+          }
+        },
+        {
+          "topic": {
+            "name": "swarm-intelligence"
+          }
+        }
+      ]
+    },
+    "issues": {
+      "totalCount": 0
+    },
+    "pullRequests": {
+      "totalCount": 0
+    },
+    "defaultBranchRef": {
+      "name": "main",
+      "target": {
+        "history": {
+          "totalCount": 25
+        }
+      }
+    },
+    "releases": {
+      "nodes": []
+    },
+    "_fetch": {
+      "source": "gh_graphql",
+      "fallback": false,
+      "note": "live authenticated GitHub GraphQL packet"
+    }
+  },
+  "desplega-ai/agent-swarm": {
+    "nameWithOwner": "desplega-ai/agent-swarm",
+    "description": "Intelligence that compounds. Every single day.",
+    "url": "https://github.com/desplega-ai/agent-swarm",
+    "homepageUrl": "https://agent-swarm.dev",
+    "createdAt": "2025-12-19T18:59:13Z",
+    "pushedAt": "2026-07-03T14:48:15Z",
+    "updatedAt": "2026-07-03T14:47:52Z",
+    "stargazerCount": 572,
+    "forkCount": 65,
+    "isArchived": false,
+    "isFork": false,
+    "primaryLanguage": {
+      "name": "TypeScript"
+    },
+    "licenseInfo": {
+      "spdxId": "MIT",
+      "name": "MIT License"
+    },
+    "repositoryTopics": {
+      "nodes": [
+        {
+          "topic": {
+            "name": "ai-agents"
+          }
+        },
+        {
+          "topic": {
+            "name": "agentic"
+          }
+        },
+        {
+          "topic": {
+            "name": "agentic-framework"
+          }
+        },
+        {
+          "topic": {
+            "name": "agentic-os"
+          }
+        },
+        {
+          "topic": {
+            "name": "ai-memory-system"
+          }
+        },
+        {
+          "topic": {
+            "name": "harness-execution-layer"
+          }
+        },
+        {
+          "topic": {
+            "name": "agent-teams"
+          }
+        },
+        {
+          "topic": {
+            "name": "multi-agent"
+          }
+        },
+        {
+          "topic": {
+            "name": "docker"
+          }
+        },
+        {
+          "topic": {
+            "name": "self-hosted"
+          }
+        },
+        {
+          "topic": {
+            "name": "agent-harness"
+          }
+        },
+        {
+          "topic": {
+            "name": "harness-engineering"
+          }
+        },
+        {
+          "topic": {
+            "name": "agent-memory"
+          }
+        },
+        {
+          "topic": {
+            "name": "ai-memory"
+          }
+        }
+      ]
+    },
+    "issues": {
+      "totalCount": 0
+    },
+    "pullRequests": {
+      "totalCount": 3
+    },
+    "defaultBranchRef": {
+      "name": "main",
+      "target": {
+        "history": {
+          "totalCount": 1755
+        }
+      }
+    },
+    "releases": {
+      "nodes": [
+        {
+          "name": "v1.108.2",
+          "publishedAt": "2026-07-03T14:57:10Z"
+        }
+      ]
+    },
+    "_fetch": {
+      "source": "gh_graphql",
+      "fallback": false,
+      "note": "live authenticated GitHub GraphQL packet"
+    }
+  }
+}
