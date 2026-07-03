@@ -1,10 +1,10 @@
 ---
 repo: EvoMap/awesome-agent-evolution
 url: https://github.com/EvoMap/awesome-agent-evolution
-content_timestamp: 2026-07-03
+content_timestamp: 2026-07-04
 time_slice: 2026-06
-timestamp_source: gh_api_graphql_authenticated_2026_07_03_1938
-collected_at: 2026-07-03T19:38:00+08:00
+timestamp_source: gh_api_graphql_authenticated_2026_07_04_0140
+collected_at: 2026-07-04T01:40:00+08:00
 source: github
 source_tool: gh_graphql
 ---
@@ -33,16 +33,16 @@ This raw GitHub capture was refreshed by the hourly public metadata update throu
 - Created at: 2026-03-07T04:11:34Z
 - Last pushed at: 2026-07-01T09:25:43Z
 - Last updated at: 2026-07-02T17:13:34Z
-- Collection timestamp: 2026-07-03T19:38:00+08:00
+- Collection timestamp: 2026-07-04T01:40:00+08:00
 - Topics: a2a, agent-evolution, agentic-ai, ai-agent, awesome, awesome-list, llm, mcp, memory-system, multi-agent, self-evolving, self-improvement, agent-framework, agent-protocol, autonomous-agent, evomap, llm-agent, prompt-engineering, skill-library, skills
 - Latest public release: none exposed through the GitHub API release list
 
 ## Visible README / page excerpts
 
-- The current packet on 2026-07-03 shows 162 stars, 23 forks, 69 commits, 9 open issues, and 2 open pull requests.
+- The current packet on 2026-07-04 shows 162 stars, 23 forks, 69 commits, 9 open issues, and 2 open pull requests.
 - Its topic set still makes it a live field-packaging mirror across `agent-evolution`, `self-evolving`, `memory-system`, `multi-agent`, `skill-library`, and `awesome-list`.
 - Its README still functions primarily as a curated taxonomy comparator instead of a runnable system.
-- Relative to the previous authenticated packet at 2026-07-01 23:11 +0800: stars 154 -> 162; forks 21 -> 23; issues 8 -> 9; PRs 1 -> 2; updatedAt 2026-07-01T09:25:47Z -> 2026-07-02T17:13:34Z.
+- No public metadata delta was observed relative to the previous authenticated packet at 2026-07-03 19:38 +0800.
 
 ## Raw capture boundary
 
