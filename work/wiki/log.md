@@ -926,3 +926,14 @@
 - Validated with project index generation, raw timestamp enforcement, GitHub project analysis, Astro site build, English paper XeLaTeX build, and i18n TODO scan; paper build passed with existing Chinese-glyph warnings in generated English analysis tables.
 - Public copy review gate was not run with 3-5 reader/editor agents plus 3 academic agents; synchronized README/site text is factual metadata sync, not final editorial-quality completion.
 **产出:** `work/research/hourly-public-metadata-update-2026-07-01-1711.md`, `work/research/hourly-public-metadata-update-2026-07-01-1711-data.json`, `raw-github/*.md`, `research/repo-classification.*`, `.mermaid/current/graph.json`, `.mermaid/current/graph.md`, `analysis/github-project-data-analysis.*`, `site/public/reports/projects/*.md`
+
+## [2026-07-05 01:45] data+publication | Hourly public metadata update loop
+
+**操作:** Refreshed the harness, memory, skill, benchmark, runtime, and agent-swarm public metadata packet against the 2026-07-04 19:38 baseline, then propagated live authenticated GitHub GraphQL deltas through raw captures, processed classification, README/i18n, Mermaid, public project reports, generated indexes, site build, and paper build.
+**详情:**
+- Refreshed 11 tracked repositories: `china-qijizhifeng/agentic-Harness-engineering`, `NousResearch/hermes-agent`, `stanford-iris-lab/meta-harness`, `rohitg00/agentmemory`, `pinchbench/skill`, `lsdefine/GenericAgent`, `openclaw/openclaw`, `obra/superpowers`, `EvoMap/awesome-agent-evolution`, `uid4oe/insight-swarm`, and `desplega-ai/agent-swarm`.
+- Recorded live GitHub API packets for all 11 repositories; 7 repositories moved versus the 2026-07-04 19:38 +0800 packet and none used fallback.
+- GitNexus status is readable but stale (indexed commit `850ea9f`, current `0f1c5a5` before this run); `query` and `detect-changes -r awesome-evolution-workspace-cleanup` remain blocked by LadybugDB storage-version mismatch (`41` vs `40`), so this run records GitNexus as a blocker rather than fresh relationship evidence.
+- Validated with project index generation, raw timestamp enforcement, GitHub project analysis, Astro site build, English paper XeLaTeX build, and i18n TODO scan; paper build passed with existing Chinese-glyph and layout warnings in generated English analysis tables.
+- Public copy review gate was not run with 3-5 reader/editor agents plus 3 academic agents; synchronized README/site text is factual metadata sync, not final editorial-quality completion.
+**产出:** `work/research/hourly-public-metadata-update-2026-07-05-0138.md`, `work/research/hourly-public-metadata-update-2026-07-05-0138-data.json`, `raw-github/*.md`, `research/repo-classification.*`, `.mermaid/current/graph.json`, `.mermaid/current/graph.md`, `analysis/github-project-data-analysis.*`, `site/public/reports/projects/*.md`

@@ -1,10 +1,10 @@
 ---
 repo: lsdefine/GenericAgent
 url: https://github.com/lsdefine/GenericAgent
-content_timestamp: 2026-07-04
+content_timestamp: 2026-07-05
 time_slice: 2026-06
-timestamp_source: gh_api_graphql_authenticated_2026_07_04_1938
-collected_at: 2026-07-04T19:38:00+08:00
+timestamp_source: gh_api_graphql_authenticated_2026_07_05_0138
+collected_at: 2026-07-05T01:38:00+08:00
 source: github
 source_tool: gh_graphql
 ---
@@ -32,17 +32,17 @@ This raw GitHub capture was refreshed by the hourly public metadata update throu
 - Primary language / stack signal: Python/Self-Evolving Agent/Skill Tree Runtime
 - Created at: 2026-01-16T15:45:24Z
 - Last pushed at: 2026-07-02T12:26:28Z
-- Last updated at: 2026-07-04T11:27:20Z
-- Collection timestamp: 2026-07-04T19:38:00+08:00
+- Last updated at: 2026-07-04T15:35:56Z
+- Collection timestamp: 2026-07-05T01:38:00+08:00
 - Topics: ai-agent, automation, autonomous-agent, browser-automation, claude, computer-control, desktop-automation, gemini, lightweight, llm-agent, memory-system, python, self-evolving, skill-tree, task-automation
 - Latest public release: GenericAgent Desktop desktop-portable-v0.1.4 (2026-06-26)
 
 ## Visible README / page excerpts
 
-- The current packet on 2026-07-04 shows 13,283 stars, 1,535 forks, 895 commits, 94 open issues, and 71 open pull requests.
+- The current packet on 2026-07-05 shows 13,283 stars, 1,535 forks, 895 commits, 94 open issues, and 71 open pull requests.
 - The public README still leads with the seed loop, a tiny tool surface, and the “do not preload skills, evolve them” design philosophy.
 - Its topic set still emphasizes `self-evolving`, `skill-tree`, `memory-system`, and `autonomous-agent` rather than generic automation.
-- Relative to the previous authenticated packet at 2026-07-04 13:37 +0800: stars 13,282 -> 13,283; forks 1,533 -> 1,535; PRs 70 -> 71; updatedAt 2026-07-04T03:16:07Z -> 2026-07-04T11:27:20Z.
+- Relative to the previous authenticated packet at 2026-07-04 19:38 +0800: updatedAt 2026-07-04T11:27:20Z -> 2026-07-04T15:35:56Z.
 
 ## Raw capture boundary
 
