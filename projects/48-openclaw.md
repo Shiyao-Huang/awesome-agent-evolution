@@ -24,4 +24,4 @@ Use OpenClaw to teach the gap between “agent method” and “agent product.�
 
 ## Evidence And Limits
 
-The raw capture now reflects a GitHub metadata packet observed on 2026-07-04: 381,620 stars, 80,014 forks, 63,877 commits, 3,593 open issues, and 3,450 open pull requests. This packet is fresher than the previous authenticated packet at 2026-07-04 07:38 +0800 where a delta was observed. This run did not execute the repository locally, validate workflows end to end, or independently rerun benchmark claims. Product, memory, benchmark, and automation claims therefore remain repository-scoped unless separately tested.
+The raw capture now reflects a GitHub metadata packet observed on 2026-07-04: 381,667 stars, 80,018 forks, 63,938 commits, 3,601 open issues, and 3,473 open pull requests. This packet is fresher than the previous authenticated packet at 2026-07-04 13:37 +0800 where a delta was observed. This run did not execute the repository locally, validate workflows end to end, or independently rerun benchmark claims. Product, memory, benchmark, and automation claims therefore remain repository-scoped unless separately tested.

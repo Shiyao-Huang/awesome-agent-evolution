@@ -24,4 +24,4 @@ Use Meta-Harness to explain outer-loop search over prompts, workflows, or scaffo
 
 ## Evidence And Limits
 
-The raw capture now reflects a GitHub metadata packet observed on 2026-07-04: 1,199 stars, 116 forks, 11 commits, 6 open issues, and 0 open pull requests. This packet is fresher than the previous authenticated packet at 2026-07-04 07:38 +0800 where a delta was observed. This run did not execute the repository locally, validate workflows end to end, or independently rerun benchmark claims. Product, memory, benchmark, and automation claims therefore remain repository-scoped unless separately tested.
+The raw capture now reflects a GitHub metadata packet observed on 2026-07-04: 1,201 stars, 116 forks, 11 commits, 6 open issues, and 0 open pull requests. This packet is fresher than the previous authenticated packet at 2026-07-04 13:37 +0800 where a delta was observed. This run did not execute the repository locally, validate workflows end to end, or independently rerun benchmark claims. Product, memory, benchmark, and automation claims therefore remain repository-scoped unless separately tested.

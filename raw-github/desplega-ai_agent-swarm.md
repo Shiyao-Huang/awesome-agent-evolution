@@ -3,8 +3,8 @@ repo: desplega-ai/agent-swarm
 url: https://github.com/desplega-ai/agent-swarm
 content_timestamp: 2026-07-04
 time_slice: 2026-06
-timestamp_source: gh_api_graphql_authenticated_2026_07_04_1337
-collected_at: 2026-07-04T13:37:00+08:00
+timestamp_source: gh_api_graphql_authenticated_2026_07_04_1938
+collected_at: 2026-07-04T19:38:00+08:00
 source: github
 source_tool: gh_graphql
 ---
@@ -25,24 +25,24 @@ This raw GitHub capture was refreshed by the hourly public metadata update throu
 - URL: https://github.com/desplega-ai/agent-swarm
 - Stars: 572
 - Forks: 65
-- Commits: 1,755
+- Commits: 1,756
 - Open issues: 0
-- Open pull requests: 4
+- Open pull requests: 3
 - License: MIT
 - Primary language / stack signal: TypeScript/Docker/MCP/Lead-Worker Swarm
 - Created at: 2025-12-19T18:59:13Z
-- Last pushed at: 2026-07-04T02:32:16Z
-- Last updated at: 2026-07-03T14:47:52Z
-- Collection timestamp: 2026-07-04T13:37:00+08:00
+- Last pushed at: 2026-07-04T09:03:37Z
+- Last updated at: 2026-07-04T09:03:17Z
+- Collection timestamp: 2026-07-04T19:38:00+08:00
 - Topics: ai-agents, agentic, agentic-framework, agentic-os, ai-memory-system, harness-execution-layer, agent-teams, multi-agent, docker, self-hosted, agent-harness, harness-engineering, agent-memory, ai-memory
-- Latest public release: v1.108.2 (2026-07-03)
+- Latest public release: v1.109.0 (2026-07-04)
 
 ## Visible README / page excerpts
 
-- The current packet on 2026-07-04 shows 572 stars, 65 forks, 1,755 commits, 0 open issues, and 4 open pull requests.
+- The current packet on 2026-07-04 shows 572 stars, 65 forks, 1,756 commits, 0 open issues, and 3 open pull requests.
 - The public repository still centers a lead-worker swarm runtime across Slack, GitHub, email, API, pages, workflows, and MCP.
 - It remains one of the clearest public “compounding swarm” runtime anchors rather than a paper-only concept.
-- Relative to the previous authenticated packet at 2026-07-04 07:38 +0800: PRs 3 -> 4; pushedAt 2026-07-03T14:48:15Z -> 2026-07-04T02:32:16Z.
+- Relative to the previous authenticated packet at 2026-07-04 13:37 +0800: PRs 4 -> 3; commits 1,755 -> 1,756; pushedAt 2026-07-04T02:32:16Z -> 2026-07-04T09:03:37Z; updatedAt 2026-07-03T14:47:52Z -> 2026-07-04T09:03:17Z.
 
 ## Raw capture boundary
 
