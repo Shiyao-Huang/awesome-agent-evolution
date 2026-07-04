@@ -3,8 +3,8 @@ repo: obra/superpowers
 url: https://github.com/obra/superpowers
 content_timestamp: 2026-07-04
 time_slice: 2026-06
-timestamp_source: gh_api_graphql_authenticated_2026_07_04_0738
-collected_at: 2026-07-04T07:38:00+08:00
+timestamp_source: gh_api_graphql_authenticated_2026_07_04_1337
+collected_at: 2026-07-04T13:37:00+08:00
 source: github
 source_tool: gh_graphql
 ---
@@ -23,26 +23,26 @@ This raw GitHub capture was refreshed by the hourly public metadata update throu
 
 - Repository: obra/superpowers
 - URL: https://github.com/obra/superpowers
-- Stars: 245,505
-- Forks: 21,762
+- Stars: 245,667
+- Forks: 21,779
 - Commits: 628
 - Open issues: 145
-- Open pull requests: 169
+- Open pull requests: 170
 - License: MIT
 - Primary language / stack signal: Markdown/Workflow Skills/Coding-Agent Operating Manual
 - Created at: 2025-10-09T19:45:18Z
 - Last pushed at: 2026-07-02T21:58:21Z
-- Last updated at: 2026-07-03T23:30:25Z
-- Collection timestamp: 2026-07-04T07:38:00+08:00
+- Last updated at: 2026-07-04T05:38:18Z
+- Collection timestamp: 2026-07-04T13:37:00+08:00
 - Topics: ai, brainstorming, coding, obra, sdlc, skills, superpowers, subagent-driven-development
 - Latest public release: v6.1.1 (2026-07-02)
 
 ## Visible README / page excerpts
 
-- The current packet on 2026-07-04 shows 245,505 stars, 21,762 forks, 628 commits, 145 open issues, and 169 open pull requests.
+- The current packet on 2026-07-04 shows 245,667 stars, 21,779 forks, 628 commits, 145 open issues, and 170 open pull requests.
 - Superpowers still packages reusable workflows, agent skills, and engineering scaffolds as repeatable operating leverage instead of one-off demos.
 - That keeps it relevant to the “skills as compounding infrastructure” thread in the public evidence chain.
-- Relative to the previous authenticated packet at 2026-07-04 01:40 +0800: stars 245,358 -> 245,505; forks 21,742 -> 21,762; PRs 168 -> 169; updatedAt 2026-07-03T17:38:23Z -> 2026-07-03T23:30:25Z.
+- Relative to the previous authenticated packet at 2026-07-04 07:38 +0800: stars 245,505 -> 245,667; forks 21,762 -> 21,779; PRs 169 -> 170; updatedAt 2026-07-03T23:30:25Z -> 2026-07-04T05:38:18Z.
 
 ## Raw capture boundary
 

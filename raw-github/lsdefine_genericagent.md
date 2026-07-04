@@ -3,8 +3,8 @@ repo: lsdefine/GenericAgent
 url: https://github.com/lsdefine/GenericAgent
 content_timestamp: 2026-07-04
 time_slice: 2026-06
-timestamp_source: gh_api_graphql_authenticated_2026_07_04_0738
-collected_at: 2026-07-04T07:38:00+08:00
+timestamp_source: gh_api_graphql_authenticated_2026_07_04_1337
+collected_at: 2026-07-04T13:37:00+08:00
 source: github
 source_tool: gh_graphql
 ---
@@ -23,7 +23,7 @@ This raw GitHub capture was refreshed by the hourly public metadata update throu
 
 - Repository: lsdefine/GenericAgent
 - URL: https://github.com/lsdefine/GenericAgent
-- Stars: 13,281
+- Stars: 13,282
 - Forks: 1,533
 - Commits: 895
 - Open issues: 94
@@ -32,17 +32,17 @@ This raw GitHub capture was refreshed by the hourly public metadata update throu
 - Primary language / stack signal: Python/Self-Evolving Agent/Skill Tree Runtime
 - Created at: 2026-01-16T15:45:24Z
 - Last pushed at: 2026-07-02T12:26:28Z
-- Last updated at: 2026-07-03T22:24:03Z
-- Collection timestamp: 2026-07-04T07:38:00+08:00
+- Last updated at: 2026-07-04T03:16:07Z
+- Collection timestamp: 2026-07-04T13:37:00+08:00
 - Topics: ai-agent, automation, autonomous-agent, browser-automation, claude, computer-control, desktop-automation, gemini, lightweight, llm-agent, memory-system, python, self-evolving, skill-tree, task-automation
 - Latest public release: GenericAgent Desktop desktop-portable-v0.1.4 (2026-06-26)
 
 ## Visible README / page excerpts
 
-- The current packet on 2026-07-04 shows 13,281 stars, 1,533 forks, 895 commits, 94 open issues, and 70 open pull requests.
+- The current packet on 2026-07-04 shows 13,282 stars, 1,533 forks, 895 commits, 94 open issues, and 70 open pull requests.
 - The public README still leads with the seed loop, a tiny tool surface, and the “do not preload skills, evolve them” design philosophy.
 - Its topic set still emphasizes `self-evolving`, `skill-tree`, `memory-system`, and `autonomous-agent` rather than generic automation.
-- Relative to the previous authenticated packet at 2026-07-04 01:40 +0800: stars 13,280 -> 13,281; forks 1,534 -> 1,533; PRs 69 -> 70; updatedAt 2026-07-03T17:18:51Z -> 2026-07-03T22:24:03Z.
+- Relative to the previous authenticated packet at 2026-07-04 07:38 +0800: stars 13,281 -> 13,282; updatedAt 2026-07-03T22:24:03Z -> 2026-07-04T03:16:07Z.
 
 ## Raw capture boundary
 
