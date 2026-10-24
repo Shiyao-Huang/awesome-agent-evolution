@@ -118,13 +118,14 @@ timestamp_source: "arXiv submission history"
 | 65 | WebRL | 2411.02337 | [2411.02337.md](2411.02337.md) |
 | 66 | CurricuLLM | 2409.18382 | [2409.18382.md](2409.18382.md) |
 
-### H. Experience Learning (4 papers)
+### H. Experience Learning (5 papers)
 | # | Title | arXiv | File |
 |---|-------|-------|------|
 | 67 | ExpeL | 2308.10144 | [2308.10144.md](2308.10144.md) |
 | 68 | ICE | 2401.13996 | [2401.13996.md](2401.13996.md) |
 | 69 | FLEX | 2511.06449 | [2511.06449.md](2511.06449.md) |
 | 70 | ReasoningBank | 2509.25140 | [2509.25140.md](2509.25140.md) |
+| 71 | EvoRepair | 2605.30105 | [2605.30105.md](2605.30105.md) |
 
 ### I. Memory & Lifelong Learning (6 papers)
 | # | Title | arXiv | File |
@@ -206,7 +207,7 @@ timestamp_source: "arXiv submission history"
 | 11 | Agent Societies Intellectual Elites | 2604.02674 | [2604.02674.md](2604.02674.md) | Multi-agent |
 | 12 | Self-Organizing MAS for Software Dev | 2603.25928 | [2603.25928.md](2603.25928.md) | Multi-agent |
 
-### P. Trending/Hot Papers (10 papers — 2026-05-22 supplement)
+### P. Trending/Hot Papers (13 papers — 2026-05-22 supplement)
 | # | Title | arXiv | File | Category |
 |---|-------|-------|------|----------|
 | 1 | GEPA: Reflective Prompt Evolution Can Outperform RL | 2507.19457 | [2507.19457.md](2507.19457.md) | Prompt Evolution |
@@ -221,6 +222,7 @@ timestamp_source: "arXiv submission history"
 | 10 | Self-Generated In-Context Examples | 2505.00234 | [2505.00234.md](2505.00234.md) | Experience Learning |
 | 11 | Hyperagents: Metacognitive Self-Modification | 2603.19461 | [2603.19461.md](2603.19461.md) | Architecture Search |
 | 12 | Implicit Behavioral Alignment (PEBA / PersonaEvolve) | 2509.16457 | [2509.16457.md](2509.16457.md) | Persona Evolution |
+| 13 | EvoRepair: Learning from Repair Experience | 2605.30105 | [2605.30105.md](2605.30105.md) | Experience Learning |
 
 ### Q. Major Non-Paper Projects (trending, not arXiv)
 | # | Project | GitHub | Stars | Category |
