@@ -74,6 +74,20 @@ Python 3.9, OpenAI Agents SDK, LiteLLM, Conda
 
 ### 33. OUROBOROS — 真正的自修改 AI Agent
 
+#### 2026-10-28 更新
+
+Ouroboros 现在提供桌面应用和无界面的 CLI，可处理外部项目、协调子代理，并保留本地身份、记忆和任务历史。截至本次更新，最新正式版是 [7.8.0](https://github.com/razzant/ouroboros/releases/tag/v7.8.0)，采用 [MIT 许可证](https://github.com/razzant/ouroboros/blob/v7.8.0/LICENSE)。普通用户可从[官方安装页](https://ouroboros-agent.ai/install/)选择 macOS、Windows 或 Linux 包，不必从 Colab 和 Google Drive 开始。
+
+- **改变什么**：代码、提示词、工具和上下文组织。通过审查的提交会成为后续任务使用的运行时。
+- **反馈来自哪里**：普通任务、内部观察和用户反馈暴露问题；代理也可把改进自身作为任务继续执行。
+- **如何检查**：变更留下 Git 历史、测试和审查记录。2026 年技术报告将冻结版本上的 benchmark 测量与持续进化的部署分开，并公开运行材料和审计修正。
+
+机制与结果来源：[Ouroboros: A Self-Developing Frontier Coding Agent with Reviewed Core Evolution](https://arxiv.org/abs/2608.08311)，2026，arXiv:2608.08311；[公开 benchmark 证据](https://ouroboros-agent.ai/benchmarks/)。报告覆盖 Terminal-Bench 2.1、OSWorld-Verified、CL-Bench、SWE-bench Pro 和 GAIA，具体模型、协议和证据状态按各条记录阅读。
+
+**English summary:** Ouroboros is an MIT-licensed desktop and headless agent with local identity, memory, task history and subagent coordination. Stable release 7.8.0 provides macOS, Windows and Linux packages. It can revise code, prompts, tools and context handling through reviewed commits used by later work, drawing on tasks, internal observations and user feedback. The 2026 technical report separates frozen benchmark snapshots from continuing evolution and links public evidence and audit corrections.
+
+#### 2026-05-22 历史快照
+
 | 字段 | 值 |
 |------|---|
 | **仓库** | razzant/ouroboros |
