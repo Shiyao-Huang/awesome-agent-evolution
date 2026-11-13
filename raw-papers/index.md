@@ -221,6 +221,7 @@ timestamp_source: "arXiv submission history"
 | 10 | Self-Generated In-Context Examples | 2505.00234 | [2505.00234.md](2505.00234.md) | Experience Learning |
 | 11 | Hyperagents: Metacognitive Self-Modification | 2603.19461 | [2603.19461.md](2603.19461.md) | Architecture Search |
 | 12 | Implicit Behavioral Alignment (PEBA / PersonaEvolve) | 2509.16457 | [2509.16457.md](2509.16457.md) | Persona Evolution |
+| 13 | Who Remembers What? (MixUA / CrossLearnBench) | 2611.10439 | [2611.10439.md](2611.10439.md) | Memory & Experience Sharing |
 
 ### Q. Major Non-Paper Projects (trending, not arXiv)
 | # | Project | GitHub | Stars | Category |
